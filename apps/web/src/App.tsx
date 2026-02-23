@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { parseText, testConnection, fetchModels, fetchKnownModels, fetchSyntheticData, BRANCH_COLORS, PROVIDER_META } from '@folio-mapper/core';
+import { parseText, testConnection, fetchModels, fetchKnownModels, fetchSyntheticData, BRANCH_COLORS, PROVIDER_META, setLocalToken } from '@folio-mapper/core';
 import type { SuggestionEntry, ReviewEntry, InputHierarchyNode, HierarchyNode } from '@folio-mapper/core';
 import {
   AppShell,
@@ -62,11 +62,20 @@ export function App() {
   const { itemCount, isTabular } = useTextDetection(textInput);
   const { loadCandidates, loadPipelineCandidates, loadMandatoryFallback, searchCandidates, cancelBatchLoading } = useMapping();
 
-  // Hydrate known models on startup
+  // Fetch desktop auth token + hydrate known models on startup
   useEffect(() => {
-    fetchKnownModels()
-      .then((models) => llmState.setAllModels(models))
-      .catch(() => {}); // graceful — store may already have persisted models
+    const init = async () => {
+      // In desktop mode, fetch the local auth token before any API calls
+      if (window.desktop?.getLocalToken) {
+        const token = await window.desktop.getLocalToken();
+        if (token) setLocalToken(token);
+      }
+
+      fetchKnownModels()
+        .then((models) => llmState.setAllModels(models))
+        .catch(() => {}); // graceful — store may already have persisted models
+    };
+    init();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const [showSettings, setShowSettings] = useState(false);

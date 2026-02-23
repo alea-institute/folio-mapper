@@ -2,7 +2,7 @@ import type { ParseItem } from '../input/types';
 import type { BranchInfo, ConceptDetail, FolioCandidate, FolioStatus, MandatoryFallbackResponse, MappingResponse } from './types';
 import type { EntityGraphResponse } from './graph-types';
 import type { PipelineRequestConfig } from '../pipeline/api-client';
-import { buildAuthHeaders } from '../auth';
+import { baseHeaders, buildAuthHeaders } from '../auth';
 
 const BASE_URL = '/api/mapping';
 
@@ -13,7 +13,7 @@ export async function fetchCandidates(
 ): Promise<MappingResponse> {
   const res = await fetch(`${BASE_URL}/candidates`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: baseHeaders(),
     body: JSON.stringify({
       items,
       threshold,
@@ -30,7 +30,7 @@ export async function fetchCandidates(
 }
 
 export async function fetchFolioStatus(): Promise<FolioStatus> {
-  const res = await fetch(`${BASE_URL}/status`);
+  const res = await fetch(`${BASE_URL}/status`, { headers: baseHeaders() });
 
   if (!res.ok) {
     throw new Error(`Failed to fetch FOLIO status (${res.status})`);
@@ -40,7 +40,7 @@ export async function fetchFolioStatus(): Promise<FolioStatus> {
 }
 
 export async function warmupFolio(): Promise<FolioStatus> {
-  const res = await fetch(`${BASE_URL}/warmup`, { method: 'POST' });
+  const res = await fetch(`${BASE_URL}/warmup`, { method: 'POST', headers: baseHeaders() });
 
   if (!res.ok) {
     throw new Error(`Failed to warmup FOLIO (${res.status})`);
@@ -50,7 +50,7 @@ export async function warmupFolio(): Promise<FolioStatus> {
 }
 
 export async function fetchBranches(): Promise<BranchInfo[]> {
-  const res = await fetch(`${BASE_URL}/branches`);
+  const res = await fetch(`${BASE_URL}/branches`, { headers: baseHeaders() });
 
   if (!res.ok) {
     throw new Error(`Failed to fetch branches (${res.status})`);
@@ -60,7 +60,7 @@ export async function fetchBranches(): Promise<BranchInfo[]> {
 }
 
 export async function fetchConcept(iriHash: string): Promise<FolioCandidate> {
-  const res = await fetch(`${BASE_URL}/concept/${encodeURIComponent(iriHash)}`);
+  const res = await fetch(`${BASE_URL}/concept/${encodeURIComponent(iriHash)}`, { headers: baseHeaders() });
 
   if (!res.ok) {
     const err = await res.json().catch(() => ({ detail: 'Concept lookup failed' }));
@@ -71,7 +71,7 @@ export async function fetchConcept(iriHash: string): Promise<FolioCandidate> {
 }
 
 export async function fetchConceptDetail(iriHash: string): Promise<ConceptDetail> {
-  const res = await fetch(`${BASE_URL}/concept/${encodeURIComponent(iriHash)}/detail`);
+  const res = await fetch(`${BASE_URL}/concept/${encodeURIComponent(iriHash)}/detail`, { headers: baseHeaders() });
 
   if (!res.ok) {
     const err = await res.json().catch(() => ({ detail: 'Concept detail lookup failed' }));
@@ -98,7 +98,7 @@ export async function fetchEntityGraph(
 
   const qs = params.toString();
   const url = `${BASE_URL}/concept/${encodeURIComponent(iriHash)}/graph${qs ? `?${qs}` : ''}`;
-  const res = await fetch(url);
+  const res = await fetch(url, { headers: baseHeaders() });
 
   if (!res.ok) {
     const err = await res.json().catch(() => ({ detail: 'Graph fetch failed' }));

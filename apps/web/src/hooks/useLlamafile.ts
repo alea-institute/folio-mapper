@@ -7,6 +7,7 @@ declare global {
   interface Window {
     desktop?: {
       isDesktop: boolean;
+      getLocalToken: () => Promise<string | null>;
       llamafile?: {
         getStatus: () => Promise<LlamafileStatus>;
         getPort: () => Promise<number | null>;

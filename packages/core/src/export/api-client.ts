@@ -1,12 +1,13 @@
 import type { ExportRequest, ExportPreviewRow } from './index';
 import type { ExportTreeData } from './tree-types';
+import { baseHeaders } from '../auth';
 
 const BASE_URL = '/api/export';
 
 export async function fetchExport(request: ExportRequest): Promise<Blob> {
   const res = await fetch(`${BASE_URL}/generate`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: baseHeaders(),
     body: JSON.stringify(request),
   });
 
@@ -23,7 +24,7 @@ export async function fetchExportPreview(
 ): Promise<ExportPreviewRow[]> {
   const res = await fetch(`${BASE_URL}/preview`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: baseHeaders(),
     body: JSON.stringify(request),
   });
 
@@ -40,7 +41,7 @@ export async function fetchExportTreeData(
 ): Promise<ExportTreeData> {
   const res = await fetch(`${BASE_URL}/tree-data`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: baseHeaders(),
     body: JSON.stringify(request),
   });
 
@@ -58,7 +59,7 @@ export async function fetchTranslations(
 ): Promise<Record<string, Record<string, string>>> {
   const res = await fetch(`${BASE_URL}/translations`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: baseHeaders(),
     body: JSON.stringify({ iri_hashes, languages }),
   });
 

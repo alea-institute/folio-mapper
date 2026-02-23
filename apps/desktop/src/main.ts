@@ -36,6 +36,12 @@ async function createWindow(port: number): Promise<void> {
   });
 }
 
+function registerAuthIPC(): void {
+  ipcMain.handle("auth:get-local-token", () => {
+    return backendManager?.localToken ?? null;
+  });
+}
+
 function registerLlamafileIPC(): void {
   ipcMain.handle("llamafile:get-status", () => {
     return llamafileManager?.getStatus() ?? { state: "idle" };
@@ -87,6 +93,7 @@ async function startApp(): Promise<void> {
   }
 
   // Register IPC handlers before window creation
+  registerAuthIPC();
   registerLlamafileIPC();
 
   await createWindow(port);

@@ -1,5 +1,5 @@
 import type { ConnectionTestResponse, LLMProviderType, ModelInfo } from './types';
-import { buildAuthHeaders } from '../auth';
+import { baseHeaders, buildAuthHeaders } from '../auth';
 
 const BASE_URL = '/api/llm';
 
@@ -28,7 +28,7 @@ export async function testConnection(
 }
 
 export async function fetchKnownModels(): Promise<Record<string, ModelInfo[]>> {
-  const res = await fetch(`${BASE_URL}/known-models`);
+  const res = await fetch(`${BASE_URL}/known-models`, { headers: baseHeaders() });
   if (!res.ok) {
     throw new Error('Failed to fetch known models');
   }

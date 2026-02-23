@@ -1,4 +1,5 @@
 import type { ParseResult } from './types';
+import { baseHeaders, localTokenHeader } from '../auth';
 
 const BASE_URL = '/api/parse';
 
@@ -8,6 +9,7 @@ export async function parseFile(file: File): Promise<ParseResult> {
 
   const res = await fetch(`${BASE_URL}/file`, {
     method: 'POST',
+    headers: localTokenHeader(),
     body: formData,
   });
 
@@ -22,7 +24,7 @@ export async function parseFile(file: File): Promise<ParseResult> {
 export async function parseText(text: string): Promise<ParseResult> {
   const res = await fetch(`${BASE_URL}/text`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: baseHeaders(),
     body: JSON.stringify({ text }),
   });
 
