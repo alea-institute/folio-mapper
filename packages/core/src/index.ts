@@ -20,4 +20,5 @@ export * from './llamafile/types';
 export * from './synthetic/api-client';
 export * from './embedding/types';
 export * from './embedding/api-client';
+export * from './exemplar/data';
 export * from './auth';

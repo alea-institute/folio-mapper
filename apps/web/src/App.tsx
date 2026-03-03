@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { parseText, testConnection, fetchModels, fetchKnownModels, fetchSyntheticData, BRANCH_COLORS, PROVIDER_META, setLocalToken } from '@folio-mapper/core';
+import { parseText, testConnection, fetchModels, fetchKnownModels, fetchSyntheticData, BRANCH_COLORS, PROVIDER_META, setLocalToken, EXEMPLARS } from '@folio-mapper/core';
 import type { SuggestionEntry, ReviewEntry, InputHierarchyNode, HierarchyNode } from '@folio-mapper/core';
 import {
   AppShell,
@@ -20,6 +20,7 @@ import {
   ExportView,
   SuggestionEditModal,
   SubmissionModal,
+  ExemplarPanel,
 } from '@folio-mapper/ui';
 import { useInputStore } from './store/input-store';
 import { useMappingStore } from './store/mapping-store';
@@ -82,6 +83,7 @@ export function App() {
   const [isSearching, setIsSearching] = useState(false);
   const [isGeneratingSynthetic, setIsGeneratingSynthetic] = useState(false);
   const [syntheticError, setSyntheticError] = useState<string | null>(null);
+  const [loadingExemplarId, setLoadingExemplarId] = useState<string | null>(null);
 
   // Derive simplified LLM status for header badge
   const activeConfig = llmState.configs[llmState.activeProvider];
@@ -336,6 +338,22 @@ export function App() {
       setSyntheticError(err instanceof Error ? err.message : 'Synthetic generation failed');
     } finally {
       setIsGeneratingSynthetic(false);
+    }
+  };
+
+  const handleExemplarSelect = async (id: string) => {
+    const exemplar = EXEMPLARS.find((e) => e.id === id);
+    if (!exemplar) return;
+    setLoadingExemplarId(id);
+    setLoading(true);
+    setTextInput(exemplar.text);
+    try {
+      const result = await parseText(exemplar.text);
+      setParseResult(result);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Parse failed');
+    } finally {
+      setLoadingExemplarId(null);
     }
   };
 
@@ -642,6 +660,14 @@ export function App() {
               onSubmit={handleTextSubmit}
               disabled={isLoading}
               isTabular={isTabular}
+            />
+          }
+          exemplarPanel={
+            <ExemplarPanel
+              exemplars={EXEMPLARS}
+              isLoading={loadingExemplarId !== null}
+              loadingId={loadingExemplarId}
+              onSelect={handleExemplarSelect}
             />
           }
           syntheticDataPanel={

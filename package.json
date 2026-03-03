@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev:web": "pnpm --filter @folio-mapper/web dev",
-    "dev:api": "cd backend && .venv/bin/uvicorn app.main:app --reload --port 8000",
+    "dev:api": "cd backend && .venv/bin/uvicorn app.main:app --reload --port 58000",
     "dev": "concurrently \"pnpm dev:api\" \"pnpm dev:web\"",
     "build": "pnpm --filter @folio-mapper/web build",
     "test": "pnpm --filter './packages/*' test && pnpm --filter @folio-mapper/web test",

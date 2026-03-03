@@ -3,6 +3,7 @@ export { TextInput } from './components/input/TextInput';
 export { InputScreen } from './components/input/InputScreen';
 export { BranchOptionsPanel } from './components/input/BranchOptionsPanel';
 export { SyntheticDataPanel } from './components/input/SyntheticDataPanel';
+export { ExemplarPanel } from './components/input/ExemplarPanel';
 export { ModelChooser } from './components/input/ModelChooser';
 export { FlatConfirmation } from './components/confirmation/FlatConfirmation';
 export { HierarchyConfirmation } from './components/confirmation/HierarchyConfirmation';

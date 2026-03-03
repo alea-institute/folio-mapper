@@ -4,13 +4,14 @@ interface InputScreenProps {
   textInput: ReactNode;
   fileDropZone: ReactNode;
   branchOptions?: ReactNode;
+  exemplarPanel?: ReactNode;
   syntheticDataPanel?: ReactNode;
   sessionFileInput?: ReactNode;
   modelChooser?: ReactNode;
   error?: string | null;
 }
 
-export function InputScreen({ textInput, fileDropZone, branchOptions, syntheticDataPanel, sessionFileInput, modelChooser, error }: InputScreenProps) {
+export function InputScreen({ textInput, fileDropZone, branchOptions, exemplarPanel, syntheticDataPanel, sessionFileInput, modelChooser, error }: InputScreenProps) {
   return (
     <div className="w-full max-w-2xl space-y-8">
       <div>
@@ -28,6 +29,8 @@ export function InputScreen({ textInput, fileDropZone, branchOptions, syntheticD
         <h2 className="mb-4 text-lg font-medium text-gray-900">Enter text directly</h2>
         {textInput}
       </div>
+
+      {exemplarPanel}
 
       {syntheticDataPanel}
 
