@@ -58,6 +58,22 @@ export function LLMSettings({
   // Clear error when provider changes
   useEffect(() => { setSaveError(null); }, [activeProvider]);
 
+  // Auto-refresh models when modal opens if API key is available
+  useEffect(() => {
+    const config = configs[activeProvider];
+    if (config.apiKey) {
+      handleRefreshModels(activeProvider);
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Auto-refresh models when switching to a provider with an API key
+  useEffect(() => {
+    const config = configs[activeProvider];
+    if (config.apiKey && !loadingModelsFor.has(activeProvider)) {
+      handleRefreshModels(activeProvider);
+    }
+  }, [activeProvider]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // Escape key closes modal
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
