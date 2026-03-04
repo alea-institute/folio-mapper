@@ -406,7 +406,7 @@ function HierarchyNodeComponent({
           isSelected ? 'bg-slate-700 text-white' : 'text-gray-600 hover:bg-gray-50'
         } ${nodeIriHash ? 'cursor-pointer' : ''}`}
         style={{ paddingLeft: `${depth * 4 + 4}px` }}
-        onClick={() => nodeIriHash && onSelectForDetail(nodeIriHash)}
+        onClick={() => { if (nodeIriHash) { onToggleCandidate(nodeIriHash); onSelectForDetail(nodeIriHash); } }}
       >
         <button
           type="button"

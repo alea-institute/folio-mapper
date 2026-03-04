@@ -568,6 +568,7 @@ export function MappingsView({
                 <DetailPanel
                   currentItem={currentItem}
                   selectedCandidate={detailConcept}
+                  onSelectForDetail={(iriHash) => selectConcept(iriHash)}
                   onOpenGraph={(iriHash, label) => setGraphTarget({ iriHash, label })}
                 />
               ) : (
