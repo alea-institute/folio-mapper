@@ -3,8 +3,8 @@
   "version": "0.8.4",
   "private": true,
   "description": "FOLIO Mapper desktop application",
-  "author": "Damien Riehl",
-  "repository": "github:damienriehl/folio-mapper",
+  "author": "Damien Riehl and ALEA Institute",
+  "repository": "github:alea-institute/folio-mapper",
   "main": "dist/main.js",
   "scripts": {
     "build:ts": "tsc",

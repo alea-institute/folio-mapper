@@ -90,7 +90,7 @@ FOLIO Mapper combines fuzzy text matching, semantic embedding search, and an opt
 
 ```bash
 # Clone the repo
-git clone https://github.com/damienriehl/folio-mapper.git
+git clone https://github.com/alea-institute/folio-mapper.git
 cd folio-mapper
 
 # Install frontend dependencies
@@ -252,7 +252,7 @@ FOLIO Mapper is available as a self-contained desktop app for **Windows** and **
 
 ### Download
 
-Pre-built installers are published as [GitHub Releases](https://github.com/damienriehl/folio-mapper/releases) on each version tag:
+Pre-built installers are published as [GitHub Releases](https://github.com/alea-institute/folio-mapper/releases) on each version tag:
 
 | Platform | File |
 |----------|------|
@@ -571,4 +571,4 @@ The ontology is loaded via [folio-python](https://github.com/alea-institute/foli
 
 ## License
 
-[MIT](LICENSE) — Copyright (c) 2026 Damien Riehl
+[MIT](LICENSE) — Copyright (c) 2026 Damien Riehl and ALEA Institute
