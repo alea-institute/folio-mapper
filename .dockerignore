@@ -1,0 +1,12 @@
+node_modules
+**/node_modules
+**/.venv
+**/dist
+**/__pycache__
+**/*.egg-info
+.git
+apps/desktop
+backend/tests
+backend/folio_mapper_backend.egg-info
+*.md
+LICENSE
