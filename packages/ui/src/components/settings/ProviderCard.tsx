@@ -1,4 +1,5 @@
-import type { ConnectionStatus, LLMProviderConfig, LLMProviderType, ModelInfo, ProviderMeta } from '@folio-mapper/core';
+import type { ConnectionStatus, KeySource, LLMProviderConfig, LLMProviderType, ModelInfo, ProviderMeta } from '@folio-mapper/core';
+import { KeySourceBadge } from './KeySourceBadge';
 
 interface ProviderCardProps {
   meta: ProviderMeta;
@@ -7,10 +8,14 @@ interface ProviderCardProps {
   models: ModelInfo[];
   isLoadingModels: boolean;
   isTesting: boolean;
+  isDesktop?: boolean;
   onSelect: (provider: LLMProviderType) => void;
   onUpdateConfig: (provider: LLMProviderType, updates: Partial<LLMProviderConfig>) => void;
   onTest: (provider: LLMProviderType) => void;
   onRefreshModels: (provider: LLMProviderType) => void;
+  onSaveToKeychain?: (provider: LLMProviderType) => void;
+  onRememberKey?: (provider: LLMProviderType, remember: boolean) => void;
+  onClearSavedKey?: (provider: LLMProviderType) => void;
   prices?: Record<string, number>;
 }
 
@@ -42,15 +47,22 @@ export function ProviderCard({
   models,
   isLoadingModels,
   isTesting,
+  isDesktop,
   onSelect,
   onUpdateConfig,
   onTest,
   onRefreshModels,
+  onSaveToKeychain,
+  onRememberKey,
+  onClearSavedKey,
   prices,
 }: ProviderCardProps) {
   const showKeyInput = meta.requiresApiKey;
   const showUrlInput = meta.isLocal || meta.type === 'custom';
   const isLocal = meta.isLocal;
+  const keySource = config.keySource ?? 'none';
+  const isEnvKey = keySource === 'env';
+  const hasSavedKey = keySource === 'keychain' || keySource === 'saved';
 
   const costLabel = (() => {
     if (!config.model) return null;
@@ -80,12 +92,13 @@ export function ProviderCard({
         </label>
 
         <div className="min-w-0 flex-1">
-          {/* Provider name + test button + status */}
-          <div className="flex items-center gap-3">
+          {/* Provider name + badge + test button + status */}
+          <div className="flex items-center gap-2">
             <span className="font-medium text-gray-900">{meta.displayName}</span>
+            <KeySourceBadge source={keySource} />
             <button
               onClick={() => onTest(meta.type)}
-              disabled={isTesting || (meta.requiresApiKey && !config.apiKey)}
+              disabled={isTesting || (meta.requiresApiKey && !config.apiKey && !isEnvKey)}
               className="rounded bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700 hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {isTesting ? 'Testing...' : 'Test'}
@@ -95,22 +108,74 @@ export function ProviderCard({
 
           {/* API key input */}
           {showKeyInput && (
-            <div className="mt-2 flex items-center gap-2">
-              <label className="w-10 shrink-0 text-xs text-gray-500">Key:</label>
-              <input
-                type="password"
-                value={config.apiKey || ''}
-                onChange={(e) =>
-                  onUpdateConfig(meta.type, {
-                    apiKey: e.target.value,
-                    connectionStatus: 'untested',
-                  })
-                }
-                placeholder={`Enter ${meta.displayName} API key`}
-                className="flex-1 rounded border border-gray-300 px-2 py-1 text-sm focus:border-blue-400 focus:outline-none"
-              />
-              {config.apiKey && (
-                <span className="shrink-0 text-xs text-gray-400">{maskKey(config.apiKey)}</span>
+            <div className="mt-2">
+              {isEnvKey ? (
+                <div className="flex items-center gap-2">
+                  <label className="w-10 shrink-0 text-xs text-gray-500">Key:</label>
+                  <span className="flex-1 text-sm text-green-700">Provided via server environment</span>
+                  <button
+                    onClick={() => {
+                      onUpdateConfig(meta.type, { keySource: 'manual' as const });
+                    }}
+                    className="text-xs text-gray-400 hover:text-gray-600"
+                  >
+                    Override
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <div className="flex items-center gap-2">
+                    <label className="w-10 shrink-0 text-xs text-gray-500">Key:</label>
+                    <input
+                      type="password"
+                      value={config.apiKey || ''}
+                      onChange={(e) =>
+                        onUpdateConfig(meta.type, {
+                          apiKey: e.target.value,
+                          connectionStatus: 'untested',
+                          keySource: e.target.value ? 'manual' : 'none',
+                        })
+                      }
+                      placeholder={`Enter ${meta.displayName} API key`}
+                      className="flex-1 rounded border border-gray-300 px-2 py-1 text-sm focus:border-blue-400 focus:outline-none"
+                    />
+                    {config.apiKey && (
+                      <span className="shrink-0 text-xs text-gray-400">{maskKey(config.apiKey)}</span>
+                    )}
+                  </div>
+                  {/* Key persistence actions */}
+                  {config.apiKey && (
+                    <div className="mt-1 ml-12 flex items-center gap-3">
+                      {hasSavedKey && onClearSavedKey && (
+                        <button
+                          onClick={() => onClearSavedKey(meta.type)}
+                          className="text-xs text-red-500 hover:text-red-700"
+                        >
+                          Forget saved key
+                        </button>
+                      )}
+                      {!hasSavedKey && isDesktop && onSaveToKeychain && keySource !== 'keychain' && (
+                        <button
+                          onClick={() => onSaveToKeychain(meta.type)}
+                          className="text-xs text-blue-500 hover:text-blue-700"
+                        >
+                          Save to keychain
+                        </button>
+                      )}
+                      {!hasSavedKey && !isDesktop && onRememberKey && keySource !== 'saved' && (
+                        <label className="flex items-center gap-1.5 text-xs text-gray-500">
+                          <input
+                            type="checkbox"
+                            checked={config.rememberKey ?? false}
+                            onChange={(e) => onRememberKey(meta.type, e.target.checked)}
+                            className="h-3 w-3"
+                          />
+                          Remember (encrypted in browser)
+                        </label>
+                      )}
+                    </div>
+                  )}
+                </>
               )}
             </div>
           )}

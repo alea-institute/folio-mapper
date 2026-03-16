@@ -8,6 +8,14 @@ declare global {
     desktop?: {
       isDesktop: boolean;
       getLocalToken: () => Promise<string | null>;
+      keychain?: {
+        isAvailable: () => Promise<boolean>;
+        getKey: (provider: string) => Promise<string | null>;
+        setKey: (provider: string, apiKey: string) => Promise<void>;
+        deleteKey: (provider: string) => Promise<void>;
+        listProviders: () => Promise<string[]>;
+        clearAll: () => Promise<void>;
+      };
       llamafile?: {
         getStatus: () => Promise<LlamafileStatus>;
         getPort: () => Promise<number | null>;

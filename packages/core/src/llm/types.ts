@@ -15,11 +15,15 @@ export type LLMProviderType =
 
 export type ConnectionStatus = 'untested' | 'valid' | 'invalid';
 
+export type KeySource = 'none' | 'env' | 'keychain' | 'saved' | 'manual';
+
 export interface LLMProviderConfig {
   apiKey: string;
   baseUrl: string;
   model: string;
   connectionStatus: ConnectionStatus;
+  keySource: KeySource;
+  rememberKey: boolean;
 }
 
 export interface ModelInfo {

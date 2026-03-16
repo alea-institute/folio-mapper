@@ -9,10 +9,15 @@ interface LLMSettingsProps {
   activeProvider: LLMProviderType;
   configs: Record<LLMProviderType, LLMProviderConfig>;
   modelsByProvider: Record<string, ModelInfo[]>;
+  isDesktop?: boolean;
   onSetActiveProvider: (provider: LLMProviderType) => void;
   onUpdateConfig: (provider: LLMProviderType, updates: Partial<LLMProviderConfig>) => void;
   onSetConnectionStatus: (provider: LLMProviderType, status: ConnectionStatus) => void;
   onModelsLoaded: (provider: string, models: ModelInfo[]) => void;
+  onSaveToKeychain?: (provider: LLMProviderType) => void;
+  onRememberKey?: (provider: LLMProviderType, remember: boolean) => void;
+  onClearSavedKey?: (provider: LLMProviderType) => void;
+  onClearAllSavedKeys?: () => void;
   llamafileStatus?: LlamafileStatusType | null;
   llamafileModels?: ModelStatus[];
   onDownloadModel?: (modelId: string) => void;
@@ -36,15 +41,20 @@ export function LLMSettings({
   activeProvider,
   configs,
   modelsByProvider,
+  isDesktop,
   onSetActiveProvider,
   onUpdateConfig,
   onSetConnectionStatus,
+  onModelsLoaded,
+  onSaveToKeychain,
+  onRememberKey,
+  onClearSavedKey,
+  onClearAllSavedKeys,
   llamafileStatus,
   llamafileModels,
   onDownloadModel,
   onDeleteModel,
   onSetActiveModel,
-  onModelsLoaded,
   onClose,
   testConnection,
   fetchModels,
@@ -185,10 +195,14 @@ export function LLMSettings({
               models={modelsByProvider[type] || []}
               isLoadingModels={loadingModelsFor.has(type)}
               isTesting={testingProvider === type}
+              isDesktop={isDesktop}
               onSelect={onSetActiveProvider}
               onUpdateConfig={onUpdateConfig}
               onTest={handleTest}
               onRefreshModels={handleRefreshModels}
+              onSaveToKeychain={onSaveToKeychain}
+              onRememberKey={onRememberKey}
+              onClearSavedKey={onClearSavedKey}
               prices={prices}
             />
             {type === 'llamafile' && (
@@ -248,6 +262,18 @@ export function LLMSettings({
         <div className="space-y-6 px-6 py-4">
           {renderProviderSection('Cloud Providers', CLOUD_PROVIDERS)}
           {renderProviderSection('Local Models', LOCAL_PROVIDERS)}
+
+          {/* Clear all saved keys */}
+          {onClearAllSavedKeys && (
+            <div className="border-t border-gray-200 pt-3">
+              <button
+                onClick={onClearAllSavedKeys}
+                className="text-xs text-red-500 hover:text-red-700"
+              >
+                Clear all saved API keys
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

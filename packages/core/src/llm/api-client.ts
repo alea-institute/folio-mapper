@@ -27,6 +27,14 @@ export async function testConnection(
   return res.json();
 }
 
+export async function fetchKeyStatus(): Promise<{ env_providers: string[] }> {
+  const res = await fetch(`${BASE_URL}/key-status`, { headers: baseHeaders() });
+  if (!res.ok) {
+    throw new Error('Failed to fetch key status');
+  }
+  return res.json();
+}
+
 export async function fetchKnownModels(): Promise<Record<string, ModelInfo[]>> {
   const res = await fetch(`${BASE_URL}/known-models`, { headers: baseHeaders() });
   if (!res.ok) {

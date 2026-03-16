@@ -1,6 +1,11 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { parseText, testConnection, fetchModels, fetchKnownModels, fetchSyntheticData, BRANCH_COLORS, PROVIDER_META, setLocalToken, EXEMPLARS } from '@folio-mapper/core';
-import type { SuggestionEntry, ReviewEntry, InputHierarchyNode, HierarchyNode } from '@folio-mapper/core';
+import {
+  parseText, testConnection, fetchModels, fetchKnownModels, fetchSyntheticData,
+  BRANCH_COLORS, PROVIDER_META, setLocalToken, EXEMPLARS,
+  encryptKey, storeEncryptedKey, removeEncryptedKey, clearVault,
+  storeCanary, hasCanary, getVaultMeta,
+} from '@folio-mapper/core';
+import type { SuggestionEntry, ReviewEntry, InputHierarchyNode, HierarchyNode, LLMProviderType } from '@folio-mapper/core';
 import {
   AppShell,
   InputScreen,
@@ -21,6 +26,7 @@ import {
   SuggestionEditModal,
   SubmissionModal,
   ExemplarPanel,
+  PassphraseModal,
 } from '@folio-mapper/ui';
 import { useInputStore } from './store/input-store';
 import { useMappingStore } from './store/mapping-store';
@@ -36,6 +42,7 @@ import { useSuggestionSubmit } from './hooks/useSuggestionSubmit';
 import { useLlamafile } from './hooks/useLlamafile';
 import { useEmbeddingStatus } from './hooks/useEmbeddingStatus';
 import { useOWLUpdateStatus } from './hooks/useOWLUpdateStatus';
+import { useKeyResolution } from './hooks/useKeyResolution';
 
 function _formatTimeAgo(isoString: string): string {
   const diff = Date.now() - new Date(isoString).getTime();
@@ -180,6 +187,102 @@ export function App() {
   // Llamafile auto-management (desktop only)
   const llamafile = useLlamafile();
   const llamafileStatus = llamafile.status;
+
+  // Key resolution (env vars, keychain, vault)
+  const keyResolution = useKeyResolution();
+  const isDesktop = !!window.desktop?.isDesktop;
+
+  // Module-level passphrase cache for vault operations
+  const vaultPassphraseRef = useRef<string | null>(null);
+  const [showCreatePassphrase, setShowCreatePassphrase] = useState(false);
+  const pendingSaveProviderRef = useRef<LLMProviderType | null>(null);
+
+  const handleSaveToKeychain = useCallback(async (provider: LLMProviderType) => {
+    const keychain = window.desktop?.keychain;
+    if (!keychain) return;
+    const key = llmState.configs[provider].apiKey;
+    if (!key) return;
+    try {
+      await keychain.setKey(provider, key);
+      llmState.setKeySource(provider, 'keychain');
+    } catch (err) {
+      console.error('Failed to save to keychain:', err);
+    }
+  }, [llmState]);
+
+  const handleRememberKey = useCallback((provider: LLMProviderType, remember: boolean) => {
+    llmState.updateConfig(provider, { rememberKey: remember });
+    if (remember) {
+      const key = llmState.configs[provider].apiKey;
+      if (!key) return;
+      if (hasCanary() && vaultPassphraseRef.current) {
+        // Already have passphrase — encrypt immediately
+        encryptKey(key, vaultPassphraseRef.current).then((payload) => {
+          storeEncryptedKey(provider, payload);
+          llmState.setKeySource(provider, 'saved');
+        });
+      } else {
+        // Need passphrase first
+        pendingSaveProviderRef.current = provider;
+        setShowCreatePassphrase(true);
+      }
+    } else {
+      removeEncryptedKey(provider);
+      if (llmState.configs[provider].keySource === 'saved') {
+        llmState.setKeySource(provider, 'manual');
+      }
+    }
+  }, [llmState]);
+
+  const handleCreatePassphrase = useCallback(async (passphrase: string): Promise<boolean> => {
+    vaultPassphraseRef.current = passphrase;
+    await storeCanary(passphrase);
+
+    // Encrypt the pending key
+    const provider = pendingSaveProviderRef.current;
+    if (provider) {
+      const key = llmState.configs[provider].apiKey;
+      if (key) {
+        const payload = await encryptKey(key, passphrase);
+        storeEncryptedKey(provider, payload);
+        llmState.setKeySource(provider, 'saved');
+      }
+      pendingSaveProviderRef.current = null;
+    }
+    setShowCreatePassphrase(false);
+    return true;
+  }, [llmState]);
+
+  const handleClearSavedKey = useCallback((provider: LLMProviderType) => {
+    if (isDesktop) {
+      window.desktop?.keychain?.deleteKey(provider).catch(() => {});
+    } else {
+      removeEncryptedKey(provider);
+    }
+    llmState.updateConfig(provider, { rememberKey: false });
+    if (llmState.configs[provider].keySource === 'keychain' || llmState.configs[provider].keySource === 'saved') {
+      llmState.setKeySource(provider, llmState.configs[provider].apiKey ? 'manual' : 'none');
+    }
+  }, [isDesktop, llmState]);
+
+  const handleClearAllSavedKeys = useCallback(() => {
+    if (isDesktop) {
+      window.desktop?.keychain?.clearAll().catch(() => {});
+    } else {
+      clearVault();
+    }
+    // Reset all key sources and rememberKey flags
+    const providers = Object.keys(llmState.configs) as LLMProviderType[];
+    for (const p of providers) {
+      const cfg = llmState.configs[p];
+      if (cfg.keySource === 'keychain' || cfg.keySource === 'saved') {
+        llmState.setKeySource(p, cfg.apiKey ? 'manual' : 'none');
+      }
+      if (cfg.rememberKey) {
+        llmState.updateConfig(p, { rememberKey: false });
+      }
+    }
+  }, [isDesktop, llmState]);
 
   // Suggestion queue + submission
   const suggestionSubmit = useSuggestionSubmit();
@@ -500,6 +603,7 @@ export function App() {
       activeProvider={llmState.activeProvider}
       configs={llmState.configs}
       modelsByProvider={llmState.modelsByProvider}
+      isDesktop={isDesktop}
       llamafileStatus={llamafileStatus}
       llamafileModels={llamafile.models}
       onDownloadModel={llamafile.downloadModel}
@@ -509,6 +613,10 @@ export function App() {
       onUpdateConfig={llmState.updateConfig}
       onSetConnectionStatus={llmState.setConnectionStatus}
       onModelsLoaded={llmState.setModelsForProvider}
+      onSaveToKeychain={isDesktop ? handleSaveToKeychain : undefined}
+      onRememberKey={!isDesktop ? handleRememberKey : undefined}
+      onClearSavedKey={handleClearSavedKey}
+      onClearAllSavedKeys={handleClearAllSavedKeys}
       onClose={() => setShowSettings(false)}
       testConnection={testConnection}
       fetchModels={fetchModels}
@@ -575,6 +683,28 @@ export function App() {
           </div>
         )}
         {settingsModal}
+        {keyResolution.needsPassphrase && (
+          <PassphraseModal
+            mode="unlock"
+            error={keyResolution.passphraseError}
+            onSubmit={async (p) => {
+              const ok = await keyResolution.unlockVault(p);
+              if (ok) vaultPassphraseRef.current = p;
+              return ok;
+            }}
+            onCancel={keyResolution.dismissPassphrase}
+          />
+        )}
+        {showCreatePassphrase && (
+          <PassphraseModal
+            mode="create"
+            onSubmit={handleCreatePassphrase}
+            onCancel={() => {
+              setShowCreatePassphrase(false);
+              pendingSaveProviderRef.current = null;
+            }}
+          />
+        )}
         {showMappingsView && mappingState.mappingResponse && (
           <MappingsView
             inputHierarchy={inputHierarchy}
@@ -723,6 +853,28 @@ export function App() {
   return (
     <AppShell onOpenSettings={() => setShowSettings(true)} llmStatus={llmStatus} llmProviderLabel={llmProviderLabel} embeddingStatus={embeddingStatus} embeddingDetail={embeddingDetail} folioUpdateStatus={folioUpdateStatus} folioUpdateDetail={folioUpdateDetail}>
       {settingsModal}
+      {keyResolution.needsPassphrase && (
+        <PassphraseModal
+          mode="unlock"
+          error={keyResolution.passphraseError}
+          onSubmit={async (p) => {
+            const ok = await keyResolution.unlockVault(p);
+            if (ok) vaultPassphraseRef.current = p;
+            return ok;
+          }}
+          onCancel={keyResolution.dismissPassphrase}
+        />
+      )}
+      {showCreatePassphrase && (
+        <PassphraseModal
+          mode="create"
+          onSubmit={handleCreatePassphrase}
+          onCancel={() => {
+            setShowCreatePassphrase(false);
+            pendingSaveProviderRef.current = null;
+          }}
+        />
+      )}
 
       {recoveryData && (
         <SessionRecoveryModal

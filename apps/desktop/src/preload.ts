@@ -3,6 +3,14 @@ import { contextBridge, ipcRenderer } from "electron";
 contextBridge.exposeInMainWorld("desktop", {
   isDesktop: true,
   getLocalToken: () => ipcRenderer.invoke("auth:get-local-token"),
+  keychain: {
+    isAvailable: () => ipcRenderer.invoke("keychain:is-available"),
+    getKey: (provider: string) => ipcRenderer.invoke("keychain:get-key", provider),
+    setKey: (provider: string, apiKey: string) => ipcRenderer.invoke("keychain:set-key", provider, apiKey),
+    deleteKey: (provider: string) => ipcRenderer.invoke("keychain:delete-key", provider),
+    listProviders: () => ipcRenderer.invoke("keychain:list-providers"),
+    clearAll: () => ipcRenderer.invoke("keychain:clear-all"),
+  },
   llamafile: {
     getStatus: () => ipcRenderer.invoke("llamafile:get-status"),
     getPort: () => ipcRenderer.invoke("llamafile:get-port"),

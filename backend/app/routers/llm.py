@@ -1,6 +1,7 @@
 """LLM provider API endpoints."""
 
 import logging
+import os
 
 from fastapi import APIRouter, Depends, Request
 
@@ -12,7 +13,7 @@ from app.models.llm_models import (
 )
 from app.rate_limit import limiter
 from app.services.auth import extract_api_key
-from app.services.llm.registry import KNOWN_MODELS, get_provider, sort_and_enrich_models
+from app.services.llm.registry import KNOWN_MODELS, PROVIDER_ENV_VAR, get_provider, sort_and_enrich_models
 
 logger = logging.getLogger(__name__)
 
@@ -46,6 +47,13 @@ async def test_connection(
             success=False,
             message="Connection test failed",
         )
+
+
+@router.get("/key-status")
+async def key_status() -> dict:
+    """Return which providers have env var keys set (without revealing the keys)."""
+    available = [p.value for p, var in PROVIDER_ENV_VAR.items() if os.environ.get(var)]
+    return {"env_providers": available}
 
 
 @router.get("/known-models")

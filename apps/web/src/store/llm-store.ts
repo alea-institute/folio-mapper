@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { ConnectionStatus, LLMProviderConfig, LLMProviderType, ModelInfo } from '@folio-mapper/core';
+import type { ConnectionStatus, KeySource, LLMProviderConfig, LLMProviderType, ModelInfo } from '@folio-mapper/core';
 import { PROVIDER_META } from '@folio-mapper/core';
 
 interface LLMState {
@@ -11,6 +11,7 @@ interface LLMState {
   setActiveProvider: (provider: LLMProviderType) => void;
   updateConfig: (provider: LLMProviderType, updates: Partial<LLMProviderConfig>) => void;
   setConnectionStatus: (provider: LLMProviderType, status: ConnectionStatus) => void;
+  setKeySource: (provider: LLMProviderType, source: KeySource) => void;
   setModelsForProvider: (provider: string, models: ModelInfo[]) => void;
   setAllModels: (models: Record<string, ModelInfo[]>) => void;
 }
@@ -23,6 +24,8 @@ function makeDefaultConfigs(): Record<LLMProviderType, LLMProviderConfig> {
       baseUrl: meta.defaultBaseUrl,
       model: meta.defaultModel,
       connectionStatus: 'untested',
+      keySource: 'none',
+      rememberKey: false,
     };
   }
   return configs;
@@ -53,6 +56,14 @@ export const useLLMStore = create<LLMState>()(
           },
         })),
 
+      setKeySource: (provider, source) =>
+        set((state) => ({
+          configs: {
+            ...state.configs,
+            [provider]: { ...state.configs[provider], keySource: source },
+          },
+        })),
+
       setModelsForProvider: (provider, models) =>
         set((state) => ({
           modelsByProvider: { ...state.modelsByProvider, [provider]: models },
@@ -63,13 +74,19 @@ export const useLLMStore = create<LLMState>()(
     }),
     {
       name: 'folio-mapper-llm',
-      // Strip API keys from persistence — keys are session-only (memory)
+      // Strip API keys and keySource from persistence — keys are session-only (memory).
+      // rememberKey is persisted as a user preference (not a secret).
       partialize: (state) => ({
         activeProvider: state.activeProvider,
         configs: Object.fromEntries(
           Object.entries(state.configs).map(([key, config]) => [
             key,
-            { ...config, apiKey: '', connectionStatus: 'untested' as const },
+            {
+              ...config,
+              apiKey: '',
+              connectionStatus: 'untested' as const,
+              keySource: 'none' as const,
+            },
           ]),
         ),
         modelsByProvider: state.modelsByProvider,

@@ -1,5 +1,6 @@
-import { app, BrowserWindow, ipcMain } from "electron";
+import { app, BrowserWindow, ipcMain, safeStorage } from "electron";
 import * as path from "path";
+import * as fs from "fs";
 import log from "electron-log";
 import { BackendManager } from "./backend-manager";
 import { LlamafileManager } from "./llamafile-manager";
@@ -39,6 +40,69 @@ async function createWindow(port: number): Promise<void> {
 function registerAuthIPC(): void {
   ipcMain.handle("auth:get-local-token", () => {
     return backendManager?.localToken ?? null;
+  });
+}
+
+function getKeychainPath(): string {
+  return path.join(app.getPath("userData"), "api-keys.json");
+}
+
+function readKeychainFile(): Record<string, string> {
+  try {
+    const raw = fs.readFileSync(getKeychainPath(), "utf-8");
+    return JSON.parse(raw) as Record<string, string>;
+  } catch {
+    return {};
+  }
+}
+
+function writeKeychainFile(data: Record<string, string>): void {
+  fs.writeFileSync(getKeychainPath(), JSON.stringify(data, null, 2), "utf-8");
+}
+
+function registerKeychainIPC(): void {
+  ipcMain.handle("keychain:is-available", () => {
+    return safeStorage.isEncryptionAvailable();
+  });
+
+  ipcMain.handle("keychain:get-key", (_event, provider: string) => {
+    if (!safeStorage.isEncryptionAvailable()) return null;
+    const data = readKeychainFile();
+    const encrypted = data[provider];
+    if (!encrypted) return null;
+    try {
+      return safeStorage.decryptString(Buffer.from(encrypted, "base64"));
+    } catch {
+      return null;
+    }
+  });
+
+  ipcMain.handle("keychain:set-key", (_event, provider: string, apiKey: string) => {
+    if (!safeStorage.isEncryptionAvailable()) {
+      throw new Error("Encryption not available");
+    }
+    const data = readKeychainFile();
+    data[provider] = safeStorage.encryptString(apiKey).toString("base64");
+    writeKeychainFile(data);
+  });
+
+  ipcMain.handle("keychain:delete-key", (_event, provider: string) => {
+    const data = readKeychainFile();
+    delete data[provider];
+    writeKeychainFile(data);
+  });
+
+  ipcMain.handle("keychain:list-providers", () => {
+    if (!safeStorage.isEncryptionAvailable()) return [];
+    return Object.keys(readKeychainFile());
+  });
+
+  ipcMain.handle("keychain:clear-all", () => {
+    try {
+      fs.unlinkSync(getKeychainPath());
+    } catch {
+      // File didn't exist
+    }
   });
 }
 
@@ -94,6 +158,7 @@ async function startApp(): Promise<void> {
 
   // Register IPC handlers before window creation
   registerAuthIPC();
+  registerKeychainIPC();
   registerLlamafileIPC();
 
   await createWindow(port);

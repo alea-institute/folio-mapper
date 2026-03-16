@@ -3,6 +3,19 @@
 import os
 
 from app.models.llm_models import LLMProviderType, ModelInfo
+
+# Standard environment variable names for API keys per provider
+PROVIDER_ENV_VAR: dict[LLMProviderType, str] = {
+    LLMProviderType.OPENAI: "OPENAI_API_KEY",
+    LLMProviderType.ANTHROPIC: "ANTHROPIC_API_KEY",
+    LLMProviderType.GOOGLE: "GOOGLE_API_KEY",
+    LLMProviderType.MISTRAL: "MISTRAL_API_KEY",
+    LLMProviderType.COHERE: "COHERE_API_KEY",
+    LLMProviderType.META_LLAMA: "META_LLAMA_API_KEY",
+    LLMProviderType.GROQ: "GROQ_API_KEY",
+    LLMProviderType.XAI: "XAI_API_KEY",
+    LLMProviderType.GITHUB_MODELS: "GITHUB_MODELS_API_KEY",
+}
 from app.services.llm.anthropic_provider import AnthropicProvider
 from app.services.llm.base import BaseLLMProvider
 from app.services.llm.cohere_provider import CohereProvider
@@ -33,7 +46,7 @@ DEFAULT_MODELS: dict[LLMProviderType, str] = {
     LLMProviderType.OPENAI: "gpt-5.2",
     LLMProviderType.ANTHROPIC: "claude-sonnet-4-6",
     LLMProviderType.GOOGLE: "gemini-2.5-flash",
-    LLMProviderType.MISTRAL: "mistral-large-3-25-12",
+    LLMProviderType.MISTRAL: "mistral-large-latest",
     LLMProviderType.COHERE: "command-a-03-2025",
     LLMProviderType.META_LLAMA: "llama-4-scout",
     LLMProviderType.OLLAMA: "",
@@ -178,6 +191,10 @@ def get_provider(
 
     # SSRF protection: validate URL before creating provider
     validate_base_url(resolved_url, provider_type)
+
+    # Env var fallback: if no key provided via header, check env
+    if not api_key and provider_type in PROVIDER_ENV_VAR:
+        api_key = os.environ.get(PROVIDER_ENV_VAR[provider_type]) or None
 
     if provider_type == LLMProviderType.GITHUB_MODELS:
         return GitHubModelsProvider(api_key=api_key, base_url=resolved_url, model=model)
