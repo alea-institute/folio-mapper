@@ -1,6 +1,6 @@
 [project]
 name = "folio-mapper-backend"
-version = "0.1.0"
+version = "0.1.1"
 description = "FOLIO Mapper backend API"
 requires-python = ">=3.11"
 dependencies = [

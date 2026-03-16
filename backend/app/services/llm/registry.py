@@ -1,5 +1,7 @@
 """Provider factory and metadata registry."""
 
+import os
+
 from app.models.llm_models import LLMProviderType, ModelInfo
 from app.services.llm.anthropic_provider import AnthropicProvider
 from app.services.llm.base import BaseLLMProvider
@@ -163,7 +165,16 @@ def get_provider(
     model: str | None = None,
 ) -> BaseLLMProvider:
     """Create a provider instance from the given configuration."""
-    resolved_url = base_url or DEFAULT_BASE_URLS[provider_type]
+    if base_url is None:
+        _env_urls = {
+            LLMProviderType.OLLAMA: os.environ.get("FOLIO_MAPPER_OLLAMA_BASE_URL", "http://localhost:11434") + "/v1",
+            LLMProviderType.LMSTUDIO: os.environ.get("FOLIO_MAPPER_LMSTUDIO_BASE_URL", "http://localhost:1234") + "/v1",
+            LLMProviderType.CUSTOM: os.environ.get("FOLIO_MAPPER_CUSTOM_BASE_URL", "http://localhost:8080") + "/v1",
+            LLMProviderType.LLAMAFILE: os.environ.get("FOLIO_MAPPER_LLAMAFILE_BASE_URL", "http://localhost:8080") + "/v1",
+        }
+        resolved_url = _env_urls.get(provider_type, DEFAULT_BASE_URLS[provider_type])
+    else:
+        resolved_url = base_url
 
     # SSRF protection: validate URL before creating provider
     validate_base_url(resolved_url, provider_type)
