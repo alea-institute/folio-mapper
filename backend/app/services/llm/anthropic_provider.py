@@ -11,9 +11,10 @@ logger = logging.getLogger(__name__)
 
 # Fallback list used when the models API is unreachable.
 _FALLBACK_MODELS = [
-    ModelInfo(id="claude-opus-4-6", name="Claude Opus 4.6", context_window=200000),
-    ModelInfo(id="claude-sonnet-4-5-20250929", name="Claude Sonnet 4.5", context_window=200000),
     ModelInfo(id="claude-haiku-4-5-20251001", name="Claude Haiku 4.5", context_window=200000),
+    ModelInfo(id="claude-sonnet-4-5-20250929", name="Claude Sonnet 4.5", context_window=200000),
+    ModelInfo(id="claude-sonnet-4-6", name="Claude Sonnet 4.6", context_window=200000),
+    ModelInfo(id="claude-opus-4-6", name="Claude Opus 4.6", context_window=200000),
 ]
 
 

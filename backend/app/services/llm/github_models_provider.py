@@ -1,9 +1,13 @@
 """GitHub Models provider — OpenAI-compatible inference with custom model catalog."""
 
+import logging
+
 import httpx
 
 from app.models.llm_models import ModelInfo
 from app.services.llm.openai_compat import OpenAICompatProvider
+
+logger = logging.getLogger(__name__)
 
 _CATALOG_URL = "https://models.github.ai/catalog/models"
 
@@ -16,17 +20,34 @@ class GitHubModelsProvider(OpenAICompatProvider):
         if self.api_key:
             headers["Authorization"] = f"Bearer {self.api_key}"
 
-        async with httpx.AsyncClient(timeout=15) as client:
-            resp = await client.get(_CATALOG_URL, headers=headers)
-            resp.raise_for_status()
-            data = resp.json()
+        try:
+            async with httpx.AsyncClient(timeout=30) as client:
+                resp = await client.get(_CATALOG_URL, headers=headers)
+                resp.raise_for_status()
+                data = resp.json()
 
-        models: list[ModelInfo] = []
-        for entry in data:
-            model_id = entry.get("id", "")
-            name = entry.get("name", model_id)
-            limits = entry.get("limits", {})
-            ctx = limits.get("max_input_tokens")
-            models.append(ModelInfo(id=model_id, name=name, context_window=ctx))
+            # Handle multiple response shapes: list, dict with "models" or "value" key
+            if isinstance(data, dict):
+                entries = data.get("models") or data.get("value") or []
+            elif isinstance(data, list):
+                entries = data
+            else:
+                entries = []
 
-        return sorted(models, key=lambda m: m.name)
+            models: list[ModelInfo] = []
+            for entry in entries:
+                model_id = entry.get("id", "")
+                name = entry.get("friendly_name") or entry.get("displayName") or entry.get("name", model_id)
+                limits = entry.get("limits", {})
+                ctx = limits.get("max_input_tokens")
+                models.append(ModelInfo(id=model_id, name=name, context_window=ctx))
+
+            if models:
+                return sorted(models, key=lambda m: m.name)
+
+            logger.debug("GitHub Models catalog returned empty, using fallback")
+        except Exception:
+            logger.debug("GitHub Models catalog fetch failed, using fallback", exc_info=True)
+
+        # Fall back to parent (OpenAI-compat /models endpoint)
+        return await super().list_models()

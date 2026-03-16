@@ -185,8 +185,8 @@ async def test_list_models(mock_get_provider, client: AsyncClient):
     assert resp.status_code == 200
     data = resp.json()
     assert len(data) == 2
-    assert data[0]["id"] == "gpt-4o"
-    assert data[1]["id"] == "gpt-4o-mini"
+    assert data[0]["id"] == "gpt-4o-mini"
+    assert data[1]["id"] == "gpt-4o"
 
 
 @pytest.mark.anyio
@@ -230,8 +230,8 @@ def test_sort_and_enrich_models_order():
     ]
     result = sort_and_enrich_models(live, LLMProviderType.OPENAI)
     ids = [m.id for m in result]
-    # gpt-5.2 is index 0 in KNOWN_MODELS, gpt-5 is index 2, then unknowns alphabetically
-    assert ids == ["gpt-5.2", "gpt-5", "unknown-a", "unknown-z"]
+    # gpt-5 is index 9 in KNOWN_MODELS, gpt-5.2 is index 10, then unknowns alphabetically
+    assert ids == ["gpt-5", "gpt-5.2", "unknown-a", "unknown-z"]
 
 
 def test_sort_and_enrich_models_deduplicates():
