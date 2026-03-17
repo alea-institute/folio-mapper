@@ -77,6 +77,8 @@ class OWLUpdateStatus(BaseModel):
     last_check_time: str | None = None
     last_update_time: str | None = None
     concept_count: int = 0
+    label_count: int = 0
+    branch_count: int = 0
     owl_commit_sha: str | None = None
     check_interval_seconds: int = 86400
     error: str | None = None

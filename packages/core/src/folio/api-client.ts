@@ -164,3 +164,13 @@ export async function triggerOWLUpdateCheck(): Promise<OWLUpdateStatus> {
 
   return res.json();
 }
+
+export async function forceOWLUpdate(): Promise<OWLUpdateStatus> {
+  const res = await fetch(`${BASE_URL}/owl-update/force`, { method: 'POST', headers: baseHeaders() });
+
+  if (!res.ok) {
+    throw new Error(`Failed to force OWL update (${res.status})`);
+  }
+
+  return res.json();
+}

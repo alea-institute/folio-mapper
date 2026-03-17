@@ -24,6 +24,8 @@ _last_commit_sha: str | None = None
 _update_status: str = "current"  # current | checking | updating | updated | error
 _update_error: str | None = None
 _concept_count: int = 0
+_label_count: int = 0
+_branch_count: int = 0
 _timer: threading.Timer | None = None
 
 _GITHUB_REPO = "alea-institute/FOLIO"
@@ -166,9 +168,22 @@ def _check_github_head_fallback() -> bool:
 # Apply update
 # ---------------------------------------------------------------------------
 
+def _count_branches(folio: object) -> int:
+    """Count top-level FOLIO branches (classes whose parent is owl#Thing)."""
+    try:
+        count = 0
+        for c in folio.classes:  # type: ignore[attr-defined]
+            parents = getattr(c, "sub_class_of", None) or []
+            if any("owl#Thing" in str(p) or str(p).endswith("Thing") for p in parents):
+                count += 1
+        return count
+    except Exception:
+        return 0
+
+
 def _apply_update() -> None:
     """Download fresh OWL, rebuild FOLIO instance, swap into folio_service."""
-    global _last_commit_sha, _last_update_time, _update_status, _update_error, _concept_count
+    global _last_commit_sha, _last_update_time, _update_status, _update_error, _concept_count, _label_count, _branch_count
 
     _update_status = "updating"
     branch = _branch()
@@ -179,6 +194,8 @@ def _apply_update() -> None:
         # Build a fresh FOLIO instance (bypasses cache, downloads from GitHub)
         new_folio = FOLIO(use_cache=False, github_repo_branch=branch)
         _concept_count = len(new_folio.classes)
+        _label_count = sum(1 + len(c.alternative_labels or []) for c in new_folio.classes)
+        _branch_count = _count_branches(new_folio)
         logger.info("Downloaded new OWL: %d classes from branch %s", _concept_count, branch)
 
         # Hot-swap into folio_service
@@ -291,12 +308,14 @@ def start_update_checker(interval: int | None = None) -> None:
 
     _load_meta()
 
-    # Capture current concept count from folio_service
+    # Capture current concept/label/branch counts from folio_service
     try:
         from app.services.folio_service import get_folio
         folio = get_folio()
         if folio:
             _concept_count = len(folio.classes)
+            _label_count = sum(1 + len(c.alternative_labels or []) for c in folio.classes)
+            _branch_count = _count_branches(folio)
     except Exception:
         pass
 
@@ -332,6 +351,8 @@ def get_update_status() -> OWLUpdateStatus:
         last_check_time=_last_check_time,
         last_update_time=_last_update_time,
         concept_count=_concept_count,
+        label_count=_label_count,
+        branch_count=_branch_count,
         owl_commit_sha=_last_commit_sha,
         check_interval_seconds=_check_interval(),
         error=_update_error,
@@ -362,7 +383,7 @@ def force_update() -> OWLUpdateStatus:
 def reset_update_service() -> None:
     """Reset all state. Used in tests."""
     global _last_check_time, _last_update_time, _last_commit_sha
-    global _update_status, _update_error, _concept_count, _timer
+    global _update_status, _update_error, _concept_count, _label_count, _branch_count, _timer
     stop_update_checker()
     _last_check_time = None
     _last_update_time = None
@@ -370,4 +391,6 @@ def reset_update_service() -> None:
     _update_status = "current"
     _update_error = None
     _concept_count = 0
+    _label_count = 0
+    _branch_count = 0
     _timer = None
