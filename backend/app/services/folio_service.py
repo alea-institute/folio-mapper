@@ -282,7 +282,7 @@ def get_folio() -> FOLIO:
         _folio_error = None
         try:
             logger.info("Loading FOLIO ontology from GitHub...")
-            _folio_instance = FOLIO()
+            _folio_instance = FOLIO(github_repo_branch="main")
             _init_branch_roots()
             logger.info("FOLIO ontology loaded: %d classes", len(_folio_instance.classes))
             return _folio_instance

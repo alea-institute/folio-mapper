@@ -10,6 +10,7 @@ export { HierarchyConfirmation } from './components/confirmation/HierarchyConfir
 export { ConfirmationScreen } from './components/confirmation/ConfirmationScreen';
 export { AppShell } from './components/layout/AppShell';
 export { Header } from './components/layout/Header';
+export { FolioUpdateModal } from './components/layout/FolioUpdateModal';
 
 // Mapping components (Stage 2)
 export { MappingScreen } from './components/mapping/MappingScreen';

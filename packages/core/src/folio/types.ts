@@ -72,6 +72,8 @@ export interface OWLUpdateStatus {
   last_check_time: string | null;
   last_update_time: string | null;
   concept_count: number;
+  label_count?: number;
+  branch_count?: number;
   owl_commit_sha: string | null;
   check_interval_seconds: number;
   error: string | null;

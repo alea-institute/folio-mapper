@@ -4,6 +4,7 @@ import {
   BRANCH_COLORS, PROVIDER_META, setLocalToken, EXEMPLARS,
   encryptKey, storeEncryptedKey, removeEncryptedKey, clearVault,
   storeCanary, hasCanary, getVaultMeta,
+  triggerOWLUpdateCheck, forceOWLUpdate,
 } from '@folio-mapper/core';
 import type { SuggestionEntry, ReviewEntry, InputHierarchyNode, HierarchyNode, LLMProviderType } from '@folio-mapper/core';
 import {
@@ -27,6 +28,7 @@ import {
   SubmissionModal,
   ExemplarPanel,
   PassphraseModal,
+  FolioUpdateModal,
 } from '@folio-mapper/ui';
 import { useInputStore } from './store/input-store';
 import { useMappingStore } from './store/mapping-store';
@@ -99,6 +101,9 @@ export function App() {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const [showSettings, setShowSettings] = useState(false);
+  const [showFolioModal, setShowFolioModal] = useState(false);
+  const [isFolioChecking, setIsFolioChecking] = useState(false);
+  const [isFolioUpdating, setIsFolioUpdating] = useState(false);
   const [showLlmWarning, setShowLlmWarning] = useState(false);
   const llmWarningDismissed = useRef(false);
   const [isSearching, setIsSearching] = useState(false);
@@ -283,6 +288,28 @@ export function App() {
       }
     }
   }, [isDesktop, llmState]);
+
+  const handleFolioCheck = useCallback(async () => {
+    setIsFolioChecking(true);
+    try {
+      await triggerOWLUpdateCheck();
+    } catch (err) {
+      console.error('FOLIO update check failed:', err);
+    } finally {
+      setIsFolioChecking(false);
+    }
+  }, []);
+
+  const handleFolioForceUpdate = useCallback(async () => {
+    setIsFolioUpdating(true);
+    try {
+      await forceOWLUpdate();
+    } catch (err) {
+      console.error('FOLIO force update failed:', err);
+    } finally {
+      setIsFolioUpdating(false);
+    }
+  }, []);
 
   // Suggestion queue + submission
   const suggestionSubmit = useSuggestionSubmit();
@@ -632,6 +659,7 @@ export function App() {
       <div className="flex h-screen flex-col overflow-hidden">
         <Header
           onOpenSettings={() => setShowSettings(true)}
+          onOpenFolioModal={() => setShowFolioModal(true)}
           onRestart={() => {
             cancelBatchLoading();
             mappingState.resetMapping();
@@ -683,6 +711,16 @@ export function App() {
           </div>
         )}
         {settingsModal}
+        {showFolioModal && owlUpdateRaw && (
+          <FolioUpdateModal
+            status={owlUpdateRaw}
+            onCheck={handleFolioCheck}
+            onForceUpdate={handleFolioForceUpdate}
+            onClose={() => setShowFolioModal(false)}
+            isChecking={isFolioChecking}
+            isUpdating={isFolioUpdating}
+          />
+        )}
         {keyResolution.needsPassphrase && (
           <PassphraseModal
             mode="unlock"
@@ -851,8 +889,18 @@ export function App() {
   }
 
   return (
-    <AppShell onOpenSettings={() => setShowSettings(true)} llmStatus={llmStatus} llmProviderLabel={llmProviderLabel} embeddingStatus={embeddingStatus} embeddingDetail={embeddingDetail} folioUpdateStatus={folioUpdateStatus} folioUpdateDetail={folioUpdateDetail}>
+    <AppShell onOpenSettings={() => setShowSettings(true)} onOpenFolioModal={() => setShowFolioModal(true)} llmStatus={llmStatus} llmProviderLabel={llmProviderLabel} embeddingStatus={embeddingStatus} embeddingDetail={embeddingDetail} folioUpdateStatus={folioUpdateStatus} folioUpdateDetail={folioUpdateDetail}>
       {settingsModal}
+      {showFolioModal && owlUpdateRaw && (
+        <FolioUpdateModal
+          status={owlUpdateRaw}
+          onCheck={handleFolioCheck}
+          onForceUpdate={handleFolioForceUpdate}
+          onClose={() => setShowFolioModal(false)}
+          isChecking={isFolioChecking}
+          isUpdating={isFolioUpdating}
+        />
+      )}
       {keyResolution.needsPassphrase && (
         <PassphraseModal
           mode="unlock"
