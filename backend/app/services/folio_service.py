@@ -694,6 +694,22 @@ def _compute_relevance_score(
     else:
         final = def_score
 
+    # Specificity penalty: penalize candidates that are more specific than the query.
+    # When a candidate label introduces many content words not present in the query,
+    # it's "too specific" for the input.
+    # e.g., input "Antitrust" → "Antitrust Claims" is fine (1 extra word),
+    #        but "Antitrust - Bundled Pricing Claims" is too specific (3 extra words).
+    # Note: actual exact matches (query == label) return 99.0 early above,
+    # so this only runs for non-exact matches that happen to score high.
+    if label_content and query_content and final > 0:
+        extra_words = label_content - query_content
+        if extra_words and len(label_content) > len(query_content):
+            specificity_ratio = len(extra_words) / len(label_content)
+            # Penalty scales from 0% (no extra words) to 40% (all words are extra).
+            # Mild at 1 extra word, significant at 3+.
+            penalty = specificity_ratio * 0.4
+            final = final * (1.0 - penalty)
+
     return round(min(final, 99.0), 1)
 
 

@@ -466,3 +466,59 @@ class TestMandatoryBranchPrefixExpansion:
         assert "Securities Service" not in labels, (
             f"Non-mandatory branch should NOT find results via title-case prefix. Got: {labels}"
         )
+
+
+# --- Specificity penalty tests ---
+
+
+class TestSpecificityPenalty:
+    """Candidates more specific than the input should score lower."""
+
+    def test_overly_specific_candidate_penalized(self):
+        """A candidate with many extra words should score lower than a close match."""
+        query = "Antitrust"
+        cw = _content_words(query)
+
+        # Same-level specificity
+        close = _compute_relevance_score(cw, query, "Antitrust Claims", "Claims about antitrust", [])
+        # Overly specific (3 extra words)
+        specific = _compute_relevance_score(cw, query, "Antitrust - Bundled Pricing Claims", "Bundled pricing antitrust claims", [])
+
+        assert specific < close, (
+            f"Overly specific candidate ({specific}) should score lower than close match ({close})"
+        )
+
+    def test_exact_match_not_penalized(self):
+        """Exact matches should never be penalized."""
+        query = "Antitrust and Competition Law"
+        cw = _content_words(query)
+        score = _compute_relevance_score(cw, query, "Antitrust and Competition Law", "Law related to antitrust", [])
+        assert score == 99.0
+
+    def test_specific_input_matches_specific_candidate(self):
+        """When the input is itself specific, a matching specific candidate should score high."""
+        query = "Antitrust Bundled Pricing Claims"
+        cw = _content_words(query)
+        score = _compute_relevance_score(cw, query, "Antitrust - Bundled Pricing Claims", "Bundled pricing antitrust claims", [])
+        assert score >= 90.0, f"Specific input matching specific candidate should score >= 90, got {score}"
+
+    def test_same_word_count_no_penalty(self):
+        """Candidates with same number of content words as query should not be penalized."""
+        query = "Antitrust and Competition Law"
+        cw = _content_words(query)  # {'antitrust', 'competition'}
+        # "Antitrust Claims" has 2 content words, same as query
+        score = _compute_relevance_score(cw, query, "Antitrust Claims", "Claims about antitrust", [])
+        # Score should be the same as without penalty (word overlap * 88 + def boost)
+        assert score >= 45.0, f"Same word count should not be penalized, got {score}"
+
+    def test_penalty_scales_with_extra_words(self):
+        """More extra words should mean more penalty."""
+        query = "Antitrust"
+        cw = _content_words(query)
+
+        two_extra = _compute_relevance_score(cw, query, "Antitrust - Pricing Claims", "Pricing antitrust", [])
+        four_extra = _compute_relevance_score(cw, query, "Antitrust - Vertical Price Fixing Claims", "Vertical price fixing", [])
+
+        assert four_extra < two_extra, (
+            f"4 extra words ({four_extra}) should score lower than 2 extra words ({two_extra})"
+        )
