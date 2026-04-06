@@ -28,7 +28,7 @@ export function ExemplarPanel({
       <p className="mb-3 text-xs text-gray-500">
         Load a pre-built legal practice area to explore FOLIO mapping — no LLM needed.
       </p>
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
         {exemplars.map((ex) => {
           const isThisLoading = loadingId === ex.id;
           return (
