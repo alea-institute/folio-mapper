@@ -63,11 +63,10 @@ def _search_within_branch(
                 raw[h] = owl_class
 
         if len(st) >= 3:
-            for variant in (st.capitalize(), st):
-                for owl_class in folio.search_by_prefix(variant):
-                    h = _extract_iri_hash(owl_class.iri)
-                    if h not in raw and h in branch_hashes:
-                        raw[h] = owl_class
+            for owl_class in folio.search_by_prefix(st):
+                h = _extract_iri_hash(owl_class.iri)
+                if h not in raw and h in branch_hashes:
+                    raw[h] = owl_class
 
     # Score candidates
     scored = []

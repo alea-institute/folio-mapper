@@ -1061,25 +1061,21 @@ def search_candidates(
                 raw[h] = owl_class
 
         # Prefix search (exact prefix)
-        # search_by_prefix is case-sensitive and expects title-case input,
-        # but search terms are lowercased by _tokenize(). Try both cases.
         if len(st) >= 3:
-            for variant in (st.capitalize(), st):
-                for owl_class in folio.search_by_prefix(variant):
-                    h = _extract_iri_hash(owl_class.iri)
-                    if h not in raw:
-                        raw[h] = owl_class
+            for owl_class in folio.search_by_prefix(st):
+                h = _extract_iri_hash(owl_class.iri)
+                if h not in raw:
+                    raw[h] = owl_class
 
     # Stem prefix search: discover morphological variants by truncating content
     # words to their likely stem.  e.g., "defense" → prefix "defen" finds "Defendant"
     for cw in content_words:
         if len(cw) >= 6:
             stem = cw[: len(cw) - 2]
-            for variant in (stem.capitalize(), stem):
-                for owl_class in folio.search_by_prefix(variant)[:50]:
-                    h = _extract_iri_hash(owl_class.iri)
-                    if h not in raw:
-                        raw[h] = owl_class
+            for owl_class in folio.search_by_prefix(stem)[:50]:
+                h = _extract_iri_hash(owl_class.iri)
+                if h not in raw:
+                    raw[h] = owl_class
 
     # Definition search (catches concepts that mention the term in their definition)
     def_terms = [term]
@@ -1299,7 +1295,48 @@ def search_candidates(
                     existing_in_branch.add(iri_hash)
                     scored_hashes.add(iri_hash)
 
-            # 2.7c: Embedding search within branch (semantic matches)
+            # 2.7c: Case-insensitive prefix search (mandatory branches only)
+            # search_by_prefix is case-sensitive (FOLIO trie stores title-case labels),
+            # but search terms are lowercased by _tokenize(). Try title-case variants
+            # ONLY for mandatory branches to boost recall without adding false positives
+            # to non-mandatory branches. See: alea-institute/folio-python#15
+            for st in search_terms:
+                if len(st) >= 3:
+                    title_st = st.capitalize()
+                    if title_st != st:  # Only if capitalize actually changes it
+                        for owl_class in folio.search_by_prefix(title_st):
+                            h = _extract_iri_hash(owl_class.iri)
+                            if h in branch_hashes and h not in existing_in_branch:
+                                score = _compute_relevance_score(
+                                    content_words, term,
+                                    owl_class.label or h,
+                                    owl_class.definition,
+                                    owl_class.alternative_labels or [],
+                                    preferred_label=owl_class.preferred_label,
+                                )
+                                if score >= 10:
+                                    scored.append((h, owl_class, score))
+                                    existing_in_branch.add(h)
+                                    scored_hashes.add(h)
+            for cw in content_words:
+                if len(cw) >= 6:
+                    stem = cw[: len(cw) - 2].capitalize()
+                    for owl_class in folio.search_by_prefix(stem)[:50]:
+                        h = _extract_iri_hash(owl_class.iri)
+                        if h in branch_hashes and h not in existing_in_branch:
+                            score = _compute_relevance_score(
+                                content_words, term,
+                                owl_class.label or h,
+                                owl_class.definition,
+                                owl_class.alternative_labels or [],
+                                preferred_label=owl_class.preferred_label,
+                            )
+                            if score >= 10:
+                                scored.append((h, owl_class, score))
+                                existing_in_branch.add(h)
+                                scored_hashes.add(h)
+
+            # 2.7d: Embedding search within branch (semantic matches)
             try:
                 from app.services.embedding.service import get_embedding_index
 
@@ -1323,7 +1360,7 @@ def search_candidates(
             except Exception as e:
                 logger.warning("Mandatory embedding search failed for branch %s: %s", branch_name, e)
 
-    # Phase 2.7d: Structural embedding search — broad category matches from L1+L2
+    # Phase 2.7e: Structural embedding search — broad category matches from L1+L2
     # Queries embedding index against ONLY L1+L2 concepts for ALL branches.
     # Mandatory branches get a score boost. No LLM needed.
     _STRUCTURAL_MANDATORY_MAX = 65.0
