@@ -367,3 +367,147 @@ def test_branch_signaled_suffix_search():
     assert "Medical Malpractice Claim" in labels, f"Expected 'Medical Malpractice Claim' in {labels}"
     # Malpractice Insurance should NOT be found (wrong branch, filtered by Phase 1b)
     assert "Malpractice Insurance" not in labels, f"'Malpractice Insurance' should be filtered out"
+
+
+# --- Prefix search case-sensitivity fix tests ---
+
+
+class TestPrefixSearchCaseFix:
+    """Verify search_by_prefix receives title-cased variants, not just lowercase."""
+
+    def test_prefix_search_called_with_title_case(self):
+        """Prefix search must try title-cased variants since FOLIO trie is case-sensitive."""
+        securities_law = _mock_owl_class(
+            "Securities and Financial Instruments Law",
+            "http://example.org/SFIL",
+            "Law governing securities",
+        )
+
+        mock_folio = MagicMock()
+        mock_folio.search_by_label = MagicMock(return_value=[])
+        mock_folio.search_by_definition = MagicMock(return_value=[])
+        mock_folio.__getitem__ = lambda self, h: None
+
+        # Only return results for title-cased prefix (mimics real FOLIO behavior)
+        def case_sensitive_prefix(term):
+            if term[0].isupper():
+                return [securities_law]
+            return []
+
+        mock_folio.search_by_prefix = MagicMock(side_effect=case_sensitive_prefix)
+
+        with (
+            patch("app.services.folio_service.get_folio", return_value=mock_folio),
+            patch("app.services.folio_service.get_branch_for_class", return_value="Area of Law"),
+            patch("app.services.folio_service._build_hierarchy_path", return_value=[]),
+            patch("app.services.folio_service.get_branch_color", return_value="#888"),
+        ):
+            from app.services.folio_service import search_candidates
+            candidates = search_candidates("Securities Fraud", threshold=0.1)
+
+        # The fix should ensure title-cased prefix is tried
+        prefix_calls = [call.args[0] for call in mock_folio.search_by_prefix.call_args_list]
+        title_cased = [c for c in prefix_calls if c[0].isupper()]
+        assert len(title_cased) > 0, (
+            f"search_by_prefix was never called with title-cased input. "
+            f"Calls: {prefix_calls}"
+        )
+
+    def test_prefix_search_finds_results_via_title_case(self):
+        """End-to-end: lowercase input should still find title-cased prefix matches."""
+        securitization = _mock_owl_class(
+            "Securitization Practice",
+            "http://example.org/SP",
+            "Practice area for securitization deals",
+        )
+
+        mock_folio = MagicMock()
+        mock_folio.search_by_label = MagicMock(return_value=[])
+        mock_folio.search_by_definition = MagicMock(return_value=[])
+        mock_folio.__getitem__ = lambda self, h: None
+
+        def case_sensitive_prefix(term):
+            if term.startswith("Securit"):
+                return [securitization]
+            return []
+
+        mock_folio.search_by_prefix = MagicMock(side_effect=case_sensitive_prefix)
+
+        with (
+            patch("app.services.folio_service.get_folio", return_value=mock_folio),
+            patch("app.services.folio_service.get_branch_for_class", return_value="Service"),
+            patch("app.services.folio_service._build_hierarchy_path", return_value=[]),
+            patch("app.services.folio_service.get_branch_color", return_value="#888"),
+        ):
+            from app.services.folio_service import search_candidates
+            candidates = search_candidates("Securitization", threshold=0.1)
+
+        labels = [c.label for c in candidates]
+        assert "Securitization Practice" in labels, (
+            f"Expected 'Securitization Practice' via title-cased prefix. Got: {labels}"
+        )
+
+    def test_stem_prefix_search_uses_title_case(self):
+        """Stem prefix (chop last 2 chars of 6+ char words) should also try title case."""
+        litigation_risk = _mock_owl_class(
+            "Litigation Risk",
+            "http://example.org/LR",
+            "Risk associated with litigation",
+        )
+
+        mock_folio = MagicMock()
+        mock_folio.search_by_label = MagicMock(return_value=[])
+        mock_folio.search_by_definition = MagicMock(return_value=[])
+        mock_folio.__getitem__ = lambda self, h: None
+
+        def case_sensitive_prefix(term):
+            # "litigation" stem = "litigati" (chop last 2)
+            if term == "Litigati":
+                return [litigation_risk]
+            return []
+
+        mock_folio.search_by_prefix = MagicMock(side_effect=case_sensitive_prefix)
+
+        with (
+            patch("app.services.folio_service.get_folio", return_value=mock_folio),
+            patch("app.services.folio_service.get_branch_for_class", return_value="Area of Law"),
+            patch("app.services.folio_service._build_hierarchy_path", return_value=[]),
+            patch("app.services.folio_service.get_branch_color", return_value="#888"),
+        ):
+            from app.services.folio_service import search_candidates
+            candidates = search_candidates("Litigation Defense", threshold=0.1)
+
+        labels = [c.label for c in candidates]
+        assert "Litigation Risk" in labels, (
+            f"Expected 'Litigation Risk' via stem prefix title-case. Got: {labels}"
+        )
+
+    def test_no_false_positive_duplicates_from_case_variants(self):
+        """Both case variants should not produce duplicate candidates."""
+        concept = _mock_owl_class(
+            "Tax Law",
+            "http://example.org/TL",
+            "Law governing taxation",
+        )
+
+        mock_folio = MagicMock()
+        mock_folio.search_by_label = MagicMock(return_value=[])
+        mock_folio.search_by_definition = MagicMock(return_value=[])
+        mock_folio.__getitem__ = lambda self, h: None
+
+        # Return the same concept for BOTH case variants
+        mock_folio.search_by_prefix = MagicMock(return_value=[concept])
+
+        with (
+            patch("app.services.folio_service.get_folio", return_value=mock_folio),
+            patch("app.services.folio_service.get_branch_for_class", return_value="Area of Law"),
+            patch("app.services.folio_service._build_hierarchy_path", return_value=[]),
+            patch("app.services.folio_service.get_branch_color", return_value="#888"),
+        ):
+            from app.services.folio_service import search_candidates
+            candidates = search_candidates("Taxation Issues", threshold=0.1)
+
+        tax_results = [c for c in candidates if c.label == "Tax Law"]
+        assert len(tax_results) <= 1, (
+            f"Tax Law should appear at most once, but found {len(tax_results)} duplicates"
+        )

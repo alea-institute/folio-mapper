@@ -855,6 +855,7 @@ export function App() {
             loadedItemCount={mappingState.loadedItemCount}
             isBatchLoading={mappingState.isBatchLoading}
             batchLoadingError={mappingState.batchLoadingError}
+            isPipelineEnhancing={mappingState.isPipelineEnhancing}
             onOpenSubmission={() => {
               suggestionSubmit.resetSubmission();
               suggestionSubmit.setShowSubmissionModal(true);

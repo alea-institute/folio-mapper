@@ -1061,21 +1061,25 @@ def search_candidates(
                 raw[h] = owl_class
 
         # Prefix search (exact prefix)
+        # search_by_prefix is case-sensitive and expects title-case input,
+        # but search terms are lowercased by _tokenize(). Try both cases.
         if len(st) >= 3:
-            for owl_class in folio.search_by_prefix(st):
-                h = _extract_iri_hash(owl_class.iri)
-                if h not in raw:
-                    raw[h] = owl_class
+            for variant in (st.capitalize(), st):
+                for owl_class in folio.search_by_prefix(variant):
+                    h = _extract_iri_hash(owl_class.iri)
+                    if h not in raw:
+                        raw[h] = owl_class
 
     # Stem prefix search: discover morphological variants by truncating content
     # words to their likely stem.  e.g., "defense" → prefix "defen" finds "Defendant"
     for cw in content_words:
         if len(cw) >= 6:
             stem = cw[: len(cw) - 2]
-            for owl_class in folio.search_by_prefix(stem)[:50]:
-                h = _extract_iri_hash(owl_class.iri)
-                if h not in raw:
-                    raw[h] = owl_class
+            for variant in (stem.capitalize(), stem):
+                for owl_class in folio.search_by_prefix(variant)[:50]:
+                    h = _extract_iri_hash(owl_class.iri)
+                    if h not in raw:
+                        raw[h] = owl_class
 
     # Definition search (catches concepts that mention the term in their definition)
     def_terms = [term]

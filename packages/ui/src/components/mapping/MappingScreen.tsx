@@ -87,6 +87,7 @@ interface MappingScreenProps {
   loadedItemCount?: number;
   isBatchLoading?: boolean;
   batchLoadingError?: string | null;
+  isPipelineEnhancing?: boolean;
 }
 
 const NUDGE_KEYFRAMES = `@keyframes nudge-bg { 0% { background-color: white; } 40% { background-color: rgb(253 230 138); } 100% { background-color: rgb(254 243 199); } }`;
@@ -185,6 +186,7 @@ export function MappingScreen({
   loadedItemCount,
   isBatchLoading,
   batchLoadingError,
+  isPipelineEnhancing,
 }: MappingScreenProps) {
   const [showBranchOptions, setShowBranchOptions] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -338,6 +340,7 @@ export function MappingScreen({
         onExport={onExport}
         loadedItemCount={loadedItemCount}
         isBatchLoading={isBatchLoading}
+        isPipelineEnhancing={isPipelineEnhancing}
       />
 
       {currentItem && (

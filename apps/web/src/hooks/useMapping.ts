@@ -27,6 +27,7 @@ export function useMapping() {
     appendMappingItems,
     setBatchLoading,
     setPipelineMetadata,
+    setPipelineEnhancing,
     setLoadingCandidates,
     setError,
     mergeFallbackResults,
@@ -113,59 +114,87 @@ export function useMapping() {
 
       const branches = mandatoryBranches ?? [];
 
+      // Phase 1: Load symbolic (keyword + embedding) results IMMEDIATELY
+      // so the user sees candidates while the LLM pipeline runs in the background.
       try {
-        // Batch 1: first item only — show mapping screen immediately
         const firstBatch = items.slice(0, 1);
-        const response = await fetchPipelineCandidates(firstBatch, llmConfig, 0, 10, branches);
-        startMapping(response.mapping, items.length);
-        setPipelineMetadata(response.pipeline_metadata);
+        const symbolicResponse = await fetchCandidates(firstBatch, 0, 10, branches, llmConfig);
+        startMapping(symbolicResponse, items.length);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Pipeline mapping failed');
+        setError(err instanceof Error ? err.message : 'Failed to load candidates');
         setLoadingCandidates(false);
-        // Mark provider as invalid so the header badge reflects disconnection
-        useLLMStore.getState().setConnectionStatus(llmConfig.provider as LLMProviderType, 'invalid');
         return;
       }
 
-      // Remaining items in background batches
-      if (items.length <= 1) {
-        setBatchLoading(false);
-        return;
-      }
-
+      // Load remaining items via symbolic search in background batches
       const controller = new AbortController();
       abortRef.current = controller;
-      const remaining = items.slice(1);
 
-      let offset = 0;
-      let step = 0;
-      while (offset < remaining.length) {
+      if (items.length > 1) {
+        const remaining = items.slice(1);
+        let offset = 0;
+        let step = 0;
+        while (offset < remaining.length) {
+          if (controller.signal.aborted) break;
+          const size = BATCH_SEQUENCE[Math.min(step, BATCH_SEQUENCE.length - 1)];
+          const batch = remaining.slice(offset, offset + size);
+          try {
+            const response = await fetchCandidates(batch, 0, 10, branches, llmConfig);
+            if (controller.signal.aborted) break;
+            appendMappingItems(response.items);
+          } catch (err) {
+            if (controller.signal.aborted) break;
+            console.warn('Symbolic batch loading error:', err);
+          }
+          offset += size;
+          step++;
+        }
+      }
+
+      if (controller.signal.aborted) {
+        if (abortRef.current === controller) abortRef.current = null;
+        return;
+      }
+      setBatchLoading(false);
+
+      // Phase 2: Enhance ALL items with LLM pipeline in background.
+      // Symbolic results are already visible — pipeline upgrades scores and adds LLM-found candidates.
+      setPipelineEnhancing(true);
+
+      let pipelineOffset = 0;
+      let pipelineStep = 0;
+      while (pipelineOffset < items.length) {
         if (controller.signal.aborted) break;
 
-        const size = BATCH_SEQUENCE[Math.min(step, BATCH_SEQUENCE.length - 1)];
-        const batch = remaining.slice(offset, offset + size);
+        const size = BATCH_SEQUENCE[Math.min(pipelineStep, BATCH_SEQUENCE.length - 1)];
+        const batch = items.slice(pipelineOffset, pipelineOffset + size);
         try {
           const response = await fetchPipelineCandidates(batch, llmConfig, 0, 10, branches);
           if (controller.signal.aborted) break;
           appendMappingItems(response.mapping.items, response.pipeline_metadata);
+          if (pipelineOffset === 0) {
+            setPipelineMetadata(response.pipeline_metadata);
+          }
         } catch (err) {
           if (controller.signal.aborted) break;
-          // Non-fatal: log and continue with next batch
-          console.warn('Pipeline batch loading error:', err);
-          setBatchLoading(true, err instanceof Error ? err.message : 'Batch loading error');
+          // Pipeline enhancement failed — symbolic results remain. Not fatal.
+          console.warn('Pipeline enhancement error:', err);
+          // Mark provider as invalid if first batch fails
+          if (pipelineOffset === 0) {
+            useLLMStore.getState().setConnectionStatus(llmConfig.provider as LLMProviderType, 'invalid');
+          }
+          break;
         }
-        offset += size;
-        step++;
+        pipelineOffset += size;
+        pipelineStep++;
       }
 
-      if (!controller.signal.aborted) {
-        setBatchLoading(false);
-      }
+      setPipelineEnhancing(false);
       if (abortRef.current === controller) {
         abortRef.current = null;
       }
     },
-    [startMapping, appendMappingItems, setBatchLoading, setPipelineMetadata, setLoadingCandidates, setError, cancelBatchLoading],
+    [startMapping, appendMappingItems, setBatchLoading, setPipelineMetadata, setPipelineEnhancing, setLoadingCandidates, setError, cancelBatchLoading],
   );
 
   const loadMandatoryFallback = useCallback(

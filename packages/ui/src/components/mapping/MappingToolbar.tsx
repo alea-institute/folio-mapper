@@ -19,6 +19,7 @@ interface MappingToolbarProps {
   onExport?: () => void;
   loadedItemCount?: number;
   isBatchLoading?: boolean;
+  isPipelineEnhancing?: boolean;
 }
 
 export function MappingToolbar({
@@ -40,6 +41,7 @@ export function MappingToolbar({
   onExport,
   loadedItemCount,
   isBatchLoading,
+  isPipelineEnhancing,
 }: MappingToolbarProps) {
   // Defensive defaults in case store hydration provides undefined
   const safeTopN = topN ?? 5;
@@ -55,6 +57,12 @@ export function MappingToolbar({
             <span className="flex items-center gap-1.5 text-xs text-blue-600">
               <span className="inline-block h-3 w-3 animate-spin rounded-full border border-blue-300 border-t-blue-600" />
               Loading... {loadedItemCount}/{totalItems}
+            </span>
+          )}
+          {isPipelineEnhancing && !isBatchLoading && (
+            <span className="flex items-center gap-1.5 text-xs text-purple-600" title="LLM pipeline is enhancing results in the background">
+              <span className="inline-block h-3 w-3 animate-spin rounded-full border border-purple-300 border-t-purple-600" />
+              LLM enhancing...
             </span>
           )}
           <div className="flex items-center gap-1">

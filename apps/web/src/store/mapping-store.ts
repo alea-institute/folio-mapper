@@ -66,6 +66,9 @@ interface MappingState {
   isBatchLoading: boolean;
   batchLoadingError: string | null;
 
+  // LLM enhancement state (symbolic results shown, pipeline enhancing in background)
+  isPipelineEnhancing: boolean;
+
   // FOLIO loading state
   folioStatus: FolioStatus;
   isLoadingCandidates: boolean;
@@ -105,6 +108,7 @@ interface MappingState {
   startMapping: (response: MappingResponse, fullItemCount?: number) => void;
   appendMappingItems: (newItems: ItemMappingResult[], pipelineMetadata?: PipelineItemMetadata[]) => void;
   setBatchLoading: (loading: boolean, error?: string | null) => void;
+  setPipelineEnhancing: (enhancing: boolean) => void;
   resetMapping: () => void;
 }
 
@@ -170,6 +174,7 @@ export const useMappingStore = create<MappingState>()(
       loadedItemCount: 0,
       isBatchLoading: false,
       batchLoadingError: null,
+      isPipelineEnhancing: false,
       folioStatus: { loaded: false, concept_count: 0, loading: false, error: null },
       isLoadingCandidates: false,
       error: null,
@@ -628,6 +633,10 @@ export const useMappingStore = create<MappingState>()(
         });
       },
 
+      setPipelineEnhancing: (enhancing) => {
+        set({ isPipelineEnhancing: enhancing });
+      },
+
       resetMapping: () =>
         set({
           mappingResponse: null,
@@ -650,6 +659,7 @@ export const useMappingStore = create<MappingState>()(
           loadedItemCount: 0,
           isBatchLoading: false,
           batchLoadingError: null,
+          isPipelineEnhancing: false,
           isLoadingCandidates: false,
           error: null,
         }),
