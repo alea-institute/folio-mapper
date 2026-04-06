@@ -22,9 +22,9 @@ const BADGE_CONFIG: Record<KeySource, { label: string; className: string; toolti
     tooltip: 'Key encrypted in browser storage',
   },
   manual: {
-    label: 'Session',
-    className: 'bg-gray-100 text-gray-600 border-gray-200',
-    tooltip: 'Key in memory only — lost on reload',
+    label: 'Session only',
+    className: 'bg-amber-50 text-amber-700 border-amber-200',
+    tooltip: 'Key in memory only — will be lost on page reload',
   },
 };
 

@@ -145,33 +145,73 @@ export function ProviderCard({
                   </div>
                   {/* Key persistence actions */}
                   {config.apiKey && (
-                    <div className="mt-1 ml-12 flex items-center gap-3">
+                    <div className="mt-1.5 ml-12">
+                      {/* Prominent save prompt — shown when key is verified but not saved */}
+                      {!hasSavedKey && config.connectionStatus === 'valid' && keySource === 'manual' && (
+                        <div className="flex items-center gap-2 rounded-md border border-amber-200 bg-amber-50 px-3 py-2">
+                          <svg className="h-4 w-4 shrink-0 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                          </svg>
+                          <span className="flex-1 text-xs font-medium text-amber-800">
+                            Key verified — save it so you don&apos;t have to re-enter it?
+                          </span>
+                          {isDesktop && onSaveToKeychain ? (
+                            <button
+                              onClick={() => onSaveToKeychain(meta.type)}
+                              className="shrink-0 rounded bg-amber-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-amber-700"
+                            >
+                              Save to keychain
+                            </button>
+                          ) : onRememberKey ? (
+                            <button
+                              onClick={() => onRememberKey(meta.type, true)}
+                              className="shrink-0 rounded bg-amber-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-amber-700"
+                            >
+                              Save (encrypted)
+                            </button>
+                          ) : null}
+                        </div>
+                      )}
+                      {/* Quiet save options — shown when key exists but hasn't been tested yet */}
+                      {!hasSavedKey && config.connectionStatus !== 'valid' && (
+                        <div className="flex items-center gap-3">
+                          {isDesktop && onSaveToKeychain && keySource !== 'keychain' && (
+                            <button
+                              onClick={() => onSaveToKeychain(meta.type)}
+                              className="text-xs text-blue-500 hover:text-blue-700"
+                            >
+                              Save to keychain
+                            </button>
+                          )}
+                          {!isDesktop && onRememberKey && keySource !== 'saved' && (
+                            <label className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-700">
+                              <input
+                                type="checkbox"
+                                checked={config.rememberKey ?? false}
+                                onChange={(e) => onRememberKey(meta.type, e.target.checked)}
+                                className="h-3.5 w-3.5 rounded border-gray-300 text-blue-600"
+                              />
+                              Remember key (encrypted in browser)
+                            </label>
+                          )}
+                        </div>
+                      )}
+                      {/* Already saved — show status + forget option */}
                       {hasSavedKey && onClearSavedKey && (
-                        <button
-                          onClick={() => onClearSavedKey(meta.type)}
-                          className="text-xs text-red-500 hover:text-red-700"
-                        >
-                          Forget saved key
-                        </button>
-                      )}
-                      {!hasSavedKey && isDesktop && onSaveToKeychain && keySource !== 'keychain' && (
-                        <button
-                          onClick={() => onSaveToKeychain(meta.type)}
-                          className="text-xs text-blue-500 hover:text-blue-700"
-                        >
-                          Save to keychain
-                        </button>
-                      )}
-                      {!hasSavedKey && !isDesktop && onRememberKey && keySource !== 'saved' && (
-                        <label className="flex items-center gap-1.5 text-xs text-gray-500">
-                          <input
-                            type="checkbox"
-                            checked={config.rememberKey ?? false}
-                            onChange={(e) => onRememberKey(meta.type, e.target.checked)}
-                            className="h-3 w-3"
-                          />
-                          Remember (encrypted in browser)
-                        </label>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs text-green-600">
+                            <svg className="mr-0.5 inline h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            Key saved
+                          </span>
+                          <button
+                            onClick={() => onClearSavedKey(meta.type)}
+                            className="text-xs text-gray-400 hover:text-red-500"
+                          >
+                            Forget
+                          </button>
+                        </div>
                       )}
                     </div>
                   )}

@@ -45,8 +45,8 @@ export function PassphraseModal({ mode, error, onSubmit, onCancel }: PassphraseM
         </h3>
         <p className="mt-1.5 text-sm text-gray-500">
           {mode === 'unlock'
-            ? 'Enter your passphrase to decrypt saved API keys.'
-            : 'Choose a passphrase to encrypt your API keys in this browser.'}
+            ? 'Enter your passphrase to decrypt saved API keys. If you skip, you\u2019ll need to re-enter them manually.'
+            : 'Choose a passphrase to encrypt your API keys in this browser. You\u2019ll enter this once per session to unlock your keys.'}
         </p>
 
         {displayError && (
@@ -87,6 +87,7 @@ export function PassphraseModal({ mode, error, onSubmit, onCancel }: PassphraseM
           <button
             onClick={onCancel}
             className="rounded-md px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-800"
+            title={mode === 'unlock' ? 'Skip — you will need to re-enter your API keys manually' : undefined}
           >
             {mode === 'unlock' ? 'Skip' : 'Cancel'}
           </button>
