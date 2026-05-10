@@ -280,7 +280,13 @@ def _build_session_file(
     }
 
     # Defensive: make damn sure no api_key leaked in from anywhere.
-    if "api_key" in session or any("api_key" in (c or {}) for r in results for c in [r]):
+    leaked_candidate = any(
+        "api_key" in (c or {})
+        for item in item_results
+        for bg in (item.get("branch_groups") or [])
+        for c in (bg.get("candidates") or [])
+    )
+    if "api_key" in session or leaked_candidate:
         raise RuntimeError("api_key field detected in session output; refusing to write")
     return session
 
