@@ -44,10 +44,13 @@ FOLIO Mapper helps legal practitioners and ontologists map their concept lists, 
 5. A documented curation workflow exists so demo payloads can be regenerated when the pipeline or FOLIO updates materially
 6. Demo mode triggers zero LLM API calls at runtime
 
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] (to be created during `/gsd-plan-phase`)
+- [ ] 02-01-PLAN.md — Demo store (session-scoped exemplarMode flag), Demo toggle button, per-card chip
+- [ ] 02-02-PLAN.md — Curation script (scripts/curate_demos.py) + PI demo payload + static manifest
+- [ ] 02-03-PLAN.md — Wire demo-mode click to load bundled JSON via Stage 7A path; stale-version banner
+- [ ] 02-04-PLAN.md — Round-trip + zero-network tests; operator curation doc
 
 ### Open Questions (carried from `/gsd-explore`)
 
