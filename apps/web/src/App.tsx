@@ -33,6 +33,7 @@ import {
 import { useInputStore } from './store/input-store';
 import { useMappingStore } from './store/mapping-store';
 import { useLLMStore } from './store/llm-store';
+import { useDemoStore } from './store/demo-store';
 import { useFileUpload } from './hooks/useFileUpload';
 import { useTextDetection } from './hooks/useTextDetection';
 import { useFolioWarmup } from './hooks/useFolioWarmup';
@@ -80,6 +81,8 @@ export function App() {
 
   const mappingState = useMappingStore();
   const llmState = useLLMStore();
+  const exemplarMode = useDemoStore((s) => s.exemplarMode);
+  const toggleExemplarMode = useDemoStore((s) => s.toggleExemplarMode);
   const { upload } = useFileUpload();
   const { itemCount, isTabular } = useTextDetection(textInput);
   const { loadCandidates, loadPipelineCandidates, loadMandatoryFallback, searchCandidates, cancelBatchLoading } = useMapping();
@@ -962,6 +965,8 @@ export function App() {
               isLoading={loadingExemplarId !== null}
               loadingId={loadingExemplarId}
               onSelect={handleExemplarSelect}
+              exemplarMode={exemplarMode}
+              onToggleMode={toggleExemplarMode}
             />
           }
           syntheticDataPanel={
