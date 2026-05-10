@@ -2,935 +2,535 @@
   "results": [
     {
       "index": 1,
-      "item": "Plaintiff was rear-ended at a stoplight by a delivery van whose driver admitted to texting; she suffered whiplash, concussion symptoms, and ongoing chiropractic care, and is seeking compensation for medical bills, lost wages, and pain and suffering.",
-      "search_terms": [
-        "motor vehicle accident",
-        "distracted driving",
-        "whiplash",
-        "pain and suffering",
-        "lost wages"
-      ],
-      "total_candidates": 61,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
-      "branches_touched": [
-        "Engagement Attributes",
-        "Forums and Venues",
-        "Industry and Market",
-        "Location",
-        "Objectives",
-        "Service"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/RCC5eI2Qd36jIBTsOtd8dgb",
-          "label": "Pain and Suffering",
-          "score": 100.0,
-          "matched_term": "pain and suffering",
-          "branch": "Objectives",
-          "definition": "Pain and Suffering refers to the physical and emotional distress experienced by a person as a result of an injury or harm caused by another party, for which compensation may be sought in a legal proce"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RBxBPYdq53xfVw1vLnG4zWi",
-          "label": "Distracted Driving Claim",
-          "score": 95.0,
-          "matched_term": "distracted driving",
-          "branch": "Objectives",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RDdt7BM9BNO95XHQ6o61bFR",
-          "label": "Civil Court Proceeding",
-          "score": 90.0,
-          "matched_term": "motor vehicle accident",
-          "branch": "Service",
-          "definition": "A lawsuit; all or some part of a cause heard and determined by a court. Any legal step or action taken at the direction of, or by the authority of a court."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RUE4fCCSnGX1wIK324EyiL",
-          "label": "Transportation and Logistics Industry",
-          "score": 90.0,
-          "matched_term": "distracted driving",
-          "branch": "Industry and Market",
-          "definition": "The Transportation and Logistics industry group includes industries providing transportation of passengers and cargo, warehousing and storage for goods, scenic and sightseeing transportation, and supp"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8D08sba5Yax2zPJaA714qr",
-          "label": "Ed.D. (Doctor of Education)",
-          "score": 90.0,
-          "matched_term": "distracted driving",
-          "branch": "Engagement Attributes",
-          "definition": "The suffix \"Ed.D.\" stands for \"Doctor of Education\" and is used after a person's name to indicate that they have earned an advanced degree focused on educational leadership, policy, or practice. This "
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R9p98NogvwJk1MnJgYzuiZd",
-          "label": "Advisory Service",
-          "score": 90.0,
-          "matched_term": "whiplash",
-          "branch": "Service",
-          "definition": "Any process that provides advice to a single party without adversarial event."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R00D1fcF039adD7Dd1aFAd45",
-          "label": "Hawaii State Courts",
-          "score": 90.0,
-          "matched_term": "whiplash",
-          "branch": "Forums and Venues",
-          "definition": "The Hawaii State Courts are the judicial branch of the Hawaii state government, responsible for administering legal proceedings within the state, including the Hawaii Intermediate Court of Appeals and"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R428238242a27F1454d5C7c6",
-          "label": "Poland",
-          "score": 90.0,
-          "matched_term": "whiplash",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R770ea065Ae652ADb0282f2b",
-          "label": "Saint Helena, Ascension and Tristan da Cunha",
-          "score": 90.0,
-          "matched_term": "whiplash",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7944b638E918648a6aEAefa",
-          "label": "Lao People's Democratic Republic",
-          "score": 90.0,
-          "matched_term": "whiplash",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R99F253EB4991DD4767D3f46",
-          "label": "Louisiana State Courts",
-          "score": 90.0,
-          "matched_term": "whiplash",
-          "branch": "Forums and Venues",
-          "definition": "Louisiana State Courts are the judicial system of the state of Louisiana, including the Louisiana Supreme Court and the Louisiana Court of Appeal."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7C5f715CD204F4Fc3509b8c",
-          "label": "American Samoa",
-          "score": 90.0,
-          "matched_term": "whiplash",
-          "branch": "Location",
-          "definition": ""
-        }
-      ]
-    },
-    {
-      "index": 2,
-      "item": "Client slipped on an unmarked wet floor near the produce section of a national grocery chain, fracturing her hip and requiring surgical repair followed by six months of physical therapy; store surveillance shows the spill was untreated for over an hour.",
-      "search_terms": [
-        "premises liability",
-        "slip and fall",
-        "negligence",
-        "hip fracture",
-        "medical damages"
-      ],
-      "total_candidates": 59,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
-      "branches_touched": [
-        "Actor / Player",
-        "Area of Law",
-        "Forums and Venues",
-        "Location",
-        "Objectives"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/R7nqxxlAfhYqqSA2UQ5UxpX",
-          "label": "Negligence",
-          "score": 100.0,
-          "matched_term": "negligence",
-          "branch": "Objectives",
-          "definition": "Negligence is a legal concept that refers to the failure to exercise reasonable care, resulting in harm or injury to another person or property."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RDSBerlLWg1ntpLqDQn1eVn",
-          "label": "Property & Premises Liability Claims",
-          "score": 95.0,
-          "matched_term": "premises liability",
-          "branch": "Objectives",
-          "definition": "Property & Premises Liability Claims refer to legal claims made against a property owner or occupier for injuries or damages suffered by individuals on their property due to unsafe or hazardous condit"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7lxeVIOck43eKAMJhZmyXL",
-          "label": "ENT Negligence",
-          "score": 95.0,
-          "matched_term": "negligence",
-          "branch": "Objectives",
-          "definition": "Failure of a healthcare provider to exercise reasonable care, skill, or diligence in the treatment of a patient resulting in harm or injury."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RC8Z0Umke9n1cIFNRAmwDr2",
-          "label": "EMT Negligence",
-          "score": 95.0,
-          "matched_term": "negligence",
-          "branch": "Objectives",
-          "definition": "EMT Negligence refers to the failure of emergency medical technicians to provide the appropriate standard of care, resulting in harm or injury to a patient, and is a specific type of claim under the b"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RTh6PFbxMqxyQ8NBd57lYX",
-          "label": "EMS Negligence",
-          "score": 95.0,
-          "matched_term": "negligence",
-          "branch": "Objectives",
-          "definition": "Negligence by emergency medical services providers, including paramedics and ambulance personnel, in the treatment or transport of patients."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RR7oJoEqb12ZxVMvTIb7I0",
-          "label": "Negligence and Malpractice Law",
-          "score": 95.0,
-          "matched_term": "negligence",
-          "branch": "Area of Law",
-          "definition": "Failure to exercise the care that a reasonably prudent person or professional, in the case of professional negligence, would exercise in like circumstances and the harm caused by those actions."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R87PmoWmotSgo32gCYT29sw",
-          "label": "Savings and Loan Association",
-          "score": 90.0,
-          "matched_term": "premises liability",
-          "branch": "Actor / Player",
-          "definition": "A Savings and Loan Association (S&L) is a financial institution primarily focused on accepting savings deposits and making mortgage loans. S&Ls play a significant role in providing home financing, par"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R2ED8c155E378FD4e44ECbb5",
-          "label": "Albania",
-          "score": 90.0,
-          "matched_term": "slip and fall",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R4023c92F85e44CD45cD18bb",
-          "label": "Alabama State Courts",
-          "score": 90.0,
-          "matched_term": "slip and fall",
-          "branch": "Forums and Venues",
-          "definition": "Alabama State Courts are the judicial system of the state of Alabama, including the Alabama Supreme Court and lower courts such as the Alabama Court of Criminal Appeals and Alabama Court of Civil Appe"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R469bcc6C602637D0d839d85",
-          "label": "Liechtenstein",
-          "score": 90.0,
-          "matched_term": "slip and fall",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R9933d8D0A4fbF3CacdDB995",
-          "label": "Sierra Leone",
-          "score": 90.0,
-          "matched_term": "slip and fall",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RE3003998F1deFDFa56FC907",
-          "label": "North Dakota State Courts",
-          "score": 90.0,
-          "matched_term": "slip and fall",
-          "branch": "Forums and Venues",
-          "definition": "North Dakota State Courts are the judicial branch of the North Dakota state government, responsible for interpreting and enforcing state laws and resolving legal disputes within the state."
-        }
-      ]
-    },
-    {
-      "index": 3,
-      "item": "Mother of a deceased infant alleges the obstetrician failed to recognize fetal distress during labor, delaying an emergency C-section by 40 minutes; the child suffered hypoxic-ischemic encephalopathy and died at three days old.",
-      "search_terms": [
-        "medical malpractice",
-        "obstetric negligence",
-        "wrongful death",
-        "birth injury",
-        "hypoxic ischemic encephalopathy"
-      ],
-      "total_candidates": 56,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
-      "branches_touched": [
-        "Actor / Player",
-        "Area of Law",
-        "Forums and Venues",
-        "Governmental Body",
-        "Location",
-        "Objectives",
-        "Service"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/R7athlXhsUuRtg7LvK0uUaF",
-          "label": "Medical Malpractice",
-          "score": 100.0,
-          "matched_term": "medical malpractice",
-          "branch": "Objectives",
-          "definition": "Medical Malpractice: Negligence or breach of duty by a healthcare professional that results in harm or injury to a patient."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RR7oJoEqb12ZxVMvTIb7I0",
-          "label": "Negligence and Malpractice Law",
-          "score": 95.0,
-          "matched_term": "medical malpractice",
-          "branch": "Area of Law",
-          "definition": "Failure to exercise the care that a reasonably prudent person or professional, in the case of professional negligence, would exercise in like circumstances and the harm caused by those actions."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8nVhrBlasGIc7jxw1D0vbm",
-          "label": "Medical Malpractice Claims",
-          "score": 95.0,
-          "matched_term": "medical malpractice",
-          "branch": "Objectives",
-          "definition": "Medical Malpractice Claims refer to legal claims made against medical professionals or institutions for negligence or failure to provide adequate care resulting in harm or injury to a patient."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RDwX4hjSSjdLB4a9gnVAukp",
-          "label": "Medical Device Malpractice",
-          "score": 95.0,
-          "matched_term": "medical malpractice",
-          "branch": "Objectives",
-          "definition": "Medical Device Malpractice refers to a type of medical malpractice claim that arises from the use of a faulty or defective medical device during a medical procedure."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RCuus493FlHkCuRCdg8eDmC",
-          "label": "Medical Malpractice Defenses",
-          "score": 95.0,
-          "matched_term": "medical malpractice",
-          "branch": "Objectives",
-          "definition": "Medical Malpractice Defenses are legal arguments or strategies used by defendants in a medical malpractice case to defend against the plaintiff's claims of negligence or wrongdoing."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R3wLqupQlOkBDRXPF6bOYr",
-          "label": "Wrongful Death Claim",
-          "score": 95.0,
-          "matched_term": "wrongful death",
-          "branch": "Objectives",
-          "definition": "A wrongful death claim is a legal action brought by the survivors of a deceased person against the party responsible for the death, seeking compensation for damages resulting from the loss of the indi"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RF01227DF45ca2C31b3843d4",
-          "label": "Ica",
-          "score": 90.0,
-          "matched_term": "medical malpractice",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8wMxsTdrra0TJaBCyIWcHw",
-          "label": "Lawful Permanent Resident",
-          "score": 90.0,
-          "matched_term": "medical malpractice",
-          "branch": "Actor / Player",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R9zgcjBBIdWMnwIR8nqsoS8",
-          "label": "Mediation Practice",
-          "score": 90.0,
-          "matched_term": "medical malpractice",
-          "branch": "Service",
-          "definition": "Mediation is a process wherein the parties meet with a mutually selected impartial and neutral person who assists them in the negotiation of their differences. Mediation leaves the decision power tota"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RE4E6b2E7Ea766DC6b65C771",
-          "label": "U.S. District Court - D. Maine",
-          "score": 90.0,
-          "matched_term": "medical malpractice",
-          "branch": "Forums and Venues",
-          "definition": "D. Me."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RA55b7f35A650DECa425A430",
-          "label": "California Supreme Court",
-          "score": 90.0,
-          "matched_term": "medical malpractice",
-          "branch": "Forums and Venues",
-          "definition": "Cal."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RB00a84BD67f60C606bCC8e4",
-          "label": "United States Immigration and Customs Enforcement",
-          "score": 90.0,
-          "matched_term": "medical malpractice",
-          "branch": "Governmental Body",
-          "definition": "The U.S. Immigration and Customs Enforcement (ICE) is a law enforcement agency of the federal government of the United States tasked to enforce the immigration laws of the United States and to investi"
-        }
-      ]
-    },
-    {
-      "index": 4,
-      "item": "Family was burned when a household pressure cooker exploded during normal use; the manufacturer had received 200 similar complaints but issued no recall. Plaintiffs seek damages for third-degree burns, disfigurement, and emotional distress.",
-      "search_terms": [
-        "product liability",
-        "defective product",
-        "failure to recall",
-        "burn injury",
-        "emotional distress"
-      ],
-      "total_candidates": 55,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
-      "branches_touched": [
-        "Area of Law",
-        "Governmental Body",
-        "Language",
-        "Location",
-        "Objectives",
-        "Standards Compatibility"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/RBId9f3jW4zEqooPvShqi6Q",
-          "label": "Product Liability Law",
-          "score": 100.0,
-          "matched_term": "product liability",
-          "branch": "Area of Law",
-          "definition": "Law relating to liability for injuries caused by defective or unsafe products."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7MsH9WtTPf14W1GB1m8zrB",
-          "label": "Product Liability Claims",
-          "score": 95.0,
-          "matched_term": "product liability",
-          "branch": "Objectives",
-          "definition": "Product Liability Claims refer to civil tort claims that arise when a consumer is injured or suffers damages due to a defective or dangerous product, and seeks compensation from the manufacturer or se"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8p15egW5el3Go9V1L4obop",
-          "label": "Strict Product Liability",
-          "score": 95.0,
-          "matched_term": "product liability",
-          "branch": "Objectives",
-          "definition": "Strict Product Liability is a legal concept that holds manufacturers and sellers responsible for any harm caused by their products, regardless of fault or negligence, if the product is found to be def"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RCmLIlnA4R8OuHWJn0R3mgg",
-          "label": "Emotional Distress Damages",
-          "score": 95.0,
-          "matched_term": "emotional distress",
-          "branch": "Objectives",
-          "definition": "Compensation awarded to a plaintiff in a lawsuit for the mental anguish, psychological harm, or emotional suffering caused by the defendant's actions, which cannot be quantified by monetary loss."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7OJrnkSsmSxdaPzTo9UIdw",
-          "label": "345 Marine Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action (Admiralty and Maritime) alleging personal injury or wrongful death from an accident involving a water vessel or harbor/dock facilities and caused by a defective product."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7REQZyOuTRSG5KrUBf05ps",
-          "label": "195 Contract Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action concerning damages caused by a defective product, not primarily involving personal injury or property damage, and based primarily on breach of contract, breach of warranty, misrepresentation, a"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8b4GMC8FsZqXIzDy3puZ9P",
-          "label": "315 Airplane Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action alleging personal injury or death from an air crash or other occurrence involving an airplane and caused by a defective product."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R168utCHVgcH74fUtdFcEV",
-          "label": "355 Motor Vehicle Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action alleging personal injury or wrongful death involving a motor vehicle and caused by a defective product."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R88XsqAwT4bYxwSk0bLQ0Un",
-          "label": "385 Property Damage Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action alleging damage to personal property caused by a defective product."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RzQ5gwUabt1mu60F6pstMJ",
-          "label": "Tiv",
-          "score": 90.0,
-          "matched_term": "defective product",
-          "branch": "Language",
-          "definition": "Tiv (Language) is a structured system of communication that consists of grammar and vocabulary, and is spoken in Nigeria by the Tiv people."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R0DB9975F6f0d3B78ec6Fc65",
-          "label": "Federal Election Commission",
-          "score": 90.0,
-          "matched_term": "defective product",
-          "branch": "Governmental Body",
-          "definition": "The Federal Election Commission (FEC) is an independent regulatory agency whose purpose is to enforce campaign finance law in United States federal elections."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R436b4b64F195EA991dCB0f8",
-          "label": "Portuguesa",
-          "score": 90.0,
-          "matched_term": "defective product",
-          "branch": "Location",
-          "definition": ""
-        }
-      ]
-    },
-    {
-      "index": 5,
-      "item": "Over 800 residents of a small town allege groundwater contamination from a nearby chemical plant caused elevated rates of childhood leukemia; epidemiological studies are pending and the defendant denies causation.",
-      "search_terms": [
-        "mass tort",
-        "environmental contamination",
-        "toxic exposure",
-        "leukemia",
-        "class action"
-      ],
-      "total_candidates": 55,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
-      "branches_touched": [
-        "Area of Law",
-        "Forums and Venues",
-        "Legal Entity",
-        "Location",
-        "Objectives"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/R7TmA0IapaoAjuWfDF1T49i",
-          "label": "Leukemia",
-          "score": 100.0,
-          "matched_term": "leukemia",
-          "branch": "Legal Entity",
-          "definition": "Leukemia is a type of cancer that affects the blood and bone marrow, characterized by the overproduction of abnormal white blood cells. This disease can be acute or chronic and often requires treatmen"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RCg7sZurj0WriXwfKokeRyD",
-          "label": "Class Action [Certified Class]",
-          "score": 100.0,
-          "matched_term": "class action",
-          "branch": "Objectives",
-          "definition": "A Class Action is certified class consisting of a group of people who have suffered similar harm or injury, where the claims are too numerous or impractical to be brought individually."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R3F9d83E6A526EC308aCCb61",
-          "label": "Morocco",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R5403b7ED64ea54Ee25297c2",
-          "label": "Massachusetts State Courts",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Forums and Venues",
-          "definition": "The Massachusetts State Courts refer to the judicial system of Massachusetts, including the Massachusetts District Court, Massachusetts Appeals Court, Massachusetts Supreme Judicial Court, Massachuset"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R5219231CD6b861B1a6EE50d",
-          "label": "South Sudan",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R64Cf97674c65D4278f98753",
-          "label": "Tonga",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7C5f715CD204F4Fc3509b8c",
-          "label": "American Samoa",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/REFC692441d584AA9b849464",
-          "label": "Oregon State Courts",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Forums and Venues",
-          "definition": "Oregon State Courts are the judicial branch of the Oregon state government, responsible for interpreting and enforcing the laws of the state."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7MK1XmyjtYxZKg8Iw4ZN4K",
-          "label": "Personal Injury and Tort Law",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Area of Law",
-          "definition": "Law which allows an injured person to obtain compensation from the person who caused the injury."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RA5177b98C4dd8630001487e",
-          "label": "Massachusetts Supreme Judicial Court",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Forums and Venues",
-          "definition": "Mass."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RM35ursk6terURihawIPFX",
-          "label": "Mass Torts Law",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Area of Law",
-          "definition": "Mass torts law is an area of law that deals with legal actions involving numerous plaintiffs against one or a few defendants, where the plaintiffs allege harm caused by common actions or products. The"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R44D87f9B72d25C6e264A8be",
-          "label": "R\u00e9union",
-          "score": 90.0,
-          "matched_term": "toxic exposure",
-          "branch": "Location",
-          "definition": ""
-        }
-      ]
-    },
-    {
-      "index": 6,
-      "item": "Pedestrian crossing in a marked crosswalk was struck by a left-turning sedan; the driver had a suspended license and prior DUI convictions. Plaintiff sustained a traumatic brain injury and now requires lifetime attendant care.",
-      "search_terms": [
-        "motor vehicle accident",
-        "pedestrian accident",
-        "negligence per se",
-        "traumatic brain injury",
-        "future care damages"
-      ],
-      "total_candidates": 56,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
-      "branches_touched": [
-        "Actor / Player",
-        "Industry and Market",
-        "Legal Entity",
-        "Location",
-        "Matter Narrative",
-        "Objectives",
-        "Service"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/RCR9dUNNWhfQwdzq3isTiY",
-          "label": "Negligence Per Se",
-          "score": 100.0,
-          "matched_term": "negligence per se",
-          "branch": "Objectives",
-          "definition": "Negligence Per Se is a legal concept that refers to a situation where an action or failure to act violates a law or regulation, and that violation automatically establishes a breach of duty in a negli"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R9aAuY31Z3tgpR7hUAqTEmd",
-          "label": "Traumatic Brain Injury",
-          "score": 100.0,
-          "matched_term": "traumatic brain injury",
-          "branch": "Legal Entity",
-          "definition": "Traumatic brain injury (TBI) is a disruption in normal brain function caused by an external mechanical force, such as a blow or jolt to the head. TBI can result in temporary or permanent cognitive, ph"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RCroY6MyuPipipJMQllW9dU",
-          "label": "Concussion",
-          "score": 95.0,
-          "matched_term": "traumatic brain injury",
-          "branch": "Legal Entity",
-          "definition": "Mild traumatic brain injury (concussion) is a form of TBI resulting from a blow or jolt to the head that temporarily disrupts brain function. Symptoms can include headache, confusion, dizziness, and m"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R9Bae6LRXrugUaay1CPOmmY",
-          "label": "Severe Traumatic Brain Injury",
-          "score": 95.0,
-          "matched_term": "traumatic brain injury",
-          "branch": "Legal Entity",
-          "definition": "Severe traumatic brain injury (TBI) is a critical condition caused by a significant impact or force to the head, resulting in extended loss of consciousness or amnesia, severe cognitive impairments, a"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R6EFMAnzS8Aey8OU4n6bAI",
-          "label": "Contusion",
-          "score": 95.0,
-          "matched_term": "traumatic brain injury",
-          "branch": "Legal Entity",
-          "definition": "Moderate traumatic brain injury (TBI) is a disruption in brain function caused by an external mechanical force, leading to a loss of consciousness lasting from 30 minutes to 24 hours, or post-traumati"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RDdt7BM9BNO95XHQ6o61bFR",
-          "label": "Civil Court Proceeding",
-          "score": 90.0,
-          "matched_term": "motor vehicle accident",
-          "branch": "Service",
-          "definition": "A lawsuit; all or some part of a cause heard and determined by a court. Any legal step or action taken at the direction of, or by the authority of a court."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R0CF62c9B7622E3Bf87FC275",
-          "label": "Est",
-          "score": 90.0,
-          "matched_term": "pedestrian accident",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R5D57346D2c44EA22d6AA6f1",
-          "label": "Est",
-          "score": 90.0,
-          "matched_term": "pedestrian accident",
-          "branch": "Location",
-          "definition": "A legal entity created by one or more individuals or organizations in Rwanda."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R9QxJZ2V1DDLTPgviKpGISS",
-          "label": "Pedestrian",
-          "score": 90.0,
-          "matched_term": "pedestrian accident",
-          "branch": "Actor / Player",
-          "definition": "A pedestrian refers to any person who is on foot, traveling on a surface intended for human passage. This includes individuals walking, running, hiking, or moving via other human-powered means on path"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7epmapi47puE4YCEXJUREa",
-          "label": "Generic Matter Narrative",
-          "score": 90.0,
-          "matched_term": "negligence per se",
-          "branch": "Matter Narrative",
-          "definition": "A generic version of a matter narrative. Usually used to further describe a category of matters."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7nqxxlAfhYqqSA2UQ5UxpX",
-          "label": "Negligence",
-          "score": 90.0,
-          "matched_term": "negligence per se",
-          "branch": "Objectives",
-          "definition": "Negligence is a legal concept that refers to the failure to exercise reasonable care, resulting in harm or injury to another person or property."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RUE4fCCSnGX1wIK324EyiL",
-          "label": "Transportation and Logistics Industry",
-          "score": 90.0,
-          "matched_term": "traumatic brain injury",
-          "branch": "Industry and Market",
-          "definition": "The Transportation and Logistics industry group includes industries providing transportation of passengers and cargo, warehousing and storage for goods, scenic and sightseeing transportation, and supp"
-        }
-      ]
-    },
-    {
-      "index": 7,
-      "item": "Tenant in a multi-family building tripped on a broken stair tread that the landlord had been notified about three weeks earlier; she suffered a fractured wrist requiring open reduction surgery and is unable to return to her bartending job.",
-      "search_terms": [
-        "premises liability",
-        "landlord liability",
-        "negligence",
-        "loss of earning capacity",
-        "personal injury"
-      ],
-      "total_candidates": 48,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
-      "branches_touched": [
-        "Actor / Player",
-        "Area of Law",
-        "Forums and Venues",
-        "Location",
-        "Objectives"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/R7nqxxlAfhYqqSA2UQ5UxpX",
-          "label": "Negligence",
-          "score": 100.0,
-          "matched_term": "negligence",
-          "branch": "Objectives",
-          "definition": "Negligence is a legal concept that refers to the failure to exercise reasonable care, resulting in harm or injury to another person or property."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RDSBerlLWg1ntpLqDQn1eVn",
-          "label": "Property & Premises Liability Claims",
-          "score": 95.0,
-          "matched_term": "premises liability",
-          "branch": "Objectives",
-          "definition": "Property & Premises Liability Claims refer to legal claims made against a property owner or occupier for injuries or damages suffered by individuals on their property due to unsafe or hazardous condit"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7lxeVIOck43eKAMJhZmyXL",
-          "label": "ENT Negligence",
-          "score": 95.0,
-          "matched_term": "negligence",
-          "branch": "Objectives",
-          "definition": "Failure of a healthcare provider to exercise reasonable care, skill, or diligence in the treatment of a patient resulting in harm or injury."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RC8Z0Umke9n1cIFNRAmwDr2",
-          "label": "EMT Negligence",
-          "score": 95.0,
-          "matched_term": "negligence",
-          "branch": "Objectives",
-          "definition": "EMT Negligence refers to the failure of emergency medical technicians to provide the appropriate standard of care, resulting in harm or injury to a patient, and is a specific type of claim under the b"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RTh6PFbxMqxyQ8NBd57lYX",
-          "label": "EMS Negligence",
-          "score": 95.0,
-          "matched_term": "negligence",
-          "branch": "Objectives",
-          "definition": "Negligence by emergency medical services providers, including paramedics and ambulance personnel, in the treatment or transport of patients."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RR7oJoEqb12ZxVMvTIb7I0",
-          "label": "Negligence and Malpractice Law",
-          "score": 95.0,
-          "matched_term": "negligence",
-          "branch": "Area of Law",
-          "definition": "Failure to exercise the care that a reasonably prudent person or professional, in the case of professional negligence, would exercise in like circumstances and the harm caused by those actions."
-        },
+      "item": "Personal Injury",
+      "level": "root",
+      "total_candidates": 17,
+      "relevant_candidates": 10,
+      "high_score_relevant": 10,
+      "top_relevant": [
         {
           "iri": "https://folio.openlegalstandard.org/R8alUnZrt8GVEzHYhh1KTva",
           "label": "Personal Injury Claims",
           "score": 95.0,
-          "matched_term": "personal injury",
           "branch": "Objectives",
-          "definition": "Personal Injury Claims are civil claims or tort claims seeking compensation for physical or emotional harm caused by the negligence or intentional actions of another party, including but not limited t"
+          "definition": "Personal Injury Claims are civil claims or tort claims seeking compensation for physical or emotional harm caused by the negligence or intentional actions of an"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R9pwejG33H0Y9mi74WzE2nb",
+          "label": "Jury",
+          "score": 90.0,
+          "branch": "Actor / Player",
+          "definition": "A body of persons (jurors) temporarily selected from a jurisdiction's citizenry that is invested with power to present or indict a person for a public offense o"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7MK1XmyjtYxZKg8Iw4ZN4K",
+          "label": "Personal Injury and Tort Law",
+          "score": 90.0,
+          "branch": "Area of Law",
+          "definition": "Law which allows an injured person to obtain compensation from the person who caused the injury."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RSHYQbtLmQEohpuZo4FG2I",
+          "label": "360 Other Personal Injury (PACER NoS)",
+          "score": 90.0,
+          "branch": "Standards Compatibility",
+          "definition": "Action primarily based on personal injury or death caused by negligence or intentional misconduct, including suits brought against the United States under the F"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R723CZDeI1c9CzFdyGi58Xd",
+          "label": "03_1 Torts / Personal Injury (PACER NoS)",
+          "score": 90.0,
+          "branch": "Standards Compatibility",
+          "definition": "03_1 Torts / Personal Injury (PACER NoS) refers to a category of civil wrongs that cause harm or injury to an individual, as classified by the PACER Nature of S"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R8Ke5k9yA65alqBD0HYDAD",
+          "label": "Future Injury from Present Tortious Personal Injury",
+          "score": 90.0,
+          "branch": "Objectives",
+          "definition": "Future Injury from Present Tortious Personal Injury: A claim for damages resulting from a personal injury that has not yet manifested, but is likely to occur in"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R9kmBUL0hXAuj5bhh6W839Q",
+          "label": "365 Personal Injury - Product Liability (PACER NoS)",
+          "score": 90.0,
+          "branch": "Standards Compatibility",
+          "definition": "Action alleging personal injury or death resulting from a defective product.  (Excludes a marine or airplane product)"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R8nS2nCQk73G7GhYzdXTwGU",
+          "label": "362 Personal Injury - Medical Malpractice (PACER NoS)",
+          "score": 90.0,
+          "branch": "Standards Compatibility",
+          "definition": "Action alleging personal injury or wrongful death caused bynegligence in medical care provided by a doctor or other health careprofessional."
+        }
+      ],
+      "branches_touched": [
+        "Actor / Player",
+        "Area of Law",
+        "Objectives",
+        "Standards Compatibility"
+      ]
+    },
+    {
+      "index": 2,
+      "item": "Motor Vehicle Accidents",
+      "level": "branch",
+      "total_candidates": 25,
+      "relevant_candidates": 21,
+      "high_score_relevant": 1,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/RDdt7BM9BNO95XHQ6o61bFR",
+          "label": "Civil Court Proceeding",
+          "score": 90.0,
+          "branch": "Service",
+          "definition": "A lawsuit; all or some part of a cause heard and determined by a court. Any legal step or action taken at the direction of, or by the authority of a court."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RBmdeshVFbo6mEH3zVVXEuM",
+          "label": "Motor Vehicle Manufacturing",
+          "score": 86.66666666666667,
+          "branch": "Industry and Market",
+          "definition": "This industry group comprises establishments primarily engaged in (1) manufacturing complete automobiles, light duty motor vehicles, and heavy duty trucks (i.e."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/JlsptWZgRdqBsxWcE4McwQ",
+          "label": "Other Motor Vehicle Parts Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in manufacturing and/or rebuilding motor vehicle parts and accessories (except motor vehicle gasoline e"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/i7wA9uxqSMe5n4kDBS4jIA",
+          "label": "Other Motor Vehicle Parts Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "See industry description for 336390."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/LkaMjXU5T4yH8cTPI0rhsw",
+          "label": "Motor Vehicle Brake System Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in manufacturing and/or rebuilding motor vehicle brake systems and related components."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/gZhFoQXCS_K7xOjswCfrsw",
+          "label": "Motor Vehicle Brake System Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "See industry description for 336340."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R9a5qn2TCmb14XGuetYPHvV",
+          "label": "Theft of Motor Vehicle Parts/Accessories",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "The theft of any part or accessory affixed to the interior or exterior of a motor vehicle in a manner which would make the item an attachment of the vehicle, or"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RBQZfWGxOZnZAvQ3ghLRvae",
+          "label": "Theft of Motor Vehicle Parts/Accessories",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "Theft of Motor Vehicle Parts/Accessories: The act of taking or removing parts or accessories from a motor vehicle without the owner's consent, with the intentio"
+        }
+      ],
+      "branches_touched": [
+        "Industry and Market",
+        "Objectives",
+        "Service"
+      ]
+    },
+    {
+      "index": 3,
+      "item": "Motor Vehicle Law",
+      "level": "leaf",
+      "total_candidates": 24,
+      "relevant_candidates": 21,
+      "high_score_relevant": 1,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/RBd6mCquEANjUvn59AqC7Sj",
+          "label": "Motor Vehicle Law",
+          "score": 100.0,
+          "branch": "Area of Law",
+          "definition": "Law covering all the aspects of registering and titling motor vehicles, and licensing drivers."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R2e3mdhrPrjPbiYOMYQU0g",
+          "label": "Patent Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Law is designed to encourage inventors to disclose their new technology to the world by offering the incentive of a limited-time monopoly on the technology."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/GoI2qfW8ScaR4r4Yvnh1mg",
+          "label": "Motor Vehicle Metal Stamping",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in manufacturing motor vehicle stampings, such as fenders, tops, body parts, trim, and molding."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/K6qDBL83Tl63IBTOw36w3A",
+          "label": "Motor Vehicle Metal Stamping",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "See industry description for 336370."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/MyYW-tXUQDSLGibJTLAGAQ",
+          "label": "Motor Vehicle Body Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This U.S. industry comprises establishments primarily engaged in manufacturing truck and bus bodies and cabs and automobile bodies. The products made may be sol"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R07tQM5sYugYGBPQS571s5",
+          "label": "Constitutional and Civil Rights Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Rights that protect individuals' freedom from infringement by governments, social organizations, and private individuals."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/JlsptWZgRdqBsxWcE4McwQ",
+          "label": "Other Motor Vehicle Parts Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in manufacturing and/or rebuilding motor vehicle parts and accessories (except motor vehicle gasoline e"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/i7wA9uxqSMe5n4kDBS4jIA",
+          "label": "Other Motor Vehicle Parts Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "See industry description for 336390."
+        }
+      ],
+      "branches_touched": [
+        "Area of Law",
+        "Industry and Market"
+      ]
+    },
+    {
+      "index": 4,
+      "item": "Accident Benefits Law",
+      "level": "leaf",
+      "total_candidates": 19,
+      "relevant_candidates": 13,
+      "high_score_relevant": 2,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/R87PmoWmotSgo32gCYT29sw",
+          "label": "Savings and Loan Association",
+          "score": 90.0,
+          "branch": "Actor / Player",
+          "definition": "A Savings and Loan Association (S&L) is a financial institution primarily focused on accepting savings deposits and making mortgage loans. S&Ls play a significa"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RDdt7BM9BNO95XHQ6o61bFR",
+          "label": "Civil Court Proceeding",
+          "score": 90.0,
+          "branch": "Service",
+          "definition": "A lawsuit; all or some part of a cause heard and determined by a court. Any legal step or action taken at the direction of, or by the authority of a court."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7TgV9FkR8Q4DMivxT5656",
+          "label": "Labor Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Law relating to the relationship between trade unions, employers, and the government."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R2e3mdhrPrjPbiYOMYQU0g",
+          "label": "Patent Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Law is designed to encourage inventors to disclose their new technology to the world by offering the incentive of a limited-time monopoly on the technology."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7meQhKYGkcA57UZ7v4JOdA",
+          "label": "Banking Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Law that governs how banks and other financial institutions conduct business."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7yiK6hR6BkuiTgbsV5u1CC",
+          "label": "Governing Law",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "The law that applies to a given legal matter, which may differ from the location of (1) the client and (2) the legal work being performed. This may be contractu"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7KYATnZcNxJsZ1MQBADZ0x",
+          "label": "Water Resources and Wetlands Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Laws governing the ownership and use of water resources, including surface water and groundwater, oceans and seas."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7o4TiXsYQ6vV6MrJMTfnS7",
+          "label": "Construction and Development Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Law dealing with matters relating to building construction, engineering, and related fields."
+        }
+      ],
+      "branches_touched": [
+        "Actor / Player",
+        "Area of Law",
+        "Objectives",
+        "Service"
+      ]
+    },
+    {
+      "index": 5,
+      "item": "Premises Liability",
+      "level": "branch",
+      "total_candidates": 18,
+      "relevant_candidates": 17,
+      "high_score_relevant": 2,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/RDSBerlLWg1ntpLqDQn1eVn",
+          "label": "Property & Premises Liability Claims",
+          "score": 95.0,
+          "branch": "Objectives",
+          "definition": "Property & Premises Liability Claims refer to legal claims made against a property owner or occupier for injuries or damages suffered by individuals on their pr"
         },
         {
           "iri": "https://folio.openlegalstandard.org/R87PmoWmotSgo32gCYT29sw",
           "label": "Savings and Loan Association",
           "score": 90.0,
-          "matched_term": "premises liability",
           "branch": "Actor / Player",
-          "definition": "A Savings and Loan Association (S&L) is a financial institution primarily focused on accepting savings deposits and making mortgage loans. S&Ls play a significant role in providing home financing, par"
+          "definition": "A Savings and Loan Association (S&L) is a financial institution primarily focused on accepting savings deposits and making mortgage loans. S&Ls play a significa"
         },
         {
-          "iri": "https://folio.openlegalstandard.org/R05C49544Fb7385C6ac9E0e9",
-          "label": "U.S. District Court - D. Oregon",
-          "score": 90.0,
-          "matched_term": "landlord liability",
-          "branch": "Forums and Venues",
-          "definition": "D. Or."
+          "iri": "https://folio.openlegalstandard.org/R76WkcXfFt3glDpVhlVOkaC",
+          "label": "Release of Liability Clause",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "A Release of Liability Clause is a legal provision that relieves one party from responsibility for any harm or damage caused to another party, typically in the "
         },
         {
-          "iri": "https://folio.openlegalstandard.org/R872e3e5kIyoshDoSHVM94B",
-          "label": "Landlord",
-          "score": 90.0,
-          "matched_term": "landlord liability",
-          "branch": "Actor / Player",
-          "definition": "One who lets land to another: the owner or holder of land or houses which he leases or rents to another. Seattle Hous. Auth. v. City of Seattle, 416 P.3d 1280 (Wash. App. 2018)"
+          "iri": "https://folio.openlegalstandard.org/R7cfF9aK4pAFRk8d1pKJ984",
+          "label": "Joint and Several Liability",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "Joint and Several Liability is a legal concept where multiple parties can be held responsible for the same damages or debt, and each party can be held liable fo"
         },
         {
-          "iri": "https://folio.openlegalstandard.org/R8pNPutX0TN6DlEqkyZuxSw",
-          "label": "Lessor",
-          "score": 90.0,
-          "matched_term": "landlord liability",
-          "branch": "Actor / Player",
-          "definition": "A lessor is a person or entity that leases or lets a property to another; a landlord."
+          "iri": "https://folio.openlegalstandard.org/R8WASmQhCx0qwbQ1XBbwUkv",
+          "label": "Liability Disclaimer Clause",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "A Liability Disclaimer Clause is a statement in a legal document that limits or eliminates the liability of one party for damages or losses incurred by another "
         },
         {
-          "iri": "https://folio.openlegalstandard.org/R25B7be5E4c8a07E5ba2153f",
-          "label": "Ig",
-          "score": 90.0,
-          "matched_term": "negligence",
-          "branch": "Location",
-          "definition": "A type of immunoglobulin protein found in the blood and tissues of humans and other animals, which plays a crucial role in the immune system's response to foreign substances."
+          "iri": "https://folio.openlegalstandard.org/R7RX4TNmaqqwO8btjXEkDzG",
+          "label": "Liability for Injury to Pets",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "Liability for Injury to Pets refers to the legal responsibility for harm caused to a domesticated animal, such as a dog or cat, and the resulting damages that m"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7eNtj44HIHIEfl5hdN415d",
+          "label": "Limited Liability Partnership",
+          "score": 85.5,
+          "branch": "Legal Entity",
+          "definition": "A limited liability partnership (LLP) is a partnership in which some or all partners (depending on the jurisdiction) have limited liabilities. It therefore can "
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7NkdM8YhcmzfiWmRifZdxG",
+          "label": "Director\u2019s Liability to Shareholders",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "The legal responsibility of a director to act in the best interests of the shareholders of a corporation, and the potential consequences if they fail to do so."
         }
+      ],
+      "branches_touched": [
+        "Actor / Player",
+        "Legal Entity",
+        "Objectives"
+      ]
+    },
+    {
+      "index": 6,
+      "item": "Slip-and-Fall Negligence",
+      "level": "leaf",
+      "total_candidates": 26,
+      "relevant_candidates": 25,
+      "high_score_relevant": 3,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/R6BgoOCiXfPfFeBgDhUcP3",
+          "label": "Slip-and-Fall Negligence",
+          "score": 100.0,
+          "branch": "Objectives",
+          "definition": "Slip-and-Fall Negligence refers to a legal claim made by an individual who has suffered a personal injury due to the negligence of a property owner or occupier "
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7epmapi47puE4YCEXJUREa",
+          "label": "Generic Matter Narrative",
+          "score": 90.0,
+          "branch": "Matter Narrative",
+          "definition": "A generic version of a matter narrative. Usually used to further describe a category of matters."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7nqxxlAfhYqqSA2UQ5UxpX",
+          "label": "Negligence",
+          "score": 90.0,
+          "branch": "Objectives",
+          "definition": "Negligence is a legal concept that refers to the failure to exercise reasonable care, resulting in harm or injury to another person or property."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/AKbiNvq0SJquriQ5LfwLEw",
+          "label": "Fish and Seafood Merchant Wholesalers",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in the merchant wholesale distribution of fish and seafood (except canned or packaged frozen)."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/BWPuh4YOSEqfI3IWii_ywQ",
+          "label": "Fish and Seafood Merchant Wholesalers",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "See industry description for 424460."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/A4X7EIZ4R-e0nccAIuIgPg",
+          "label": "General Medical and Surgical Hospitals",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "NULL"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/SUmrcq7pTO2nkqVbWbPoJw",
+          "label": "General Medical and Surgical Hospitals",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "See industry description for 622110."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/f1BPS-gjRYOSkEykotZZIQ",
+          "label": "General Medical and Surgical Hospitals",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments known and licensed as general medical and surgical hospitals primarily engaged in providing diagnostic and medical treatm"
+        }
+      ],
+      "branches_touched": [
+        "Industry and Market",
+        "Matter Narrative",
+        "Objectives"
+      ]
+    },
+    {
+      "index": 7,
+      "item": "Dog Bite",
+      "level": "leaf",
+      "total_candidates": 20,
+      "relevant_candidates": 6,
+      "high_score_relevant": 4,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/R7LI3BONqNkXbKHKa0t3jyI",
+          "label": "Bankruptcy and Financial Restructuring Practice",
+          "score": 90.0,
+          "branch": "Service",
+          "definition": "Any process that involves the liquidation or restructuring a business. The process usually has several parties - debtors, creditors and buyers."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RDigDgTiLFmt7iX3436yCOT",
+          "label": "Dispute Service",
+          "score": 90.0,
+          "branch": "Service",
+          "definition": "A process that describes a conflict/adversarial event potentially or actually involving a second party. This can include government entity or internal investiga"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RKzL5nW7IGg4mvAPFX2MUL",
+          "label": "Transactional Practice",
+          "score": 90.0,
+          "branch": "Service",
+          "definition": "Any process that involves two or more parties in creation of a contract."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RB2Db1BbArbo9kmZmmbIXm5",
+          "label": "Dog Bite Strict Liability",
+          "score": 90.0,
+          "branch": "Objectives",
+          "definition": ""
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/g805oOHDRf6BaS14oJBzaA",
+          "label": "Dog and Cat Food Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This U.S. industry comprises establishments primarily engaged in manufacturing dog and cat food from ingredients, such as grains, oilseed mill products, and mea"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RBMMxJxCYv0BGt8jtwWedzO",
+          "label": "Web Search Portals, Libraries, Archives, and Other Information Industry",
+          "score": 77.14285714285715,
+          "branch": "Industry and Market",
+          "definition": "Industries in the Web Search Portals, Libraries, Archives, and Other Information Services subsector group establishments supplying information, storing and prov"
+        }
+      ],
+      "branches_touched": [
+        "Industry and Market",
+        "Objectives",
+        "Service"
       ]
     },
     {
       "index": 8,
-      "item": "Patient underwent a routine knee arthroscopy and was left with permanent nerve damage after the surgeon allegedly operated on the wrong leg; the hospital's incident report was never disclosed to the patient.",
-      "search_terms": [
-        "medical malpractice",
-        "surgical error",
-        "wrong site surgery",
-        "informed consent",
-        "nerve damage"
-      ],
-      "total_candidates": 62,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
-      "branches_touched": [
-        "Actor / Player",
-        "Area of Law",
-        "Document / Artifact",
-        "Forums and Venues",
-        "Location",
-        "Objectives",
-        "Service"
-      ],
-      "top_candidates": [
+      "item": "Medical Malpractice",
+      "level": "branch",
+      "total_candidates": 22,
+      "relevant_candidates": 17,
+      "high_score_relevant": 8,
+      "top_relevant": [
         {
           "iri": "https://folio.openlegalstandard.org/R7athlXhsUuRtg7LvK0uUaF",
           "label": "Medical Malpractice",
           "score": 100.0,
-          "matched_term": "medical malpractice",
           "branch": "Objectives",
           "definition": "Medical Malpractice: Negligence or breach of duty by a healthcare professional that results in harm or injury to a patient."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R87MDAJj8ZL7SprFAEqipk2",
-          "label": "Informed Consent",
-          "score": 100.0,
-          "matched_term": "informed consent",
-          "branch": "Objectives",
-          "definition": "The concept of Informed Consent refers to the legal requirement for medical professionals to fully inform patients of the risks and benefits of a medical procedure or treatment, and to obtain the pati"
         },
         {
           "iri": "https://folio.openlegalstandard.org/RR7oJoEqb12ZxVMvTIb7I0",
           "label": "Negligence and Malpractice Law",
           "score": 95.0,
-          "matched_term": "medical malpractice",
           "branch": "Area of Law",
-          "definition": "Failure to exercise the care that a reasonably prudent person or professional, in the case of professional negligence, would exercise in like circumstances and the harm caused by those actions."
+          "definition": "Failure to exercise the care that a reasonably prudent person or professional, in the case of professional negligence, would exercise in like circumstances and "
         },
         {
           "iri": "https://folio.openlegalstandard.org/R8nVhrBlasGIc7jxw1D0vbm",
           "label": "Medical Malpractice Claims",
           "score": 95.0,
-          "matched_term": "medical malpractice",
           "branch": "Objectives",
-          "definition": "Medical Malpractice Claims refer to legal claims made against medical professionals or institutions for negligence or failure to provide adequate care resulting in harm or injury to a patient."
+          "definition": "Medical Malpractice Claims refer to legal claims made against medical professionals or institutions for negligence or failure to provide adequate care resulting"
         },
         {
           "iri": "https://folio.openlegalstandard.org/RDwX4hjSSjdLB4a9gnVAukp",
           "label": "Medical Device Malpractice",
           "score": 95.0,
-          "matched_term": "medical malpractice",
           "branch": "Objectives",
-          "definition": "Medical Device Malpractice refers to a type of medical malpractice claim that arises from the use of a faulty or defective medical device during a medical procedure."
+          "definition": "Medical Device Malpractice refers to a type of medical malpractice claim that arises from the use of a faulty or defective medical device during a medical proce"
         },
         {
           "iri": "https://folio.openlegalstandard.org/RCuus493FlHkCuRCdg8eDmC",
           "label": "Medical Malpractice Defenses",
           "score": 95.0,
-          "matched_term": "medical malpractice",
           "branch": "Objectives",
-          "definition": "Medical Malpractice Defenses are legal arguments or strategies used by defendants in a medical malpractice case to defend against the plaintiff's claims of negligence or wrongdoing."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RC7rmikL1h9aYZ4km0jfZxv",
-          "label": "Medical Consent Form",
-          "score": 95.0,
-          "matched_term": "informed consent",
-          "branch": "Document / Artifact",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RF01227DF45ca2C31b3843d4",
-          "label": "Ica",
-          "score": 90.0,
-          "matched_term": "medical malpractice",
-          "branch": "Location",
-          "definition": ""
+          "definition": "Medical Malpractice Defenses are legal arguments or strategies used by defendants in a medical malpractice case to defend against the plaintiff's claims of negl"
         },
         {
           "iri": "https://folio.openlegalstandard.org/R8wMxsTdrra0TJaBCyIWcHw",
           "label": "Lawful Permanent Resident",
           "score": 90.0,
-          "matched_term": "medical malpractice",
           "branch": "Actor / Player",
           "definition": ""
         },
@@ -938,864 +538,582 @@
           "iri": "https://folio.openlegalstandard.org/R9zgcjBBIdWMnwIR8nqsoS8",
           "label": "Mediation Practice",
           "score": 90.0,
-          "matched_term": "medical malpractice",
           "branch": "Service",
-          "definition": "Mediation is a process wherein the parties meet with a mutually selected impartial and neutral person who assists them in the negotiation of their differences. Mediation leaves the decision power tota"
+          "definition": "Mediation is a process wherein the parties meet with a mutually selected impartial and neutral person who assists them in the negotiation of their differences. "
         },
         {
-          "iri": "https://folio.openlegalstandard.org/RE4E6b2E7Ea766DC6b65C771",
-          "label": "U.S. District Court - D. Maine",
+          "iri": "https://folio.openlegalstandard.org/R8nS2nCQk73G7GhYzdXTwGU",
+          "label": "362 Personal Injury - Medical Malpractice (PACER NoS)",
           "score": 90.0,
-          "matched_term": "medical malpractice",
-          "branch": "Forums and Venues",
-          "definition": "D. Me."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RA55b7f35A650DECa425A430",
-          "label": "California Supreme Court",
-          "score": 90.0,
-          "matched_term": "medical malpractice",
-          "branch": "Forums and Venues",
-          "definition": "Cal."
+          "branch": "Standards Compatibility",
+          "definition": "Action alleging personal injury or wrongful death caused bynegligence in medical care provided by a doctor or other health careprofessional."
         }
+      ],
+      "branches_touched": [
+        "Actor / Player",
+        "Area of Law",
+        "Objectives",
+        "Service",
+        "Standards Compatibility"
       ]
     },
     {
       "index": 9,
-      "item": "Driver of a compact SUV was killed when the vehicle's roof crushed during a low-speed rollover; the family alleges the roof structure failed federal safety standards and the manufacturer knew about the defect from prior testing.",
-      "search_terms": [
-        "product liability",
-        "automotive defect",
-        "wrongful death",
-        "crashworthiness",
-        "punitive damages"
+      "item": "Medical Malpractice",
+      "level": "leaf",
+      "total_candidates": 22,
+      "relevant_candidates": 17,
+      "high_score_relevant": 8,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/R7athlXhsUuRtg7LvK0uUaF",
+          "label": "Medical Malpractice",
+          "score": 100.0,
+          "branch": "Objectives",
+          "definition": "Medical Malpractice: Negligence or breach of duty by a healthcare professional that results in harm or injury to a patient."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RR7oJoEqb12ZxVMvTIb7I0",
+          "label": "Negligence and Malpractice Law",
+          "score": 95.0,
+          "branch": "Area of Law",
+          "definition": "Failure to exercise the care that a reasonably prudent person or professional, in the case of professional negligence, would exercise in like circumstances and "
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R8nVhrBlasGIc7jxw1D0vbm",
+          "label": "Medical Malpractice Claims",
+          "score": 95.0,
+          "branch": "Objectives",
+          "definition": "Medical Malpractice Claims refer to legal claims made against medical professionals or institutions for negligence or failure to provide adequate care resulting"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RDwX4hjSSjdLB4a9gnVAukp",
+          "label": "Medical Device Malpractice",
+          "score": 95.0,
+          "branch": "Objectives",
+          "definition": "Medical Device Malpractice refers to a type of medical malpractice claim that arises from the use of a faulty or defective medical device during a medical proce"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RCuus493FlHkCuRCdg8eDmC",
+          "label": "Medical Malpractice Defenses",
+          "score": 95.0,
+          "branch": "Objectives",
+          "definition": "Medical Malpractice Defenses are legal arguments or strategies used by defendants in a medical malpractice case to defend against the plaintiff's claims of negl"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R8wMxsTdrra0TJaBCyIWcHw",
+          "label": "Lawful Permanent Resident",
+          "score": 90.0,
+          "branch": "Actor / Player",
+          "definition": ""
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R9zgcjBBIdWMnwIR8nqsoS8",
+          "label": "Mediation Practice",
+          "score": 90.0,
+          "branch": "Service",
+          "definition": "Mediation is a process wherein the parties meet with a mutually selected impartial and neutral person who assists them in the negotiation of their differences. "
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R8nS2nCQk73G7GhYzdXTwGU",
+          "label": "362 Personal Injury - Medical Malpractice (PACER NoS)",
+          "score": 90.0,
+          "branch": "Standards Compatibility",
+          "definition": "Action alleging personal injury or wrongful death caused bynegligence in medical care provided by a doctor or other health careprofessional."
+        }
       ],
-      "total_candidates": 57,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
       "branches_touched": [
+        "Actor / Player",
         "Area of Law",
-        "Governmental Body",
-        "Language",
         "Objectives",
+        "Service",
         "Standards Compatibility"
+      ]
+    },
+    {
+      "index": 10,
+      "item": "Wrongful Death Claim",
+      "level": "leaf",
+      "total_candidates": 18,
+      "relevant_candidates": 13,
+      "high_score_relevant": 2,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/R3wLqupQlOkBDRXPF6bOYr",
+          "label": "Wrongful Death Claim",
+          "score": 100.0,
+          "branch": "Objectives",
+          "definition": "A wrongful death claim is a legal action brought by the survivors of a deceased person against the party responsible for the death, seeking compensation for dam"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R9Bt6YyjZVGU1dHNZZMG1Ue",
+          "label": "Money Lent",
+          "score": 90.0,
+          "branch": "Objectives",
+          "definition": "A Money Lent (Claim) is a legal demand for repayment of a sum of money that was loaned to another party, based on a contractual or quasi-contractual agreement."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RDm4nVQ4Ad7tXBBYvbjqI2I",
+          "label": "Death Claims",
+          "score": 86.08695652173914,
+          "branch": "Objectives",
+          "definition": "A Death Claim is a legal action seeking compensation for the death of an individual caused by the negligence or intentional act of another party."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7KGGhirGUj2y81W5Kp7TT2",
+          "label": "Warrant Claim",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "A warrant claim refers to a legal assertion involving the issuance, execution, or validity of a warrant, which is an official document issued by a judicial offi"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7NSOpfI2rIDYuhJrfuca1J",
+          "label": "Fair Labor Standards Act Claim",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "A Fair Labor Standards Claim is a legal claim made by an employee against an employer for violations of federal labor laws related to minimum wage, overtime pay"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R79l2IoqX4ogtsb5ZRVMWG",
+          "label": "Enforcement of Visitation Claim",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "The Enforcement of Visitation Claim is the legal process of ensuring that a parent's right to visit their child is upheld, typically through court orders and le"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R1nCrORLkMYk6gOhpKGLcJ",
+          "label": "Full Faith & Credit Clause Claim",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "A Full Faith & Credit Clause claim is a legal argument asserting that a law or action violates the Full Faith and Credit Clause of the United States Constitutio"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R0SRDIOd4jMEIn9PqpTZ1w",
+          "label": "Associational Discrimination Claim",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "An associational discrimination claim is a legal action brought by an individual who alleges they have been subjected to unfair treatment or adverse actions by "
+        }
       ],
-      "top_candidates": [
+      "branches_touched": [
+        "Objectives"
+      ]
+    },
+    {
+      "index": 11,
+      "item": "Product Liability",
+      "level": "branch",
+      "total_candidates": 15,
+      "relevant_candidates": 15,
+      "high_score_relevant": 14,
+      "top_relevant": [
         {
           "iri": "https://folio.openlegalstandard.org/RBId9f3jW4zEqooPvShqi6Q",
           "label": "Product Liability Law",
           "score": 100.0,
-          "matched_term": "product liability",
           "branch": "Area of Law",
           "definition": "Law relating to liability for injuries caused by defective or unsafe products."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8YpmuUZmn3o9FoTaw5XYwP",
-          "label": "Punitive Damages",
-          "score": 100.0,
-          "matched_term": "punitive damages",
-          "branch": "Objectives",
-          "definition": "Monetary damages awarded in addition to compensatory damages, intended to punish the defendant for their wrongful conduct and to deter similar conduct in the future."
         },
         {
           "iri": "https://folio.openlegalstandard.org/R7MsH9WtTPf14W1GB1m8zrB",
           "label": "Product Liability Claims",
           "score": 95.0,
-          "matched_term": "product liability",
           "branch": "Objectives",
-          "definition": "Product Liability Claims refer to civil tort claims that arise when a consumer is injured or suffers damages due to a defective or dangerous product, and seeks compensation from the manufacturer or se"
+          "definition": "Product Liability Claims refer to civil tort claims that arise when a consumer is injured or suffers damages due to a defective or dangerous product, and seeks "
         },
         {
           "iri": "https://folio.openlegalstandard.org/R8p15egW5el3Go9V1L4obop",
           "label": "Strict Product Liability",
           "score": 95.0,
-          "matched_term": "product liability",
           "branch": "Objectives",
-          "definition": "Strict Product Liability is a legal concept that holds manufacturers and sellers responsible for any harm caused by their products, regardless of fault or negligence, if the product is found to be def"
+          "definition": "Strict Product Liability is a legal concept that holds manufacturers and sellers responsible for any harm caused by their products, regardless of fault or negli"
         },
         {
-          "iri": "https://folio.openlegalstandard.org/R3wLqupQlOkBDRXPF6bOYr",
-          "label": "Wrongful Death Claim",
-          "score": 95.0,
-          "matched_term": "wrongful death",
+          "iri": "https://folio.openlegalstandard.org/RCc50c8MA7S8aeFuufxdksV",
+          "label": "Product Liability Defenses",
+          "score": 90.0,
           "branch": "Objectives",
-          "definition": "A wrongful death claim is a legal action brought by the survivors of a deceased person against the party responsible for the death, seeking compensation for damages resulting from the loss of the indi"
+          "definition": "Product Liability Defenses refer to the legal arguments and strategies used by defendants in a product liability case to defend against claims of liability for "
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R8moeCg3i0lZQ5CEjooCIAY",
+          "label": "Product Liability Representation",
+          "score": 90.0,
+          "branch": "Objectives",
+          "definition": "Product Liability Representation is a clause in merger and acquisition agreements where the selling party attests to the absence of product defects or claims ar"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RxCgiN0rMMrc7x1xhW0qco",
+          "label": "245 Tort Product Liability (PACER NoS)",
+          "score": 90.0,
+          "branch": "Standards Compatibility",
+          "definition": "Action alleging harm by an unsafe product based on negligence, breach of warranty, misrepresentation, and strict tort liability."
         },
         {
           "iri": "https://folio.openlegalstandard.org/R7OJrnkSsmSxdaPzTo9UIdw",
           "label": "345 Marine Product Liability (PACER NoS)",
           "score": 90.0,
-          "matched_term": "product liability",
           "branch": "Standards Compatibility",
-          "definition": "Action (Admiralty and Maritime) alleging personal injury or wrongful death from an accident involving a water vessel or harbor/dock facilities and caused by a defective product."
+          "definition": "Action (Admiralty and Maritime) alleging personal injury or wrongful death from an accident involving a water vessel or harbor/dock facilities and caused by a d"
         },
         {
           "iri": "https://folio.openlegalstandard.org/R7REQZyOuTRSG5KrUBf05ps",
           "label": "195 Contract Product Liability (PACER NoS)",
           "score": 90.0,
-          "matched_term": "product liability",
           "branch": "Standards Compatibility",
-          "definition": "Action concerning damages caused by a defective product, not primarily involving personal injury or property damage, and based primarily on breach of contract, breach of warranty, misrepresentation, a"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8b4GMC8FsZqXIzDy3puZ9P",
-          "label": "315 Airplane Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action alleging personal injury or death from an air crash or other occurrence involving an airplane and caused by a defective product."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R168utCHVgcH74fUtdFcEV",
-          "label": "355 Motor Vehicle Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action alleging personal injury or wrongful death involving a motor vehicle and caused by a defective product."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R88XsqAwT4bYxwSk0bLQ0Un",
-          "label": "385 Property Damage Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action alleging damage to personal property caused by a defective product."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RzQ5gwUabt1mu60F6pstMJ",
-          "label": "Tiv",
-          "score": 90.0,
-          "matched_term": "automotive defect",
-          "branch": "Language",
-          "definition": "Tiv (Language) is a structured system of communication that consists of grammar and vocabulary, and is spoken in Nigeria by the Tiv people."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R0DB9975F6f0d3B78ec6Fc65",
-          "label": "Federal Election Commission",
-          "score": 90.0,
-          "matched_term": "automotive defect",
-          "branch": "Governmental Body",
-          "definition": "The Federal Election Commission (FEC) is an independent regulatory agency whose purpose is to enforce campaign finance law in United States federal elections."
+          "definition": "Action concerning damages caused by a defective product, not primarily involving personal injury or property damage, and based primarily on breach of contract, "
         }
-      ]
-    },
-    {
-      "index": 10,
-      "item": "A group of veterans claim long-term exposure to burn pits at overseas military installations caused respiratory cancers and autoimmune disorders; class certification is being sought against the federal contractor that operated the pits.",
-      "search_terms": [
-        "mass tort",
-        "toxic tort",
-        "government contractor",
-        "class certification",
-        "respiratory disease"
       ],
-      "total_candidates": 50,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
       "branches_touched": [
         "Area of Law",
-        "Forums and Venues",
-        "Legal Entity",
-        "Location",
-        "Objectives"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/R8D6zCNSxUO8g0ZstLxnK28",
-          "label": "Chronic Obstructive Pulmonary Disease",
-          "score": 95.0,
-          "matched_term": "respiratory disease",
-          "branch": "Legal Entity",
-          "definition": "Chronic Obstructive Pulmonary Disease (COPD) is a progressive respiratory condition characterized by persistent airflow limitation due to chronic inflammation of the airways and lung tissue. The most "
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RDlMcnPEFzMJer6LE0dJJj9",
-          "label": "Government Contracts Law",
-          "score": 92.6829268292683,
-          "matched_term": "government contractor",
-          "branch": "Area of Law",
-          "definition": "Laws relating to contracts in which the government is a party."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R3F9d83E6A526EC308aCCb61",
-          "label": "Morocco",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R5403b7ED64ea54Ee25297c2",
-          "label": "Massachusetts State Courts",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Forums and Venues",
-          "definition": "The Massachusetts State Courts refer to the judicial system of Massachusetts, including the Massachusetts District Court, Massachusetts Appeals Court, Massachusetts Supreme Judicial Court, Massachuset"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R5219231CD6b861B1a6EE50d",
-          "label": "South Sudan",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R64Cf97674c65D4278f98753",
-          "label": "Tonga",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7C5f715CD204F4Fc3509b8c",
-          "label": "American Samoa",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/REFC692441d584AA9b849464",
-          "label": "Oregon State Courts",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Forums and Venues",
-          "definition": "Oregon State Courts are the judicial branch of the Oregon state government, responsible for interpreting and enforcing the laws of the state."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7MK1XmyjtYxZKg8Iw4ZN4K",
-          "label": "Personal Injury and Tort Law",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Area of Law",
-          "definition": "Law which allows an injured person to obtain compensation from the person who caused the injury."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RA5177b98C4dd8630001487e",
-          "label": "Massachusetts Supreme Judicial Court",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Forums and Venues",
-          "definition": "Mass."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RM35ursk6terURihawIPFX",
-          "label": "Mass Torts Law",
-          "score": 90.0,
-          "matched_term": "mass tort",
-          "branch": "Area of Law",
-          "definition": "Mass torts law is an area of law that deals with legal actions involving numerous plaintiffs against one or a few defendants, where the plaintiffs allege harm caused by common actions or products. The"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RYS2M2cunzcjtIHPdPzmUy",
-          "label": "Toxic Tort Claims",
-          "score": 90.0,
-          "matched_term": "toxic tort",
-          "branch": "Objectives",
-          "definition": "A toxic tort claim arises when an individual alleges harm due to exposure to a toxic substance. This claim seeks compensation for injuries caused by chemicals, pollutants, or other hazardous materials"
-        }
-      ]
-    },
-    {
-      "index": 11,
-      "item": "Motorcyclist was struck by an uninsured driver who fled the scene; plaintiff is seeking coverage under his own uninsured motorist policy after the carrier denied the claim on the grounds that the policy lapsed two days before the accident.",
-      "search_terms": [
-        "motor vehicle accident",
-        "uninsured motorist",
-        "insurance bad faith",
-        "policy interpretation",
-        "claim denial"
-      ],
-      "total_candidates": 63,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
-      "branches_touched": [
-        "Actor / Player",
-        "Area of Law",
-        "Governmental Body",
-        "Industry and Market",
-        "Legal Entity",
         "Objectives",
-        "Service"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/RybmPQiRqfCkemZ2x04CRv",
-          "label": "Uninsured Driving",
-          "score": 100.0,
-          "matched_term": "uninsured motorist",
-          "branch": "Objectives",
-          "definition": "\"Driving Without Insurance\" refers to the act of operating a motor vehicle without having the necessary insurance coverage as required by law. This is considered a legal offense in many jurisdictions "
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RHkmZvJbjGoqHTMCUIREOX",
-          "label": "Insurance Carrier Bad Faith",
-          "score": 95.0,
-          "matched_term": "insurance bad faith",
-          "branch": "Objectives",
-          "definition": "The concept of Insurance Carrier Bad Faith refers to the intentional or reckless failure of an insurance company to fulfill its contractual obligations to its policyholders, such as denying a valid cl"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RDdt7BM9BNO95XHQ6o61bFR",
-          "label": "Civil Court Proceeding",
-          "score": 90.0,
-          "matched_term": "motor vehicle accident",
-          "branch": "Service",
-          "definition": "A lawsuit; all or some part of a cause heard and determined by a court. Any legal step or action taken at the direction of, or by the authority of a court."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R4C14a1CEBaecDC328c02127",
-          "label": "Office of Research Integrity",
-          "score": 90.0,
-          "matched_term": "uninsured motorist",
-          "branch": "Governmental Body",
-          "definition": "The Office of Research Integrity (ORI) is a U.S. government agency that focuses on research integrity, especially in health."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RD56727CABa3aB066e948fc1",
-          "label": "Insurance Carriers and Related Activities Industry",
-          "score": 90.0,
-          "matched_term": "uninsured motorist",
-          "branch": "Industry and Market",
-          "definition": "Industries in the Insurance Carriers and Related Activities subsector group establishments that are primarily engaged in one of the following: (1) underwriting (assuming the risk, assigning premiums, "
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RDFhkhLQDtnN9dqbZSYSlpC",
-          "label": "Insurance Law",
-          "score": 90.0,
-          "matched_term": "uninsured motorist",
-          "branch": "Area of Law",
-          "definition": "Law surrounding insurance, including insurance policies and claims."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RB2MwY72GbUZH9ccu7omcmE",
-          "label": "Insured",
-          "score": 90.0,
-          "matched_term": "uninsured motorist",
-          "branch": "Actor / Player",
-          "definition": "The insured is the individual or entity specifically covered under an insurance policy. This person or organization receives the benefits of the policy, such as financial compensation or coverage, in "
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8bNzp6lTyATfctRVnXr5rl",
-          "label": "Driver",
-          "score": 90.0,
-          "matched_term": "uninsured motorist",
-          "branch": "Actor / Player",
-          "definition": "A driver is an individual who operates a motor vehicle, controlling its direction and speed on public or private roads. This role requires adherence to traffic laws and regulations to ensure safety an"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RDHXrFcweLJskc0Y6tsnqHE",
-          "label": "Trust (Emotion)",
-          "score": 90.0,
-          "matched_term": "insurance bad faith",
-          "branch": "Legal Entity",
-          "definition": "Trust is an emotion based on the belief in the reliability, truth, or ability of someone or something, often associated with a sense of security and confidence."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RB8ihlqZcfvQMRDiszK0psl",
-          "label": "Licensing Practice",
-          "score": 90.0,
-          "matched_term": "policy interpretation",
-          "branch": "Service",
-          "definition": "A grant of permission by a governmental entity or private agreement."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RDRbe1ie5RKn3gtVv471nhZ",
-          "label": "Policies Practice",
-          "score": 90.0,
-          "matched_term": "policy interpretation",
-          "branch": "Service",
-          "definition": "Development of legal policies."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RDfdmGR6iPi4k2t6ecIUBkP",
-          "label": "Retail Trade Industry",
-          "score": 90.0,
-          "matched_term": "policy interpretation",
-          "branch": "Industry and Market",
-          "definition": "The Retail Trade industry group comprises establishments engaged in retailing merchandise, generally without transformation, and rendering services incidental to the sale of merchandise. The retailing"
-        }
+        "Standards Compatibility"
       ]
     },
     {
       "index": 12,
-      "item": "Hotel guest was sexually assaulted in her room by an intruder who entered through a hallway door that the property's electronic lock system failed to secure; security camera maintenance had been deferred for over a year.",
-      "search_terms": [
-        "premises liability",
-        "negligent security",
-        "sexual assault",
-        "innkeeper duty",
-        "foreseeable harm"
-      ],
-      "total_candidates": 61,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
-      "branches_touched": [
-        "Actor / Player",
-        "Area of Law",
-        "Forums and Venues",
-        "Governmental Body",
-        "Location",
-        "Matter Narrative",
-        "Objectives",
-        "Service"
-      ],
-      "top_candidates": [
+      "item": "Product Liability Law",
+      "level": "leaf",
+      "total_candidates": 22,
+      "relevant_candidates": 22,
+      "high_score_relevant": 1,
+      "top_relevant": [
         {
-          "iri": "https://folio.openlegalstandard.org/R8fcGNgScyMlOAFxW5Omw5Y",
-          "label": "Rape",
+          "iri": "https://folio.openlegalstandard.org/RBId9f3jW4zEqooPvShqi6Q",
+          "label": "Product Liability Law",
           "score": 100.0,
-          "matched_term": "sexual assault",
-          "branch": "Objectives",
-          "definition": "The carnal knowledge of a person, forcibly and/or against that person\u2019s will or not forcibly or against the person\u2019s will in instances where the victim is incapable of giving consent because of his/he"
+          "branch": "Area of Law",
+          "definition": "Law relating to liability for injuries caused by defective or unsafe products."
         },
         {
-          "iri": "https://folio.openlegalstandard.org/RDSBerlLWg1ntpLqDQn1eVn",
-          "label": "Property & Premises Liability Claims",
-          "score": 95.0,
-          "matched_term": "premises liability",
+          "iri": "https://folio.openlegalstandard.org/R7MsH9WtTPf14W1GB1m8zrB",
+          "label": "Product Liability Claims",
+          "score": 88.88888888888889,
           "branch": "Objectives",
-          "definition": "Property & Premises Liability Claims refer to legal claims made against a property owner or occupier for injuries or damages suffered by individuals on their property due to unsafe or hazardous condit"
+          "definition": "Product Liability Claims refer to civil tort claims that arise when a consumer is injured or suffers damages due to a defective or dangerous product, and seeks "
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/HdP9M12ATeKCDWtFUhaK4Q",
+          "label": "Stationery Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "See industry description for 322230."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/XgsUFVmASXKYLqx2YWw6XA",
+          "label": "Stationery Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in converting paper or paperboard into products used for writing, filing, art work, and similar applica"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/GtNxbapGRL26_Ki-0ZpxOA",
+          "label": "Other Plastics Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in manufacturing plastics plumbing fixtures and other plastics products (except film, sheet, bags, prof"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/DOF5eLGtSpaHRGsWG7QXJw",
+          "label": "Spring and Wire Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "NULL"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/UsuwArHqTi6W7A5ulsZQnw",
+          "label": "Spring and Wire Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in (1) manufacturing steel springs by forming, such as cutting, bending, and heat winding, metal rod or"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/ALSpoOYBQha7pQqtkXGqmw",
+          "label": "Bread and Bakery Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in manufacturing fresh and frozen bread and other bakery products."
+        }
+      ],
+      "branches_touched": [
+        "Area of Law",
+        "Industry and Market",
+        "Objectives"
+      ]
+    },
+    {
+      "index": 13,
+      "item": "Defective Product Claims",
+      "level": "leaf",
+      "total_candidates": 23,
+      "relevant_candidates": 20,
+      "high_score_relevant": 1,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/R9Bt6YyjZVGU1dHNZZMG1Ue",
+          "label": "Money Lent",
+          "score": 90.0,
+          "branch": "Objectives",
+          "definition": "A Money Lent (Claim) is a legal demand for repayment of a sum of money that was loaned to another party, based on a contractual or quasi-contractual agreement."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/GtNxbapGRL26_Ki-0ZpxOA",
+          "label": "Other Plastics Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in manufacturing plastics plumbing fixtures and other plastics products (except film, sheet, bags, prof"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/DOF5eLGtSpaHRGsWG7QXJw",
+          "label": "Spring and Wire Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "NULL"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/UsuwArHqTi6W7A5ulsZQnw",
+          "label": "Spring and Wire Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in (1) manufacturing steel springs by forming, such as cutting, bending, and heat winding, metal rod or"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/ALSpoOYBQha7pQqtkXGqmw",
+          "label": "Bread and Bakery Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in manufacturing fresh and frozen bread and other bakery products."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/AYNsJbHmSB-0T4g03WW3WA",
+          "label": "Polystyrene Foam Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "See industry description for 326140."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/mHigNWxlQDaRZFGLd8cblQ",
+          "label": "Polystyrene Foam Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This industry comprises establishments primarily engaged in manufacturing polystyrene foam products."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/BpH3iab7QmqA3-02pZstxQ",
+          "label": "All Other Rubber Product Manufacturing",
+          "score": 85.5,
+          "branch": "Industry and Market",
+          "definition": "This U.S. industry comprises establishments primarily engaged in manufacturing rubber products (except tires; hoses and belting; and molded, extruded, and lathe"
+        }
+      ],
+      "branches_touched": [
+        "Industry and Market",
+        "Objectives"
+      ]
+    },
+    {
+      "index": 14,
+      "item": "Mass Torts & Defamation",
+      "level": "branch",
+      "total_candidates": 14,
+      "relevant_candidates": 11,
+      "high_score_relevant": 3,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/R7MK1XmyjtYxZKg8Iw4ZN4K",
+          "label": "Personal Injury and Tort Law",
+          "score": 90.0,
+          "branch": "Area of Law",
+          "definition": "Law which allows an injured person to obtain compensation from the person who caused the injury."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RCL9tL1XOTncmAJsSYApAw",
+          "label": "Defamation Law",
+          "score": 90.0,
+          "branch": "Area of Law",
+          "definition": "The action of damaging the good reputation of someone; slander or libel."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7JKVOM2aFkvG1yiLzF7ndA",
+          "label": "Defamation",
+          "score": 90.0,
+          "branch": "Objectives",
+          "definition": "Defamation is a civil claim and tort claim that involves the communication of a false statement that harms the reputation of an individual or entity."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RM35ursk6terURihawIPFX",
+          "label": "Mass Torts Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Mass torts law is an area of law that deals with legal actions involving numerous plaintiffs against one or a few defendants, where the plaintiffs allege harm c"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/RHSZPHkLvnB6N4bgIo6kuX",
+          "label": "Business Torts and Actions",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "Business Torts and Actions are civil claims related to wrongful acts committed by one business against another, including unfair competition, false advertising,"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R723CZDeI1c9CzFdyGi58Xd",
+          "label": "03_1 Torts / Personal Injury (PACER NoS)",
+          "score": 85.5,
+          "branch": "Standards Compatibility",
+          "definition": "03_1 Torts / Personal Injury (PACER NoS) refers to a category of civil wrongs that cause harm or injury to an individual, as classified by the PACER Nature of S"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R8wXGWJTzR57bI6XTE3mxaa",
+          "label": "Indivisible Harm Caused by Separate Tortfeasors",
+          "score": 85.5,
+          "branch": "Objectives",
+          "definition": "Indivisible Harm Caused by Separate Tortfeasors: A legal concept where multiple parties are responsible for causing harm to an individual, and the harm cannot b"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R9JBjakDIsSF91IjI8v4skI",
+          "label": "Libel",
+          "score": 77.14285714285715,
+          "branch": "Objectives",
+          "definition": "A false and malicious statement that is published or communicated to a third party, which harms the reputation of an individual or entity."
+        }
+      ],
+      "branches_touched": [
+        "Area of Law",
+        "Objectives",
+        "Standards Compatibility"
+      ]
+    },
+    {
+      "index": 15,
+      "item": "Mass Torts Law",
+      "level": "leaf",
+      "total_candidates": 22,
+      "relevant_candidates": 9,
+      "high_score_relevant": 3,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/RM35ursk6terURihawIPFX",
+          "label": "Mass Torts Law",
+          "score": 100.0,
+          "branch": "Area of Law",
+          "definition": "Mass torts law is an area of law that deals with legal actions involving numerous plaintiffs against one or a few defendants, where the plaintiffs allege harm c"
         },
         {
           "iri": "https://folio.openlegalstandard.org/R87PmoWmotSgo32gCYT29sw",
           "label": "Savings and Loan Association",
           "score": 90.0,
-          "matched_term": "premises liability",
           "branch": "Actor / Player",
-          "definition": "A Savings and Loan Association (S&L) is a financial institution primarily focused on accepting savings deposits and making mortgage loans. S&Ls play a significant role in providing home financing, par"
+          "definition": "A Savings and Loan Association (S&L) is a financial institution primarily focused on accepting savings deposits and making mortgage loans. S&Ls play a significa"
         },
         {
-          "iri": "https://folio.openlegalstandard.org/R1C22903B929851Abdf88e6c",
-          "label": "Uri",
+          "iri": "https://folio.openlegalstandard.org/R7MK1XmyjtYxZKg8Iw4ZN4K",
+          "label": "Personal Injury and Tort Law",
           "score": 90.0,
-          "matched_term": "negligent security",
-          "branch": "Location",
-          "definition": "Uri refers to a specific location within Switzerland, which may include a city, town, village, or other geographic area."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R24Fe8aF4D15b46F6031E543",
-          "label": "U.S. Securities and Exchange Commission",
-          "score": 90.0,
-          "matched_term": "negligent security",
-          "branch": "Governmental Body",
-          "definition": "The U.S. Securities and Exchange Commission (SEC) is an independent agency of the United States federal government. The SEC holds primary responsibility for enforcing the federal securities laws, prop"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R9HPWCZUhOAniaeM37hZVY1",
-          "label": "Securitization Practice",
-          "score": 90.0,
-          "matched_term": "negligent security",
-          "branch": "Service",
-          "definition": "The financial practice of pooling various types of contractual debt such as residential mortgages, commercial mortgages, auto loans or credit card debt obligations (or other non-debt assets which gene"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7epmapi47puE4YCEXJUREa",
-          "label": "Generic Matter Narrative",
-          "score": 90.0,
-          "matched_term": "negligent security",
-          "branch": "Matter Narrative",
-          "definition": "A generic version of a matter narrative. Usually used to further describe a category of matters."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RCF0BMeSwppddfM6cp6AUBK",
-          "label": "Securities and Financial Instruments Law",
-          "score": 90.0,
-          "matched_term": "negligent security",
           "branch": "Area of Law",
-          "definition": "Law covering transactions and other dealings with securities including both federal- and state-level regulation by purely governmental regulatory agencies, listing requirements of exchanges, and rules"
+          "definition": "Law which allows an injured person to obtain compensation from the person who caused the injury."
         },
         {
-          "iri": "https://folio.openlegalstandard.org/RYXueB4WkoL1GFxKIrWyQ5",
-          "label": "Negligent Security on Property",
-          "score": 90.0,
-          "matched_term": "negligent security",
-          "branch": "Objectives",
-          "definition": "Negligent Security on Property refers to a legal claim that arises when a property owner fails to provide adequate security measures, resulting in harm or injury to a person on the property."
+          "iri": "https://folio.openlegalstandard.org/R71cU5SDq2qrLUzt28qZEGO",
+          "label": "Reduction in Force Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Reduction in Force (RIF) law pertains to the legal framework and regulations governing the process of reducing an organization's workforce, typically due to bud"
         },
         {
-          "iri": "https://folio.openlegalstandard.org/R264a7543A779D2F38717714",
-          "label": "Ukraine",
-          "score": 90.0,
-          "matched_term": "sexual assault",
-          "branch": "Location",
-          "definition": ""
+          "iri": "https://folio.openlegalstandard.org/R79WNFd9w49QaDgGyJg4j6k",
+          "label": "Indigenous People's Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Legal procedures and regulations specific to indigenous peoples' rights."
         },
         {
-          "iri": "https://folio.openlegalstandard.org/R2ED8c155E378FD4e44ECbb5",
-          "label": "Albania",
-          "score": 90.0,
-          "matched_term": "sexual assault",
-          "branch": "Location",
-          "definition": ""
+          "iri": "https://folio.openlegalstandard.org/R4UTtjMRQTl6HbNdjMAbHw",
+          "label": "240 Torts to Land (PACER NoS)",
+          "score": 85.5,
+          "branch": "Standards Compatibility",
+          "definition": "Action alleging trespass to land, nuisance, contamination or other unlawful entry on or interference with real property possessed by another."
         },
         {
-          "iri": "https://folio.openlegalstandard.org/R4023c92F85e44CD45cD18bb",
-          "label": "Alabama State Courts",
-          "score": 90.0,
-          "matched_term": "sexual assault",
-          "branch": "Forums and Venues",
-          "definition": "Alabama State Courts are the judicial system of the state of Alabama, including the Alabama Supreme Court and lower courts such as the Alabama Court of Criminal Appeals and Alabama Court of Civil Appe"
+          "iri": "https://folio.openlegalstandard.org/R07tQM5sYugYGBPQS571s5",
+          "label": "Constitutional and Civil Rights Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Rights that protect individuals' freedom from infringement by governments, social organizations, and private individuals."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7K5c8d5SpTPn51L6OyMKyS",
+          "label": "Substance Abuse and Drug Testing Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Drug Testing & Substance Abuse Law refers to the legal framework governing the testing of individuals for the presence of drugs and the regulation of substance "
         }
-      ]
-    },
-    {
-      "index": 13,
-      "item": "Elderly nursing home resident developed stage-4 pressure ulcers and sepsis after staff repeatedly failed to reposition him; the facility was understaffed and had multiple prior citations from state regulators.",
-      "search_terms": [
-        "elder abuse",
-        "nursing home negligence",
-        "neglect",
-        "sepsis",
-        "regulatory violation"
       ],
-      "total_candidates": 62,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
       "branches_touched": [
-        "Asset Type",
-        "Forums and Venues",
-        "Governmental Body",
-        "Location",
-        "Matter Narrative",
-        "Objectives"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/RxwfbvWrxjdHqJhrBu3RWT",
-          "label": "Elder Abuse",
-          "score": 100.0,
-          "matched_term": "elder abuse",
-          "branch": "Objectives",
-          "definition": "The mistreatment or harm inflicted upon an elderly person, which can take the form of financial exploitation or physical abuse."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RCku8MnUeFcXo6OenJPhNAh",
-          "label": "Nursing Negligence",
-          "score": 95.0,
-          "matched_term": "nursing home negligence",
-          "branch": "Objectives",
-          "definition": "Nursing Negligence refers to a breach of duty by a nurse that results in harm or injury to a patient, and is a specific type of Medical Negligence Claim."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R1E70ce4D699e90144cB32b8",
-          "label": "United States of America (Location)",
-          "score": 90.0,
-          "matched_term": "elder abuse",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RF9A23e15C1cfD0540b8Afae",
-          "label": "United States Government",
-          "score": 90.0,
-          "matched_term": "elder abuse",
-          "branch": "Governmental Body",
-          "definition": "The United States Government is a permanent and semi-permanent administrative entity of the US that oversees and administers specific governmental functions, including rulemaking and administrative fu"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R2464d5B8C6ceA7Fea9CD01a",
-          "label": "Germany",
-          "score": 90.0,
-          "matched_term": "elder abuse",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RFED426F2C97b94Fa28DA94e",
-          "label": "Delaware State Courts",
-          "score": 90.0,
-          "matched_term": "elder abuse",
-          "branch": "Forums and Venues",
-          "definition": "Delaware State Courts are the state-level judicial system in Delaware, consisting of various courts with different jurisdictions and responsibilities."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8A34a9EA5aaaD1B534BF1dd",
-          "label": "Eritrea",
-          "score": 90.0,
-          "matched_term": "elder abuse",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RBB0bdf1675535B219491726",
-          "label": "Sweden",
-          "score": 90.0,
-          "matched_term": "elder abuse",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7PX1rDXmNgCrkuDqtGGkIS",
-          "label": "Bus",
-          "score": 90.0,
-          "matched_term": "elder abuse",
-          "branch": "Asset Type",
-          "definition": "A bus is a large, motorized vehicle designed to transport multiple passengers. It is commonly used for public transportation and can vary in size and configuration, including city buses, school buses,"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8mmaJHaK9fyr6FuVUq7VMJ",
-          "label": "Physical Elder Abuse",
-          "score": 90.0,
-          "matched_term": "elder abuse",
-          "branch": "Objectives",
-          "definition": "Physical Elder Abuse: The intentional use of force against an elderly person that results in physical pain, injury, or impairment."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7ueaoXfaJI7dcYi5MFDcRX",
-          "label": "Financial Elder Abuse",
-          "score": 90.0,
-          "matched_term": "elder abuse",
-          "branch": "Objectives",
-          "definition": "The unlawful or unethical exploitation of an elderly person's financial resources, assets, or property by a perpetrator who has a relationship of trust or authority with the victim."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7epmapi47puE4YCEXJUREa",
-          "label": "Generic Matter Narrative",
-          "score": 90.0,
-          "matched_term": "nursing home negligence",
-          "branch": "Matter Narrative",
-          "definition": "A generic version of a matter narrative. Usually used to further describe a category of matters."
-        }
+        "Actor / Player",
+        "Area of Law",
+        "Standards Compatibility"
       ]
     },
     {
-      "index": 14,
-      "item": "Children's playground equipment manufactured by defendant collapsed mid-use, injuring three minors and causing one to suffer a skull fracture; expert review suggests inadequate weld inspection during production.",
-      "search_terms": [
-        "product liability",
-        "design defect",
-        "child injury",
-        "manufacturer negligence",
-        "skull fracture"
+      "index": 16,
+      "item": "Defamation Law",
+      "level": "leaf",
+      "total_candidates": 20,
+      "relevant_candidates": 7,
+      "high_score_relevant": 2,
+      "top_relevant": [
+        {
+          "iri": "https://folio.openlegalstandard.org/RCL9tL1XOTncmAJsSYApAw",
+          "label": "Defamation Law",
+          "score": 100.0,
+          "branch": "Area of Law",
+          "definition": "The action of damaging the good reputation of someone; slander or libel."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7JKVOM2aFkvG1yiLzF7ndA",
+          "label": "Defamation",
+          "score": 95.0,
+          "branch": "Objectives",
+          "definition": "Defamation is a civil claim and tort claim that involves the communication of a false statement that harms the reputation of an individual or entity."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R71cU5SDq2qrLUzt28qZEGO",
+          "label": "Reduction in Force Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Reduction in Force (RIF) law pertains to the legal framework and regulations governing the process of reducing an organization's workforce, typically due to bud"
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R79WNFd9w49QaDgGyJg4j6k",
+          "label": "Indigenous People's Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Legal procedures and regulations specific to indigenous peoples' rights."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7KYATnZcNxJsZ1MQBADZ0x",
+          "label": "Water Resources and Wetlands Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Laws governing the ownership and use of water resources, including surface water and groundwater, oceans and seas."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R07tQM5sYugYGBPQS571s5",
+          "label": "Constitutional and Civil Rights Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Rights that protect individuals' freedom from infringement by governments, social organizations, and private individuals."
+        },
+        {
+          "iri": "https://folio.openlegalstandard.org/R7K5c8d5SpTPn51L6OyMKyS",
+          "label": "Substance Abuse and Drug Testing Law",
+          "score": 85.5,
+          "branch": "Area of Law",
+          "definition": "Drug Testing & Substance Abuse Law refers to the legal framework governing the testing of individuals for the presence of drugs and the regulation of substance "
+        }
       ],
-      "total_candidates": 56,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
       "branches_touched": [
         "Area of Law",
-        "Governmental Body",
-        "Location",
-        "Objectives",
-        "Standards Compatibility"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/RBId9f3jW4zEqooPvShqi6Q",
-          "label": "Product Liability Law",
-          "score": 100.0,
-          "matched_term": "product liability",
-          "branch": "Area of Law",
-          "definition": "Law relating to liability for injuries caused by defective or unsafe products."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7TUl56ig2yKtcpa1sarAdH",
-          "label": "Design Defect",
-          "score": 100.0,
-          "matched_term": "design defect",
-          "branch": "Objectives",
-          "definition": "A design defect is a legal concept within strict product liability that refers to a flaw in the design of a product that makes it unreasonably dangerous for its intended use."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7MsH9WtTPf14W1GB1m8zrB",
-          "label": "Product Liability Claims",
-          "score": 95.0,
-          "matched_term": "product liability",
-          "branch": "Objectives",
-          "definition": "Product Liability Claims refer to civil tort claims that arise when a consumer is injured or suffers damages due to a defective or dangerous product, and seeks compensation from the manufacturer or se"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8p15egW5el3Go9V1L4obop",
-          "label": "Strict Product Liability",
-          "score": 95.0,
-          "matched_term": "product liability",
-          "branch": "Objectives",
-          "definition": "Strict Product Liability is a legal concept that holds manufacturers and sellers responsible for any harm caused by their products, regardless of fault or negligence, if the product is found to be def"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7OJrnkSsmSxdaPzTo9UIdw",
-          "label": "345 Marine Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action (Admiralty and Maritime) alleging personal injury or wrongful death from an accident involving a water vessel or harbor/dock facilities and caused by a defective product."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7REQZyOuTRSG5KrUBf05ps",
-          "label": "195 Contract Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action concerning damages caused by a defective product, not primarily involving personal injury or property damage, and based primarily on breach of contract, breach of warranty, misrepresentation, a"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R8b4GMC8FsZqXIzDy3puZ9P",
-          "label": "315 Airplane Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action alleging personal injury or death from an air crash or other occurrence involving an airplane and caused by a defective product."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R168utCHVgcH74fUtdFcEV",
-          "label": "355 Motor Vehicle Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action alleging personal injury or wrongful death involving a motor vehicle and caused by a defective product."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R88XsqAwT4bYxwSk0bLQ0Un",
-          "label": "385 Property Damage Product Liability (PACER NoS)",
-          "score": 90.0,
-          "matched_term": "product liability",
-          "branch": "Standards Compatibility",
-          "definition": "Action alleging damage to personal property caused by a defective product."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R25B7be5E4c8a07E5ba2153f",
-          "label": "Ig",
-          "score": 90.0,
-          "matched_term": "design defect",
-          "branch": "Location",
-          "definition": "A type of immunoglobulin protein found in the blood and tissues of humans and other animals, which plays a crucial role in the immune system's response to foreign substances."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R1049bd2008d246E22c5746c",
-          "label": "Slovenia",
-          "score": 90.0,
-          "matched_term": "design defect",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RF3939fC8A4b8640f4aF1c9d",
-          "label": "Smithsonian Institution",
-          "score": 90.0,
-          "matched_term": "design defect",
-          "branch": "Governmental Body",
-          "definition": "The Smithsonian Institution is a group of museums and research centers administered by the Government of the United States."
-        }
-      ]
-    },
-    {
-      "index": 15,
-      "item": "Workers at a manufacturing plant developed mesothelioma decades after asbestos exposure from gaskets supplied by a now-bankrupt subcontractor; plaintiffs are pursuing claims against the plant owner under premises and product theories.",
-      "search_terms": [
-        "asbestos",
-        "mesothelioma",
-        "toxic tort",
-        "premises liability",
-        "successor liability"
-      ],
-      "total_candidates": 52,
-      "high_confidence_count": 12,
-      "medium_confidence_count": 0,
-      "branches_touched": [
-        "Forums and Venues",
-        "Location",
-        "Objectives",
-        "Service"
-      ],
-      "top_candidates": [
-        {
-          "iri": "https://folio.openlegalstandard.org/RDSBerlLWg1ntpLqDQn1eVn",
-          "label": "Property & Premises Liability Claims",
-          "score": 95.0,
-          "matched_term": "premises liability",
-          "branch": "Objectives",
-          "definition": "Property & Premises Liability Claims refer to legal claims made against a property owner or occupier for injuries or damages suffered by individuals on their property due to unsafe or hazardous condit"
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7LI3BONqNkXbKHKa0t3jyI",
-          "label": "Bankruptcy and Financial Restructuring Practice",
-          "score": 90.0,
-          "matched_term": "asbestos",
-          "branch": "Service",
-          "definition": "Any process that involves the liquidation or restructuring a business. The process usually has several parties - debtors, creditors and buyers."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R9p98NogvwJk1MnJgYzuiZd",
-          "label": "Advisory Service",
-          "score": 90.0,
-          "matched_term": "asbestos",
-          "branch": "Service",
-          "definition": "Any process that provides advice to a single party without adversarial event."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R517b6745C54d1048032Ce08",
-          "label": "Belgium",
-          "score": 90.0,
-          "matched_term": "asbestos",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R64Cf97674c65D4278f98753",
-          "label": "Tonga",
-          "score": 90.0,
-          "matched_term": "asbestos",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R6D21960B1a8b65Aeb3F61d9",
-          "label": "Solomon Islands",
-          "score": 90.0,
-          "matched_term": "asbestos",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R7C5f715CD204F4Fc3509b8c",
-          "label": "American Samoa",
-          "score": 90.0,
-          "matched_term": "asbestos",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RCAB15957188722B6fc98458",
-          "label": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
-          "score": 90.0,
-          "matched_term": "asbestos",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R0CF62c9B7622E3Bf87FC275",
-          "label": "Est",
-          "score": 90.0,
-          "matched_term": "asbestos",
-          "branch": "Location",
-          "definition": ""
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/R5D57346D2c44EA22d6AA6f1",
-          "label": "Est",
-          "score": 90.0,
-          "matched_term": "asbestos",
-          "branch": "Location",
-          "definition": "A legal entity created by one or more individuals or organizations in Rwanda."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RC6djEalV11eTCjhI403JE9",
-          "label": "Asbestos Court",
-          "score": 90.0,
-          "matched_term": "asbestos",
-          "branch": "Forums and Venues",
-          "definition": "Asbestos Court refers to a specific court forum that has jurisdiction over cases related to asbestos-related legal disputes."
-        },
-        {
-          "iri": "https://folio.openlegalstandard.org/RCVPI1urZIhFYA7MHoDPZ8a",
-          "label": "Asbestos Claims",
-          "score": 90.0,
-          "matched_term": "asbestos",
-          "branch": "Objectives",
-          "definition": "Asbestos Claims refer to legal claims made by individuals who have suffered harm due to exposure to asbestos, seeking compensation for damages such as medical expenses, lost wages, and pain and suffer"
-        }
+        "Objectives"
       ]
     }
   ]
