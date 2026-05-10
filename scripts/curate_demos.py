@@ -165,14 +165,51 @@ def _run_pipeline(
     return r.json()
 
 
+def _run_symbolic_mapping(
+    client: httpx.Client,
+    backend: str,
+    items: list[dict[str, Any]],
+    threshold: float,
+    max_per_branch: int,
+    api_key: str | None,
+) -> dict[str, Any]:
+    """Hit /api/mapping/candidates (keyword + embedding + spaCy, no LLM stages).
+
+    Returns a dict shaped as `{"mapping": MappingResponse, "pipeline_metadata": None}`
+    so the downstream session-builder can reuse the same code path.
+    """
+    body = {
+        "items": items,
+        "threshold": threshold,
+        "max_per_branch": max_per_branch,
+        "mandatory_branches": [],
+        "llm_config": None,
+    }
+    headers = {"Content-Type": "application/json"}
+    if api_key:
+        headers["Authorization"] = f"Bearer {api_key}"
+    local_token = os.environ.get("FOLIO_MAPPER_LOCAL_TOKEN")
+    if local_token:
+        headers["X-Local-Token"] = local_token
+    r = client.post(
+        f"{backend}/api/mapping/candidates",
+        headers=headers,
+        json=body,
+        timeout=120.0,
+    )
+    if r.status_code >= 300:
+        raise RuntimeError(f"/api/mapping/candidates returned {r.status_code}: {r.text[:500]}")
+    return {"mapping": r.json(), "pipeline_metadata": None}
+
+
 # --- SessionFile construction ---------------------------------------------
 
 def _build_session_file(
     input_doc: dict[str, Any],
     parse_result: dict[str, Any],
     pipeline_response: dict[str, Any],
-    provider: str,
-    model: str,
+    provider: str | None,
+    model: str | None,
     threshold: float,
 ) -> dict[str, Any]:
     """Construct a SessionFile-shaped dict + snapshot fields.
@@ -183,16 +220,23 @@ def _build_session_file(
     Crucially, no api_key field is ever included.
     """
     mapping = pipeline_response.get("mapping", {})
-    pipeline_metadata = pipeline_response.get("pipeline_metadata", [])
-    results = mapping.get("results", [])
+    pipeline_metadata = pipeline_response.get("pipeline_metadata")
+    item_results = mapping.get("items", [])
 
     # Auto-accept the top-scored candidate per item iff score ≥ threshold * 100.
+    # MappingResponse has items[].branch_groups[].candidates[]; the "top" candidate is
+    # the highest-scoring across all branch groups for that item.
     selections: dict[int, list[str]] = {}
     node_statuses: dict[int, str] = {}
-    for idx, item_result in enumerate(results):
-        candidates = item_result.get("candidates", []) or []
-        if candidates and candidates[0].get("score", 0) >= threshold * 100:
-            selections[idx] = [candidates[0]["iri_hash"]]
+    for idx, item_result in enumerate(item_results):
+        all_candidates = [
+            c
+            for bg in (item_result.get("branch_groups") or [])
+            for c in (bg.get("candidates") or [])
+        ]
+        all_candidates.sort(key=lambda c: c.get("score", 0), reverse=True)
+        if all_candidates and all_candidates[0].get("score", 0) >= threshold * 100:
+            selections[idx] = [all_candidates[0]["iri_hash"]]
             node_statuses[idx] = "completed"
         else:
             selections[idx] = []
@@ -245,8 +289,11 @@ def _build_session_file(
 
 def _fanout_histogram(mapping: dict[str, Any]) -> dict[str, int]:
     buckets = collections.Counter()
-    for r in mapping.get("results", []):
-        n = len(r.get("candidates", []) or [])
+    for item in mapping.get("items", []):
+        n = sum(
+            len(bg.get("candidates") or [])
+            for bg in (item.get("branch_groups") or [])
+        )
         if n == 0:
             buckets["0"] += 1
         elif n == 1:
@@ -280,11 +327,21 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
     )
     p.add_argument(
         "--provider",
-        required=True,
         choices=sorted(PROVIDER_ENV_VARS.keys()),
-        help="LLM provider; selects the API key env var (e.g. ANTHROPIC_API_KEY)",
+        default=None,
+        help="LLM provider; selects the API key env var (e.g. ANTHROPIC_API_KEY). Required unless --no-llm.",
     )
     p.add_argument("--model", default=None, help="Override the default model for this provider")
+    p.add_argument(
+        "--no-llm",
+        action="store_true",
+        help=(
+            "Skip the LLM pipeline (Stages 0/2/3) and curate via the symbolic "
+            "/api/mapping/candidates endpoint instead. No API key required. "
+            "Results include keyword + embedding + spaCy candidates; "
+            "pipeline_metadata in the output is null."
+        ),
+    )
     p.add_argument("--backend", default="http://127.0.0.1:58000", help="Backend base URL")
     p.add_argument("--threshold", type=float, default=0.3, help="Pipeline score threshold (0-1)")
     p.add_argument("--max-per-branch", type=int, default=10, help="Max candidates per FOLIO branch")
@@ -316,43 +373,65 @@ def main(argv: list[str]) -> int:
         print(f"ERROR: input file is not valid JSON: {e}", file=sys.stderr)
         return 2
 
-    # Resolve API key
-    env_var = PROVIDER_ENV_VARS[args.provider]
-    api_key = os.environ.get(env_var, "").strip()
-    if not api_key:
-        print(
-            f"ERROR: missing {env_var}. Export it before running. "
-            f"For other providers, use --provider {{openai,google}}.",
-            file=sys.stderr,
-        )
-        return 2
+    # Resolve provider / API key
+    if args.no_llm:
+        provider_label = "symbolic"
+        model_label = "no-llm (mapping/candidates)"
+        api_key: str | None = None
+    else:
+        if not args.provider:
+            print("ERROR: --provider is required unless --no-llm is set.", file=sys.stderr)
+            return 2
+        env_var = PROVIDER_ENV_VARS[args.provider]
+        api_key = os.environ.get(env_var, "").strip() or None
+        if not api_key:
+            print(
+                f"ERROR: missing {env_var}. Export it before running. "
+                f"For other providers, use --provider {{openai,google}} or pass --no-llm.",
+                file=sys.stderr,
+            )
+            return 2
+        provider_label = args.provider
+        model_label = args.model or DEFAULT_MODELS[args.provider]
 
-    model = args.model or DEFAULT_MODELS[args.provider]
     output_path = args.output_dir / f"{args.area}.demo.json"
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"→ Curating '{args.area}' via {args.provider}/{model}", file=sys.stderr)
+    print(f"→ Curating '{args.area}' via {provider_label}/{model_label}", file=sys.stderr)
     print(f"  Backend:    {args.backend}", file=sys.stderr)
     print(f"  Threshold:  {args.threshold}  Max/branch: {args.max_per_branch}", file=sys.stderr)
 
     try:
         with httpx.Client() as client:
-            parse_result = _parse_text(client, args.backend, input_doc["text"], api_key)
+            # /api/parse/text doesn't require auth, but pass the bearer if we have one.
+            parse_result = _parse_text(
+                client, args.backend, input_doc["text"], api_key or "no-llm"
+            )
             items = parse_result.get("items", [])
             if not items:
                 print("ERROR: backend /api/parse/text returned no items", file=sys.stderr)
                 return 1
 
-            pipeline_response = _run_pipeline(
-                client,
-                args.backend,
-                items,
-                args.provider,
-                model,
-                api_key,
-                args.threshold,
-                args.max_per_branch,
-            )
+            if args.no_llm:
+                pipeline_response = _run_symbolic_mapping(
+                    client,
+                    args.backend,
+                    items,
+                    args.threshold,
+                    args.max_per_branch,
+                    api_key,
+                )
+            else:
+                pipeline_response = _run_pipeline(
+                    client,
+                    args.backend,
+                    items,
+                    args.provider,
+                    model_label,
+                    api_key or "",
+                    args.threshold,
+                    args.max_per_branch,
+                )
     except httpx.HTTPError as e:
         print(f"ERROR: backend request failed: {e}", file=sys.stderr)
         return 1
@@ -364,8 +443,8 @@ def main(argv: list[str]) -> int:
         input_doc=input_doc,
         parse_result=parse_result,
         pipeline_response=pipeline_response,
-        provider=args.provider,
-        model=model,
+        provider=None if args.no_llm else args.provider,
+        model=None if args.no_llm else model_label,
         threshold=args.threshold,
     )
 
