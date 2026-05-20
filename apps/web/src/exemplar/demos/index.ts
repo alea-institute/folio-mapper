@@ -38,6 +38,37 @@ export const DEMO_AVAILABLE_SLUGS: ReadonlySet<string> = new Set(Object.keys(DEM
 export const RUNTIME_PIPELINE_VERSION: string =
   typeof __APP_VERSION__ === 'string' ? __APP_VERSION__ : 'unknown';
 
+export interface VersionVector {
+  payloadPipelineVersion: string | null;
+  payloadFolioVersion: string | null;
+  runtimePipelineVersion: string | null;
+  runtimeFolioVersion: string | null;
+}
+
+/**
+ * Pure version-drift detector. Returns the input vector unchanged when any
+ * comparable pair of versions disagrees, or null when nothing is comparable
+ * or everything matches. Inputs that are null on either side are treated as
+ * "cannot determine" — we never fire the banner on missing data.
+ */
+export function detectStalePreset(args: VersionVector): VersionVector | null {
+  const {
+    payloadPipelineVersion,
+    payloadFolioVersion,
+    runtimePipelineVersion,
+    runtimeFolioVersion,
+  } = args;
+  const pipelineStale =
+    payloadPipelineVersion !== null &&
+    runtimePipelineVersion !== null &&
+    payloadPipelineVersion !== runtimePipelineVersion;
+  const folioStale =
+    payloadFolioVersion !== null &&
+    runtimeFolioVersion !== null &&
+    payloadFolioVersion !== runtimeFolioVersion;
+  return pipelineStale || folioStale ? args : null;
+}
+
 /**
  * Best-effort runtime FOLIO version probe. The backend does not currently
  * expose owl_version, so this resolves to null and the staleness check skips

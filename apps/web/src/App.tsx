@@ -39,6 +39,7 @@ import {
   getDemoPayload,
   RUNTIME_PIPELINE_VERSION,
   fetchRuntimeFolioVersion,
+  detectStalePreset,
 } from './exemplar/demos';
 import { loadSessionFromObject } from './hooks/useSession';
 import { useFileUpload } from './hooks/useFileUpload';
@@ -546,22 +547,14 @@ export function App() {
           if (!session) {
             setError('Demo payload failed validation. Falling back to lean exemplar.');
           } else {
-            const payloadPipeline = (payload.pipeline_version as string | undefined) ?? null;
-            const payloadFolio = (payload.folio_version as string | undefined) ?? null;
             const runtimeFolio = await fetchRuntimeFolioVersion();
-            const stale =
-              (payloadPipeline !== null && payloadPipeline !== RUNTIME_PIPELINE_VERSION) ||
-              (payloadFolio !== null && runtimeFolio !== null && payloadFolio !== runtimeFolio);
-            if (stale) {
-              setStalePresetWarning({
-                payloadPipelineVersion: payloadPipeline,
-                payloadFolioVersion: payloadFolio,
-                runtimePipelineVersion: RUNTIME_PIPELINE_VERSION,
-                runtimeFolioVersion: runtimeFolio,
-              });
-            } else {
-              setStalePresetWarning(null);
-            }
+            const warning = detectStalePreset({
+              payloadPipelineVersion: (payload.pipeline_version as string | undefined) ?? null,
+              payloadFolioVersion: (payload.folio_version as string | undefined) ?? null,
+              runtimePipelineVersion: RUNTIME_PIPELINE_VERSION,
+              runtimeFolioVersion: runtimeFolio,
+            });
+            setStalePresetWarning(warning);
             return;
           }
         } finally {
