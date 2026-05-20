@@ -3,7 +3,7 @@ import { useDemoStore } from './demo-store';
 
 describe('demo-store', () => {
   beforeEach(() => {
-    useDemoStore.setState({ exemplarMode: 'lean' });
+    useDemoStore.setState({ exemplarMode: 'lean', stalePresetWarning: null });
   });
 
   it('defaults to lean', () => {
@@ -32,6 +32,57 @@ describe('demo-store', () => {
     // Idempotent: setting same value should not error
     setExemplarMode('lean');
     expect(useDemoStore.getState().exemplarMode).toBe('lean');
+  });
+
+  it('setStalePresetWarning stores the warning', () => {
+    useDemoStore.getState().setStalePresetWarning({
+      payloadPipelineVersion: '0.9.0',
+      payloadFolioVersion: '0.2.0',
+      runtimePipelineVersion: '0.9.2',
+      runtimeFolioVersion: '0.2.1',
+    });
+    expect(useDemoStore.getState().stalePresetWarning).toEqual({
+      payloadPipelineVersion: '0.9.0',
+      payloadFolioVersion: '0.2.0',
+      runtimePipelineVersion: '0.9.2',
+      runtimeFolioVersion: '0.2.1',
+    });
+  });
+
+  it('dismissStalePresetWarning clears it', () => {
+    useDemoStore.getState().setStalePresetWarning({
+      payloadPipelineVersion: '0.9.0',
+      payloadFolioVersion: null,
+      runtimePipelineVersion: '0.9.2',
+      runtimeFolioVersion: null,
+    });
+    useDemoStore.getState().dismissStalePresetWarning();
+    expect(useDemoStore.getState().stalePresetWarning).toBeNull();
+  });
+
+  it('toggling back to lean clears any warning', () => {
+    useDemoStore.setState({ exemplarMode: 'demo' });
+    useDemoStore.getState().setStalePresetWarning({
+      payloadPipelineVersion: '0.9.0',
+      payloadFolioVersion: null,
+      runtimePipelineVersion: '0.9.2',
+      runtimeFolioVersion: null,
+    });
+    useDemoStore.getState().toggleExemplarMode();
+    expect(useDemoStore.getState().exemplarMode).toBe('lean');
+    expect(useDemoStore.getState().stalePresetWarning).toBeNull();
+  });
+
+  it('setExemplarMode lean clears any warning', () => {
+    useDemoStore.setState({ exemplarMode: 'demo' });
+    useDemoStore.getState().setStalePresetWarning({
+      payloadPipelineVersion: '0.9.0',
+      payloadFolioVersion: null,
+      runtimePipelineVersion: '0.9.2',
+      runtimeFolioVersion: null,
+    });
+    useDemoStore.getState().setExemplarMode('lean');
+    expect(useDemoStore.getState().stalePresetWarning).toBeNull();
   });
 
   it('does NOT write to localStorage when toggled', () => {

@@ -5,6 +5,8 @@ export { BranchOptionsPanel } from './components/input/BranchOptionsPanel';
 export { SyntheticDataPanel } from './components/input/SyntheticDataPanel';
 export { ExemplarPanel } from './components/input/ExemplarPanel';
 export type { ExemplarPanelProps } from './components/input/ExemplarPanel';
+export { StalePresetBanner } from './components/input/StalePresetBanner';
+export type { StalePresetBannerProps } from './components/input/StalePresetBanner';
 export { ModelChooser } from './components/input/ModelChooser';
 export { FlatConfirmation } from './components/confirmation/FlatConfirmation';
 export { HierarchyConfirmation } from './components/confirmation/HierarchyConfirmation';
