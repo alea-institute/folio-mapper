@@ -27,3 +27,32 @@ export function getDemoPayload(slug: string): DemoPayload | null {
 
 /** Slugs for which a demo payload is bundled. Use to gate the Demo button per card. */
 export const DEMO_AVAILABLE_SLUGS: ReadonlySet<string> = new Set(Object.keys(DEMO_PAYLOADS));
+
+/**
+ * Runtime app version, baked in via Vite `define: __APP_VERSION__` from
+ * apps/desktop/package.json (the project's source-of-truth version per
+ * MEMORY.md). Compared against a demo payload's `pipeline_version` to detect
+ * drift. Falls back to 'unknown' if the define is missing (e.g. running under
+ * vitest without the define).
+ */
+export const RUNTIME_PIPELINE_VERSION: string =
+  typeof __APP_VERSION__ === 'string' ? __APP_VERSION__ : 'unknown';
+
+/**
+ * Best-effort runtime FOLIO version probe. The backend does not currently
+ * expose owl_version, so this resolves to null and the staleness check skips
+ * the FOLIO comparison (banner still fires on pipeline-version mismatch).
+ * Kept as an async helper so a future backend endpoint can plug in here
+ * without changing callers.
+ */
+export async function fetchRuntimeFolioVersion(): Promise<string | null> {
+  try {
+    const res = await fetch('/api/embedding/status');
+    if (!res.ok) return null;
+    const json = (await res.json()) as Record<string, unknown>;
+    const v = json.folio_version;
+    return typeof v === 'string' ? v : null;
+  } catch {
+    return null;
+  }
+}
