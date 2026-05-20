@@ -8,6 +8,48 @@ import { useLLMStore } from '../store/llm-store';
 const MAPPING_STORAGE_KEY = 'folio-mapper-session-mapping';
 const INPUT_STORAGE_KEY = 'folio-mapper-session-input';
 
+/**
+ * Hydrate input + mapping stores from a pre-parsed session object.
+ *
+ * Used by both the file-based session loader (drag-drop / file picker) and the
+ * Demo Mode payload loader (Plan 02-03), so the two paths share validation +
+ * store-hydration semantics.
+ *
+ * Returns the validated `SessionFile` on success, or `null` if `validateSession`
+ * rejects. Caller is responsible for surfacing an error to the user on null.
+ */
+export function loadSessionFromObject(data: unknown): SessionFile | null {
+  const session = validateSession(data);
+  if (!session) return null;
+
+  const inputStore = useInputStore.getState();
+  if (session.text_input) inputStore.setTextInput(session.text_input);
+  if (session.parse_result) inputStore.setParseResult(session.parse_result);
+  if (session.screen) inputStore.setScreen(session.screen);
+
+  const mappingStore = useMappingStore.getState();
+  if (session.mapping_response) {
+    mappingStore.setMappingResponse(session.mapping_response);
+
+    useMappingStore.setState({
+      currentItemIndex: session.current_position,
+      selections: session.selections ?? {},
+      nodeStatuses: session.node_statuses ?? {},
+      notes: session.notes ?? {},
+      branchStates: session.branch_states ?? {},
+      inputBranchStates: session.input_branch_states ?? {},
+      branchSortMode: session.branch_sort_mode ?? 'default',
+      customBranchOrder: session.custom_branch_order ?? [],
+      statusFilter: session.status_filter ?? 'all',
+      pipelineMetadata: session.pipeline_metadata ?? null,
+      suggestionQueue: session.suggestion_queue ?? [],
+      reviewQueue: session.review_queue ?? [],
+    });
+  }
+
+  return session;
+}
+
 export function useSession() {
   const [showRecoveryModal, setShowRecoveryModal] = useState(false);
   const [showNewProjectModal, setShowNewProjectModal] = useState(false);
@@ -185,37 +227,9 @@ export function useSession() {
     try {
       const text = await file.text();
       const data = JSON.parse(text);
-      const session = validateSession(data);
+      const session = loadSessionFromObject(data);
       if (!session) {
         throw new Error('Invalid session file format');
-      }
-
-      // Hydrate input store
-      const inputStore = useInputStore.getState();
-      if (session.text_input) inputStore.setTextInput(session.text_input);
-      if (session.parse_result) inputStore.setParseResult(session.parse_result);
-      if (session.screen) inputStore.setScreen(session.screen);
-
-      // Hydrate mapping store
-      const mappingStore = useMappingStore.getState();
-      if (session.mapping_response) {
-        mappingStore.setMappingResponse(session.mapping_response);
-
-        // Restore user progress via direct set
-        useMappingStore.setState({
-          currentItemIndex: session.current_position,
-          selections: session.selections ?? {},
-          nodeStatuses: session.node_statuses ?? {},
-          notes: session.notes ?? {},
-          branchStates: session.branch_states ?? {},
-          inputBranchStates: session.input_branch_states ?? {},
-          branchSortMode: session.branch_sort_mode ?? 'default',
-          customBranchOrder: session.custom_branch_order ?? [],
-          statusFilter: session.status_filter ?? 'all',
-          pipelineMetadata: session.pipeline_metadata ?? null,
-          suggestionQueue: session.suggestion_queue ?? [],
-          reviewQueue: session.review_queue ?? [],
-        });
       }
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'Failed to load session file';
@@ -237,6 +251,7 @@ export function useSession() {
     handleDiscardAndNew,
     handleCancelNewProject,
     handleLoadSessionFile,
+    loadSessionFromObject,
     downloadSession,
 
     // Recovery modal data
