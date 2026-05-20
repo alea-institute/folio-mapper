@@ -567,6 +567,10 @@ The ontology is loaded via [folio-python](https://github.com/alea-institute/foli
 5. Commit and push
 6. Open a pull request
 
+### Internal docs
+
+- [Curating demo payloads](docs/curating-demo-payloads.md) — operator workflow for regenerating the bundled `Demo Mode` session JSONs under `apps/web/src/exemplar/demos/`.
+
 ---
 
 ## License
