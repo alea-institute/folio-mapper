@@ -29,10 +29,19 @@ import {
   ExemplarPanel,
   PassphraseModal,
   FolioUpdateModal,
+  StalePresetBanner,
 } from '@folio-mapper/ui';
 import { useInputStore } from './store/input-store';
 import { useMappingStore } from './store/mapping-store';
 import { useLLMStore } from './store/llm-store';
+import { useDemoStore } from './store/demo-store';
+import {
+  getDemoPayload,
+  RUNTIME_PIPELINE_VERSION,
+  fetchRuntimeFolioVersion,
+  detectStalePreset,
+} from './exemplar/demos';
+import { loadSessionFromObject } from './hooks/useSession';
 import { useFileUpload } from './hooks/useFileUpload';
 import { useTextDetection } from './hooks/useTextDetection';
 import { useFolioWarmup } from './hooks/useFolioWarmup';
@@ -80,6 +89,11 @@ export function App() {
 
   const mappingState = useMappingStore();
   const llmState = useLLMStore();
+  const exemplarMode = useDemoStore((s) => s.exemplarMode);
+  const toggleExemplarMode = useDemoStore((s) => s.toggleExemplarMode);
+  const stalePresetWarning = useDemoStore((s) => s.stalePresetWarning);
+  const setStalePresetWarning = useDemoStore((s) => s.setStalePresetWarning);
+  const dismissStalePresetWarning = useDemoStore((s) => s.dismissStalePresetWarning);
   const { upload } = useFileUpload();
   const { itemCount, isTabular } = useTextDetection(textInput);
   const { loadCandidates, loadPipelineCandidates, loadMandatoryFallback, searchCandidates, cancelBatchLoading } = useMapping();
@@ -523,6 +537,33 @@ export function App() {
   const handleExemplarSelect = async (id: string) => {
     const exemplar = EXEMPLARS.find((e) => e.id === id);
     if (!exemplar) return;
+
+    if (exemplarMode === 'demo') {
+      const payload = getDemoPayload(id);
+      if (payload) {
+        setLoadingExemplarId(id);
+        try {
+          const session = loadSessionFromObject(payload);
+          if (!session) {
+            setError('Demo payload failed validation. Falling back to lean exemplar.');
+          } else {
+            const runtimeFolio = await fetchRuntimeFolioVersion();
+            const warning = detectStalePreset({
+              payloadPipelineVersion: (payload.pipeline_version as string | undefined) ?? null,
+              payloadFolioVersion: (payload.folio_version as string | undefined) ?? null,
+              runtimePipelineVersion: RUNTIME_PIPELINE_VERSION,
+              runtimeFolioVersion: runtimeFolio,
+            });
+            setStalePresetWarning(warning);
+            return;
+          }
+        } finally {
+          setLoadingExemplarId(null);
+        }
+      }
+      // No bundled payload for this slug → fall through to lean behavior.
+    }
+
     setLoadingExemplarId(id);
     setLoading(true);
     setTextInput(exemplar.text);
@@ -709,6 +750,15 @@ export function App() {
               ×
             </button>
           </div>
+        )}
+        {stalePresetWarning && (
+          <StalePresetBanner
+            payloadPipelineVersion={stalePresetWarning.payloadPipelineVersion}
+            payloadFolioVersion={stalePresetWarning.payloadFolioVersion}
+            runtimePipelineVersion={stalePresetWarning.runtimePipelineVersion}
+            runtimeFolioVersion={stalePresetWarning.runtimeFolioVersion}
+            onDismiss={dismissStalePresetWarning}
+          />
         )}
         {settingsModal}
         {showFolioModal && owlUpdateRaw && (
@@ -962,6 +1012,8 @@ export function App() {
               isLoading={loadingExemplarId !== null}
               loadingId={loadingExemplarId}
               onSelect={handleExemplarSelect}
+              exemplarMode={exemplarMode}
+              onToggleMode={toggleExemplarMode}
             />
           }
           syntheticDataPanel={

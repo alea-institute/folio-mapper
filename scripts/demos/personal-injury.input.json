@@ -1,0 +1,8 @@
+{
+  "slug": "personal-injury",
+  "label": "Personal Injury Plaintiff",
+  "text": "Personal Injury\n\tMotor Vehicle Accidents\n\t\tMotor Vehicle Law\n\t\tAccident Benefits Law\n\t\tInsurance Bad Faith\n\tPremises Liability\n\t\tSlip-and-Fall Negligence\n\t\tDog Bite\n\tMedical Malpractice\n\t\tMedical Malpractice\n\t\tWrongful Death Claim\n\t\tLoss of Consortium\n\tProduct Liability\n\t\tProduct Liability Law\n\t\tDefective Product Claims\n\tMass Torts & Defamation\n\t\tMass Torts Law\n\t\tDefamation Law\n\t\tClass Action",
+  "enrichments": ["Insurance Bad Faith", "Loss of Consortium", "Class Action"],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#personal-injury",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

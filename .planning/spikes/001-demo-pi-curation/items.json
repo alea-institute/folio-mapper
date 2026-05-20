@@ -1,0 +1,41 @@
+{
+  "practice_area": "personal-injury",
+  "approach": "Existing lean exemplar text verbatim from packages/core/src/exemplar/data.ts. Each line of the hierarchy becomes a separate pipeline item. The root + branch labels are deliberately broader to elicit multi-concept fan-out; the leaf labels are precise FOLIO concepts tuned for 1:1.",
+  "source": "packages/core/src/exemplar/data.ts (id: personal-injury)",
+  "items": [
+    "Personal Injury",
+    "Motor Vehicle Accidents",
+    "Motor Vehicle Law",
+    "Accident Benefits Law",
+    "Premises Liability",
+    "Slip-and-Fall Negligence",
+    "Dog Bite",
+    "Medical Malpractice",
+    "Medical Malpractice",
+    "Wrongful Death Claim",
+    "Product Liability",
+    "Product Liability Law",
+    "Defective Product Claims",
+    "Mass Torts & Defamation",
+    "Mass Torts Law",
+    "Defamation Law"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}
