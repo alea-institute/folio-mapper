@@ -34,6 +34,7 @@ This **replaces** folio-mapper's existing in-place "New Project" reset (and its 
 - **D-07b:** The **session picker** still ships, but as an **on-demand affordance** reachable from the header (e.g., an "Open recent / Switch session" control near the "New" button). It lists all saved sessions with metadata (created date, progress, item counts) → **Resume / Start New / Delete** per entry. It is NOT a forced gate on app load.
 - **D-08:** A **refresh within an existing tab** recovers that tab's own session directly (via its `sessionStorage` tab identity).
 - **D-13:** **Persistence survives full browser close/reboot.** Session data lives in `localStorage` (not `sessionStorage`), so a complete browser shutdown and reboot does not lose mapped work; on next visit to the page (e.g., `mapper.openlegalstandard.org`) the most-recent session is auto-restored per D-07. (`sessionStorage` is used only for the per-tab *identity* pointer, which is intentionally allowed to die on tab/browser close — falling back to D-07 most-recent auto-resume.)
+- **D-14:** **"Most-recent" = last-modified.** Auto-resume (D-07) ranks sessions by **last-modified** time, not last-opened — the session the user most recently *worked in* wins, even if they later peeked at another. Each session record stores an `updatedAt` timestamp, bumped on any state mutation; the same metric drives the LRU eviction in D-09 and the picker's default sort order.
 
 ### Cleanup / Lifecycle
 - **D-09:** Cap stored sessions at **~5** (LRU): when exceeded, evict the **least-recently-active** session. Keeps the localStorage footprint predictable and the picker manageable. (folio-mapper sessions are large — candidate lists, judge annotations — against a ~5–10 MB localStorage budget.)
@@ -50,7 +51,6 @@ This **replaces** folio-mapper's existing in-place "New Project" reset (and its 
 - Session picker visual design (modal vs full-screen) — should reuse existing modal patterns (`SessionRecoveryModal`) for consistency.
 - The on-demand entry point for the session picker (D-07b) — dropdown near "New", a "Recent sessions" header control, etc.
 - Where/how the always-visible "New" button mounts on input/confirming screens (shared mini-header vs adding to each layout).
-- "Most-recently-active" tiebreak metric for auto-resume (last-modified timestamp vs last-opened timestamp) — track an `updatedAt`/`lastOpenedAt` per session.
 - The existing startup `SessionRecoveryModal` is **replaced** by silent auto-restore (D-07) plus the on-demand picker (D-07b); it no longer gates app load.
 
 </decisions>
