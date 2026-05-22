@@ -1,7 +1,11 @@
 # Stage 1: Build the frontend
-FROM node:20-slim AS frontend-builder
+# Node 22 (>= 22.13) is required by pnpm 10+/11 (pnpm 11 imports node:sqlite, absent in Node 20).
+FROM node:22-slim AS frontend-builder
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
+# Pin pnpm to the version that produced pnpm-lock.yaml (lockfileVersion 9.0) so
+# `--frozen-lockfile` stays deterministic and never silently jumps to a pnpm that
+# needs a newer Node than this base image (the cause of the April–May build failures).
+RUN corepack enable && corepack prepare pnpm@10.28.2 --activate
 
 WORKDIR /app
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml tsconfig.base.json ./
@@ -14,6 +18,10 @@ RUN pnpm install --frozen-lockfile
 
 COPY packages/ packages/
 COPY apps/web/ apps/web/
+# apps/web/vite.config.ts reads the app version from apps/desktop/package.json
+# (version source of truth) to bake in __APP_VERSION__. Copy just that file so the
+# frontend build does not need the full desktop app in the image.
+COPY apps/desktop/package.json apps/desktop/
 
 RUN pnpm --filter @folio-mapper/web build
 

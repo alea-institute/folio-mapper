@@ -6,6 +6,9 @@ node_modules
 **/*.egg-info
 .git
 apps/desktop
+# Allow just the version manifest through — apps/web/vite.config.ts reads it to
+# bake in __APP_VERSION__ (the heavy Electron app itself stays excluded).
+!apps/desktop/package.json
 backend/tests
 backend/folio_mapper_backend.egg-info
 *.md
