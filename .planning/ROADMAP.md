@@ -12,6 +12,7 @@ FOLIO Mapper helps legal practitioners and ontologists map their concept lists, 
 
 - [x] **Phase 1: Revamp Exemplars** - Replace generic exemplars with 10 high-precision practice areas with 100% FOLIO hit rate
 - [ ] **Phase 2: Demo Mode** - Add a Demo button that flips exemplar cards from lean precision-tuned payloads to rich pre-cached session payloads showcasing the curation workflow
+- [ ] **Phase 3: New (Fresh Session in New Tab)** - Replace the in-place "New Project" reset with a folio-enrich-style "New" button that opens a fresh tab; make session persistence per-tab with a session picker for recovery
 
 ## Phase Details
 
@@ -51,6 +52,29 @@ Plans:
 - [ ] 02-02-PLAN.md — Curation script (scripts/curate_demos.py) + PI demo payload + static manifest
 - [ ] 02-03-PLAN.md — Wire demo-mode click to load bundled JSON via Stage 7A path; stale-version banner
 - [ ] 02-04-PLAN.md — Round-trip + zero-network tests; operator curation doc
+
+### Phase 3: New (Fresh Session in New Tab)
+
+**Goal**: Replicate the folio-enrich "New" button — a header button that opens a fresh browser tab with a brand-new empty session, leaving the current tab and its work intact. This replaces folio-mapper's existing in-place "New Project" reset. To make multi-tab safe, session persistence becomes per-tab namespaced (today it's a single shared localStorage session), and recovery on a fresh tab is handled by a new session picker.
+
+**Depends on**: Stage 7A session persistence (complete) — this phase reworks its storage layer.
+
+**Canonical refs**: `.planning/phases/03-new-session/03-CONTEXT.md`
+
+**Success Criteria**:
+1. A "New" button (always visible on input/confirming/mapping screens) opens a fresh tab via `?new=1`; current tab untouched, no confirmation prompt
+2. Session persistence is per-tab namespaced — no tab can clobber another tab's saved work
+3. Opening a brand-new tab with no identity but with saved sessions shows a session picker (Resume / Start New / Delete per entry)
+4. A refresh within an existing tab directly recovers that tab's own session
+5. Stored sessions are capped (~5, LRU eviction) to bound localStorage footprint
+6. The old in-place reset (`NewProjectModal` popover) and the `beforeunload` warning are removed
+7. Existing single-session localStorage data migrates gracefully (no lost in-progress work on upgrade)
+
+### Out of Scope (Phase 3)
+
+- Live cross-tab sync (real-time reflection of edits between open tabs)
+- Server-side / cloud session storage
+- Session rename/labeling in the picker (deferred unless picker UX needs it)
 
 ### Open Questions (carried from `/gsd-explore`)
 
