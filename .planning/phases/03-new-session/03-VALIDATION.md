@@ -43,7 +43,7 @@ and automated command. `File Exists` = whether the test file exists today.
 
 | Decision | Behavior | Wave | Test Type | Automated Command | File Exists | Status |
 |----------|----------|------|-----------|-------------------|-------------|--------|
-| D-01 | `handleNewTab` calls `window.open` with `?new=1` and `_blank` | 1 | unit | `pnpm --filter @folio-mapper/web test --run -- tab-identity` | ❌ W0 | ⬜ pending |
+| D-01 | `handleNewTab` calls `window.open` with `?new=1` and `_blank` | 2 | unit | `pnpm --filter @folio-mapper/web test --run -- useSession` | ❌ W0 | ⬜ pending |
 | D-05 | `?new=1` in URL → new tabId in sessionStorage → param stripped via `history.replaceState` | 1 | unit | `pnpm --filter @folio-mapper/web test --run -- tab-identity` | ❌ W0 | ⬜ pending |
 | D-06 | Legacy single-session keys migrated/adopted to namespaced keys on first boot (no data loss) | 1 | unit | `pnpm --filter @folio-mapper/web test --run -- session-registry` | ❌ W0 | ⬜ pending |
 | D-07 | No tab identity + sessions in registry → auto-resume most-recently-modified, zero clicks | 1 | unit | `pnpm --filter @folio-mapper/web test --run -- session-registry` | ❌ W0 | ⬜ pending |

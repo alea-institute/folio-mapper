@@ -307,16 +307,25 @@ useEffect(() => {
     new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
   )[0];
 
-  // Wire stores to the most-recent session's keys, then rehydrate
-  const mappingKey = `folio-mapper-session-${mostRecent.tabId}-mapping`;
-  const inputKey = `folio-mapper-session-${mostRecent.tabId}-input`;
+  // Split-brain safety (see Pitfall 5): do NOT adopt the most-recent tabId.
+  // Generate a NEW identity for this tab and COPY the most-recent session's data into it,
+  // so two tabs can never share one tabId and clobber each other's writes.
+  const newTabId = crypto.randomUUID();
+  sessionStorage.setItem('folio-tab-id', newTabId);
 
+  const sourceMappingKey = `folio-mapper-session-${mostRecent.tabId}-mapping`;
+  const sourceInputKey = `folio-mapper-session-${mostRecent.tabId}-input`;
+  const mappingKey = `folio-mapper-session-${newTabId}-mapping`;
+  const inputKey = `folio-mapper-session-${newTabId}-input`;
+
+  const mappingData = localStorage.getItem(sourceMappingKey);
+  const inputData = localStorage.getItem(sourceInputKey);
+  if (mappingData) localStorage.setItem(mappingKey, mappingData);
+  if (inputData) localStorage.setItem(inputKey, inputData);
+
+  // Own the NEW namespaced keys, then rehydrate from them
   useMappingStore.persist.setOptions({ name: mappingKey });
   useInputStore.persist.setOptions({ name: inputKey });
-
-  // Adopt the most-recent session's tabId as our own tab identity
-  const adoptedId = mostRecent.tabId;
-  sessionStorage.setItem('folio-tab-id', adoptedId);
 
   void Promise.all([
     useMappingStore.persist.rehydrate(),
@@ -325,7 +334,7 @@ useEffect(() => {
 }, [rehydrated]);
 ```
 
-**Important:** The no-identity auto-resume path adopts the most-recent session's `tabId`. This means if the user later clicks "New", they get a fresh tab — and the old session's data is still under the original tabId in localStorage, available in the picker.
+**Important (see Pitfall 5):** The no-identity auto-resume path does NOT adopt the most-recent session's `tabId`. It mints a NEW `crypto.randomUUID()` tabId and copies the most-recent session's data under that new namespaced key, then owns the new key. This prevents the split-brain failure where two tabs share one tabId and overwrite each other's work. The original session's data remains under its original tabId in localStorage, still available in the picker.
 
 ### Pattern 4: Session Registry
 
@@ -626,22 +635,25 @@ The planner needs exact file+line ranges to scope deletion tasks:
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Electron desktop session semantics**
    - What we know: The project has a desktop app (`apps/desktop/`) using Electron.
    - What's unclear: Whether Electron's `sessionStorage` per-window semantics match the browser per-tab semantics assumed by this design. `sessionStorage` in Electron's renderer process does survive window refresh but dies on window close, same as browsers.
    - Recommendation: Treat as matching; flag for smoke-test during verify-work.
+   - RESOLVED: Assume Electron `sessionStorage` is browser-equivalent (per-window dies on window close); low risk, smoke-tested during verify-work.
 
 2. **Session picker entry point in the header (D-07b)**
    - What we know: It should be "near the New button", accessible from all screens.
    - What's unclear: Whether to use a clock icon, "Recent" label, or dropdown trigger.
    - Recommendation: Claude's discretion — use a small clock icon button adjacent to "New", opening a modal (same overlay pattern as `SessionRecoveryModal`). Reuse `SessionRecoveryModal`'s modal shell.
+   - RESOLVED: Picker entry point is a clock icon button positioned near the "New" button on all screens, opening the SessionPickerModal (reuses the SessionRecoveryModal shell).
 
 3. **Session size estimation for LRU cap**
    - What we know: Cap is ~5 (D-09); sessions contain candidate lists, judge annotations.
    - What's unclear: Typical serialized size of a folio-mapper session with 50-200 items.
    - Recommendation: Implement cap at 5; add a `console.warn` when approaching quota (existing QuotaExceededError handler already in place). Adjust cap in a follow-up if needed.
+   - RESOLVED: LRU cap of 5 (D-09) is the conservative choice; QuotaExceeded writes are swallowed with `console.warn` via the existing handler. Revisit the cap only if real session sizes exceed estimates.
 
 ---
 
