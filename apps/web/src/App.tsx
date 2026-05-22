@@ -20,8 +20,7 @@ import {
   ModelChooser,
   BranchOptionsPanel,
   SyntheticDataPanel,
-  SessionRecoveryModal,
-  NewProjectModal,
+  SessionPickerModal,
   ExportModal,
   ExportView,
   SuggestionEditModal,
@@ -42,6 +41,9 @@ import {
   detectStalePreset,
 } from './exemplar/demos';
 import { loadSessionFromObject } from './hooks/useSession';
+import { tabIdentity } from './store/tab-identity';
+import { readRegistry, deleteFromRegistry } from './store/session-registry';
+import type { SessionRecord } from './store/session-registry';
 import { useFileUpload } from './hooks/useFileUpload';
 import { useTextDetection } from './hooks/useTextDetection';
 import { useFolioWarmup } from './hooks/useFolioWarmup';
@@ -199,6 +201,16 @@ export function App() {
 
   // Session persistence
   const session = useSession();
+
+  // Local state for on-demand session picker list (refreshes on delete without reopening)
+  const [pickerSessions, setPickerSessions] = useState<SessionRecord[]>([]);
+
+  // Seed picker session list whenever the picker opens
+  useEffect(() => {
+    if (session.showSessionPicker) {
+      setPickerSessions(readRegistry());
+    }
+  }, [session.showSessionPicker]);
 
   // Export
   const exportState = useExport();
@@ -691,9 +703,6 @@ export function App() {
     />
   );
 
-  // Recovery modal data
-  const recoveryData = session.showRecoveryModal ? session.getRecoveryData() : null;
-
   // Mapping screen uses full-width layout (no centering/padding)
   if (screen === 'mapping') {
     return (
@@ -709,21 +718,14 @@ export function App() {
           }}
           onSaveSession={session.downloadSession}
           onOpenExport={() => exportState.setShowExportModal(true)}
-          onNewProject={session.handleNewProject}
-          hasActiveSession={session.hasActiveSession}
+          onNewTab={session.handleNewTab}
+          onOpenSessionPicker={session.handleOpenSessionPicker}
           llmStatus={llmStatus}
           llmProviderLabel={llmProviderLabel}
           embeddingStatus={embeddingStatus}
           embeddingDetail={embeddingDetail}
           folioUpdateStatus={folioUpdateStatus}
           folioUpdateDetail={folioUpdateDetail}
-          newProjectPopover={session.showNewProjectModal ? (
-            <NewProjectModal
-              onSaveAndNew={session.handleSaveAndNew}
-              onDiscardAndNew={session.handleDiscardAndNew}
-              onCancel={session.handleCancelNewProject}
-            />
-          ) : null}
         />
         {showDisconnectToast && (
           <div className="flex items-center justify-center gap-2 bg-amber-50 px-4 py-2 text-sm text-amber-800 border-b border-amber-200">
@@ -791,6 +793,19 @@ export function App() {
               setShowCreatePassphrase(false);
               pendingSaveProviderRef.current = null;
             }}
+          />
+        )}
+        {session.showSessionPicker && (
+          <SessionPickerModal
+            sessions={pickerSessions}
+            currentTabId={tabIdentity.tabId}
+            onResume={(tabId) => session.handlePickerResume(tabId)}
+            onDelete={(tabId) => {
+              deleteFromRegistry(tabId);
+              setPickerSessions(readRegistry());
+            }}
+            onStartNew={session.handleNewTab}
+            onClose={session.handleCloseSessionPicker}
           />
         )}
         {showMappingsView && mappingState.mappingResponse && (
@@ -940,7 +955,7 @@ export function App() {
   }
 
   return (
-    <AppShell onOpenSettings={() => setShowSettings(true)} onOpenFolioModal={() => setShowFolioModal(true)} llmStatus={llmStatus} llmProviderLabel={llmProviderLabel} embeddingStatus={embeddingStatus} embeddingDetail={embeddingDetail} folioUpdateStatus={folioUpdateStatus} folioUpdateDetail={folioUpdateDetail}>
+    <AppShell onOpenSettings={() => setShowSettings(true)} onOpenFolioModal={() => setShowFolioModal(true)} onNewTab={session.handleNewTab} onOpenSessionPicker={session.handleOpenSessionPicker} llmStatus={llmStatus} llmProviderLabel={llmProviderLabel} embeddingStatus={embeddingStatus} embeddingDetail={embeddingDetail} folioUpdateStatus={folioUpdateStatus} folioUpdateDetail={folioUpdateDetail}>
       {settingsModal}
       {showFolioModal && owlUpdateRaw && (
         <FolioUpdateModal
@@ -975,15 +990,17 @@ export function App() {
         />
       )}
 
-      {recoveryData && (
-        <SessionRecoveryModal
-          created={recoveryData.created}
-          totalNodes={recoveryData.totalNodes}
-          completedCount={recoveryData.completedCount}
-          skippedCount={recoveryData.skippedCount}
-          onResume={session.handleResume}
-          onStartFresh={session.handleStartFresh}
-          onDownload={session.handleDownloadSession}
+      {session.showSessionPicker && (
+        <SessionPickerModal
+          sessions={pickerSessions}
+          currentTabId={tabIdentity.tabId}
+          onResume={(tabId) => session.handlePickerResume(tabId)}
+          onDelete={(tabId) => {
+            deleteFromRegistry(tabId);
+            setPickerSessions(readRegistry());
+          }}
+          onStartNew={session.handleNewTab}
+          onClose={session.handleCloseSessionPicker}
         />
       )}
 
