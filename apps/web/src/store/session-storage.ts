@@ -5,8 +5,13 @@ const DEBOUNCE_MS = 5000;
 /**
  * A localStorage adapter that debounces writes to avoid excessive I/O
  * on rapid state changes (e.g., keystroke-level updates to selections).
+ *
+ * @param opts.onWrite - Optional callback fired AFTER localStorage.setItem succeeds,
+ *   with the key name as argument. Used by the session registry to bump updatedAt
+ *   at debounced-write time (Pitfall 3: never on in-memory store mutations).
+ *   Existing call sites (llm-store.ts) pass no args and remain unaffected.
  */
-export function createDebouncedStorage(): StateStorage {
+export function createDebouncedStorage(opts?: { onWrite?: (name: string) => void }): StateStorage {
   const timers = new Map<string, ReturnType<typeof setTimeout>>();
   const lastWritten = new Map<string, string>();
 
@@ -29,6 +34,9 @@ export function createDebouncedStorage(): StateStorage {
           try {
             localStorage.setItem(name, value);
             lastWritten.set(name, value);
+            // Fire onWrite AFTER successful setItem (Pitfall 3 guard: updatedAt
+            // is tied to "last persisted" time, not "last in-memory mutation").
+            opts?.onWrite?.(name);
           } catch (e) {
             // QuotaExceededError — silently ignore
             if (e instanceof DOMException && e.name === 'QuotaExceededError') {
