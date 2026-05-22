@@ -1,8 +1,8 @@
 ---
 phase: 03-new-session
 verified: 2026-05-22T00:00:00Z
-status: human_needed
-score: 7/8 must-haves verified
+status: passed
+score: 8/8 must-haves verified
 overrides_applied: 0
 human_verification:
   - test: "Open the app in a browser. Confirm a 'New' button (plus icon, label 'New') is visible in the header on the input screen (before any file upload)."
@@ -30,7 +30,7 @@ human_verification:
 **Phase Goal:** Replicate the folio-enrich "New" button — a header button that opens a fresh browser tab with a brand-new empty session, leaving the current tab and its work intact. This replaces folio-mapper's existing in-place "New Project" reset. To make multi-tab safe, session persistence becomes per-tab namespaced (today it is a single shared localStorage session), and recovery on a fresh tab is handled by a new session picker.
 
 **Verified:** 2026-05-22
-**Status:** human_needed
+**Status:** passed (8/8 — 6 human items verified via live browser, see 03-HUMAN-UAT.md)
 **Re-verification:** No — initial verification
 
 ---
