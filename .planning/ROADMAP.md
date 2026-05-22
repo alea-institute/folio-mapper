@@ -13,7 +13,7 @@ FOLIO Mapper helps legal practitioners and ontologists map their concept lists, 
 
 - [x] **Phase 1: Revamp Exemplars** - Replace generic exemplars with 10 high-precision practice areas with 100% FOLIO hit rate
 - [ ] **Phase 2: Demo Mode** - Add a Demo button that flips exemplar cards from lean precision-tuned payloads to rich pre-cached session payloads showcasing the curation workflow
-- [ ] **Phase 3: New (Fresh Session in New Tab)** - Replace the in-place "New Project" reset with a folio-enrich-style "New" button that opens a fresh tab; make session persistence per-tab with a session picker for recovery
+- [x] **Phase 3: New (Fresh Session in New Tab)** - Replace the in-place "New Project" reset with a folio-enrich-style "New" button that opens a fresh tab; make session persistence per-tab with a session picker for recovery (completed 2026-05-22)
 
 ## Phase Details
 
@@ -89,7 +89,7 @@ Plans:
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
-- [ ] 03-03-PLAN.md — Always-visible "New" button, on-demand SessionPickerModal, App wiring, delete NewProjectModal (D-01, D-02, D-03, D-07b, D-10, D-11)
+- [x] 03-03-PLAN.md — Always-visible "New" button, on-demand SessionPickerModal, App wiring, delete NewProjectModal (D-01, D-02, D-03, D-07b, D-10, D-11)
 
 ### Out of Scope (Phase 3)
 
