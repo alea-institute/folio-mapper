@@ -23,7 +23,13 @@ export function readRegistry(): SessionRecord[] {
   try {
     const raw = localStorage.getItem(REGISTRY_KEY);
     if (!raw) return [];
-    return JSON.parse(raw) as SessionRecord[];
+    // WR-02: validate shape — a corrupted/non-array value (object, number, or a
+    // truncated write) must not crash downstream .findIndex / .sort / registry[0].
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter(
+      (r): r is SessionRecord => r != null && typeof r.tabId === 'string',
+    );
   } catch {
     return [];
   }

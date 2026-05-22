@@ -59,10 +59,3 @@ export function createDebouncedStorage(opts?: { onWrite?: (name: string) => void
     },
   };
 }
-
-/** Flush pending writes immediately (useful before download / unload). */
-export function flushDebouncedStorage(): void {
-  // Force immediate write by reading current state from stores
-  // This is a no-op signal; the actual flush is handled by
-  // reading localStorage directly in session download
-}

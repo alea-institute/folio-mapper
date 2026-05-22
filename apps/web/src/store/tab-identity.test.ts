@@ -170,4 +170,32 @@ describe('tab-identity', () => {
     expect(mod.tabIdentity).toHaveProperty('isNewTab');
     expect(mod.tabIdentity).toHaveProperty('hasIdentity');
   });
+
+  // Key-construction helpers (IN-03) — the single source of truth that the
+  // CR-01/CR-02 registry-pointer fix derives the active tabId from.
+  describe('key helpers', () => {
+    it('mappingKeyFor / inputKeyFor build the namespaced keys', async () => {
+      const { mappingKeyFor, inputKeyFor } = await import('./tab-identity');
+      expect(mappingKeyFor('abc-123')).toBe('folio-mapper-session-abc-123-mapping');
+      expect(inputKeyFor('abc-123')).toBe('folio-mapper-session-abc-123-input');
+    });
+
+    it('tabIdFromMappingKey round-trips a real tabId (incl. UUID hyphens)', async () => {
+      const { mappingKeyFor, tabIdFromMappingKey } = await import('./tab-identity');
+      const uuid = '550e8400-e29b-41d4-a716-446655440000';
+      expect(tabIdFromMappingKey(mappingKeyFor(uuid))).toBe(uuid);
+    });
+
+    it('tabIdFromMappingKey extracts the placeholder sentinel', async () => {
+      const { MAPPING_KEY, tabIdFromMappingKey, PLACEHOLDER_TAB_ID } = await import('./tab-identity');
+      // No identity in this test → MAPPING_KEY is the placeholder key.
+      expect(tabIdFromMappingKey(MAPPING_KEY)).toBe(PLACEHOLDER_TAB_ID);
+    });
+
+    it('tabIdFromMappingKey returns null for non-mapping keys', async () => {
+      const { tabIdFromMappingKey } = await import('./tab-identity');
+      expect(tabIdFromMappingKey('folio-mapper-session-abc-input')).toBeNull();
+      expect(tabIdFromMappingKey('some-other-key')).toBeNull();
+    });
+  });
 });

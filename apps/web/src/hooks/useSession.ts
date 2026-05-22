@@ -4,8 +4,40 @@ import type { SessionFile } from '@folio-mapper/core';
 import { useInputStore } from '../store/input-store';
 import { useMappingStore } from '../store/mapping-store';
 import { useLLMStore } from '../store/llm-store';
-import { tabIdentity } from '../store/tab-identity';
+import { tabIdentity, mappingKeyFor, inputKeyFor } from '../store/tab-identity';
 import { readRegistry } from '../store/session-registry';
+
+/**
+ * Adopt an existing session into the current tab under a freshly generated tabId.
+ *
+ * Shared by the boot auto-resume effect (D-07) and picker-resume (D-07b) so the
+ * copy + re-key + rehydrate logic lives in exactly one place (WR-06). Always COPIES
+ * under a NEW tabId — never adopts the source id — so no two tabs share an id
+ * (Pitfall 5, T-03-06). Stale placeholder keys are cleared so the D-07 pre-resolve
+ * namespace never lingers as an orphaned data sink (CR-02).
+ */
+function adoptSession(srcTabId: string): void {
+  const newTabId = crypto.randomUUID();
+  sessionStorage.setItem('folio-tab-id', newTabId);
+
+  const destMapping = mappingKeyFor(newTabId);
+  const destInput = inputKeyFor(newTabId);
+  const mappingData = localStorage.getItem(mappingKeyFor(srcTabId));
+  const inputData = localStorage.getItem(inputKeyFor(srcTabId));
+  if (mappingData) localStorage.setItem(destMapping, mappingData);
+  if (inputData) localStorage.setItem(destInput, inputData);
+
+  // Clear any pre-resolve placeholder sink left from the D-07 fallback path.
+  localStorage.removeItem(mappingKeyFor('placeholder'));
+  localStorage.removeItem(inputKeyFor('placeholder'));
+
+  useMappingStore.persist.setOptions({ name: destMapping });
+  useInputStore.persist.setOptions({ name: destInput });
+  void Promise.all([
+    useMappingStore.persist.rehydrate(),
+    useInputStore.persist.rehydrate(),
+  ]);
+}
 
 /**
  * Hydrate input + mapping stores from a pre-parsed session object.
@@ -56,6 +88,14 @@ export function useSession() {
 
   // Wait for both stores to rehydrate before checking for session
   useEffect(() => {
+    // WR-04: a ?new=1 tab creates both stores with skipHydration: true, so
+    // onFinishHydration never fires. Treat skipped hydration as ready so the
+    // boot effect (and any consumer gated on `rehydrated`) is never stuck false.
+    if (tabIdentity.isNewTab) {
+      setRehydrated(true);
+      return;
+    }
+
     const unsubs: (() => void)[] = [];
     let mappingReady = false;
     let inputReady = false;
@@ -98,40 +138,19 @@ export function useSession() {
     if (tabIdentity.isNewTab) return;    // D-01: fresh ?new=1 tab, already clean
     if (tabIdentity.hasIdentity) return; // D-08: refreshed tab, already hydrated from own keys
 
-    // D-07: No identity — auto-resume most-recently-modified session
+    // D-07: No identity — auto-resume most-recently-modified session.
     const registry = readRegistry();
     if (registry.length === 0) return; // No sessions → stay fresh
 
-    // Registry is already sorted descending by updatedAt (upsertRegistry maintains order)
-    const mostRecent = registry[0];
-
-    // Pitfall 5 fix: COPY data under a freshly generated tabId — never adopt the original.
-    // This guarantees no two tabs ever share a tabId (split-brain safe, T-03-06).
-    const newTabId = crypto.randomUUID();
-    sessionStorage.setItem('folio-tab-id', newTabId);
-
-    const mappingKey = `folio-mapper-session-${newTabId}-mapping`;
-    const inputKey = `folio-mapper-session-${newTabId}-input`;
-    const srcMapping = `folio-mapper-session-${mostRecent.tabId}-mapping`;
-    const srcInput = `folio-mapper-session-${mostRecent.tabId}-input`;
-
-    const mappingData = localStorage.getItem(srcMapping);
-    const inputData = localStorage.getItem(srcInput);
-    if (mappingData) localStorage.setItem(mappingKey, mappingData);
-    if (inputData) localStorage.setItem(inputKey, inputData);
-
-    useMappingStore.persist.setOptions({ name: mappingKey });
-    useInputStore.persist.setOptions({ name: inputKey });
-    void Promise.all([
-      useMappingStore.persist.rehydrate(),
-      useInputStore.persist.rehydrate(),
-    ]);
+    // Registry is already sorted descending by updatedAt (upsertRegistry maintains order).
+    // COPY under a fresh tabId so no two tabs share an id (Pitfall 5, T-03-06).
+    adoptSession(registry[0].tabId);
   }, [rehydrated]);
 
   // Ctrl+S handler for manual save
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
         e.preventDefault();
         const { mappingResponse } = useMappingStore.getState();
         if (mappingResponse) {
@@ -225,34 +244,10 @@ export function useSession() {
   }, []);
 
   // Resume a specific session by tabId: copy its keys into the current tab's namespace,
-  // rehydrate both stores, then close the picker.
+  // rehydrate both stores, then close the picker (WR-06: shared adoptSession helper).
   const handlePickerResume = useCallback((tabId: string) => {
-    const newTabId = crypto.randomUUID();
-    sessionStorage.setItem('folio-tab-id', newTabId);
-
-    const mappingKey = `folio-mapper-session-${newTabId}-mapping`;
-    const inputKey = `folio-mapper-session-${newTabId}-input`;
-    const srcMapping = `folio-mapper-session-${tabId}-mapping`;
-    const srcInput = `folio-mapper-session-${tabId}-input`;
-
-    const mappingData = localStorage.getItem(srcMapping);
-    const inputData = localStorage.getItem(srcInput);
-    if (mappingData) localStorage.setItem(mappingKey, mappingData);
-    if (inputData) localStorage.setItem(inputKey, inputData);
-
-    useMappingStore.persist.setOptions({ name: mappingKey });
-    useInputStore.persist.setOptions({ name: inputKey });
-    void Promise.all([
-      useMappingStore.persist.rehydrate(),
-      useInputStore.persist.rehydrate(),
-    ]);
-
+    adoptSession(tabId);
     setShowSessionPicker(false);
-  }, []);
-
-  const handleResume = useCallback(() => {
-    // No-op: direct-recover path does not show a modal gate (D-07/D-08 redesign)
-    // Kept for call-site compatibility until App.tsx is updated.
   }, []);
 
   const handleStartFresh = useCallback(() => {
@@ -286,36 +281,10 @@ export function useSession() {
     handleOpenSessionPicker,
     handleCloseSessionPicker,
     handlePickerResume,
-    handleResume,
     handleStartFresh,
     handleDownloadSession,
     handleLoadSessionFile,
     loadSessionFromObject,
     downloadSession,
-
-    // Recovery modal data — kept for backward compatibility with existing UI
-    getRecoveryData: () => {
-      const mapping = useMappingStore.getState();
-      const completedCount = Object.values(mapping.nodeStatuses).filter((s) => s === 'completed').length;
-      const skippedCount = Object.values(mapping.nodeStatuses).filter((s) => s === 'skipped').length;
-      // Try to find a "created" date from the current persist key
-      let created = new Date().toISOString();
-      try {
-        const currentKey = useMappingStore.persist.getOptions().name;
-        if (currentKey) {
-          const raw = localStorage.getItem(currentKey);
-          if (raw) {
-            const parsed = JSON.parse(raw);
-            if (parsed?.state?.updated) created = parsed.state.updated;
-          }
-        }
-      } catch { /* ignore */ }
-      return {
-        created,
-        totalNodes: mapping.totalItems,
-        completedCount,
-        skippedCount,
-      };
-    },
   };
 }

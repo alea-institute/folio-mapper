@@ -15,7 +15,8 @@ import type {
 } from '@folio-mapper/core';
 import { computeScoreCutoff } from '@folio-mapper/core';
 import { createDebouncedStorage } from './session-storage';
-import { MAPPING_KEY, tabIdentity } from './tab-identity';
+import { MAPPING_KEY, tabIdentity, PLACEHOLDER_TAB_ID, tabIdFromMappingKey } from './tab-identity';
+import { useInputStore } from './input-store';
 import { upsertRegistry, readRegistry, type SessionRecord } from './session-registry';
 
 interface MappingState {
@@ -151,25 +152,38 @@ function matchesFilter(
 }
 
 const debouncedStorage = createDebouncedStorage({
-  onWrite: (_name: string) => {
+  onWrite: (name: string) => {
+    // CR-01/CR-02: derive the ACTIVE tabId from the live persist key, NOT the
+    // module-level tabIdentity.tabId (which is frozen at load). `name` tracks
+    // setOptions() re-keying after auto-resume / picker-resume, so the registry
+    // pointer always matches the localStorage data keys.
+    const activeTabId = tabIdFromMappingKey(name);
+    // Never register the pre-resolve placeholder key or an unparsable key — that
+    // would create a ghost record pointing at non-existent data (CR-02).
+    if (!activeTabId || activeTabId === PLACEHOLDER_TAB_ID) return;
+
     // D-14: updatedAt stamped at debounced-write time (Pitfall 3 guard — NOT on in-memory mutation)
     const state = useMappingStore.getState();
     const completedCount = Object.values(state.nodeStatuses).filter((s) => s === 'completed').length;
     const skippedCount = Object.values(state.nodeStatuses).filter((s) => s === 'skipped').length;
 
     // Preserve createdAt from existing registry entry if present
-    const existing = readRegistry().find((r) => r.tabId === tabIdentity.tabId);
+    const existing = readRegistry().find((r) => r.tabId === activeTabId);
     const now = new Date().toISOString();
 
+    // WR-01: source display name from the input store (filename, else "Pasted text").
+    const input = useInputStore.getState();
+    const sourceFile = input.parseResult?.source_filename
+      ?? (input.textInput ? 'Pasted text' : null);
+
     const record: SessionRecord = {
-      tabId: tabIdentity.tabId,
+      tabId: activeTabId,
       updatedAt: now,
       createdAt: existing?.createdAt ?? now,
       totalNodes: state.totalItems,
       completed: completedCount,
       skipped: skippedCount,
-      // Source file comes from input store parse result (lazy import to avoid circular dep)
-      sourceFile: null,
+      sourceFile,
     };
     upsertRegistry(record);
   },

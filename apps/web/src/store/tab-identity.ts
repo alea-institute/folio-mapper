@@ -95,3 +95,23 @@ export const MAPPING_KEY: string = tabIdentity.tabId
 export const INPUT_KEY: string = tabIdentity.tabId
   ? `folio-mapper-session-${tabIdentity.tabId}-input`
   : 'folio-mapper-session-placeholder-input';
+
+/** Sentinel tabId used by the D-07 pre-resolve key — never a real session. */
+export const PLACEHOLDER_TAB_ID = 'placeholder';
+
+/**
+ * Build the per-tab namespaced localStorage keys for a given tabId (IN-03 —
+ * single source of truth so the registry pointer and data keys can never drift).
+ */
+export function mappingKeyFor(tabId: string): string {
+  return `folio-mapper-session-${tabId}-mapping`;
+}
+export function inputKeyFor(tabId: string): string {
+  return `folio-mapper-session-${tabId}-input`;
+}
+
+/** Extract the tabId from a mapping persist key, or null if it isn't one. */
+export function tabIdFromMappingKey(name: string): string | null {
+  const match = name.match(/^folio-mapper-session-(.+)-mapping$/);
+  return match ? match[1] : null;
+}
