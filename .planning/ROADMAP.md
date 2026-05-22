@@ -7,6 +7,7 @@ FOLIO Mapper helps legal practitioners and ontologists map their concept lists, 
 ## Phases
 
 **Phase Numbering:**
+
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
@@ -25,6 +26,7 @@ FOLIO Mapper helps legal practitioners and ontologists map their concept lists, 
 **Depends on**: Nothing.
 
 **Success Criteria**:
+
 1. 10 exemplars covering distinct practice areas (PI, family, IP, employment, M&A, etc.)
 2. Each exemplar produces 100% FOLIO mapping hit rate on the canonical leaf labels
 3. Exemplar carousel UI lets the user pick an exemplar and load its text into the input
@@ -38,6 +40,7 @@ FOLIO Mapper helps legal practitioners and ontologists map their concept lists, 
 **Requirements**: Demo payloads round-trip through existing Stage 7A load path; lean exemplars stay untouched; runtime LLM cost = 0; demo richness from natural fan-out heterogeneity (mix of 1:1, 1:2-1:3, and 1:4+ across items); demo mode is session-scoped, not persisted.
 
 **Success Criteria**:
+
 1. A Demo button exists on the exemplar carousel surface and toggles exemplar mode `lean` ↔ `demo`
 2. Clicking an exemplar card while in demo mode loads a pre-computed session showing pipeline output (mappings, candidates, judge annotations) — not the raw text
 3. Toggling demo mode is reversible and session-scoped (refreshing the app returns to lean mode by default)
@@ -48,6 +51,7 @@ FOLIO Mapper helps legal practitioners and ontologists map their concept lists, 
 **Plans**: 4 plans
 
 Plans:
+
 - [ ] 02-01-PLAN.md — Demo store (session-scoped exemplarMode flag), Demo toggle button, per-card chip
 - [ ] 02-02-PLAN.md — Curation script (scripts/curate_demos.py) + PI demo payload + static manifest
 - [ ] 02-03-PLAN.md — Wire demo-mode click to load bundled JSON via Stage 7A path; stale-version banner
@@ -62,6 +66,7 @@ Plans:
 **Canonical refs**: `.planning/phases/03-new-session/03-CONTEXT.md`
 
 **Success Criteria**:
+
 1. A "New" button (always visible on input/confirming/mapping screens) opens a fresh tab via `?new=1`; current tab untouched, no confirmation prompt
 2. Session persistence is per-tab namespaced — no tab can clobber another tab's saved work
 3. Returning to the page after a full browser close/reboot auto-resumes the most-recent session (zero clicks, everything already mapped) — no recovery-modal gate
@@ -74,8 +79,16 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
+**Wave 1**
+
 - [ ] 03-01-PLAN.md — Storage core: tab-identity resolver, session registry (LRU), debounced-storage onWrite + Wave-0 tests (D-04, D-05, D-06, D-09, D-13, D-14)
+
+**Wave 2** *(blocked on Wave 1 completion)*
+
 - [ ] 03-02-PLAN.md — Namespace stores, boot resolver (auto-resume/refresh/fresh), handleNewTab, remove beforeunload + NewProjectModal flow + useSession tests (D-01, D-02, D-07, D-08, D-12, D-14)
+
+**Wave 3** *(blocked on Wave 2 completion)*
+
 - [ ] 03-03-PLAN.md — Always-visible "New" button, on-demand SessionPickerModal, App wiring, delete NewProjectModal (D-01, D-02, D-03, D-07b, D-10, D-11)
 
 ### Out of Scope (Phase 3)
