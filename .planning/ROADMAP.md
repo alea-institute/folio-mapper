@@ -81,7 +81,7 @@ Plans:
 Plans:
 **Wave 1**
 
-- [ ] 03-01-PLAN.md — Storage core: tab-identity resolver, session registry (LRU), debounced-storage onWrite + Wave-0 tests (D-04, D-05, D-06, D-09, D-13, D-14)
+- [x] 03-01-PLAN.md — Storage core: tab-identity resolver, session registry (LRU), debounced-storage onWrite + Wave-0 tests (D-04, D-05, D-06, D-09, D-13, D-14)
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
