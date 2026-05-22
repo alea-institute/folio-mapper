@@ -42,7 +42,7 @@ import {
 } from './exemplar/demos';
 import { loadSessionFromObject } from './hooks/useSession';
 import { tabIdentity } from './store/tab-identity';
-import { readRegistry, deleteFromRegistry } from './store/session-registry';
+import { readRegistry, deleteFromRegistry, renameSession } from './store/session-registry';
 import type { SessionRecord } from './store/session-registry';
 import { useFileUpload } from './hooks/useFileUpload';
 import { useTextDetection } from './hooks/useTextDetection';
@@ -804,6 +804,10 @@ export function App() {
               deleteFromRegistry(tabId);
               setPickerSessions(readRegistry());
             }}
+            onRename={(tabId, name) => {
+              renameSession(tabId, name);
+              setPickerSessions(readRegistry());
+            }}
             onStartNew={session.handleNewTab}
             onClose={session.handleCloseSessionPicker}
           />
@@ -997,6 +1001,10 @@ export function App() {
           onResume={(tabId) => session.handlePickerResume(tabId)}
           onDelete={(tabId) => {
             deleteFromRegistry(tabId);
+            setPickerSessions(readRegistry());
+          }}
+          onRename={(tabId, name) => {
+            renameSession(tabId, name);
             setPickerSessions(readRegistry());
           }}
           onStartNew={session.handleNewTab}
