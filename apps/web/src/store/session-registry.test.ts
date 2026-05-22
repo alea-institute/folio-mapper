@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import type { SessionRecord } from './session-registry';
+// Note: renameSession is imported in tests below along with other named exports
 
 // session-registry.ts operates over localStorage. We provide a Map-backed
 // localStorage mock (same pattern as tab-identity.test.ts) since
@@ -31,6 +32,7 @@ function makeRecord(tabId: string, updatedAt: string, opts: Partial<SessionRecor
     completed: opts.completed ?? 5,
     skipped: opts.skipped ?? 0,
     sourceFile: opts.sourceFile ?? null,
+    customName: opts.customName ?? null,
   };
 }
 
@@ -194,6 +196,78 @@ describe('session-registry', () => {
       deleteFromRegistry('tab-nonexistent');
 
       expect(readRegistry()).toHaveLength(1);
+    });
+  });
+
+  describe('renameSession', () => {
+    it('sets a trimmed custom name on the matching record', async () => {
+      const { readRegistry, upsertRegistry, renameSession } = await import('./session-registry');
+
+      upsertRegistry(makeRecord('tab-1', '2026-05-22T10:00:00.000Z'));
+      renameSession('tab-1', '  My Custom Name  ');
+
+      const result = readRegistry();
+      expect(result.find((r) => r.tabId === 'tab-1')?.customName).toBe('My Custom Name');
+    });
+
+    it('clears customName to null on empty string input', async () => {
+      const { readRegistry, upsertRegistry, renameSession } = await import('./session-registry');
+
+      upsertRegistry(makeRecord('tab-1', '2026-05-22T10:00:00.000Z', { customName: 'Old Name' }));
+      renameSession('tab-1', '');
+
+      const result = readRegistry();
+      expect(result.find((r) => r.tabId === 'tab-1')?.customName).toBeNull();
+    });
+
+    it('clears customName to null on whitespace-only input', async () => {
+      const { readRegistry, upsertRegistry, renameSession } = await import('./session-registry');
+
+      upsertRegistry(makeRecord('tab-1', '2026-05-22T10:00:00.000Z', { customName: 'Old Name' }));
+      renameSession('tab-1', '   ');
+
+      const result = readRegistry();
+      expect(result.find((r) => r.tabId === 'tab-1')?.customName).toBeNull();
+    });
+
+    it('is a no-op when the tabId is not in the registry', async () => {
+      const { readRegistry, upsertRegistry, renameSession } = await import('./session-registry');
+
+      upsertRegistry(makeRecord('tab-1', '2026-05-22T10:00:00.000Z'));
+      renameSession('tab-unknown', 'Should Do Nothing');
+
+      const result = readRegistry();
+      expect(result).toHaveLength(1);
+      expect(result[0].customName).toBeNull();
+    });
+
+    it('does NOT change updatedAt (renaming must not bump session rank)', async () => {
+      const { readRegistry, upsertRegistry, renameSession } = await import('./session-registry');
+
+      const originalUpdatedAt = '2026-05-20T10:00:00.000Z';
+      upsertRegistry(makeRecord('tab-1', originalUpdatedAt));
+      renameSession('tab-1', 'New Name');
+
+      const result = readRegistry();
+      expect(result.find((r) => r.tabId === 'tab-1')?.updatedAt).toBe(originalUpdatedAt);
+    });
+
+    it('onWrite-preservation: upsertRegistry with customName from existing record retains the custom name', async () => {
+      const { readRegistry, upsertRegistry, renameSession } = await import('./session-registry');
+
+      // Simulate user sets a custom name
+      upsertRegistry(makeRecord('tab-1', '2026-05-22T10:00:00.000Z'));
+      renameSession('tab-1', 'My Project');
+
+      // Simulate a subsequent onWrite: reads existing record, carries customName
+      const existing = readRegistry().find((r) => r.tabId === 'tab-1');
+      const updatedRecord = makeRecord('tab-1', '2026-05-22T11:00:00.000Z', {
+        customName: existing?.customName ?? null,
+      });
+      upsertRegistry(updatedRecord);
+
+      const result = readRegistry();
+      expect(result.find((r) => r.tabId === 'tab-1')?.customName).toBe('My Project');
     });
   });
 

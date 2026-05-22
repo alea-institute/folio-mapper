@@ -184,6 +184,9 @@ const debouncedStorage = createDebouncedStorage({
       completed: completedCount,
       skipped: skippedCount,
       sourceFile,
+      // Preserve any user-supplied custom name — do NOT let the auto-derived
+      // sourceFile overwrite it on every debounced write (onWrite-overwrite pitfall).
+      customName: existing?.customName ?? null,
     };
     upsertRegistry(record);
   },
