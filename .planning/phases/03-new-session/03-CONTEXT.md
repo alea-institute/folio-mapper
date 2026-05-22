@@ -30,8 +30,10 @@ This **replaces** folio-mapper's existing in-place "New Project" reset (and its 
 - **D-06:** Existing single-session localStorage data should be **migrated/adopted** gracefully into the new namespaced model so current users don't lose in-progress work on upgrade. (Researcher to confirm migration approach.)
 
 ### Recovery
-- **D-07:** When a **brand-new tab with no tab identity** loads and saved sessions exist (e.g., after closing the browser), show a **session picker**: list all saved sessions with metadata (created date, progress, item counts) → **Resume / Start New / Delete** per entry.
-- **D-08:** A **refresh within an existing tab** recovers that tab's own session directly (via its `sessionStorage` tab identity) — no picker needed in that case.
+- **D-07:** **Auto-resume on return.** When the user returns to the app after a full browser close/reboot (a brand-new tab with no `sessionStorage` tab identity) and saved sessions exist, the system **automatically restores the most-recently-active session** — the user lands directly in it with everything already mapped. **Zero clicks, no recovery-modal gate.** (This refines the earlier "show a picker on return" decision: auto-resume is the default; the picker is on-demand — see D-07b.)
+- **D-07b:** The **session picker** still ships, but as an **on-demand affordance** reachable from the header (e.g., an "Open recent / Switch session" control near the "New" button). It lists all saved sessions with metadata (created date, progress, item counts) → **Resume / Start New / Delete** per entry. It is NOT a forced gate on app load.
+- **D-08:** A **refresh within an existing tab** recovers that tab's own session directly (via its `sessionStorage` tab identity).
+- **D-13:** **Persistence survives full browser close/reboot.** Session data lives in `localStorage` (not `sessionStorage`), so a complete browser shutdown and reboot does not lose mapped work; on next visit to the page (e.g., `mapper.openlegalstandard.org`) the most-recent session is auto-restored per D-07. (`sessionStorage` is used only for the per-tab *identity* pointer, which is intentionally allowed to die on tab/browser close — falling back to D-07 most-recent auto-resume.)
 
 ### Cleanup / Lifecycle
 - **D-09:** Cap stored sessions at **~5** (LRU): when exceeded, evict the **least-recently-active** session. Keeps the localStorage footprint predictable and the picker manageable. (folio-mapper sessions are large — candidate lists, judge annotations — against a ~5–10 MB localStorage budget.)
@@ -46,7 +48,10 @@ This **replaces** folio-mapper's existing in-place "New Project" reset (and its 
 ### Claude's Discretion
 - Exact namespaced-key scheme and tab-id generation (uuid vs counter).
 - Session picker visual design (modal vs full-screen) — should reuse existing modal patterns (`SessionRecoveryModal`) for consistency.
+- The on-demand entry point for the session picker (D-07b) — dropdown near "New", a "Recent sessions" header control, etc.
 - Where/how the always-visible "New" button mounts on input/confirming screens (shared mini-header vs adding to each layout).
+- "Most-recently-active" tiebreak metric for auto-resume (last-modified timestamp vs last-opened timestamp) — track an `updatedAt`/`lastOpenedAt` per session.
+- The existing startup `SessionRecoveryModal` is **replaced** by silent auto-restore (D-07) plus the on-demand picker (D-07b); it no longer gates app load.
 
 </decisions>
 

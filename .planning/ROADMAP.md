@@ -64,11 +64,12 @@ Plans:
 **Success Criteria**:
 1. A "New" button (always visible on input/confirming/mapping screens) opens a fresh tab via `?new=1`; current tab untouched, no confirmation prompt
 2. Session persistence is per-tab namespaced — no tab can clobber another tab's saved work
-3. Opening a brand-new tab with no identity but with saved sessions shows a session picker (Resume / Start New / Delete per entry)
-4. A refresh within an existing tab directly recovers that tab's own session
-5. Stored sessions are capped (~5, LRU eviction) to bound localStorage footprint
-6. The old in-place reset (`NewProjectModal` popover) and the `beforeunload` warning are removed
-7. Existing single-session localStorage data migrates gracefully (no lost in-progress work on upgrade)
+3. Returning to the page after a full browser close/reboot auto-resumes the most-recent session (zero clicks, everything already mapped) — no recovery-modal gate
+4. A session picker is available on-demand (from the header) to switch to another saved session, start new, or delete (Resume / Start New / Delete per entry)
+5. A refresh within an existing tab directly recovers that tab's own session
+6. Stored sessions are capped (~5, LRU eviction) to bound localStorage footprint
+7. The old in-place reset (`NewProjectModal` popover), the startup `SessionRecoveryModal` gate, and the `beforeunload` warning are removed
+8. Existing single-session localStorage data migrates gracefully (no lost in-progress work on upgrade)
 
 ### Out of Scope (Phase 3)
 

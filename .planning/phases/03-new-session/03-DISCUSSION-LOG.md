@@ -44,6 +44,8 @@
 **User's choice:** Show a session picker
 **Notes:** New UI component. Most powerful for multi-session work.
 
+> **Post-discussion refinement (2026-05-22):** User clarified that on return after a full browser close/reboot, the system should **auto-resume the most-recent session** (zero clicks, everything already mapped) rather than gate on the picker. Reconciled: auto-resume is the default-on-return behavior (D-07/D-13); the session picker still ships but as an **on-demand** header affordance to switch sessions / start new / delete (D-07b). The startup recovery-modal gate is removed.
+
 ### Follow-up: Lifecycle / Cleanup
 
 | Option | Description | Selected |
