@@ -24,7 +24,9 @@ findings:
   warning: 6
   info: 4
   total: 12
-status: issues_found
+status: resolved
+resolved_commit: 6c316e8
+resolution: All 2 blockers + 6 warnings + 3 of 4 info items fixed in 6c316e8 (IN-02 was a no-op, advisory only). 80 web + 28 ui tests pass; build clean.
 ---
 
 # Phase 3: Code Review Report
