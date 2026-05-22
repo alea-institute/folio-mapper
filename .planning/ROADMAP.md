@@ -85,7 +85,7 @@ Plans:
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
-- [ ] 03-02-PLAN.md — Namespace stores, boot resolver (auto-resume/refresh/fresh), handleNewTab, remove beforeunload + NewProjectModal flow + useSession tests (D-01, D-02, D-07, D-08, D-12, D-14)
+- [x] 03-02-PLAN.md — Namespace stores, boot resolver (auto-resume/refresh/fresh), handleNewTab, remove beforeunload + NewProjectModal flow + useSession tests (D-01, D-02, D-07, D-08, D-12, D-14)
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
