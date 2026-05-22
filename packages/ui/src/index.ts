@@ -50,4 +50,4 @@ export { ExportView } from './components/export/ExportView';
 
 // Session components (Stage 7)
 export { SessionRecoveryModal } from './components/session/SessionRecoveryModal';
-export { NewProjectModal } from './components/session/NewProjectModal';
+export { SessionPickerModal } from './components/session/SessionPickerModal';

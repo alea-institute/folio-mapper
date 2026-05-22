@@ -1,5 +1,3 @@
-import type { ReactNode } from 'react';
-
 type LLMStatus = 'connected' | 'disconnected' | 'none';
 type EmbeddingStatusType = 'ready' | 'building' | 'unavailable' | 'none';
 type FolioUpdateStatusType = 'current' | 'checking' | 'updating' | 'updated' | 'error' | 'none';
@@ -7,21 +5,20 @@ type FolioUpdateStatusType = 'current' | 'checking' | 'updating' | 'updated' | '
 interface HeaderProps {
   onOpenSettings?: () => void;
   onSaveSession?: () => void;
-  onNewProject?: () => void;
+  onNewTab?: () => void;
+  onOpenSessionPicker?: () => void;
   onRestart?: () => void;
   onOpenExport?: () => void;
   onOpenFolioModal?: () => void;
-  hasActiveSession?: boolean;
   llmStatus?: LLMStatus;
   llmProviderLabel?: string;
   embeddingStatus?: EmbeddingStatusType;
   embeddingDetail?: string;
   folioUpdateStatus?: FolioUpdateStatusType;
   folioUpdateDetail?: string;
-  newProjectPopover?: ReactNode;
 }
 
-export function Header({ onOpenSettings, onSaveSession, onNewProject, onRestart, onOpenExport, onOpenFolioModal, hasActiveSession, llmStatus, llmProviderLabel, embeddingStatus, embeddingDetail, folioUpdateStatus, folioUpdateDetail, newProjectPopover }: HeaderProps) {
+export function Header({ onOpenSettings, onSaveSession, onNewTab, onOpenSessionPicker, onRestart, onOpenExport, onOpenFolioModal, llmStatus, llmProviderLabel, embeddingStatus, embeddingDetail, folioUpdateStatus, folioUpdateDetail }: HeaderProps) {
   return (
     <header className="flex items-center justify-between border-b border-gray-200 bg-white px-6 py-4">
       <h1 className="text-xl font-semibold text-gray-900">FOLIO Mapper</h1>
@@ -50,7 +47,7 @@ export function Header({ onOpenSettings, onSaveSession, onNewProject, onRestart,
             Restart
           </button>
         )}
-        {hasActiveSession && onSaveSession && (
+        {onSaveSession && (
           <button
             onClick={onSaveSession}
             className="flex items-center gap-1 rounded px-2 py-1.5 text-sm text-gray-400 hover:bg-gray-100 hover:text-gray-600"
@@ -77,7 +74,7 @@ export function Header({ onOpenSettings, onSaveSession, onNewProject, onRestart,
         )}
         {/* Export button moved to MappingToolbar (amber style, next to Mappings).
            Ctrl+E shortcut still works. Uncomment to restore header Export:
-        {hasActiveSession && onOpenExport && (
+        {onOpenExport && (
           <button
             onClick={onOpenExport}
             className="flex items-center gap-1 rounded px-2 py-1.5 text-sm text-gray-400 hover:bg-gray-100 hover:text-gray-600"
@@ -92,26 +89,38 @@ export function Header({ onOpenSettings, onSaveSession, onNewProject, onRestart,
           </button>
         )}
         */}
-        {hasActiveSession && onNewProject && (
-          <div className="relative">
-            <button
-              onClick={onNewProject}
-              className="flex items-center gap-1 rounded px-2 py-1.5 text-sm text-gray-400 hover:bg-gray-100 hover:text-gray-600"
-              title="Start New Project"
-              aria-label="New project"
-            >
-              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 4v16m8-8H4"
-                />
-              </svg>
-              New
-            </button>
-            {newProjectPopover}
-          </div>
+        {/* New (open-fresh-tab) button — always rendered when onNewTab is provided (D-10/D-11) */}
+        {onNewTab && (
+          <button
+            onClick={onNewTab}
+            className="flex items-center gap-1 rounded px-2 py-1.5 text-sm text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+            title="Open a new tab"
+            aria-label="New tab"
+          >
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 4v16m8-8H4"
+              />
+            </svg>
+            New
+          </button>
+        )}
+        {/* Open recent session (clock icon) button */}
+        {onOpenSessionPicker && (
+          <button
+            onClick={onOpenSessionPicker}
+            className="flex items-center gap-1 rounded px-2 py-1.5 text-sm text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+            title="Open recent session"
+            aria-label="Open recent session"
+          >
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" strokeWidth={2} />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 7v5l3 3" />
+            </svg>
+          </button>
         )}
         {/* Embedding status indicator */}
         {embeddingStatus === 'ready' && (
