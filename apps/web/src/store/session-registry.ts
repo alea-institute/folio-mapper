@@ -9,7 +9,8 @@ export interface SessionRecord {
   totalNodes: number;    // From mapping state (for % progress display)
   completed: number;     // Completed node count
   skipped: number;       // Skipped node count
-  sourceFile: string | null;  // Display name (filename or null)
+  sourceFile: string | null;  // Auto-derived display name (filename or null)
+  customName?: string | null; // User-supplied name; overrides sourceFile in display
 }
 
 export const REGISTRY_KEY = 'folio-mapper-session-registry';
@@ -97,6 +98,38 @@ export function deleteFromRegistry(tabId: string): void {
   } catch (e) {
     if (e instanceof DOMException && e.name === 'QuotaExceededError') {
       console.warn('[session-registry] localStorage quota exceeded, skipping registry write on delete');
+    } else {
+      throw e;
+    }
+  }
+}
+
+/**
+ * Set (or clear) a custom display name on the given session record.
+ *
+ * Behaviour:
+ *  - Trims the supplied name. If the trimmed value is non-empty it is stored as
+ *    customName; an empty/whitespace-only name clears customName back to null.
+ *  - No-op when tabId is not found in the registry (no throw).
+ *  - Does NOT mutate updatedAt — renaming must not bump the session to rank 0.
+ *  - Does NOT re-sort — ordering is the responsibility of upsertRegistry's write path.
+ */
+export function renameSession(tabId: string, name: string): void {
+  const registry = readRegistry();
+  const idx = registry.findIndex((r) => r.tabId === tabId);
+  if (idx < 0) return; // no-op for unknown tabId
+
+  const trimmed = name.trim();
+  registry[idx] = {
+    ...registry[idx],
+    customName: trimmed.length > 0 ? trimmed : null,
+  };
+
+  try {
+    localStorage.setItem(REGISTRY_KEY, JSON.stringify(registry));
+  } catch (e) {
+    if (e instanceof DOMException && e.name === 'QuotaExceededError') {
+      console.warn('[session-registry] localStorage quota exceeded, skipping registry write on rename');
     } else {
       throw e;
     }
