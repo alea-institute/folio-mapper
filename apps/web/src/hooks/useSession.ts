@@ -4,9 +4,8 @@ import type { SessionFile } from '@folio-mapper/core';
 import { useInputStore } from '../store/input-store';
 import { useMappingStore } from '../store/mapping-store';
 import { useLLMStore } from '../store/llm-store';
-
-const MAPPING_STORAGE_KEY = 'folio-mapper-session-mapping';
-const INPUT_STORAGE_KEY = 'folio-mapper-session-input';
+import { tabIdentity } from '../store/tab-identity';
+import { readRegistry } from '../store/session-registry';
 
 /**
  * Hydrate input + mapping stores from a pre-parsed session object.
@@ -51,8 +50,7 @@ export function loadSessionFromObject(data: unknown): SessionFile | null {
 }
 
 export function useSession() {
-  const [showRecoveryModal, setShowRecoveryModal] = useState(false);
-  const [showNewProjectModal, setShowNewProjectModal] = useState(false);
+  const [showSessionPicker, setShowSessionPicker] = useState(false);
   const [rehydrated, setRehydrated] = useState(false);
   const checkedRef = useRef(false);
 
@@ -88,28 +86,47 @@ export function useSession() {
     return () => unsubs.forEach((u) => u());
   }, []);
 
-  // Once rehydrated, check if there's a session to recover
+  // Boot resolver — runs once after stores are rehydrated.
+  // Implements three branches per RESEARCH.md Pattern 3:
+  //   1. isNewTab → fresh tab, stores already skipped hydration (D-01)
+  //   2. hasIdentity → refresh path, stores hydrated directly (D-08)
+  //   3. else → auto-resume most-recently-modified session under a NEW tabId (D-07, Pitfall 5)
   useEffect(() => {
     if (!rehydrated || checkedRef.current) return;
     checkedRef.current = true;
 
-    const mappingState = useMappingStore.getState();
-    if (mappingState.mappingResponse !== null) {
-      setShowRecoveryModal(true);
-    }
-  }, [rehydrated]);
+    if (tabIdentity.isNewTab) return;    // D-01: fresh ?new=1 tab, already clean
+    if (tabIdentity.hasIdentity) return; // D-08: refreshed tab, already hydrated from own keys
 
-  // beforeunload warning when session is active
-  useEffect(() => {
-    const handler = (e: BeforeUnloadEvent) => {
-      const { mappingResponse } = useMappingStore.getState();
-      if (mappingResponse) {
-        e.preventDefault();
-      }
-    };
-    window.addEventListener('beforeunload', handler);
-    return () => window.removeEventListener('beforeunload', handler);
-  }, []);
+    // D-07: No identity — auto-resume most-recently-modified session
+    const registry = readRegistry();
+    if (registry.length === 0) return; // No sessions → stay fresh
+
+    // Registry is already sorted descending by updatedAt (upsertRegistry maintains order)
+    const mostRecent = registry[0];
+
+    // Pitfall 5 fix: COPY data under a freshly generated tabId — never adopt the original.
+    // This guarantees no two tabs ever share a tabId (split-brain safe, T-03-06).
+    const newTabId = crypto.randomUUID();
+    sessionStorage.setItem('folio-tab-id', newTabId);
+
+    const mappingKey = `folio-mapper-session-${newTabId}-mapping`;
+    const inputKey = `folio-mapper-session-${newTabId}-input`;
+    const srcMapping = `folio-mapper-session-${mostRecent.tabId}-mapping`;
+    const srcInput = `folio-mapper-session-${mostRecent.tabId}-input`;
+
+    const mappingData = localStorage.getItem(srcMapping);
+    const inputData = localStorage.getItem(srcInput);
+    if (mappingData) localStorage.setItem(mappingKey, mappingData);
+    if (inputData) localStorage.setItem(inputKey, inputData);
+
+    useMappingStore.persist.setOptions({ name: mappingKey });
+    useInputStore.persist.setOptions({ name: inputKey });
+    void Promise.all([
+      useMappingStore.persist.rehydrate(),
+      useInputStore.persist.rehydrate(),
+    ]);
+  }, [rehydrated]);
 
   // Ctrl+S handler for manual save
   useEffect(() => {
@@ -183,45 +200,68 @@ export function useSession() {
     URL.revokeObjectURL(url);
   }, [buildSessionFile]);
 
+  // clearStores uses the store's current persist key (dynamic, per D-04 namespacing)
   const clearStores = useCallback(() => {
     useMappingStore.getState().resetMapping();
     useInputStore.getState().reset();
-    // Clear persisted storage
-    localStorage.removeItem(MAPPING_STORAGE_KEY);
-    localStorage.removeItem(INPUT_STORAGE_KEY);
+    const mappingKey = useMappingStore.persist.getOptions().name;
+    const inputKey = useInputStore.persist.getOptions().name;
+    if (mappingKey) localStorage.removeItem(mappingKey);
+    if (inputKey) localStorage.removeItem(inputKey);
+  }, []);
+
+  // D-01/D-03: Open a fresh tab instantly — no confirmation (T-03-07 guard: pathname only)
+  const handleNewTab = useCallback(() => {
+    window.open(window.location.pathname + '?new=1', '_blank');
+  }, []);
+
+  // D-07b: On-demand session picker state + handlers
+  const handleOpenSessionPicker = useCallback(() => {
+    setShowSessionPicker(true);
+  }, []);
+
+  const handleCloseSessionPicker = useCallback(() => {
+    setShowSessionPicker(false);
+  }, []);
+
+  // Resume a specific session by tabId: copy its keys into the current tab's namespace,
+  // rehydrate both stores, then close the picker.
+  const handlePickerResume = useCallback((tabId: string) => {
+    const newTabId = crypto.randomUUID();
+    sessionStorage.setItem('folio-tab-id', newTabId);
+
+    const mappingKey = `folio-mapper-session-${newTabId}-mapping`;
+    const inputKey = `folio-mapper-session-${newTabId}-input`;
+    const srcMapping = `folio-mapper-session-${tabId}-mapping`;
+    const srcInput = `folio-mapper-session-${tabId}-input`;
+
+    const mappingData = localStorage.getItem(srcMapping);
+    const inputData = localStorage.getItem(srcInput);
+    if (mappingData) localStorage.setItem(mappingKey, mappingData);
+    if (inputData) localStorage.setItem(inputKey, inputData);
+
+    useMappingStore.persist.setOptions({ name: mappingKey });
+    useInputStore.persist.setOptions({ name: inputKey });
+    void Promise.all([
+      useMappingStore.persist.rehydrate(),
+      useInputStore.persist.rehydrate(),
+    ]);
+
+    setShowSessionPicker(false);
   }, []);
 
   const handleResume = useCallback(() => {
-    setShowRecoveryModal(false);
+    // No-op: direct-recover path does not show a modal gate (D-07/D-08 redesign)
+    // Kept for call-site compatibility until App.tsx is updated.
   }, []);
 
   const handleStartFresh = useCallback(() => {
     clearStores();
-    setShowRecoveryModal(false);
   }, [clearStores]);
 
   const handleDownloadSession = useCallback(() => {
     downloadSession();
   }, [downloadSession]);
-
-  const handleNewProject = useCallback(() => {
-    setShowNewProjectModal(true);
-  }, []);
-
-  const handleSaveAndNew = useCallback(() => {
-    downloadSession();
-    clearStores();
-    setShowNewProjectModal(false);
-  }, [downloadSession, clearStores]);
-
-  const handleDiscardAndNew = useCallback(() => {
-    clearStores();
-    setShowNewProjectModal(false);
-  }, [clearStores]);
-
-  const handleCancelNewProject = useCallback(() => {
-    setShowNewProjectModal(false);
-  }, []);
 
   const handleLoadSessionFile = useCallback(async (file: File) => {
     try {
@@ -240,32 +280,34 @@ export function useSession() {
   const hasActiveSession = useMappingStore((s) => s.mappingResponse !== null);
 
   return {
-    showRecoveryModal,
-    showNewProjectModal,
+    showSessionPicker,
     hasActiveSession,
+    handleNewTab,
+    handleOpenSessionPicker,
+    handleCloseSessionPicker,
+    handlePickerResume,
     handleResume,
     handleStartFresh,
     handleDownloadSession,
-    handleNewProject,
-    handleSaveAndNew,
-    handleDiscardAndNew,
-    handleCancelNewProject,
     handleLoadSessionFile,
     loadSessionFromObject,
     downloadSession,
 
-    // Recovery modal data
+    // Recovery modal data — kept for backward compatibility with existing UI
     getRecoveryData: () => {
       const mapping = useMappingStore.getState();
       const completedCount = Object.values(mapping.nodeStatuses).filter((s) => s === 'completed').length;
       const skippedCount = Object.values(mapping.nodeStatuses).filter((s) => s === 'skipped').length;
-      // Try to find a "created" date from localStorage
+      // Try to find a "created" date from the current persist key
       let created = new Date().toISOString();
       try {
-        const raw = localStorage.getItem(MAPPING_STORAGE_KEY);
-        if (raw) {
-          const parsed = JSON.parse(raw);
-          if (parsed?.state?.updated) created = parsed.state.updated;
+        const currentKey = useMappingStore.persist.getOptions().name;
+        if (currentKey) {
+          const raw = localStorage.getItem(currentKey);
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            if (parsed?.state?.updated) created = parsed.state.updated;
+          }
         }
       } catch { /* ignore */ }
       return {
