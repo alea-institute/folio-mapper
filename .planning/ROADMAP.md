@@ -71,6 +71,13 @@ Plans:
 7. The old in-place reset (`NewProjectModal` popover), the startup `SessionRecoveryModal` gate, and the `beforeunload` warning are removed
 8. Existing single-session localStorage data migrates gracefully (no lost in-progress work on upgrade)
 
+**Plans**: 3 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Storage core: tab-identity resolver, session registry (LRU), debounced-storage onWrite + Wave-0 tests (D-04, D-05, D-06, D-09, D-13, D-14)
+- [ ] 03-02-PLAN.md — Namespace stores, boot resolver (auto-resume/refresh/fresh), handleNewTab, remove beforeunload + NewProjectModal flow + useSession tests (D-01, D-02, D-07, D-08, D-12, D-14)
+- [ ] 03-03-PLAN.md — Always-visible "New" button, on-demand SessionPickerModal, App wiring, delete NewProjectModal (D-01, D-02, D-03, D-07b, D-10, D-11)
+
 ### Out of Scope (Phase 3)
 
 - Live cross-tab sync (real-time reflection of edits between open tabs)
