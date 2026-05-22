@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import type { ParseResult, Screen } from '@folio-mapper/core';
 import { createDebouncedStorage } from './session-storage';
+import { INPUT_KEY, tabIdentity } from './tab-identity';
 
 interface InputState {
   screen: Screen;
@@ -79,8 +80,9 @@ export const useInputStore = create<InputState>()(
         }),
     }),
     {
-      name: 'folio-mapper-session-input',
+      name: INPUT_KEY,
       storage: createJSONStorage(() => debouncedStorage),
+      skipHydration: tabIdentity.isNewTab,
       partialize: (state) => ({
         screen: state.screen,
         textInput: state.textInput,

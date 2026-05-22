@@ -15,6 +15,8 @@ import type {
 } from '@folio-mapper/core';
 import { computeScoreCutoff } from '@folio-mapper/core';
 import { createDebouncedStorage } from './session-storage';
+import { MAPPING_KEY, tabIdentity } from './tab-identity';
+import { upsertRegistry, readRegistry, type SessionRecord } from './session-registry';
 
 interface MappingState {
   // Data
@@ -148,7 +150,30 @@ function matchesFilter(
   return status === 'pending' && (selections[index]?.length ?? 0) === 0;
 }
 
-const debouncedStorage = createDebouncedStorage();
+const debouncedStorage = createDebouncedStorage({
+  onWrite: (_name: string) => {
+    // D-14: updatedAt stamped at debounced-write time (Pitfall 3 guard — NOT on in-memory mutation)
+    const state = useMappingStore.getState();
+    const completedCount = Object.values(state.nodeStatuses).filter((s) => s === 'completed').length;
+    const skippedCount = Object.values(state.nodeStatuses).filter((s) => s === 'skipped').length;
+
+    // Preserve createdAt from existing registry entry if present
+    const existing = readRegistry().find((r) => r.tabId === tabIdentity.tabId);
+    const now = new Date().toISOString();
+
+    const record: SessionRecord = {
+      tabId: tabIdentity.tabId,
+      updatedAt: now,
+      createdAt: existing?.createdAt ?? now,
+      totalNodes: state.totalItems,
+      completed: completedCount,
+      skipped: skippedCount,
+      // Source file comes from input store parse result (lazy import to avoid circular dep)
+      sourceFile: null,
+    };
+    upsertRegistry(record);
+  },
+});
 
 export const useMappingStore = create<MappingState>()(
   persist(
@@ -665,8 +690,9 @@ export const useMappingStore = create<MappingState>()(
         }),
     }),
     {
-      name: 'folio-mapper-session-mapping',
+      name: MAPPING_KEY,
       storage: createJSONStorage(() => debouncedStorage),
+      skipHydration: tabIdentity.isNewTab,
       partialize: (state) => ({
         mappingResponse: state.mappingResponse,
         currentItemIndex: state.currentItemIndex,
