@@ -33,9 +33,14 @@ Curate and ship **9 cached demo payloads** — one per existing non-PI practice 
 - **Tune the `--threshold` flag per area** so each demo loads with a **visible mix of auto-accepted AND pending-review items** — the "the system did most of the work; your judgment finishes it" demonstration beat.
 - Default is `0.3`; adjust per area. A demo that lands all-accepted or all-pending has lost the curation narrative and must be re-tuned (or selections hand-adjusted) before commit.
 
-### Curation Model (D-04)
-- **Match the PI demo: anthropic `claude-3-5-sonnet-latest`** (the script's existing default) so all 10 demos read consistently in judge phrasing and scoring.
-- No hard cost cap (~$0.50–$2 per area, ~$5–$18 total for 9). Operator runs the script with their own `ANTHROPIC_API_KEY`.
+### Curation Model (D-04) — REVISED after research
+- **Curate with the LLM: anthropic `claude-3-5-sonnet-latest`, `--provider anthropic`.** The judge annotations and accept/pending mix the demo narrative depends on (DEMO-03, phase goal) come from the LLM Stage 3 judge — `--no-llm` skips it entirely.
+- **Correction:** the shipped PI demo was actually produced with `--no-llm` (`provider`/`model` = null, no real judge annotations) — NOT claude-3-5-sonnet as originally assumed. "Match PI" was based on a wrong premise.
+- **Re-curate the PI demo** with `--provider anthropic` too, so all 10 demos are consistent and all carry real judge annotations. This intentionally overwrites the shipped `personal-injury.demo.json`.
+- No hard cost cap (~$0.50–$2 per area, ~$10–$20 total for 10 incl. PI re-curation). Operator runs the script with their own `ANTHROPIC_API_KEY`.
+
+### Bundle Size / Lazy Loading (added from research)
+- The PI demo JSON is **~3.4 MB**; 10 eager ES-module imports would add ~34 MB to the initial bundle. The manifest (`apps/web/src/exemplar/demos/index.ts`) must migrate to **lazy `import()`** so demo payloads load on demand. `App.tsx` already calls the demo loader inside an async path, so the migration is safe. This is in-scope engineering for this phase (not a UI change).
 
 ### Claude's Discretion
 - Exact enrichment items chosen per area (driven by probe results).
