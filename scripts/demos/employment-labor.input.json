@@ -1,0 +1,8 @@
+{
+  "slug": "employment-labor",
+  "label": "Employment & Labor",
+  "text": "Employment Law\n\tDiscrimination\n\t\tEmployment Discrimination Law\n\t\tAge Discrimination\n\t\tEmployment Discrimination Claims\n\tWage & Hour\n\t\tWage and Hour Law\n\t\tPay Equity Law\n\tWorkplace Safety\n\t\tEmployment Health and Safety Law\n\t\tSubstance Abuse and Drug Testing Law\n\t\tWorkplace Safety Claim\n\tWrongful Termination\n\t\tWrongful Discharge or Termination\n\t\tReduction in Force Law\n\tBenefits & Compensation\n\t\tWorkers Compensation Law\n\t\tUnemployment Benefits Law\n\t\tWorkers' Compensation Claim",
+  "enrichments": ["Employment Discrimination Claims", "Workplace Safety Claim", "Workers' Compensation Claim"],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#employment-labor",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

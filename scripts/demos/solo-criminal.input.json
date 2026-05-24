@@ -1,0 +1,8 @@
+{
+  "slug": "solo-criminal",
+  "label": "Solo Criminal Defense",
+  "text": "Criminal Defense\n\tDUI & Impaired Driving\n\t\tDriving Under the Influence\n\t\tBoating DUI/BUI\n\tDrug Offenses\n\t\tCannabis Law\n\t\tControlled Substance Charges\n\t\tDrug Crimes\n\tViolent Crimes\n\t\tAssault Law\n\t\tDomestic Violence\n\t\tCivil Protection Claim / Domestic Restraining Order\n\tProperty Crimes\n\t\tBurglary\n\t\tShoplifting\n\tJuvenile & Financial Crimes\n\t\tJuvenile Law\n\t\tWire Fraud\n\t\tFraud and Economic Torts Law",
+  "enrichments": ["Drug Crimes", "Civil Protection Claim / Domestic Restraining Order", "Fraud and Economic Torts Law"],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#solo-criminal",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

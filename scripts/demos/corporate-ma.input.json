@@ -1,0 +1,8 @@
+{
+  "slug": "corporate-ma",
+  "label": "Corporate M&A",
+  "text": "Mergers & Acquisitions\n\tCorporate Governance\n\t\tCorporate Governance Law\n\t\tBreach of Fiduciary Duty\n\t\tFiduciary Duty\n\tSecurities\n\t\tSecurity Offerings and Capital Markets Law\n\t\tSecurities Fraud\n\t\tSecurities and Financial Instruments Law\n\tDue Diligence\n\t\tAsset Due Diligence Practice\n\t\tRegulatory Compliance\n\t\tDue Diligence Clause\n\tDeal Structuring\n\t\tStock Purchase Agreement\n\t\tAsset Purchase Agreement\n\tPost-Merger\n\t\tAntitrust and Competition Law\n\t\tHostile Takeover",
+  "enrichments": ["Fiduciary Duty", "Securities and Financial Instruments Law", "Due Diligence Clause"],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#corporate-ma",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

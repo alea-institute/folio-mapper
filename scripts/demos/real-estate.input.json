@@ -1,0 +1,8 @@
+{
+  "slug": "real-estate",
+  "label": "Real Estate",
+  "text": "Real Property Law\n\tProperty Transactions\n\t\tProperty Rights and Transactions Law\n\t\tClearing Title\n\tLandlord-Tenant\n\t\tLandlord Tenant Law\n\t\tLease Agreements\n\t\tLandlord-Tenant Claims\n\tZoning & Land Use\n\t\tLand Use and Zoning Law\n\t\tZoning Variance\n\tConstruction\n\t\tConstruction and Development Law\n\t\tBuilding Code Violations\n\t\tConstruction Defect Claims\n\tForeclosure & Liens\n\t\tMortgage Foreclosure\n\t\tEminent Domain Law\n\t\tReverse Mortgage Foreclosure",
+  "enrichments": ["Landlord-Tenant Claims", "Construction Defect Claims", "Reverse Mortgage Foreclosure"],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#real-estate",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

@@ -1,0 +1,8 @@
+{
+  "slug": "family-law",
+  "label": "Family Law Firm",
+  "text": "Family Law\n\tDivorce & Separation\n\t\tContested Divorce\n\t\tLegal Separation\n\t\tUncontested Divorce\n\tChild Custody\n\t\tCustody Law\n\t\tParenting Plan\n\tSupport Obligations\n\t\tChild Support\n\t\tSpousal Support\n\t\tChild Support Enforcement Claim\n\tProtective Orders\n\t\tRestraining Order\n\t\tCriminal Harassment\n\tAdoption & Guardianship\n\t\tAdoption\n\t\tGuardianship\n\t\tAdoption, Surrogacy, and Paternity Law",
+  "enrichments": ["Uncontested Divorce", "Child Support Enforcement Claim", "Adoption, Surrogacy, and Paternity Law"],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#family-law",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

@@ -1,0 +1,8 @@
+{
+  "slug": "ip-tech",
+  "label": "IP & Technology",
+  "text": "Intellectual Property\n\tPatent Practice\n\t\tPatent Law\n\t\tPatent Infringement\n\t\tDirect Patent Infringement\n\tTrademark Practice\n\t\tTrademark and Trade Dress Law\n\t\tTrademark Infringement\n\tTrade Secrets\n\t\tTrade Secret Law\n\t\tTrade Secret Misappropriation\n\tCopyright Practice\n\t\tCopyright Law\n\t\tCopyright Infringement\n\t\tVicarious Copyright Infringement\n\tIP Transactions\n\t\tIntellectual Property Assets\n\t\tSoftware Patent\n\t\tTransactional Practice",
+  "enrichments": ["Direct Patent Infringement", "Vicarious Copyright Infringement", "Transactional Practice"],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#ip-tech",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

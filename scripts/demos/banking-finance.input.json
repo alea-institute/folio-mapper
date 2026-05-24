@@ -1,0 +1,8 @@
+{
+  "slug": "banking-finance",
+  "label": "Banking & Finance",
+  "text": "Banking & Finance Law\n\tCommercial Lending\n\t\tCommercial Finance Law\n\t\tAsset-Based Lending Practice\n\t\tFinancing Practice\n\tSecurities & Capital Markets\n\t\tBroker-Dealer Law\n\t\tDerivatives and Futures Law\n\tInvestment Funds\n\t\tInvestment Companies Law\n\t\tPrivate Equity, Hedge Funds and Venture Capital Law\n\tStructured Finance\n\t\tStructured Finance Law\n\t\tCollateralized Loan Obligation\n\tCompliance & Enforcement\n\t\tBank Secrecy and Anti-Money Laundering Law\n\t\tCryptocurrency Law\n\t\tRegulatory Enforcement",
+  "enrichments": ["Financing Practice", "Regulatory Enforcement"],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#banking-finance",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

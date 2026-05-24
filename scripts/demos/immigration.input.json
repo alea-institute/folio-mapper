@@ -1,0 +1,8 @@
+{
+  "slug": "immigration",
+  "label": "Immigration",
+  "text": "Immigration Law\n\tEmployment Visas\n\t\tEmployment Immigration Law\n\t\tH-1B Visa\n\tFamily & Humanitarian\n\t\tAffirmative Asylum\n\t\tRefugee\n\t\tRefugee Claim\n\t\tRefugee and Asylum Rights\n\tRemoval Defense\n\t\tDeportation\n\t\tDefensive Asylum\n\tStatus Adjustment\n\t\tNaturalization Application\n\t\tGreen Card\n\tSpecial Visas\n\t\tStudent Visa\n\t\tEntertainment Visa",
+  "enrichments": ["Refugee Claim", "Refugee and Asylum Rights"],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#immigration",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

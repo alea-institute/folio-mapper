@@ -1,0 +1,8 @@
+{
+  "slug": "commercial-lit",
+  "label": "Commercial Litigation",
+  "text": "Complex Commercial Litigation\n\tContract Disputes\n\t\tBreach of Contract\n\t\tTortious Interference Claims\n\t\tBreach of Contract Claims\n\tAntitrust\n\t\tAntitrust and Competition Law\n\t\tAntitrust - Bid-Rigging Claims\n\t\tAntitrust - Pricing Claims\n\tSecurities Litigation\n\t\tSecurities Fraud\n\t\tInsider Trading\n\tConsumer & Trade\n\t\tConsumer Protection Law\n\t\tUnfair Competition\n\t\tUnfair Competition Claims\n\tDispute Resolution\n\t\tArbitration Practice\n\t\tMediation Practice",
+  "enrichments": ["Breach of Contract Claims", "Antitrust - Pricing Claims", "Unfair Competition Claims"],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#commercial-lit",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}
