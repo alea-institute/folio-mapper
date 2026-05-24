@@ -13,7 +13,7 @@ import type {
   SuggestionEntry,
   ReviewEntry,
 } from '@folio-mapper/core';
-import { DEFAULT_BRANCH_ORDER, fetchConcept, computeScoreCutoff } from '@folio-mapper/core';
+import { DEFAULT_BRANCH_ORDER, fetchConcept, computeScoreCutoff, selectVisibleCandidates } from '@folio-mapper/core';
 import { CandidatePanel } from './CandidatePanel';
 import { DetailPanel } from './DetailPanel';
 import { MappingToolbar } from './MappingToolbar';
@@ -282,9 +282,7 @@ export function MappingScreen({
             const branchLimit = Math.max(safeTopN, 3);
             candidates = sorted.slice(0, branchLimit);
           } else {
-            candidates = effectiveThreshold > 0
-              ? sorted.filter((c) => c.score >= effectiveThreshold)
-              : sorted;
+            candidates = selectVisibleCandidates(sorted, effectiveThreshold);
           }
           if (searchFilterSet && !isMandatory) {
             candidates = candidates.filter((c) => searchFilterSet.has(c.iri_hash));
