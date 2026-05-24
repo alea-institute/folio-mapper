@@ -644,22 +644,22 @@ it.each([
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Probe automation vs. manual items.json**
    - What we know: The probe script currently hardcodes its items file path.
    - What's unclear: Whether to modify the probe script to accept `--area` (minor change) or create per-area items.json files manually (more files, no script change).
-   - Recommendation: Create a single generalized `scripts/demos/run_probe.py` that accepts `--area` and derives items from `packages/core/src/exemplar/data.ts` directly via tab-parsing. 9 invocations, one script.
+   - RESOLVED: Create a single generalized `scripts/demos/run_probe.py` that accepts `--area` and derives items from `packages/core/src/exemplar/data.ts` directly via tab-parsing. 9 invocations, one script. (Implemented by Plan 04-02.)
 
 2. **Incremental landing vs. single PR**
    - What we know: 9 areas × (probe + curate + tune + register) is a multi-hour effort.
    - What's unclear: Whether to land all 9 in one PR or group them (e.g., 3+3+3 by domain).
-   - Recommendation: Land the lazy-loading refactor and index.ts changes first (trivially reviewable); then land per-area demos in batches of 3-4 to keep PRs manageable. Each batch is independently deployable.
+   - RESOLVED: Land the lazy-loading refactor and index.ts changes first (trivially reviewable); then land per-area demos in batches of 3-4 to keep PRs manageable. Each batch is independently deployable. (Reflected in the Wave 1 → 2 → 3 → 4 batch structure.)
 
 3. **DEMO-03 test timing**
    - What we know: The D-03 test assertion requires the demo JSON to exist first.
    - What's unclear: Whether it belongs in the per-area Wave C or in a final Wave D pass.
-   - Recommendation: Include D-03 assertion in per-area Wave C. Gate each area's commit on it.
+   - RESOLVED: Include the D-03 richness assertion in each area's per-batch verification, gating each area's commit on it. (Plans 04-03/04/05 Task 2.)
 
 ---
 
