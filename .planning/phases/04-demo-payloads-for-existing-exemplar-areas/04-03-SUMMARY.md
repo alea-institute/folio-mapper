@@ -23,4 +23,5 @@ Per D-04 the curation requires LLM provider/model and real judge annotations. In
 - PI active in richness `it.each` (not `it.todo`); no skipped PI.
 
 ## Notes
-- All 4 areas reached ≥3 coherent enrichments worth of richness; none shipped below the D-02 floor.
+- All 4 areas carry their intended enrichments (PI 3, the 3 new areas 3 each) and a visible auto-accept/pending mix.
+- **Fan-out shortfall (solo-criminal):** under the real pipeline, solo-criminal yields max 2 candidates/item and employment-labor max 3 — neither reaches the SC-2 "1:4+" fan-out tier. These are thin-coverage FOLIO areas (precise criminal/employment concepts in sparse hierarchy regions); the probe's higher counts were fuzzy-label artifacts. Accepted via an operator-approved D-02 coherence override (see 04-VERIFICATION.md). The other 8/10 areas each demonstrate 1:4+.
