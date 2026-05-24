@@ -48,8 +48,17 @@
 
 ## Traceability
 
-<!-- Filled by roadmapper: REQ-ID → Phase. -->
-
-| REQ-ID | Phase |
-|--------|-------|
-| (pending roadmap) | |
+| REQ-ID | Phase | Status |
+|--------|-------|--------|
+| DEMO-01 | Phase 4 | Pending |
+| DEMO-02 | Phase 4 | Pending |
+| DEMO-03 | Phase 4 | Pending |
+| DEMO-04 | Phase 4 | Pending |
+| DEMO-05 | Phase 4 | Pending |
+| REG-01 | Phase 5 | Pending |
+| REG-02 | Phase 5 | Pending |
+| REG-03 | Phase 5 | Pending |
+| REG-04 | Phase 5 | Pending |
+| REGDEMO-01 | Phase 6 | Pending |
+| REGDEMO-02 | Phase 6 | Pending |
+| REGDEMO-03 | Phase 6 | Pending |
