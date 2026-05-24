@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect, useMemo } from 'react';
 import type { BranchGroup, BranchState, FolioCandidate } from '@folio-mapper/core';
+import { selectVisibleCandidates } from '@folio-mapper/core';
 import { ConfidenceBadge } from './ConfidenceBadge';
 import {
   collectAllCollapsibleKeys,
@@ -130,7 +131,7 @@ export function CandidateTree({
       } else if (isMandatory) {
         visible = sorted.slice(0, Math.max(topN, 3));
       } else {
-        visible = threshold > 0 ? sorted.filter((c) => c.score >= threshold) : sorted;
+        visible = selectVisibleCandidates(sorted, threshold);
       }
       if (!showAll) {
         const visSet = new Set(visible.map((c) => c.iri_hash));
@@ -204,9 +205,7 @@ export function CandidateTree({
           const branchLimit = Math.max(topN, 3);
           visibleCandidates = sorted.slice(0, branchLimit);
         } else {
-          visibleCandidates = threshold > 0
-            ? sorted.filter((c) => c.score >= threshold)
-            : sorted;
+          visibleCandidates = selectVisibleCandidates(sorted, threshold);
         }
         // Always include selected candidates even if outside top N
         if (!showAll) {

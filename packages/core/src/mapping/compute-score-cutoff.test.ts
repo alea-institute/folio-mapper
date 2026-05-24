@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { computeScoreCutoff } from './compute-score-cutoff';
-import type { BranchGroup } from '../folio/types';
+import { computeScoreCutoff, selectVisibleCandidates } from './compute-score-cutoff';
+import type { BranchGroup, FolioCandidate } from '../folio/types';
 import type { BranchState } from './types';
 
 function makeBranchGroup(branch: string, scores: number[]): BranchGroup {
@@ -123,5 +123,82 @@ describe('computeScoreCutoff', () => {
     };
     // Non-mandatory pooled: [70, 60, 55, 45, 30], topN=3 → cutoff = 55
     expect(computeScoreCutoff(groups, 3, states)).toBe(55);
+  });
+});
+
+// --- Helper to build FolioCandidate arrays for selectVisibleCandidates tests ---
+
+function makeCandidates(scores: number[]): FolioCandidate[] {
+  return scores.map((score, i) => ({
+    label: `c${i}`,
+    iri: `https://example.org/c${i}`,
+    iri_hash: `hash${i}`,
+    definition: '',
+    synonyms: [],
+    branch: 'TestBranch',
+    branch_color: '#000',
+    hierarchy_path: [],
+    score,
+  }));
+}
+
+describe('selectVisibleCandidates', () => {
+  it('Test A (bug repro): sparse branch with all scores below threshold returns top 3', () => {
+    // Defect 3: Area of Law scores [52.4, 52.4, 47.3], threshold=59.4 (from high-scoring Service branch)
+    // Before fix: filter returns [] (all below threshold); after fix: floor=3 returns top 3
+    const sorted = makeCandidates([52.4, 52.4, 47.3]);
+    const result = selectVisibleCandidates(sorted, 59.4);
+    expect(result).toHaveLength(3);
+    expect(result[0].score).toBe(52.4);
+    expect(result[2].score).toBe(47.3);
+  });
+
+  it('Test B (no regression): branch with many high-scoring candidates returns full thresholded set', () => {
+    // Scores [99, 88, 70, 60, 40], threshold=60 → candidates >= 60 are [99,88,70,60]; floor of 3 adds nothing
+    const sorted = makeCandidates([99, 88, 70, 60, 40]);
+    const result = selectVisibleCandidates(sorted, 60);
+    expect(result).toHaveLength(4);
+    expect(result.map((c) => c.score)).toEqual([99, 88, 70, 60]);
+  });
+
+  it('Test C (threshold <= 0): returns all candidates unchanged', () => {
+    const sorted = makeCandidates([90, 70, 50]);
+    expect(selectVisibleCandidates(sorted, 0)).toHaveLength(3);
+    expect(selectVisibleCandidates(sorted, -5)).toHaveLength(3);
+  });
+
+  it('Test D (floor exceeds branch size): branch with 2 candidates all below threshold returns both', () => {
+    const sorted = makeCandidates([30, 20]);
+    const result = selectVisibleCandidates(sorted, 50);
+    expect(result).toHaveLength(2);
+    expect(result[0].score).toBe(30);
+    expect(result[1].score).toBe(20);
+  });
+
+  it('Test E (de-dup order): top-floor candidates that also exceed threshold are not duplicated', () => {
+    // Scores [99, 88, 77, 66, 40], threshold=65 → qualifying: [99,88,77,66]; floor top 3: [99,88,77]
+    // Union = [99,88,77,66] — no duplicates, still descending
+    const sorted = makeCandidates([99, 88, 77, 66, 40]);
+    const result = selectVisibleCandidates(sorted, 65);
+    expect(result).toHaveLength(4);
+    expect(result.map((c) => c.score)).toEqual([99, 88, 77, 66]);
+  });
+
+  it('does not mutate the input array', () => {
+    const sorted = makeCandidates([50, 40, 30]);
+    const original = [...sorted];
+    selectVisibleCandidates(sorted, 60);
+    expect(sorted).toEqual(original);
+  });
+
+  it('custom floor parameter is respected', () => {
+    // All scores below threshold; floor=5 but only 3 candidates → returns all 3
+    const sorted = makeCandidates([40, 30, 20]);
+    const result = selectVisibleCandidates(sorted, 50, 5);
+    expect(result).toHaveLength(3);
+  });
+
+  it('empty input returns empty array', () => {
+    expect(selectVisibleCandidates([], 60)).toHaveLength(0);
   });
 });
