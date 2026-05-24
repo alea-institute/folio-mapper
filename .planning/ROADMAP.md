@@ -44,8 +44,8 @@ Milestone summary: `.planning/MILESTONES.md`.
   4. Zero LLM API calls occur at runtime when any of the 9 existing-area demos is loaded
 **Plans**: 5 plans
 Plans:
-- [ ] 04-01-PLAN.md — Lazy-load manifest migration + Wave 0 test parametrization (foundation)
-- [ ] 04-02-PLAN.md — Generalized coverage probe script + 9 probe-items files
+- [x] 04-01-PLAN.md — Lazy-load manifest migration + Wave 0 test parametrization (foundation)
+- [x] 04-02-PLAN.md — Generalized coverage probe script + 9 probe-items files
 - [ ] 04-03-PLAN.md — Batch 1: re-curate PI + curate solo-criminal, family-law, employment-labor
 - [ ] 04-04-PLAN.md — Batch 2: curate corporate-ma, ip-tech, commercial-lit
 - [ ] 04-05-PLAN.md — Batch 3: curate real-estate, banking-finance, immigration + phase gate
@@ -79,7 +79,7 @@ Plans:
 | 1. Revamp Exemplars | v1.0 | 1/1 | Complete | 2026 |
 | 2. Demo Mode | v1.0 | 4/4 | Complete | 2026 |
 | 3. New (Fresh Session in New Tab) | v1.0 | 3/3 | Complete | 2026-05-22 |
-| 4. Demo Payloads for Existing Exemplar Areas | v1.1 | 0/5 | Planned | - |
+| 4. Demo Payloads for Existing Exemplar Areas | v1.1 | 2/5 | In Progress|  |
 | 5. Regulatory Exemplars | v1.1 | 0/? | Not started | - |
 | 6. Demo Payloads for Regulatory Exemplars | v1.1 | 0/? | Not started | - |
 
