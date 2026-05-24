@@ -1,0 +1,40 @@
+{
+  "practice_area": "corporate-ma",
+  "source": "packages/core/src/exemplar/data.ts (id: corporate-ma)",
+  "items": [
+    "Mergers & Acquisitions",
+    "Corporate Governance",
+    "Corporate Governance Law",
+    "Breach of Fiduciary Duty",
+    "Securities",
+    "Security Offerings and Capital Markets Law",
+    "Securities Fraud",
+    "Due Diligence",
+    "Asset Due Diligence Practice",
+    "Regulatory Compliance",
+    "Deal Structuring",
+    "Stock Purchase Agreement",
+    "Asset Purchase Agreement",
+    "Post-Merger",
+    "Antitrust and Competition Law",
+    "Hostile Takeover"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}

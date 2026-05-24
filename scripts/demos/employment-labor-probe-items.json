@@ -1,0 +1,40 @@
+{
+  "practice_area": "employment-labor",
+  "source": "packages/core/src/exemplar/data.ts (id: employment-labor)",
+  "items": [
+    "Employment Law",
+    "Discrimination",
+    "Employment Discrimination Law",
+    "Age Discrimination",
+    "Wage & Hour",
+    "Wage and Hour Law",
+    "Pay Equity Law",
+    "Workplace Safety",
+    "Employment Health and Safety Law",
+    "Substance Abuse and Drug Testing Law",
+    "Wrongful Termination",
+    "Wrongful Discharge or Termination",
+    "Reduction in Force Law",
+    "Benefits & Compensation",
+    "Workers Compensation Law",
+    "Unemployment Benefits Law"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}

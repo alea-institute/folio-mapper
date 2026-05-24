@@ -1,0 +1,40 @@
+{
+  "practice_area": "solo-criminal",
+  "source": "packages/core/src/exemplar/data.ts (id: solo-criminal)",
+  "items": [
+    "Criminal Defense",
+    "DUI & Impaired Driving",
+    "Driving Under the Influence",
+    "Boating DUI/BUI",
+    "Drug Offenses",
+    "Cannabis Law",
+    "Controlled Substance Charges",
+    "Violent Crimes",
+    "Assault Law",
+    "Domestic Violence",
+    "Property Crimes",
+    "Burglary",
+    "Shoplifting",
+    "Juvenile & Financial Crimes",
+    "Juvenile Law",
+    "Wire Fraud"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}

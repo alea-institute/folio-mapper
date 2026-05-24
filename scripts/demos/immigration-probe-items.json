@@ -1,0 +1,40 @@
+{
+  "practice_area": "immigration",
+  "source": "packages/core/src/exemplar/data.ts (id: immigration)",
+  "items": [
+    "Immigration Law",
+    "Employment Visas",
+    "Employment Immigration Law",
+    "H-1B Visa",
+    "Family & Humanitarian",
+    "Affirmative Asylum",
+    "Refugee",
+    "Removal Defense",
+    "Deportation",
+    "Defensive Asylum",
+    "Status Adjustment",
+    "Naturalization Application",
+    "Green Card",
+    "Special Visas",
+    "Student Visa",
+    "Entertainment Visa"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}

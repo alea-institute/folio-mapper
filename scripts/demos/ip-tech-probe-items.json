@@ -1,0 +1,40 @@
+{
+  "practice_area": "ip-tech",
+  "source": "packages/core/src/exemplar/data.ts (id: ip-tech)",
+  "items": [
+    "Intellectual Property",
+    "Patent Practice",
+    "Patent Law",
+    "Patent Infringement",
+    "Trademark Practice",
+    "Trademark and Trade Dress Law",
+    "Trademark Infringement",
+    "Trade Secrets",
+    "Trade Secret Law",
+    "Trade Secret Misappropriation",
+    "Copyright Practice",
+    "Copyright Law",
+    "Copyright Infringement",
+    "IP Transactions",
+    "Intellectual Property Assets",
+    "Software Patent"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}
