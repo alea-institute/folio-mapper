@@ -1,16 +1,16 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: milestone
-status: Awaiting next milestone
-last_updated: "2026-05-24T16:23:00.000Z"
+milestone: v1.1
+milestone_name: Full Demo Coverage + Regulatory Exemplars
+status: planning
+last_updated: "2026-05-24T16:28:02.260Z"
 last_activity: 2026-05-24
 progress:
-  total_phases: 3
-  completed_phases: 3
-  total_plans: 8
-  completed_plans: 8
-  percent: 100
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 Last activity: 2026-05-24 - Completed quick task 260524-fmm: Fix computeScoreCutoff global-threshold bug
@@ -24,10 +24,10 @@ Last activity: 2026-05-24 - Completed quick task 260524-fmm: Fix computeScoreCut
 
 ## Current Position
 
-Phase: Milestone v1.0 complete
+Phase: Not started (defining requirements)
 Plan: —
-Status: Awaiting next milestone
-Last activity: 2026-05-23 — Milestone v1.0 completed and archived
+Status: Defining requirements
+Last activity: 2026-05-24 — Milestone v1.1 started
 
 ## Operator Next Steps
 
