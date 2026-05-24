@@ -1,0 +1,3163 @@
+{
+  "version": "1.3",
+  "created": "2026-05-24T19:42:35.342129+00:00",
+  "updated": "2026-05-24T19:42:35.342129+00:00",
+  "source_file": null,
+  "input_format": "hierarchical",
+  "total_nodes": 19,
+  "completed": 16,
+  "skipped": 0,
+  "current_position": 0,
+  "provider": "anthropic",
+  "model": "claude-3-5-sonnet-latest",
+  "text_input": "Mergers & Acquisitions\n\tCorporate Governance\n\t\tCorporate Governance Law\n\t\tBreach of Fiduciary Duty\n\t\tFiduciary Duty\n\tSecurities\n\t\tSecurity Offerings and Capital Markets Law\n\t\tSecurities Fraud\n\t\tSecurities and Financial Instruments Law\n\tDue Diligence\n\t\tAsset Due Diligence Practice\n\t\tRegulatory Compliance\n\t\tDue Diligence Clause\n\tDeal Structuring\n\t\tStock Purchase Agreement\n\t\tAsset Purchase Agreement\n\tPost-Merger\n\t\tAntitrust and Competition Law\n\t\tHostile Takeover",
+  "parse_result": {
+    "format": "hierarchical",
+    "items": [
+      {
+        "text": "Mergers & Acquisitions",
+        "index": 0,
+        "ancestry": []
+      },
+      {
+        "text": "Corporate Governance",
+        "index": 1,
+        "ancestry": [
+          "Mergers & Acquisitions"
+        ]
+      },
+      {
+        "text": "Corporate Governance Law",
+        "index": 2,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Corporate Governance"
+        ]
+      },
+      {
+        "text": "Breach of Fiduciary Duty",
+        "index": 3,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Corporate Governance"
+        ]
+      },
+      {
+        "text": "Fiduciary Duty",
+        "index": 4,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Corporate Governance"
+        ]
+      },
+      {
+        "text": "Securities",
+        "index": 5,
+        "ancestry": [
+          "Mergers & Acquisitions"
+        ]
+      },
+      {
+        "text": "Security Offerings and Capital Markets Law",
+        "index": 6,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Securities"
+        ]
+      },
+      {
+        "text": "Securities Fraud",
+        "index": 7,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Securities"
+        ]
+      },
+      {
+        "text": "Securities and Financial Instruments Law",
+        "index": 8,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Securities"
+        ]
+      },
+      {
+        "text": "Due Diligence",
+        "index": 9,
+        "ancestry": [
+          "Mergers & Acquisitions"
+        ]
+      },
+      {
+        "text": "Asset Due Diligence Practice",
+        "index": 10,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Due Diligence"
+        ]
+      },
+      {
+        "text": "Regulatory Compliance",
+        "index": 11,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Due Diligence"
+        ]
+      },
+      {
+        "text": "Due Diligence Clause",
+        "index": 12,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Due Diligence"
+        ]
+      },
+      {
+        "text": "Deal Structuring",
+        "index": 13,
+        "ancestry": [
+          "Mergers & Acquisitions"
+        ]
+      },
+      {
+        "text": "Stock Purchase Agreement",
+        "index": 14,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Deal Structuring"
+        ]
+      },
+      {
+        "text": "Asset Purchase Agreement",
+        "index": 15,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Deal Structuring"
+        ]
+      },
+      {
+        "text": "Post-Merger",
+        "index": 16,
+        "ancestry": [
+          "Mergers & Acquisitions"
+        ]
+      },
+      {
+        "text": "Antitrust and Competition Law",
+        "index": 17,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Post-Merger"
+        ]
+      },
+      {
+        "text": "Hostile Takeover",
+        "index": 18,
+        "ancestry": [
+          "Mergers & Acquisitions",
+          "Post-Merger"
+        ]
+      }
+    ],
+    "hierarchy": [
+      {
+        "label": "Mergers & Acquisitions",
+        "depth": 0,
+        "children": [
+          {
+            "label": "Corporate Governance",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Corporate Governance Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Breach of Fiduciary Duty",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Fiduciary Duty",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Securities",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Security Offerings and Capital Markets Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Securities Fraud",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Securities and Financial Instruments Law",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Due Diligence",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Asset Due Diligence Practice",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Regulatory Compliance",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Due Diligence Clause",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Deal Structuring",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Stock Purchase Agreement",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Asset Purchase Agreement",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Post-Merger",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Antitrust and Competition Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Hostile Takeover",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_items": 19,
+    "headers": null,
+    "source_filename": null,
+    "raw_preview": [
+      [
+        "Mergers & Acquisitions"
+      ],
+      [
+        "",
+        "Corporate Governance"
+      ],
+      [
+        "",
+        "",
+        "Corporate Governance Law"
+      ],
+      [
+        "",
+        "",
+        "Breach of Fiduciary Duty"
+      ],
+      [
+        "",
+        "",
+        "Fiduciary Duty"
+      ]
+    ]
+  },
+  "mapping_response": {
+    "items": [
+      {
+        "item_index": 0,
+        "item_text": "Mergers & Acquisitions",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Mergers and Acquisitions Law",
+                "iri": "https://folio.openlegalstandard.org/RD0qGHeWoQmYfyZgpSOgFcG",
+                "iri_hash": "RD0qGHeWoQmYfyZgpSOgFcG",
+                "definition": "Law dealing with companies that are purchasing and/or merging with other companies.",
+                "synonyms": [
+                  "Derecho de Fusiones y Adquisiciones",
+                  "Direito de fusões e aquisições",
+                  "Droit des fusions et acquisitions",
+                  "Fusions- und Übernahmerecht",
+                  "M&A Law",
+                  "M&A法",
+                  "Mergers and Acquisitions",
+                  "Mergers and Acquisitions Law",
+                  "חוקי מיזוגים ורכישות",
+                  "मर्जर और अक्विजीशन कानून",
+                  "并购法",
+                  "MRGA"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Corporate Law",
+                    "iri_hash": "RF0Bb0267149dFC8b5e349a1"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Law",
+                    "iri_hash": "RD0qGHeWoQmYfyZgpSOgFcG"
+                  }
+                ],
+                "score": 95.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 1,
+        "item_text": "Corporate Governance",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Corporate Governance Law",
+                "iri": "https://folio.openlegalstandard.org/RB7pLfw7zqXtd20kKg7EcOA",
+                "iri_hash": "RB7pLfw7zqXtd20kKg7EcOA",
+                "definition": "Mechanisms, processes, and relations by which corporations are controlled and operated.",
+                "synonyms": [
+                  "Corporate Governance",
+                  "Corporate Governance Law",
+                  "Direito de governança corporativa",
+                  "Droit de gouvernance d'entreprise",
+                  "Ley de Gobierno Corporativo",
+                  "Unternehmensführungsrecht",
+                  "חוק ממשל תאגידי",
+                  "कॉर्पोरेट गवर्नेंस कानून",
+                  "企業ガバナンス法",
+                  "公司治理法",
+                  "CGOV"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Corporate Law",
+                    "iri_hash": "RF0Bb0267149dFC8b5e349a1"
+                  },
+                  {
+                    "label": "Corporate Governance Law",
+                    "iri_hash": "RB7pLfw7zqXtd20kKg7EcOA"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Corporate Law",
+                "iri": "https://folio.openlegalstandard.org/RF0Bb0267149dFC8b5e349a1",
+                "iri_hash": "RF0Bb0267149dFC8b5e349a1",
+                "definition": "Law that governs the formation and operation of corporations.",
+                "synonyms": [
+                  "Corporate Law",
+                  "Derecho corporativo",
+                  "Derecho de sociedades",
+                  "Direito societário",
+                  "Droit des sociétés",
+                  "Gesellschaftsrecht",
+                  "חוק תאגידי",
+                  "कॉर्पोरेट कानून",
+                  "会社法",
+                  "公司法",
+                  "CORP"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Corporate Law",
+                    "iri_hash": "RF0Bb0267149dFC8b5e349a1"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Bylaws",
+                "iri": "https://folio.openlegalstandard.org/R9LAXPgIieD4a2eVmXhMGWs",
+                "iri_hash": "R9LAXPgIieD4a2eVmXhMGWs",
+                "definition": "Bylaws are internal regulations adopted by an organization to manage its operations and procedures. They detail roles of officers, meeting protocols, and other organizational rules.",
+                "synonyms": [
+                  "Byelaws",
+                  "Company Bylaws",
+                  "Corporate Byelaws"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Entity Formation and Governance Document",
+                    "iri_hash": "RCBtDyjzrPbQyhvU5V64Irn"
+                  },
+                  {
+                    "label": "Bylaws",
+                    "iri_hash": "R9LAXPgIieD4a2eVmXhMGWs"
+                  }
+                ],
+                "score": 58.0
+              },
+              {
+                "label": "Charter",
+                "iri": "https://folio.openlegalstandard.org/R2XPfyqdYCu3x4qjrIXbMd",
+                "iri_hash": "R2XPfyqdYCu3x4qjrIXbMd",
+                "definition": "A Charter is a formal document that establishes an organization, specifying its purpose, structure, and basic operating principles. It sets the entity's foundational governance structure.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Entity Formation and Governance Document",
+                    "iri_hash": "RCBtDyjzrPbQyhvU5V64Irn"
+                  },
+                  {
+                    "label": "Charter",
+                    "iri_hash": "R2XPfyqdYCu3x4qjrIXbMd"
+                  }
+                ],
+                "score": 55.0
+              }
+            ]
+          },
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Corporate Governance Analysis",
+                "iri": "https://folio.openlegalstandard.org/RBYHspF2cClL6YzpLgQJNTG",
+                "iri_hash": "RBYHspF2cClL6YzpLgQJNTG",
+                "definition": "Corporate Governance Analysis refers to the examination and evaluation of the internal policies, procedures, and practices of a corporation to ensure compliance with legal and regulatory requirements, and to promote transparency and accountability.",
+                "synonyms": [
+                  "Analyse de la gouvernance d'entreprise",
+                  "Analyse der Unternehmensführung",
+                  "Análise de governança corporativa",
+                  "Análisis de Gobierno Corporativo",
+                  "Corporate Governance Analysis",
+                  "ניתוח ממשל תאגידי",
+                  "कॉर्पोरेट गवर्नेंस विश्लेषण",
+                  "企業統治分析",
+                  "公司治理分析"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Bankruptcy and Financial Restructuring Practice",
+                    "iri_hash": "R7LI3BONqNkXbKHKa0t3jyI"
+                  },
+                  {
+                    "label": "Corporate Governance Analysis",
+                    "iri_hash": "RBYHspF2cClL6YzpLgQJNTG"
+                  }
+                ],
+                "score": 68.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 5
+      },
+      {
+        "item_index": 2,
+        "item_text": "Corporate Governance Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Corporate Governance Law",
+                "iri": "https://folio.openlegalstandard.org/RB7pLfw7zqXtd20kKg7EcOA",
+                "iri_hash": "RB7pLfw7zqXtd20kKg7EcOA",
+                "definition": "Mechanisms, processes, and relations by which corporations are controlled and operated.",
+                "synonyms": [
+                  "Corporate Governance",
+                  "Corporate Governance Law",
+                  "Direito de governança corporativa",
+                  "Droit de gouvernance d'entreprise",
+                  "Ley de Gobierno Corporativo",
+                  "Unternehmensführungsrecht",
+                  "חוק ממשל תאגידי",
+                  "कॉर्पोरेट गवर्नेंस कानून",
+                  "企業ガバナンス法",
+                  "公司治理法",
+                  "CGOV"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Corporate Law",
+                    "iri_hash": "RF0Bb0267149dFC8b5e349a1"
+                  },
+                  {
+                    "label": "Corporate Governance Law",
+                    "iri_hash": "RB7pLfw7zqXtd20kKg7EcOA"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Corporate Law",
+                "iri": "https://folio.openlegalstandard.org/RF0Bb0267149dFC8b5e349a1",
+                "iri_hash": "RF0Bb0267149dFC8b5e349a1",
+                "definition": "Law that governs the formation and operation of corporations.",
+                "synonyms": [
+                  "Corporate Law",
+                  "Derecho corporativo",
+                  "Derecho de sociedades",
+                  "Direito societário",
+                  "Droit des sociétés",
+                  "Gesellschaftsrecht",
+                  "חוק תאגידי",
+                  "कॉर्पोरेट कानून",
+                  "会社法",
+                  "公司法",
+                  "CORP"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Corporate Law",
+                    "iri_hash": "RF0Bb0267149dFC8b5e349a1"
+                  }
+                ],
+                "score": 78.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Bylaws",
+                "iri": "https://folio.openlegalstandard.org/R9LAXPgIieD4a2eVmXhMGWs",
+                "iri_hash": "R9LAXPgIieD4a2eVmXhMGWs",
+                "definition": "Bylaws are internal regulations adopted by an organization to manage its operations and procedures. They detail roles of officers, meeting protocols, and other organizational rules.",
+                "synonyms": [
+                  "Byelaws",
+                  "Company Bylaws",
+                  "Corporate Byelaws"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Entity Formation and Governance Document",
+                    "iri_hash": "RCBtDyjzrPbQyhvU5V64Irn"
+                  },
+                  {
+                    "label": "Bylaws",
+                    "iri_hash": "R9LAXPgIieD4a2eVmXhMGWs"
+                  }
+                ],
+                "score": 72.0
+              },
+              {
+                "label": "Charter",
+                "iri": "https://folio.openlegalstandard.org/R2XPfyqdYCu3x4qjrIXbMd",
+                "iri_hash": "R2XPfyqdYCu3x4qjrIXbMd",
+                "definition": "A Charter is a formal document that establishes an organization, specifying its purpose, structure, and basic operating principles. It sets the entity's foundational governance structure.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Entity Formation and Governance Document",
+                    "iri_hash": "RCBtDyjzrPbQyhvU5V64Irn"
+                  },
+                  {
+                    "label": "Charter",
+                    "iri_hash": "R2XPfyqdYCu3x4qjrIXbMd"
+                  }
+                ],
+                "score": 68.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
+      },
+      {
+        "item_index": 3,
+        "item_text": "Breach of Fiduciary Duty",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Trustee",
+                "iri": "https://folio.openlegalstandard.org/R7O8JOzD2AiH9GOb3VZ226",
+                "iri_hash": "R7O8JOzD2AiH9GOb3VZ226",
+                "definition": "A trustee is an individual person or member of a board given control or powers of administration of property in trust with a legal obligation to administer it solely for the purposes specified.",
+                "synonyms": [
+                  "Fideicomisario",
+                  "Treuhänder",
+                  "Trustee",
+                  "fiduciaire",
+                  "fiduciário",
+                  "מנהל תמיכות",
+                  "ट्रस्टी",
+                  "信託受益者",
+                  "受托人",
+                  "TRUS"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Trustee",
+                    "iri_hash": "R7O8JOzD2AiH9GOb3VZ226"
+                  }
+                ],
+                "score": 52.0
+              }
+            ]
+          },
+          {
+            "branch": "Legal Entity",
+            "branch_color": "#085e40",
+            "candidates": [
+              {
+                "label": "Trust",
+                "iri": "https://folio.openlegalstandard.org/R9KvzcwdZ3asqh9BPZRGWR7",
+                "iri_hash": "R9KvzcwdZ3asqh9BPZRGWR7",
+                "definition": "A trust, in estate planning, is a legal entity that holds and manages assets for the benefit of specific individuals or entities, known as beneficiaries. It's established by a grantor (or settlor) and is overseen by a trustee who ensures the assets are managed and distributed according to the grantor's instructions.",
+                "synonyms": [],
+                "branch": "Legal Entity",
+                "branch_color": "#085e40",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Entity",
+                    "iri_hash": "R7L5eLIzH0CpOUE74uJvSjL"
+                  },
+                  {
+                    "label": "Entity",
+                    "iri_hash": "R7oBWHStfmqTLn2MypkW3Pj"
+                  },
+                  {
+                    "label": "Trust",
+                    "iri_hash": "R9KvzcwdZ3asqh9BPZRGWR7"
+                  }
+                ],
+                "score": 38.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Breach of Fiduciary Duty",
+                "iri": "https://folio.openlegalstandard.org/RtmRdqzdG4lddVrtCToiL1",
+                "iri_hash": "RtmRdqzdG4lddVrtCToiL1",
+                "definition": "Breach of Fiduciary Duty refers to a situation where a person in a position of trust and confidence, such as a trustee, agent, or business partner, fails to act in the best interests of the other party and instead acts in their own self-interest, resulting in harm or loss to the other party.",
+                "synonyms": [
+                  "Breach of Fiduciary Duty",
+                  "Incumplimiento del deber fiduciario",
+                  "Verletzung der Treuepflicht",
+                  "Violation du devoir de fidélité",
+                  "Violação do dever fiduciário",
+                  "הפרת חובת נאמנות",
+                  "विश्वासदाता कर्तव्य का उल्लंघन",
+                  "信託義務違反",
+                  "违反信托责任"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Fraud Claims",
+                    "iri_hash": "R8GyyJdxlZtc7PsW9vLAKfE"
+                  },
+                  {
+                    "label": "Breach of Fiduciary Duty",
+                    "iri_hash": "RtmRdqzdG4lddVrtCToiL1"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Employee Breach of Fiduciary Duty",
+                "iri": "https://folio.openlegalstandard.org/R9y9zZ1NXya2AYl2kCNYl3a",
+                "iri_hash": "R9y9zZ1NXya2AYl2kCNYl3a",
+                "definition": "An Employee Breach of Fiduciary Duty refers to a situation where an employee violates their legal obligation to act in the best interest of their employer by engaging in actions that benefit themselves or a third party, resulting in harm to the employer.",
+                "synonyms": [
+                  "Employee Breach of Fiduciary Duty",
+                  "Incumplimiento de deber fiduciario del empleado",
+                  "Verletzung der Treuepflicht durch den Arbeitnehmer",
+                  "Violation du devoir de fidélité de l'employé",
+                  "Violação do dever fiduciário do empregado",
+                  "הפרת חובת נאמנות של עובד",
+                  "कर्मचारी आधारभूत दायित्व का उल्लंघन",
+                  "従業員による信託義務違反",
+                  "雇员违反信托责任"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Fraud Claims",
+                    "iri_hash": "R8GyyJdxlZtc7PsW9vLAKfE"
+                  },
+                  {
+                    "label": "Breach of Fiduciary Duty",
+                    "iri_hash": "RtmRdqzdG4lddVrtCToiL1"
+                  },
+                  {
+                    "label": "Employee Breach of Fiduciary Duty",
+                    "iri_hash": "R9y9zZ1NXya2AYl2kCNYl3a"
+                  }
+                ],
+                "score": 89.0
+              },
+              {
+                "label": "Breach of Fiduciary Duty by Trustee",
+                "iri": "https://folio.openlegalstandard.org/RBix5fW3COPX4xfo2aJNBZa",
+                "iri_hash": "RBix5fW3COPX4xfo2aJNBZa",
+                "definition": "The breach of fiduciary duty by trustee refers to a situation where a trustee fails to act in the best interest of the beneficiaries of a trust, violating their legal obligation to manage the trust assets and affairs with loyalty, honesty, and good faith.",
+                "synonyms": [
+                  "Breach of Fiduciary Duty by Trustee",
+                  "Incumplimiento del deber fiduciario por parte del fiduciario",
+                  "Verletzung der Treuepflicht durch den Treuhänder",
+                  "Violation du devoir de fiduciaire par le fiduciaire",
+                  "Violação do dever fiduciário pelo fiduciário",
+                  "הפרת חובת האמון על ידי הנאמן",
+                  "विश्वासवार्ता के द्वारा न्यायाधीश का उल्लंघन",
+                  "受托人违反信托责任",
+                  "受託者による信託義務違反"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Trust and Estate Claims",
+                    "iri_hash": "R3SDQBy4KfjSgp3bgpb4Fx"
+                  },
+                  {
+                    "label": "Breach of Fiduciary Duty by Trustee",
+                    "iri_hash": "RBix5fW3COPX4xfo2aJNBZa"
+                  }
+                ],
+                "score": 89.0
+              },
+              {
+                "label": "Fiduciary Duty",
+                "iri": "https://folio.openlegalstandard.org/RDYMSvTzMQvR5oJWYzguyJW",
+                "iri_hash": "RDYMSvTzMQvR5oJWYzguyJW",
+                "definition": "Fiduciary duty is a legal obligation requiring one party, the fiduciary, to act in the best interest of another party, typically a beneficiary or principal, with loyalty and care. This duty is paramount in relationships involving trust and confidence, such as those between trustees and beneficiaries, corporate directors and shareholders, or financial advisors and clients.",
+                "synonyms": [
+                  "Trust Duty",
+                  "Trustee Duty"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Fiduciary Duty",
+                    "iri_hash": "RDYMSvTzMQvR5oJWYzguyJW"
+                  }
+                ],
+                "score": 78.0
+              },
+              {
+                "label": "Obligation",
+                "iri": "https://folio.openlegalstandard.org/RDtFkLR3v97fran5zQ3ugao",
+                "iri_hash": "RDtFkLR3v97fran5zQ3ugao",
+                "definition": "An obligation is a legal or moral duty that requires a certain course of action or behavior, often enforceable by law or ethical principles.",
+                "synonyms": [
+                  "Duty",
+                  "Legal Obligation",
+                  "Responsibility"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Obligation",
+                    "iri_hash": "RDtFkLR3v97fran5zQ3ugao"
+                  }
+                ],
+                "score": 45.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 7
+      },
+      {
+        "item_index": 4,
+        "item_text": "Fiduciary Duty",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Fiduciary Duty",
+                "iri": "https://folio.openlegalstandard.org/RDYMSvTzMQvR5oJWYzguyJW",
+                "iri_hash": "RDYMSvTzMQvR5oJWYzguyJW",
+                "definition": "Fiduciary duty is a legal obligation requiring one party, the fiduciary, to act in the best interest of another party, typically a beneficiary or principal, with loyalty and care. This duty is paramount in relationships involving trust and confidence, such as those between trustees and beneficiaries, corporate directors and shareholders, or financial advisors and clients.",
+                "synonyms": [
+                  "Trust Duty",
+                  "Trustee Duty"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Fiduciary Duty",
+                    "iri_hash": "RDYMSvTzMQvR5oJWYzguyJW"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Breach of Fiduciary Duty",
+                "iri": "https://folio.openlegalstandard.org/RtmRdqzdG4lddVrtCToiL1",
+                "iri_hash": "RtmRdqzdG4lddVrtCToiL1",
+                "definition": "Breach of Fiduciary Duty refers to a situation where a person in a position of trust and confidence, such as a trustee, agent, or business partner, fails to act in the best interests of the other party and instead acts in their own self-interest, resulting in harm or loss to the other party.",
+                "synonyms": [
+                  "Breach of Fiduciary Duty",
+                  "Incumplimiento del deber fiduciario",
+                  "Verletzung der Treuepflicht",
+                  "Violation du devoir de fidélité",
+                  "Violação do dever fiduciário",
+                  "הפרת חובת נאמנות",
+                  "विश्वासदाता कर्तव्य का उल्लंघन",
+                  "信託義務違反",
+                  "违反信托责任"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Fraud Claims",
+                    "iri_hash": "R8GyyJdxlZtc7PsW9vLAKfE"
+                  },
+                  {
+                    "label": "Breach of Fiduciary Duty",
+                    "iri_hash": "RtmRdqzdG4lddVrtCToiL1"
+                  }
+                ],
+                "score": 68.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 5,
+        "item_text": "Securities",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 6,
+        "item_text": "Security Offerings and Capital Markets Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Security Offerings and Capital Markets Law",
+                "iri": "https://folio.openlegalstandard.org/RIx4wseXHDgt3SLWCIjNhd",
+                "iri_hash": "RIx4wseXHDgt3SLWCIjNhd",
+                "definition": "Corporate debt and equity issuance (public and private) and markets.",
+                "synonyms": [
+                  "Ofertas de segurança e direito do mercado de capitais",
+                  "Ofertas de seguridad y derecho de los mercados de capitales",
+                  "Ofertas de valores y derecho de los mercados de capitales",
+                  "Offres de titres et droit des marchés de capitaux",
+                  "Security Offerings and Capital Markets",
+                  "Security Offerings and Capital Markets Law",
+                  "Wertpapieremissionen und Kapitalmarktrecht",
+                  "מציעי אבטחה וחוקי שווקי ההון",
+                  "सुरक्षा ऑफ़रिंग और पूंजी बाजार कानून",
+                  "証券発行と資本市場法",
+                  "证券发行和资本市场法律",
+                  "OFFR"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Securities and Financial Instruments Law",
+                    "iri_hash": "RCF0BMeSwppddfM6cp6AUBK"
+                  },
+                  {
+                    "label": "Security Offerings and Capital Markets Law",
+                    "iri_hash": "RIx4wseXHDgt3SLWCIjNhd"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 7,
+        "item_text": "Securities Fraud",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Securities Fraud",
+                "iri": "https://folio.openlegalstandard.org/RC3iZlQIPU8tP1phFuy6oXX",
+                "iri_hash": "RC3iZlQIPU8tP1phFuy6oXX",
+                "definition": "The wrongful act of deceiving or manipulating investors in the securities market, resulting in financial loss or harm.",
+                "synonyms": [
+                  "Fraude de títulos",
+                  "Fraude sur les valeurs mobilières",
+                  "Wertpapierbetrug",
+                  "証券詐欺",
+                  "证券欺诈"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Fraud Claims",
+                    "iri_hash": "R8GyyJdxlZtc7PsW9vLAKfE"
+                  },
+                  {
+                    "label": "Securities Fraud",
+                    "iri_hash": "RC3iZlQIPU8tP1phFuy6oXX"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Fraud",
+                "iri": "https://folio.openlegalstandard.org/RqGxSnAp9vX42GRKHqwvBe",
+                "iri_hash": "RqGxSnAp9vX42GRKHqwvBe",
+                "definition": "Fraud is the intentional act of deceiving someone in order to gain an unfair advantage or cause harm.",
+                "synonyms": [
+                  "Betrug",
+                  "Fraud",
+                  "Fraude",
+                  "Intentional Deceit",
+                  "הונאה",
+                  "धोखाधड़ी",
+                  "欺诈",
+                  "詐欺"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Fraud Claims",
+                    "iri_hash": "R8GyyJdxlZtc7PsW9vLAKfE"
+                  },
+                  {
+                    "label": "Fraud",
+                    "iri_hash": "RqGxSnAp9vX42GRKHqwvBe"
+                  }
+                ],
+                "score": 75.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 8,
+        "item_text": "Securities and Financial Instruments Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Securities and Financial Instruments Law",
+                "iri": "https://folio.openlegalstandard.org/RCF0BMeSwppddfM6cp6AUBK",
+                "iri_hash": "RCF0BMeSwppddfM6cp6AUBK",
+                "definition": "Law covering transactions and other dealings with securities including both federal- and state-level regulation by purely governmental regulatory agencies, listing requirements of exchanges, and rules of self-regulatory organizations.",
+                "synonyms": [
+                  "Lei de Valores Mobiliários e Instrumentos Financeiros",
+                  "Ley de Valores e Instrumentos Financieros",
+                  "Loi sur les valeurs mobilières et les instruments financiers",
+                  "Securities and Financial Instruments Law",
+                  "Wertpapier- und Finanzinstrumentengesetz",
+                  "חוק ניירות ערך וכלי עזר פיננסיים",
+                  "शेयर और वित्तीय उपकरण कानून",
+                  "証券・金融商品法",
+                  "证券和金融工具法",
+                  "SECU"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Securities and Financial Instruments Law",
+                    "iri_hash": "RCF0BMeSwppddfM6cp6AUBK"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 9,
+        "item_text": "Due Diligence",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Due Diligence Checklist",
+                "iri": "https://folio.openlegalstandard.org/RD1ANosTsAisnuKAZyA2Urd",
+                "iri_hash": "RD1ANosTsAisnuKAZyA2Urd",
+                "definition": "A Due Diligence Checklist is a systematic list of items and information that need to be examined, collected, or verified, typically by a buyer or an auditor, in a legal or financial transaction. This tool is often used to ensure that all necessary aspects of the due diligence process have been covered.",
+                "synonyms": [
+                  "Assessment Criteria List",
+                  "Risk Assessment List",
+                  "Transaction Review Sheet",
+                  "Vetting Checklist"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Document Collections by Areas of Law",
+                    "iri_hash": "RQR64SI6XmYz5JlNaDUOZN"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Documents",
+                    "iri_hash": "R9pDifEQPZakjZCBdUYZVOW"
+                  },
+                  {
+                    "label": "Due Diligence Documents",
+                    "iri_hash": "Rgg5FBSxYAjEkOJt0jqz3I"
+                  },
+                  {
+                    "label": "Due Diligence Checklist",
+                    "iri_hash": "RD1ANosTsAisnuKAZyA2Urd"
+                  }
+                ],
+                "score": 81.0
+              }
+            ]
+          },
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Due Diligence",
+                "iri": "https://folio.openlegalstandard.org/RXAOdy7NJAxWjMtDJP9Bw6",
+                "iri_hash": "RXAOdy7NJAxWjMtDJP9Bw6",
+                "definition": "Due Diligence is the process of conducting a thorough investigation and analysis of a company or business before a merger or acquisition takes place.",
+                "synonyms": [
+                  "Diligence raisonnable",
+                  "Diligencia Debida",
+                  "Diligência prévia",
+                  "Due Diligence",
+                  "Sorgfaltspflicht",
+                  "זהירות ראויה",
+                  "द्यू डिलिजेंस",
+                  "デューデリジェンス",
+                  "尽职调查"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Event",
+                    "iri_hash": "R73hoH1RXYjBTYiGfolpsAF"
+                  },
+                  {
+                    "label": "Transaction Events",
+                    "iri_hash": "RdfKnWpXsG2eBmnS3oJNTF"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Events",
+                    "iri_hash": "R9amI1PJs7oW7XvMDtXomF9"
+                  },
+                  {
+                    "label": "Due Diligence",
+                    "iri_hash": "RXAOdy7NJAxWjMtDJP9Bw6"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          },
+          {
+            "branch": "Legal Use Cases",
+            "branch_color": "#4a3570",
+            "candidates": [
+              {
+                "label": "Due Diligence Management",
+                "iri": "https://folio.openlegalstandard.org/R8PvYibP2eJP2dynJCZMipF",
+                "iri_hash": "R8PvYibP2eJP2dynJCZMipF",
+                "definition": "Due Diligence Management refers to the process of conducting a thorough investigation and analysis of a legal transaction to ensure that all relevant information is disclosed and risks are identified and mitigated.",
+                "synonyms": [],
+                "branch": "Legal Use Cases",
+                "branch_color": "#4a3570",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Use Cases",
+                    "iri_hash": "R9B8sRCK209t5Y8LlU4f62a"
+                  },
+                  {
+                    "label": "Deal Management",
+                    "iri_hash": "R8bS3yb1nTD8lCzWFVFMZ0c"
+                  },
+                  {
+                    "label": "Due Diligence Management",
+                    "iri_hash": "R8PvYibP2eJP2dynJCZMipF"
+                  }
+                ],
+                "score": 84.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Due Diligence Clause",
+                "iri": "https://folio.openlegalstandard.org/RqBMS8HFJwbfAcW0aEKhyF",
+                "iri_hash": "RqBMS8HFJwbfAcW0aEKhyF",
+                "definition": "A Due Diligence Clause is a provision in a contract that requires a party to exercise a certain level of care and investigation before entering into the agreement, often including a period of time for the investigation to take place.",
+                "synonyms": [
+                  "Clause de diligence raisonnable",
+                  "Cláusula de Debida Diligencia",
+                  "Cláusula de Diligencia Debida",
+                  "Cláusula de diligência prévia",
+                  "Due Diligence Clause",
+                  "Sorgfaltspflichtklausel",
+                  "סעיף דיליגנטיות נדרשת",
+                  "देय दिलिजेंस क्लॉज",
+                  "デューデリジェンス条項",
+                  "尽职调查条款"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Transactional Objectives",
+                    "iri_hash": "R70jMZb6xYrVCXW6f3EbO1e"
+                  },
+                  {
+                    "label": "Contractual Clause",
+                    "iri_hash": "RDe0RKU39BlhcyACJW30ZLc"
+                  },
+                  {
+                    "label": "Due Diligence Clause",
+                    "iri_hash": "RqBMS8HFJwbfAcW0aEKhyF"
+                  }
+                ],
+                "score": 82.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
+      },
+      {
+        "item_index": 10,
+        "item_text": "Asset Due Diligence Practice",
+        "branch_groups": [
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Funeral Practices",
+                "iri": "https://folio.openlegalstandard.org/RBtf1nxagk3C03uC0micRM9",
+                "iri_hash": "RBtf1nxagk3C03uC0micRM9",
+                "definition": "Funeral Practices are the various rituals, ceremonies, and customs performed to honor and remember a deceased person. These practices vary greatly across different cultures, religions, and legal systems, often reflecting the beliefs and traditions of the community.",
+                "synonyms": [
+                  "Funeral Rites",
+                  "Mortuary Practices"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Event",
+                    "iri_hash": "R73hoH1RXYjBTYiGfolpsAF"
+                  },
+                  {
+                    "label": "Transaction Events",
+                    "iri_hash": "RdfKnWpXsG2eBmnS3oJNTF"
+                  },
+                  {
+                    "label": "Trusts and Estate Planning Event",
+                    "iri_hash": "R8lhhP1c4Hm9RruhEpWMrJW"
+                  },
+                  {
+                    "label": "Funeral Practices",
+                    "iri_hash": "RBtf1nxagk3C03uC0micRM9"
+                  }
+                ],
+                "score": 85.1
+              },
+              {
+                "label": "Due Diligence",
+                "iri": "https://folio.openlegalstandard.org/RXAOdy7NJAxWjMtDJP9Bw6",
+                "iri_hash": "RXAOdy7NJAxWjMtDJP9Bw6",
+                "definition": "Due Diligence is the process of conducting a thorough investigation and analysis of a company or business before a merger or acquisition takes place.",
+                "synonyms": [
+                  "Diligence raisonnable",
+                  "Diligencia Debida",
+                  "Diligência prévia",
+                  "Due Diligence",
+                  "Sorgfaltspflicht",
+                  "זהירות ראויה",
+                  "द्यू डिलिजेंस",
+                  "デューデリジェンス",
+                  "尽职调查"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Event",
+                    "iri_hash": "R73hoH1RXYjBTYiGfolpsAF"
+                  },
+                  {
+                    "label": "Transaction Events",
+                    "iri_hash": "RdfKnWpXsG2eBmnS3oJNTF"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Events",
+                    "iri_hash": "R9amI1PJs7oW7XvMDtXomF9"
+                  },
+                  {
+                    "label": "Due Diligence",
+                    "iri_hash": "RXAOdy7NJAxWjMtDJP9Bw6"
+                  }
+                ],
+                "score": 78.0
+              }
+            ]
+          },
+          {
+            "branch": "Legal Use Cases",
+            "branch_color": "#4a3570",
+            "candidates": [
+              {
+                "label": "Practice Management",
+                "iri": "https://folio.openlegalstandard.org/RBJy3KoNBYSWUf4xdARMhYt",
+                "iri_hash": "RBJy3KoNBYSWUf4xdARMhYt",
+                "definition": "Practice Management refers to the administration and organization of a law firm's operations, including financial management, client relations, and human resources, within the context of the broader legal industry.",
+                "synonyms": [],
+                "branch": "Legal Use Cases",
+                "branch_color": "#4a3570",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Use Cases",
+                    "iri_hash": "R9B8sRCK209t5Y8LlU4f62a"
+                  },
+                  {
+                    "label": "Business of Law",
+                    "iri_hash": "ROb7P1zmS9dqMfXoFzhfu6"
+                  },
+                  {
+                    "label": "Practice Management",
+                    "iri_hash": "RBJy3KoNBYSWUf4xdARMhYt"
+                  }
+                ],
+                "score": 10.0
+              }
+            ]
+          },
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Asset Due Diligence Practice",
+                "iri": "https://folio.openlegalstandard.org/RB2ewx2zez6oHmbqiPBwmgV",
+                "iri_hash": "RB2ewx2zez6oHmbqiPBwmgV",
+                "definition": "A specialized area of Asset Analysis that involves conducting thorough investigations and assessments of assets to identify potential risks and liabilities before making investment decisions.",
+                "synonyms": [
+                  "Asset Due Diligence",
+                  "Asset Due Diligence Service",
+                  "Asset Due Diligence Practice",
+                  "Pratique de la due diligence des actifs",
+                  "Praxis der Vermögens-Due-Diligence",
+                  "Práctica de Due Diligence de Activos",
+                  "Prática de Due Diligence de Ativos",
+                  "תרגול הסקרנות נכסים",
+                  "एसेट ड्यू डिलिजेंस प्रैक्टिस",
+                  "資産デューデリジェンスの実践",
+                  "资产尽职调查实践"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Bankruptcy and Financial Restructuring Practice",
+                    "iri_hash": "R7LI3BONqNkXbKHKa0t3jyI"
+                  },
+                  {
+                    "label": "Asset Analysis",
+                    "iri_hash": "R957mHhJSapbowW1nGWXSwT"
+                  },
+                  {
+                    "label": "Asset Due Diligence Practice",
+                    "iri_hash": "RB2ewx2zez6oHmbqiPBwmgV"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Funds Practice",
+                "iri": "https://folio.openlegalstandard.org/R7K2qUhID6JtseZQoE6bEEf",
+                "iri_hash": "R7K2qUhID6JtseZQoE6bEEf",
+                "definition": "Funds Practice involves the legal aspects of forming, managing, and regulating investment funds, including private equity funds, hedge funds, and venture capital funds. This practice area covers fund structuring, compliance with financial regulations, investor relations, and transactional activities.",
+                "synonyms": [
+                  "Funds",
+                  "Funds Service"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Transactional Practice",
+                    "iri_hash": "RKzL5nW7IGg4mvAPFX2MUL"
+                  },
+                  {
+                    "label": "Funds Practice",
+                    "iri_hash": "R7K2qUhID6JtseZQoE6bEEf"
+                  }
+                ],
+                "score": 35.0
+              },
+              {
+                "label": "M&A F8 Tax Practice",
+                "iri": "https://folio.openlegalstandard.org/R77nYoFJGfjXohVPgurxVD0",
+                "iri_hash": "R77nYoFJGfjXohVPgurxVD0",
+                "definition": "M&A F8 Tax Practice refers to the specialized legal services provided by a legal services provider in the area of tax law related to mergers and acquisitions within the M&A F Regulatory and Specialty Matters Practice.",
+                "synonyms": [
+                  "M&A F8 Tax",
+                  "M&A F8 Tax Service",
+                  "M&A F8 Steuerpraxis",
+                  "M&A F8 Tax Practice",
+                  "M&A F8 מקצוע המיסים",
+                  "M&A F8税务实践",
+                  "M&A F8税務実務",
+                  "Pratique fiscale M&A F8",
+                  "Práctica fiscal de fusiones y adquisiciones F8",
+                  "Prática fiscal M&A F8",
+                  "एम एंड ए एफ 8 टैक्स प्रैक्टिस"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Transactional Practice",
+                    "iri_hash": "RKzL5nW7IGg4mvAPFX2MUL"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Practice",
+                    "iri_hash": "RBosma6qE0p7REgIqlUxvIR"
+                  },
+                  {
+                    "label": "M&A Practice Components",
+                    "iri_hash": "RVLgJukt9MTZNfTewtxNIK"
+                  },
+                  {
+                    "label": "M&A F Regulatory and Specialty Matters Practice",
+                    "iri_hash": "R8B946ewYpMD86GqDEqxNS"
+                  },
+                  {
+                    "label": "M&A F8 Tax Practice",
+                    "iri_hash": "R77nYoFJGfjXohVPgurxVD0"
+                  }
+                ],
+                "score": 25.0
+              },
+              {
+                "label": "Tax Practice",
+                "iri": "https://folio.openlegalstandard.org/R527Rr0DAZ1Lu9VPx6QRbj",
+                "iri_hash": "R527Rr0DAZ1Lu9VPx6QRbj",
+                "definition": "Tax practice refers lawyers assisting individuals or organizations in navigating tax laws, including compliance, filing returns, and handling disputes with tax authorities. These lawyers may also advise on tax planning strategies to optimize tax liability and benefit",
+                "synonyms": [
+                  "Tax",
+                  "Tax Service"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Regulatory Services (Non-Dispute)",
+                    "iri_hash": "RBWo88jsbY4qHzhlTFr5Np7"
+                  },
+                  {
+                    "label": "Tax Practice",
+                    "iri_hash": "R527Rr0DAZ1Lu9VPx6QRbj"
+                  }
+                ],
+                "score": 20.0
+              },
+              {
+                "label": "Service",
+                "iri": "https://folio.openlegalstandard.org/RDK1QEdQg1T8B5HQqMK2pZN",
+                "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+                "definition": "The legal work performed, usually by a Legal Services Provider, in the course of a legal matter.",
+                "synonyms": [
+                  "Dienstleistung",
+                  "Service",
+                  "Servicio",
+                  "Serviço",
+                  "שירות",
+                  "सेवा",
+                  "サービス",
+                  "服务"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  }
+                ],
+                "score": 15.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 8
+      },
+      {
+        "item_index": 11,
+        "item_text": "Regulatory Compliance",
+        "branch_groups": [
+          {
+            "branch": "Governmental Body",
+            "branch_color": "#1a6091",
+            "candidates": [
+              {
+                "label": "Regulator",
+                "iri": "https://folio.openlegalstandard.org/RBKsKSLjVdAm86mHUg8gHf2",
+                "iri_hash": "RBKsKSLjVdAm86mHUg8gHf2",
+                "definition": "A regulator is an entity, typically a government agency or authority, responsible for overseeing and enforcing specific regulations within a particular industry or sector. Regulators ensure compliance with laws, standards, and guidelines to protect public interests, such as consumer safety, environmental protection, and market fairness.",
+                "synonyms": [
+                  "Regulatory Authority"
+                ],
+                "branch": "Governmental Body",
+                "branch_color": "#1a6091",
+                "hierarchy_path": [
+                  {
+                    "label": "Governmental Body",
+                    "iri_hash": "RBQGborh1CfXanGZipDL0Qo"
+                  },
+                  {
+                    "label": "Regulator",
+                    "iri_hash": "RBKsKSLjVdAm86mHUg8gHf2"
+                  }
+                ],
+                "score": 42.0
+              }
+            ]
+          },
+          {
+            "branch": "Legal Authorities",
+            "branch_color": "#8b1a1a",
+            "candidates": [
+              {
+                "label": "Regulations",
+                "iri": "https://folio.openlegalstandard.org/RrECTdM9f5ml4sac9MFrSC",
+                "iri_hash": "RrECTdM9f5ml4sac9MFrSC",
+                "definition": "Rules or orders issued by a governmental regulatory agency and having the force of law.",
+                "synonyms": [
+                  "Regulamentos",
+                  "Réglementations",
+                  "Vorschriften",
+                  "法规",
+                  "規制"
+                ],
+                "branch": "Legal Authorities",
+                "branch_color": "#8b1a1a",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Authorities",
+                    "iri_hash": "RC1CZydjfH8oiM4W3rCkma3"
+                  },
+                  {
+                    "label": "Regulations",
+                    "iri_hash": "RrECTdM9f5ml4sac9MFrSC"
+                  }
+                ],
+                "score": 65.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Compliance",
+                "iri": "https://folio.openlegalstandard.org/RCZwssbqfmu0Lds0LPDV34F",
+                "iri_hash": "RCZwssbqfmu0Lds0LPDV34F",
+                "definition": "Deontic compliance refers to the conformity in action, behavior, or attitude to a set of rules or standards, as prescribed by laws, regulations, or ethical principles.",
+                "synonyms": [
+                  "Legal Compliance"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Compliance",
+                    "iri_hash": "RCZwssbqfmu0Lds0LPDV34F"
+                  }
+                ],
+                "score": 82.0
+              }
+            ]
+          },
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Regulatory Compliance",
+                "iri": "https://folio.openlegalstandard.org/RDEuNPJBSNIARaYTXJwi86w",
+                "iri_hash": "RDEuNPJBSNIARaYTXJwi86w",
+                "definition": "The process by which an entity (i.e., organization or person) ensures that it observes and complies with the external statutory laws and regulations.",
+                "synonyms": [
+                  "Compliance",
+                  "Conformidade regulatória",
+                  "Conformité réglementaire",
+                  "Cumplimiento normativo",
+                  "Cumplimiento regulatorio",
+                  "Regulatorische Compliance",
+                  "Regulatory Compliance",
+                  "עמיתת רגולציה",
+                  "नियामक अनुपालन",
+                  "监管合规",
+                  "規制コンプライアンス",
+                  "COM"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Regulatory Services (Non-Dispute)",
+                    "iri_hash": "RBWo88jsbY4qHzhlTFr5Np7"
+                  },
+                  {
+                    "label": "Regulatory Compliance",
+                    "iri_hash": "RDEuNPJBSNIARaYTXJwi86w"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Insurance Regulatory Practice",
+                "iri": "https://folio.openlegalstandard.org/RDswXyA54Z3tSp18RnKQm1k",
+                "iri_hash": "RDswXyA54Z3tSp18RnKQm1k",
+                "definition": "Insurance Regulatory Practice involves representing companies, brokers, and other entities in complying with the regulatory requirements imposed by insurance regulatory authorities. This legal service includes obtaining licenses, navigating regulatory changes, and ensuring adherence to financial solvency, consumer protection, and reporting obligations.",
+                "synonyms": [
+                  "Insurance Regulatory",
+                  "Insurance Regulatory Service"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Regulatory Services (Non-Dispute)",
+                    "iri_hash": "RBWo88jsbY4qHzhlTFr5Np7"
+                  },
+                  {
+                    "label": "Insurance Regulatory Practice",
+                    "iri_hash": "RDswXyA54Z3tSp18RnKQm1k"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 5
+      },
+      {
+        "item_index": 12,
+        "item_text": "Due Diligence Clause",
+        "branch_groups": [
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Due Diligence",
+                "iri": "https://folio.openlegalstandard.org/RXAOdy7NJAxWjMtDJP9Bw6",
+                "iri_hash": "RXAOdy7NJAxWjMtDJP9Bw6",
+                "definition": "Due Diligence is the process of conducting a thorough investigation and analysis of a company or business before a merger or acquisition takes place.",
+                "synonyms": [
+                  "Diligence raisonnable",
+                  "Diligencia Debida",
+                  "Diligência prévia",
+                  "Due Diligence",
+                  "Sorgfaltspflicht",
+                  "זהירות ראויה",
+                  "द्यू डिलिजेंस",
+                  "デューデリジェンス",
+                  "尽职调查"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Event",
+                    "iri_hash": "R73hoH1RXYjBTYiGfolpsAF"
+                  },
+                  {
+                    "label": "Transaction Events",
+                    "iri_hash": "RdfKnWpXsG2eBmnS3oJNTF"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Events",
+                    "iri_hash": "R9amI1PJs7oW7XvMDtXomF9"
+                  },
+                  {
+                    "label": "Due Diligence",
+                    "iri_hash": "RXAOdy7NJAxWjMtDJP9Bw6"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Due Diligence Clause",
+                "iri": "https://folio.openlegalstandard.org/RqBMS8HFJwbfAcW0aEKhyF",
+                "iri_hash": "RqBMS8HFJwbfAcW0aEKhyF",
+                "definition": "A Due Diligence Clause is a provision in a contract that requires a party to exercise a certain level of care and investigation before entering into the agreement, often including a period of time for the investigation to take place.",
+                "synonyms": [
+                  "Clause de diligence raisonnable",
+                  "Cláusula de Debida Diligencia",
+                  "Cláusula de Diligencia Debida",
+                  "Cláusula de diligência prévia",
+                  "Due Diligence Clause",
+                  "Sorgfaltspflichtklausel",
+                  "סעיף דיליגנטיות נדרשת",
+                  "देय दिलिजेंस क्लॉज",
+                  "デューデリジェンス条項",
+                  "尽职调查条款"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Transactional Objectives",
+                    "iri_hash": "R70jMZb6xYrVCXW6f3EbO1e"
+                  },
+                  {
+                    "label": "Contractual Clause",
+                    "iri_hash": "RDe0RKU39BlhcyACJW30ZLc"
+                  },
+                  {
+                    "label": "Due Diligence Clause",
+                    "iri_hash": "RqBMS8HFJwbfAcW0aEKhyF"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Due Diligence Period Clause",
+                "iri": "https://folio.openlegalstandard.org/RCgvrK5Vi1vvqhQhdNbbxn2",
+                "iri_hash": "RCgvrK5Vi1vvqhQhdNbbxn2",
+                "definition": "A Due Diligence Period Clause is a provision in a contract that allows a party a specified amount of time to conduct investigations and assessments to ensure that the terms of the contract are acceptable before finalizing the agreement.",
+                "synonyms": [
+                  "Clause de période de diligence raisonnable",
+                  "Cláusula de período de diligencia debida",
+                  "Cláusula de período de diligência prévia",
+                  "Due Diligence Period Clause",
+                  "Klausel zur Sorgfaltspflichtfrist",
+                  "סעיף תקופת דיליגנס דיו",
+                  "ड्यू डिलिजेंस पीरियड क्लॉज",
+                  "デューデリジェンス期間条項",
+                  "尽职调查期条款"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Transactional Objectives",
+                    "iri_hash": "R70jMZb6xYrVCXW6f3EbO1e"
+                  },
+                  {
+                    "label": "Contractual Clause",
+                    "iri_hash": "RDe0RKU39BlhcyACJW30ZLc"
+                  },
+                  {
+                    "label": "Due Diligence Clause",
+                    "iri_hash": "RqBMS8HFJwbfAcW0aEKhyF"
+                  },
+                  {
+                    "label": "Due Diligence Period Clause",
+                    "iri_hash": "RCgvrK5Vi1vvqhQhdNbbxn2"
+                  }
+                ],
+                "score": 85.0
+              },
+              {
+                "label": "Due Diligence Contingency Clause",
+                "iri": "https://folio.openlegalstandard.org/R8HKXuxockXCbne65JbjGS0",
+                "iri_hash": "R8HKXuxockXCbne65JbjGS0",
+                "definition": "A due diligence contingency clause is a provision in a contract that allows a party to conduct an investigation or review of the subject matter before the contract becomes binding.",
+                "synonyms": [
+                  "Clause de diligence raisonnable",
+                  "Cláusula de contingencia de debida diligencia",
+                  "Cláusula de contingencia de diligencia debida",
+                  "Cláusula de contingência de diligência prévia",
+                  "Due Diligence Contingency Clause",
+                  "Klausel zur Sorgfaltspflichtprüfung",
+                  "סעיף הצפה והבטחת תשלום",
+                  "ड्यू डिलिजेंस कंटिंजेंसी क्लॉज",
+                  "デューデリジェンス条件条項",
+                  "尽职调查附条件条款"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Transactional Objectives",
+                    "iri_hash": "R70jMZb6xYrVCXW6f3EbO1e"
+                  },
+                  {
+                    "label": "Contractual Clause",
+                    "iri_hash": "RDe0RKU39BlhcyACJW30ZLc"
+                  },
+                  {
+                    "label": "Due Diligence Clause",
+                    "iri_hash": "RqBMS8HFJwbfAcW0aEKhyF"
+                  },
+                  {
+                    "label": "Due Diligence Contingency Clause",
+                    "iri_hash": "R8HKXuxockXCbne65JbjGS0"
+                  }
+                ],
+                "score": 83.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
+      },
+      {
+        "item_index": 13,
+        "item_text": "Deal Structuring",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 14,
+        "item_text": "Stock Purchase Agreement",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Stock Purchase Agreement",
+                "iri": "https://folio.openlegalstandard.org/R9ZM05k9tujXev4Gy4yianI",
+                "iri_hash": "R9ZM05k9tujXev4Gy4yianI",
+                "definition": "A Stock Purchase Agreement is a contract between a buyer and a seller that outlines the terms for the purchase and sale of shares (or stock) in a company. This agreement specifies the number of shares being sold, the purchase price per share, representations and warranties of both parties, and other crucial terms and conditions of the sale.",
+                "synonyms": [
+                  "Share Purchase Agreement"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Debt Supplemental Agreement",
+                    "iri_hash": "R7ddsah86bL3tQ5OmO9B7PB"
+                  },
+                  {
+                    "label": "Security Agreement",
+                    "iri_hash": "R7cIHUn7gvxaOltKIfA7Qta"
+                  },
+                  {
+                    "label": "Stock Purchase Agreement",
+                    "iri_hash": "R9ZM05k9tujXev4Gy4yianI"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Purchase Agreement",
+                "iri": "https://folio.openlegalstandard.org/RBNZsqQC9ryG9xpmKm812lV",
+                "iri_hash": "RBNZsqQC9ryG9xpmKm812lV",
+                "definition": "A Purchase Agreement is a legally binding contract between two or more parties that outlines the terms and conditions of a transaction involving the sale of goods or services.",
+                "synonyms": [
+                  "Contrat d'achat",
+                  "Contrato de Compra",
+                  "Contrato de compra",
+                  "Kaufvertrag",
+                  "Purchase Agreement",
+                  "הסכם רכישה",
+                  "खरीद अनुबंध",
+                  "購入契約",
+                  "购买协议"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Purchase Agreement",
+                    "iri_hash": "RBNZsqQC9ryG9xpmKm812lV"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Stock Purchase",
+                "iri": "https://folio.openlegalstandard.org/RB9zhTcbjIgyYyMdCdzTQnf",
+                "iri_hash": "RB9zhTcbjIgyYyMdCdzTQnf",
+                "definition": null,
+                "synonyms": [
+                  "Achat d'actions",
+                  "Aktienkauf",
+                  "Compra de acciones",
+                  "Compra de ações",
+                  "Stock Purchase",
+                  "קניית מניות",
+                  "स्टॉक खरीद",
+                  "株式購入",
+                  "股票购买"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Transactional Objectives",
+                    "iri_hash": "R70jMZb6xYrVCXW6f3EbO1e"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Objectives",
+                    "iri_hash": "RDRCaFxX4hpUklgNnVS9D8C"
+                  },
+                  {
+                    "label": "M&A Transactional Method",
+                    "iri_hash": "R7Rdvjz7Q76QLZXnSJ66z40"
+                  },
+                  {
+                    "label": "Stock Purchase",
+                    "iri_hash": "RB9zhTcbjIgyYyMdCdzTQnf"
+                  }
+                ],
+                "score": 58.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 15,
+        "item_text": "Asset Purchase Agreement",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Asset Purchase Agreement",
+                "iri": "https://folio.openlegalstandard.org/RmCQVvWRqLFZ5V65G0txFq",
+                "iri_hash": "RmCQVvWRqLFZ5V65G0txFq",
+                "definition": null,
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Document Collections by Areas of Law",
+                    "iri_hash": "RQR64SI6XmYz5JlNaDUOZN"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Documents",
+                    "iri_hash": "R9pDifEQPZakjZCBdUYZVOW"
+                  },
+                  {
+                    "label": "M&A Purchase Agreement",
+                    "iri_hash": "RCr24hGjy5GJ6AOHToVT7YN"
+                  },
+                  {
+                    "label": "Asset Purchase Agreement",
+                    "iri_hash": "RmCQVvWRqLFZ5V65G0txFq"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Purchase Agreement",
+                "iri": "https://folio.openlegalstandard.org/RBNZsqQC9ryG9xpmKm812lV",
+                "iri_hash": "RBNZsqQC9ryG9xpmKm812lV",
+                "definition": "A Purchase Agreement is a legally binding contract between two or more parties that outlines the terms and conditions of a transaction involving the sale of goods or services.",
+                "synonyms": [
+                  "Contrat d'achat",
+                  "Contrato de Compra",
+                  "Contrato de compra",
+                  "Kaufvertrag",
+                  "Purchase Agreement",
+                  "הסכם רכישה",
+                  "खरीद अनुबंध",
+                  "購入契約",
+                  "购买协议"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Purchase Agreement",
+                    "iri_hash": "RBNZsqQC9ryG9xpmKm812lV"
+                  }
+                ],
+                "score": 78.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Asset Purchase",
+                "iri": "https://folio.openlegalstandard.org/RB0slzjST18aw8tHr45KJTh",
+                "iri_hash": "RB0slzjST18aw8tHr45KJTh",
+                "definition": null,
+                "synonyms": [
+                  "Achat d'actifs",
+                  "Compra de ativos",
+                  "Sale of Assets",
+                  "Vermögenskauf",
+                  "資産買収",
+                  "资产购买"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Transactional Objectives",
+                    "iri_hash": "R70jMZb6xYrVCXW6f3EbO1e"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Objectives",
+                    "iri_hash": "RDRCaFxX4hpUklgNnVS9D8C"
+                  },
+                  {
+                    "label": "M&A Transactional Method",
+                    "iri_hash": "R7Rdvjz7Q76QLZXnSJ66z40"
+                  },
+                  {
+                    "label": "Asset Purchase",
+                    "iri_hash": "RB0slzjST18aw8tHr45KJTh"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 16,
+        "item_text": "Post-Merger",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Merger",
+                "iri": "https://folio.openlegalstandard.org/RQK2hPELdaFnrBqNkJFzWO",
+                "iri_hash": "RQK2hPELdaFnrBqNkJFzWO",
+                "definition": "The concept of \"Merger\" refers to a type of M&A deal structure where two or more companies combine into a single entity, with one surviving entity and the others being absorbed.",
+                "synonyms": [
+                  "Fusion",
+                  "Fusión",
+                  "Fusão",
+                  "Merger",
+                  "Zusammenschluss",
+                  "מיזוג",
+                  "विलय",
+                  "合併",
+                  "合并"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Transactional Objectives",
+                    "iri_hash": "R70jMZb6xYrVCXW6f3EbO1e"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Objectives",
+                    "iri_hash": "RDRCaFxX4hpUklgNnVS9D8C"
+                  },
+                  {
+                    "label": "M&A Transactional Method",
+                    "iri_hash": "R7Rdvjz7Q76QLZXnSJ66z40"
+                  },
+                  {
+                    "label": "Merger",
+                    "iri_hash": "RQK2hPELdaFnrBqNkJFzWO"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 17,
+        "item_text": "Antitrust and Competition Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Antitrust and Competition Law",
+                "iri": "https://folio.openlegalstandard.org/RDFwOzDi3E8DQ0OxTKb6UEJ",
+                "iri_hash": "RDFwOzDi3E8DQ0OxTKb6UEJ",
+                "definition": "Law surrounding business competition.",
+                "synonyms": [
+                  "Anti-Monopoly Law",
+                  "Antitrust Law",
+                  "Antitrust and Competition",
+                  "Antitrust and Competition Law",
+                  "Derecho de Competencia y Antimonopolio",
+                  "Derecho de la Competencia y Antimonopolio",
+                  "Direito antitruste e de concorrência",
+                  "Droit de la concurrence et antitrust",
+                  "Kartell- und Wettbewerbsrecht",
+                  "חוקי המתחרה והמרחק",
+                  "एंटीट्रस्ट और प्रतिस्पर्धा कानून",
+                  "反垄断和竞争法",
+                  "独占禁止法及び競争法",
+                  "ANTI"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Commercial and Trade Law",
+                    "iri_hash": "RqNYDJtQ1pAsGPKZNEUlET"
+                  },
+                  {
+                    "label": "Antitrust and Competition Law",
+                    "iri_hash": "RDFwOzDi3E8DQ0OxTKb6UEJ"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 18,
+        "item_text": "Hostile Takeover",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Hostile Takeover",
+                "iri": "https://folio.openlegalstandard.org/RCia5WkeLS74GDJuqrOUbZH",
+                "iri_hash": "RCia5WkeLS74GDJuqrOUbZH",
+                "definition": "A hostile takeover occurs when the acquiring company attempts to take control of the target company without the consent or cooperation of the target company's management and board of directors. This is typically achieved through a tender offer directly to the shareholders or by launching a proxy fight to gain control of the board.",
+                "synonyms": [
+                  "Adquisición hostil",
+                  "Aquisição hostil",
+                  "Feindliche Übernahme",
+                  "Hostile Takeover",
+                  "OPA hostile",
+                  "רכישה או כיבוש אויבני",
+                  "शत्रुतापूर्ण विजय",
+                  "敌意收购",
+                  "敵対的買収"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Transactional Objectives",
+                    "iri_hash": "R70jMZb6xYrVCXW6f3EbO1e"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Objectives",
+                    "iri_hash": "RDRCaFxX4hpUklgNnVS9D8C"
+                  },
+                  {
+                    "label": "Deal Stance",
+                    "iri_hash": "R89lVNu8g1yMPFfyEkk8npj"
+                  },
+                  {
+                    "label": "Hostile Takeover",
+                    "iri_hash": "RCia5WkeLS74GDJuqrOUbZH"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      }
+    ],
+    "total_items": 19,
+    "branches_available": [
+      {
+        "name": "Actor / Player",
+        "color": "#1e6fa0",
+        "concept_count": 563
+      },
+      {
+        "name": "Area of Law",
+        "color": "#1a5276",
+        "concept_count": 174
+      },
+      {
+        "name": "Asset Type",
+        "color": "#6b5600",
+        "concept_count": 345
+      },
+      {
+        "name": "Communication Modality",
+        "color": "#7b4d93",
+        "concept_count": 11
+      },
+      {
+        "name": "Currency",
+        "color": "#7a5a00",
+        "concept_count": 178
+      },
+      {
+        "name": "Data Format",
+        "color": "#4a5568",
+        "concept_count": 17
+      },
+      {
+        "name": "Document / Artifact",
+        "color": "#9c4a10",
+        "concept_count": 2796
+      },
+      {
+        "name": "Engagement Attributes",
+        "color": "#10613a",
+        "concept_count": 343
+      },
+      {
+        "name": "Event",
+        "color": "#b91c1c",
+        "concept_count": 403
+      },
+      {
+        "name": "FOLIO Type",
+        "color": "#6b5c00",
+        "concept_count": 3
+      },
+      {
+        "name": "Forums and Venues",
+        "color": "#7b2d8e",
+        "concept_count": 2180
+      },
+      {
+        "name": "Governmental Body",
+        "color": "#1a6091",
+        "concept_count": 1585
+      },
+      {
+        "name": "Industry and Market",
+        "color": "#065550",
+        "concept_count": 2137
+      },
+      {
+        "name": "Language",
+        "color": "#7a3b10",
+        "concept_count": 489
+      },
+      {
+        "name": "Legal Authorities",
+        "color": "#8b1a1a",
+        "concept_count": 82
+      },
+      {
+        "name": "Legal Entity",
+        "color": "#085e40",
+        "concept_count": 517
+      },
+      {
+        "name": "Location",
+        "color": "#105560",
+        "concept_count": 3782
+      },
+      {
+        "name": "Matter Narrative",
+        "color": "#6d3580",
+        "concept_count": 13
+      },
+      {
+        "name": "Matter Narrative Format",
+        "color": "#1a6894",
+        "concept_count": 2
+      },
+      {
+        "name": "Objectives",
+        "color": "#b03020",
+        "concept_count": 5411
+      },
+      {
+        "name": "Service",
+        "color": "#065e4e",
+        "concept_count": 434
+      },
+      {
+        "name": "Status",
+        "color": "#864a08",
+        "concept_count": 23
+      },
+      {
+        "name": "System Identifiers",
+        "color": "#3d4d5a",
+        "concept_count": 13
+      }
+    ]
+  },
+  "pipeline_metadata": [
+    {
+      "item_index": 0,
+      "item_text": "Mergers & Acquisitions",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Mergers & Acquisitions",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Mergers & Acquisitions"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 1,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 1,
+      "item_text": "Corporate Governance",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Corporate Governance",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Corporate Governance"
+      },
+      "stage1_candidate_count": 6,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 6,
+      "stage3_judged_count": 5,
+      "stage3_boosted": 1,
+      "stage3_penalized": 4,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 2,
+      "item_text": "Corporate Governance Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Corporate Governance Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Corporate Governance Law"
+      },
+      "stage1_candidate_count": 5,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 5,
+      "stage3_judged_count": 4,
+      "stage3_boosted": 0,
+      "stage3_penalized": 3,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 3,
+      "item_text": "Breach of Fiduciary Duty",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Breach of Fiduciary Duty",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Breach of Fiduciary Duty"
+      },
+      "stage1_candidate_count": 7,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 7,
+      "stage3_judged_count": 7,
+      "stage3_boosted": 0,
+      "stage3_penalized": 4,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 4,
+      "item_text": "Fiduciary Duty",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Fiduciary Duty",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Fiduciary Duty"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 5,
+      "item_text": "Securities",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Securities",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Securities"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 6,
+      "item_text": "Security Offerings and Capital Markets Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Security Offerings and Capital Markets Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Security Offerings and Capital Markets Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 7,
+      "item_text": "Securities Fraud",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Securities Fraud",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Securities Fraud"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 8,
+      "item_text": "Securities and Financial Instruments Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Securities and Financial Instruments Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Securities and Financial Instruments Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 9,
+      "item_text": "Due Diligence",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Due Diligence",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Due Diligence"
+      },
+      "stage1_candidate_count": 6,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 6,
+      "stage3_judged_count": 4,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 2
+    },
+    {
+      "item_index": 10,
+      "item_text": "Asset Due Diligence Practice",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Asset Due Diligence Practice",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Asset Due Diligence Practice"
+      },
+      "stage1_candidate_count": 11,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 11,
+      "stage3_judged_count": 8,
+      "stage3_boosted": 0,
+      "stage3_penalized": 6,
+      "stage3_rejected": 3
+    },
+    {
+      "item_index": 11,
+      "item_text": "Regulatory Compliance",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Regulatory Compliance",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Regulatory Compliance"
+      },
+      "stage1_candidate_count": 6,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 6,
+      "stage3_judged_count": 5,
+      "stage3_boosted": 0,
+      "stage3_penalized": 4,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 12,
+      "item_text": "Due Diligence Clause",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Due Diligence Clause",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Due Diligence Clause"
+      },
+      "stage1_candidate_count": 5,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 5,
+      "stage3_judged_count": 4,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 13,
+      "item_text": "Deal Structuring",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Deal Structuring",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Deal Structuring"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 14,
+      "item_text": "Stock Purchase Agreement",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Stock Purchase Agreement",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Stock Purchase Agreement"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 15,
+      "item_text": "Asset Purchase Agreement",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Asset Purchase Agreement",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Asset Purchase Agreement"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 16,
+      "item_text": "Post-Merger",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Post-Merger",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Post-Merger"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 17,
+      "item_text": "Antitrust and Competition Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Antitrust and Competition Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Antitrust and Competition Law"
+      },
+      "stage1_candidate_count": 4,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 4,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 3
+    },
+    {
+      "item_index": 18,
+      "item_text": "Hostile Takeover",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Hostile Takeover",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Hostile Takeover"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    }
+  ],
+  "selections": {
+    "0": [
+      "RD0qGHeWoQmYfyZgpSOgFcG"
+    ],
+    "1": [
+      "RB7pLfw7zqXtd20kKg7EcOA"
+    ],
+    "2": [
+      "RB7pLfw7zqXtd20kKg7EcOA"
+    ],
+    "3": [
+      "RtmRdqzdG4lddVrtCToiL1"
+    ],
+    "4": [
+      "RDYMSvTzMQvR5oJWYzguyJW"
+    ],
+    "5": [],
+    "6": [
+      "RIx4wseXHDgt3SLWCIjNhd"
+    ],
+    "7": [
+      "RC3iZlQIPU8tP1phFuy6oXX"
+    ],
+    "8": [
+      "RCF0BMeSwppddfM6cp6AUBK"
+    ],
+    "9": [
+      "RXAOdy7NJAxWjMtDJP9Bw6"
+    ],
+    "10": [
+      "RB2ewx2zez6oHmbqiPBwmgV"
+    ],
+    "11": [
+      "RDEuNPJBSNIARaYTXJwi86w"
+    ],
+    "12": [
+      "RqBMS8HFJwbfAcW0aEKhyF"
+    ],
+    "13": [],
+    "14": [
+      "R9ZM05k9tujXev4Gy4yianI"
+    ],
+    "15": [
+      "RmCQVvWRqLFZ5V65G0txFq"
+    ],
+    "16": [],
+    "17": [
+      "RDFwOzDi3E8DQ0OxTKb6UEJ"
+    ],
+    "18": [
+      "RCia5WkeLS74GDJuqrOUbZH"
+    ]
+  },
+  "node_statuses": {
+    "0": "completed",
+    "1": "completed",
+    "2": "completed",
+    "3": "completed",
+    "4": "completed",
+    "5": "unmapped",
+    "6": "completed",
+    "7": "completed",
+    "8": "completed",
+    "9": "completed",
+    "10": "completed",
+    "11": "completed",
+    "12": "completed",
+    "13": "unmapped",
+    "14": "completed",
+    "15": "completed",
+    "16": "unmapped",
+    "17": "completed",
+    "18": "completed"
+  },
+  "notes": {},
+  "screen": "mapping",
+  "branch_states": {},
+  "input_branch_states": {},
+  "branch_sort_mode": "default",
+  "custom_branch_order": [],
+  "status_filter": "all",
+  "suggestion_queue": [],
+  "review_queue": [],
+  "pipeline_version": "0.10.0+01f7ecb",
+  "folio_version": "0.2.0"
+}

@@ -3,10 +3,10 @@ import demoPI from '../exemplar/demos/personal-injury.demo.json';
 import demoSoloCriminal from '../exemplar/demos/solo-criminal.demo.json';
 import demoFamilyLaw from '../exemplar/demos/family-law.demo.json';
 import demoEmploymentLabor from '../exemplar/demos/employment-labor.demo.json';
-// Remaining areas added by Plans 04-05 as their demo.json is committed:
-// import demoCorporateMa from '../exemplar/demos/corporate-ma.demo.json';
-// import demoIpTech from '../exemplar/demos/ip-tech.demo.json';
-// import demoCommercialLit from '../exemplar/demos/commercial-lit.demo.json';
+import demoCorporateMa from '../exemplar/demos/corporate-ma.demo.json';
+import demoIpTech from '../exemplar/demos/ip-tech.demo.json';
+import demoCommercialLit from '../exemplar/demos/commercial-lit.demo.json';
+// Remaining areas added by Plan 05 as their demo.json is committed:
 // import demoRealEstate from '../exemplar/demos/real-estate.demo.json';
 // import demoBankingFinance from '../exemplar/demos/banking-finance.demo.json';
 // import demoImmigration from '../exemplar/demos/immigration.demo.json';
@@ -48,6 +48,9 @@ describe('demo mode richness (D-03)', () => {
     ['solo-criminal',    demoSoloCriminal],
     ['family-law',       demoFamilyLaw],
     ['employment-labor', demoEmploymentLabor],
+    ['corporate-ma',     demoCorporateMa],
+    ['ip-tech',          demoIpTech],
+    ['commercial-lit',   demoCommercialLit],
   ] as [string, Record<string, unknown>][])(
     '%s demo has 0 < completed < total_nodes (visible mix)',
     (_slug, payload) => {

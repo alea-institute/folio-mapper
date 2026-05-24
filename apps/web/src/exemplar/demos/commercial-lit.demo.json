@@ -1,0 +1,3641 @@
+{
+  "version": "1.3",
+  "created": "2026-05-24T19:48:15.090588+00:00",
+  "updated": "2026-05-24T19:48:15.090588+00:00",
+  "source_file": null,
+  "input_format": "hierarchical",
+  "total_nodes": 19,
+  "completed": 16,
+  "skipped": 0,
+  "current_position": 0,
+  "provider": "anthropic",
+  "model": "claude-3-5-sonnet-latest",
+  "text_input": "Complex Commercial Litigation\n\tContract Disputes\n\t\tBreach of Contract\n\t\tTortious Interference Claims\n\t\tBreach of Contract Claims\n\tAntitrust\n\t\tAntitrust and Competition Law\n\t\tAntitrust - Bid-Rigging Claims\n\t\tAntitrust - Pricing Claims\n\tSecurities Litigation\n\t\tSecurities Fraud\n\t\tInsider Trading\n\tConsumer & Trade\n\t\tConsumer Protection Law\n\t\tUnfair Competition\n\t\tUnfair Competition Claims\n\tDispute Resolution\n\t\tArbitration Practice\n\t\tMediation Practice",
+  "parse_result": {
+    "format": "hierarchical",
+    "items": [
+      {
+        "text": "Complex Commercial Litigation",
+        "index": 0,
+        "ancestry": []
+      },
+      {
+        "text": "Contract Disputes",
+        "index": 1,
+        "ancestry": [
+          "Complex Commercial Litigation"
+        ]
+      },
+      {
+        "text": "Breach of Contract",
+        "index": 2,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Contract Disputes"
+        ]
+      },
+      {
+        "text": "Tortious Interference Claims",
+        "index": 3,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Contract Disputes"
+        ]
+      },
+      {
+        "text": "Breach of Contract Claims",
+        "index": 4,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Contract Disputes"
+        ]
+      },
+      {
+        "text": "Antitrust",
+        "index": 5,
+        "ancestry": [
+          "Complex Commercial Litigation"
+        ]
+      },
+      {
+        "text": "Antitrust and Competition Law",
+        "index": 6,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Antitrust"
+        ]
+      },
+      {
+        "text": "Antitrust - Bid-Rigging Claims",
+        "index": 7,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Antitrust"
+        ]
+      },
+      {
+        "text": "Antitrust - Pricing Claims",
+        "index": 8,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Antitrust"
+        ]
+      },
+      {
+        "text": "Securities Litigation",
+        "index": 9,
+        "ancestry": [
+          "Complex Commercial Litigation"
+        ]
+      },
+      {
+        "text": "Securities Fraud",
+        "index": 10,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Securities Litigation"
+        ]
+      },
+      {
+        "text": "Insider Trading",
+        "index": 11,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Securities Litigation"
+        ]
+      },
+      {
+        "text": "Consumer & Trade",
+        "index": 12,
+        "ancestry": [
+          "Complex Commercial Litigation"
+        ]
+      },
+      {
+        "text": "Consumer Protection Law",
+        "index": 13,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Consumer & Trade"
+        ]
+      },
+      {
+        "text": "Unfair Competition",
+        "index": 14,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Consumer & Trade"
+        ]
+      },
+      {
+        "text": "Unfair Competition Claims",
+        "index": 15,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Consumer & Trade"
+        ]
+      },
+      {
+        "text": "Dispute Resolution",
+        "index": 16,
+        "ancestry": [
+          "Complex Commercial Litigation"
+        ]
+      },
+      {
+        "text": "Arbitration Practice",
+        "index": 17,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Dispute Resolution"
+        ]
+      },
+      {
+        "text": "Mediation Practice",
+        "index": 18,
+        "ancestry": [
+          "Complex Commercial Litigation",
+          "Dispute Resolution"
+        ]
+      }
+    ],
+    "hierarchy": [
+      {
+        "label": "Complex Commercial Litigation",
+        "depth": 0,
+        "children": [
+          {
+            "label": "Contract Disputes",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Breach of Contract",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Tortious Interference Claims",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Breach of Contract Claims",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Antitrust",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Antitrust and Competition Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Antitrust - Bid-Rigging Claims",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Antitrust - Pricing Claims",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Securities Litigation",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Securities Fraud",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Insider Trading",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Consumer & Trade",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Consumer Protection Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Unfair Competition",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Unfair Competition Claims",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Dispute Resolution",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Arbitration Practice",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Mediation Practice",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_items": 19,
+    "headers": null,
+    "source_filename": null,
+    "raw_preview": [
+      [
+        "Complex Commercial Litigation"
+      ],
+      [
+        "",
+        "Contract Disputes"
+      ],
+      [
+        "",
+        "",
+        "Breach of Contract"
+      ],
+      [
+        "",
+        "",
+        "Tortious Interference Claims"
+      ],
+      [
+        "",
+        "",
+        "Breach of Contract Claims"
+      ]
+    ]
+  },
+  "mapping_response": {
+    "items": [
+      {
+        "item_index": 0,
+        "item_text": "Complex Commercial Litigation",
+        "branch_groups": [
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Litigation Practice",
+                "iri": "https://folio.openlegalstandard.org/R79LjWBKHCdmQKEW6zPY8Co",
+                "iri_hash": "R79LjWBKHCdmQKEW6zPY8Co",
+                "definition": "Matters that include official proceedings (e.g., court case, arbitration, mediation)",
+                "synonyms": [
+                  "Suit",
+                  "Lawsuits",
+                  "Litigation",
+                  "Litigation Service",
+                  "Litigation Practice",
+                  "Pratique du contentieux",
+                  "Prozesspraxis",
+                  "Práctica de litigios",
+                  "Prática de litígios",
+                  "מעשה רישום",
+                  "लिटिगेशन प्रैक्टिस",
+                  "訴訟実務",
+                  "诉讼实践"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Dispute Service",
+                    "iri_hash": "RDigDgTiLFmt7iX3436yCOT"
+                  },
+                  {
+                    "label": "Litigation Practice",
+                    "iri_hash": "R79LjWBKHCdmQKEW6zPY8Co"
+                  }
+                ],
+                "score": 97.0
+              },
+              {
+                "label": "Trial Practice",
+                "iri": "https://folio.openlegalstandard.org/R9dd6R73IfKyiskT5Jf62R7",
+                "iri_hash": "R9dd6R73IfKyiskT5Jf62R7",
+                "definition": "Trial Practice refers to the set of legal skills and procedures involved in presenting a case before a court of law, including witness examination, jury selection, trial preparation, testimony, and motion practice.",
+                "synonyms": [
+                  "Trials",
+                  "Trial",
+                  "Trial Service",
+                  "Pratique du procès",
+                  "Prozesspraxis",
+                  "Práctica de juicio",
+                  "Prática processual",
+                  "Trial Practice",
+                  "תרגול במשפטים",
+                  "ट्रायल प्रैक्टिस",
+                  "审判实践",
+                  "裁判実務"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Dispute Service",
+                    "iri_hash": "RDigDgTiLFmt7iX3436yCOT"
+                  },
+                  {
+                    "label": "Litigation Practice",
+                    "iri_hash": "R79LjWBKHCdmQKEW6zPY8Co"
+                  },
+                  {
+                    "label": "Trial Court Practice",
+                    "iri_hash": "RBgzWJQz52CrObfGXDKH1t7"
+                  },
+                  {
+                    "label": "Trial Practice",
+                    "iri_hash": "R9dd6R73IfKyiskT5Jf62R7"
+                  }
+                ],
+                "score": 72.0
+              },
+              {
+                "label": "Service",
+                "iri": "https://folio.openlegalstandard.org/RDK1QEdQg1T8B5HQqMK2pZN",
+                "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+                "definition": "The legal work performed, usually by a Legal Services Provider, in the course of a legal matter.",
+                "synonyms": [
+                  "Dienstleistung",
+                  "Service",
+                  "Servicio",
+                  "Serviço",
+                  "שירות",
+                  "सेवा",
+                  "サービス",
+                  "服务"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  }
+                ],
+                "score": 45.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 1,
+        "item_text": "Contract Disputes",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Contract Law",
+                "iri": "https://folio.openlegalstandard.org/RCIPwpgRpMs1eVz4vPid0pV",
+                "iri_hash": "RCIPwpgRpMs1eVz4vPid0pV",
+                "definition": "The General Theory of Contracts is an umbrella term used in civil law jurisdictions, like Spain and Latin America, that refers to the body of law that governs contracts. In the U.S. and other common law jurisdictions, the equivalent would simply be Contract Law or Law of Contracts. They both concern principles and rules that regulate agreements made between parties, detailing how contracts are formed, executed, and potentially breached, and what remedies are available.",
+                "synonyms": [
+                  "General Theory of Contracts"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Contract Law",
+                    "iri_hash": "RCIPwpgRpMs1eVz4vPid0pV"
+                  }
+                ],
+                "score": 78.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Agreements",
+                "iri": "https://folio.openlegalstandard.org/R88D8i8AcSTUig2X3yPbFHg",
+                "iri_hash": "R88D8i8AcSTUig2X3yPbFHg",
+                "definition": "Agreements are written documents that establish a legally binding understanding between two or more parties, outlining the terms and conditions of a transaction or relationship.",
+                "synonyms": [
+                  "Accords",
+                  "Acordos",
+                  "Acuerdos",
+                  "Agreements",
+                  "Vereinbarungen",
+                  "הסכמים",
+                  "समझौते",
+                  "协议",
+                  "合意書"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  }
+                ],
+                "score": 28.0
+              },
+              {
+                "label": "Service Agreement",
+                "iri": "https://folio.openlegalstandard.org/RZ2ygZBRYA0HT25x0f50Du",
+                "iri_hash": "RZ2ygZBRYA0HT25x0f50Du",
+                "definition": "A Service Agreement is a written document that outlines the terms and conditions of a service provided by one party to another.",
+                "synonyms": [
+                  "Acuerdo de Servicio",
+                  "Contrat de service",
+                  "Contrato de Servicio",
+                  "Contrato de serviço",
+                  "Dienstleistungsvertrag",
+                  "Document",
+                  "Service Agreement",
+                  "הסכם שירות",
+                  "सेवा समझौता",
+                  "サービス契約",
+                  "服务协议"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Service Agreement",
+                    "iri_hash": "RZ2ygZBRYA0HT25x0f50Du"
+                  }
+                ],
+                "score": 22.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Contract & Quasi-Contract Claims",
+                "iri": "https://folio.openlegalstandard.org/RZ1dOPJ6HH6lMJGSLNxfwV",
+                "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV",
+                "definition": "Contract & Quasi-Contract Claims refer to legal claims arising from the breach of a contract or an agreement that is not legally binding, but where one party has received a benefit that would be unjust to retain without compensation.",
+                "synonyms": [
+                  "Contract & Quasi-Contract Claims",
+                  "Contract Claims",
+                  "Quasi-Contract Claims",
+                  "Reclamaciones contractuales y cuasicontractuales",
+                  "Reivindicações contratuais e quase-contratuais",
+                  "Réclamations contractuelles et quasi-contractuelles",
+                  "Vertrags- und Quasi-Vertragsansprüche",
+                  "תביעות חוזיות וחצי-חוזיות",
+                  "अनुबंध और क्वासी-अनुबंध दावे",
+                  "合同和准合同索赔",
+                  "契約および準契約請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  }
+                ],
+                "score": 94.0
+              },
+              {
+                "label": "Rescission",
+                "iri": "https://folio.openlegalstandard.org/RDP2t75tSvlsq1GCrOZlInL",
+                "iri_hash": "RDP2t75tSvlsq1GCrOZlInL",
+                "definition": "Rescission is the act of canceling or voiding a contract, typically due to factors such as duress, unconscionability, or fraud, and is a type of equitable relief available in contract and quasi-contract claims.",
+                "synonyms": [
+                  "Contract Rescission",
+                  "Rescisão",
+                  "Résolution",
+                  "Rücktritt",
+                  "撤回",
+                  "撤销"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Civil Remedies / Relief Sought",
+                    "iri_hash": "RDbz1PVc6y57oOb9jAIl0eN"
+                  },
+                  {
+                    "label": "Equitable Relief",
+                    "iri_hash": "R9iUJ1YX0zK3V9D0RbQKTP4"
+                  },
+                  {
+                    "label": "Rescission",
+                    "iri_hash": "RDP2t75tSvlsq1GCrOZlInL"
+                  }
+                ],
+                "score": 74.0
+              },
+              {
+                "label": "Consumer Contract Claims",
+                "iri": "https://folio.openlegalstandard.org/R7n6xn6CbnvekygNrB5DsJM",
+                "iri_hash": "R7n6xn6CbnvekygNrB5DsJM",
+                "definition": "Consumer Contract Claims are legal claims made by a party in a contract with a consumer, including claims related to billing errors, unlawful provisions, unconscionable circumstances, and improper actions by loan brokers.",
+                "synonyms": [
+                  "Ansprüche aus Verbraucherverträgen",
+                  "Consumer Contract Claims",
+                  "Reclamaciones de Contratos de Consumo",
+                  "Reivindicações de contrato do consumidor",
+                  "Réclamations de contrat de consommation",
+                  "תביעות חוזיות לצרכן",
+                  "उपभोक्ता अनुबंध दावे",
+                  "消費者契約請求",
+                  "消费者合同索赔"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Consumer Contract Claims",
+                    "iri_hash": "R7n6xn6CbnvekygNrB5DsJM"
+                  }
+                ],
+                "score": 66.0
+              },
+              {
+                "label": "Quasi-Contract Claim",
+                "iri": "https://folio.openlegalstandard.org/RWyivPLyBOY3TzWAIEcXY4",
+                "iri_hash": "RWyivPLyBOY3TzWAIEcXY4",
+                "definition": "A quasi-contract claim is a legal claim that arises when one party receives a benefit from another party, even though there was no actual contract between them, and the law implies a promise to pay for that benefit.",
+                "synonyms": [
+                  "Action en quasi-contrat",
+                  "Anspruch aus ungerechtfertigter Bereicherung",
+                  "Quasi-Contract Claim",
+                  "Reclamación de cuasicontrato",
+                  "Reivindicação de Quase-Contrato",
+                  "תביעת חוזה כמעטי",
+                  "क्वासी-अनुबंध दावा",
+                  "准合同索赔",
+                  "準契約請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Quasi-Contract Claim",
+                    "iri_hash": "RWyivPLyBOY3TzWAIEcXY4"
+                  }
+                ],
+                "score": 52.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 7
+      },
+      {
+        "item_index": 2,
+        "item_text": "Breach of Contract",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Contract Law",
+                "iri": "https://folio.openlegalstandard.org/RCIPwpgRpMs1eVz4vPid0pV",
+                "iri_hash": "RCIPwpgRpMs1eVz4vPid0pV",
+                "definition": "The General Theory of Contracts is an umbrella term used in civil law jurisdictions, like Spain and Latin America, that refers to the body of law that governs contracts. In the U.S. and other common law jurisdictions, the equivalent would simply be Contract Law or Law of Contracts. They both concern principles and rules that regulate agreements made between parties, detailing how contracts are formed, executed, and potentially breached, and what remedies are available.",
+                "synonyms": [
+                  "General Theory of Contracts"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Contract Law",
+                    "iri_hash": "RCIPwpgRpMs1eVz4vPid0pV"
+                  }
+                ],
+                "score": 75.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Breach of Contract",
+                "iri": "https://folio.openlegalstandard.org/RC2fjcpsEbrVvVymvt4oASx",
+                "iri_hash": "RC2fjcpsEbrVvVymvt4oASx",
+                "definition": "The concept of Breach of Contract refers to the failure of one party to fulfill their obligations as outlined in a legally binding agreement, resulting in harm or damages to the other party.",
+                "synonyms": [
+                  "Breach of Contract",
+                  "Incumplimiento de contrato",
+                  "Quebra de contrato",
+                  "Vertragsbruch",
+                  "Violation de contrat",
+                  "הפרת חוזה",
+                  "अनुबंध उल्लंघन",
+                  "契約違反",
+                  "违约"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Breach of Contract Claims",
+                    "iri_hash": "RbkhZxcSyqaKNyUivxRRpu"
+                  },
+                  {
+                    "label": "Breach of Contract",
+                    "iri_hash": "RC2fjcpsEbrVvVymvt4oASx"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Breach of Contract Claims",
+                "iri": "https://folio.openlegalstandard.org/RbkhZxcSyqaKNyUivxRRpu",
+                "iri_hash": "RbkhZxcSyqaKNyUivxRRpu",
+                "definition": "A breach of contract claim is a legal action taken by one party against another for failing to fulfill their obligations as outlined in a contractual agreement.",
+                "synonyms": [
+                  "Actions en cas de violation de contrat",
+                  "Ansprüche wegen Vertragsverletzung",
+                  "Breach of Contract Claims",
+                  "Reclamaciones por Incumplimiento de Contrato",
+                  "Reivindicações por quebra de contrato",
+                  "תביעות על הפרת חוזה",
+                  "अनुबंध उल्लंघन दावे",
+                  "契約違反請求",
+                  "违约索赔"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Breach of Contract Claims",
+                    "iri_hash": "RbkhZxcSyqaKNyUivxRRpu"
+                  }
+                ],
+                "score": 88.0
+              },
+              {
+                "label": "Consumer Contract Claims",
+                "iri": "https://folio.openlegalstandard.org/R7n6xn6CbnvekygNrB5DsJM",
+                "iri_hash": "R7n6xn6CbnvekygNrB5DsJM",
+                "definition": "Consumer Contract Claims are legal claims made by a party in a contract with a consumer, including claims related to billing errors, unlawful provisions, unconscionable circumstances, and improper actions by loan brokers.",
+                "synonyms": [
+                  "Ansprüche aus Verbraucherverträgen",
+                  "Consumer Contract Claims",
+                  "Reclamaciones de Contratos de Consumo",
+                  "Reivindicações de contrato do consumidor",
+                  "Réclamations de contrat de consommation",
+                  "תביעות חוזיות לצרכן",
+                  "उपभोक्ता अनुबंध दावे",
+                  "消費者契約請求",
+                  "消费者合同索赔"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Consumer Contract Claims",
+                    "iri_hash": "R7n6xn6CbnvekygNrB5DsJM"
+                  }
+                ],
+                "score": 86.0
+              },
+              {
+                "label": "Repudiatory Breach of Contract",
+                "iri": "https://folio.openlegalstandard.org/R8KGri8xvqfghB4ViHja406",
+                "iri_hash": "R8KGri8xvqfghB4ViHja406",
+                "definition": "A Repudiatory Breach of Contract Claim is a legal action asserting that one party has committed a breach so fundamental that it effectively nullifies the contract, allowing the innocent party to terminate the agreement. This type of claim alleges that the breach goes to the root of the contract, depriving the innocent party of substantially the whole benefit they were intended to derive from it.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Breach of Contract Claims",
+                    "iri_hash": "RbkhZxcSyqaKNyUivxRRpu"
+                  },
+                  {
+                    "label": "Repudiatory Breach of Contract",
+                    "iri_hash": "R8KGri8xvqfghB4ViHja406"
+                  }
+                ],
+                "score": 83.0
+              },
+              {
+                "label": "Anticipatory Breach of Contract",
+                "iri": "https://folio.openlegalstandard.org/RBTf3gToke5LaxSNQfOQASk",
+                "iri_hash": "RBTf3gToke5LaxSNQfOQASk",
+                "definition": "Anticipatory Breach of Contract refers to a situation where one party to a contract indicates, before the time for performance, that they will not perform their obligations under the contract.",
+                "synonyms": [
+                  "Anticipatory Breach of Contract",
+                  "Antizipierter Vertragsbruch",
+                  "Incumplimiento Anticipado de Contrato",
+                  "Quebra antecipada de contrato",
+                  "Violation anticipée du contrat",
+                  "הפרת חוזה קדמה",
+                  "अग्रिम अनुबंध उल्लंघन",
+                  "先見的な契約違反",
+                  "预期违约"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Breach of Contract Claims",
+                    "iri_hash": "RbkhZxcSyqaKNyUivxRRpu"
+                  },
+                  {
+                    "label": "Anticipatory Breach of Contract",
+                    "iri_hash": "RBTf3gToke5LaxSNQfOQASk"
+                  }
+                ],
+                "score": 83.0
+              },
+              {
+                "label": "Tortious Breach of Contract",
+                "iri": "https://folio.openlegalstandard.org/RDjG5GB80UToe2ZfmrnJ7IO",
+                "iri_hash": "RDjG5GB80UToe2ZfmrnJ7IO",
+                "definition": "The Tortious Breach of Contract is a legal concept that occurs when one party breaches a contract and causes harm or damages to the other party, resulting in a tort claim in addition to a breach of contract claim.",
+                "synonyms": [
+                  "Incumplimiento contractual doloso",
+                  "Tortious Breach of Contract",
+                  "Vertragsverletzung mit deliktischer Haftung",
+                  "Violation contractuelle délictuelle",
+                  "Violação contratual com responsabilidade civil extracontratual",
+                  "הפרת חוזה עוולה",
+                  "अनैतिक अनुबंध उल्लंघन",
+                  "不法行為に基づく契約違反",
+                  "违约侵权"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Breach of Contract Claims",
+                    "iri_hash": "RbkhZxcSyqaKNyUivxRRpu"
+                  },
+                  {
+                    "label": "Breach of Contract",
+                    "iri_hash": "RC2fjcpsEbrVvVymvt4oASx"
+                  },
+                  {
+                    "label": "Tortious Breach of Contract",
+                    "iri_hash": "RDjG5GB80UToe2ZfmrnJ7IO"
+                  }
+                ],
+                "score": 82.0
+              },
+              {
+                "label": "Contract & Quasi-Contract Claims",
+                "iri": "https://folio.openlegalstandard.org/RZ1dOPJ6HH6lMJGSLNxfwV",
+                "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV",
+                "definition": "Contract & Quasi-Contract Claims refer to legal claims arising from the breach of a contract or an agreement that is not legally binding, but where one party has received a benefit that would be unjust to retain without compensation.",
+                "synonyms": [
+                  "Contract & Quasi-Contract Claims",
+                  "Contract Claims",
+                  "Quasi-Contract Claims",
+                  "Reclamaciones contractuales y cuasicontractuales",
+                  "Reivindicações contratuais e quase-contratuais",
+                  "Réclamations contractuelles et quasi-contractuelles",
+                  "Vertrags- und Quasi-Vertragsansprüche",
+                  "תביעות חוזיות וחצי-חוזיות",
+                  "अनुबंध और क्वासी-अनुबंध दावे",
+                  "合同和准合同索赔",
+                  "契約および準契約請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  }
+                ],
+                "score": 72.0
+              },
+              {
+                "label": "Violation",
+                "iri": "https://folio.openlegalstandard.org/RDsDXHKUsZoJfz87jnz7zjj",
+                "iri_hash": "RDsDXHKUsZoJfz87jnz7zjj",
+                "definition": "A violation is an act or instance of breaking or failing to comply with a rule, regulation, contract, or law, which can lead to legal consequences.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Violation",
+                    "iri_hash": "RDsDXHKUsZoJfz87jnz7zjj"
+                  }
+                ],
+                "score": 62.0
+              },
+              {
+                "label": "Rescission",
+                "iri": "https://folio.openlegalstandard.org/RDP2t75tSvlsq1GCrOZlInL",
+                "iri_hash": "RDP2t75tSvlsq1GCrOZlInL",
+                "definition": "Rescission is the act of canceling or voiding a contract, typically due to factors such as duress, unconscionability, or fraud, and is a type of equitable relief available in contract and quasi-contract claims.",
+                "synonyms": [
+                  "Contract Rescission",
+                  "Rescisão",
+                  "Résolution",
+                  "Rücktritt",
+                  "撤回",
+                  "撤销"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Civil Remedies / Relief Sought",
+                    "iri_hash": "RDbz1PVc6y57oOb9jAIl0eN"
+                  },
+                  {
+                    "label": "Equitable Relief",
+                    "iri_hash": "R9iUJ1YX0zK3V9D0RbQKTP4"
+                  },
+                  {
+                    "label": "Rescission",
+                    "iri_hash": "RDP2t75tSvlsq1GCrOZlInL"
+                  }
+                ],
+                "score": 58.0
+              },
+              {
+                "label": "Quasi-Contract Claim",
+                "iri": "https://folio.openlegalstandard.org/RWyivPLyBOY3TzWAIEcXY4",
+                "iri_hash": "RWyivPLyBOY3TzWAIEcXY4",
+                "definition": "A quasi-contract claim is a legal claim that arises when one party receives a benefit from another party, even though there was no actual contract between them, and the law implies a promise to pay for that benefit.",
+                "synonyms": [
+                  "Action en quasi-contrat",
+                  "Anspruch aus ungerechtfertigter Bereicherung",
+                  "Quasi-Contract Claim",
+                  "Reclamación de cuasicontrato",
+                  "Reivindicação de Quase-Contrato",
+                  "תביעת חוזה כמעטי",
+                  "क्वासी-अनुबंध दावा",
+                  "准合同索赔",
+                  "準契約請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Quasi-Contract Claim",
+                    "iri_hash": "RWyivPLyBOY3TzWAIEcXY4"
+                  }
+                ],
+                "score": 44.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 11
+      },
+      {
+        "item_index": 3,
+        "item_text": "Tortious Interference Claims",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Tortious Interference Claims",
+                "iri": "https://folio.openlegalstandard.org/RCcQHyZbjBHsXsm0zrZGme5",
+                "iri_hash": "RCcQHyZbjBHsXsm0zrZGme5",
+                "definition": "Tortious Interference Claims refer to legal claims made by a party against another for intentionally interfering with their contractual or business relationships, resulting in economic harm or loss.",
+                "synonyms": [
+                  "Actions en interférence délictuelle",
+                  "Ansprüche wegen unerlaubter Einmischung",
+                  "Reclamaciones por interferencia ilícita",
+                  "Reivindicações de interferência ilícita",
+                  "Tortious Interference Claims",
+                  "תביעות על הפרת חובה עוינת",
+                  "अनैतिक हस्तक्षेप दावे",
+                  "不法介入請求",
+                  "侵权干扰索赔"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Tort Claims",
+                    "iri_hash": "RDqSn32zsjxExcBFzIYxT2D"
+                  },
+                  {
+                    "label": "Tortious Interference Claims",
+                    "iri_hash": "RCcQHyZbjBHsXsm0zrZGme5"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 4,
+        "item_text": "Breach of Contract Claims",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Claims Agent",
+                "iri": "https://folio.openlegalstandard.org/R8Kso78437jpOj9Mkuf4huK",
+                "iri_hash": "R8Kso78437jpOj9Mkuf4huK",
+                "definition": "A claims agent is a person who acts on behalf of an individual or organization to manage and process insurance claims.",
+                "synonyms": [
+                  "Agent d'indemnisation",
+                  "Agente de Sinistros",
+                  "Agente de reclamaciones",
+                  "Agente de reclamos",
+                  "Claims Agent",
+                  "Schadensregulierer",
+                  "סוכן תביעות",
+                  "दावे एजेंट",
+                  "クレームエージェント",
+                  "理赔代理人"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Agent",
+                    "iri_hash": "RBDvvMcl4VbqDv1BGaZqaSL"
+                  },
+                  {
+                    "label": "Claims Agent",
+                    "iri_hash": "R8Kso78437jpOj9Mkuf4huK"
+                  }
+                ],
+                "score": 85.1
+              }
+            ]
+          },
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Contract Law",
+                "iri": "https://folio.openlegalstandard.org/RCIPwpgRpMs1eVz4vPid0pV",
+                "iri_hash": "RCIPwpgRpMs1eVz4vPid0pV",
+                "definition": "The General Theory of Contracts is an umbrella term used in civil law jurisdictions, like Spain and Latin America, that refers to the body of law that governs contracts. In the U.S. and other common law jurisdictions, the equivalent would simply be Contract Law or Law of Contracts. They both concern principles and rules that regulate agreements made between parties, detailing how contracts are formed, executed, and potentially breached, and what remedies are available.",
+                "synonyms": [
+                  "General Theory of Contracts"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Contract Law",
+                    "iri_hash": "RCIPwpgRpMs1eVz4vPid0pV"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Intervenor Claim",
+                "iri": "https://folio.openlegalstandard.org/RBCHYWsNG0lhxZ5x14PQhte",
+                "iri_hash": "RBCHYWsNG0lhxZ5x14PQhte",
+                "definition": "An Intervenor Claim is a legal pleading filed by a third party who seeks to join an ongoing lawsuit because they have a direct interest in the outcome of the case.",
+                "synonyms": [
+                  "Demande d'intervention",
+                  "Interpleader",
+                  "Intervenor Claim",
+                  "Interventionsklage",
+                  "Reclamación de Intervención",
+                  "Reivindicação de Interveniente",
+                  "תביעת התערבות",
+                  "हस्तक्षेप दावा",
+                  "介入請求",
+                  "干预申诉"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Litigation Document",
+                    "iri_hash": "Rjco9ohucVSJ0XxprM5Opb"
+                  },
+                  {
+                    "label": "Trial Court Practice Documents",
+                    "iri_hash": "R7zvYKadqTXgMZV8ghLsloR"
+                  },
+                  {
+                    "label": "Pleadings",
+                    "iri_hash": "RXx1zuWf6YAl8qcKgzeMai"
+                  },
+                  {
+                    "label": "Intervenor Claim",
+                    "iri_hash": "RBCHYWsNG0lhxZ5x14PQhte"
+                  }
+                ],
+                "score": 85.1
+              },
+              {
+                "label": "Claim of Exemption",
+                "iri": "https://folio.openlegalstandard.org/R6ptYBINKoxLZQWFNrRgZi",
+                "iri_hash": "R6ptYBINKoxLZQWFNrRgZi",
+                "definition": "A claim of exemption is a legal document filed in bankruptcy cases that allows a debtor to protect certain property from being seized by creditors.",
+                "synonyms": [
+                  "Befreiungsantrag",
+                  "Claim of Exemption",
+                  "Demande d'exemption",
+                  "Pedido de Isenção",
+                  "Reclamación de Exención",
+                  "Reclamo de Exención",
+                  "תביעת פטור",
+                  "छूट का दावा",
+                  "免除請求",
+                  "豁免申请"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Bankruptcy and Restructuring Document",
+                    "iri_hash": "R8zijLH2GH0SxOhIdzeDOs3"
+                  },
+                  {
+                    "label": "Claim of Exemption",
+                    "iri_hash": "R6ptYBINKoxLZQWFNrRgZi"
+                  }
+                ],
+                "score": 85.1
+              },
+              {
+                "label": "Proof of Claim",
+                "iri": "https://folio.openlegalstandard.org/R8gfLTg9vr5VjyJXU4LjP7",
+                "iri_hash": "R8gfLTg9vr5VjyJXU4LjP7",
+                "definition": "Proof of Claim: A document filed in a bankruptcy case by a creditor or claimant asserting a right to payment from the debtor's assets.",
+                "synonyms": [
+                  "Comprovação de crédito",
+                  "Forderungsnachweis",
+                  "Preuve de créance",
+                  "Proof of Claim",
+                  "Prueba de Reclamación",
+                  "Prueba de Reclamo",
+                  "הוכחת טענה",
+                  "दावा का सबूत",
+                  "债权证明",
+                  "債権の証明"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Bankruptcy and Restructuring Document",
+                    "iri_hash": "R8zijLH2GH0SxOhIdzeDOs3"
+                  },
+                  {
+                    "label": "Proof of Claim",
+                    "iri_hash": "R8gfLTg9vr5VjyJXU4LjP7"
+                  }
+                ],
+                "score": 85.1
+              }
+            ]
+          },
+          {
+            "branch": "Industry and Market",
+            "branch_color": "#065550",
+            "candidates": [
+              {
+                "label": "Claims Adjusting",
+                "iri": "https://folio.openlegalstandard.org/mp6WQBa1TOCgDQnPCWpJSA",
+                "iri_hash": "mp6WQBa1TOCgDQnPCWpJSA",
+                "definition": "This U.S. industry comprises establishments primarily engaged in investigating, appraising, and settling insurance claims.",
+                "synonyms": [],
+                "branch": "Industry and Market",
+                "branch_color": "#065550",
+                "hierarchy_path": [
+                  {
+                    "label": "Industry",
+                    "iri_hash": "RDIwFaFcH4KY0gwEY0QlMTp"
+                  },
+                  {
+                    "label": "Finance and Insurance Services Industry",
+                    "iri_hash": "RCksXAlY9lRN16wERqZZ8Tk"
+                  },
+                  {
+                    "label": "Insurance Carriers and Related Activities Industry",
+                    "iri_hash": "RD56727CABa3aB066e948fc1"
+                  },
+                  {
+                    "label": "Agencies, Brokerages, and Other Insurance Related Activities",
+                    "iri_hash": "MKt5e3XIQTa8KMNCLkoKYw"
+                  },
+                  {
+                    "label": "Other Insurance Related Activities",
+                    "iri_hash": "LOgvYOCPQxeOqsaXWNGnRQ"
+                  },
+                  {
+                    "label": "Claims Adjusting",
+                    "iri_hash": "mp6WQBa1TOCgDQnPCWpJSA"
+                  }
+                ],
+                "score": 85.1
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Breach of Contract Claims",
+                "iri": "https://folio.openlegalstandard.org/RbkhZxcSyqaKNyUivxRRpu",
+                "iri_hash": "RbkhZxcSyqaKNyUivxRRpu",
+                "definition": "A breach of contract claim is a legal action taken by one party against another for failing to fulfill their obligations as outlined in a contractual agreement.",
+                "synonyms": [
+                  "Actions en cas de violation de contrat",
+                  "Ansprüche wegen Vertragsverletzung",
+                  "Breach of Contract Claims",
+                  "Reclamaciones por Incumplimiento de Contrato",
+                  "Reivindicações por quebra de contrato",
+                  "תביעות על הפרת חוזה",
+                  "अनुबंध उल्लंघन दावे",
+                  "契約違反請求",
+                  "违约索赔"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Breach of Contract Claims",
+                    "iri_hash": "RbkhZxcSyqaKNyUivxRRpu"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Breach of Contract",
+                "iri": "https://folio.openlegalstandard.org/RC2fjcpsEbrVvVymvt4oASx",
+                "iri_hash": "RC2fjcpsEbrVvVymvt4oASx",
+                "definition": "The concept of Breach of Contract refers to the failure of one party to fulfill their obligations as outlined in a legally binding agreement, resulting in harm or damages to the other party.",
+                "synonyms": [
+                  "Breach of Contract",
+                  "Incumplimiento de contrato",
+                  "Quebra de contrato",
+                  "Vertragsbruch",
+                  "Violation de contrat",
+                  "הפרת חוזה",
+                  "अनुबंध उल्लंघन",
+                  "契約違反",
+                  "违约"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Breach of Contract Claims",
+                    "iri_hash": "RbkhZxcSyqaKNyUivxRRpu"
+                  },
+                  {
+                    "label": "Breach of Contract",
+                    "iri_hash": "RC2fjcpsEbrVvVymvt4oASx"
+                  }
+                ],
+                "score": 93.0
+              },
+              {
+                "label": "Break Violation Claim",
+                "iri": "https://folio.openlegalstandard.org/R92S2HIVThaRnO0lgcFKgIw",
+                "iri_hash": "R92S2HIVThaRnO0lgcFKgIw",
+                "definition": "A break violation claim is a legal action initiated by an employee against their employer relating to the legal requirement to provide breaks during the workday. These breaks can include rest breaks and meal breaks, and the claim typically arises when an employer either denies or interrupts breaks or does not provide them in accordance with applicable labor laws. In some cases, employers may also be liable for break violations if they do not compensate employees for certain types of work performed during breaks.",
+                "synonyms": [
+                  "Break Violation Claim",
+                  "Reclamación por violación de descanso",
+                  "Reivindicação de violação de intervalo",
+                  "Réclamation de violation de pause",
+                  "Verstoß gegen die Pause-Regelung",
+                  "תביעה על הפרת מנוחה",
+                  "विश्राम उल्लंघन दावा",
+                  "休憩違反請求",
+                  "违反休息规定索赔"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Employment Claims",
+                    "iri_hash": "RCty0MaQzrLC9KnzjM7nMER"
+                  },
+                  {
+                    "label": "Wage and Hour Claims",
+                    "iri_hash": "R9UYGSnWQz2MvNsWUofGb6J"
+                  },
+                  {
+                    "label": "Break Violation Claim",
+                    "iri_hash": "R92S2HIVThaRnO0lgcFKgIw"
+                  }
+                ],
+                "score": 86.0
+              },
+              {
+                "label": "Contract & Quasi-Contract Claims",
+                "iri": "https://folio.openlegalstandard.org/RZ1dOPJ6HH6lMJGSLNxfwV",
+                "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV",
+                "definition": "Contract & Quasi-Contract Claims refer to legal claims arising from the breach of a contract or an agreement that is not legally binding, but where one party has received a benefit that would be unjust to retain without compensation.",
+                "synonyms": [
+                  "Contract & Quasi-Contract Claims",
+                  "Contract Claims",
+                  "Quasi-Contract Claims",
+                  "Reclamaciones contractuales y cuasicontractuales",
+                  "Reivindicações contratuais e quase-contratuais",
+                  "Réclamations contractuelles et quasi-contractuelles",
+                  "Vertrags- und Quasi-Vertragsansprüche",
+                  "תביעות חוזיות וחצי-חוזיות",
+                  "अनुबंध और क्वासी-अनुबंध दावे",
+                  "合同和准合同索赔",
+                  "契約および準契約請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  }
+                ],
+                "score": 84.0
+              },
+              {
+                "label": "Consumer Contract Claims",
+                "iri": "https://folio.openlegalstandard.org/R7n6xn6CbnvekygNrB5DsJM",
+                "iri_hash": "R7n6xn6CbnvekygNrB5DsJM",
+                "definition": "Consumer Contract Claims are legal claims made by a party in a contract with a consumer, including claims related to billing errors, unlawful provisions, unconscionable circumstances, and improper actions by loan brokers.",
+                "synonyms": [
+                  "Ansprüche aus Verbraucherverträgen",
+                  "Consumer Contract Claims",
+                  "Reclamaciones de Contratos de Consumo",
+                  "Reivindicações de contrato do consumidor",
+                  "Réclamations de contrat de consommation",
+                  "תביעות חוזיות לצרכן",
+                  "उपभोक्ता अनुबंध दावे",
+                  "消費者契約請求",
+                  "消费者合同索赔"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Consumer Contract Claims",
+                    "iri_hash": "R7n6xn6CbnvekygNrB5DsJM"
+                  }
+                ],
+                "score": 70.0
+              },
+              {
+                "label": "Rescission",
+                "iri": "https://folio.openlegalstandard.org/RDP2t75tSvlsq1GCrOZlInL",
+                "iri_hash": "RDP2t75tSvlsq1GCrOZlInL",
+                "definition": "Rescission is the act of canceling or voiding a contract, typically due to factors such as duress, unconscionability, or fraud, and is a type of equitable relief available in contract and quasi-contract claims.",
+                "synonyms": [
+                  "Contract Rescission",
+                  "Rescisão",
+                  "Résolution",
+                  "Rücktritt",
+                  "撤回",
+                  "撤销"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Civil Remedies / Relief Sought",
+                    "iri_hash": "RDbz1PVc6y57oOb9jAIl0eN"
+                  },
+                  {
+                    "label": "Equitable Relief",
+                    "iri_hash": "R9iUJ1YX0zK3V9D0RbQKTP4"
+                  },
+                  {
+                    "label": "Rescission",
+                    "iri_hash": "RDP2t75tSvlsq1GCrOZlInL"
+                  }
+                ],
+                "score": 62.0
+              },
+              {
+                "label": "Quasi-Contract Claim",
+                "iri": "https://folio.openlegalstandard.org/RWyivPLyBOY3TzWAIEcXY4",
+                "iri_hash": "RWyivPLyBOY3TzWAIEcXY4",
+                "definition": "A quasi-contract claim is a legal claim that arises when one party receives a benefit from another party, even though there was no actual contract between them, and the law implies a promise to pay for that benefit.",
+                "synonyms": [
+                  "Action en quasi-contrat",
+                  "Anspruch aus ungerechtfertigter Bereicherung",
+                  "Quasi-Contract Claim",
+                  "Reclamación de cuasicontrato",
+                  "Reivindicação de Quase-Contrato",
+                  "תביעת חוזה כמעטי",
+                  "क्वासी-अनुबंध दावा",
+                  "准合同索赔",
+                  "準契約請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Contract & Quasi-Contract Claims",
+                    "iri_hash": "RZ1dOPJ6HH6lMJGSLNxfwV"
+                  },
+                  {
+                    "label": "Quasi-Contract Claim",
+                    "iri_hash": "RWyivPLyBOY3TzWAIEcXY4"
+                  }
+                ],
+                "score": 58.0
+              },
+              {
+                "label": "Violation",
+                "iri": "https://folio.openlegalstandard.org/RDsDXHKUsZoJfz87jnz7zjj",
+                "iri_hash": "RDsDXHKUsZoJfz87jnz7zjj",
+                "definition": "A violation is an act or instance of breaking or failing to comply with a rule, regulation, contract, or law, which can lead to legal consequences.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Violation",
+                    "iri_hash": "RDsDXHKUsZoJfz87jnz7zjj"
+                  }
+                ],
+                "score": 48.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 14
+      },
+      {
+        "item_index": 5,
+        "item_text": "Antitrust",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Compliance",
+                "iri": "https://folio.openlegalstandard.org/RCZwssbqfmu0Lds0LPDV34F",
+                "iri_hash": "RCZwssbqfmu0Lds0LPDV34F",
+                "definition": "Deontic compliance refers to the conformity in action, behavior, or attitude to a set of rules or standards, as prescribed by laws, regulations, or ethical principles.",
+                "synonyms": [
+                  "Legal Compliance"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Compliance",
+                    "iri_hash": "RCZwssbqfmu0Lds0LPDV34F"
+                  }
+                ],
+                "score": 35.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 6,
+        "item_text": "Antitrust and Competition Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Antitrust and Competition Law",
+                "iri": "https://folio.openlegalstandard.org/RDFwOzDi3E8DQ0OxTKb6UEJ",
+                "iri_hash": "RDFwOzDi3E8DQ0OxTKb6UEJ",
+                "definition": "Law surrounding business competition.",
+                "synonyms": [
+                  "Anti-Monopoly Law",
+                  "Antitrust Law",
+                  "Antitrust and Competition",
+                  "Antitrust and Competition Law",
+                  "Derecho de Competencia y Antimonopolio",
+                  "Derecho de la Competencia y Antimonopolio",
+                  "Direito antitruste e de concorrência",
+                  "Droit de la concurrence et antitrust",
+                  "Kartell- und Wettbewerbsrecht",
+                  "חוקי המתחרה והמרחק",
+                  "एंटीट्रस्ट और प्रतिस्पर्धा कानून",
+                  "反垄断和竞争法",
+                  "独占禁止法及び競争法",
+                  "ANTI"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Commercial and Trade Law",
+                    "iri_hash": "RqNYDJtQ1pAsGPKZNEUlET"
+                  },
+                  {
+                    "label": "Antitrust and Competition Law",
+                    "iri_hash": "RDFwOzDi3E8DQ0OxTKb6UEJ"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Compliance",
+                "iri": "https://folio.openlegalstandard.org/RCZwssbqfmu0Lds0LPDV34F",
+                "iri_hash": "RCZwssbqfmu0Lds0LPDV34F",
+                "definition": "Deontic compliance refers to the conformity in action, behavior, or attitude to a set of rules or standards, as prescribed by laws, regulations, or ethical principles.",
+                "synonyms": [
+                  "Legal Compliance"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Compliance",
+                    "iri_hash": "RCZwssbqfmu0Lds0LPDV34F"
+                  }
+                ],
+                "score": 15.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 7,
+        "item_text": "Antitrust - Bid-Rigging Claims",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Antitrust - Bid-Rigging Claims",
+                "iri": "https://folio.openlegalstandard.org/R73DJPQnmrqO90OL7OBDZJU",
+                "iri_hash": "R73DJPQnmrqO90OL7OBDZJU",
+                "definition": "A claim made under antitrust law alleging that multiple parties colluded to manipulate the bidding process in order to artificially inflate prices.",
+                "synonyms": [
+                  "Antimonopolio - Reclamaciones de colusión en licitaciones",
+                  "Antimonopolio - Reclamaciones de manipulación de licitaciones",
+                  "Antitrust - Accusations de collusion à l'appel d'offres",
+                  "Antitrust - Bid-Rigging Claims",
+                  "Antitruste - Alegações de Conluio em Licitações",
+                  "Kartellrecht - Ausschreibungsabsprachen",
+                  "אנטיטרוסט - טענות ריגול במכרזים",
+                  "एंटीट्रस्ट - बिड-रिगिंग दावे",
+                  "反垄断 - 投标串通指控",
+                  "独占禁止法 - 入札不正請求の主張"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Antitrust Claims",
+                    "iri_hash": "RCFPWMbdFLbplboOqvI77Jh"
+                  },
+                  {
+                    "label": "Antitrust - Horizontal Claims",
+                    "iri_hash": "R8oBTLovip7JQGJ9AeOmmCD"
+                  },
+                  {
+                    "label": "Antitrust - Bid-Rigging Claims",
+                    "iri_hash": "R73DJPQnmrqO90OL7OBDZJU"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 8,
+        "item_text": "Antitrust - Pricing Claims",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Antitrust - Pricing Claims",
+                "iri": "https://folio.openlegalstandard.org/R9aw3d42PAXE6t5QYbR7Vru",
+                "iri_hash": "R9aw3d42PAXE6t5QYbR7Vru",
+                "definition": "Antitrust - Pricing Claims refer to allegations of anti-competitive behavior related to pricing practices, such as price-fixing or predatory pricing, in violation of antitrust laws.",
+                "synonyms": [
+                  "Antimonopolio - Reclamaciones de precios",
+                  "Antitrust - Pricing Claims",
+                  "Antitrust - Réclamations de prix",
+                  "Antitruste - Reivindicações de Preços",
+                  "Wettbewerbsrecht - Preisgestaltungsansprüche",
+                  "אנטיטרוסט - טענות מחירים",
+                  "एंटीट्रस्ट - मूल्य दावे",
+                  "反垄断 - 定价索赔",
+                  "独占禁止法 - 価格請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Antitrust Claims",
+                    "iri_hash": "RCFPWMbdFLbplboOqvI77Jh"
+                  },
+                  {
+                    "label": "Antitrust - Pricing Claims",
+                    "iri_hash": "R9aw3d42PAXE6t5QYbR7Vru"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Antitrust - Predatory Pricing Claims",
+                "iri": "https://folio.openlegalstandard.org/RCE1ZZJVKnHqbeGkICU6ub2",
+                "iri_hash": "RCE1ZZJVKnHqbeGkICU6ub2",
+                "definition": "Antitrust - Predatory Pricing Claims refer to allegations of anti-competitive behavior by a company that sets prices below cost with the intention of driving competitors out of the market.",
+                "synonyms": [
+                  "Antimonopolio - Reclamaciones de precios predatorios",
+                  "Antitrust - Predatory Pricing Claims",
+                  "Antitrust - Réclamations de tarification prédatrice",
+                  "Antitruste - Reivindicações de Preços Predatórios",
+                  "Wettbewerbsrecht - Ansprüche wegen räuberischer Preissetzung",
+                  "אנטיטרוסט - טענות מחירים טורפים",
+                  "एंटीट्रस्ट - प्रेडेटरी प्राइसिंग दावे",
+                  "反垄断 - 掠夺性定价索赔",
+                  "競争法 - 捕食的価格請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Antitrust Claims",
+                    "iri_hash": "RCFPWMbdFLbplboOqvI77Jh"
+                  },
+                  {
+                    "label": "Antitrust - Pricing Claims",
+                    "iri_hash": "R9aw3d42PAXE6t5QYbR7Vru"
+                  },
+                  {
+                    "label": "Antitrust - Predatory Pricing Claims",
+                    "iri_hash": "RCE1ZZJVKnHqbeGkICU6ub2"
+                  }
+                ],
+                "score": 82.0
+              },
+              {
+                "label": "Compliance",
+                "iri": "https://folio.openlegalstandard.org/RCZwssbqfmu0Lds0LPDV34F",
+                "iri_hash": "RCZwssbqfmu0Lds0LPDV34F",
+                "definition": "Deontic compliance refers to the conformity in action, behavior, or attitude to a set of rules or standards, as prescribed by laws, regulations, or ethical principles.",
+                "synonyms": [
+                  "Legal Compliance"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Compliance",
+                    "iri_hash": "RCZwssbqfmu0Lds0LPDV34F"
+                  }
+                ],
+                "score": 40.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 9,
+        "item_text": "Securities Litigation",
+        "branch_groups": [
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Litigation Practice",
+                "iri": "https://folio.openlegalstandard.org/R79LjWBKHCdmQKEW6zPY8Co",
+                "iri_hash": "R79LjWBKHCdmQKEW6zPY8Co",
+                "definition": "Matters that include official proceedings (e.g., court case, arbitration, mediation)",
+                "synonyms": [
+                  "Suit",
+                  "Lawsuits",
+                  "Litigation",
+                  "Litigation Service",
+                  "Litigation Practice",
+                  "Pratique du contentieux",
+                  "Prozesspraxis",
+                  "Práctica de litigios",
+                  "Prática de litígios",
+                  "מעשה רישום",
+                  "लिटिगेशन प्रैक्टिस",
+                  "訴訟実務",
+                  "诉讼实践"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Dispute Service",
+                    "iri_hash": "RDigDgTiLFmt7iX3436yCOT"
+                  },
+                  {
+                    "label": "Litigation Practice",
+                    "iri_hash": "R79LjWBKHCdmQKEW6zPY8Co"
+                  }
+                ],
+                "score": 83.0
+              },
+              {
+                "label": "Service",
+                "iri": "https://folio.openlegalstandard.org/RDK1QEdQg1T8B5HQqMK2pZN",
+                "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+                "definition": "The legal work performed, usually by a Legal Services Provider, in the course of a legal matter.",
+                "synonyms": [
+                  "Dienstleistung",
+                  "Service",
+                  "Servicio",
+                  "Serviço",
+                  "שירות",
+                  "सेवा",
+                  "サービス",
+                  "服务"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  }
+                ],
+                "score": 28.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 10,
+        "item_text": "Securities Fraud",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Securities Fraud",
+                "iri": "https://folio.openlegalstandard.org/RC3iZlQIPU8tP1phFuy6oXX",
+                "iri_hash": "RC3iZlQIPU8tP1phFuy6oXX",
+                "definition": "The wrongful act of deceiving or manipulating investors in the securities market, resulting in financial loss or harm.",
+                "synonyms": [
+                  "Fraude de títulos",
+                  "Fraude sur les valeurs mobilières",
+                  "Wertpapierbetrug",
+                  "証券詐欺",
+                  "证券欺诈"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Fraud Claims",
+                    "iri_hash": "R8GyyJdxlZtc7PsW9vLAKfE"
+                  },
+                  {
+                    "label": "Securities Fraud",
+                    "iri_hash": "RC3iZlQIPU8tP1phFuy6oXX"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Fraud",
+                "iri": "https://folio.openlegalstandard.org/RqGxSnAp9vX42GRKHqwvBe",
+                "iri_hash": "RqGxSnAp9vX42GRKHqwvBe",
+                "definition": "Fraud is the intentional act of deceiving someone in order to gain an unfair advantage or cause harm.",
+                "synonyms": [
+                  "Betrug",
+                  "Fraud",
+                  "Fraude",
+                  "Intentional Deceit",
+                  "הונאה",
+                  "धोखाधड़ी",
+                  "欺诈",
+                  "詐欺"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Fraud Claims",
+                    "iri_hash": "R8GyyJdxlZtc7PsW9vLAKfE"
+                  },
+                  {
+                    "label": "Fraud",
+                    "iri_hash": "RqGxSnAp9vX42GRKHqwvBe"
+                  }
+                ],
+                "score": 78.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 11,
+        "item_text": "Insider Trading",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Insider",
+                "iri": "https://folio.openlegalstandard.org/R9P6haogRyeNPepJFEkrFFR",
+                "iri_hash": "R9P6haogRyeNPepJFEkrFFR",
+                "definition": "A statutorily created role, where that Insider (e.g., C-suite executive, activist shareholder) can influence the Debtor. Relevant Statute: 11 USC 101(31).",
+                "synonyms": [
+                  "Bankruptcy",
+                  "Initié",
+                  "Insider",
+                  "Persona Informada",
+                  "מתווך",
+                  "अंतर्दृष्टि",
+                  "インサイダー",
+                  "内部人员"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Insider",
+                    "iri_hash": "R9P6haogRyeNPepJFEkrFFR"
+                  }
+                ],
+                "score": 18.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Insider Report",
+                "iri": "https://folio.openlegalstandard.org/R85uxGmkYSaiJg5clKgjpbd",
+                "iri_hash": "R85uxGmkYSaiJg5clKgjpbd",
+                "definition": "An Insider Report is a document filed by company insiders, such as executives or directors, to disclose their trades in company stock. This report is required by securities regulators to ensure transparency and prevent insider trading.",
+                "synonyms": [
+                  "Executive Share Trading Disclosure"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Entity Disclosure Document",
+                    "iri_hash": "RmCERXtzdqIJcW9mdbk0Bb"
+                  },
+                  {
+                    "label": "Insider Report",
+                    "iri_hash": "R85uxGmkYSaiJg5clKgjpbd"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Insider Trading",
+                "iri": "https://folio.openlegalstandard.org/R9vzE33TyrWCJovQdYnU5Mv",
+                "iri_hash": "R9vzE33TyrWCJovQdYnU5Mv",
+                "definition": "The act of buying or selling securities based on material, non-public information obtained from a company or its insiders, in violation of a duty to keep such information confidential.",
+                "synonyms": [
+                  "Insider Trading",
+                  "Insiderhandel",
+                  "Operaciones con información privilegiada",
+                  "Uso de información privilegiada",
+                  "délit d'initié",
+                  "negociação com informação privilegiada",
+                  "מסחר פנימי",
+                  "इन्साइडर ट्रेडिंग",
+                  "インサイダー取引",
+                  "内幕交易"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Insider Trading",
+                    "iri_hash": "R9vzE33TyrWCJovQdYnU5Mv"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 12,
+        "item_text": "Consumer & Trade",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 13,
+        "item_text": "Consumer Protection Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Consumer Protection Law",
+                "iri": "https://folio.openlegalstandard.org/RCovPJMo8mH3uZhlySLgWIa",
+                "iri_hash": "RCovPJMo8mH3uZhlySLgWIa",
+                "definition": "Law that creates a more equitable balance for buyers in the marketplace and prevents sellers from using dishonest tactics.",
+                "synonyms": [
+                  "Consumer Protection",
+                  "Consumer Protection Law",
+                  "Lei de Proteção ao Consumidor",
+                  "Ley de Protección al Consumidor",
+                  "Loi sur la protection des consommateurs",
+                  "Verbraucherschutzgesetz",
+                  "חוק הגנת הצרכן",
+                  "उपभोक्ता संरक्षण कानून",
+                  "消費者保護法",
+                  "消费者保护法",
+                  "CSMR"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Commercial and Trade Law",
+                    "iri_hash": "RqNYDJtQ1pAsGPKZNEUlET"
+                  },
+                  {
+                    "label": "Consumer Protection Law",
+                    "iri_hash": "RCovPJMo8mH3uZhlySLgWIa"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 14,
+        "item_text": "Unfair Competition",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Unfair Competition Claims",
+                "iri": "https://folio.openlegalstandard.org/R8viNe7dpcLA9kGH5gl7YE6",
+                "iri_hash": "R8viNe7dpcLA9kGH5gl7YE6",
+                "definition": "Unfair Competition Claims refer to legal actions taken by businesses against competitors who engage in deceptive or unfair practices that harm their business, such as trademark infringement, trade secret misappropriation, or deceptive trade practices.",
+                "synonyms": [
+                  "Actions en concurrence déloyale",
+                  "Ansprüche wegen unlauteren Wettbewerbs",
+                  "Demandas por competencia desleal",
+                  "Reclamaciones por competencia desleal",
+                  "Reivindicações de concorrência desleal",
+                  "Unfair Competition Claims",
+                  "תביעות על תחרות לא הוגנת",
+                  "अन्यायपूर्ण प्रतिस्पर्धा दावे",
+                  "不正当竞争索赔",
+                  "不正競争請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Unfair Competition Claims",
+                    "iri_hash": "R8viNe7dpcLA9kGH5gl7YE6"
+                  }
+                ],
+                "score": 95.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 15,
+        "item_text": "Unfair Competition Claims",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Unfair Competition Claims",
+                "iri": "https://folio.openlegalstandard.org/R8viNe7dpcLA9kGH5gl7YE6",
+                "iri_hash": "R8viNe7dpcLA9kGH5gl7YE6",
+                "definition": "Unfair Competition Claims refer to legal actions taken by businesses against competitors who engage in deceptive or unfair practices that harm their business, such as trademark infringement, trade secret misappropriation, or deceptive trade practices.",
+                "synonyms": [
+                  "Actions en concurrence déloyale",
+                  "Ansprüche wegen unlauteren Wettbewerbs",
+                  "Demandas por competencia desleal",
+                  "Reclamaciones por competencia desleal",
+                  "Reivindicações de concorrência desleal",
+                  "Unfair Competition Claims",
+                  "תביעות על תחרות לא הוגנת",
+                  "अन्यायपूर्ण प्रतिस्पर्धा दावे",
+                  "不正当竞争索赔",
+                  "不正競争請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Unfair Competition Claims",
+                    "iri_hash": "R8viNe7dpcLA9kGH5gl7YE6"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 16,
+        "item_text": "Dispute Resolution",
+        "branch_groups": [
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Matter Resolution",
+                "iri": "https://folio.openlegalstandard.org/RDb5NaTE1GUBVmvGsTgjsQa",
+                "iri_hash": "RDb5NaTE1GUBVmvGsTgjsQa",
+                "definition": "A matter's resolution — the point at which the legal matter is resolved. Some Providers refer to this as a \"pencils down\" period. This event may differ from `Matter Closure`, which may occur later.",
+                "synonyms": [
+                  "Materielle Auflösung",
+                  "Matter Resolution",
+                  "Resolución de Asunto",
+                  "Resolução da questão",
+                  "Résolution de la question",
+                  "פיצול עניינים",
+                  "मामले का निराकरण",
+                  "事項解決",
+                  "事项解决"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Event",
+                    "iri_hash": "R73hoH1RXYjBTYiGfolpsAF"
+                  },
+                  {
+                    "label": "Matter Resolution",
+                    "iri_hash": "RDb5NaTE1GUBVmvGsTgjsQa"
+                  }
+                ],
+                "score": 62.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Dispute Resolution Clause",
+                "iri": "https://folio.openlegalstandard.org/RCUXIdFpIxrgm2u6Xlk9ywc",
+                "iri_hash": "RCUXIdFpIxrgm2u6Xlk9ywc",
+                "definition": "A Dispute Resolution Clause is a provision in a contract that outlines the process for resolving any disagreements or conflicts that may arise between the parties involved, typically through negotiation, mediation, or arbitration.",
+                "synonyms": [
+                  "Clause de résolution de conflit",
+                  "Cláusula de Resolución de Controversias",
+                  "Cláusula de Resolución de Disputas",
+                  "Cláusula de resolução de disputas",
+                  "Dispute Resolution Clause",
+                  "Schiedsklausel",
+                  "סעיף פתרון סכסוכים",
+                  "विवाद समाधान अनुबंध",
+                  "争议解决条款",
+                  "紛争解決条項"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Transactional Objectives",
+                    "iri_hash": "R70jMZb6xYrVCXW6f3EbO1e"
+                  },
+                  {
+                    "label": "Contractual Clause",
+                    "iri_hash": "RDe0RKU39BlhcyACJW30ZLc"
+                  },
+                  {
+                    "label": "Dispute Resolution Clause",
+                    "iri_hash": "RCUXIdFpIxrgm2u6Xlk9ywc"
+                  }
+                ],
+                "score": 88.0
+              }
+            ]
+          },
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Dispute Service",
+                "iri": "https://folio.openlegalstandard.org/RDigDgTiLFmt7iX3436yCOT",
+                "iri_hash": "RDigDgTiLFmt7iX3436yCOT",
+                "definition": "A process that describes a conflict/adversarial event potentially or actually involving a second party. This can include government entity or internal investigation",
+                "synonyms": [
+                  "Advocacy",
+                  "Dispute",
+                  "Dispute Service",
+                  "Disputes",
+                  "Service de règlement des différends",
+                  "Servicio de resolución de controversias",
+                  "Servicio de resolución de disputas",
+                  "Serviço de resolução de disputas",
+                  "Streitbeilegungsdienst",
+                  "שירות פתרון סכסוכים",
+                  "विवाद सेवा",
+                  "争议解决服务",
+                  "紛争処理サービス",
+                  "D"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Dispute Service",
+                    "iri_hash": "RDigDgTiLFmt7iX3436yCOT"
+                  }
+                ],
+                "score": 45.0
+              },
+              {
+                "label": "Service",
+                "iri": "https://folio.openlegalstandard.org/RDK1QEdQg1T8B5HQqMK2pZN",
+                "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+                "definition": "The legal work performed, usually by a Legal Services Provider, in the course of a legal matter.",
+                "synonyms": [
+                  "Dienstleistung",
+                  "Service",
+                  "Servicio",
+                  "Serviço",
+                  "שירות",
+                  "सेवा",
+                  "サービス",
+                  "服务"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  }
+                ],
+                "score": 30.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
+      },
+      {
+        "item_index": 17,
+        "item_text": "Arbitration Practice",
+        "branch_groups": [
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Arbitration Practice",
+                "iri": "https://folio.openlegalstandard.org/RXO2u2WBkUUcEG1jczLIcA",
+                "iri_hash": "RXO2u2WBkUUcEG1jczLIcA",
+                "definition": "Arbitration, a form of alternative dispute resolution (ADR), is a way to resolve disputes outside the courts. The dispute will be decided by one or more persons (the \"arbitrators\", \"arbiters\" or \"arbitral tribunal\"), which renders the \"arbitration award\".",
+                "synonyms": [
+                  "Arbitrations",
+                  "Arbitration Service",
+                  "Arbitration",
+                  "Arbitration Practice",
+                  "Pratique de l'arbitrage",
+                  "Práctica de arbitraje",
+                  "Prática de arbitragem",
+                  "Schiedspraxis",
+                  "מעשה בית דין פרטי",
+                  "विवाद-समाधान अभ्यास",
+                  "仲裁实践",
+                  "仲裁実務",
+                  "ARB"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Dispute Service",
+                    "iri_hash": "RDigDgTiLFmt7iX3436yCOT"
+                  },
+                  {
+                    "label": "Litigation Practice",
+                    "iri_hash": "R79LjWBKHCdmQKEW6zPY8Co"
+                  },
+                  {
+                    "label": "Alternative Dispute Resolution Practice",
+                    "iri_hash": "R85H4hDZWq92xwwBFP7WCtM"
+                  },
+                  {
+                    "label": "Arbitration Practice",
+                    "iri_hash": "RXO2u2WBkUUcEG1jczLIcA"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Service",
+                "iri": "https://folio.openlegalstandard.org/RDK1QEdQg1T8B5HQqMK2pZN",
+                "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+                "definition": "The legal work performed, usually by a Legal Services Provider, in the course of a legal matter.",
+                "synonyms": [
+                  "Dienstleistung",
+                  "Service",
+                  "Servicio",
+                  "Serviço",
+                  "שירות",
+                  "सेवा",
+                  "サービス",
+                  "服务"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  }
+                ],
+                "score": 35.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 18,
+        "item_text": "Mediation Practice",
+        "branch_groups": [
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Mediation Practice",
+                "iri": "https://folio.openlegalstandard.org/R9zgcjBBIdWMnwIR8nqsoS8",
+                "iri_hash": "R9zgcjBBIdWMnwIR8nqsoS8",
+                "definition": "Mediation is a process wherein the parties meet with a mutually selected impartial and neutral person who assists them in the negotiation of their differences. Mediation leaves the decision power totally and strictly with the parties.",
+                "synonyms": [
+                  "Mediations",
+                  "Mediation Service",
+                  "Mediation",
+                  "Mediation Practice",
+                  "Mediationspraxis",
+                  "Pratique de la médiation",
+                  "Práctica de Mediación",
+                  "Prática de mediação",
+                  "תרגול בישום פתרונות",
+                  "मध्यस्थता अभ्यास",
+                  "調停実践",
+                  "调解实践",
+                  "MED"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Dispute Service",
+                    "iri_hash": "RDigDgTiLFmt7iX3436yCOT"
+                  },
+                  {
+                    "label": "Litigation Practice",
+                    "iri_hash": "R79LjWBKHCdmQKEW6zPY8Co"
+                  },
+                  {
+                    "label": "Alternative Dispute Resolution Practice",
+                    "iri_hash": "R85H4hDZWq92xwwBFP7WCtM"
+                  },
+                  {
+                    "label": "Mediation Practice",
+                    "iri_hash": "R9zgcjBBIdWMnwIR8nqsoS8"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Service",
+                "iri": "https://folio.openlegalstandard.org/RDK1QEdQg1T8B5HQqMK2pZN",
+                "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+                "definition": "The legal work performed, usually by a Legal Services Provider, in the course of a legal matter.",
+                "synonyms": [
+                  "Dienstleistung",
+                  "Service",
+                  "Servicio",
+                  "Serviço",
+                  "שירות",
+                  "सेवा",
+                  "サービス",
+                  "服务"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  }
+                ],
+                "score": 35.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      }
+    ],
+    "total_items": 19,
+    "branches_available": [
+      {
+        "name": "Actor / Player",
+        "color": "#1e6fa0",
+        "concept_count": 563
+      },
+      {
+        "name": "Area of Law",
+        "color": "#1a5276",
+        "concept_count": 174
+      },
+      {
+        "name": "Asset Type",
+        "color": "#6b5600",
+        "concept_count": 345
+      },
+      {
+        "name": "Communication Modality",
+        "color": "#7b4d93",
+        "concept_count": 11
+      },
+      {
+        "name": "Currency",
+        "color": "#7a5a00",
+        "concept_count": 178
+      },
+      {
+        "name": "Data Format",
+        "color": "#4a5568",
+        "concept_count": 17
+      },
+      {
+        "name": "Document / Artifact",
+        "color": "#9c4a10",
+        "concept_count": 2796
+      },
+      {
+        "name": "Engagement Attributes",
+        "color": "#10613a",
+        "concept_count": 343
+      },
+      {
+        "name": "Event",
+        "color": "#b91c1c",
+        "concept_count": 403
+      },
+      {
+        "name": "FOLIO Type",
+        "color": "#6b5c00",
+        "concept_count": 3
+      },
+      {
+        "name": "Forums and Venues",
+        "color": "#7b2d8e",
+        "concept_count": 2180
+      },
+      {
+        "name": "Governmental Body",
+        "color": "#1a6091",
+        "concept_count": 1585
+      },
+      {
+        "name": "Industry and Market",
+        "color": "#065550",
+        "concept_count": 2137
+      },
+      {
+        "name": "Language",
+        "color": "#7a3b10",
+        "concept_count": 489
+      },
+      {
+        "name": "Legal Authorities",
+        "color": "#8b1a1a",
+        "concept_count": 82
+      },
+      {
+        "name": "Legal Entity",
+        "color": "#085e40",
+        "concept_count": 517
+      },
+      {
+        "name": "Location",
+        "color": "#105560",
+        "concept_count": 3782
+      },
+      {
+        "name": "Matter Narrative",
+        "color": "#6d3580",
+        "concept_count": 13
+      },
+      {
+        "name": "Matter Narrative Format",
+        "color": "#1a6894",
+        "concept_count": 2
+      },
+      {
+        "name": "Objectives",
+        "color": "#b03020",
+        "concept_count": 5411
+      },
+      {
+        "name": "Service",
+        "color": "#065e4e",
+        "concept_count": 434
+      },
+      {
+        "name": "Status",
+        "color": "#864a08",
+        "concept_count": 23
+      },
+      {
+        "name": "System Identifiers",
+        "color": "#3d4d5a",
+        "concept_count": 13
+      }
+    ]
+  },
+  "pipeline_metadata": [
+    {
+      "item_index": 0,
+      "item_text": "Complex Commercial Litigation",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Complex Commercial Litigation",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Complex Commercial Litigation"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 1,
+      "item_text": "Contract Disputes",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Contract Disputes",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Contract Disputes"
+      },
+      "stage1_candidate_count": 8,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 8,
+      "stage3_judged_count": 7,
+      "stage3_boosted": 1,
+      "stage3_penalized": 6,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 2,
+      "item_text": "Breach of Contract",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Breach of Contract",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Breach of Contract"
+      },
+      "stage1_candidate_count": 11,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 11,
+      "stage3_judged_count": 11,
+      "stage3_boosted": 0,
+      "stage3_penalized": 5,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 3,
+      "item_text": "Tortious Interference Claims",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Tortious Interference Claims",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Tortious Interference Claims"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 4,
+      "item_text": "Breach of Contract Claims",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Breach of Contract Claims",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Breach of Contract Claims"
+      },
+      "stage1_candidate_count": 16,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 16,
+      "stage3_judged_count": 14,
+      "stage3_boosted": 0,
+      "stage3_penalized": 5,
+      "stage3_rejected": 2
+    },
+    {
+      "item_index": 5,
+      "item_text": "Antitrust",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Antitrust",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Antitrust"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 6,
+      "item_text": "Antitrust and Competition Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Antitrust and Competition Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Antitrust and Competition Law"
+      },
+      "stage1_candidate_count": 4,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 4,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 2
+    },
+    {
+      "item_index": 7,
+      "item_text": "Antitrust - Bid-Rigging Claims",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Antitrust - Bid-Rigging Claims",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Antitrust - Bid-Rigging Claims"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 2
+    },
+    {
+      "item_index": 8,
+      "item_text": "Antitrust - Pricing Claims",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Antitrust - Pricing Claims",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Antitrust - Pricing Claims"
+      },
+      "stage1_candidate_count": 5,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 5,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 2
+    },
+    {
+      "item_index": 9,
+      "item_text": "Securities Litigation",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Securities Litigation",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Securities Litigation"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 10,
+      "item_text": "Securities Fraud",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Securities Fraud",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Securities Fraud"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 11,
+      "item_text": "Insider Trading",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Insider Trading",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Insider Trading"
+      },
+      "stage1_candidate_count": 4,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 4,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 12,
+      "item_text": "Consumer & Trade",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Consumer & Trade",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Consumer & Trade"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 13,
+      "item_text": "Consumer Protection Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Consumer Protection Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Consumer Protection Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 14,
+      "item_text": "Unfair Competition",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Unfair Competition",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Unfair Competition"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 1,
+      "stage3_penalized": 0,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 15,
+      "item_text": "Unfair Competition Claims",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Unfair Competition Claims",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Unfair Competition Claims"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 16,
+      "item_text": "Dispute Resolution",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Dispute Resolution",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Dispute Resolution"
+      },
+      "stage1_candidate_count": 5,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 5,
+      "stage3_judged_count": 4,
+      "stage3_boosted": 0,
+      "stage3_penalized": 3,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 17,
+      "item_text": "Arbitration Practice",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Arbitration Practice",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Arbitration Practice"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 18,
+      "item_text": "Mediation Practice",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Mediation Practice",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Mediation Practice"
+      },
+      "stage1_candidate_count": 4,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 4,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 2
+    }
+  ],
+  "selections": {
+    "0": [
+      "R79LjWBKHCdmQKEW6zPY8Co"
+    ],
+    "1": [
+      "RZ1dOPJ6HH6lMJGSLNxfwV"
+    ],
+    "2": [
+      "RC2fjcpsEbrVvVymvt4oASx"
+    ],
+    "3": [
+      "RCcQHyZbjBHsXsm0zrZGme5"
+    ],
+    "4": [
+      "RbkhZxcSyqaKNyUivxRRpu"
+    ],
+    "5": [],
+    "6": [
+      "RDFwOzDi3E8DQ0OxTKb6UEJ"
+    ],
+    "7": [
+      "R73DJPQnmrqO90OL7OBDZJU"
+    ],
+    "8": [
+      "R9aw3d42PAXE6t5QYbR7Vru"
+    ],
+    "9": [],
+    "10": [
+      "RC3iZlQIPU8tP1phFuy6oXX"
+    ],
+    "11": [
+      "R9vzE33TyrWCJovQdYnU5Mv"
+    ],
+    "12": [],
+    "13": [
+      "RCovPJMo8mH3uZhlySLgWIa"
+    ],
+    "14": [
+      "R8viNe7dpcLA9kGH5gl7YE6"
+    ],
+    "15": [
+      "R8viNe7dpcLA9kGH5gl7YE6"
+    ],
+    "16": [
+      "RCUXIdFpIxrgm2u6Xlk9ywc"
+    ],
+    "17": [
+      "RXO2u2WBkUUcEG1jczLIcA"
+    ],
+    "18": [
+      "R9zgcjBBIdWMnwIR8nqsoS8"
+    ]
+  },
+  "node_statuses": {
+    "0": "completed",
+    "1": "completed",
+    "2": "completed",
+    "3": "completed",
+    "4": "completed",
+    "5": "unmapped",
+    "6": "completed",
+    "7": "completed",
+    "8": "completed",
+    "9": "unmapped",
+    "10": "completed",
+    "11": "completed",
+    "12": "unmapped",
+    "13": "completed",
+    "14": "completed",
+    "15": "completed",
+    "16": "completed",
+    "17": "completed",
+    "18": "completed"
+  },
+  "notes": {},
+  "screen": "mapping",
+  "branch_states": {},
+  "input_branch_states": {},
+  "branch_sort_mode": "default",
+  "custom_branch_order": [],
+  "status_filter": "all",
+  "suggestion_queue": [],
+  "review_queue": [],
+  "pipeline_version": "0.10.0+01f7ecb",
+  "folio_version": "0.2.0"
+}
