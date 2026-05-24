@@ -6,10 +6,9 @@ import demoEmploymentLabor from '../exemplar/demos/employment-labor.demo.json';
 import demoCorporateMa from '../exemplar/demos/corporate-ma.demo.json';
 import demoIpTech from '../exemplar/demos/ip-tech.demo.json';
 import demoCommercialLit from '../exemplar/demos/commercial-lit.demo.json';
-// Remaining areas added by Plan 05 as their demo.json is committed:
-// import demoRealEstate from '../exemplar/demos/real-estate.demo.json';
-// import demoBankingFinance from '../exemplar/demos/banking-finance.demo.json';
-// import demoImmigration from '../exemplar/demos/immigration.demo.json';
+import demoRealEstate from '../exemplar/demos/real-estate.demo.json';
+import demoBankingFinance from '../exemplar/demos/banking-finance.demo.json';
+import demoImmigration from '../exemplar/demos/immigration.demo.json';
 import { loadSessionFromObject } from '../hooks/useSession';
 import { useInputStore } from '../store/input-store';
 import { useMappingStore } from '../store/mapping-store';
@@ -54,6 +53,9 @@ describe('demo mode network invariant', () => {
     ['corporate-ma',     demoCorporateMa],
     ['ip-tech',          demoIpTech],
     ['commercial-lit',   demoCommercialLit],
+    ['real-estate',      demoRealEstate],
+    ['banking-finance',  demoBankingFinance],
+    ['immigration',      demoImmigration],
   ] as [string, Record<string, unknown>][])(
     '%s loadSessionFromObject performs zero LLM/pipeline/parse network calls',
     (_slug, payload) => {

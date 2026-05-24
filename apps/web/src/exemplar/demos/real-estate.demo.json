@@ -1,0 +1,3193 @@
+{
+  "version": "1.3",
+  "created": "2026-05-24T19:50:53.236019+00:00",
+  "updated": "2026-05-24T19:50:53.236019+00:00",
+  "source_file": null,
+  "input_format": "hierarchical",
+  "total_nodes": 19,
+  "completed": 15,
+  "skipped": 0,
+  "current_position": 0,
+  "provider": "anthropic",
+  "model": "claude-3-5-sonnet-latest",
+  "text_input": "Real Property Law\n\tProperty Transactions\n\t\tProperty Rights and Transactions Law\n\t\tClearing Title\n\tLandlord-Tenant\n\t\tLandlord Tenant Law\n\t\tLease Agreements\n\t\tLandlord-Tenant Claims\n\tZoning & Land Use\n\t\tLand Use and Zoning Law\n\t\tZoning Variance\n\tConstruction\n\t\tConstruction and Development Law\n\t\tBuilding Code Violations\n\t\tConstruction Defect Claims\n\tForeclosure & Liens\n\t\tMortgage Foreclosure\n\t\tEminent Domain Law\n\t\tReverse Mortgage Foreclosure",
+  "parse_result": {
+    "format": "hierarchical",
+    "items": [
+      {
+        "text": "Real Property Law",
+        "index": 0,
+        "ancestry": []
+      },
+      {
+        "text": "Property Transactions",
+        "index": 1,
+        "ancestry": [
+          "Real Property Law"
+        ]
+      },
+      {
+        "text": "Property Rights and Transactions Law",
+        "index": 2,
+        "ancestry": [
+          "Real Property Law",
+          "Property Transactions"
+        ]
+      },
+      {
+        "text": "Clearing Title",
+        "index": 3,
+        "ancestry": [
+          "Real Property Law",
+          "Property Transactions"
+        ]
+      },
+      {
+        "text": "Landlord-Tenant",
+        "index": 4,
+        "ancestry": [
+          "Real Property Law"
+        ]
+      },
+      {
+        "text": "Landlord Tenant Law",
+        "index": 5,
+        "ancestry": [
+          "Real Property Law",
+          "Landlord-Tenant"
+        ]
+      },
+      {
+        "text": "Lease Agreements",
+        "index": 6,
+        "ancestry": [
+          "Real Property Law",
+          "Landlord-Tenant"
+        ]
+      },
+      {
+        "text": "Landlord-Tenant Claims",
+        "index": 7,
+        "ancestry": [
+          "Real Property Law",
+          "Landlord-Tenant"
+        ]
+      },
+      {
+        "text": "Zoning & Land Use",
+        "index": 8,
+        "ancestry": [
+          "Real Property Law"
+        ]
+      },
+      {
+        "text": "Land Use and Zoning Law",
+        "index": 9,
+        "ancestry": [
+          "Real Property Law",
+          "Zoning & Land Use"
+        ]
+      },
+      {
+        "text": "Zoning Variance",
+        "index": 10,
+        "ancestry": [
+          "Real Property Law",
+          "Zoning & Land Use"
+        ]
+      },
+      {
+        "text": "Construction",
+        "index": 11,
+        "ancestry": [
+          "Real Property Law"
+        ]
+      },
+      {
+        "text": "Construction and Development Law",
+        "index": 12,
+        "ancestry": [
+          "Real Property Law",
+          "Construction"
+        ]
+      },
+      {
+        "text": "Building Code Violations",
+        "index": 13,
+        "ancestry": [
+          "Real Property Law",
+          "Construction"
+        ]
+      },
+      {
+        "text": "Construction Defect Claims",
+        "index": 14,
+        "ancestry": [
+          "Real Property Law",
+          "Construction"
+        ]
+      },
+      {
+        "text": "Foreclosure & Liens",
+        "index": 15,
+        "ancestry": [
+          "Real Property Law"
+        ]
+      },
+      {
+        "text": "Mortgage Foreclosure",
+        "index": 16,
+        "ancestry": [
+          "Real Property Law",
+          "Foreclosure & Liens"
+        ]
+      },
+      {
+        "text": "Eminent Domain Law",
+        "index": 17,
+        "ancestry": [
+          "Real Property Law",
+          "Foreclosure & Liens"
+        ]
+      },
+      {
+        "text": "Reverse Mortgage Foreclosure",
+        "index": 18,
+        "ancestry": [
+          "Real Property Law",
+          "Foreclosure & Liens"
+        ]
+      }
+    ],
+    "hierarchy": [
+      {
+        "label": "Real Property Law",
+        "depth": 0,
+        "children": [
+          {
+            "label": "Property Transactions",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Property Rights and Transactions Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Clearing Title",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Landlord-Tenant",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Landlord Tenant Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Lease Agreements",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Landlord-Tenant Claims",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Zoning & Land Use",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Land Use and Zoning Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Zoning Variance",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Construction",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Construction and Development Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Building Code Violations",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Construction Defect Claims",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Foreclosure & Liens",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Mortgage Foreclosure",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Eminent Domain Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Reverse Mortgage Foreclosure",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_items": 19,
+    "headers": null,
+    "source_filename": null,
+    "raw_preview": [
+      [
+        "Real Property Law"
+      ],
+      [
+        "",
+        "Property Transactions"
+      ],
+      [
+        "",
+        "",
+        "Property Rights and Transactions Law"
+      ],
+      [
+        "",
+        "",
+        "Clearing Title"
+      ],
+      [
+        "",
+        "Landlord-Tenant"
+      ]
+    ]
+  },
+  "mapping_response": {
+    "items": [
+      {
+        "item_index": 0,
+        "item_text": "Real Property Law",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Real Estate Operator",
+                "iri": "https://folio.openlegalstandard.org/R7OtUosForl1Zon7KU3gQQR",
+                "iri_hash": "R7OtUosForl1Zon7KU3gQQR",
+                "definition": "A Real Estate Operator is a professional or entity responsible for the day-to-day management, maintenance, and operations of real estate properties. This role includes overseeing property functions, ensuring tenant satisfaction, handling leasing activities, and maintaining the physical condition of the property.",
+                "synonyms": [
+                  "Property Operator",
+                  "Real Estate Manager"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Management",
+                    "iri_hash": "RDm4rfXgHt9wIDHbrUUGCGL"
+                  },
+                  {
+                    "label": "Real Estate Operator",
+                    "iri_hash": "R7OtUosForl1Zon7KU3gQQR"
+                  }
+                ],
+                "score": 86.0
+              },
+              {
+                "label": "Real Estate Developer",
+                "iri": "https://folio.openlegalstandard.org/R9M22nIQgd72E0PSrkHmrxX",
+                "iri_hash": "R9M22nIQgd72E0PSrkHmrxX",
+                "definition": "A Real Estate Developer is a professional or company that acquires land, finances real estate deals, builds or renovates properties, and arranges for their sale or lease. This role involves various stages of development, including market research, site selection, obtaining permits, and managing construction projects.",
+                "synonyms": [
+                  "Real Estate Entrepreneur"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Real Estate Developer",
+                    "iri_hash": "R9M22nIQgd72E0PSrkHmrxX"
+                  }
+                ],
+                "score": 86.0
+              },
+              {
+                "label": "Real Estate Investor",
+                "iri": "https://folio.openlegalstandard.org/RcPmc5tXDkOmcv3W8TxwTO",
+                "iri_hash": "RcPmc5tXDkOmcv3W8TxwTO",
+                "definition": "Entities or individuals that invest in real property, either directly or through a real estate investment trust (REIT).",
+                "synonyms": [],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Investor",
+                    "iri_hash": "R8hWq9dSn0Su2Y59JE48V3H"
+                  },
+                  {
+                    "label": "Real Estate Investor",
+                    "iri_hash": "RcPmc5tXDkOmcv3W8TxwTO"
+                  }
+                ],
+                "score": 86.0
+              }
+            ]
+          },
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Real Property Law",
+                "iri": "https://folio.openlegalstandard.org/RDb8aZxNJsmCvQGbfiFyfI7",
+                "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7",
+                "definition": "Law that governs the various forms of ownership and tenancy in real property.",
+                "synonyms": [
+                  "Derecho de Propiedad Inmobiliaria",
+                  "Direito de propriedade imobiliária",
+                  "Droit des biens immobiliers",
+                  "Property Law",
+                  "Real Property Law",
+                  "Sachenrecht",
+                  "חוק רכוש נדלן",
+                  "रियल प्रॉपर्टी कानून",
+                  "不动产法",
+                  "不動産法",
+                  "REAL"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Real Property Law",
+                    "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          },
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Estate",
+                "iri": "https://folio.openlegalstandard.org/RCBP9N5ER7Y6inNQdjggrKt",
+                "iri_hash": "RCBP9N5ER7Y6inNQdjggrKt",
+                "definition": "An Estate refers to all the possessions, property, and legal rights owned by an individual, including land, tenements, and personal assets. It also encompasses the total assets and liabilities left by a person at death, which are subject to distribution according to the terms of a will or the laws of intestacy.",
+                "synonyms": [
+                  "Personal Estate",
+                  "Property Holdings"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Estate",
+                    "iri_hash": "RCBP9N5ER7Y6inNQdjggrKt"
+                  }
+                ],
+                "score": 68.0
+              },
+              {
+                "label": "Real Estate Asset",
+                "iri": "https://folio.openlegalstandard.org/RUhSbbDJZa8Crs3tIWcIfV",
+                "iri_hash": "RUhSbbDJZa8Crs3tIWcIfV",
+                "definition": "Real estate asset type",
+                "synonyms": [
+                  "Actif immobilier",
+                  "Activo inmobiliario",
+                  "Ativo imobiliário",
+                  "Immobilienvermögen",
+                  "Real Estate",
+                  "Real Estate Asset",
+                  "נכס נדלן",
+                  "रियल एस्टेट संपत्ति",
+                  "不動産資産",
+                  "房地产资产",
+                  "REALA"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Tangible Assets",
+                    "iri_hash": "RbvEeHm8jkxY6SgfxEoC0i"
+                  },
+                  {
+                    "label": "Real Estate Asset",
+                    "iri_hash": "RUhSbbDJZa8Crs3tIWcIfV"
+                  }
+                ],
+                "score": 65.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Real Estate Documents",
+                "iri": "https://folio.openlegalstandard.org/R9OVY5GWczMSrxKsf8cfgpq",
+                "iri_hash": "R9OVY5GWczMSrxKsf8cfgpq",
+                "definition": "Real Estate Documents are written or recorded representations of property ownership, transfer, or use, including but not limited to deeds, mortgages, and leases.",
+                "synonyms": [
+                  "Documentos de bienes raíces",
+                  "Documentos imobiliários",
+                  "Documents immobiliers",
+                  "Immobilienunterlagen",
+                  "Real Estate Documents",
+                  "מסמכי נדלן",
+                  "रियल एस्टेट दस्तावेज़",
+                  "不動産書類",
+                  "房地产文件"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Document Collections by Areas of Law",
+                    "iri_hash": "RQR64SI6XmYz5JlNaDUOZN"
+                  },
+                  {
+                    "label": "Real Estate Documents",
+                    "iri_hash": "R9OVY5GWczMSrxKsf8cfgpq"
+                  }
+                ],
+                "score": 86.0
+              },
+              {
+                "label": "Real Estate Lease",
+                "iri": "https://folio.openlegalstandard.org/RDkZ1f1SIdbFYRwzAad7v3D",
+                "iri_hash": "RDkZ1f1SIdbFYRwzAad7v3D",
+                "definition": "A Real Estate Lease is a contract wherein the owner (lessor) grants the right to occupy and use their property to another party (lessee) for a specified period in exchange for rental payments.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Real Estate Agreement",
+                    "iri_hash": "R7I7inwWLqKi8ZMm0Ey6dkK"
+                  },
+                  {
+                    "label": "Real Estate Lease",
+                    "iri_hash": "RDkZ1f1SIdbFYRwzAad7v3D"
+                  }
+                ],
+                "score": 86.0
+              },
+              {
+                "label": "Real Estate Sublease",
+                "iri": "https://folio.openlegalstandard.org/RDBS61FqSjI9FJxVdYNJjFy",
+                "iri_hash": "RDBS61FqSjI9FJxVdYNJjFy",
+                "definition": "A Real Estate Sublease is an agreement where the original tenant (sublessor) rents out the property to another tenant (sublessee), either for the entirety or a portion of the remaining lease term.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Real Estate Agreement",
+                    "iri_hash": "R7I7inwWLqKi8ZMm0Ey6dkK"
+                  },
+                  {
+                    "label": "Real Estate Sublease",
+                    "iri_hash": "RDBS61FqSjI9FJxVdYNJjFy"
+                  }
+                ],
+                "score": 86.0
+              }
+            ]
+          },
+          {
+            "branch": "Financial Concepts and Metrics",
+            "branch_color": "#6e4b00",
+            "candidates": [
+              {
+                "label": "Real Estate Commission",
+                "iri": "https://folio.openlegalstandard.org/RZYXLke0clPKdsZaimRsPl",
+                "iri_hash": "RZYXLke0clPKdsZaimRsPl",
+                "definition": "A real estate commission is a fee paid to real estate agents or brokers for their services in facilitating the sale or purchase of property. It is typically a percentage of the final sale price and compensates the agent for their efforts in marketing, negotiating, and closing the real estate transaction",
+                "synonyms": [],
+                "branch": "Financial Concepts and Metrics",
+                "branch_color": "#6e4b00",
+                "hierarchy_path": [
+                  {
+                    "label": "Financial Concepts and Metrics",
+                    "iri_hash": "RhBgnef56iLBXYfPqWQE41"
+                  },
+                  {
+                    "label": "Cost Metrics",
+                    "iri_hash": "RTHm2BxeaziDbm5655G1ki"
+                  },
+                  {
+                    "label": "Compensation Metrics",
+                    "iri_hash": "R8aNhIN6jIIVcj5Cbh8Bduw"
+                  },
+                  {
+                    "label": "Commissions (Pay)",
+                    "iri_hash": "Ry9hX7PSumXkvA5dFwO49X"
+                  },
+                  {
+                    "label": "Real Estate Commission",
+                    "iri_hash": "RZYXLke0clPKdsZaimRsPl"
+                  }
+                ],
+                "score": 86.0
+              }
+            ]
+          },
+          {
+            "branch": "Industry and Market",
+            "branch_color": "#065550",
+            "candidates": [
+              {
+                "label": "Real Estate Industry",
+                "iri": "https://folio.openlegalstandard.org/RDzGV0uU52QEYp4H0g4bOBP",
+                "iri_hash": "RDzGV0uU52QEYp4H0g4bOBP",
+                "definition": "Industries in the Real Estate group are primarily engaged in renting or leasing real estate to others; managing real estate for others; selling, buying, or renting real estate for others; and providing other real estate related services, such as appraisal services. This subsector includes equity Real Estate Investment Trusts (REITs) that are primarily engaged in leasing buildings, dwellings, or other real estate property to others.",
+                "synonyms": [
+                  "Immobilienbranche",
+                  "Industria Inmobiliaria",
+                  "Industrie immobilière",
+                  "Indústria imobiliária",
+                  "Real Estate",
+                  "Real Estate Industry",
+                  "תעשיית נדלן",
+                  "रियल एस्टेट उद्योग",
+                  "不動産業",
+                  "房地产行业",
+                  "REAL"
+                ],
+                "branch": "Industry and Market",
+                "branch_color": "#065550",
+                "hierarchy_path": [
+                  {
+                    "label": "Industry",
+                    "iri_hash": "RDIwFaFcH4KY0gwEY0QlMTp"
+                  },
+                  {
+                    "label": "Real Estate, Rental and Leasing Industry",
+                    "iri_hash": "RjKL1UdfWL1FCPVhnbIFSF"
+                  },
+                  {
+                    "label": "Real Estate Industry",
+                    "iri_hash": "RDzGV0uU52QEYp4H0g4bOBP"
+                  }
+                ],
+                "score": 58.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Real Estate Fraud",
+                "iri": "https://folio.openlegalstandard.org/RCxfiZzG4dF6wN0pVL57OS",
+                "iri_hash": "RCxfiZzG4dF6wN0pVL57OS",
+                "definition": "Real Estate Fraud: A type of fraud claim that involves deceitful or dishonest practices related to the buying, selling, or leasing of real property, which may result in property or premises liability claims.",
+                "synonyms": [
+                  "Fraude Inmobiliario",
+                  "Fraude immobilière",
+                  "Fraude imobiliária",
+                  "Immobilienbetrug",
+                  "Real Estate Fraud",
+                  "הונאת נדלן",
+                  "रियल एस्टेट धोखाधड़ी",
+                  "不動産詐欺",
+                  "房地产欺诈"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Fraud Claims",
+                    "iri_hash": "R8GyyJdxlZtc7PsW9vLAKfE"
+                  },
+                  {
+                    "label": "Real Estate Fraud",
+                    "iri_hash": "RCxfiZzG4dF6wN0pVL57OS"
+                  }
+                ],
+                "score": 86.0
+              },
+              {
+                "label": "Trespass to Real Property",
+                "iri": "https://folio.openlegalstandard.org/RBeABy5UPz4KOLOrL1LrxFD",
+                "iri_hash": "RBeABy5UPz4KOLOrL1LrxFD",
+                "definition": "The concept of Trespass to Real Property refers to the intentional and unauthorized entry onto someone else's land or property, causing damage or interference with the owner's right to exclusive possession.",
+                "synonyms": [
+                  "Hausfriedensbruch",
+                  "Intrusión en bienes inmuebles",
+                  "Invasão de propriedade",
+                  "Trespass to Real Property",
+                  "Trouble de voisinage",
+                  "הפרת קניין ריאלי",
+                  "वास्तविक संपत्ति के लिए अतिचार",
+                  "不動産侵入",
+                  "侵占不动产"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Property & Premises Liability Claims",
+                    "iri_hash": "RDSBerlLWg1ntpLqDQn1eVn"
+                  },
+                  {
+                    "label": "Trespass",
+                    "iri_hash": "RCwxVWPUdbPjn2tWtFJg6IZ"
+                  },
+                  {
+                    "label": "Trespass to Real Property",
+                    "iri_hash": "RBeABy5UPz4KOLOrL1LrxFD"
+                  }
+                ],
+                "score": 73.0
+              },
+              {
+                "label": "Criminal Trespass",
+                "iri": "https://folio.openlegalstandard.org/RBc8llmdnVBvfzkSbQxpOLJ",
+                "iri_hash": "RBc8llmdnVBvfzkSbQxpOLJ",
+                "definition": "To unlawfully enter land, a dwelling, or other real property.",
+                "synonyms": [
+                  "Allanamiento de morada",
+                  "Criminal Trespass",
+                  "Criminal Trespass of Real Property",
+                  "Invasão criminal",
+                  "Straftrespass",
+                  "Trespass criminel",
+                  "פשיעת חדירה",
+                  "अपराधी अतिक्रमण",
+                  "刑事侵入"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Crimes Against Property",
+                    "iri_hash": "R8ldDGTh6RHzt0IDL7p597U"
+                  },
+                  {
+                    "label": "Criminal Trespass",
+                    "iri_hash": "RBc8llmdnVBvfzkSbQxpOLJ"
+                  }
+                ],
+                "score": 52.0
+              },
+              {
+                "label": "Bequest",
+                "iri": "https://folio.openlegalstandard.org/R3OI7nrib1LEPtUfn5G5CH",
+                "iri_hash": "R3OI7nrib1LEPtUfn5G5CH",
+                "definition": "A Bequest is a provision in a will or trust that designates the transfer of specific assets, property, or money to a particular beneficiary upon the death of the testator. It ensures that the intended recipients receive the designated items as part of the estate distribution.",
+                "synonyms": [
+                  "Estate Gift",
+                  "Inheritance Gift",
+                  "Inherited Bequest",
+                  "Legacy",
+                  "Testamentary Gift"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Regulatory Objectives",
+                    "iri_hash": "RCDwLiS22z6MzQaQHS08hvk"
+                  },
+                  {
+                    "label": "Estate Planning Objectives",
+                    "iri_hash": "R8M0UJWeEVpeK5gMPLTQSl2"
+                  },
+                  {
+                    "label": "Bequest",
+                    "iri_hash": "R3OI7nrib1LEPtUfn5G5CH"
+                  }
+                ],
+                "score": 48.0
+              },
+              {
+                "label": "Land Settlement",
+                "iri": "https://folio.openlegalstandard.org/RooP304XCeb9F2CqdPZDps",
+                "iri_hash": "RooP304XCeb9F2CqdPZDps",
+                "definition": "Land settlement refers to the process where individuals or groups occupy and establish a community or settlement on a specific tract of land, often for agricultural, residential, or developmental purposes. This concept can encompass the historical settling of new territories, as well as modern real estate transactions where land is allocated and developed.",
+                "synonyms": [
+                  "Colonization",
+                  "Property Settlement",
+                  "Real Estate Settlement",
+                  "Settlement Development"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Transactional Objectives",
+                    "iri_hash": "R70jMZb6xYrVCXW6f3EbO1e"
+                  },
+                  {
+                    "label": "Property Rights",
+                    "iri_hash": "R8cjnXHiv1wNe6nzPvWnhQw"
+                  },
+                  {
+                    "label": "Land Settlement",
+                    "iri_hash": "RooP304XCeb9F2CqdPZDps"
+                  }
+                ],
+                "score": 45.0
+              },
+              {
+                "label": "Disinheritance",
+                "iri": "https://folio.openlegalstandard.org/R7XjMoxjqIUftkOYtnzzbAu",
+                "iri_hash": "R7XjMoxjqIUftkOYtnzzbAu",
+                "definition": "Disinheritance is the legal act of deliberately excluding an heir from receiving property or assets from a deceased person's estate, typically through the terms specified in a will or trust. This action can be taken for various personal, financial, or relational reasons, and must comply with legal statutes to be effective.",
+                "synonyms": [
+                  "Estate Exclusion",
+                  "Exclusion from Inheritance",
+                  "Heir Exclusion"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Regulatory Objectives",
+                    "iri_hash": "RCDwLiS22z6MzQaQHS08hvk"
+                  },
+                  {
+                    "label": "Estate Planning Objectives",
+                    "iri_hash": "R8M0UJWeEVpeK5gMPLTQSl2"
+                  },
+                  {
+                    "label": "Disinheritance",
+                    "iri_hash": "R7XjMoxjqIUftkOYtnzzbAu"
+                  }
+                ],
+                "score": 40.0
+              }
+            ]
+          },
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "M&A F6 Real Property Practice",
+                "iri": "https://folio.openlegalstandard.org/RDqfiEi1fdryT1nfQCMammS",
+                "iri_hash": "RDqfiEi1fdryT1nfQCMammS",
+                "definition": "M&A F6 Real Property Practice refers to the legal work performed by a Legal Services Provider in the course of a merger and acquisition transaction that involves real estate property.",
+                "synonyms": [
+                  "M&A F6 Real Property",
+                  "M&A F6 Real Property Service",
+                  "M&A F6 Immobilienpraxis",
+                  "M&A F6 Pratique immobilière",
+                  "M&A F6 Prática de Propriedade Imobiliária",
+                  "M&A F6 Real Property Practice",
+                  "M&A F6 פרקטיקת נכסי נדלן אמיתיים",
+                  "M&A F6 不動産実務",
+                  "M&A F6 房地产实践",
+                  "Práctica de propiedad inmobiliaria real M&A F6",
+                  "Práctica inmobiliaria de propiedad real M&A F6",
+                  "एम एंड ए एफ 6 रीयल प्रॉपर्टी प्रैक्टिस का एम एंड ए"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Transactional Practice",
+                    "iri_hash": "RKzL5nW7IGg4mvAPFX2MUL"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Practice",
+                    "iri_hash": "RBosma6qE0p7REgIqlUxvIR"
+                  },
+                  {
+                    "label": "M&A Practice Components",
+                    "iri_hash": "RVLgJukt9MTZNfTewtxNIK"
+                  },
+                  {
+                    "label": "M&A F Regulatory and Specialty Matters Practice",
+                    "iri_hash": "R8B946ewYpMD86GqDEqxNS"
+                  },
+                  {
+                    "label": "M&A F6 Real Property Practice",
+                    "iri_hash": "RDqfiEi1fdryT1nfQCMammS"
+                  }
+                ],
+                "score": 65.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 18
+      },
+      {
+        "item_index": 1,
+        "item_text": "Property Transactions",
+        "branch_groups": [
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Estate",
+                "iri": "https://folio.openlegalstandard.org/RCBP9N5ER7Y6inNQdjggrKt",
+                "iri_hash": "RCBP9N5ER7Y6inNQdjggrKt",
+                "definition": "An Estate refers to all the possessions, property, and legal rights owned by an individual, including land, tenements, and personal assets. It also encompasses the total assets and liabilities left by a person at death, which are subject to distribution according to the terms of a will or the laws of intestacy.",
+                "synonyms": [
+                  "Personal Estate",
+                  "Property Holdings"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Estate",
+                    "iri_hash": "RCBP9N5ER7Y6inNQdjggrKt"
+                  }
+                ],
+                "score": 52.0
+              }
+            ]
+          },
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Employment Transactions Practice",
+                "iri": "https://folio.openlegalstandard.org/R8ELRGhhhBTGpLeP16rBF4e",
+                "iri_hash": "R8ELRGhhhBTGpLeP16rBF4e",
+                "definition": "Employment Transactions Practice refers to the area of law that involves the structuring, negotiation, and documentation of agreements related to employment relationships. This includes contracts, compensation plans, and other legal frameworks governing the employee-employer dynamic.",
+                "synonyms": [
+                  "Employment Transactions",
+                  "Employment Transactions Service"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Transactional Practice",
+                    "iri_hash": "RKzL5nW7IGg4mvAPFX2MUL"
+                  },
+                  {
+                    "label": "Employment Transactions Practice",
+                    "iri_hash": "R8ELRGhhhBTGpLeP16rBF4e"
+                  }
+                ],
+                "score": 18.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 2,
+        "item_text": "Property Rights and Transactions Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Property Rights and Transactions Law",
+                "iri": "https://folio.openlegalstandard.org/R7mghrIauk4oJaakhl0B8pU",
+                "iri_hash": "R7mghrIauk4oJaakhl0B8pU",
+                "definition": "Law relating to the acquisition and transfer of real property.",
+                "synonyms": [
+                  "Derecho de Propiedad y Ley de Transacciones",
+                  "Direito de Propriedade e Lei de Transações",
+                  "Droit des droits de propriété et des transactions",
+                  "Eigentumsrechte und Transaktionsrecht",
+                  "Property Rights and Transactions",
+                  "Property Rights and Transactions Law",
+                  "זכויות בעלות וחוקי עסקאות",
+                  "संपत्ति अधिकार और लेन-देन कानून",
+                  "財産権と取引法",
+                  "财产权和交易法",
+                  "PTRN"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Contract Law",
+                    "iri_hash": "RCIPwpgRpMs1eVz4vPid0pV"
+                  },
+                  {
+                    "label": "Civil Contract Law",
+                    "iri_hash": "RBrUb9V2u6f7iVR1RBNsyB1"
+                  },
+                  {
+                    "label": "Property Rights and Transactions Law",
+                    "iri_hash": "R7mghrIauk4oJaakhl0B8pU"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          },
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Estate",
+                "iri": "https://folio.openlegalstandard.org/RCBP9N5ER7Y6inNQdjggrKt",
+                "iri_hash": "RCBP9N5ER7Y6inNQdjggrKt",
+                "definition": "An Estate refers to all the possessions, property, and legal rights owned by an individual, including land, tenements, and personal assets. It also encompasses the total assets and liabilities left by a person at death, which are subject to distribution according to the terms of a will or the laws of intestacy.",
+                "synonyms": [
+                  "Personal Estate",
+                  "Property Holdings"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Estate",
+                    "iri_hash": "RCBP9N5ER7Y6inNQdjggrKt"
+                  }
+                ],
+                "score": 52.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Property Rights",
+                "iri": "https://folio.openlegalstandard.org/R8cjnXHiv1wNe6nzPvWnhQw",
+                "iri_hash": "R8cjnXHiv1wNe6nzPvWnhQw",
+                "definition": "Property rights refer to the legal entitlements associated with the ownership, use, and disposition of property, including land, buildings, and other immovable assets. These rights generally include the ability to possess, control, lease, sell, and bequeath the property, subject to certain limitations imposed by law",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Transactional Objectives",
+                    "iri_hash": "R70jMZb6xYrVCXW6f3EbO1e"
+                  },
+                  {
+                    "label": "Property Rights",
+                    "iri_hash": "R8cjnXHiv1wNe6nzPvWnhQw"
+                  }
+                ],
+                "score": 78.0
+              }
+            ]
+          },
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Employment Transactions Practice",
+                "iri": "https://folio.openlegalstandard.org/R8ELRGhhhBTGpLeP16rBF4e",
+                "iri_hash": "R8ELRGhhhBTGpLeP16rBF4e",
+                "definition": "Employment Transactions Practice refers to the area of law that involves the structuring, negotiation, and documentation of agreements related to employment relationships. This includes contracts, compensation plans, and other legal frameworks governing the employee-employer dynamic.",
+                "synonyms": [
+                  "Employment Transactions",
+                  "Employment Transactions Service"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Transactional Practice",
+                    "iri_hash": "RKzL5nW7IGg4mvAPFX2MUL"
+                  },
+                  {
+                    "label": "Employment Transactions Practice",
+                    "iri_hash": "R8ELRGhhhBTGpLeP16rBF4e"
+                  }
+                ],
+                "score": 22.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
+      },
+      {
+        "item_index": 3,
+        "item_text": "Clearing Title",
+        "branch_groups": [
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Clearing Title",
+                "iri": "https://folio.openlegalstandard.org/RehKvgKHQ6yqWnBYOfxzMO",
+                "iri_hash": "RehKvgKHQ6yqWnBYOfxzMO",
+                "definition": "Clearing title refers to the process of resolving legal issues, claims, or encumbrances that could cloud the ownership status or legal rights associated with a particular property or piece of real estate. This process typically involves investigating and addressing any outstanding liens, disputes, or defects in the property's title to establish a clean and unambiguous ownership status. Clearing title is often necessary when buying or selling real estate to ensure that the buyer receives clear and marketable title to the property.",
+                "synonyms": [],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Regulatory Services (Non-Dispute)",
+                    "iri_hash": "RBWo88jsbY4qHzhlTFr5Np7"
+                  },
+                  {
+                    "label": "Real Estate Regulatory Services",
+                    "iri_hash": "Rxq2qQYpdo9stHOBIQhub7"
+                  },
+                  {
+                    "label": "Clearing Title",
+                    "iri_hash": "RehKvgKHQ6yqWnBYOfxzMO"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 4,
+        "item_text": "Landlord-Tenant",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Tenant",
+                "iri": "https://folio.openlegalstandard.org/RBpYE6Y5CAH0m6srdnClfZz",
+                "iri_hash": "RBpYE6Y5CAH0m6srdnClfZz",
+                "definition": "A person or entity who leases, rents, or occupies property (from a landlord).",
+                "synonyms": [
+                  "Arrendatario",
+                  "Inquilino",
+                  "Locataire",
+                  "Mieter",
+                  "Tenant",
+                  "שוכר",
+                  "किरायेदार",
+                  "テナント",
+                  "租户"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Tenant",
+                    "iri_hash": "RBpYE6Y5CAH0m6srdnClfZz"
+                  }
+                ],
+                "score": 62.0
+              },
+              {
+                "label": "Landlord",
+                "iri": "https://folio.openlegalstandard.org/R872e3e5kIyoshDoSHVM94B",
+                "iri_hash": "R872e3e5kIyoshDoSHVM94B",
+                "definition": "One who lets land to another: the owner or holder of land or houses which he leases or rents to another. Seattle Hous. Auth. v. City of Seattle, 416 P.3d 1280 (Wash. App. 2018)",
+                "synonyms": [
+                  "Arrendador",
+                  "Landlord",
+                  "Propietario",
+                  "Propriétaire",
+                  "Senhorio",
+                  "Vermieter",
+                  "משכיר",
+                  "मकान मालिक",
+                  "大家",
+                  "房东"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Landlord",
+                    "iri_hash": "R872e3e5kIyoshDoSHVM94B"
+                  }
+                ],
+                "score": 60.0
+              }
+            ]
+          },
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Landlord Tenant Law",
+                "iri": "https://folio.openlegalstandard.org/RBjYepK2dGo0eMf20eWQmI3",
+                "iri_hash": "RBjYepK2dGo0eMf20eWQmI3",
+                "definition": "Law that details the rights and duties of landlords and tenants",
+                "synonyms": [
+                  "Direito do locador e do locatário",
+                  "Droit des baux",
+                  "Landlord Tenant Law",
+                  "Ley de Arrendamiento",
+                  "Mietrecht",
+                  "חוק שכירות בעלים",
+                  "लैंडलॉर्ड टेनेंट कानून",
+                  "家主・借主法",
+                  "房东租户法",
+                  "LLTN"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Real Property Law",
+                    "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7"
+                  },
+                  {
+                    "label": "Landlord Tenant Law",
+                    "iri_hash": "RBjYepK2dGo0eMf20eWQmI3"
+                  }
+                ],
+                "score": 93.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Landlord-Tenant Claims",
+                "iri": "https://folio.openlegalstandard.org/R97svnIdQhrkKZw6i3Nn88z",
+                "iri_hash": "R97svnIdQhrkKZw6i3Nn88z",
+                "definition": "Landlord-Tenant Claims refer to legal disputes between a landlord and a tenant, including issues such as failure to return a tenant's security deposit, unlawful eviction, retaliation, and failure to repair or remedy.",
+                "synonyms": [
+                  "Ansprüche von Vermieter und Mieter",
+                  "Landlord-Tenant Claims",
+                  "Reclamaciones de arrendador- arrendatario",
+                  "Reclamaciones de arrendador-inquilino",
+                  "Reivindicações de proprietário e inquilino",
+                  "Réclamations de propriétaire et locataire",
+                  "תביעות בעלי נכסים-שוכרים",
+                  "लैंडलॉर्ड-टेनेंट दावे",
+                  "家主・テナント請求",
+                  "房东-租户索赔"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Landlord-Tenant Claims",
+                    "iri_hash": "R97svnIdQhrkKZw6i3Nn88z"
+                  }
+                ],
+                "score": 75.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
+      },
+      {
+        "item_index": 5,
+        "item_text": "Landlord Tenant Law",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Tenant",
+                "iri": "https://folio.openlegalstandard.org/RBpYE6Y5CAH0m6srdnClfZz",
+                "iri_hash": "RBpYE6Y5CAH0m6srdnClfZz",
+                "definition": "A person or entity who leases, rents, or occupies property (from a landlord).",
+                "synonyms": [
+                  "Arrendatario",
+                  "Inquilino",
+                  "Locataire",
+                  "Mieter",
+                  "Tenant",
+                  "שוכר",
+                  "किरायेदार",
+                  "テナント",
+                  "租户"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Tenant",
+                    "iri_hash": "RBpYE6Y5CAH0m6srdnClfZz"
+                  }
+                ],
+                "score": 72.0
+              },
+              {
+                "label": "Landlord",
+                "iri": "https://folio.openlegalstandard.org/R872e3e5kIyoshDoSHVM94B",
+                "iri_hash": "R872e3e5kIyoshDoSHVM94B",
+                "definition": "One who lets land to another: the owner or holder of land or houses which he leases or rents to another. Seattle Hous. Auth. v. City of Seattle, 416 P.3d 1280 (Wash. App. 2018)",
+                "synonyms": [
+                  "Arrendador",
+                  "Landlord",
+                  "Propietario",
+                  "Propriétaire",
+                  "Senhorio",
+                  "Vermieter",
+                  "משכיר",
+                  "मकान मालिक",
+                  "大家",
+                  "房东"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Landlord",
+                    "iri_hash": "R872e3e5kIyoshDoSHVM94B"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          },
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Landlord Tenant Law",
+                "iri": "https://folio.openlegalstandard.org/RBjYepK2dGo0eMf20eWQmI3",
+                "iri_hash": "RBjYepK2dGo0eMf20eWQmI3",
+                "definition": "Law that details the rights and duties of landlords and tenants",
+                "synonyms": [
+                  "Direito do locador e do locatário",
+                  "Droit des baux",
+                  "Landlord Tenant Law",
+                  "Ley de Arrendamiento",
+                  "Mietrecht",
+                  "חוק שכירות בעלים",
+                  "लैंडलॉर्ड टेनेंट कानून",
+                  "家主・借主法",
+                  "房东租户法",
+                  "LLTN"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Real Property Law",
+                    "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7"
+                  },
+                  {
+                    "label": "Landlord Tenant Law",
+                    "iri_hash": "RBjYepK2dGo0eMf20eWQmI3"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 6,
+        "item_text": "Lease Agreements",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Lease",
+                "iri": "https://folio.openlegalstandard.org/R8RfDzMtuMPdmNTonmhBxu",
+                "iri_hash": "R8RfDzMtuMPdmNTonmhBxu",
+                "definition": "A Lease Agreement is a binding contract between a lessor (the owner) and a lessee (the renter) that stipulates the terms and conditions for renting out an asset, such as real estate property or an automobile. The agreement outlines details like the rental amount, lease duration, responsibilities of each party, and other specific provisions related to the rented asset.",
+                "synonyms": [
+                  "Arrendamiento",
+                  "Lease",
+                  "Location",
+                  "Locação",
+                  "Miete",
+                  "השכרת נכס",
+                  "पट्टा",
+                  "リース",
+                  "租赁"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Lease Agreements",
+                    "iri_hash": "RITVzcNUrw2Bg0fvFueOTT"
+                  },
+                  {
+                    "label": "Lease",
+                    "iri_hash": "R8RfDzMtuMPdmNTonmhBxu"
+                  }
+                ],
+                "score": 95.0
+              },
+              {
+                "label": "Lease Agreements",
+                "iri": "https://folio.openlegalstandard.org/RITVzcNUrw2Bg0fvFueOTT",
+                "iri_hash": "RITVzcNUrw2Bg0fvFueOTT",
+                "definition": "A Lease Related Agreement refers to any supplementary contract or document associated with a primary lease agreement, addressing specific terms, conditions, or scenarios that might arise during the lease period. Examples include lease renewals, extensions, terminations, subleases, assignments, and guaranties, among others. These agreements provide clarity and legal framework for particular aspects or contingencies of the lease relationship.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Lease Agreements",
+                    "iri_hash": "RITVzcNUrw2Bg0fvFueOTT"
+                  }
+                ],
+                "score": 72.0
+              },
+              {
+                "label": "Agreements",
+                "iri": "https://folio.openlegalstandard.org/R88D8i8AcSTUig2X3yPbFHg",
+                "iri_hash": "R88D8i8AcSTUig2X3yPbFHg",
+                "definition": "Agreements are written documents that establish a legally binding understanding between two or more parties, outlining the terms and conditions of a transaction or relationship.",
+                "synonyms": [
+                  "Accords",
+                  "Acordos",
+                  "Acuerdos",
+                  "Agreements",
+                  "Vereinbarungen",
+                  "הסכמים",
+                  "समझौते",
+                  "协议",
+                  "合意書"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  }
+                ],
+                "score": 62.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 7,
+        "item_text": "Landlord-Tenant Claims",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Landlord",
+                "iri": "https://folio.openlegalstandard.org/R872e3e5kIyoshDoSHVM94B",
+                "iri_hash": "R872e3e5kIyoshDoSHVM94B",
+                "definition": "One who lets land to another: the owner or holder of land or houses which he leases or rents to another. Seattle Hous. Auth. v. City of Seattle, 416 P.3d 1280 (Wash. App. 2018)",
+                "synonyms": [
+                  "Arrendador",
+                  "Landlord",
+                  "Propietario",
+                  "Propriétaire",
+                  "Senhorio",
+                  "Vermieter",
+                  "משכיר",
+                  "मकान मालिक",
+                  "大家",
+                  "房东"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Landlord",
+                    "iri_hash": "R872e3e5kIyoshDoSHVM94B"
+                  }
+                ],
+                "score": 58.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Landlord-Tenant Claims",
+                "iri": "https://folio.openlegalstandard.org/R97svnIdQhrkKZw6i3Nn88z",
+                "iri_hash": "R97svnIdQhrkKZw6i3Nn88z",
+                "definition": "Landlord-Tenant Claims refer to legal disputes between a landlord and a tenant, including issues such as failure to return a tenant's security deposit, unlawful eviction, retaliation, and failure to repair or remedy.",
+                "synonyms": [
+                  "Ansprüche von Vermieter und Mieter",
+                  "Landlord-Tenant Claims",
+                  "Reclamaciones de arrendador- arrendatario",
+                  "Reclamaciones de arrendador-inquilino",
+                  "Reivindicações de proprietário e inquilino",
+                  "Réclamations de propriétaire et locataire",
+                  "תביעות בעלי נכסים-שוכרים",
+                  "लैंडलॉर्ड-टेनेंट दावे",
+                  "家主・テナント請求",
+                  "房东-租户索赔"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Landlord-Tenant Claims",
+                    "iri_hash": "R97svnIdQhrkKZw6i3Nn88z"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 8,
+        "item_text": "Zoning & Land Use",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Land Use and Zoning Law",
+                "iri": "https://folio.openlegalstandard.org/RCZeXWp0noZxJw19K1AU2bA",
+                "iri_hash": "RCZeXWp0noZxJw19K1AU2bA",
+                "definition": "Law regulating the subdivision, use, and restriction of land.",
+                "synonyms": [
+                  "Baugesetzgebung und Zonenrecht",
+                  "Derecho de uso del suelo y zonificación",
+                  "Droit de l'utilisation des terres et de la zonification",
+                  "Land Use and Zoning Law",
+                  "Lei de Uso do Solo e Zoneamento",
+                  "חוקי שימוש ותכנון קרקעות",
+                  "भूमि उपयोग और जोनिंग कानून",
+                  "土地利用和分区法",
+                  "用途地域法",
+                  "LUZN"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Real Property Law",
+                    "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7"
+                  },
+                  {
+                    "label": "Land Use and Zoning Law",
+                    "iri_hash": "RCZeXWp0noZxJw19K1AU2bA"
+                  }
+                ],
+                "score": 95.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 9,
+        "item_text": "Land Use and Zoning Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Land Use and Zoning Law",
+                "iri": "https://folio.openlegalstandard.org/RCZeXWp0noZxJw19K1AU2bA",
+                "iri_hash": "RCZeXWp0noZxJw19K1AU2bA",
+                "definition": "Law regulating the subdivision, use, and restriction of land.",
+                "synonyms": [
+                  "Baugesetzgebung und Zonenrecht",
+                  "Derecho de uso del suelo y zonificación",
+                  "Droit de l'utilisation des terres et de la zonification",
+                  "Land Use and Zoning Law",
+                  "Lei de Uso do Solo e Zoneamento",
+                  "חוקי שימוש ותכנון קרקעות",
+                  "भूमि उपयोग और जोनिंग कानून",
+                  "土地利用和分区法",
+                  "用途地域法",
+                  "LUZN"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Real Property Law",
+                    "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7"
+                  },
+                  {
+                    "label": "Land Use and Zoning Law",
+                    "iri_hash": "RCZeXWp0noZxJw19K1AU2bA"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 10,
+        "item_text": "Zoning Variance",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 11,
+        "item_text": "Construction",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 12,
+        "item_text": "Construction and Development Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Construction and Development Law",
+                "iri": "https://folio.openlegalstandard.org/R7o4TiXsYQ6vV6MrJMTfnS7",
+                "iri_hash": "R7o4TiXsYQ6vV6MrJMTfnS7",
+                "definition": "Law dealing with matters relating to building construction, engineering, and related fields.",
+                "synonyms": [
+                  "Bau- und Entwicklungsrecht",
+                  "Construction and Development",
+                  "Construction and Development Law",
+                  "Derecho de la Construcción y Desarrollo",
+                  "Direito da Construção e Desenvolvimento",
+                  "Droit de la construction et de l'aménagement",
+                  "חוקי בנייה ופיתוח",
+                  "निर्माण और विकास कानून",
+                  "建設・開発法",
+                  "建设和发展法律",
+                  "CONS"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Real Property Law",
+                    "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7"
+                  },
+                  {
+                    "label": "Construction and Development Law",
+                    "iri_hash": "R7o4TiXsYQ6vV6MrJMTfnS7"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 13,
+        "item_text": "Building Code Violations",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Violation",
+                "iri": "https://folio.openlegalstandard.org/RDsDXHKUsZoJfz87jnz7zjj",
+                "iri_hash": "RDsDXHKUsZoJfz87jnz7zjj",
+                "definition": "A violation is an act or instance of breaking or failing to comply with a rule, regulation, contract, or law, which can lead to legal consequences.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Violation",
+                    "iri_hash": "RDsDXHKUsZoJfz87jnz7zjj"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 14,
+        "item_text": "Construction Defect Claims",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Construction Defect Claims",
+                "iri": "https://folio.openlegalstandard.org/R7XEUVrFS72CU6LCzw9e8em",
+                "iri_hash": "R7XEUVrFS72CU6LCzw9e8em",
+                "definition": "A construction defect claim is a legal action brought against a party for damages resulting from faulty construction work.",
+                "synonyms": [
+                  "Baumängelansprüche",
+                  "Construction Defect Claims",
+                  "Reclamaciones por defectos de construcción",
+                  "Reclamações por defeitos de construção",
+                  "Réclamations pour vices de construction",
+                  "תביעות פגמי בנייה",
+                  "निर्माण दोष दावे",
+                  "建筑缺陷索赔",
+                  "建築物の欠陥に関するクレーム"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Construction Liability",
+                    "iri_hash": "R36wLJ9yrSSbgRsE4xKJGM"
+                  },
+                  {
+                    "label": "Construction Defect Claims",
+                    "iri_hash": "R7XEUVrFS72CU6LCzw9e8em"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 15,
+        "item_text": "Foreclosure & Liens",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Foreclosure",
+                "iri": "https://folio.openlegalstandard.org/RsCr2ffuxk4pqU5CQ8SAxq",
+                "iri_hash": "RsCr2ffuxk4pqU5CQ8SAxq",
+                "definition": "Foreclosure is the legal process by which a lender takes possession of a property, generally after the borrower fails to meet the financial obligations outlined in the mortgage agreement. The process usually culminates in the sale of the property, with the proceeds used to pay off the outstanding debt and any associated costs.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Civil Remedies / Relief Sought",
+                    "iri_hash": "RDbz1PVc6y57oOb9jAIl0eN"
+                  },
+                  {
+                    "label": "Enforcement of Judgment",
+                    "iri_hash": "R9pQxz2fUIrk1LjvVP8hikg"
+                  },
+                  {
+                    "label": "Foreclosure",
+                    "iri_hash": "RsCr2ffuxk4pqU5CQ8SAxq"
+                  }
+                ],
+                "score": 91.0
+              },
+              {
+                "label": "Lien",
+                "iri": "https://folio.openlegalstandard.org/R7OGr396bNkl4sseQ1bBCA6",
+                "iri_hash": "R7OGr396bNkl4sseQ1bBCA6",
+                "definition": "A lien is a legal claim or right that a creditor has over a debtor's property as security for a debt or obligation, which can be enforced through court action or other legal means.",
+                "synonyms": [
+                  "Gravamen",
+                  "Lien",
+                  "Penhor",
+                  "Pfandrecht",
+                  "זכות מעצר",
+                  "लियन",
+                  "抵当権",
+                  "留置权"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Civil Remedies / Relief Sought",
+                    "iri_hash": "RDbz1PVc6y57oOb9jAIl0eN"
+                  },
+                  {
+                    "label": "Enforcement of Judgment",
+                    "iri_hash": "R9pQxz2fUIrk1LjvVP8hikg"
+                  },
+                  {
+                    "label": "Lien",
+                    "iri_hash": "R7OGr396bNkl4sseQ1bBCA6"
+                  }
+                ],
+                "score": 91.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 16,
+        "item_text": "Mortgage Foreclosure",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Loan",
+                "iri": "https://folio.openlegalstandard.org/R7xqVevh0JKSwX977TRIZQV",
+                "iri_hash": "R7xqVevh0JKSwX977TRIZQV",
+                "definition": "A transaction whereby property is lent or given to another on condition of return or, where the loan is of money, repayment. In a loan of money, the money lent becomes the property of the borrower during the period of the loan against an undertaking to return a sum of an equivalent amount either on demand or on a specified date or in accordance with an agreed schedule of repayments.",
+                "synonyms": [
+                  "Darlehen",
+                  "Empréstimo",
+                  "Loan",
+                  "Préstamo",
+                  "Prêt",
+                  "הלוואה",
+                  "ऋण",
+                  "ローン",
+                  "贷款"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Debt Agreement",
+                    "iri_hash": "RVoyN9hN3m5gy3So01ZEZ8"
+                  },
+                  {
+                    "label": "Loan",
+                    "iri_hash": "R7xqVevh0JKSwX977TRIZQV"
+                  }
+                ],
+                "score": 30.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Mortgage Foreclosure",
+                "iri": "https://folio.openlegalstandard.org/R7gzXxHYGOLSEudb6n1QFWm",
+                "iri_hash": "R7gzXxHYGOLSEudb6n1QFWm",
+                "definition": "The concept of Mortgage Foreclosure refers to the legal process by which a lender takes possession of a property when the borrower fails to make mortgage payments, and sells it to recover the outstanding debt.",
+                "synonyms": [
+                  "Ejecución Hipotecaria",
+                  "Execução hipotecária",
+                  "Hypotheken Zwangsvollstreckung",
+                  "Mortgage Repossession",
+                  "Saisie immobilière",
+                  "מימוש משכנתא",
+                  "ऋण अधिकार जब्ती",
+                  "抵当フォアクロージャー",
+                  "抵押清偿"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Property & Premises Liability Claims",
+                    "iri_hash": "RDSBerlLWg1ntpLqDQn1eVn"
+                  },
+                  {
+                    "label": "Mortgage Foreclosure",
+                    "iri_hash": "R7gzXxHYGOLSEudb6n1QFWm"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Foreclosure",
+                "iri": "https://folio.openlegalstandard.org/RsCr2ffuxk4pqU5CQ8SAxq",
+                "iri_hash": "RsCr2ffuxk4pqU5CQ8SAxq",
+                "definition": "Foreclosure is the legal process by which a lender takes possession of a property, generally after the borrower fails to meet the financial obligations outlined in the mortgage agreement. The process usually culminates in the sale of the property, with the proceeds used to pay off the outstanding debt and any associated costs.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Civil Remedies / Relief Sought",
+                    "iri_hash": "RDbz1PVc6y57oOb9jAIl0eN"
+                  },
+                  {
+                    "label": "Enforcement of Judgment",
+                    "iri_hash": "R9pQxz2fUIrk1LjvVP8hikg"
+                  },
+                  {
+                    "label": "Foreclosure",
+                    "iri_hash": "RsCr2ffuxk4pqU5CQ8SAxq"
+                  }
+                ],
+                "score": 90.0
+              },
+              {
+                "label": "Reverse Mortgage Foreclosure",
+                "iri": "https://folio.openlegalstandard.org/RDbwTZhFW2BCJ7Svgudx63U",
+                "iri_hash": "RDbwTZhFW2BCJ7Svgudx63U",
+                "definition": "Reverse Mortgage Foreclosure is the legal process in which a lender takes possession of a property after the borrower, typically an older homeowner, fails to meet the conditions of the reverse mortgage agreement. This can occur due to reasons like the death of the borrower, failure to pay property taxes or insurance, or permanently moving out of the home. The property is then sold to repay the loan balance and any associated costs",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Civil Remedies / Relief Sought",
+                    "iri_hash": "RDbz1PVc6y57oOb9jAIl0eN"
+                  },
+                  {
+                    "label": "Enforcement of Judgment",
+                    "iri_hash": "R9pQxz2fUIrk1LjvVP8hikg"
+                  },
+                  {
+                    "label": "Foreclosure",
+                    "iri_hash": "RsCr2ffuxk4pqU5CQ8SAxq"
+                  },
+                  {
+                    "label": "Reverse Mortgage Foreclosure",
+                    "iri_hash": "RDbwTZhFW2BCJ7Svgudx63U"
+                  }
+                ],
+                "score": 82.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
+      },
+      {
+        "item_index": 17,
+        "item_text": "Eminent Domain Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Eminent Domain Law",
+                "iri": "https://folio.openlegalstandard.org/R995bX2KYLkMP0nefaBtEnq",
+                "iri_hash": "R995bX2KYLkMP0nefaBtEnq",
+                "definition": "Law regulating the taking of private land for public use.",
+                "synonyms": [
+                  " eminent domain 法",
+                  "Compulsory Purchase Law",
+                  "Droit d'expropriation",
+                  "Enteignungsrecht",
+                  "Expropriation",
+                  "Lei de Desapropriação",
+                  "EMDN"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Real Property Law",
+                    "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7"
+                  },
+                  {
+                    "label": "Eminent Domain Law",
+                    "iri_hash": "R995bX2KYLkMP0nefaBtEnq"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Eminent Domain",
+                "iri": "https://folio.openlegalstandard.org/RDwajUPdKVdK5tlwiUjmNzG",
+                "iri_hash": "RDwajUPdKVdK5tlwiUjmNzG",
+                "definition": "The concept of Eminent Domain (Taking) refers to the power of the government to take private property for public use, with just compensation to the owner, as authorized by the Constitution.",
+                "synonyms": [
+                  "Compulsory Purchase",
+                  "Desapropriação",
+                  "Domaine éminent",
+                  "Dominio eminente",
+                  "Enteignung",
+                  "Fifth Amendment Takings Claim",
+                  "Taking",
+                  "Takings Claim",
+                  "Unlawful Taking",
+                  "רשות חקלאית",
+                  "प्रतिष्ठित डोमेन",
+                  "公有化",
+                  "征用"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Constitutional Claims",
+                    "iri_hash": "RBvs4zROaonjMftsSlqlZZp"
+                  },
+                  {
+                    "label": "U.S. Constitutional Claims",
+                    "iri_hash": "R7MGQ9xUx0PxGLp5yxprdpZ"
+                  },
+                  {
+                    "label": "5th Amendment Claim",
+                    "iri_hash": "RCvD6VheGrBYqJhgQDfMbrV"
+                  },
+                  {
+                    "label": "Eminent Domain",
+                    "iri_hash": "RDwajUPdKVdK5tlwiUjmNzG"
+                  }
+                ],
+                "score": 78.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 18,
+        "item_text": "Reverse Mortgage Foreclosure",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Reverse Mortgage Foreclosure",
+                "iri": "https://folio.openlegalstandard.org/RDbwTZhFW2BCJ7Svgudx63U",
+                "iri_hash": "RDbwTZhFW2BCJ7Svgudx63U",
+                "definition": "Reverse Mortgage Foreclosure is the legal process in which a lender takes possession of a property after the borrower, typically an older homeowner, fails to meet the conditions of the reverse mortgage agreement. This can occur due to reasons like the death of the borrower, failure to pay property taxes or insurance, or permanently moving out of the home. The property is then sold to repay the loan balance and any associated costs",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Civil Remedies / Relief Sought",
+                    "iri_hash": "RDbz1PVc6y57oOb9jAIl0eN"
+                  },
+                  {
+                    "label": "Enforcement of Judgment",
+                    "iri_hash": "R9pQxz2fUIrk1LjvVP8hikg"
+                  },
+                  {
+                    "label": "Foreclosure",
+                    "iri_hash": "RsCr2ffuxk4pqU5CQ8SAxq"
+                  },
+                  {
+                    "label": "Reverse Mortgage Foreclosure",
+                    "iri_hash": "RDbwTZhFW2BCJ7Svgudx63U"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Mortgage Foreclosure",
+                "iri": "https://folio.openlegalstandard.org/R7gzXxHYGOLSEudb6n1QFWm",
+                "iri_hash": "R7gzXxHYGOLSEudb6n1QFWm",
+                "definition": "The concept of Mortgage Foreclosure refers to the legal process by which a lender takes possession of a property when the borrower fails to make mortgage payments, and sells it to recover the outstanding debt.",
+                "synonyms": [
+                  "Ejecución Hipotecaria",
+                  "Execução hipotecária",
+                  "Hypotheken Zwangsvollstreckung",
+                  "Mortgage Repossession",
+                  "Saisie immobilière",
+                  "מימוש משכנתא",
+                  "ऋण अधिकार जब्ती",
+                  "抵当フォアクロージャー",
+                  "抵押清偿"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Property & Premises Liability Claims",
+                    "iri_hash": "RDSBerlLWg1ntpLqDQn1eVn"
+                  },
+                  {
+                    "label": "Mortgage Foreclosure",
+                    "iri_hash": "R7gzXxHYGOLSEudb6n1QFWm"
+                  }
+                ],
+                "score": 78.0
+              },
+              {
+                "label": "Foreclosure",
+                "iri": "https://folio.openlegalstandard.org/RsCr2ffuxk4pqU5CQ8SAxq",
+                "iri_hash": "RsCr2ffuxk4pqU5CQ8SAxq",
+                "definition": "Foreclosure is the legal process by which a lender takes possession of a property, generally after the borrower fails to meet the financial obligations outlined in the mortgage agreement. The process usually culminates in the sale of the property, with the proceeds used to pay off the outstanding debt and any associated costs.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Civil Remedies / Relief Sought",
+                    "iri_hash": "RDbz1PVc6y57oOb9jAIl0eN"
+                  },
+                  {
+                    "label": "Enforcement of Judgment",
+                    "iri_hash": "R9pQxz2fUIrk1LjvVP8hikg"
+                  },
+                  {
+                    "label": "Foreclosure",
+                    "iri_hash": "RsCr2ffuxk4pqU5CQ8SAxq"
+                  }
+                ],
+                "score": 65.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      }
+    ],
+    "total_items": 19,
+    "branches_available": [
+      {
+        "name": "Actor / Player",
+        "color": "#1e6fa0",
+        "concept_count": 563
+      },
+      {
+        "name": "Area of Law",
+        "color": "#1a5276",
+        "concept_count": 174
+      },
+      {
+        "name": "Asset Type",
+        "color": "#6b5600",
+        "concept_count": 345
+      },
+      {
+        "name": "Communication Modality",
+        "color": "#7b4d93",
+        "concept_count": 11
+      },
+      {
+        "name": "Currency",
+        "color": "#7a5a00",
+        "concept_count": 178
+      },
+      {
+        "name": "Data Format",
+        "color": "#4a5568",
+        "concept_count": 17
+      },
+      {
+        "name": "Document / Artifact",
+        "color": "#9c4a10",
+        "concept_count": 2796
+      },
+      {
+        "name": "Engagement Attributes",
+        "color": "#10613a",
+        "concept_count": 343
+      },
+      {
+        "name": "Event",
+        "color": "#b91c1c",
+        "concept_count": 403
+      },
+      {
+        "name": "FOLIO Type",
+        "color": "#6b5c00",
+        "concept_count": 3
+      },
+      {
+        "name": "Forums and Venues",
+        "color": "#7b2d8e",
+        "concept_count": 2180
+      },
+      {
+        "name": "Governmental Body",
+        "color": "#1a6091",
+        "concept_count": 1585
+      },
+      {
+        "name": "Industry and Market",
+        "color": "#065550",
+        "concept_count": 2137
+      },
+      {
+        "name": "Language",
+        "color": "#7a3b10",
+        "concept_count": 489
+      },
+      {
+        "name": "Legal Authorities",
+        "color": "#8b1a1a",
+        "concept_count": 82
+      },
+      {
+        "name": "Legal Entity",
+        "color": "#085e40",
+        "concept_count": 517
+      },
+      {
+        "name": "Location",
+        "color": "#105560",
+        "concept_count": 3782
+      },
+      {
+        "name": "Matter Narrative",
+        "color": "#6d3580",
+        "concept_count": 13
+      },
+      {
+        "name": "Matter Narrative Format",
+        "color": "#1a6894",
+        "concept_count": 2
+      },
+      {
+        "name": "Objectives",
+        "color": "#b03020",
+        "concept_count": 5411
+      },
+      {
+        "name": "Service",
+        "color": "#065e4e",
+        "concept_count": 434
+      },
+      {
+        "name": "Status",
+        "color": "#864a08",
+        "concept_count": 23
+      },
+      {
+        "name": "System Identifiers",
+        "color": "#3d4d5a",
+        "concept_count": 13
+      }
+    ]
+  },
+  "pipeline_metadata": [
+    {
+      "item_index": 0,
+      "item_text": "Real Property Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Real Property Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Real Property Law"
+      },
+      "stage1_candidate_count": 18,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 18,
+      "stage3_judged_count": 18,
+      "stage3_boosted": 0,
+      "stage3_penalized": 9,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 1,
+      "item_text": "Property Transactions",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Property Transactions",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Property Transactions"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 2,
+      "item_text": "Property Rights and Transactions Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Property Rights and Transactions Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Property Rights and Transactions Law"
+      },
+      "stage1_candidate_count": 5,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 5,
+      "stage3_judged_count": 4,
+      "stage3_boosted": 0,
+      "stage3_penalized": 3,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 3,
+      "item_text": "Clearing Title",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Clearing Title",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Clearing Title"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 4,
+      "item_text": "Landlord-Tenant",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Landlord-Tenant",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Landlord-Tenant"
+      },
+      "stage1_candidate_count": 4,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 4,
+      "stage3_judged_count": 4,
+      "stage3_boosted": 0,
+      "stage3_penalized": 3,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 5,
+      "item_text": "Landlord Tenant Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Landlord Tenant Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Landlord Tenant Law"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 6,
+      "item_text": "Lease Agreements",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Lease Agreements",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Lease Agreements"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 1,
+      "stage3_penalized": 2,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 7,
+      "item_text": "Landlord-Tenant Claims",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Landlord-Tenant Claims",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Landlord-Tenant Claims"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 8,
+      "item_text": "Zoning & Land Use",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Zoning & Land Use",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Zoning & Land Use"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 1,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 9,
+      "item_text": "Land Use and Zoning Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Land Use and Zoning Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Land Use and Zoning Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 10,
+      "item_text": "Zoning Variance",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Zoning Variance",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Zoning Variance"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 11,
+      "item_text": "Construction",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Construction",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Construction"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 12,
+      "item_text": "Construction and Development Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Construction and Development Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Construction and Development Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 13,
+      "item_text": "Building Code Violations",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Building Code Violations",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Building Code Violations"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 14,
+      "item_text": "Construction Defect Claims",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Construction Defect Claims",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Construction Defect Claims"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 15,
+      "item_text": "Foreclosure & Liens",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Foreclosure & Liens",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Foreclosure & Liens"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 16,
+      "item_text": "Mortgage Foreclosure",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Mortgage Foreclosure",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Mortgage Foreclosure"
+      },
+      "stage1_candidate_count": 5,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 5,
+      "stage3_judged_count": 4,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 17,
+      "item_text": "Eminent Domain Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Eminent Domain Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Eminent Domain Law"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 18,
+      "item_text": "Reverse Mortgage Foreclosure",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Reverse Mortgage Foreclosure",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Reverse Mortgage Foreclosure"
+      },
+      "stage1_candidate_count": 5,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 5,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 2
+    }
+  ],
+  "selections": {
+    "0": [
+      "RDb8aZxNJsmCvQGbfiFyfI7"
+    ],
+    "1": [],
+    "2": [
+      "R7mghrIauk4oJaakhl0B8pU"
+    ],
+    "3": [
+      "RehKvgKHQ6yqWnBYOfxzMO"
+    ],
+    "4": [
+      "RBjYepK2dGo0eMf20eWQmI3"
+    ],
+    "5": [
+      "RBjYepK2dGo0eMf20eWQmI3"
+    ],
+    "6": [
+      "R8RfDzMtuMPdmNTonmhBxu"
+    ],
+    "7": [
+      "R97svnIdQhrkKZw6i3Nn88z"
+    ],
+    "8": [
+      "RCZeXWp0noZxJw19K1AU2bA"
+    ],
+    "9": [
+      "RCZeXWp0noZxJw19K1AU2bA"
+    ],
+    "10": [],
+    "11": [],
+    "12": [
+      "R7o4TiXsYQ6vV6MrJMTfnS7"
+    ],
+    "13": [],
+    "14": [
+      "R7XEUVrFS72CU6LCzw9e8em"
+    ],
+    "15": [
+      "RsCr2ffuxk4pqU5CQ8SAxq"
+    ],
+    "16": [
+      "R7gzXxHYGOLSEudb6n1QFWm"
+    ],
+    "17": [
+      "R995bX2KYLkMP0nefaBtEnq"
+    ],
+    "18": [
+      "RDbwTZhFW2BCJ7Svgudx63U"
+    ]
+  },
+  "node_statuses": {
+    "0": "completed",
+    "1": "unmapped",
+    "2": "completed",
+    "3": "completed",
+    "4": "completed",
+    "5": "completed",
+    "6": "completed",
+    "7": "completed",
+    "8": "completed",
+    "9": "completed",
+    "10": "unmapped",
+    "11": "unmapped",
+    "12": "completed",
+    "13": "unmapped",
+    "14": "completed",
+    "15": "completed",
+    "16": "completed",
+    "17": "completed",
+    "18": "completed"
+  },
+  "notes": {},
+  "screen": "mapping",
+  "branch_states": {},
+  "input_branch_states": {},
+  "branch_sort_mode": "default",
+  "custom_branch_order": [],
+  "status_filter": "all",
+  "suggestion_queue": [],
+  "review_queue": [],
+  "pipeline_version": "0.10.0+01f7ecb",
+  "folio_version": "0.2.0"
+}

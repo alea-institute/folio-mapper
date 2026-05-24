@@ -1,0 +1,2217 @@
+{
+  "version": "1.3",
+  "created": "2026-05-24T19:52:44.825501+00:00",
+  "updated": "2026-05-24T19:52:44.825501+00:00",
+  "source_file": null,
+  "input_format": "hierarchical",
+  "total_nodes": 18,
+  "completed": 14,
+  "skipped": 0,
+  "current_position": 0,
+  "provider": "anthropic",
+  "model": "claude-3-5-sonnet-latest",
+  "text_input": "Banking & Finance Law\n\tCommercial Lending\n\t\tCommercial Finance Law\n\t\tAsset-Based Lending Practice\n\t\tFinancing Practice\n\tSecurities & Capital Markets\n\t\tBroker-Dealer Law\n\t\tDerivatives and Futures Law\n\tInvestment Funds\n\t\tInvestment Companies Law\n\t\tPrivate Equity, Hedge Funds and Venture Capital Law\n\tStructured Finance\n\t\tStructured Finance Law\n\t\tCollateralized Loan Obligation\n\tCompliance & Enforcement\n\t\tBank Secrecy and Anti-Money Laundering Law\n\t\tCryptocurrency Law\n\t\tRegulatory Enforcement",
+  "parse_result": {
+    "format": "hierarchical",
+    "items": [
+      {
+        "text": "Banking & Finance Law",
+        "index": 0,
+        "ancestry": []
+      },
+      {
+        "text": "Commercial Lending",
+        "index": 1,
+        "ancestry": [
+          "Banking & Finance Law"
+        ]
+      },
+      {
+        "text": "Commercial Finance Law",
+        "index": 2,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Commercial Lending"
+        ]
+      },
+      {
+        "text": "Asset-Based Lending Practice",
+        "index": 3,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Commercial Lending"
+        ]
+      },
+      {
+        "text": "Financing Practice",
+        "index": 4,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Commercial Lending"
+        ]
+      },
+      {
+        "text": "Securities & Capital Markets",
+        "index": 5,
+        "ancestry": [
+          "Banking & Finance Law"
+        ]
+      },
+      {
+        "text": "Broker-Dealer Law",
+        "index": 6,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Securities & Capital Markets"
+        ]
+      },
+      {
+        "text": "Derivatives and Futures Law",
+        "index": 7,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Securities & Capital Markets"
+        ]
+      },
+      {
+        "text": "Investment Funds",
+        "index": 8,
+        "ancestry": [
+          "Banking & Finance Law"
+        ]
+      },
+      {
+        "text": "Investment Companies Law",
+        "index": 9,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Investment Funds"
+        ]
+      },
+      {
+        "text": "Private Equity, Hedge Funds and Venture Capital Law",
+        "index": 10,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Investment Funds"
+        ]
+      },
+      {
+        "text": "Structured Finance",
+        "index": 11,
+        "ancestry": [
+          "Banking & Finance Law"
+        ]
+      },
+      {
+        "text": "Structured Finance Law",
+        "index": 12,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Structured Finance"
+        ]
+      },
+      {
+        "text": "Collateralized Loan Obligation",
+        "index": 13,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Structured Finance"
+        ]
+      },
+      {
+        "text": "Compliance & Enforcement",
+        "index": 14,
+        "ancestry": [
+          "Banking & Finance Law"
+        ]
+      },
+      {
+        "text": "Bank Secrecy and Anti-Money Laundering Law",
+        "index": 15,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Compliance & Enforcement"
+        ]
+      },
+      {
+        "text": "Cryptocurrency Law",
+        "index": 16,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Compliance & Enforcement"
+        ]
+      },
+      {
+        "text": "Regulatory Enforcement",
+        "index": 17,
+        "ancestry": [
+          "Banking & Finance Law",
+          "Compliance & Enforcement"
+        ]
+      }
+    ],
+    "hierarchy": [
+      {
+        "label": "Banking & Finance Law",
+        "depth": 0,
+        "children": [
+          {
+            "label": "Commercial Lending",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Commercial Finance Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Asset-Based Lending Practice",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Financing Practice",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Securities & Capital Markets",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Broker-Dealer Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Derivatives and Futures Law",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Investment Funds",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Investment Companies Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Private Equity, Hedge Funds and Venture Capital Law",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Structured Finance",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Structured Finance Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Collateralized Loan Obligation",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Compliance & Enforcement",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Bank Secrecy and Anti-Money Laundering Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Cryptocurrency Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Regulatory Enforcement",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_items": 18,
+    "headers": null,
+    "source_filename": null,
+    "raw_preview": [
+      [
+        "Banking & Finance Law"
+      ],
+      [
+        "",
+        "Commercial Lending"
+      ],
+      [
+        "",
+        "",
+        "Commercial Finance Law"
+      ],
+      [
+        "",
+        "",
+        "Asset-Based Lending Practice"
+      ],
+      [
+        "",
+        "",
+        "Financing Practice"
+      ]
+    ]
+  },
+  "mapping_response": {
+    "items": [
+      {
+        "item_index": 0,
+        "item_text": "Banking & Finance Law",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 1,
+        "item_text": "Commercial Lending",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 2,
+        "item_text": "Commercial Finance Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Commercial Finance Law",
+                "iri": "https://folio.openlegalstandard.org/R8Zhd0So57YTwCncrDosIpy",
+                "iri_hash": "R8Zhd0So57YTwCncrDosIpy",
+                "definition": "Law supporting the function of providing loans or other financing to businesses.",
+                "synonyms": [
+                  "Commercial Finance",
+                  "Commercial Finance Law",
+                  "Derecho de Finanzas Comerciales",
+                  "Direito de Finanças Comerciais",
+                  "Droit de la finance commerciale",
+                  "Handelsfinanzrecht",
+                  "Ley de Finanzas Comerciales",
+                  "חוקי פיננסים מסחריים",
+                  "वाणिज्यिक वित्त विधि",
+                  "商业金融法",
+                  "商業金融法",
+                  "COMF"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Finance and Lending Law",
+                    "iri_hash": "RDhhApr0eDVle3F076WAVct"
+                  },
+                  {
+                    "label": "Commercial Finance Law",
+                    "iri_hash": "R8Zhd0So57YTwCncrDosIpy"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 3,
+        "item_text": "Asset-Based Lending Practice",
+        "branch_groups": [
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Asset-Based Lending Practice",
+                "iri": "https://folio.openlegalstandard.org/R9qWOyiOCY9v0cF2P0cRjvx",
+                "iri_hash": "R9qWOyiOCY9v0cF2P0cRjvx",
+                "definition": "Asset-Based Lending Practice involves legal work related to providing loans secured by a borrower's assets, such as inventory, accounts receivable, or equipment. This practice includes drafting and negotiating loan agreements, conducting due diligence on collateral, and ensuring compliance with relevant laws and regulations.",
+                "synonyms": [
+                  "Asset-Based Lending",
+                  "Asset-Based Lending Service",
+                  "Asset-Backed Financing Practice",
+                  "Collateral-Based Lending Legal Work",
+                  "Secured Lending Practice"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Transactional Practice",
+                    "iri_hash": "RKzL5nW7IGg4mvAPFX2MUL"
+                  },
+                  {
+                    "label": "Financing Practice",
+                    "iri_hash": "RZGfmXsIBYoRaOo5gXdeTP"
+                  },
+                  {
+                    "label": "Lending Practice",
+                    "iri_hash": "RmiM5JwX7zJYQs8QRneJYR"
+                  },
+                  {
+                    "label": "Asset-Based Lending Practice",
+                    "iri_hash": "R9qWOyiOCY9v0cF2P0cRjvx"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Lending Practice",
+                "iri": "https://folio.openlegalstandard.org/RmiM5JwX7zJYQs8QRneJYR",
+                "iri_hash": "RmiM5JwX7zJYQs8QRneJYR",
+                "definition": "A transaction whereby property is lent or given to another on condition of return or, where the loan is of money, repayment. In a loan of money, the money lent becomes the property of the borrower during the period of the loan against an undertaking to return a sum of an equivalent amount either on demand or on a specified date or in accordance with an agreed schedule of repayments.",
+                "synonyms": [
+                  "Loans",
+                  "Lending",
+                  "Lending Service",
+                  "Kreditvergabepraxis",
+                  "Lending Practice",
+                  "Loan",
+                  "Pratique de prêt",
+                  "Práctica de préstamo",
+                  "Prática de empréstimo",
+                  "מעשה הלוואה",
+                  "उधार देने की अभ्यास",
+                  "借贷实践",
+                  "貸出実践",
+                  "LOA"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Transactional Practice",
+                    "iri_hash": "RKzL5nW7IGg4mvAPFX2MUL"
+                  },
+                  {
+                    "label": "Financing Practice",
+                    "iri_hash": "RZGfmXsIBYoRaOo5gXdeTP"
+                  },
+                  {
+                    "label": "Lending Practice",
+                    "iri_hash": "RmiM5JwX7zJYQs8QRneJYR"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 4,
+        "item_text": "Financing Practice",
+        "branch_groups": [
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Financing Practice",
+                "iri": "https://folio.openlegalstandard.org/RZGfmXsIBYoRaOo5gXdeTP",
+                "iri_hash": "RZGfmXsIBYoRaOo5gXdeTP",
+                "definition": "Agreements to finance a business or other entity.",
+                "synonyms": [
+                  "Finance",
+                  "Financing Service",
+                  "Financing",
+                  "Financing Practice",
+                  "Finanzierungspraxis",
+                  "Pratique de financement",
+                  "Práctica de financiación",
+                  "Práctica de financiamiento",
+                  "Prática de financiamento",
+                  "מעשה מימון",
+                  "वित्त प्रथा",
+                  "融资实践",
+                  "資金調達の実践",
+                  "FIN"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Transactional Practice",
+                    "iri_hash": "RKzL5nW7IGg4mvAPFX2MUL"
+                  },
+                  {
+                    "label": "Financing Practice",
+                    "iri_hash": "RZGfmXsIBYoRaOo5gXdeTP"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "M&A E Financing Practice",
+                "iri": "https://folio.openlegalstandard.org/RELyb2yqbDd1xwYwilGj64",
+                "iri_hash": "RELyb2yqbDd1xwYwilGj64",
+                "definition": "M&A E Financing Practice refers to the legal practice area that deals with mergers and acquisitions as well as financing transactions related to those deals.",
+                "synonyms": [
+                  "M&A E Financing",
+                  "M&A E Financing Service",
+                  "M&A E Finanzierungspraxis",
+                  "M&A Eファイナンス実践",
+                  "M&A E融资实践",
+                  "Pratique de financement M&A E",
+                  "Prática de Financiamento M&A E"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Transactional Practice",
+                    "iri_hash": "RKzL5nW7IGg4mvAPFX2MUL"
+                  },
+                  {
+                    "label": "Mergers and Acquisitions Practice",
+                    "iri_hash": "RBosma6qE0p7REgIqlUxvIR"
+                  },
+                  {
+                    "label": "M&A Practice Components",
+                    "iri_hash": "RVLgJukt9MTZNfTewtxNIK"
+                  },
+                  {
+                    "label": "M&A E Financing Practice",
+                    "iri_hash": "RELyb2yqbDd1xwYwilGj64"
+                  }
+                ],
+                "score": 68.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 5,
+        "item_text": "Securities & Capital Markets",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 6,
+        "item_text": "Broker-Dealer Law",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Broker-Dealer",
+                "iri": "https://folio.openlegalstandard.org/RDbDt5n4osubVafgim4zlMK",
+                "iri_hash": "RDbDt5n4osubVafgim4zlMK",
+                "definition": "A Broker-Dealer is a financial firm or individual that buys and sells securities on behalf of clients (acting as a broker) or for its own account (acting as a dealer). Broker-dealers are essential in facilitating securities transactions, providing market liquidity, and offering investment advice and services to individual and institutional investors.",
+                "synonyms": [
+                  "Securities Broker",
+                  "Securities Firm",
+                  "Trading Firm"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Broker",
+                    "iri_hash": "R9Q9CszYRTjTgwQ8JRqVZ0x"
+                  },
+                  {
+                    "label": "Broker-Dealer",
+                    "iri_hash": "RDbDt5n4osubVafgim4zlMK"
+                  }
+                ],
+                "score": 72.0
+              },
+              {
+                "label": "Broker",
+                "iri": "https://folio.openlegalstandard.org/R9Q9CszYRTjTgwQ8JRqVZ0x",
+                "iri_hash": "R9Q9CszYRTjTgwQ8JRqVZ0x",
+                "definition": "A broker is an individual or firm employed by others to plan and organize sales or negotiate contracts for a commission.",
+                "synonyms": [
+                  "Broker",
+                  "Corretor",
+                  "Courtier",
+                  "Makler",
+                  "ブローカー",
+                  "经纪人",
+                  "BROK"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Broker",
+                    "iri_hash": "R9Q9CszYRTjTgwQ8JRqVZ0x"
+                  }
+                ],
+                "score": 58.0
+              },
+              {
+                "label": "Dealer",
+                "iri": "https://folio.openlegalstandard.org/RBfw7E7dyTONmLhhs6h2Ruk",
+                "iri_hash": "RBfw7E7dyTONmLhhs6h2Ruk",
+                "definition": "A dealer is a person, company, or entity that buys and sells securities for his or her or its own account and not for others.",
+                "synonyms": [
+                  "Concessionnaire",
+                  "Dealer",
+                  "Distribuidor",
+                  "Händler",
+                  "Revendedor",
+                  "סוחר",
+                  "डीलर",
+                  "ディーラー",
+                  "经销商",
+                  "DLER"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Dealer",
+                    "iri_hash": "RBfw7E7dyTONmLhhs6h2Ruk"
+                  }
+                ],
+                "score": 58.0
+              }
+            ]
+          },
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Broker-Dealer Law",
+                "iri": "https://folio.openlegalstandard.org/ReYhrgmmP6AgTFCkT9U2bx",
+                "iri_hash": "ReYhrgmmP6AgTFCkT9U2bx",
+                "definition": "Law surrounding individuals engaged in effecting transactions in securities for others or for their own account.",
+                "synonyms": [
+                  "Broker-Dealer",
+                  "Broker-Dealer Law",
+                  "Broker-Dealer-Recht",
+                  "Droit des courtiers et des concessionnaires",
+                  "Lei de Corretagem e Distribuição",
+                  "Ley de corredores y distribuidores",
+                  "חוק סוכני חברות ומסחר",
+                  "ब्रोकर-डीलर कानून",
+                  "ブローカー・ディーラー法",
+                  "经纪商法律",
+                  "BROK"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Securities and Financial Instruments Law",
+                    "iri_hash": "RCF0BMeSwppddfM6cp6AUBK"
+                  },
+                  {
+                    "label": "Broker-Dealer Law",
+                    "iri_hash": "ReYhrgmmP6AgTFCkT9U2bx"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
+      },
+      {
+        "item_index": 7,
+        "item_text": "Derivatives and Futures Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Derivatives and Futures Law",
+                "iri": "https://folio.openlegalstandard.org/R8rd3ksoSQ6HG1znf9z0EbT",
+                "iri_hash": "R8rd3ksoSQ6HG1znf9z0EbT",
+                "definition": "Law governing derivatives.",
+                "synonyms": [
+                  "Derivatives and Futures",
+                  "Derivatives and Futures Law",
+                  "Direito de Derivativos e Futuros",
+                  "Droit des dérivés et des contrats à terme",
+                  "Ley de Derivados y Futuros",
+                  "Recht der Derivate und Futures",
+                  "חוק נגזרים ועתידות",
+                  "निवास और भविष्य कानून",
+                  "デリバティブおよび先物取引法",
+                  "衍生品和期货法",
+                  "DERV"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Securities and Financial Instruments Law",
+                    "iri_hash": "RCF0BMeSwppddfM6cp6AUBK"
+                  },
+                  {
+                    "label": "Derivatives and Futures Law",
+                    "iri_hash": "R8rd3ksoSQ6HG1znf9z0EbT"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 8,
+        "item_text": "Investment Funds",
+        "branch_groups": [
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Investment Funds",
+                "iri": "https://folio.openlegalstandard.org/RCzxVprwB3RwZ8EMewt18Jt",
+                "iri_hash": "RCzxVprwB3RwZ8EMewt18Jt",
+                "definition": "Investment Funds are pooled investment vehicles that collect capital from multiple investors to invest in a diversified portfolio of assets. These funds include various types such as mutual funds, hedge funds, and real estate investment trusts (REITs), each with distinct investment strategies and regulatory structures.",
+                "synonyms": [
+                  "Baskets",
+                  "Funds",
+                  "Pooled Investment Vehicles"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Financial Assets",
+                    "iri_hash": "RxkTKgYqWS0WBHnJgrn27Y"
+                  },
+                  {
+                    "label": "Investment Assets",
+                    "iri_hash": "RBVQj7fYsBw67yNXs4WI6RX"
+                  },
+                  {
+                    "label": "Investment Funds",
+                    "iri_hash": "RCzxVprwB3RwZ8EMewt18Jt"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 9,
+        "item_text": "Investment Companies Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Investment Companies Law",
+                "iri": "https://folio.openlegalstandard.org/RBGwrXLh0uuXtUN70lvWZao",
+                "iri_hash": "RBGwrXLh0uuXtUN70lvWZao",
+                "definition": "Regulations on companies that engage primarily in investing, reinvesting, and trading in securities, and whose own securities are offered to the investing public.",
+                "synonyms": [
+                  "Investment Companies",
+                  "Investment Companies Law",
+                  "Investmentgesetz",
+                  "Lei das Companhias de Investimento",
+                  "Ley de Sociedades de Inversión",
+                  "Loi sur les sociétés d'investissement",
+                  "חוק חברות השקעות",
+                  "निवेश कंपनियों कानून",
+                  "投資信託法",
+                  "投资公司法",
+                  "INVC"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Securities and Financial Instruments Law",
+                    "iri_hash": "RCF0BMeSwppddfM6cp6AUBK"
+                  },
+                  {
+                    "label": "Investment Companies Law",
+                    "iri_hash": "RBGwrXLh0uuXtUN70lvWZao"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 10,
+        "item_text": "Private Equity, Hedge Funds and Venture Capital Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Private Equity, Hedge Funds and Venture Capital Law",
+                "iri": "https://folio.openlegalstandard.org/RxPxADB12qeAIDAFEgWRsz",
+                "iri_hash": "RxPxADB12qeAIDAFEgWRsz",
+                "definition": "Private Equity, Hedge Funds, and Venture Capital Law encompasses the legal frameworks governing private equity investments, hedge funds, and venture capital financing. It involves regulations related to fund formation, management, investment, compliance, investor rights, and financial transactions within these sectors.",
+                "synonyms": [
+                  "Droit des fonds d'investissement, des fonds spéculatifs et du capital-risque",
+                  "Gesetzgebung für Private Equity, Hedgefonds und Risikokapital",
+                  "Lei de Private Equity, Hedge Funds e Venture Capital",
+                  "Ley de Capital Privado, Fondos de Cobertura y Capital de Riesgo",
+                  "Private Equity, Hedge Funds and Venture Capital Law",
+                  "חוק הון פרטי, קרנות השתלמות והון סיכון",
+                  "प्राइवेट इक्विटी, हेज फंड और वेंचर कैपिटल कानून",
+                  "プライベートエクイティ、ヘッジファンド、ベンチャーキャピタル法",
+                  "私募股权、对冲基金和风险投资法律"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Securities and Financial Instruments Law",
+                    "iri_hash": "RCF0BMeSwppddfM6cp6AUBK"
+                  },
+                  {
+                    "label": "Private Equity, Hedge Funds and Venture Capital Law",
+                    "iri_hash": "RxPxADB12qeAIDAFEgWRsz"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 11,
+        "item_text": "Structured Finance",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Structured Finance Law",
+                "iri": "https://folio.openlegalstandard.org/RCLFuIgNGzPshEHUtJAwGjd",
+                "iri_hash": "RCLFuIgNGzPshEHUtJAwGjd",
+                "definition": "Law surrounding securitization and asset-backed securities.",
+                "synonyms": [
+                  "Derecho de Finanzas Estructuradas",
+                  "Direito de Finanças Estruturadas",
+                  "Droit de la finance structurée",
+                  "Ley de Finanzas Estructuradas",
+                  "Structured Finance",
+                  "Structured Finance Law",
+                  "Strukturiertes Finanzrecht",
+                  "חוקי פיננסים מבוססי מבנה",
+                  "संरचित वित्त विधि",
+                  "ストラクチャードファイナンス法",
+                  "结构化金融法",
+                  "STRF"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Securities and Financial Instruments Law",
+                    "iri_hash": "RCF0BMeSwppddfM6cp6AUBK"
+                  },
+                  {
+                    "label": "Structured Finance Law",
+                    "iri_hash": "RCLFuIgNGzPshEHUtJAwGjd"
+                  }
+                ],
+                "score": 92.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Structured Finance Agreement",
+                "iri": "https://folio.openlegalstandard.org/R7p3ZBGzc1BxDrCwYJnsTo",
+                "iri_hash": "R7p3ZBGzc1BxDrCwYJnsTo",
+                "definition": "A Structured Finance Agreement pertains to complex financial transactions that pool and repackage financial assets, often for the purpose of risk diversification and enhanced returns. These agreements govern the terms, parties involved, and the structure of such transactions.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Debt Agreement",
+                    "iri_hash": "RVoyN9hN3m5gy3So01ZEZ8"
+                  },
+                  {
+                    "label": "Loan",
+                    "iri_hash": "R7xqVevh0JKSwX977TRIZQV"
+                  },
+                  {
+                    "label": "Structured Finance Agreement",
+                    "iri_hash": "R7p3ZBGzc1BxDrCwYJnsTo"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 12,
+        "item_text": "Structured Finance Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Structured Finance Law",
+                "iri": "https://folio.openlegalstandard.org/RCLFuIgNGzPshEHUtJAwGjd",
+                "iri_hash": "RCLFuIgNGzPshEHUtJAwGjd",
+                "definition": "Law surrounding securitization and asset-backed securities.",
+                "synonyms": [
+                  "Derecho de Finanzas Estructuradas",
+                  "Direito de Finanças Estruturadas",
+                  "Droit de la finance structurée",
+                  "Ley de Finanzas Estructuradas",
+                  "Structured Finance",
+                  "Structured Finance Law",
+                  "Strukturiertes Finanzrecht",
+                  "חוקי פיננסים מבוססי מבנה",
+                  "संरचित वित्त विधि",
+                  "ストラクチャードファイナンス法",
+                  "结构化金融法",
+                  "STRF"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Securities and Financial Instruments Law",
+                    "iri_hash": "RCF0BMeSwppddfM6cp6AUBK"
+                  },
+                  {
+                    "label": "Structured Finance Law",
+                    "iri_hash": "RCLFuIgNGzPshEHUtJAwGjd"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 13,
+        "item_text": "Collateralized Loan Obligation",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Collateralized Loan Obligation",
+                "iri": "https://folio.openlegalstandard.org/R1GBRcO79LXpE6nmo7BUgp",
+                "iri_hash": "R1GBRcO79LXpE6nmo7BUgp",
+                "definition": "A CLO is a type of structured finance instrument backed by a pool of loans. These loans are bundled together and then sliced into tranches with varying degrees of risk and reward, which are then sold to investors.",
+                "synonyms": [
+                  "CDO",
+                  "CLO"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Debt Agreement",
+                    "iri_hash": "RVoyN9hN3m5gy3So01ZEZ8"
+                  },
+                  {
+                    "label": "Loan",
+                    "iri_hash": "R7xqVevh0JKSwX977TRIZQV"
+                  },
+                  {
+                    "label": "Structured Finance Agreement",
+                    "iri_hash": "R7p3ZBGzc1BxDrCwYJnsTo"
+                  },
+                  {
+                    "label": "Collateralized Loan Obligation",
+                    "iri_hash": "R1GBRcO79LXpE6nmo7BUgp"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          },
+          {
+            "branch": "Financial Concepts and Metrics",
+            "branch_color": "#6e4b00",
+            "candidates": [
+              {
+                "label": "Collateral",
+                "iri": "https://folio.openlegalstandard.org/RDT9HdGssfLC6RPAX15qHr7",
+                "iri_hash": "RDT9HdGssfLC6RPAX15qHr7",
+                "definition": "Collateral is an asset or property pledged by a borrower to a lender as security for a loan or other obligation, to mitigate the risk of default. If the borrower fails to meet the obligations, the lender has the right to seize the collateral.",
+                "synonyms": [
+                  "Guarantee",
+                  "Pledge",
+                  "Security Interest"
+                ],
+                "branch": "Financial Concepts and Metrics",
+                "branch_color": "#6e4b00",
+                "hierarchy_path": [
+                  {
+                    "label": "Financial Concepts and Metrics",
+                    "iri_hash": "RhBgnef56iLBXYfPqWQE41"
+                  },
+                  {
+                    "label": "Financial Obligations",
+                    "iri_hash": "R9ce0e5pb4hAULGEtqlBCV8"
+                  },
+                  {
+                    "label": "Contingent Financial Obligations",
+                    "iri_hash": "R8Gt68Hspze0zsEdYzUS2Fq"
+                  },
+                  {
+                    "label": "Collateral",
+                    "iri_hash": "RDT9HdGssfLC6RPAX15qHr7"
+                  }
+                ],
+                "score": 55.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Obligation",
+                "iri": "https://folio.openlegalstandard.org/RDtFkLR3v97fran5zQ3ugao",
+                "iri_hash": "RDtFkLR3v97fran5zQ3ugao",
+                "definition": "An obligation is a legal or moral duty that requires a certain course of action or behavior, often enforceable by law or ethical principles.",
+                "synonyms": [
+                  "Duty",
+                  "Legal Obligation",
+                  "Responsibility"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Obligation",
+                    "iri_hash": "RDtFkLR3v97fran5zQ3ugao"
+                  }
+                ],
+                "score": 15.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 14,
+        "item_text": "Compliance & Enforcement",
+        "branch_groups": [
+          {
+            "branch": "Legal Authorities",
+            "branch_color": "#8b1a1a",
+            "candidates": [
+              {
+                "label": "Regulations",
+                "iri": "https://folio.openlegalstandard.org/RrECTdM9f5ml4sac9MFrSC",
+                "iri_hash": "RrECTdM9f5ml4sac9MFrSC",
+                "definition": "Rules or orders issued by a governmental regulatory agency and having the force of law.",
+                "synonyms": [
+                  "Regulamentos",
+                  "Réglementations",
+                  "Vorschriften",
+                  "法规",
+                  "規制"
+                ],
+                "branch": "Legal Authorities",
+                "branch_color": "#8b1a1a",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Authorities",
+                    "iri_hash": "RC1CZydjfH8oiM4W3rCkma3"
+                  },
+                  {
+                    "label": "Regulations",
+                    "iri_hash": "RrECTdM9f5ml4sac9MFrSC"
+                  }
+                ],
+                "score": 58.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Compliance",
+                "iri": "https://folio.openlegalstandard.org/RCZwssbqfmu0Lds0LPDV34F",
+                "iri_hash": "RCZwssbqfmu0Lds0LPDV34F",
+                "definition": "Deontic compliance refers to the conformity in action, behavior, or attitude to a set of rules or standards, as prescribed by laws, regulations, or ethical principles.",
+                "synonyms": [
+                  "Legal Compliance"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Compliance",
+                    "iri_hash": "RCZwssbqfmu0Lds0LPDV34F"
+                  }
+                ],
+                "score": 78.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 15,
+        "item_text": "Bank Secrecy and Anti-Money Laundering Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Bank Secrecy and Anti-Money Laundering Law",
+                "iri": "https://folio.openlegalstandard.org/RCQ936ixjvUK9wXuJxNXQfd",
+                "iri_hash": "RCQ936ixjvUK9wXuJxNXQfd",
+                "definition": "Law regulating financial institutions relating to money laundering.",
+                "synonyms": [
+                  "AML Law",
+                  "Anti-Money Laundering Law",
+                  "Bank Secrecy Law",
+                  "Bank Secrecy and Anti-Money Laundering",
+                  "Bank Secrecy and Anti-Money Laundering Law",
+                  "Bankgeheimnis- und Anti-Geldwäsche-Gesetz",
+                  "Lei de Sigilo Bancário e de Combate à Lavagem de Dinheiro",
+                  "Ley de Secreto Bancario y Anti-Lavado de Dinero",
+                  "Loi sur le secret bancaire et la lutte contre le blanchiment d'argent",
+                  "חוק הסוד הבנקאי ומניעת כביסת כספים",
+                  "बैंक गोपनीयता और धन प्रवर्तन रोकथाम कानून",
+                  "銀行秘密保持およびマネーロンダリング防止法",
+                  "银行保密和反洗钱法",
+                  "SAML"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Banking Law",
+                    "iri_hash": "R7meQhKYGkcA57UZ7v4JOdA"
+                  },
+                  {
+                    "label": "Bank Secrecy and Anti-Money Laundering Law",
+                    "iri_hash": "RCQ936ixjvUK9wXuJxNXQfd"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 16,
+        "item_text": "Cryptocurrency Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Cryptocurrency Law",
+                "iri": "https://folio.openlegalstandard.org/RBN9zTYlrd1Dt84iS3QO5fp",
+                "iri_hash": "RBN9zTYlrd1Dt84iS3QO5fp",
+                "definition": "Cryptocurrency law encompasses the legal rules and regulations governing the use, creation, and exchange of digital currencies, such as Bitcoin and Ethereum. It addresses issues related to security, taxation, and compliance with financial regulations.",
+                "synonyms": [
+                  "Crypto Asset Law"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Banking Law",
+                    "iri_hash": "R7meQhKYGkcA57UZ7v4JOdA"
+                  },
+                  {
+                    "label": "Cryptocurrency Law",
+                    "iri_hash": "RBN9zTYlrd1Dt84iS3QO5fp"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          },
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Cryptocurrency",
+                "iri": "https://folio.openlegalstandard.org/RiARhF7gFzdfGxNIuZYIo1",
+                "iri_hash": "RiARhF7gFzdfGxNIuZYIo1",
+                "definition": "A cryptocurrency is a digital or virtual currency that is secured by cryptography, which makes it nearly impossible to counterfeit or double-spend.",
+                "synonyms": [
+                  "Criptomoeda",
+                  "Criptomoneda",
+                  "Cryptocurrency",
+                  "Cryptomonnaie",
+                  "Kryptowährung",
+                  "מטבע קריפטוגרפי",
+                  "क्रिप्टोकरेंसी",
+                  "加密货币",
+                  "暗号通貨",
+                  "CRYPCU"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Tangible Assets",
+                    "iri_hash": "RbvEeHm8jkxY6SgfxEoC0i"
+                  },
+                  {
+                    "label": "Cash and Cash Equivalents",
+                    "iri_hash": "R8Ahr1iRMkczkHNvcrZ3KOG"
+                  },
+                  {
+                    "label": "Cryptocurrency",
+                    "iri_hash": "RiARhF7gFzdfGxNIuZYIo1"
+                  }
+                ],
+                "score": 65.0
+              }
+            ]
+          },
+          {
+            "branch": "Currency",
+            "branch_color": "#7a5a00",
+            "candidates": [
+              {
+                "label": "Currency",
+                "iri": "https://folio.openlegalstandard.org/R767niCLQVC5zIcO5WDQMSl",
+                "iri_hash": "R767niCLQVC5zIcO5WDQMSl",
+                "definition": "A standardization of money that is used, circulated, or exchanged (e.g., banknotes, coins).",
+                "synonyms": [
+                  "Currency",
+                  "Devise",
+                  "Moeda",
+                  "Moneda",
+                  "Währung",
+                  "מטבע",
+                  "मुद्रा",
+                  "货币",
+                  "通貨"
+                ],
+                "branch": "Currency",
+                "branch_color": "#7a5a00",
+                "hierarchy_path": [
+                  {
+                    "label": "Currency",
+                    "iri_hash": "R767niCLQVC5zIcO5WDQMSl"
+                  }
+                ],
+                "score": 35.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 17,
+        "item_text": "Regulatory Enforcement",
+        "branch_groups": [
+          {
+            "branch": "Governmental Body",
+            "branch_color": "#1a6091",
+            "candidates": [
+              {
+                "label": "Regulator",
+                "iri": "https://folio.openlegalstandard.org/RBKsKSLjVdAm86mHUg8gHf2",
+                "iri_hash": "RBKsKSLjVdAm86mHUg8gHf2",
+                "definition": "A regulator is an entity, typically a government agency or authority, responsible for overseeing and enforcing specific regulations within a particular industry or sector. Regulators ensure compliance with laws, standards, and guidelines to protect public interests, such as consumer safety, environmental protection, and market fairness.",
+                "synonyms": [
+                  "Regulatory Authority"
+                ],
+                "branch": "Governmental Body",
+                "branch_color": "#1a6091",
+                "hierarchy_path": [
+                  {
+                    "label": "Governmental Body",
+                    "iri_hash": "RBQGborh1CfXanGZipDL0Qo"
+                  },
+                  {
+                    "label": "Regulator",
+                    "iri_hash": "RBKsKSLjVdAm86mHUg8gHf2"
+                  }
+                ],
+                "score": 82.0
+              }
+            ]
+          },
+          {
+            "branch": "Legal Authorities",
+            "branch_color": "#8b1a1a",
+            "candidates": [
+              {
+                "label": "Regulations",
+                "iri": "https://folio.openlegalstandard.org/RrECTdM9f5ml4sac9MFrSC",
+                "iri_hash": "RrECTdM9f5ml4sac9MFrSC",
+                "definition": "Rules or orders issued by a governmental regulatory agency and having the force of law.",
+                "synonyms": [
+                  "Regulamentos",
+                  "Réglementations",
+                  "Vorschriften",
+                  "法规",
+                  "規制"
+                ],
+                "branch": "Legal Authorities",
+                "branch_color": "#8b1a1a",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Authorities",
+                    "iri_hash": "RC1CZydjfH8oiM4W3rCkma3"
+                  },
+                  {
+                    "label": "Regulations",
+                    "iri_hash": "RrECTdM9f5ml4sac9MFrSC"
+                  }
+                ],
+                "score": 65.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Compliance",
+                "iri": "https://folio.openlegalstandard.org/RCZwssbqfmu0Lds0LPDV34F",
+                "iri_hash": "RCZwssbqfmu0Lds0LPDV34F",
+                "definition": "Deontic compliance refers to the conformity in action, behavior, or attitude to a set of rules or standards, as prescribed by laws, regulations, or ethical principles.",
+                "synonyms": [
+                  "Legal Compliance"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Compliance",
+                    "iri_hash": "RCZwssbqfmu0Lds0LPDV34F"
+                  }
+                ],
+                "score": 52.0
+              }
+            ]
+          },
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Regulatory Enforcement",
+                "iri": "https://folio.openlegalstandard.org/R323NrrdMAKWvV45HB4CII",
+                "iri_hash": "R323NrrdMAKWvV45HB4CII",
+                "definition": "The process of enforcement by a regulatory agency through an administrative procedure outside of any court system.",
+                "synonyms": [
+                  "Application de la réglementation",
+                  "Cumplimiento Regulatorio",
+                  "Enforcement",
+                  "Execução regulatória",
+                  "Regulatorische Durchsetzung",
+                  "Regulatory Enforcement",
+                  "אכיפת תקנות",
+                  "नियामक प्रवर्तन",
+                  "监管执行",
+                  "規制執行",
+                  "ENF"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Regulatory Services (Non-Dispute)",
+                    "iri_hash": "RBWo88jsbY4qHzhlTFr5Np7"
+                  },
+                  {
+                    "label": "Regulatory Enforcement",
+                    "iri_hash": "R323NrrdMAKWvV45HB4CII"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Regulatory Compliance",
+                "iri": "https://folio.openlegalstandard.org/RDEuNPJBSNIARaYTXJwi86w",
+                "iri_hash": "RDEuNPJBSNIARaYTXJwi86w",
+                "definition": "The process by which an entity (i.e., organization or person) ensures that it observes and complies with the external statutory laws and regulations.",
+                "synonyms": [
+                  "Compliance",
+                  "Conformidade regulatória",
+                  "Conformité réglementaire",
+                  "Cumplimiento normativo",
+                  "Cumplimiento regulatorio",
+                  "Regulatorische Compliance",
+                  "Regulatory Compliance",
+                  "עמיתת רגולציה",
+                  "नियामक अनुपालन",
+                  "监管合规",
+                  "規制コンプライアンス",
+                  "COM"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Regulatory Services (Non-Dispute)",
+                    "iri_hash": "RBWo88jsbY4qHzhlTFr5Np7"
+                  },
+                  {
+                    "label": "Regulatory Compliance",
+                    "iri_hash": "RDEuNPJBSNIARaYTXJwi86w"
+                  }
+                ],
+                "score": 72.0
+              },
+              {
+                "label": "Insurance Regulatory Practice",
+                "iri": "https://folio.openlegalstandard.org/RDswXyA54Z3tSp18RnKQm1k",
+                "iri_hash": "RDswXyA54Z3tSp18RnKQm1k",
+                "definition": "Insurance Regulatory Practice involves representing companies, brokers, and other entities in complying with the regulatory requirements imposed by insurance regulatory authorities. This legal service includes obtaining licenses, navigating regulatory changes, and ensuring adherence to financial solvency, consumer protection, and reporting obligations.",
+                "synonyms": [
+                  "Insurance Regulatory",
+                  "Insurance Regulatory Service"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Regulatory Services (Non-Dispute)",
+                    "iri_hash": "RBWo88jsbY4qHzhlTFr5Np7"
+                  },
+                  {
+                    "label": "Insurance Regulatory Practice",
+                    "iri_hash": "RDswXyA54Z3tSp18RnKQm1k"
+                  }
+                ],
+                "score": 52.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 6
+      }
+    ],
+    "total_items": 18,
+    "branches_available": [
+      {
+        "name": "Actor / Player",
+        "color": "#1e6fa0",
+        "concept_count": 563
+      },
+      {
+        "name": "Area of Law",
+        "color": "#1a5276",
+        "concept_count": 174
+      },
+      {
+        "name": "Asset Type",
+        "color": "#6b5600",
+        "concept_count": 345
+      },
+      {
+        "name": "Communication Modality",
+        "color": "#7b4d93",
+        "concept_count": 11
+      },
+      {
+        "name": "Currency",
+        "color": "#7a5a00",
+        "concept_count": 178
+      },
+      {
+        "name": "Data Format",
+        "color": "#4a5568",
+        "concept_count": 17
+      },
+      {
+        "name": "Document / Artifact",
+        "color": "#9c4a10",
+        "concept_count": 2796
+      },
+      {
+        "name": "Engagement Attributes",
+        "color": "#10613a",
+        "concept_count": 343
+      },
+      {
+        "name": "Event",
+        "color": "#b91c1c",
+        "concept_count": 403
+      },
+      {
+        "name": "FOLIO Type",
+        "color": "#6b5c00",
+        "concept_count": 3
+      },
+      {
+        "name": "Forums and Venues",
+        "color": "#7b2d8e",
+        "concept_count": 2180
+      },
+      {
+        "name": "Governmental Body",
+        "color": "#1a6091",
+        "concept_count": 1585
+      },
+      {
+        "name": "Industry and Market",
+        "color": "#065550",
+        "concept_count": 2137
+      },
+      {
+        "name": "Language",
+        "color": "#7a3b10",
+        "concept_count": 489
+      },
+      {
+        "name": "Legal Authorities",
+        "color": "#8b1a1a",
+        "concept_count": 82
+      },
+      {
+        "name": "Legal Entity",
+        "color": "#085e40",
+        "concept_count": 517
+      },
+      {
+        "name": "Location",
+        "color": "#105560",
+        "concept_count": 3782
+      },
+      {
+        "name": "Matter Narrative",
+        "color": "#6d3580",
+        "concept_count": 13
+      },
+      {
+        "name": "Matter Narrative Format",
+        "color": "#1a6894",
+        "concept_count": 2
+      },
+      {
+        "name": "Objectives",
+        "color": "#b03020",
+        "concept_count": 5411
+      },
+      {
+        "name": "Service",
+        "color": "#065e4e",
+        "concept_count": 434
+      },
+      {
+        "name": "Status",
+        "color": "#864a08",
+        "concept_count": 23
+      },
+      {
+        "name": "System Identifiers",
+        "color": "#3d4d5a",
+        "concept_count": 13
+      }
+    ]
+  },
+  "pipeline_metadata": [
+    {
+      "item_index": 0,
+      "item_text": "Banking & Finance Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Banking & Finance Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Banking & Finance Law"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 1,
+      "item_text": "Commercial Lending",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Commercial Lending",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Commercial Lending"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 2,
+      "item_text": "Commercial Finance Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Commercial Finance Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Commercial Finance Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 3,
+      "item_text": "Asset-Based Lending Practice",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Asset-Based Lending Practice",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Asset-Based Lending Practice"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 4,
+      "item_text": "Financing Practice",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Financing Practice",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Financing Practice"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 5,
+      "item_text": "Securities & Capital Markets",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Securities & Capital Markets",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Securities & Capital Markets"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 6,
+      "item_text": "Broker-Dealer Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Broker-Dealer Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Broker-Dealer Law"
+      },
+      "stage1_candidate_count": 4,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 4,
+      "stage3_judged_count": 4,
+      "stage3_boosted": 0,
+      "stage3_penalized": 3,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 7,
+      "item_text": "Derivatives and Futures Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Derivatives and Futures Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Derivatives and Futures Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 8,
+      "item_text": "Investment Funds",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Investment Funds",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Investment Funds"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 9,
+      "item_text": "Investment Companies Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Investment Companies Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Investment Companies Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 10,
+      "item_text": "Private Equity, Hedge Funds and Venture Capital Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Private Equity, Hedge Funds and Venture Capital Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Private Equity, Hedge Funds and Venture Capital Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 11,
+      "item_text": "Structured Finance",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Structured Finance",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Structured Finance"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 12,
+      "item_text": "Structured Finance Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Structured Finance Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Structured Finance Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 13,
+      "item_text": "Collateralized Loan Obligation",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Collateralized Loan Obligation",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Collateralized Loan Obligation"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 14,
+      "item_text": "Compliance & Enforcement",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Compliance & Enforcement",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Compliance & Enforcement"
+      },
+      "stage1_candidate_count": 4,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 4,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 2
+    },
+    {
+      "item_index": 15,
+      "item_text": "Bank Secrecy and Anti-Money Laundering Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Bank Secrecy and Anti-Money Laundering Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Bank Secrecy and Anti-Money Laundering Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 16,
+      "item_text": "Cryptocurrency Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Cryptocurrency Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Cryptocurrency Law"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 17,
+      "item_text": "Regulatory Enforcement",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Regulatory Enforcement",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Regulatory Enforcement"
+      },
+      "stage1_candidate_count": 7,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 7,
+      "stage3_judged_count": 6,
+      "stage3_boosted": 0,
+      "stage3_penalized": 5,
+      "stage3_rejected": 1
+    }
+  ],
+  "selections": {
+    "0": [],
+    "1": [],
+    "2": [
+      "R8Zhd0So57YTwCncrDosIpy"
+    ],
+    "3": [
+      "R9qWOyiOCY9v0cF2P0cRjvx"
+    ],
+    "4": [
+      "RZGfmXsIBYoRaOo5gXdeTP"
+    ],
+    "5": [],
+    "6": [
+      "ReYhrgmmP6AgTFCkT9U2bx"
+    ],
+    "7": [
+      "R8rd3ksoSQ6HG1znf9z0EbT"
+    ],
+    "8": [
+      "RCzxVprwB3RwZ8EMewt18Jt"
+    ],
+    "9": [
+      "RBGwrXLh0uuXtUN70lvWZao"
+    ],
+    "10": [
+      "RxPxADB12qeAIDAFEgWRsz"
+    ],
+    "11": [
+      "RCLFuIgNGzPshEHUtJAwGjd"
+    ],
+    "12": [
+      "RCLFuIgNGzPshEHUtJAwGjd"
+    ],
+    "13": [
+      "R1GBRcO79LXpE6nmo7BUgp"
+    ],
+    "14": [],
+    "15": [
+      "RCQ936ixjvUK9wXuJxNXQfd"
+    ],
+    "16": [
+      "RBN9zTYlrd1Dt84iS3QO5fp"
+    ],
+    "17": [
+      "R323NrrdMAKWvV45HB4CII"
+    ]
+  },
+  "node_statuses": {
+    "0": "unmapped",
+    "1": "unmapped",
+    "2": "completed",
+    "3": "completed",
+    "4": "completed",
+    "5": "unmapped",
+    "6": "completed",
+    "7": "completed",
+    "8": "completed",
+    "9": "completed",
+    "10": "completed",
+    "11": "completed",
+    "12": "completed",
+    "13": "completed",
+    "14": "unmapped",
+    "15": "completed",
+    "16": "completed",
+    "17": "completed"
+  },
+  "notes": {},
+  "screen": "mapping",
+  "branch_states": {},
+  "input_branch_states": {},
+  "branch_sort_mode": "default",
+  "custom_branch_order": [],
+  "status_filter": "all",
+  "suggestion_queue": [],
+  "review_queue": [],
+  "pipeline_version": "0.10.0+01f7ecb",
+  "folio_version": "0.2.0"
+}

@@ -1,0 +1,2460 @@
+{
+  "version": "1.3",
+  "created": "2026-05-24T19:55:02.803533+00:00",
+  "updated": "2026-05-24T19:55:02.803533+00:00",
+  "source_file": null,
+  "input_format": "hierarchical",
+  "total_nodes": 18,
+  "completed": 13,
+  "skipped": 0,
+  "current_position": 0,
+  "provider": "anthropic",
+  "model": "claude-3-5-sonnet-latest",
+  "text_input": "Immigration Law\n\tEmployment Visas\n\t\tEmployment Immigration Law\n\t\tH-1B Visa\n\tFamily & Humanitarian\n\t\tAffirmative Asylum\n\t\tRefugee\n\t\tRefugee Claim\n\t\tRefugee and Asylum Rights\n\tRemoval Defense\n\t\tDeportation\n\t\tDefensive Asylum\n\tStatus Adjustment\n\t\tNaturalization Application\n\t\tGreen Card\n\tSpecial Visas\n\t\tStudent Visa\n\t\tEntertainment Visa",
+  "parse_result": {
+    "format": "hierarchical",
+    "items": [
+      {
+        "text": "Immigration Law",
+        "index": 0,
+        "ancestry": []
+      },
+      {
+        "text": "Employment Visas",
+        "index": 1,
+        "ancestry": [
+          "Immigration Law"
+        ]
+      },
+      {
+        "text": "Employment Immigration Law",
+        "index": 2,
+        "ancestry": [
+          "Immigration Law",
+          "Employment Visas"
+        ]
+      },
+      {
+        "text": "H-1B Visa",
+        "index": 3,
+        "ancestry": [
+          "Immigration Law",
+          "Employment Visas"
+        ]
+      },
+      {
+        "text": "Family & Humanitarian",
+        "index": 4,
+        "ancestry": [
+          "Immigration Law"
+        ]
+      },
+      {
+        "text": "Affirmative Asylum",
+        "index": 5,
+        "ancestry": [
+          "Immigration Law",
+          "Family & Humanitarian"
+        ]
+      },
+      {
+        "text": "Refugee",
+        "index": 6,
+        "ancestry": [
+          "Immigration Law",
+          "Family & Humanitarian"
+        ]
+      },
+      {
+        "text": "Refugee Claim",
+        "index": 7,
+        "ancestry": [
+          "Immigration Law",
+          "Family & Humanitarian"
+        ]
+      },
+      {
+        "text": "Refugee and Asylum Rights",
+        "index": 8,
+        "ancestry": [
+          "Immigration Law",
+          "Family & Humanitarian"
+        ]
+      },
+      {
+        "text": "Removal Defense",
+        "index": 9,
+        "ancestry": [
+          "Immigration Law"
+        ]
+      },
+      {
+        "text": "Deportation",
+        "index": 10,
+        "ancestry": [
+          "Immigration Law",
+          "Removal Defense"
+        ]
+      },
+      {
+        "text": "Defensive Asylum",
+        "index": 11,
+        "ancestry": [
+          "Immigration Law",
+          "Removal Defense"
+        ]
+      },
+      {
+        "text": "Status Adjustment",
+        "index": 12,
+        "ancestry": [
+          "Immigration Law"
+        ]
+      },
+      {
+        "text": "Naturalization Application",
+        "index": 13,
+        "ancestry": [
+          "Immigration Law",
+          "Status Adjustment"
+        ]
+      },
+      {
+        "text": "Green Card",
+        "index": 14,
+        "ancestry": [
+          "Immigration Law",
+          "Status Adjustment"
+        ]
+      },
+      {
+        "text": "Special Visas",
+        "index": 15,
+        "ancestry": [
+          "Immigration Law"
+        ]
+      },
+      {
+        "text": "Student Visa",
+        "index": 16,
+        "ancestry": [
+          "Immigration Law",
+          "Special Visas"
+        ]
+      },
+      {
+        "text": "Entertainment Visa",
+        "index": 17,
+        "ancestry": [
+          "Immigration Law",
+          "Special Visas"
+        ]
+      }
+    ],
+    "hierarchy": [
+      {
+        "label": "Immigration Law",
+        "depth": 0,
+        "children": [
+          {
+            "label": "Employment Visas",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Employment Immigration Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "H-1B Visa",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Family & Humanitarian",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Affirmative Asylum",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Refugee",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Refugee Claim",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Refugee and Asylum Rights",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Removal Defense",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Deportation",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Defensive Asylum",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Status Adjustment",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Naturalization Application",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Green Card",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Special Visas",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Student Visa",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Entertainment Visa",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_items": 18,
+    "headers": null,
+    "source_filename": null,
+    "raw_preview": [
+      [
+        "Immigration Law"
+      ],
+      [
+        "",
+        "Employment Visas"
+      ],
+      [
+        "",
+        "",
+        "Employment Immigration Law"
+      ],
+      [
+        "",
+        "",
+        "H-1B Visa"
+      ],
+      [
+        "",
+        "Family & Humanitarian"
+      ]
+    ]
+  },
+  "mapping_response": {
+    "items": [
+      {
+        "item_index": 0,
+        "item_text": "Immigration Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Immigration Law",
+                "iri": "https://folio.openlegalstandard.org/RVYBDQv9HD2DkAuvbf5Cha",
+                "iri_hash": "RVYBDQv9HD2DkAuvbf5Cha",
+                "definition": "National statutes, and regulations governing immigration into and deportation from a country including issues of naturalization and citizenship.",
+                "synonyms": [
+                  "Derecho de Inmigración",
+                  "Direito de Imigração",
+                  "Droit de l'immigration",
+                  "Einwanderungsrecht",
+                  "Immigration Law",
+                  "Ley de Inmigración",
+                  "חוק הגירה",
+                  "आप्रवासन कानून",
+                  "入国管理法",
+                  "移民法",
+                  "IMMF"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Personal and Family Law",
+                    "iri_hash": "RBFgL4Dth9VONjmIdH0bEOs"
+                  },
+                  {
+                    "label": "Immigration Law",
+                    "iri_hash": "RVYBDQv9HD2DkAuvbf5Cha"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          },
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Immigration Service",
+                "iri": "https://folio.openlegalstandard.org/R9tA1NC7tjVzG64HW0PLaRb",
+                "iri_hash": "R9tA1NC7tjVzG64HW0PLaRb",
+                "definition": "Immigration legal service refers to the range of legal assistance provided to individuals seeking to navigate immigration laws, regulations, and procedures. This can include help with visa applications, asylum requests, deportation defense, and naturalization processes, among other immigration-related matters, and is usually provided by specialized immigration attorneys or legal firms",
+                "synonyms": [],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Regulatory Services (Non-Dispute)",
+                    "iri_hash": "RBWo88jsbY4qHzhlTFr5Np7"
+                  },
+                  {
+                    "label": "Immigration Service",
+                    "iri_hash": "R9tA1NC7tjVzG64HW0PLaRb"
+                  }
+                ],
+                "score": 68.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 1,
+        "item_text": "Employment Visas",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "O-1 Visa",
+                "iri": "https://folio.openlegalstandard.org/R9jRx7isWVizbJSNmFNEydC",
+                "iri_hash": "R9jRx7isWVizbJSNmFNEydC",
+                "definition": "An O-1 visa is issued to individuals with extraordinary ability in the sciences, arts, education, business, or athletics, recognized at a national or international level. This visa allows them to enter the U.S. to continue work in their field of expertise.",
+                "synonyms": [
+                  "Elite Performer Visa",
+                  "Talent Visa"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  },
+                  {
+                    "label": "Non-Immigrant Visa",
+                    "iri_hash": "RD1oQDMlC6FytjOndhJTMy8"
+                  },
+                  {
+                    "label": "Extraordinary Ability Non-Immigrant Visa Types",
+                    "iri_hash": "RNUBxUepOEIOvagLHcD3N0"
+                  },
+                  {
+                    "label": "O-1 Visa",
+                    "iri_hash": "R9jRx7isWVizbJSNmFNEydC"
+                  }
+                ],
+                "score": 85.0
+              },
+              {
+                "label": "Visa",
+                "iri": "https://folio.openlegalstandard.org/RnDeUu0kFB2F39jo4UbcuQ",
+                "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ",
+                "definition": "A visa is an official document or endorsement that grants the holder permission to enter, stay, or leave a specific country for a specified period. It is usually stamped or affixed to the traveler's passport and may come with various conditions such as the purpose of the visit, duration of stay, and whether multiple entries are allowed",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  }
+                ],
+                "score": 78.0
+              },
+              {
+                "label": "O-2 Visa",
+                "iri": "https://folio.openlegalstandard.org/R8sE5cUzstzT3PI03RKL3Dc",
+                "iri_hash": "R8sE5cUzstzT3PI03RKL3Dc",
+                "definition": "An O-2 visa is issued to individuals who provide essential support services to O-1 visa holders, allowing them to enter the U.S. to assist in the performance of the O-1 visa holder’s work. This visa category includes personnel whose skills are integral to the successful performance of the O-1 visa holder.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  },
+                  {
+                    "label": "Non-Immigrant Visa",
+                    "iri_hash": "RD1oQDMlC6FytjOndhJTMy8"
+                  },
+                  {
+                    "label": "Extraordinary Ability Non-Immigrant Visa Types",
+                    "iri_hash": "RNUBxUepOEIOvagLHcD3N0"
+                  },
+                  {
+                    "label": "O-2 Visa",
+                    "iri_hash": "R8sE5cUzstzT3PI03RKL3Dc"
+                  }
+                ],
+                "score": 52.0
+              }
+            ]
+          },
+          {
+            "branch": "Industry and Market",
+            "branch_color": "#065550",
+            "candidates": [
+              {
+                "label": "Employment Services",
+                "iri": "https://folio.openlegalstandard.org/3AZFUlpsQ3SlDlj4dj_EQg",
+                "iri_hash": "3AZFUlpsQ3SlDlj4dj_EQg",
+                "definition": "This industry group comprises establishments primarily engaged in one of the following: (1) listing employment vacancies and referring or placing applicants for employment; (2) providing executive search, recruitment, and placement services; (3) supplying workers to clients' businesses for limited periods of time to supplement the working force of the client; or (4) providing human resources and human resource management services to client businesses and households.",
+                "synonyms": [],
+                "branch": "Industry and Market",
+                "branch_color": "#065550",
+                "hierarchy_path": [
+                  {
+                    "label": "Industry",
+                    "iri_hash": "RDIwFaFcH4KY0gwEY0QlMTp"
+                  },
+                  {
+                    "label": "Business and Administrative Services Industry",
+                    "iri_hash": "RN2D91ENKaHvvID40zUJvt"
+                  },
+                  {
+                    "label": "Administrative and Support Services Industry",
+                    "iri_hash": "R7Ti8xGiWI5NzMSs5upZUo6"
+                  },
+                  {
+                    "label": "Employment Services",
+                    "iri_hash": "3AZFUlpsQ3SlDlj4dj_EQg"
+                  }
+                ],
+                "score": 20.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
+      },
+      {
+        "item_index": 2,
+        "item_text": "Employment Immigration Law",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Immigrant",
+                "iri": "https://folio.openlegalstandard.org/R8GuYn7yMmfL0coiNQ0OE8f",
+                "iri_hash": "R8GuYn7yMmfL0coiNQ0OE8f",
+                "definition": "An immigrant is an individual who moves to a country other than their country of origin with the intention of residing there permanently or for an extended period. The reasons for immigration can vary and may include seeking employment opportunities, better living conditions, or reunification with family.",
+                "synonyms": [],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Immigration and Border Control Role",
+                    "iri_hash": "RD2KAbcnrk0vfpUCEog3N9F"
+                  },
+                  {
+                    "label": "Immigrant",
+                    "iri_hash": "R8GuYn7yMmfL0coiNQ0OE8f"
+                  }
+                ],
+                "score": 55.0
+              },
+              {
+                "label": "Employer",
+                "iri": "https://folio.openlegalstandard.org/RsZxhuNFK33sHecLQ7WJdp",
+                "iri_hash": "RsZxhuNFK33sHecLQ7WJdp",
+                "definition": "An employer is a person or entity who hires another to performs service under an express or implied agreement and has control, or the right to control, over the manner and means of performing the services. An employer has the right to control an employee.",
+                "synonyms": [
+                  "Arbeitgeber",
+                  "Empleador",
+                  "Employer",
+                  "Employeur",
+                  "Empregador",
+                  "מעסיק",
+                  "नियोक्ता",
+                  "雇主",
+                  "雇用者",
+                  "EMPR"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Employer",
+                    "iri_hash": "RsZxhuNFK33sHecLQ7WJdp"
+                  }
+                ],
+                "score": 40.0
+              }
+            ]
+          },
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Employment Immigration Law",
+                "iri": "https://folio.openlegalstandard.org/R7pFO5c8yTVZ93FKPzsnDHM",
+                "iri_hash": "R7pFO5c8yTVZ93FKPzsnDHM",
+                "definition": "National statutes, and regulations governing employment-based immigration into and deportation from a country.",
+                "synonyms": [
+                  "Arbeitsmigrationsrecht",
+                  "Droit de l'immigration professionnelle",
+                  "Employment Immigration",
+                  "Employment Immigration Law",
+                  "Lei de Imigração de Emprego",
+                  "Ley de Inmigración Laboral",
+                  "חוק הגירה למטרות עסקיות",
+                  "रोजगार इम्मिग्रेशन कानून",
+                  "就业移民法",
+                  "雇用移民法",
+                  "IMME"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Employment Immigration Law",
+                    "iri_hash": "R7pFO5c8yTVZ93FKPzsnDHM"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Immigration Law",
+                "iri": "https://folio.openlegalstandard.org/RVYBDQv9HD2DkAuvbf5Cha",
+                "iri_hash": "RVYBDQv9HD2DkAuvbf5Cha",
+                "definition": "National statutes, and regulations governing immigration into and deportation from a country including issues of naturalization and citizenship.",
+                "synonyms": [
+                  "Derecho de Inmigración",
+                  "Direito de Imigração",
+                  "Droit de l'immigration",
+                  "Einwanderungsrecht",
+                  "Immigration Law",
+                  "Ley de Inmigración",
+                  "חוק הגירה",
+                  "आप्रवासन कानून",
+                  "入国管理法",
+                  "移民法",
+                  "IMMF"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Personal and Family Law",
+                    "iri_hash": "RBFgL4Dth9VONjmIdH0bEOs"
+                  },
+                  {
+                    "label": "Immigration Law",
+                    "iri_hash": "RVYBDQv9HD2DkAuvbf5Cha"
+                  }
+                ],
+                "score": 82.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "O-1 Visa",
+                "iri": "https://folio.openlegalstandard.org/R9jRx7isWVizbJSNmFNEydC",
+                "iri_hash": "R9jRx7isWVizbJSNmFNEydC",
+                "definition": "An O-1 visa is issued to individuals with extraordinary ability in the sciences, arts, education, business, or athletics, recognized at a national or international level. This visa allows them to enter the U.S. to continue work in their field of expertise.",
+                "synonyms": [
+                  "Elite Performer Visa",
+                  "Talent Visa"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  },
+                  {
+                    "label": "Non-Immigrant Visa",
+                    "iri_hash": "RD1oQDMlC6FytjOndhJTMy8"
+                  },
+                  {
+                    "label": "Extraordinary Ability Non-Immigrant Visa Types",
+                    "iri_hash": "RNUBxUepOEIOvagLHcD3N0"
+                  },
+                  {
+                    "label": "O-1 Visa",
+                    "iri_hash": "R9jRx7isWVizbJSNmFNEydC"
+                  }
+                ],
+                "score": 84.0
+              }
+            ]
+          },
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Deportation",
+                "iri": "https://folio.openlegalstandard.org/R7aFBns3Z2d9MuNI5sDEGxF",
+                "iri_hash": "R7aFBns3Z2d9MuNI5sDEGxF",
+                "definition": "The forced removal of a person from a country by the government as a consequence of violating immigration laws or committing a crime.",
+                "synonyms": [
+                  "Abschiebung",
+                  "Deportación",
+                  "Deportation",
+                  "Deportação",
+                  "Déportation",
+                  "גירושין",
+                  "निर्वासन",
+                  "強制送還",
+                  "驱逐"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Criminal Penalties",
+                    "iri_hash": "R0tJKDoGSixec7FgGKnAAl"
+                  },
+                  {
+                    "label": "Deportation",
+                    "iri_hash": "R7aFBns3Z2d9MuNI5sDEGxF"
+                  }
+                ],
+                "score": 68.0
+              }
+            ]
+          },
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Immigration Service",
+                "iri": "https://folio.openlegalstandard.org/R9tA1NC7tjVzG64HW0PLaRb",
+                "iri_hash": "R9tA1NC7tjVzG64HW0PLaRb",
+                "definition": "Immigration legal service refers to the range of legal assistance provided to individuals seeking to navigate immigration laws, regulations, and procedures. This can include help with visa applications, asylum requests, deportation defense, and naturalization processes, among other immigration-related matters, and is usually provided by specialized immigration attorneys or legal firms",
+                "synonyms": [],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Regulatory Services (Non-Dispute)",
+                    "iri_hash": "RBWo88jsbY4qHzhlTFr5Np7"
+                  },
+                  {
+                    "label": "Immigration Service",
+                    "iri_hash": "R9tA1NC7tjVzG64HW0PLaRb"
+                  }
+                ],
+                "score": 62.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 7
+      },
+      {
+        "item_index": 3,
+        "item_text": "H-1B Visa",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Visa",
+                "iri": "https://folio.openlegalstandard.org/RnDeUu0kFB2F39jo4UbcuQ",
+                "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ",
+                "definition": "A visa is an official document or endorsement that grants the holder permission to enter, stay, or leave a specific country for a specified period. It is usually stamped or affixed to the traveler's passport and may come with various conditions such as the purpose of the visit, duration of stay, and whether multiple entries are allowed",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  }
+                ],
+                "score": 75.0
+              },
+              {
+                "label": "O-1 Visa",
+                "iri": "https://folio.openlegalstandard.org/R9jRx7isWVizbJSNmFNEydC",
+                "iri_hash": "R9jRx7isWVizbJSNmFNEydC",
+                "definition": "An O-1 visa is issued to individuals with extraordinary ability in the sciences, arts, education, business, or athletics, recognized at a national or international level. This visa allows them to enter the U.S. to continue work in their field of expertise.",
+                "synonyms": [
+                  "Elite Performer Visa",
+                  "Talent Visa"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  },
+                  {
+                    "label": "Non-Immigrant Visa",
+                    "iri_hash": "RD1oQDMlC6FytjOndhJTMy8"
+                  },
+                  {
+                    "label": "Extraordinary Ability Non-Immigrant Visa Types",
+                    "iri_hash": "RNUBxUepOEIOvagLHcD3N0"
+                  },
+                  {
+                    "label": "O-1 Visa",
+                    "iri_hash": "R9jRx7isWVizbJSNmFNEydC"
+                  }
+                ],
+                "score": 38.0
+              },
+              {
+                "label": "O-1B Visa",
+                "iri": "https://folio.openlegalstandard.org/RlCSg20axJf8zS2Og9RXxa",
+                "iri_hash": "RlCSg20axJf8zS2Og9RXxa",
+                "definition": "An O-1B visa is issued to individuals with extraordinary ability in the arts or those who have demonstrated extraordinary achievement in the motion picture or television industry, evidenced by sustained national or international acclaim. This visa allows them to enter the U.S. to work in their field of artistic or entertainment expertise.",
+                "synonyms": [
+                  "Entertainment Industry Visa",
+                  "Extraordinary Ability Arts Visa",
+                  "Performing Arts Visa"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  },
+                  {
+                    "label": "Non-Immigrant Visa",
+                    "iri_hash": "RD1oQDMlC6FytjOndhJTMy8"
+                  },
+                  {
+                    "label": "Extraordinary Ability Non-Immigrant Visa Types",
+                    "iri_hash": "RNUBxUepOEIOvagLHcD3N0"
+                  },
+                  {
+                    "label": "O-1 Visa",
+                    "iri_hash": "R9jRx7isWVizbJSNmFNEydC"
+                  },
+                  {
+                    "label": "O-1B Visa",
+                    "iri_hash": "RlCSg20axJf8zS2Og9RXxa"
+                  }
+                ],
+                "score": 35.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 4,
+        "item_text": "Family & Humanitarian",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Refugee",
+                "iri": "https://folio.openlegalstandard.org/R7UYJUZ3D37DD8nEuNUXXti",
+                "iri_hash": "R7UYJUZ3D37DD8nEuNUXXti",
+                "definition": "In the context of immigration law, a \"Refugee\" is someone who has been forced to flee their home country due to a well-founded fear of persecution. That fear is often based on race, religion, nationality, political opinion, or membership in a particular social group.",
+                "synonyms": [],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Immigration and Border Control Role",
+                    "iri_hash": "RD2KAbcnrk0vfpUCEog3N9F"
+                  },
+                  {
+                    "label": "Immigrant",
+                    "iri_hash": "R8GuYn7yMmfL0coiNQ0OE8f"
+                  },
+                  {
+                    "label": "Refugee",
+                    "iri_hash": "R7UYJUZ3D37DD8nEuNUXXti"
+                  }
+                ],
+                "score": 78.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "O-3 Visa",
+                "iri": "https://folio.openlegalstandard.org/RBTHHNY7rlRxTEG0OoZYv7d",
+                "iri_hash": "RBTHHNY7rlRxTEG0OoZYv7d",
+                "definition": "An O-3 visa is issued to the immediate family members of O-1 and O-2 visa holders, allowing them to accompany or join the primary visa holder in the U.S. This visa category includes spouses and unmarried children under the age of 21.",
+                "synonyms": [
+                  "Family Visa For Extraordinary Talent Holders"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  },
+                  {
+                    "label": "Non-Immigrant Visa",
+                    "iri_hash": "RD1oQDMlC6FytjOndhJTMy8"
+                  },
+                  {
+                    "label": "Extraordinary Ability Non-Immigrant Visa Types",
+                    "iri_hash": "RNUBxUepOEIOvagLHcD3N0"
+                  },
+                  {
+                    "label": "O-3 Visa",
+                    "iri_hash": "RBTHHNY7rlRxTEG0OoZYv7d"
+                  }
+                ],
+                "score": 52.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 5,
+        "item_text": "Affirmative Asylum",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Affirmative Asylum",
+                "iri": "https://folio.openlegalstandard.org/R9UadgkRGYTEbWSJxyP9eWV",
+                "iri_hash": "R9UadgkRGYTEbWSJxyP9eWV",
+                "definition": "Affirmative asylum is a form of asylum sought by individuals who are already in the destination country (e.g., United States) and have not been placed in removal proceedings. The applicant initiates this process by submitting an asylum application to destination country's agency (e.g., U.S. Citizenship and Immigration Services (USCIS)) rather than presenting their case before an immigration judge.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Regulatory Objectives",
+                    "iri_hash": "RCDwLiS22z6MzQaQHS08hvk"
+                  },
+                  {
+                    "label": "Immigration Regulatory Objectives",
+                    "iri_hash": "R9ODLnhxFt38FQNV4BUbRSD"
+                  },
+                  {
+                    "label": "Immigration Request Basis",
+                    "iri_hash": "RB5tNYSDrxEoYAqZ3sy0rae"
+                  },
+                  {
+                    "label": "Asylum Claim",
+                    "iri_hash": "RCjaPxLpNSWz91c3fJzxweU"
+                  },
+                  {
+                    "label": "Affirmative Asylum",
+                    "iri_hash": "R9UadgkRGYTEbWSJxyP9eWV"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 6,
+        "item_text": "Refugee",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Refugee",
+                "iri": "https://folio.openlegalstandard.org/R7UYJUZ3D37DD8nEuNUXXti",
+                "iri_hash": "R7UYJUZ3D37DD8nEuNUXXti",
+                "definition": "In the context of immigration law, a \"Refugee\" is someone who has been forced to flee their home country due to a well-founded fear of persecution. That fear is often based on race, religion, nationality, political opinion, or membership in a particular social group.",
+                "synonyms": [],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Immigration and Border Control Role",
+                    "iri_hash": "RD2KAbcnrk0vfpUCEog3N9F"
+                  },
+                  {
+                    "label": "Immigrant",
+                    "iri_hash": "R8GuYn7yMmfL0coiNQ0OE8f"
+                  },
+                  {
+                    "label": "Refugee",
+                    "iri_hash": "R7UYJUZ3D37DD8nEuNUXXti"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 7,
+        "item_text": "Refugee Claim",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Refugee",
+                "iri": "https://folio.openlegalstandard.org/R7UYJUZ3D37DD8nEuNUXXti",
+                "iri_hash": "R7UYJUZ3D37DD8nEuNUXXti",
+                "definition": "In the context of immigration law, a \"Refugee\" is someone who has been forced to flee their home country due to a well-founded fear of persecution. That fear is often based on race, religion, nationality, political opinion, or membership in a particular social group.",
+                "synonyms": [],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Immigration and Border Control Role",
+                    "iri_hash": "RD2KAbcnrk0vfpUCEog3N9F"
+                  },
+                  {
+                    "label": "Immigrant",
+                    "iri_hash": "R8GuYn7yMmfL0coiNQ0OE8f"
+                  },
+                  {
+                    "label": "Refugee",
+                    "iri_hash": "R7UYJUZ3D37DD8nEuNUXXti"
+                  }
+                ],
+                "score": 75.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Refugee Claim",
+                "iri": "https://folio.openlegalstandard.org/RCjf3VBil5V7nwAGjhEkGIC",
+                "iri_hash": "RCjf3VBil5V7nwAGjhEkGIC",
+                "definition": "A Refugee Claim is a formal request made by an individual seeking protection in a foreign country on the grounds of persecution or well-founded fear of persecution in their home country due to race, religion, nationality, political opinion, or membership in a particular social group. The claim initiates a legal process that may involve interviews, hearings, and documentation to determine eligibility for refugee status",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Regulatory Objectives",
+                    "iri_hash": "RCDwLiS22z6MzQaQHS08hvk"
+                  },
+                  {
+                    "label": "Immigration Regulatory Objectives",
+                    "iri_hash": "R9ODLnhxFt38FQNV4BUbRSD"
+                  },
+                  {
+                    "label": "Immigration Request Basis",
+                    "iri_hash": "RB5tNYSDrxEoYAqZ3sy0rae"
+                  },
+                  {
+                    "label": "Refugee Claim",
+                    "iri_hash": "RCjf3VBil5V7nwAGjhEkGIC"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 8,
+        "item_text": "Refugee and Asylum Rights",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Refugee and Asylum Rights",
+                "iri": "https://folio.openlegalstandard.org/R8C3TkJDPFqtiTA4VDrQFd8",
+                "iri_hash": "R8C3TkJDPFqtiTA4VDrQFd8",
+                "definition": "Refugee and Asylum Rights pertain to the legal protections and entitlements granted to individuals who have been forced to flee their home country due to persecution, violence, or other serious threats to their safety. These rights often stem from international treaties like the 1951 Refugee Convention and may include the right to seek asylum, non-refoulement, and access to basic services such as healthcare and education.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Legal Rights",
+                    "iri_hash": "R9PYNVVb9kMDcRtGNPADrO5"
+                  },
+                  {
+                    "label": "Human Rights",
+                    "iri_hash": "R0TZk2qCI4HPwDl3e9FoOo"
+                  },
+                  {
+                    "label": "Civil Rights",
+                    "iri_hash": "RBJlYzE4ZY14dTEghzbbMHg"
+                  },
+                  {
+                    "label": "Refugee and Asylum Rights",
+                    "iri_hash": "R8C3TkJDPFqtiTA4VDrQFd8"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 9,
+        "item_text": "Removal Defense",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 10,
+        "item_text": "Deportation",
+        "branch_groups": [
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Deportation",
+                "iri": "https://folio.openlegalstandard.org/R7aFBns3Z2d9MuNI5sDEGxF",
+                "iri_hash": "R7aFBns3Z2d9MuNI5sDEGxF",
+                "definition": "The forced removal of a person from a country by the government as a consequence of violating immigration laws or committing a crime.",
+                "synonyms": [
+                  "Abschiebung",
+                  "Deportación",
+                  "Deportation",
+                  "Deportação",
+                  "Déportation",
+                  "גירושין",
+                  "निर्वासन",
+                  "強制送還",
+                  "驱逐"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Criminal Penalties",
+                    "iri_hash": "R0tJKDoGSixec7FgGKnAAl"
+                  },
+                  {
+                    "label": "Deportation",
+                    "iri_hash": "R7aFBns3Z2d9MuNI5sDEGxF"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 11,
+        "item_text": "Defensive Asylum",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Defensive Asylum",
+                "iri": "https://folio.openlegalstandard.org/RDoc5fkIs4N79QVKf9t11jt",
+                "iri_hash": "RDoc5fkIs4N79QVKf9t11jt",
+                "definition": "Defensive asylum is a form of asylum claimed by individuals who are in removal proceedings before an immigration court. Unlike affirmative asylum, defensive asylum is raised as a defense against being removed from the destination country (e.g., United States) and requires the applicant to present their case before an immigration judge.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Regulatory Objectives",
+                    "iri_hash": "RCDwLiS22z6MzQaQHS08hvk"
+                  },
+                  {
+                    "label": "Immigration Regulatory Objectives",
+                    "iri_hash": "R9ODLnhxFt38FQNV4BUbRSD"
+                  },
+                  {
+                    "label": "Immigration Request Basis",
+                    "iri_hash": "RB5tNYSDrxEoYAqZ3sy0rae"
+                  },
+                  {
+                    "label": "Asylum Claim",
+                    "iri_hash": "RCjaPxLpNSWz91c3fJzxweU"
+                  },
+                  {
+                    "label": "Defensive Asylum",
+                    "iri_hash": "RDoc5fkIs4N79QVKf9t11jt"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 12,
+        "item_text": "Status Adjustment",
+        "branch_groups": [
+          {
+            "branch": "Status",
+            "branch_color": "#864a08",
+            "candidates": [
+              {
+                "label": "Status",
+                "iri": "https://folio.openlegalstandard.org/Rx69EnEj3H3TpcgTfUSoYx",
+                "iri_hash": "Rx69EnEj3H3TpcgTfUSoYx",
+                "definition": "The state or condition of a proceeding, legal element, or legal matter (e.g., open, closed, canceled, expired).",
+                "synonyms": [
+                  "Estado",
+                  "Estatus",
+                  "Status",
+                  "Statut",
+                  "סטטוס",
+                  "स्थिति",
+                  "ステータス",
+                  "状态"
+                ],
+                "branch": "Status",
+                "branch_color": "#864a08",
+                "hierarchy_path": [
+                  {
+                    "label": "Status",
+                    "iri_hash": "Rx69EnEj3H3TpcgTfUSoYx"
+                  }
+                ],
+                "score": 68.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 13,
+        "item_text": "Naturalization Application",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Application",
+                "iri": "https://folio.openlegalstandard.org/R9Ictcp1iwOnYdrf1bxOTVA",
+                "iri_hash": "R9Ictcp1iwOnYdrf1bxOTVA",
+                "definition": "In the context of litigation, an Application refers to a formal request or motion submitted to a court or judicial body, seeking a specific order, relief, or direction as part of legal proceedings. This procedural instrument is fundamental in advocating for a party's interests, setting the stage for judicial review and decision-making.",
+                "synonyms": [
+                  "Anwendung",
+                  "Aplicación",
+                  "Aplicativo",
+                  "Application",
+                  "יישום",
+                  "एप्लिकेशन",
+                  "アプリケーション",
+                  "应用程序"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Litigation Document",
+                    "iri_hash": "Rjco9ohucVSJ0XxprM5Opb"
+                  },
+                  {
+                    "label": "Trial Court Practice Documents",
+                    "iri_hash": "R7zvYKadqTXgMZV8ghLsloR"
+                  },
+                  {
+                    "label": "Application",
+                    "iri_hash": "R9Ictcp1iwOnYdrf1bxOTVA"
+                  }
+                ],
+                "score": 35.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Naturalization Application",
+                "iri": "https://folio.openlegalstandard.org/R7zHyrVy8Z3m15uOpjfOyhb",
+                "iri_hash": "R7zHyrVy8Z3m15uOpjfOyhb",
+                "definition": "The Naturalization Application is a legal claim related to immigration that seeks to obtain citizenship for a non-citizen by fulfilling the requirements set forth by the government.",
+                "synonyms": [
+                  "Demande de naturalisation",
+                  "Einbürgerungsantrag",
+                  "Naturalisation Application",
+                  "Pedido de naturalização",
+                  "Solicitud de Naturalización",
+                  "בקשת אזרחות",
+                  "प्राकृतिकरण आवेदन",
+                  "帰化申請",
+                  "归化申请"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Immigration Claims",
+                    "iri_hash": "RqWYmNLhfvzysGhC75yUNw"
+                  },
+                  {
+                    "label": "Naturalization Application",
+                    "iri_hash": "R7zHyrVy8Z3m15uOpjfOyhb"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 14,
+        "item_text": "Green Card",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Permanent Resident",
+                "iri": "https://folio.openlegalstandard.org/RVRrqw2QfVD6UcPQLUMxaq",
+                "iri_hash": "RVRrqw2QfVD6UcPQLUMxaq",
+                "definition": "A Permanent Resident is an individual who has been granted the right to live indefinitely within a country, typically after meeting certain eligibility criteria. In the United States, for example, this status is commonly referred to as having a \"Green Card,\" and it grants the holder various rights and responsibilities, including the ability to work and reside in the country long-term, but does not confer citizenship.",
+                "synonyms": [],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Immigration and Border Control Role",
+                    "iri_hash": "RD2KAbcnrk0vfpUCEog3N9F"
+                  },
+                  {
+                    "label": "Immigrant",
+                    "iri_hash": "R8GuYn7yMmfL0coiNQ0OE8f"
+                  },
+                  {
+                    "label": "Permanent Resident",
+                    "iri_hash": "RVRrqw2QfVD6UcPQLUMxaq"
+                  }
+                ],
+                "score": 91.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 15,
+        "item_text": "Special Visas",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Visa",
+                "iri": "https://folio.openlegalstandard.org/RnDeUu0kFB2F39jo4UbcuQ",
+                "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ",
+                "definition": "A visa is an official document or endorsement that grants the holder permission to enter, stay, or leave a specific country for a specified period. It is usually stamped or affixed to the traveler's passport and may come with various conditions such as the purpose of the visit, duration of stay, and whether multiple entries are allowed",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  }
+                ],
+                "score": 80.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 16,
+        "item_text": "Student Visa",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Student",
+                "iri": "https://folio.openlegalstandard.org/RDeZlellOVEkUBkTSbLgxUC",
+                "iri_hash": "RDeZlellOVEkUBkTSbLgxUC",
+                "definition": "A student is an individual who is enrolled in an educational institution, such as a school, college, or university, for the purpose of acquiring knowledge, skills, and qualifications. Students engage in a structured learning process to pursue academic or vocational goals, typically under the guidance of teachers or instructors.",
+                "synonyms": [],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Student",
+                    "iri_hash": "RDeZlellOVEkUBkTSbLgxUC"
+                  }
+                ],
+                "score": 45.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Student Visa",
+                "iri": "https://folio.openlegalstandard.org/RBe8WASOOp24Pw0SKparbSV",
+                "iri_hash": "RBe8WASOOp24Pw0SKparbSV",
+                "definition": "A Student Visa is a type of visa issued to foreign nationals who wish to enter a country for the purpose of pursuing academic studies at an accredited educational institution. The visa typically stipulates conditions such as the level of study, the duration of the course, and sometimes even the specific institution the student must attend, and it generally does not permit the holder to engage in full-time employment.",
+                "synonyms": [
+                  "F-1 Visa"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  },
+                  {
+                    "label": "Non-Immigrant Visa",
+                    "iri_hash": "RD1oQDMlC6FytjOndhJTMy8"
+                  },
+                  {
+                    "label": "Student Visa",
+                    "iri_hash": "RBe8WASOOp24Pw0SKparbSV"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Visa",
+                "iri": "https://folio.openlegalstandard.org/RnDeUu0kFB2F39jo4UbcuQ",
+                "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ",
+                "definition": "A visa is an official document or endorsement that grants the holder permission to enter, stay, or leave a specific country for a specified period. It is usually stamped or affixed to the traveler's passport and may come with various conditions such as the purpose of the visit, duration of stay, and whether multiple entries are allowed",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  }
+                ],
+                "score": 75.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 17,
+        "item_text": "Entertainment Visa",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Entertainment Visa",
+                "iri": "https://folio.openlegalstandard.org/R7Zwd84vqcynsz8PsQJt7xj",
+                "iri_hash": "R7Zwd84vqcynsz8PsQJt7xj",
+                "definition": "The Entertainment Visa (in the U.S., P-1B Visa), is designed for members of internationally recognized entertainment groups that wish to perform in the destination country (e.g., U.S.). In the United States, this non-immigrant visa allows the entertainers to stay for the duration of the event, competition, or performance, with an initial period of up to one year, which can be extended in increments of up to one year for continued performances or events",
+                "synonyms": [
+                  "Entertainer Visa",
+                  "P-1B Visa"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  },
+                  {
+                    "label": "Non-Immigrant Visa",
+                    "iri_hash": "RD1oQDMlC6FytjOndhJTMy8"
+                  },
+                  {
+                    "label": "Entertainment Visa",
+                    "iri_hash": "R7Zwd84vqcynsz8PsQJt7xj"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "O-1B Visa",
+                "iri": "https://folio.openlegalstandard.org/RlCSg20axJf8zS2Og9RXxa",
+                "iri_hash": "RlCSg20axJf8zS2Og9RXxa",
+                "definition": "An O-1B visa is issued to individuals with extraordinary ability in the arts or those who have demonstrated extraordinary achievement in the motion picture or television industry, evidenced by sustained national or international acclaim. This visa allows them to enter the U.S. to work in their field of artistic or entertainment expertise.",
+                "synonyms": [
+                  "Entertainment Industry Visa",
+                  "Extraordinary Ability Arts Visa",
+                  "Performing Arts Visa"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Immigration and Border Control Document",
+                    "iri_hash": "R7gKTQpOKfQ2tOdPu6cLN3w"
+                  },
+                  {
+                    "label": "Visa",
+                    "iri_hash": "RnDeUu0kFB2F39jo4UbcuQ"
+                  },
+                  {
+                    "label": "Non-Immigrant Visa",
+                    "iri_hash": "RD1oQDMlC6FytjOndhJTMy8"
+                  },
+                  {
+                    "label": "Extraordinary Ability Non-Immigrant Visa Types",
+                    "iri_hash": "RNUBxUepOEIOvagLHcD3N0"
+                  },
+                  {
+                    "label": "O-1 Visa",
+                    "iri_hash": "R9jRx7isWVizbJSNmFNEydC"
+                  },
+                  {
+                    "label": "O-1B Visa",
+                    "iri_hash": "RlCSg20axJf8zS2Og9RXxa"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      }
+    ],
+    "total_items": 18,
+    "branches_available": [
+      {
+        "name": "Actor / Player",
+        "color": "#1e6fa0",
+        "concept_count": 563
+      },
+      {
+        "name": "Area of Law",
+        "color": "#1a5276",
+        "concept_count": 174
+      },
+      {
+        "name": "Asset Type",
+        "color": "#6b5600",
+        "concept_count": 345
+      },
+      {
+        "name": "Communication Modality",
+        "color": "#7b4d93",
+        "concept_count": 11
+      },
+      {
+        "name": "Currency",
+        "color": "#7a5a00",
+        "concept_count": 178
+      },
+      {
+        "name": "Data Format",
+        "color": "#4a5568",
+        "concept_count": 17
+      },
+      {
+        "name": "Document / Artifact",
+        "color": "#9c4a10",
+        "concept_count": 2796
+      },
+      {
+        "name": "Engagement Attributes",
+        "color": "#10613a",
+        "concept_count": 343
+      },
+      {
+        "name": "Event",
+        "color": "#b91c1c",
+        "concept_count": 403
+      },
+      {
+        "name": "FOLIO Type",
+        "color": "#6b5c00",
+        "concept_count": 3
+      },
+      {
+        "name": "Forums and Venues",
+        "color": "#7b2d8e",
+        "concept_count": 2180
+      },
+      {
+        "name": "Governmental Body",
+        "color": "#1a6091",
+        "concept_count": 1585
+      },
+      {
+        "name": "Industry and Market",
+        "color": "#065550",
+        "concept_count": 2137
+      },
+      {
+        "name": "Language",
+        "color": "#7a3b10",
+        "concept_count": 489
+      },
+      {
+        "name": "Legal Authorities",
+        "color": "#8b1a1a",
+        "concept_count": 82
+      },
+      {
+        "name": "Legal Entity",
+        "color": "#085e40",
+        "concept_count": 517
+      },
+      {
+        "name": "Location",
+        "color": "#105560",
+        "concept_count": 3782
+      },
+      {
+        "name": "Matter Narrative",
+        "color": "#6d3580",
+        "concept_count": 13
+      },
+      {
+        "name": "Matter Narrative Format",
+        "color": "#1a6894",
+        "concept_count": 2
+      },
+      {
+        "name": "Objectives",
+        "color": "#b03020",
+        "concept_count": 5411
+      },
+      {
+        "name": "Service",
+        "color": "#065e4e",
+        "concept_count": 434
+      },
+      {
+        "name": "Status",
+        "color": "#864a08",
+        "concept_count": 23
+      },
+      {
+        "name": "System Identifiers",
+        "color": "#3d4d5a",
+        "concept_count": 13
+      }
+    ]
+  },
+  "pipeline_metadata": [
+    {
+      "item_index": 0,
+      "item_text": "Immigration Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Immigration Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Immigration Law"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 1,
+      "item_text": "Employment Visas",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Employment Visas",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Employment Visas"
+      },
+      "stage1_candidate_count": 9,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 9,
+      "stage3_judged_count": 4,
+      "stage3_boosted": 0,
+      "stage3_penalized": 4,
+      "stage3_rejected": 5
+    },
+    {
+      "item_index": 2,
+      "item_text": "Employment Immigration Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Employment Immigration Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Employment Immigration Law"
+      },
+      "stage1_candidate_count": 10,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 10,
+      "stage3_judged_count": 7,
+      "stage3_boosted": 0,
+      "stage3_penalized": 5,
+      "stage3_rejected": 3
+    },
+    {
+      "item_index": 3,
+      "item_text": "H-1B Visa",
+      "prescan": {
+        "segments": [
+          {
+            "text": "H-1B Visa",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "H-1B Visa"
+      },
+      "stage1_candidate_count": 5,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 5,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 3,
+      "stage3_rejected": 2
+    },
+    {
+      "item_index": 4,
+      "item_text": "Family & Humanitarian",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Family & Humanitarian",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Family & Humanitarian"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 5,
+      "item_text": "Affirmative Asylum",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Affirmative Asylum",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Affirmative Asylum"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 6,
+      "item_text": "Refugee",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Refugee",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Refugee"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 7,
+      "item_text": "Refugee Claim",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Refugee Claim",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Refugee Claim"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 8,
+      "item_text": "Refugee and Asylum Rights",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Refugee and Asylum Rights",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Refugee and Asylum Rights"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 9,
+      "item_text": "Removal Defense",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Removal Defense",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Removal Defense"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 10,
+      "item_text": "Deportation",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Deportation",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Deportation"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 11,
+      "item_text": "Defensive Asylum",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Defensive Asylum",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Defensive Asylum"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 12,
+      "item_text": "Status Adjustment",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Status Adjustment",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Status Adjustment"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 13,
+      "item_text": "Naturalization Application",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Naturalization Application",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Naturalization Application"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 14,
+      "item_text": "Green Card",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Green Card",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Green Card"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 15,
+      "item_text": "Special Visas",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Special Visas",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Special Visas"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 16,
+      "item_text": "Student Visa",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Student Visa",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Student Visa"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 17,
+      "item_text": "Entertainment Visa",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Entertainment Visa",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Entertainment Visa"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    }
+  ],
+  "selections": {
+    "0": [
+      "RVYBDQv9HD2DkAuvbf5Cha"
+    ],
+    "1": [
+      "R9jRx7isWVizbJSNmFNEydC"
+    ],
+    "2": [
+      "R7pFO5c8yTVZ93FKPzsnDHM"
+    ],
+    "3": [],
+    "4": [],
+    "5": [
+      "R9UadgkRGYTEbWSJxyP9eWV"
+    ],
+    "6": [
+      "R7UYJUZ3D37DD8nEuNUXXti"
+    ],
+    "7": [
+      "RCjf3VBil5V7nwAGjhEkGIC"
+    ],
+    "8": [
+      "R8C3TkJDPFqtiTA4VDrQFd8"
+    ],
+    "9": [],
+    "10": [
+      "R7aFBns3Z2d9MuNI5sDEGxF"
+    ],
+    "11": [
+      "RDoc5fkIs4N79QVKf9t11jt"
+    ],
+    "12": [],
+    "13": [
+      "R7zHyrVy8Z3m15uOpjfOyhb"
+    ],
+    "14": [
+      "RVRrqw2QfVD6UcPQLUMxaq"
+    ],
+    "15": [],
+    "16": [
+      "RBe8WASOOp24Pw0SKparbSV"
+    ],
+    "17": [
+      "R7Zwd84vqcynsz8PsQJt7xj"
+    ]
+  },
+  "node_statuses": {
+    "0": "completed",
+    "1": "completed",
+    "2": "completed",
+    "3": "unmapped",
+    "4": "unmapped",
+    "5": "completed",
+    "6": "completed",
+    "7": "completed",
+    "8": "completed",
+    "9": "unmapped",
+    "10": "completed",
+    "11": "completed",
+    "12": "unmapped",
+    "13": "completed",
+    "14": "completed",
+    "15": "unmapped",
+    "16": "completed",
+    "17": "completed"
+  },
+  "notes": {},
+  "screen": "mapping",
+  "branch_states": {},
+  "input_branch_states": {},
+  "branch_sort_mode": "default",
+  "custom_branch_order": [],
+  "status_filter": "all",
+  "suggestion_queue": [],
+  "review_queue": [],
+  "pipeline_version": "0.10.0+01f7ecb",
+  "folio_version": "0.2.0"
+}
