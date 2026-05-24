@@ -19,18 +19,31 @@ export interface DemoPayload {
 
 // New areas: lazy-loaded on demand (Vite splits each into its own chunk).
 // Each entry will be resolved when the corresponding {slug}.demo.json file
-// is committed. Until then, import() returns undefined and getDemoPayload
+// is committed. Until then, getDemoPayload catches the ModuleNotFoundError and
 // returns null — falling through to lean mode.
+//
+// Implementation note: import() uses a template literal rather than a static
+// string so that Vite's vite:import-analysis plugin cannot statically resolve
+// the module paths before the JSON files are committed. Vite treats template-
+// literal dynamic imports as truly runtime-dynamic and does not attempt to
+// validate that the files exist at transform time. Each slug's import() will
+// split into its own lazy chunk once the corresponding JSON is committed.
+const _mkLoader =
+  (slug: string): (() => Promise<{ default: DemoPayload }>) =>
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore — template-literal import; path is valid once JSON is committed
+  () => import(/* @vite-ignore */ `./${slug}.demo.json`);
+
 const LAZY_LOADERS: Record<string, () => Promise<{ default: DemoPayload }>> = {
-  'solo-criminal':    () => import('./solo-criminal.demo.json'),
-  'family-law':       () => import('./family-law.demo.json'),
-  'employment-labor': () => import('./employment-labor.demo.json'),
-  'corporate-ma':     () => import('./corporate-ma.demo.json'),
-  'ip-tech':          () => import('./ip-tech.demo.json'),
-  'commercial-lit':   () => import('./commercial-lit.demo.json'),
-  'real-estate':      () => import('./real-estate.demo.json'),
-  'banking-finance':  () => import('./banking-finance.demo.json'),
-  'immigration':      () => import('./immigration.demo.json'),
+  'solo-criminal':    _mkLoader('solo-criminal'),
+  'family-law':       _mkLoader('family-law'),
+  'employment-labor': _mkLoader('employment-labor'),
+  'corporate-ma':     _mkLoader('corporate-ma'),
+  'ip-tech':          _mkLoader('ip-tech'),
+  'commercial-lit':   _mkLoader('commercial-lit'),
+  'real-estate':      _mkLoader('real-estate'),
+  'banking-finance':  _mkLoader('banking-finance'),
+  'immigration':      _mkLoader('immigration'),
 };
 
 // In-memory cache to avoid re-fetching within a session:
@@ -47,9 +60,15 @@ export async function getDemoPayload(slug: string): Promise<DemoPayload | null> 
   if (_demoCache[slug]) return _demoCache[slug];
   const loader = LAZY_LOADERS[slug];
   if (!loader) return null;
-  const mod = await loader();
-  _demoCache[slug] = mod.default;
-  return _demoCache[slug];
+  try {
+    const mod = await loader();
+    _demoCache[slug] = mod.default;
+    return _demoCache[slug];
+  } catch {
+    // JSON file not yet committed (per-area plans add them in Plans 02–10).
+    // Gracefully return null so the caller falls through to lean mode.
+    return null;
+  }
 }
 
 // Must be hardcoded — cannot derive dynamically from async loaders:
