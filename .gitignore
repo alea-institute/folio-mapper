@@ -34,3 +34,6 @@ coverage/
 backend/build/
 backend/dist/
 release/
+
+# Demo curation intermediate probe output (reproducible via scripts/demos/run_probe.py)
+scripts/demos/*-probe-candidates.json
