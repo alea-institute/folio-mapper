@@ -27,7 +27,7 @@ Milestone summary: `.planning/MILESTONES.md`.
 
 **Milestone Goal:** Every existing exemplar area has a demo payload; 3–4 new regulatory/compliance exemplars (probe-gated, 100% hit rate) ship with their own demo payloads. Zero runtime LLM cost preserved throughout.
 
-- [ ] **Phase 4: Demo Payloads for Existing Exemplar Areas** - Curate and register pre-cached pipeline outputs for the 9 exemplar areas that shipped without demo payloads in v1.0
+- [x] **Phase 4: Demo Payloads for Existing Exemplar Areas** - Curate and register pre-cached pipeline outputs for the 9 exemplar areas that shipped without demo payloads in v1.0 (completed 2026-05-24)
 - [ ] **Phase 5: Regulatory Exemplars** - Probe FOLIO fan-out density across candidate regulatory/compliance areas, then author 3–4 lean exemplars in the winning areas at 100% hit rate
 - [ ] **Phase 6: Demo Payloads for Regulatory Exemplars** - Curate and register pre-cached pipeline outputs for each new regulatory exemplar, wiring them into the existing demo infrastructure
 
@@ -46,9 +46,9 @@ Milestone summary: `.planning/MILESTONES.md`.
 Plans:
 - [x] 04-01-PLAN.md — Lazy-load manifest migration + Wave 0 test parametrization (foundation)
 - [x] 04-02-PLAN.md — Generalized coverage probe script + 9 probe-items files
-- [ ] 04-03-PLAN.md — Batch 1: re-curate PI + curate solo-criminal, family-law, employment-labor
-- [ ] 04-04-PLAN.md — Batch 2: curate corporate-ma, ip-tech, commercial-lit
-- [ ] 04-05-PLAN.md — Batch 3: curate real-estate, banking-finance, immigration + phase gate
+- [x] 04-03-PLAN.md — Batch 1: re-curate PI + curate solo-criminal, family-law, employment-labor
+- [x] 04-04-PLAN.md — Batch 2: curate corporate-ma, ip-tech, commercial-lit
+- [x] 04-05-PLAN.md — Batch 3: curate real-estate, banking-finance, immigration + phase gate
 **UI hint**: yes
 
 ### Phase 5: Regulatory Exemplars
@@ -79,7 +79,7 @@ Plans:
 | 1. Revamp Exemplars | v1.0 | 1/1 | Complete | 2026 |
 | 2. Demo Mode | v1.0 | 4/4 | Complete | 2026 |
 | 3. New (Fresh Session in New Tab) | v1.0 | 3/3 | Complete | 2026-05-22 |
-| 4. Demo Payloads for Existing Exemplar Areas | v1.1 | 2/5 | In Progress|  |
+| 4. Demo Payloads for Existing Exemplar Areas | v1.1 | 5/5 | Complete   | 2026-05-24 |
 | 5. Regulatory Exemplars | v1.1 | 0/? | Not started | - |
 | 6. Demo Payloads for Regulatory Exemplars | v1.1 | 0/? | Not started | - |
 
