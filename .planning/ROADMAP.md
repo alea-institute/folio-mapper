@@ -39,7 +39,7 @@ Milestone summary: `.planning/MILESTONES.md`.
 **Requirements**: DEMO-01, DEMO-02, DEMO-03, DEMO-04, DEMO-05
 **Success Criteria** (what must be TRUE):
   1. Clicking any of the 9 existing exemplar cards in demo mode loads pre-computed pipeline output (mappings, candidates, judge annotations) without triggering a live pipeline run
-  2. Each of the 9 demo payloads contains a natural mix of fan-out ratios (1:1, 1:2–1:3, and 1:4+) plus at least one judge-flagged ambiguity that makes the curation step meaningful to a viewer
+  2. Each of the 9 demo payloads contains a natural mix of fan-out ratios (1:1, 1:2–1:3, and 1:4+) plus at least one judge-flagged ambiguity that makes the curation step meaningful to a viewer — _8/10 met; solo-criminal & employment-labor accepted via D-02 coherence override (thin-coverage FOLIO areas), see 04-VERIFICATION.md_
   3. Running `scripts/curate_demos.py` regenerates all 9 payloads deterministically, and every payload filename appears in the demo manifest
   4. Zero LLM API calls occur at runtime when any of the 9 existing-area demos is loaded
 **Plans**: 5 plans
