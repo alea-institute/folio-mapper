@@ -17,16 +17,54 @@ export interface DemoPayload {
   [key: string]: unknown;
 }
 
+// New areas: lazy-loaded on demand (Vite splits each into its own chunk).
+// Each entry will be resolved when the corresponding {slug}.demo.json file
+// is committed. Until then, import() returns undefined and getDemoPayload
+// returns null — falling through to lean mode.
+const LAZY_LOADERS: Record<string, () => Promise<{ default: DemoPayload }>> = {
+  'solo-criminal':    () => import('./solo-criminal.demo.json'),
+  'family-law':       () => import('./family-law.demo.json'),
+  'employment-labor': () => import('./employment-labor.demo.json'),
+  'corporate-ma':     () => import('./corporate-ma.demo.json'),
+  'ip-tech':          () => import('./ip-tech.demo.json'),
+  'commercial-lit':   () => import('./commercial-lit.demo.json'),
+  'real-estate':      () => import('./real-estate.demo.json'),
+  'banking-finance':  () => import('./banking-finance.demo.json'),
+  'immigration':      () => import('./immigration.demo.json'),
+};
+
+// In-memory cache to avoid re-fetching within a session:
+const _demoCache: Record<string, DemoPayload> = {};
+
 export const DEMO_PAYLOADS: Record<string, DemoPayload> = {
   'personal-injury': personalInjuryDemo as DemoPayload,
 };
 
-export function getDemoPayload(slug: string): DemoPayload | null {
-  return DEMO_PAYLOADS[slug] ?? null;
+// getDemoPayload becomes async — callers that were already in async functions
+// only need `await` added. App.tsx line 554 is the only call site.
+export async function getDemoPayload(slug: string): Promise<DemoPayload | null> {
+  if (DEMO_PAYLOADS[slug]) return DEMO_PAYLOADS[slug];
+  if (_demoCache[slug]) return _demoCache[slug];
+  const loader = LAZY_LOADERS[slug];
+  if (!loader) return null;
+  const mod = await loader();
+  _demoCache[slug] = mod.default;
+  return _demoCache[slug];
 }
 
-/** Slugs for which a demo payload is bundled. Use to gate the Demo button per card. */
-export const DEMO_AVAILABLE_SLUGS: ReadonlySet<string> = new Set(Object.keys(DEMO_PAYLOADS));
+// Must be hardcoded — cannot derive dynamically from async loaders:
+export const DEMO_AVAILABLE_SLUGS: ReadonlySet<string> = new Set([
+  'personal-injury',
+  'solo-criminal',
+  'family-law',
+  'employment-labor',
+  'corporate-ma',
+  'ip-tech',
+  'commercial-lit',
+  'real-estate',
+  'banking-finance',
+  'immigration',
+]);
 
 /**
  * Runtime app version, baked in via Vite `define: __APP_VERSION__` from
