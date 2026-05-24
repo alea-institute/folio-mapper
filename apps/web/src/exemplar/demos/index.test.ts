@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { detectStalePreset } from './index';
+import { detectStalePreset, getDemoPayload, DEMO_AVAILABLE_SLUGS } from './index';
 
 describe('detectStalePreset', () => {
   it('returns null when both versions match', () => {
@@ -63,5 +63,38 @@ describe('detectStalePreset', () => {
       runtimeFolioVersion: null,
     };
     expect(detectStalePreset(args)).toEqual(args);
+  });
+});
+
+describe('demo manifest registration', () => {
+  const CANONICAL_SLUGS = [
+    'personal-injury',
+    'solo-criminal',
+    'family-law',
+    'employment-labor',
+    'corporate-ma',
+    'ip-tech',
+    'commercial-lit',
+    'real-estate',
+    'banking-finance',
+    'immigration',
+  ];
+
+  it('DEMO_AVAILABLE_SLUGS contains all 10 canonical slugs', () => {
+    expect(DEMO_AVAILABLE_SLUGS.size).toBe(10);
+    for (const slug of CANONICAL_SLUGS) {
+      expect(DEMO_AVAILABLE_SLUGS.has(slug)).toBe(true);
+    }
+  });
+
+  it('getDemoPayload("personal-injury") resolves to a non-null payload with version === "1.3"', async () => {
+    const payload = await getDemoPayload('personal-injury');
+    expect(payload).not.toBeNull();
+    expect(payload?.version).toBe('1.3');
+  });
+
+  it('getDemoPayload("does-not-exist") resolves to null', async () => {
+    const payload = await getDemoPayload('does-not-exist');
+    expect(payload).toBeNull();
   });
 });

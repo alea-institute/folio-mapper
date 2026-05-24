@@ -551,7 +551,7 @@ export function App() {
     if (!exemplar) return;
 
     if (exemplarMode === 'demo') {
-      const payload = getDemoPayload(id);
+      const payload = await getDemoPayload(id);
       if (payload) {
         setLoadingExemplarId(id);
         try {

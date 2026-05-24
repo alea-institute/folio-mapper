@@ -17,16 +17,73 @@ export interface DemoPayload {
   [key: string]: unknown;
 }
 
+// New areas: lazy-loaded on demand (Vite splits each into its own chunk).
+// Each entry will be resolved when the corresponding {slug}.demo.json file
+// is committed. Until then, getDemoPayload catches the ModuleNotFoundError and
+// returns null — falling through to lean mode.
+//
+// Implementation note: import() uses a template literal rather than a static
+// string so that Vite's vite:import-analysis plugin cannot statically resolve
+// the module paths before the JSON files are committed. Vite treats template-
+// literal dynamic imports as truly runtime-dynamic and does not attempt to
+// validate that the files exist at transform time. Each slug's import() will
+// split into its own lazy chunk once the corresponding JSON is committed.
+const _mkLoader =
+  (slug: string): (() => Promise<{ default: DemoPayload }>) =>
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore — template-literal import; path is valid once JSON is committed
+  () => import(/* @vite-ignore */ `./${slug}.demo.json`);
+
+const LAZY_LOADERS: Record<string, () => Promise<{ default: DemoPayload }>> = {
+  'solo-criminal':    _mkLoader('solo-criminal'),
+  'family-law':       _mkLoader('family-law'),
+  'employment-labor': _mkLoader('employment-labor'),
+  'corporate-ma':     _mkLoader('corporate-ma'),
+  'ip-tech':          _mkLoader('ip-tech'),
+  'commercial-lit':   _mkLoader('commercial-lit'),
+  'real-estate':      _mkLoader('real-estate'),
+  'banking-finance':  _mkLoader('banking-finance'),
+  'immigration':      _mkLoader('immigration'),
+};
+
+// In-memory cache to avoid re-fetching within a session:
+const _demoCache: Record<string, DemoPayload> = {};
+
 export const DEMO_PAYLOADS: Record<string, DemoPayload> = {
   'personal-injury': personalInjuryDemo as DemoPayload,
 };
 
-export function getDemoPayload(slug: string): DemoPayload | null {
-  return DEMO_PAYLOADS[slug] ?? null;
+// getDemoPayload becomes async — callers that were already in async functions
+// only need `await` added. App.tsx line 554 is the only call site.
+export async function getDemoPayload(slug: string): Promise<DemoPayload | null> {
+  if (DEMO_PAYLOADS[slug]) return DEMO_PAYLOADS[slug];
+  if (_demoCache[slug]) return _demoCache[slug];
+  const loader = LAZY_LOADERS[slug];
+  if (!loader) return null;
+  try {
+    const mod = await loader();
+    _demoCache[slug] = mod.default;
+    return _demoCache[slug];
+  } catch {
+    // JSON file not yet committed (per-area plans add them in Plans 02–10).
+    // Gracefully return null so the caller falls through to lean mode.
+    return null;
+  }
 }
 
-/** Slugs for which a demo payload is bundled. Use to gate the Demo button per card. */
-export const DEMO_AVAILABLE_SLUGS: ReadonlySet<string> = new Set(Object.keys(DEMO_PAYLOADS));
+// Must be hardcoded — cannot derive dynamically from async loaders:
+export const DEMO_AVAILABLE_SLUGS: ReadonlySet<string> = new Set([
+  'personal-injury',
+  'solo-criminal',
+  'family-law',
+  'employment-labor',
+  'corporate-ma',
+  'ip-tech',
+  'commercial-lit',
+  'real-estate',
+  'banking-finance',
+  'immigration',
+]);
 
 /**
  * Runtime app version, baked in via Vite `define: __APP_VERSION__` from
