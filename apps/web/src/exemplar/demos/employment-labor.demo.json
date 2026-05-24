@@ -1,0 +1,2032 @@
+{
+  "version": "1.3",
+  "created": "2026-05-24T19:39:55.258167+00:00",
+  "updated": "2026-05-24T19:39:55.258167+00:00",
+  "source_file": null,
+  "input_format": "hierarchical",
+  "total_nodes": 19,
+  "completed": 14,
+  "skipped": 0,
+  "current_position": 0,
+  "provider": "anthropic",
+  "model": "claude-3-5-sonnet-latest",
+  "text_input": "Employment Law\n\tDiscrimination\n\t\tEmployment Discrimination Law\n\t\tAge Discrimination\n\t\tEmployment Discrimination Claims\n\tWage & Hour\n\t\tWage and Hour Law\n\t\tPay Equity Law\n\tWorkplace Safety\n\t\tEmployment Health and Safety Law\n\t\tSubstance Abuse and Drug Testing Law\n\t\tWorkplace Safety Claim\n\tWrongful Termination\n\t\tWrongful Discharge or Termination\n\t\tReduction in Force Law\n\tBenefits & Compensation\n\t\tWorkers Compensation Law\n\t\tUnemployment Benefits Law\n\t\tWorkers' Compensation Claim",
+  "parse_result": {
+    "format": "hierarchical",
+    "items": [
+      {
+        "text": "Employment Law",
+        "index": 0,
+        "ancestry": []
+      },
+      {
+        "text": "Discrimination",
+        "index": 1,
+        "ancestry": [
+          "Employment Law"
+        ]
+      },
+      {
+        "text": "Employment Discrimination Law",
+        "index": 2,
+        "ancestry": [
+          "Employment Law",
+          "Discrimination"
+        ]
+      },
+      {
+        "text": "Age Discrimination",
+        "index": 3,
+        "ancestry": [
+          "Employment Law",
+          "Discrimination"
+        ]
+      },
+      {
+        "text": "Employment Discrimination Claims",
+        "index": 4,
+        "ancestry": [
+          "Employment Law",
+          "Discrimination"
+        ]
+      },
+      {
+        "text": "Wage & Hour",
+        "index": 5,
+        "ancestry": [
+          "Employment Law"
+        ]
+      },
+      {
+        "text": "Wage and Hour Law",
+        "index": 6,
+        "ancestry": [
+          "Employment Law",
+          "Wage & Hour"
+        ]
+      },
+      {
+        "text": "Pay Equity Law",
+        "index": 7,
+        "ancestry": [
+          "Employment Law",
+          "Wage & Hour"
+        ]
+      },
+      {
+        "text": "Workplace Safety",
+        "index": 8,
+        "ancestry": [
+          "Employment Law"
+        ]
+      },
+      {
+        "text": "Employment Health and Safety Law",
+        "index": 9,
+        "ancestry": [
+          "Employment Law",
+          "Workplace Safety"
+        ]
+      },
+      {
+        "text": "Substance Abuse and Drug Testing Law",
+        "index": 10,
+        "ancestry": [
+          "Employment Law",
+          "Workplace Safety"
+        ]
+      },
+      {
+        "text": "Workplace Safety Claim",
+        "index": 11,
+        "ancestry": [
+          "Employment Law",
+          "Workplace Safety"
+        ]
+      },
+      {
+        "text": "Wrongful Termination",
+        "index": 12,
+        "ancestry": [
+          "Employment Law"
+        ]
+      },
+      {
+        "text": "Wrongful Discharge or Termination",
+        "index": 13,
+        "ancestry": [
+          "Employment Law",
+          "Wrongful Termination"
+        ]
+      },
+      {
+        "text": "Reduction in Force Law",
+        "index": 14,
+        "ancestry": [
+          "Employment Law",
+          "Wrongful Termination"
+        ]
+      },
+      {
+        "text": "Benefits & Compensation",
+        "index": 15,
+        "ancestry": [
+          "Employment Law"
+        ]
+      },
+      {
+        "text": "Workers Compensation Law",
+        "index": 16,
+        "ancestry": [
+          "Employment Law",
+          "Benefits & Compensation"
+        ]
+      },
+      {
+        "text": "Unemployment Benefits Law",
+        "index": 17,
+        "ancestry": [
+          "Employment Law",
+          "Benefits & Compensation"
+        ]
+      },
+      {
+        "text": "Workers' Compensation Claim",
+        "index": 18,
+        "ancestry": [
+          "Employment Law",
+          "Benefits & Compensation"
+        ]
+      }
+    ],
+    "hierarchy": [
+      {
+        "label": "Employment Law",
+        "depth": 0,
+        "children": [
+          {
+            "label": "Discrimination",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Employment Discrimination Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Age Discrimination",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Employment Discrimination Claims",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Wage & Hour",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Wage and Hour Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Pay Equity Law",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Workplace Safety",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Employment Health and Safety Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Substance Abuse and Drug Testing Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Workplace Safety Claim",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Wrongful Termination",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Wrongful Discharge or Termination",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Reduction in Force Law",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Benefits & Compensation",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Workers Compensation Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Unemployment Benefits Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Workers' Compensation Claim",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_items": 19,
+    "headers": null,
+    "source_filename": null,
+    "raw_preview": [
+      [
+        "Employment Law"
+      ],
+      [
+        "",
+        "Discrimination"
+      ],
+      [
+        "",
+        "",
+        "Employment Discrimination Law"
+      ],
+      [
+        "",
+        "",
+        "Age Discrimination"
+      ],
+      [
+        "",
+        "",
+        "Employment Discrimination Claims"
+      ]
+    ]
+  },
+  "mapping_response": {
+    "items": [
+      {
+        "item_index": 0,
+        "item_text": "Employment Law",
+        "branch_groups": [
+          {
+            "branch": "Service",
+            "branch_color": "#065e4e",
+            "candidates": [
+              {
+                "label": "Fee and Employment Practice",
+                "iri": "https://folio.openlegalstandard.org/R7rEmc9PaAz1JI1YpYZGaDg",
+                "iri_hash": "R7rEmc9PaAz1JI1YpYZGaDg",
+                "definition": "Fee and Employment Practice (Bankruptcy) refers to the legal work related to the compensation of professionals and employment issues in the context of bankruptcy proceedings.",
+                "synonyms": [
+                  "Fee and Employment",
+                  "Fee and Employment Service",
+                  "Bankruptcy",
+                  "Fee and Employment Practice",
+                  "Frais et pratique de l'emploi",
+                  "Gebühren und Beschäftigungspraxis",
+                  "Honorarios y Práctica Laboral",
+                  "Taxa e prática de emprego",
+                  "תשלום ומעשה עסקי בתחום העסקים",
+                  "शुल्क और रोजगार अभ्यास",
+                  "手数料と雇用慣行",
+                  "费用和就业实践"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  },
+                  {
+                    "label": "Bankruptcy and Financial Restructuring Practice",
+                    "iri_hash": "R7LI3BONqNkXbKHKa0t3jyI"
+                  },
+                  {
+                    "label": "Fee and Employment Practice",
+                    "iri_hash": "R7rEmc9PaAz1JI1YpYZGaDg"
+                  }
+                ],
+                "score": 55.0
+              },
+              {
+                "label": "Service",
+                "iri": "https://folio.openlegalstandard.org/RDK1QEdQg1T8B5HQqMK2pZN",
+                "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+                "definition": "The legal work performed, usually by a Legal Services Provider, in the course of a legal matter.",
+                "synonyms": [
+                  "Dienstleistung",
+                  "Service",
+                  "Servicio",
+                  "Serviço",
+                  "שירות",
+                  "सेवा",
+                  "サービス",
+                  "服务"
+                ],
+                "branch": "Service",
+                "branch_color": "#065e4e",
+                "hierarchy_path": [
+                  {
+                    "label": "Service",
+                    "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN"
+                  }
+                ],
+                "score": 35.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 1,
+        "item_text": "Discrimination",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Discrimination Law",
+                "iri": "https://folio.openlegalstandard.org/RDkwyaka1G06Txgxv0pNxqI",
+                "iri_hash": "RDkwyaka1G06Txgxv0pNxqI",
+                "definition": "Protection from discrimination on grounds such as race, gender, sexual orientation, national origin, color, age, political affiliation, ethnicity, religion, and disability.",
+                "synonyms": [
+                  "Discrimination",
+                  "Diskriminierungsrecht",
+                  "Droit de la discrimination",
+                  "Lei de Discriminação",
+                  "差別禁止法",
+                  "歧视法",
+                  "DISC"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Constitutional and Civil Rights Law",
+                    "iri_hash": "R07tQM5sYugYGBPQS571s5"
+                  },
+                  {
+                    "label": "Discrimination Law",
+                    "iri_hash": "RDkwyaka1G06Txgxv0pNxqI"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 2,
+        "item_text": "Employment Discrimination Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Employment Discrimination Law",
+                "iri": "https://folio.openlegalstandard.org/R8f088bmlfkWDbXdJj9nQD9",
+                "iri_hash": "R8f088bmlfkWDbXdJj9nQD9",
+                "definition": "Law relating to protected class employment discrimination including retaliation and harassment",
+                "synonyms": [
+                  "Arbeitsdiskriminierungsgesetz",
+                  "Employment Discrimination",
+                  "Employment Discrimination Law",
+                  "Human Rights Law",
+                  "Lei de Discriminação no Emprego",
+                  "Ley de Discriminación Laboral",
+                  "Loi sur la discrimination en matière d'emploi",
+                  "חוק הפלילה בתחום העסקים",
+                  "रोजगार भेदभाव कानून",
+                  "就业歧视法",
+                  "雇用差別禁止法",
+                  "DSCE"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Employment Discrimination Law",
+                    "iri_hash": "R8f088bmlfkWDbXdJj9nQD9"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Discrimination Law",
+                "iri": "https://folio.openlegalstandard.org/RDkwyaka1G06Txgxv0pNxqI",
+                "iri_hash": "RDkwyaka1G06Txgxv0pNxqI",
+                "definition": "Protection from discrimination on grounds such as race, gender, sexual orientation, national origin, color, age, political affiliation, ethnicity, religion, and disability.",
+                "synonyms": [
+                  "Discrimination",
+                  "Diskriminierungsrecht",
+                  "Droit de la discrimination",
+                  "Lei de Discriminação",
+                  "差別禁止法",
+                  "歧视法",
+                  "DISC"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Constitutional and Civil Rights Law",
+                    "iri_hash": "R07tQM5sYugYGBPQS571s5"
+                  },
+                  {
+                    "label": "Discrimination Law",
+                    "iri_hash": "RDkwyaka1G06Txgxv0pNxqI"
+                  }
+                ],
+                "score": 80.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 3,
+        "item_text": "Age Discrimination",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Age Discrimination",
+                "iri": "https://folio.openlegalstandard.org/RDSTWxMJK0mcdxB1oQtK7jC",
+                "iri_hash": "RDSTWxMJK0mcdxB1oQtK7jC",
+                "definition": "Discrimination against an individual or group based on their age, typically in the workplace or other professional settings.",
+                "synonyms": [
+                  "Age Discrimination",
+                  "Altersdiskriminierung",
+                  "Discriminación por edad",
+                  "Discrimination liée à l'âge",
+                  "Discriminação por idade",
+                  "הפליה עקב גיל",
+                  "आयु भेदभाव",
+                  "年齢差別",
+                  "年龄歧视"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Discrimination Claims",
+                    "iri_hash": "R8UnJ8s91KxQbW7GpGgIhsP"
+                  },
+                  {
+                    "label": "Age Discrimination",
+                    "iri_hash": "RDSTWxMJK0mcdxB1oQtK7jC"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 4,
+        "item_text": "Employment Discrimination Claims",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Employment Discrimination Claims",
+                "iri": "https://folio.openlegalstandard.org/RDQKIyqoXbr8tQZdgClywRf",
+                "iri_hash": "RDQKIyqoXbr8tQZdgClywRf",
+                "definition": "A claim made by an employee alleging unfair treatment or disparate impact based on a protected characteristic such as race, gender, age, or disability in the workplace.",
+                "synonyms": [
+                  "Actions en discrimination en matière d'emploi",
+                  "Diskriminierungsklagen im Arbeitsrecht",
+                  "Employment Discrimination Claims",
+                  "Reclamaciones por discriminación laboral",
+                  "Reivindicações de discriminação no emprego",
+                  "תביעות על הפרת זכויות עובדים",
+                  "रोजगार भेदभाव दावे",
+                  "就业歧视索赔",
+                  "雇用差別主張"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Discrimination Claims",
+                    "iri_hash": "R8UnJ8s91KxQbW7GpGgIhsP"
+                  },
+                  {
+                    "label": "Employment Discrimination Claims",
+                    "iri_hash": "RDQKIyqoXbr8tQZdgClywRf"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Discrimination Claims",
+                "iri": "https://folio.openlegalstandard.org/R8UnJ8s91KxQbW7GpGgIhsP",
+                "iri_hash": "R8UnJ8s91KxQbW7GpGgIhsP",
+                "definition": "Discrimination Claims refer to legal actions taken by individuals who have been subjected to unfair treatment based on their protected characteristics, such as race, gender, religion, disability, or age, in various contexts such as employment, housing, or public accommodations.",
+                "synonyms": [
+                  "Demandas por discriminación",
+                  "Discrimination Claims",
+                  "Diskriminierungsklagen",
+                  "Reclamaciones por discriminación",
+                  "Reivindicações de discriminação",
+                  "Réclamations pour discrimination",
+                  "תביעות רסיסה",
+                  "भेदभाव दावे",
+                  "差別待遇申立",
+                  "歧视索赔"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Discrimination Claims",
+                    "iri_hash": "R8UnJ8s91KxQbW7GpGgIhsP"
+                  }
+                ],
+                "score": 93.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 5,
+        "item_text": "Wage & Hour",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Wage and Hour Law",
+                "iri": "https://folio.openlegalstandard.org/R88iESKPlMDuSSfwDVX9scA",
+                "iri_hash": "R88iESKPlMDuSSfwDVX9scA",
+                "definition": "Law that governs the wages rates an employer can pay its employees, the hours for which an employer must compensate its employees, child labor laws and meal and break laws.",
+                "synonyms": [
+                  "Arbeitszeit- und Lohnrecht",
+                  "Droit du travail et des salaires",
+                  "Employment Standards",
+                  "Lei de Salário e Hora",
+                  "Ley de Salarios y Horas",
+                  "Wage and Hour Law",
+                  "חוק שכר ושעות",
+                  "वेतन और घंटे कानून",
+                  "工资和工时法",
+                  "賃金および労働時間法",
+                  "WGHR"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Wage and Hour Law",
+                    "iri_hash": "R88iESKPlMDuSSfwDVX9scA"
+                  }
+                ],
+                "score": 97.0
+              }
+            ]
+          },
+          {
+            "branch": "Financial Concepts and Metrics",
+            "branch_color": "#6e4b00",
+            "candidates": [
+              {
+                "label": "Wage",
+                "iri": "https://folio.openlegalstandard.org/RiYwKEna4NZ311TVYJ2yCj",
+                "iri_hash": "RiYwKEna4NZ311TVYJ2yCj",
+                "definition": "A wage is a payment or income earned by an individual in exchange for their labor or services, typically provided on an hourly, daily, weekly, or monthly basis. It represents the compensation received for work performed and is often subject to taxes and deductions.",
+                "synonyms": [],
+                "branch": "Financial Concepts and Metrics",
+                "branch_color": "#6e4b00",
+                "hierarchy_path": [
+                  {
+                    "label": "Financial Concepts and Metrics",
+                    "iri_hash": "RhBgnef56iLBXYfPqWQE41"
+                  },
+                  {
+                    "label": "Cost Metrics",
+                    "iri_hash": "RTHm2BxeaziDbm5655G1ki"
+                  },
+                  {
+                    "label": "Compensation Metrics",
+                    "iri_hash": "R8aNhIN6jIIVcj5Cbh8Bduw"
+                  },
+                  {
+                    "label": "Wage",
+                    "iri_hash": "RiYwKEna4NZ311TVYJ2yCj"
+                  }
+                ],
+                "score": 55.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 6,
+        "item_text": "Wage and Hour Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Wage and Hour Law",
+                "iri": "https://folio.openlegalstandard.org/R88iESKPlMDuSSfwDVX9scA",
+                "iri_hash": "R88iESKPlMDuSSfwDVX9scA",
+                "definition": "Law that governs the wages rates an employer can pay its employees, the hours for which an employer must compensate its employees, child labor laws and meal and break laws.",
+                "synonyms": [
+                  "Arbeitszeit- und Lohnrecht",
+                  "Droit du travail et des salaires",
+                  "Employment Standards",
+                  "Lei de Salário e Hora",
+                  "Ley de Salarios y Horas",
+                  "Wage and Hour Law",
+                  "חוק שכר ושעות",
+                  "वेतन और घंटे कानून",
+                  "工资和工时法",
+                  "賃金および労働時間法",
+                  "WGHR"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Wage and Hour Law",
+                    "iri_hash": "R88iESKPlMDuSSfwDVX9scA"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 7,
+        "item_text": "Pay Equity Law",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 8,
+        "item_text": "Workplace Safety",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Workplace Safety Claim",
+                "iri": "https://folio.openlegalstandard.org/R8XAQoyqCZvUawGZUsBxFOG",
+                "iri_hash": "R8XAQoyqCZvUawGZUsBxFOG",
+                "definition": "A workplace safety claim is a legal action initiated by an employee against their employer for not providing a safe working environment. The claim typically arises when an employer does not comply with applicable safety regulations, which can result in dangerous or hazardous working conditions for employees. Workplace safety claims can involve issues such as inadequate safety equipment, lack of proper training, or unsafe working conditions. Employees may bring workplace safety claims for injuries or illnesses suffered as a result of their employer's failure to provide a safe working environment.",
+                "synonyms": [
+                  "Arbeitssicherheitsanspruch",
+                  "Reclamación de seguridad en el lugar de trabajo",
+                  "Reclamo de seguridad en el lugar de trabajo",
+                  "Reivindicação de segurança no local de trabalho",
+                  "Réclamation de sécurité sur le lieu de travail",
+                  "Workplace Safety Claim",
+                  "תביעת בטיחות במקום העבודה",
+                  "कार्यस्थल सुरक्षा दावा",
+                  "工作场所安全索赔",
+                  "職場安全請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Labor Claims",
+                    "iri_hash": "Rfw7NfMHyrhfFQj8ob4M4U"
+                  },
+                  {
+                    "label": "Workplace Safety Claim",
+                    "iri_hash": "R8XAQoyqCZvUawGZUsBxFOG"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 9,
+        "item_text": "Employment Health and Safety Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Employment Health and Safety Law",
+                "iri": "https://folio.openlegalstandard.org/R9WauLukPXgSHKmovMisEfr",
+                "iri_hash": "R9WauLukPXgSHKmovMisEfr",
+                "definition": "Law governing the health and safety of employees.",
+                "synonyms": [
+                  "Arbeits- und Gesundheitsschutzrecht",
+                  "Droit de la santé et de la sécurité au travail",
+                  "Employment Health and Safety",
+                  "Employment Health and Safety Law",
+                  "Lei de Saúde e Segurança no Trabalho",
+                  "Ley de Salud y Seguridad en el Empleo",
+                  "Occupational Health and Safety",
+                  "חוק בריאות ובטיחות בעבודה",
+                  "रोजगार स्वास्थ्य और सुरक्षा कानून",
+                  "労働安全衛生法",
+                  "就业健康与安全法",
+                  "HLTE"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Employment Health and Safety Law",
+                    "iri_hash": "R9WauLukPXgSHKmovMisEfr"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 10,
+        "item_text": "Substance Abuse and Drug Testing Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Substance Abuse and Drug Testing Law",
+                "iri": "https://folio.openlegalstandard.org/R7K5c8d5SpTPn51L6OyMKyS",
+                "iri_hash": "R7K5c8d5SpTPn51L6OyMKyS",
+                "definition": "Drug Testing & Substance Abuse Law refers to the legal framework governing the testing of individuals for the presence of drugs and the regulation of substance abuse. It includes policies, procedures, and regulations related to the detection, prevention, and treatment of drug use and addiction.",
+                "synonyms": [
+                  "Substance Abuse Law"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Substance Abuse and Drug Testing Law",
+                    "iri_hash": "R7K5c8d5SpTPn51L6OyMKyS"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 11,
+        "item_text": "Workplace Safety Claim",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Workplace Safety Claim",
+                "iri": "https://folio.openlegalstandard.org/R8XAQoyqCZvUawGZUsBxFOG",
+                "iri_hash": "R8XAQoyqCZvUawGZUsBxFOG",
+                "definition": "A workplace safety claim is a legal action initiated by an employee against their employer for not providing a safe working environment. The claim typically arises when an employer does not comply with applicable safety regulations, which can result in dangerous or hazardous working conditions for employees. Workplace safety claims can involve issues such as inadequate safety equipment, lack of proper training, or unsafe working conditions. Employees may bring workplace safety claims for injuries or illnesses suffered as a result of their employer's failure to provide a safe working environment.",
+                "synonyms": [
+                  "Arbeitssicherheitsanspruch",
+                  "Reclamación de seguridad en el lugar de trabajo",
+                  "Reclamo de seguridad en el lugar de trabajo",
+                  "Reivindicação de segurança no local de trabalho",
+                  "Réclamation de sécurité sur le lieu de travail",
+                  "Workplace Safety Claim",
+                  "תביעת בטיחות במקום העבודה",
+                  "कार्यस्थल सुरक्षा दावा",
+                  "工作场所安全索赔",
+                  "職場安全請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Labor Claims",
+                    "iri_hash": "Rfw7NfMHyrhfFQj8ob4M4U"
+                  },
+                  {
+                    "label": "Workplace Safety Claim",
+                    "iri_hash": "R8XAQoyqCZvUawGZUsBxFOG"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 12,
+        "item_text": "Wrongful Termination",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 13,
+        "item_text": "Wrongful Discharge or Termination",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Wrongful Discharge or Termination",
+                "iri": "https://folio.openlegalstandard.org/RDJYLQ3woaBs6FkT7wMbB4U",
+                "iri_hash": "RDJYLQ3woaBs6FkT7wMbB4U",
+                "definition": "The concept of Wrongful Discharge or Termination refers to the illegal firing or dismissal of an employee by an employer, in violation of the law or employment contract.",
+                "synonyms": [
+                  "Demissão ou rescisão injusta",
+                  "Despido Improcedente",
+                  "Licenciement ou résiliation abusive",
+                  "Terminación Injusta",
+                  "Unrechtmäßige Kündigung oder Entlassung",
+                  "Wrongful Discharge",
+                  "Wrongful Dismissal or Termination",
+                  "Wrongful Termination",
+                  "פיטורים בלתי חוקיים או סיום חוקי",
+                  "गलत निकास या अंतिम करना",
+                  "不当解雇または終了",
+                  "非法解雇或终止"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Employment Claims",
+                    "iri_hash": "RCty0MaQzrLC9KnzjM7nMER"
+                  },
+                  {
+                    "label": "Wrongful Discharge or Termination",
+                    "iri_hash": "RDJYLQ3woaBs6FkT7wMbB4U"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 14,
+        "item_text": "Reduction in Force Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Reduction in Force Law",
+                "iri": "https://folio.openlegalstandard.org/R71cU5SDq2qrLUzt28qZEGO",
+                "iri_hash": "R71cU5SDq2qrLUzt28qZEGO",
+                "definition": "Reduction in Force (RIF) law pertains to the legal framework and regulations governing the process of reducing an organization's workforce, typically due to budgetary constraints, restructuring, or downsizing. It includes provisions related to employee rights, notice requirements, severance packages, and discrimination laws to ensure fair and lawful implementation of workforce reductions.",
+                "synonyms": [],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Reduction in Force Law",
+                    "iri_hash": "R71cU5SDq2qrLUzt28qZEGO"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 15,
+        "item_text": "Benefits & Compensation",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 16,
+        "item_text": "Workers Compensation Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Workers Compensation Law",
+                "iri": "https://folio.openlegalstandard.org/RXglkHnO0P9PdVdDRHi9wJ",
+                "iri_hash": "RXglkHnO0P9PdVdDRHi9wJ",
+                "definition": "Law addressing wage replacement and medical benefits to employees injured in the course of employment.",
+                "synonyms": [
+                  "Arbeitsunfallgesetz",
+                  "Droit de la compensation des travailleurs",
+                  "Lei de compensação dos trabalhadores",
+                  "Ley de Compensación de Trabajadores",
+                  "Workers' Compensation Law",
+                  "Workplace Safety and Insurance Law",
+                  "חוק פיצויי עובדים",
+                  "कर्मचारी रक्षा कानून",
+                  "労働者補償法",
+                  "工人赔偿法",
+                  "WORK"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Workers Compensation Law",
+                    "iri_hash": "RXglkHnO0P9PdVdDRHi9wJ"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 17,
+        "item_text": "Unemployment Benefits Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Unemployment Benefits Law",
+                "iri": "https://folio.openlegalstandard.org/RDIgqpnkyBP3BzrGZfwlXDc",
+                "iri_hash": "RDIgqpnkyBP3BzrGZfwlXDc",
+                "definition": "Unemployment benefits refer to those benefits given by the government to unemployed persons.",
+                "synonyms": [
+                  "Arbeitslosengeldgesetz",
+                  "Lei de Benefícios de Desemprego",
+                  "Ley de Prestaciones por Desempleo",
+                  "Loi sur les allocations de chômage",
+                  "Unemployment Benefits",
+                  "Unemployment Benefits Law",
+                  "Unemployment Compensation",
+                  "Unemployment Insurance",
+                  "חוק זכויות למען עזרה בביטוח אבטלה",
+                  "बेरोजगारी लाभ कानून",
+                  "失业救济法",
+                  "失業保険法",
+                  "UNBE"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Unemployment Benefits Law",
+                    "iri_hash": "RDIgqpnkyBP3BzrGZfwlXDc"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          },
+          {
+            "branch": "Financial Concepts and Metrics",
+            "branch_color": "#6e4b00",
+            "candidates": [
+              {
+                "label": "Unemployment Payments",
+                "iri": "https://folio.openlegalstandard.org/RCn8WOWcXNa9jnjY9QOJFKw",
+                "iri_hash": "RCn8WOWcXNa9jnjY9QOJFKw",
+                "definition": "Unemployment Payments are financial benefits provided by the government to individuals who are temporarily out of work and meet certain eligibility requirements. These payments aim to provide temporary financial assistance to help cover living expenses while individuals search for new employment.",
+                "synonyms": [
+                  "Jobless Benefits",
+                  "Unemployment Compensation",
+                  "Unemployment Insurance Benefits",
+                  "Unemployment Insurance Payments"
+                ],
+                "branch": "Financial Concepts and Metrics",
+                "branch_color": "#6e4b00",
+                "hierarchy_path": [
+                  {
+                    "label": "Financial Concepts and Metrics",
+                    "iri_hash": "RhBgnef56iLBXYfPqWQE41"
+                  },
+                  {
+                    "label": "Personal Income",
+                    "iri_hash": "RLrqGkP9fi5OO2RhpttmVI"
+                  },
+                  {
+                    "label": "Government Benefits",
+                    "iri_hash": "RSwOCeFhWxUA3fOiTvlja4"
+                  },
+                  {
+                    "label": "Unemployment Payments",
+                    "iri_hash": "RCn8WOWcXNa9jnjY9QOJFKw"
+                  }
+                ],
+                "score": 72.0
+              },
+              {
+                "label": "Employment Benefits",
+                "iri": "https://folio.openlegalstandard.org/RC24OimNdswbhSF7tIQRmqR",
+                "iri_hash": "RC24OimNdswbhSF7tIQRmqR",
+                "definition": "Employment Benefits are additional compensations or advantages provided to employees over and above their regular salary, often as part of an employment contract. These benefits may include healthcare, retirement plans, paid time off, and other perks designed to attract and retain employees.",
+                "synonyms": [
+                  "Job Benefits"
+                ],
+                "branch": "Financial Concepts and Metrics",
+                "branch_color": "#6e4b00",
+                "hierarchy_path": [
+                  {
+                    "label": "Financial Concepts and Metrics",
+                    "iri_hash": "RhBgnef56iLBXYfPqWQE41"
+                  },
+                  {
+                    "label": "Cost Metrics",
+                    "iri_hash": "RTHm2BxeaziDbm5655G1ki"
+                  },
+                  {
+                    "label": "Compensation Metrics",
+                    "iri_hash": "R8aNhIN6jIIVcj5Cbh8Bduw"
+                  },
+                  {
+                    "label": "Employment Benefits",
+                    "iri_hash": "RC24OimNdswbhSF7tIQRmqR"
+                  }
+                ],
+                "score": 15.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 18,
+        "item_text": "Workers' Compensation Claim",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Workers' Compensation Claim",
+                "iri": "https://folio.openlegalstandard.org/RD22PX6hiObnrRSM3c6bXdR",
+                "iri_hash": "RD22PX6hiObnrRSM3c6bXdR",
+                "definition": "A Workers' Compensation Claim is a legal claim made by an employee seeking benefits for injuries or illnesses that occurred in the course of their employment.",
+                "synonyms": [
+                  "Arbeitsunfallentschädigungsanspruch",
+                  "Reclamación de compensación de trabajadores",
+                  "Reclamação de compensação de trabalhadores",
+                  "Reclamo de compensación de trabajadores",
+                  "Réclamation d'indemnisation des travailleurs",
+                  "Workers' Compensation Claim",
+                  "תביעת פיצויי עובדים",
+                  "कर्मचारी रक्षाभार दावा",
+                  "労働者補償請求",
+                  "工人赔偿申请"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Insurance Claims",
+                    "iri_hash": "R9q0hyYnNxQC475BKXOxjbm"
+                  },
+                  {
+                    "label": "Workers' Compensation Claim",
+                    "iri_hash": "RD22PX6hiObnrRSM3c6bXdR"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Workers' Compensation Discrimination Claim",
+                "iri": "https://folio.openlegalstandard.org/RBKT7TSvBSVEvxJuaKhCz8P",
+                "iri_hash": "RBKT7TSvBSVEvxJuaKhCz8P",
+                "definition": "A workers' compensation discrimination claim is a legal action brought by an employee who alleges that they have been subjected to unfair treatment, retaliation, or adverse actions by their employer due to filing a workers' compensation claim or exercising their rights under workers' compensation laws. Workers' compensation is a system designed to provide medical benefits and wage replacement for employees who suffer work-related injuries or illnesses. Employers are generally prohibited from discriminating or retaliating against employees who seek workers' compensation benefits.",
+                "synonyms": [
+                  "Diskriminierungsklage wegen Arbeitsunfallentschädigung",
+                  "Reclamação de discriminação de compensação de trabalhadores",
+                  "Reclamo por discriminación de compensación de trabajadores",
+                  "Reclamo por discriminación en compensación de trabajadores",
+                  "Réclamation pour discrimination en matière de compensation des travailleurs",
+                  "Workers' Compensation Discrimination Claim",
+                  "תביעה על הפרת זכויות עובדים בקבלת פיצויים",
+                  "वर्कर्स कंपेंसेशन भेदभाव दावा",
+                  "労働者補償差別請求",
+                  "工人赔偿歧视索赔"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Discrimination Claims",
+                    "iri_hash": "R8UnJ8s91KxQbW7GpGgIhsP"
+                  },
+                  {
+                    "label": "Workers' Compensation Discrimination Claim",
+                    "iri_hash": "RBKT7TSvBSVEvxJuaKhCz8P"
+                  }
+                ],
+                "score": 60.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      }
+    ],
+    "total_items": 19,
+    "branches_available": [
+      {
+        "name": "Actor / Player",
+        "color": "#1e6fa0",
+        "concept_count": 563
+      },
+      {
+        "name": "Area of Law",
+        "color": "#1a5276",
+        "concept_count": 174
+      },
+      {
+        "name": "Asset Type",
+        "color": "#6b5600",
+        "concept_count": 345
+      },
+      {
+        "name": "Communication Modality",
+        "color": "#7b4d93",
+        "concept_count": 11
+      },
+      {
+        "name": "Currency",
+        "color": "#7a5a00",
+        "concept_count": 178
+      },
+      {
+        "name": "Data Format",
+        "color": "#4a5568",
+        "concept_count": 17
+      },
+      {
+        "name": "Document / Artifact",
+        "color": "#9c4a10",
+        "concept_count": 2796
+      },
+      {
+        "name": "Engagement Attributes",
+        "color": "#10613a",
+        "concept_count": 343
+      },
+      {
+        "name": "Event",
+        "color": "#b91c1c",
+        "concept_count": 403
+      },
+      {
+        "name": "FOLIO Type",
+        "color": "#6b5c00",
+        "concept_count": 3
+      },
+      {
+        "name": "Forums and Venues",
+        "color": "#7b2d8e",
+        "concept_count": 2180
+      },
+      {
+        "name": "Governmental Body",
+        "color": "#1a6091",
+        "concept_count": 1585
+      },
+      {
+        "name": "Industry and Market",
+        "color": "#065550",
+        "concept_count": 2137
+      },
+      {
+        "name": "Language",
+        "color": "#7a3b10",
+        "concept_count": 489
+      },
+      {
+        "name": "Legal Authorities",
+        "color": "#8b1a1a",
+        "concept_count": 82
+      },
+      {
+        "name": "Legal Entity",
+        "color": "#085e40",
+        "concept_count": 517
+      },
+      {
+        "name": "Location",
+        "color": "#105560",
+        "concept_count": 3782
+      },
+      {
+        "name": "Matter Narrative",
+        "color": "#6d3580",
+        "concept_count": 13
+      },
+      {
+        "name": "Matter Narrative Format",
+        "color": "#1a6894",
+        "concept_count": 2
+      },
+      {
+        "name": "Objectives",
+        "color": "#b03020",
+        "concept_count": 5411
+      },
+      {
+        "name": "Service",
+        "color": "#065e4e",
+        "concept_count": 434
+      },
+      {
+        "name": "Status",
+        "color": "#864a08",
+        "concept_count": 23
+      },
+      {
+        "name": "System Identifiers",
+        "color": "#3d4d5a",
+        "concept_count": 13
+      }
+    ]
+  },
+  "pipeline_metadata": [
+    {
+      "item_index": 0,
+      "item_text": "Employment Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Employment Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Employment Law"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 1,
+      "item_text": "Discrimination",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Discrimination",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Discrimination"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 2,
+      "item_text": "Employment Discrimination Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Employment Discrimination Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Employment Discrimination Law"
+      },
+      "stage1_candidate_count": 5,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 5,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 3
+    },
+    {
+      "item_index": 3,
+      "item_text": "Age Discrimination",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Age Discrimination",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Age Discrimination"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 4,
+      "item_text": "Employment Discrimination Claims",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Employment Discrimination Claims",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Employment Discrimination Claims"
+      },
+      "stage1_candidate_count": 5,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 5,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 3
+    },
+    {
+      "item_index": 5,
+      "item_text": "Wage & Hour",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Wage & Hour",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Wage & Hour"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 1,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 6,
+      "item_text": "Wage and Hour Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Wage and Hour Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Wage and Hour Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 7,
+      "item_text": "Pay Equity Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Pay Equity Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Pay Equity Law"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 8,
+      "item_text": "Workplace Safety",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Workplace Safety",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Workplace Safety"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 9,
+      "item_text": "Employment Health and Safety Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Employment Health and Safety Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Employment Health and Safety Law"
+      },
+      "stage1_candidate_count": 6,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 6,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 5
+    },
+    {
+      "item_index": 10,
+      "item_text": "Substance Abuse and Drug Testing Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Substance Abuse and Drug Testing Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Substance Abuse and Drug Testing Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 11,
+      "item_text": "Workplace Safety Claim",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Workplace Safety Claim",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Workplace Safety Claim"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 12,
+      "item_text": "Wrongful Termination",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Wrongful Termination",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Wrongful Termination"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 13,
+      "item_text": "Wrongful Discharge or Termination",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Wrongful Discharge or Termination",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Wrongful Discharge or Termination"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 14,
+      "item_text": "Reduction in Force Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Reduction in Force Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Reduction in Force Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 15,
+      "item_text": "Benefits & Compensation",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Benefits & Compensation",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Benefits & Compensation"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 16,
+      "item_text": "Workers Compensation Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Workers Compensation Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Workers Compensation Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 17,
+      "item_text": "Unemployment Benefits Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Unemployment Benefits Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Unemployment Benefits Law"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 2,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 18,
+      "item_text": "Workers' Compensation Claim",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Workers' Compensation Claim",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Workers' Compensation Claim"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    }
+  ],
+  "selections": {
+    "0": [],
+    "1": [
+      "RDkwyaka1G06Txgxv0pNxqI"
+    ],
+    "2": [
+      "R8f088bmlfkWDbXdJj9nQD9"
+    ],
+    "3": [
+      "RDSTWxMJK0mcdxB1oQtK7jC"
+    ],
+    "4": [
+      "RDQKIyqoXbr8tQZdgClywRf"
+    ],
+    "5": [
+      "R88iESKPlMDuSSfwDVX9scA"
+    ],
+    "6": [
+      "R88iESKPlMDuSSfwDVX9scA"
+    ],
+    "7": [],
+    "8": [],
+    "9": [
+      "R9WauLukPXgSHKmovMisEfr"
+    ],
+    "10": [
+      "R7K5c8d5SpTPn51L6OyMKyS"
+    ],
+    "11": [
+      "R8XAQoyqCZvUawGZUsBxFOG"
+    ],
+    "12": [],
+    "13": [
+      "RDJYLQ3woaBs6FkT7wMbB4U"
+    ],
+    "14": [
+      "R71cU5SDq2qrLUzt28qZEGO"
+    ],
+    "15": [],
+    "16": [
+      "RXglkHnO0P9PdVdDRHi9wJ"
+    ],
+    "17": [
+      "RDIgqpnkyBP3BzrGZfwlXDc"
+    ],
+    "18": [
+      "RD22PX6hiObnrRSM3c6bXdR"
+    ]
+  },
+  "node_statuses": {
+    "0": "unmapped",
+    "1": "completed",
+    "2": "completed",
+    "3": "completed",
+    "4": "completed",
+    "5": "completed",
+    "6": "completed",
+    "7": "unmapped",
+    "8": "unmapped",
+    "9": "completed",
+    "10": "completed",
+    "11": "completed",
+    "12": "unmapped",
+    "13": "completed",
+    "14": "completed",
+    "15": "unmapped",
+    "16": "completed",
+    "17": "completed",
+    "18": "completed"
+  },
+  "notes": {},
+  "screen": "mapping",
+  "branch_states": {},
+  "input_branch_states": {},
+  "branch_sort_mode": "default",
+  "custom_branch_order": [],
+  "status_filter": "all",
+  "suggestion_queue": [],
+  "review_queue": [],
+  "pipeline_version": "0.10.0+01f7ecb",
+  "folio_version": "0.2.0"
+}

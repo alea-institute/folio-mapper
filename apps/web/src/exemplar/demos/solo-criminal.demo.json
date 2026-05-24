@@ -1,0 +1,1776 @@
+{
+  "version": "1.3",
+  "created": "2026-05-24T19:36:03.572229+00:00",
+  "updated": "2026-05-24T19:36:03.572229+00:00",
+  "source_file": null,
+  "input_format": "hierarchical",
+  "total_nodes": 19,
+  "completed": 12,
+  "skipped": 0,
+  "current_position": 0,
+  "provider": "anthropic",
+  "model": "claude-3-5-sonnet-latest",
+  "text_input": "Criminal Defense\n\tDUI & Impaired Driving\n\t\tDriving Under the Influence\n\t\tBoating DUI/BUI\n\tDrug Offenses\n\t\tCannabis Law\n\t\tControlled Substance Charges\n\t\tDrug Crimes\n\tViolent Crimes\n\t\tAssault Law\n\t\tDomestic Violence\n\t\tCivil Protection Claim / Domestic Restraining Order\n\tProperty Crimes\n\t\tBurglary\n\t\tShoplifting\n\tJuvenile & Financial Crimes\n\t\tJuvenile Law\n\t\tWire Fraud\n\t\tFraud and Economic Torts Law",
+  "parse_result": {
+    "format": "hierarchical",
+    "items": [
+      {
+        "text": "Criminal Defense",
+        "index": 0,
+        "ancestry": []
+      },
+      {
+        "text": "DUI & Impaired Driving",
+        "index": 1,
+        "ancestry": [
+          "Criminal Defense"
+        ]
+      },
+      {
+        "text": "Driving Under the Influence",
+        "index": 2,
+        "ancestry": [
+          "Criminal Defense",
+          "DUI & Impaired Driving"
+        ]
+      },
+      {
+        "text": "Boating DUI/BUI",
+        "index": 3,
+        "ancestry": [
+          "Criminal Defense",
+          "DUI & Impaired Driving"
+        ]
+      },
+      {
+        "text": "Drug Offenses",
+        "index": 4,
+        "ancestry": [
+          "Criminal Defense"
+        ]
+      },
+      {
+        "text": "Cannabis Law",
+        "index": 5,
+        "ancestry": [
+          "Criminal Defense",
+          "Drug Offenses"
+        ]
+      },
+      {
+        "text": "Controlled Substance Charges",
+        "index": 6,
+        "ancestry": [
+          "Criminal Defense",
+          "Drug Offenses"
+        ]
+      },
+      {
+        "text": "Drug Crimes",
+        "index": 7,
+        "ancestry": [
+          "Criminal Defense",
+          "Drug Offenses"
+        ]
+      },
+      {
+        "text": "Violent Crimes",
+        "index": 8,
+        "ancestry": [
+          "Criminal Defense"
+        ]
+      },
+      {
+        "text": "Assault Law",
+        "index": 9,
+        "ancestry": [
+          "Criminal Defense",
+          "Violent Crimes"
+        ]
+      },
+      {
+        "text": "Domestic Violence",
+        "index": 10,
+        "ancestry": [
+          "Criminal Defense",
+          "Violent Crimes"
+        ]
+      },
+      {
+        "text": "Civil Protection Claim / Domestic Restraining Order",
+        "index": 11,
+        "ancestry": [
+          "Criminal Defense",
+          "Violent Crimes"
+        ]
+      },
+      {
+        "text": "Property Crimes",
+        "index": 12,
+        "ancestry": [
+          "Criminal Defense"
+        ]
+      },
+      {
+        "text": "Burglary",
+        "index": 13,
+        "ancestry": [
+          "Criminal Defense",
+          "Property Crimes"
+        ]
+      },
+      {
+        "text": "Shoplifting",
+        "index": 14,
+        "ancestry": [
+          "Criminal Defense",
+          "Property Crimes"
+        ]
+      },
+      {
+        "text": "Juvenile & Financial Crimes",
+        "index": 15,
+        "ancestry": [
+          "Criminal Defense"
+        ]
+      },
+      {
+        "text": "Juvenile Law",
+        "index": 16,
+        "ancestry": [
+          "Criminal Defense",
+          "Juvenile & Financial Crimes"
+        ]
+      },
+      {
+        "text": "Wire Fraud",
+        "index": 17,
+        "ancestry": [
+          "Criminal Defense",
+          "Juvenile & Financial Crimes"
+        ]
+      },
+      {
+        "text": "Fraud and Economic Torts Law",
+        "index": 18,
+        "ancestry": [
+          "Criminal Defense",
+          "Juvenile & Financial Crimes"
+        ]
+      }
+    ],
+    "hierarchy": [
+      {
+        "label": "Criminal Defense",
+        "depth": 0,
+        "children": [
+          {
+            "label": "DUI & Impaired Driving",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Driving Under the Influence",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Boating DUI/BUI",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Drug Offenses",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Cannabis Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Controlled Substance Charges",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Drug Crimes",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Violent Crimes",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Assault Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Domestic Violence",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Civil Protection Claim / Domestic Restraining Order",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Property Crimes",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Burglary",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Shoplifting",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Juvenile & Financial Crimes",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Juvenile Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Wire Fraud",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Fraud and Economic Torts Law",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_items": 19,
+    "headers": null,
+    "source_filename": null,
+    "raw_preview": [
+      [
+        "Criminal Defense"
+      ],
+      [
+        "",
+        "DUI & Impaired Driving"
+      ],
+      [
+        "",
+        "",
+        "Driving Under the Influence"
+      ],
+      [
+        "",
+        "",
+        "Boating DUI/BUI"
+      ],
+      [
+        "",
+        "Drug Offenses"
+      ]
+    ]
+  },
+  "mapping_response": {
+    "items": [
+      {
+        "item_index": 0,
+        "item_text": "Criminal Defense",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 1,
+        "item_text": "DUI & Impaired Driving",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 2,
+        "item_text": "Driving Under the Influence",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Driving Under the Influence",
+                "iri": "https://folio.openlegalstandard.org/RB0QemTkd6XZOLDEO42pdIw",
+                "iri_hash": "RB0QemTkd6XZOLDEO42pdIw",
+                "definition": "Driving or operating a motor vehicle or common carrier while mentally or physically impaired as the result of consuming an alcoholic beverage or using a drug or narcotic.",
+                "synonyms": [
+                  "Conducir bajo los efectos del alcohol",
+                  "Conduite en état d'ivresse",
+                  "DUI",
+                  "DUII",
+                  "DWAI",
+                  "DWI",
+                  "Drink-Driving",
+                  "Driving Under the Influence of Intoxicants",
+                  "Driving While Ability Impaired",
+                  "Drunk Driving",
+                  "Impaired Driving",
+                  "OUI",
+                  "OWI",
+                  "Operating Under the Influence",
+                  "Operating While Intoxicated",
+                  "Dirigir sob influência de álcool ou drogas",
+                  "Driving While Intoxicated",
+                  "Fahren unter Alkohol- oder Drogeneinfluss",
+                  "נהיגה תחת השפעת סמים או אלכוהול",
+                  "मादक पदार्थों के अधीन गाड़ी चलाना",
+                  "القيادة تحت تأثير الكحول",
+                  "Guida in stato di ebbrezza",
+                  "음주운전",
+                  "Вождение в нетрезвом состоянии",
+                  "酒后驾车",
+                  "飲酒運転"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Criminal Misdemeanor Offenses",
+                    "iri_hash": "RCqBiJAwLT5iG2nvk12tNKW"
+                  },
+                  {
+                    "label": "Driving Under the Influence",
+                    "iri_hash": "RB0QemTkd6XZOLDEO42pdIw"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 3,
+        "item_text": "Boating DUI/BUI",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Boating DUI/BUI",
+                "iri": "https://folio.openlegalstandard.org/RCMeywGHqtDlkLxwnDrD0CF",
+                "iri_hash": "RCMeywGHqtDlkLxwnDrD0CF",
+                "definition": "Operating a boat or watercraft while under the influence of drugs or alcohol, which is classified as a criminal misdemeanor offense.",
+                "synonyms": [
+                  "Boating DUI/BUI",
+                  "Bootfahren unter Alkoholeinfluss/Bootfahren unter Drogeneinfluss",
+                  "Conduite en état d'ivresse/drogue en bateau",
+                  "DUI/BUI en barco",
+                  "DUI/BUI בסירה",
+                  "Dirigir embarcação sob efeito de álcool/drogas",
+                  "नावगेत पीएनडी/बीयूआई",
+                  "ボートでの飲酒運転/薬物運転",
+                  "酒后驾船/醉船"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Criminal Misdemeanor Offenses",
+                    "iri_hash": "RCqBiJAwLT5iG2nvk12tNKW"
+                  },
+                  {
+                    "label": "Boating DUI/BUI",
+                    "iri_hash": "RCMeywGHqtDlkLxwnDrD0CF"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 4,
+        "item_text": "Drug Offenses",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 5,
+        "item_text": "Cannabis Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Cannabis Law",
+                "iri": "https://folio.openlegalstandard.org/RBqPr9CLKLdANUwXn8o2Unj",
+                "iri_hash": "RBqPr9CLKLdANUwXn8o2Unj",
+                "definition": "Cannabis Law refers to the legal rules and regulations governing the use, possession, sale, cultivation, and distribution of cannabis, both for medical and recreational purposes. These laws vary significantly between jurisdictions, ranging from total prohibition to decriminalization or full legalization, and they may involve aspects of criminal, business, and health law among others",
+                "synonyms": [
+                  "Cannabis Law",
+                  "Cannabisrecht",
+                  "Droit du cannabis",
+                  "Hemp Law",
+                  "Lei de Cannabis",
+                  "Ley de Cannabis",
+                  "Marihuana Law",
+                  "Marijuana Law",
+                  "Pot Law",
+                  "Weed Law",
+                  "חוק הקנאביס",
+                  "कैनाबिस कानून",
+                  "大麻法",
+                  "大麻法律"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Cannabis Law",
+                    "iri_hash": "RBqPr9CLKLdANUwXn8o2Unj"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 6,
+        "item_text": "Controlled Substance Charges",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 7,
+        "item_text": "Drug Crimes",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Drug Crimes",
+                "iri": "https://folio.openlegalstandard.org/Ra8NCYdJb9YwmAxaOmLDbI",
+                "iri_hash": "Ra8NCYdJb9YwmAxaOmLDbI",
+                "definition": "The violation of laws prohibiting the production, distribution, and/or use of certain controlled substances and the equipment or devices utilized in their preparation and/or use.",
+                "synonyms": [
+                  "Crimes de drogas",
+                  "Crimes liés aux drogues",
+                  "Delitos de Drogas",
+                  "Delitos de Narcóticos",
+                  "Drogenverbrechen",
+                  "Drug Offences",
+                  "Narcotic Crimes",
+                  "פשעי סמים",
+                  "ड्रग अपराध",
+                  "毒品犯罪",
+                  "麻薬犯罪"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Drug Crimes",
+                    "iri_hash": "Ra8NCYdJb9YwmAxaOmLDbI"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 8,
+        "item_text": "Violent Crimes",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 9,
+        "item_text": "Assault Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Assault Law",
+                "iri": "https://folio.openlegalstandard.org/RgRCZGTIbEFjQk6Kdhaehd",
+                "iri_hash": "RgRCZGTIbEFjQk6Kdhaehd",
+                "definition": "Law relating to inflicting physical harm or unwanted physical contact upon a person or a threat or attempt to commit such an action.",
+                "synonyms": [
+                  "Assault",
+                  "Assault Law",
+                  "Droit d'agression",
+                  "Lei de agressão",
+                  "Ley de Asalto",
+                  "Strafrechtliche Körperverletzung",
+                  "חוק התקיפה",
+                  "हमला कानून",
+                  "攻击法",
+                  "暴行法",
+                  "ASLT"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Personal Injury and Tort Law",
+                    "iri_hash": "R7MK1XmyjtYxZKg8Iw4ZN4K"
+                  },
+                  {
+                    "label": "Assault Law",
+                    "iri_hash": "RgRCZGTIbEFjQk6Kdhaehd"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Rape",
+                "iri": "https://folio.openlegalstandard.org/R8fcGNgScyMlOAFxW5Omw5Y",
+                "iri_hash": "R8fcGNgScyMlOAFxW5Omw5Y",
+                "definition": "The carnal knowledge of a person, forcibly and/or against that person’s will or not forcibly or against the person’s will in instances where the victim is incapable of giving consent because of his/her temporary or permanent mental or physical incapacity.",
+                "synonyms": [
+                  "Estupro",
+                  "Rape",
+                  "Vergewaltigung",
+                  "Viol",
+                  "Violación",
+                  "אונס",
+                  "बलात्कार",
+                  "レイプ",
+                  "强奸"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Crimes Against People",
+                    "iri_hash": "R7MbuFEaL6NyU9tM2AXk7lk"
+                  },
+                  {
+                    "label": "Sex Offenses",
+                    "iri_hash": "R8TvbewYypS9Uy4y5JGIwEH"
+                  },
+                  {
+                    "label": "Rape",
+                    "iri_hash": "R8fcGNgScyMlOAFxW5Omw5Y"
+                  }
+                ],
+                "score": 45.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 10,
+        "item_text": "Domestic Violence",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Domestic Violence",
+                "iri": "https://folio.openlegalstandard.org/RNtr2KMwM33LplYnmmxxVY",
+                "iri_hash": "RNtr2KMwM33LplYnmmxxVY",
+                "definition": "Domestic Violence refers to physical, emotional, or sexual abuse that occurs within a domestic relationship, such as between spouses or partners, and is considered a form of criminal assault.",
+                "synonyms": [
+                  "Domestic Violence",
+                  "Häusliche Gewalt",
+                  "Violence domestique",
+                  "Violencia Doméstica",
+                  "Violência doméstica",
+                  "אלימות במשפחה",
+                  "घरेलू हिंसा",
+                  "ドメスティックバイオレンス",
+                  "家庭暴力"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Crimes Against People",
+                    "iri_hash": "R7MbuFEaL6NyU9tM2AXk7lk"
+                  },
+                  {
+                    "label": "Criminal Assault",
+                    "iri_hash": "R8BLgPtZOuKFI8MtZNTaT0u"
+                  },
+                  {
+                    "label": "Domestic Violence",
+                    "iri_hash": "RNtr2KMwM33LplYnmmxxVY"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 11,
+        "item_text": "Civil Protection Claim / Domestic Restraining Order",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Civil Protection Claim / Domestic Restraining Order",
+                "iri": "https://folio.openlegalstandard.org/R75OjKiIyaZ7UKYKYmCvFRL",
+                "iri_hash": "R75OjKiIyaZ7UKYKYmCvFRL",
+                "definition": "A Civil Protection Claim / Domestic Restraining Order is a legal order issued by a court that prohibits an individual from contacting or coming near another person, typically a family member, in order to protect them from harm or abuse.",
+                "synonyms": [
+                  "Civil Protection Claim",
+                  "Civil Protection Claim / Domestic Restraining Order",
+                  "Civil Protection Order Claim",
+                  "Demanda de protección civil / Orden de restricción doméstica",
+                  "Domestic Restraining Order Claim",
+                  "Domestic Violence Restraining Order",
+                  "Orden de protección civil / Orden de alejamiento doméstico",
+                  "Reivindicação de proteção civil / Ordem de restrição doméstica",
+                  "Restraining Order Claim",
+                  "Réclamation de protection civile / Ordonnance de restriction domestique",
+                  "Zivilschutzanspruch / Inlandsverfügung",
+                  "תביעת הגנת אזרחים / צו הגבלת מגורים במקום",
+                  "सिविल संरक्षा दावा / घरेलू रोकथाम आदेश",
+                  "市民防護請求 / 家庭内制限命令",
+                  "民事保护索赔 / 国内限制令"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Civil Protection Claim / Domestic Restraining Order",
+                    "iri_hash": "R75OjKiIyaZ7UKYKYmCvFRL"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 12,
+        "item_text": "Property Crimes",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 13,
+        "item_text": "Burglary",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Burglary",
+                "iri": "https://folio.openlegalstandard.org/R9Uwmwe84oLeyXAcD08TcKq",
+                "iri_hash": "R9Uwmwe84oLeyXAcD08TcKq",
+                "definition": "The unlawful entry into a building or other structure with the intent to commit a felony or a theft.",
+                "synonyms": [
+                  "Breaking and Entering",
+                  "Burglary",
+                  "Cambriolage",
+                  "Einbruchdiebstahl",
+                  "Robo con fuerza en las cosas",
+                  "Robo con violencia",
+                  "Roubo qualificado",
+                  "פריצה",
+                  "चोरी",
+                  "住居侵入盗",
+                  "入室盗窃"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Crimes Against Property",
+                    "iri_hash": "R8ldDGTh6RHzt0IDL7p597U"
+                  },
+                  {
+                    "label": "Criminal Theft",
+                    "iri_hash": "RBpSXv8uOXDikW5jk944sRN"
+                  },
+                  {
+                    "label": "Burglary",
+                    "iri_hash": "R9Uwmwe84oLeyXAcD08TcKq"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 14,
+        "item_text": "Shoplifting",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Shoplifting",
+                "iri": "https://folio.openlegalstandard.org/RFrien46eAPSSbu8WgoU6S",
+                "iri_hash": "RFrien46eAPSSbu8WgoU6S",
+                "definition": "The act of taking merchandise from a store without paying for it, which is classified as a criminal offense of a minor nature.",
+                "synonyms": [
+                  "Furto em lojas",
+                  "Hurto en tiendas",
+                  "Ladendiebstahl",
+                  "Robo en tiendas",
+                  "Shoplifting",
+                  "Vol à l'étalage",
+                  "גניבת חנויות",
+                  "दुकान चोरी",
+                  "万引き",
+                  "商店行窃"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Criminal Misdemeanor Offenses",
+                    "iri_hash": "RCqBiJAwLT5iG2nvk12tNKW"
+                  },
+                  {
+                    "label": "Shoplifting",
+                    "iri_hash": "RFrien46eAPSSbu8WgoU6S"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 15,
+        "item_text": "Juvenile & Financial Crimes",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 16,
+        "item_text": "Juvenile Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Juvenile Law",
+                "iri": "https://folio.openlegalstandard.org/RCySmY2p2KUDkrD6zQlVygb",
+                "iri_hash": "RCySmY2p2KUDkrD6zQlVygb",
+                "definition": "Juvenile law and child protective proceedings.",
+                "synonyms": [
+                  "Direito da Infância e da Juventude",
+                  "Droit des mineurs",
+                  "Jugendstrafrecht",
+                  "Juvenile Law",
+                  "少年法",
+                  "JUVL"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Personal and Family Law",
+                    "iri_hash": "RBFgL4Dth9VONjmIdH0bEOs"
+                  },
+                  {
+                    "label": "Juvenile Law",
+                    "iri_hash": "RCySmY2p2KUDkrD6zQlVygb"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 17,
+        "item_text": "Wire Fraud",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Wire Fraud",
+                "iri": "https://folio.openlegalstandard.org/R76qvSDUqHT3U3jz0wOw1y1",
+                "iri_hash": "R76qvSDUqHT3U3jz0wOw1y1",
+                "definition": "The use of an electric or electronic communications facility to intentionally transmit a false and/or deceptive message in furtherance of a fraudulent activity.",
+                "synonyms": [
+                  "Betrug per Draht",
+                  "Fraude eletrônica",
+                  "Fraude par fil",
+                  "Fraude por transferencia electrónica",
+                  "Wire Fraud",
+                  "הונאת חוטים",
+                  "वायर धोखाधड़ी",
+                  "电信诈骗",
+                  "電線詐欺"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Crimes Against Property",
+                    "iri_hash": "R8ldDGTh6RHzt0IDL7p597U"
+                  },
+                  {
+                    "label": "Criminal Theft",
+                    "iri_hash": "RBpSXv8uOXDikW5jk944sRN"
+                  },
+                  {
+                    "label": "Criminal Fraud",
+                    "iri_hash": "R5ks6eYBkfLh4Fgv1Zusal"
+                  },
+                  {
+                    "label": "Wire Fraud",
+                    "iri_hash": "R76qvSDUqHT3U3jz0wOw1y1"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Fraud",
+                "iri": "https://folio.openlegalstandard.org/RqGxSnAp9vX42GRKHqwvBe",
+                "iri_hash": "RqGxSnAp9vX42GRKHqwvBe",
+                "definition": "Fraud is the intentional act of deceiving someone in order to gain an unfair advantage or cause harm.",
+                "synonyms": [
+                  "Betrug",
+                  "Fraud",
+                  "Fraude",
+                  "Intentional Deceit",
+                  "הונאה",
+                  "धोखाधड़ी",
+                  "欺诈",
+                  "詐欺"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Fraud Claims",
+                    "iri_hash": "R8GyyJdxlZtc7PsW9vLAKfE"
+                  },
+                  {
+                    "label": "Fraud",
+                    "iri_hash": "RqGxSnAp9vX42GRKHqwvBe"
+                  }
+                ],
+                "score": 75.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 18,
+        "item_text": "Fraud and Economic Torts Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Fraud and Economic Torts Law",
+                "iri": "https://folio.openlegalstandard.org/RzQmY3E958fA9POPoG03of",
+                "iri_hash": "RzQmY3E958fA9POPoG03of",
+                "definition": "The wrong done by another person or business that occurs in, or affects, commerce.",
+                "synonyms": [
+                  "Betrug und Wirtschaftsdelikte",
+                  "Droit de la fraude et des délits économiques",
+                  "Fraud and Economic Torts",
+                  "Fraud and Economic Torts Law",
+                  "Lei de Fraude e Delitos Econômicos",
+                  "Ley de Fraude y Agravios Económicos",
+                  "Ley de Fraude y Delitos Económicos",
+                  "חוק המטעמים והטורטים הכלכליים",
+                  "धोखाधड़ी और आर्थिक अपराधों कानून",
+                  "欺诈和经济侵权法",
+                  "詐欺および経済侵害法",
+                  "FRAU"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Personal Injury and Tort Law",
+                    "iri_hash": "R7MK1XmyjtYxZKg8Iw4ZN4K"
+                  },
+                  {
+                    "label": "Fraud and Economic Torts Law",
+                    "iri_hash": "RzQmY3E958fA9POPoG03of"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      }
+    ],
+    "total_items": 19,
+    "branches_available": [
+      {
+        "name": "Actor / Player",
+        "color": "#1e6fa0",
+        "concept_count": 563
+      },
+      {
+        "name": "Area of Law",
+        "color": "#1a5276",
+        "concept_count": 174
+      },
+      {
+        "name": "Asset Type",
+        "color": "#6b5600",
+        "concept_count": 345
+      },
+      {
+        "name": "Communication Modality",
+        "color": "#7b4d93",
+        "concept_count": 11
+      },
+      {
+        "name": "Currency",
+        "color": "#7a5a00",
+        "concept_count": 178
+      },
+      {
+        "name": "Data Format",
+        "color": "#4a5568",
+        "concept_count": 17
+      },
+      {
+        "name": "Document / Artifact",
+        "color": "#9c4a10",
+        "concept_count": 2796
+      },
+      {
+        "name": "Engagement Attributes",
+        "color": "#10613a",
+        "concept_count": 343
+      },
+      {
+        "name": "Event",
+        "color": "#b91c1c",
+        "concept_count": 403
+      },
+      {
+        "name": "FOLIO Type",
+        "color": "#6b5c00",
+        "concept_count": 3
+      },
+      {
+        "name": "Forums and Venues",
+        "color": "#7b2d8e",
+        "concept_count": 2180
+      },
+      {
+        "name": "Governmental Body",
+        "color": "#1a6091",
+        "concept_count": 1585
+      },
+      {
+        "name": "Industry and Market",
+        "color": "#065550",
+        "concept_count": 2137
+      },
+      {
+        "name": "Language",
+        "color": "#7a3b10",
+        "concept_count": 489
+      },
+      {
+        "name": "Legal Authorities",
+        "color": "#8b1a1a",
+        "concept_count": 82
+      },
+      {
+        "name": "Legal Entity",
+        "color": "#085e40",
+        "concept_count": 517
+      },
+      {
+        "name": "Location",
+        "color": "#105560",
+        "concept_count": 3782
+      },
+      {
+        "name": "Matter Narrative",
+        "color": "#6d3580",
+        "concept_count": 13
+      },
+      {
+        "name": "Matter Narrative Format",
+        "color": "#1a6894",
+        "concept_count": 2
+      },
+      {
+        "name": "Objectives",
+        "color": "#b03020",
+        "concept_count": 5411
+      },
+      {
+        "name": "Service",
+        "color": "#065e4e",
+        "concept_count": 434
+      },
+      {
+        "name": "Status",
+        "color": "#864a08",
+        "concept_count": 23
+      },
+      {
+        "name": "System Identifiers",
+        "color": "#3d4d5a",
+        "concept_count": 13
+      }
+    ]
+  },
+  "pipeline_metadata": [
+    {
+      "item_index": 0,
+      "item_text": "Criminal Defense",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Criminal Defense",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Criminal Defense"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 1,
+      "item_text": "DUI & Impaired Driving",
+      "prescan": {
+        "segments": [
+          {
+            "text": "DUI & Impaired Driving",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "DUI & Impaired Driving"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 2,
+      "item_text": "Driving Under the Influence",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Driving Under the Influence",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Driving Under the Influence"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 3,
+      "item_text": "Boating DUI/BUI",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Boating DUI/BUI",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Boating DUI/BUI"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 4,
+      "item_text": "Drug Offenses",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Drug Offenses",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Drug Offenses"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 5,
+      "item_text": "Cannabis Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Cannabis Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Cannabis Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 6,
+      "item_text": "Controlled Substance Charges",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Controlled Substance Charges",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Controlled Substance Charges"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 7,
+      "item_text": "Drug Crimes",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Drug Crimes",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Drug Crimes"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 8,
+      "item_text": "Violent Crimes",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Violent Crimes",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Violent Crimes"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 9,
+      "item_text": "Assault Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Assault Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Assault Law"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 10,
+      "item_text": "Domestic Violence",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Domestic Violence",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Domestic Violence"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 11,
+      "item_text": "Civil Protection Claim / Domestic Restraining Order",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Civil Protection Claim / Domestic Restraining Order",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Civil Protection Claim / Domestic Restraining Order"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 12,
+      "item_text": "Property Crimes",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Property Crimes",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Property Crimes"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 13,
+      "item_text": "Burglary",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Burglary",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Burglary"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 14,
+      "item_text": "Shoplifting",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Shoplifting",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Shoplifting"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 15,
+      "item_text": "Juvenile & Financial Crimes",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Juvenile & Financial Crimes",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Juvenile & Financial Crimes"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 16,
+      "item_text": "Juvenile Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Juvenile Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Juvenile Law"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 17,
+      "item_text": "Wire Fraud",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Wire Fraud",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Wire Fraud"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 18,
+      "item_text": "Fraud and Economic Torts Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Fraud and Economic Torts Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Fraud and Economic Torts Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    }
+  ],
+  "selections": {
+    "0": [],
+    "1": [],
+    "2": [
+      "RB0QemTkd6XZOLDEO42pdIw"
+    ],
+    "3": [
+      "RCMeywGHqtDlkLxwnDrD0CF"
+    ],
+    "4": [],
+    "5": [
+      "RBqPr9CLKLdANUwXn8o2Unj"
+    ],
+    "6": [],
+    "7": [
+      "Ra8NCYdJb9YwmAxaOmLDbI"
+    ],
+    "8": [],
+    "9": [
+      "RgRCZGTIbEFjQk6Kdhaehd"
+    ],
+    "10": [
+      "RNtr2KMwM33LplYnmmxxVY"
+    ],
+    "11": [
+      "R75OjKiIyaZ7UKYKYmCvFRL"
+    ],
+    "12": [],
+    "13": [
+      "R9Uwmwe84oLeyXAcD08TcKq"
+    ],
+    "14": [
+      "RFrien46eAPSSbu8WgoU6S"
+    ],
+    "15": [],
+    "16": [
+      "RCySmY2p2KUDkrD6zQlVygb"
+    ],
+    "17": [
+      "R76qvSDUqHT3U3jz0wOw1y1"
+    ],
+    "18": [
+      "RzQmY3E958fA9POPoG03of"
+    ]
+  },
+  "node_statuses": {
+    "0": "unmapped",
+    "1": "unmapped",
+    "2": "completed",
+    "3": "completed",
+    "4": "unmapped",
+    "5": "completed",
+    "6": "unmapped",
+    "7": "completed",
+    "8": "unmapped",
+    "9": "completed",
+    "10": "completed",
+    "11": "completed",
+    "12": "unmapped",
+    "13": "completed",
+    "14": "completed",
+    "15": "unmapped",
+    "16": "completed",
+    "17": "completed",
+    "18": "completed"
+  },
+  "notes": {},
+  "screen": "mapping",
+  "branch_states": {},
+  "input_branch_states": {},
+  "branch_sort_mode": "default",
+  "custom_branch_order": [],
+  "status_filter": "all",
+  "suggestion_queue": [],
+  "review_queue": [],
+  "pipeline_version": "0.10.0+01f7ecb",
+  "folio_version": "0.2.0"
+}

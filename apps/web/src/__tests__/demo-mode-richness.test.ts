@@ -1,10 +1,9 @@
 import { describe, it, expect } from 'vitest';
 import demoPI from '../exemplar/demos/personal-injury.demo.json';
-// Add one `import demoXxx from '../exemplar/demos/{slug}.demo.json'` line per area
-// as its demo.json is committed in Plans 02-10. Example:
-// import demoSoloCriminal from '../exemplar/demos/solo-criminal.demo.json';
-// import demoFamilyLaw from '../exemplar/demos/family-law.demo.json';
-// import demoEmploymentLabor from '../exemplar/demos/employment-labor.demo.json';
+import demoSoloCriminal from '../exemplar/demos/solo-criminal.demo.json';
+import demoFamilyLaw from '../exemplar/demos/family-law.demo.json';
+import demoEmploymentLabor from '../exemplar/demos/employment-labor.demo.json';
+// Remaining areas added by Plans 04-05 as their demo.json is committed:
 // import demoCorporateMa from '../exemplar/demos/corporate-ma.demo.json';
 // import demoIpTech from '../exemplar/demos/ip-tech.demo.json';
 // import demoCommercialLit from '../exemplar/demos/commercial-lit.demo.json';
@@ -35,10 +34,9 @@ function getRichness(payload: Record<string, unknown>) {
 }
 
 describe('demo mode richness (D-03)', () => {
-  // Add new rows here as each area's demo.json is committed and passes D-03:
-  // ['solo-criminal',    demoSoloCriminal],
-  // ['family-law',       demoFamilyLaw],
-  // ['employment-labor', demoEmploymentLabor],
+  // Add new rows here as each area's demo.json is committed and passes D-03.
+  // PI re-curated in Plan 03 (--provider anthropic) now shows a visible mix.
+  // Remaining areas added by Plans 04-05:
   // ['corporate-ma',     demoCorporateMa],
   // ['ip-tech',          demoIpTech],
   // ['commercial-lit',   demoCommercialLit],
@@ -46,7 +44,10 @@ describe('demo mode richness (D-03)', () => {
   // ['banking-finance',  demoBankingFinance],
   // ['immigration',      demoImmigration],
   it.each([
-    // PI will be added here after Plan 03 re-curation at --threshold 0.85
+    ['personal-injury',  demoPI],
+    ['solo-criminal',    demoSoloCriminal],
+    ['family-law',       demoFamilyLaw],
+    ['employment-labor', demoEmploymentLabor],
   ] as [string, Record<string, unknown>][])(
     '%s demo has 0 < completed < total_nodes (visible mix)',
     (_slug, payload) => {
@@ -55,15 +56,4 @@ describe('demo mode richness (D-03)', () => {
       expect(completed).toBeLessThan(total);
     },
   );
-
-  // PI is shipped at threshold 0.30 (all-accepted); re-curation happens in Plan 03.
-  it.todo('personal-injury — passes after Plan 03 re-curation at --threshold 0.85');
-
-  // Sanity-check that the PI demo has the expected all-accepted shape,
-  // confirming that Plan 03 re-curation is genuinely needed:
-  it('personal-injury shipped demo is all-accepted (completed === total_nodes)', () => {
-    const { total, completed } = getRichness(demoPI as Record<string, unknown>);
-    expect(completed).toBe(total);
-    expect(total).toBe(19);
-  });
 });

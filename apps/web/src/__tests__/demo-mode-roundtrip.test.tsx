@@ -1,11 +1,10 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { renderHook, act } from '@testing-library/react';
 import demoPI from '../exemplar/demos/personal-injury.demo.json';
-// Add one `import demoXxx from '../exemplar/demos/{slug}.demo.json'` line per area
-// as its demo.json is committed in Plans 02-10. Example:
-// import demoSoloCriminal from '../exemplar/demos/solo-criminal.demo.json';
-// import demoFamilyLaw from '../exemplar/demos/family-law.demo.json';
-// import demoEmploymentLabor from '../exemplar/demos/employment-labor.demo.json';
+import demoSoloCriminal from '../exemplar/demos/solo-criminal.demo.json';
+import demoFamilyLaw from '../exemplar/demos/family-law.demo.json';
+import demoEmploymentLabor from '../exemplar/demos/employment-labor.demo.json';
+// Remaining areas added by Plans 04-05 as their demo.json is committed:
 // import demoCorporateMa from '../exemplar/demos/corporate-ma.demo.json';
 // import demoIpTech from '../exemplar/demos/ip-tech.demo.json';
 // import demoCommercialLit from '../exemplar/demos/commercial-lit.demo.json';
@@ -59,10 +58,8 @@ describe('demo mode round-trip', () => {
     resetStores();
   });
 
-  // Add new rows here as each area's demo.json is committed:
-  // ['solo-criminal',     demoSoloCriminal],
-  // ['family-law',        demoFamilyLaw],
-  // ['employment-labor',  demoEmploymentLabor],
+  // Add new rows here as each area's demo.json is committed.
+  // Remaining areas added by Plans 04-05:
   // ['corporate-ma',      demoCorporateMa],
   // ['ip-tech',           demoIpTech],
   // ['commercial-lit',    demoCommercialLit],
@@ -70,7 +67,10 @@ describe('demo mode round-trip', () => {
   // ['banking-finance',   demoBankingFinance],
   // ['immigration',       demoImmigration],
   it.each([
-    ['personal-injury', demoPI],
+    ['personal-injury',  demoPI],
+    ['solo-criminal',    demoSoloCriminal],
+    ['family-law',       demoFamilyLaw],
+    ['employment-labor', demoEmploymentLabor],
   ] as [string, Record<string, unknown>][])(
     '%s demo payload produces identical store state via both load paths',
     async (slug, payload) => {

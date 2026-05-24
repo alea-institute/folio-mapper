@@ -1,0 +1,2825 @@
+{
+  "version": "1.3",
+  "created": "2026-05-24T19:38:07.431616+00:00",
+  "updated": "2026-05-24T19:38:07.431616+00:00",
+  "source_file": null,
+  "input_format": "hierarchical",
+  "total_nodes": 19,
+  "completed": 15,
+  "skipped": 0,
+  "current_position": 0,
+  "provider": "anthropic",
+  "model": "claude-3-5-sonnet-latest",
+  "text_input": "Family Law\n\tDivorce & Separation\n\t\tContested Divorce\n\t\tLegal Separation\n\t\tUncontested Divorce\n\tChild Custody\n\t\tCustody Law\n\t\tParenting Plan\n\tSupport Obligations\n\t\tChild Support\n\t\tSpousal Support\n\t\tChild Support Enforcement Claim\n\tProtective Orders\n\t\tRestraining Order\n\t\tCriminal Harassment\n\tAdoption & Guardianship\n\t\tAdoption\n\t\tGuardianship\n\t\tAdoption, Surrogacy, and Paternity Law",
+  "parse_result": {
+    "format": "hierarchical",
+    "items": [
+      {
+        "text": "Family Law",
+        "index": 0,
+        "ancestry": []
+      },
+      {
+        "text": "Divorce & Separation",
+        "index": 1,
+        "ancestry": [
+          "Family Law"
+        ]
+      },
+      {
+        "text": "Contested Divorce",
+        "index": 2,
+        "ancestry": [
+          "Family Law",
+          "Divorce & Separation"
+        ]
+      },
+      {
+        "text": "Legal Separation",
+        "index": 3,
+        "ancestry": [
+          "Family Law",
+          "Divorce & Separation"
+        ]
+      },
+      {
+        "text": "Uncontested Divorce",
+        "index": 4,
+        "ancestry": [
+          "Family Law",
+          "Divorce & Separation"
+        ]
+      },
+      {
+        "text": "Child Custody",
+        "index": 5,
+        "ancestry": [
+          "Family Law"
+        ]
+      },
+      {
+        "text": "Custody Law",
+        "index": 6,
+        "ancestry": [
+          "Family Law",
+          "Child Custody"
+        ]
+      },
+      {
+        "text": "Parenting Plan",
+        "index": 7,
+        "ancestry": [
+          "Family Law",
+          "Child Custody"
+        ]
+      },
+      {
+        "text": "Support Obligations",
+        "index": 8,
+        "ancestry": [
+          "Family Law"
+        ]
+      },
+      {
+        "text": "Child Support",
+        "index": 9,
+        "ancestry": [
+          "Family Law",
+          "Support Obligations"
+        ]
+      },
+      {
+        "text": "Spousal Support",
+        "index": 10,
+        "ancestry": [
+          "Family Law",
+          "Support Obligations"
+        ]
+      },
+      {
+        "text": "Child Support Enforcement Claim",
+        "index": 11,
+        "ancestry": [
+          "Family Law",
+          "Support Obligations"
+        ]
+      },
+      {
+        "text": "Protective Orders",
+        "index": 12,
+        "ancestry": [
+          "Family Law"
+        ]
+      },
+      {
+        "text": "Restraining Order",
+        "index": 13,
+        "ancestry": [
+          "Family Law",
+          "Protective Orders"
+        ]
+      },
+      {
+        "text": "Criminal Harassment",
+        "index": 14,
+        "ancestry": [
+          "Family Law",
+          "Protective Orders"
+        ]
+      },
+      {
+        "text": "Adoption & Guardianship",
+        "index": 15,
+        "ancestry": [
+          "Family Law"
+        ]
+      },
+      {
+        "text": "Adoption",
+        "index": 16,
+        "ancestry": [
+          "Family Law",
+          "Adoption & Guardianship"
+        ]
+      },
+      {
+        "text": "Guardianship",
+        "index": 17,
+        "ancestry": [
+          "Family Law",
+          "Adoption & Guardianship"
+        ]
+      },
+      {
+        "text": "Adoption, Surrogacy, and Paternity Law",
+        "index": 18,
+        "ancestry": [
+          "Family Law",
+          "Adoption & Guardianship"
+        ]
+      }
+    ],
+    "hierarchy": [
+      {
+        "label": "Family Law",
+        "depth": 0,
+        "children": [
+          {
+            "label": "Divorce & Separation",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Contested Divorce",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Legal Separation",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Uncontested Divorce",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Child Custody",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Custody Law",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Parenting Plan",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Support Obligations",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Child Support",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Spousal Support",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Child Support Enforcement Claim",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Protective Orders",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Restraining Order",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Criminal Harassment",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "Adoption & Guardianship",
+            "depth": 1,
+            "children": [
+              {
+                "label": "Adoption",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Guardianship",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "label": "Adoption, Surrogacy, and Paternity Law",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_items": 19,
+    "headers": null,
+    "source_filename": null,
+    "raw_preview": [
+      [
+        "Family Law"
+      ],
+      [
+        "",
+        "Divorce & Separation"
+      ],
+      [
+        "",
+        "",
+        "Contested Divorce"
+      ],
+      [
+        "",
+        "",
+        "Legal Separation"
+      ],
+      [
+        "",
+        "",
+        "Uncontested Divorce"
+      ]
+    ]
+  },
+  "mapping_response": {
+    "items": [
+      {
+        "item_index": 0,
+        "item_text": "Family Law",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 1,
+        "item_text": "Divorce & Separation",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Divorce",
+                "iri": "https://folio.openlegalstandard.org/RDhTbfA9WACnFGtRuw8v57e",
+                "iri_hash": "RDhTbfA9WACnFGtRuw8v57e",
+                "definition": "The legal process of ending a marriage, either due to fault or without fault, including issues such as property division, child custody, and spousal support.",
+                "synonyms": [
+                  "Disolución del matrimonio",
+                  "Dissolution du mariage",
+                  "Dissolução do casamento",
+                  "Ehescheidung",
+                  "Marriage Dissolution",
+                  "פירוק נישואים",
+                  "विवाह विघटन",
+                  "婚姻解除",
+                  "離婚"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Divorce Claims",
+                    "iri_hash": "R7widavYhXmyfw9WvR9ahBs"
+                  },
+                  {
+                    "label": "Divorce",
+                    "iri_hash": "RDhTbfA9WACnFGtRuw8v57e"
+                  }
+                ],
+                "score": 92.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 2,
+        "item_text": "Contested Divorce",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Contested Divorce",
+                "iri": "https://folio.openlegalstandard.org/RU1dvjPyTUgMePOcj2YloO",
+                "iri_hash": "RU1dvjPyTUgMePOcj2YloO",
+                "definition": "A Contested Divorce is a type of divorce in which the spouses are unable to reach an agreement on key issues such as division of property, child custody, spousal support, or other matters related to the dissolution of their marriage. In a contested divorce, these issues are typically resolved through litigation, with a court making decisions on behalf of the spouses. It often involves a more lengthy and adversarial legal process compared to an uncontested divorce, where the parties agree on the terms of the divorce.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Divorce Claims",
+                    "iri_hash": "R7widavYhXmyfw9WvR9ahBs"
+                  },
+                  {
+                    "label": "Divorce",
+                    "iri_hash": "RDhTbfA9WACnFGtRuw8v57e"
+                  },
+                  {
+                    "label": "Contested Divorce",
+                    "iri_hash": "RU1dvjPyTUgMePOcj2YloO"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Divorce",
+                "iri": "https://folio.openlegalstandard.org/RDhTbfA9WACnFGtRuw8v57e",
+                "iri_hash": "RDhTbfA9WACnFGtRuw8v57e",
+                "definition": "The legal process of ending a marriage, either due to fault or without fault, including issues such as property division, child custody, and spousal support.",
+                "synonyms": [
+                  "Disolución del matrimonio",
+                  "Dissolution du mariage",
+                  "Dissolução do casamento",
+                  "Ehescheidung",
+                  "Marriage Dissolution",
+                  "פירוק נישואים",
+                  "विवाह विघटन",
+                  "婚姻解除",
+                  "離婚"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Divorce Claims",
+                    "iri_hash": "R7widavYhXmyfw9WvR9ahBs"
+                  },
+                  {
+                    "label": "Divorce",
+                    "iri_hash": "RDhTbfA9WACnFGtRuw8v57e"
+                  }
+                ],
+                "score": 85.0
+              },
+              {
+                "label": "Uncontested Divorce",
+                "iri": "https://folio.openlegalstandard.org/RDYKcS4RxtGZzDW14I2wkuX",
+                "iri_hash": "RDYKcS4RxtGZzDW14I2wkuX",
+                "definition": "An Uncontested Divorce is a type of divorce in which both spouses mutually agree on all the key terms and issues related to the dissolution of their marriage. This includes matters such as property division, child custody and support, spousal support, and any other relevant issues. In an uncontested divorce, the spouses often work together to create a settlement agreement, making the divorce process more efficient and less adversarial than a contested divorce.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Divorce Claims",
+                    "iri_hash": "R7widavYhXmyfw9WvR9ahBs"
+                  },
+                  {
+                    "label": "Divorce",
+                    "iri_hash": "RDhTbfA9WACnFGtRuw8v57e"
+                  },
+                  {
+                    "label": "Uncontested Divorce",
+                    "iri_hash": "RDYKcS4RxtGZzDW14I2wkuX"
+                  }
+                ],
+                "score": 52.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 3,
+        "item_text": "Legal Separation",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Legal Separation",
+                "iri": "https://folio.openlegalstandard.org/RBvfJW4HbL3Y7Guu9ENS7w2",
+                "iri_hash": "RBvfJW4HbL3Y7Guu9ENS7w2",
+                "definition": "Legal Separation: A legal process that allows a married couple to live apart while remaining legally married, often involving court orders regarding property division, child custody, and support.",
+                "synonyms": [
+                  "Getrenntleben",
+                  "Legal Separation",
+                  "Separación Legal",
+                  "Separação judicial",
+                  "Séparation de corps",
+                  "הפרדה משפטית",
+                  "कानूनी अलगाव",
+                  "別居",
+                  "法律分居"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Divorce Claims",
+                    "iri_hash": "R7widavYhXmyfw9WvR9ahBs"
+                  },
+                  {
+                    "label": "Legal Separation",
+                    "iri_hash": "RBvfJW4HbL3Y7Guu9ENS7w2"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 4,
+        "item_text": "Uncontested Divorce",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Uncontested Divorce",
+                "iri": "https://folio.openlegalstandard.org/RDYKcS4RxtGZzDW14I2wkuX",
+                "iri_hash": "RDYKcS4RxtGZzDW14I2wkuX",
+                "definition": "An Uncontested Divorce is a type of divorce in which both spouses mutually agree on all the key terms and issues related to the dissolution of their marriage. This includes matters such as property division, child custody and support, spousal support, and any other relevant issues. In an uncontested divorce, the spouses often work together to create a settlement agreement, making the divorce process more efficient and less adversarial than a contested divorce.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Divorce Claims",
+                    "iri_hash": "R7widavYhXmyfw9WvR9ahBs"
+                  },
+                  {
+                    "label": "Divorce",
+                    "iri_hash": "RDhTbfA9WACnFGtRuw8v57e"
+                  },
+                  {
+                    "label": "Uncontested Divorce",
+                    "iri_hash": "RDYKcS4RxtGZzDW14I2wkuX"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Divorce",
+                "iri": "https://folio.openlegalstandard.org/RDhTbfA9WACnFGtRuw8v57e",
+                "iri_hash": "RDhTbfA9WACnFGtRuw8v57e",
+                "definition": "The legal process of ending a marriage, either due to fault or without fault, including issues such as property division, child custody, and spousal support.",
+                "synonyms": [
+                  "Disolución del matrimonio",
+                  "Dissolution du mariage",
+                  "Dissolução do casamento",
+                  "Ehescheidung",
+                  "Marriage Dissolution",
+                  "פירוק נישואים",
+                  "विवाह विघटन",
+                  "婚姻解除",
+                  "離婚"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Divorce Claims",
+                    "iri_hash": "R7widavYhXmyfw9WvR9ahBs"
+                  },
+                  {
+                    "label": "Divorce",
+                    "iri_hash": "RDhTbfA9WACnFGtRuw8v57e"
+                  }
+                ],
+                "score": 85.0
+              },
+              {
+                "label": "Contested Divorce",
+                "iri": "https://folio.openlegalstandard.org/RU1dvjPyTUgMePOcj2YloO",
+                "iri_hash": "RU1dvjPyTUgMePOcj2YloO",
+                "definition": "A Contested Divorce is a type of divorce in which the spouses are unable to reach an agreement on key issues such as division of property, child custody, spousal support, or other matters related to the dissolution of their marriage. In a contested divorce, these issues are typically resolved through litigation, with a court making decisions on behalf of the spouses. It often involves a more lengthy and adversarial legal process compared to an uncontested divorce, where the parties agree on the terms of the divorce.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Divorce Claims",
+                    "iri_hash": "R7widavYhXmyfw9WvR9ahBs"
+                  },
+                  {
+                    "label": "Divorce",
+                    "iri_hash": "RDhTbfA9WACnFGtRuw8v57e"
+                  },
+                  {
+                    "label": "Contested Divorce",
+                    "iri_hash": "RU1dvjPyTUgMePOcj2YloO"
+                  }
+                ],
+                "score": 45.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 5,
+        "item_text": "Child Custody",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Child",
+                "iri": "https://folio.openlegalstandard.org/RQCqQcWqriNQ2XBCucDmpq",
+                "iri_hash": "RQCqQcWqriNQ2XBCucDmpq",
+                "definition": "A Child is an individual who is the offspring of one or more parents, either biologically or through legal processes like adoption. In legal contexts, a child is often considered a minor and is under the guardianship of their parent(s) or legal guardian(s) until reaching the age of majority.",
+                "synonyms": [],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Entity",
+                    "iri_hash": "R7L5eLIzH0CpOUE74uJvSjL"
+                  },
+                  {
+                    "label": "Individual Person Characteristics",
+                    "iri_hash": "R7sHH7RvjZ6aZS7ZExDpYmR"
+                  },
+                  {
+                    "label": "Familial Status",
+                    "iri_hash": "RBz2aCAIZMshK7S6EKsCHmX"
+                  },
+                  {
+                    "label": "Familial Role",
+                    "iri_hash": "RC5RK4Beoxturh6V8lBfWfZ"
+                  },
+                  {
+                    "label": "Child",
+                    "iri_hash": "RQCqQcWqriNQ2XBCucDmpq"
+                  }
+                ],
+                "score": 42.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Child Custody Claim",
+                "iri": "https://folio.openlegalstandard.org/RZm4akQHkbU4y4YWTSSjrO",
+                "iri_hash": "RZm4akQHkbU4y4YWTSSjrO",
+                "definition": "A Child Custody Claim is a legal action brought by a parent seeking to obtain custody of their child, which falls under the broader category of Custody and Visitation Claims.",
+                "synonyms": [
+                  "Anspruch auf Sorgerecht für Kinder",
+                  "Child Custody Claim",
+                  "Demanda de Custodia de Menores",
+                  "Demande de garde d'enfant",
+                  "Reclamación de Custodia de Menores",
+                  "Reivindicação de custódia de criança",
+                  "תביעת אפוטרופוס ילדים",
+                  "बच्चे की हाकिमी दावा",
+                  "儿童抚养权要求",
+                  "子の親権請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Custody and Visitation Claims",
+                    "iri_hash": "R1XGKMfgmQGI3yTSEndqMN"
+                  },
+                  {
+                    "label": "Child Custody Claim",
+                    "iri_hash": "RZm4akQHkbU4y4YWTSSjrO"
+                  }
+                ],
+                "score": 92.0
+              },
+              {
+                "label": "Temporary Child Custody",
+                "iri": "https://folio.openlegalstandard.org/RCEchldQJ7ND4j4ohefIlEg",
+                "iri_hash": "RCEchldQJ7ND4j4ohefIlEg",
+                "definition": "Temporary Custody refers to the legal arrangement where a child is placed in the care of a guardian or custodian for a limited period of time, typically during the pendency of a matrimonial emergency application filed by the parents.",
+                "synonyms": [
+                  "Custodia Temporal",
+                  "Custódia temporária",
+                  "Garde temporaire",
+                  "Temporary Custody",
+                  "Vorläufige Obhut",
+                  "אכיפת שמירה זמנית",
+                  "अस्थायी हिरासत",
+                  "一時的な保護",
+                  "临时监护"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Civil Remedies / Relief Sought",
+                    "iri_hash": "RDbz1PVc6y57oOb9jAIl0eN"
+                  },
+                  {
+                    "label": "Remedies in Family Law",
+                    "iri_hash": "RBOczjtsHXQh2ojzTubbrxI"
+                  },
+                  {
+                    "label": "Matrimonial Emergency Applications",
+                    "iri_hash": "RCQJU54O6qCvotCfmDwYZwj"
+                  },
+                  {
+                    "label": "Temporary Child Custody",
+                    "iri_hash": "RCEchldQJ7ND4j4ohefIlEg"
+                  }
+                ],
+                "score": 83.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 6,
+        "item_text": "Custody Law",
+        "branch_groups": [],
+        "total_candidates": 0
+      },
+      {
+        "item_index": 7,
+        "item_text": "Parenting Plan",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Parent",
+                "iri": "https://folio.openlegalstandard.org/R9EOkKjFMzLEwh7coNAwXjX",
+                "iri_hash": "R9EOkKjFMzLEwh7coNAwXjX",
+                "definition": "A mother or father of a child. Lanier v. Traub, 934 F.2d 287 (11th Cir. 1991)",
+                "synonyms": [
+                  "Elternteil",
+                  "Padre/Madre",
+                  "Pai",
+                  "Parent",
+                  "הורה",
+                  "माता-पिता",
+                  "父母",
+                  "親"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Entity",
+                    "iri_hash": "R7L5eLIzH0CpOUE74uJvSjL"
+                  },
+                  {
+                    "label": "Individual Person Characteristics",
+                    "iri_hash": "R7sHH7RvjZ6aZS7ZExDpYmR"
+                  },
+                  {
+                    "label": "Familial Status",
+                    "iri_hash": "RBz2aCAIZMshK7S6EKsCHmX"
+                  },
+                  {
+                    "label": "Familial Role",
+                    "iri_hash": "RC5RK4Beoxturh6V8lBfWfZ"
+                  },
+                  {
+                    "label": "Parent",
+                    "iri_hash": "R9EOkKjFMzLEwh7coNAwXjX"
+                  }
+                ],
+                "score": 40.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Parenting Plan",
+                "iri": "https://folio.openlegalstandard.org/RBtI1NMNyrTTDFr6Oj9BNHW",
+                "iri_hash": "RBtI1NMNyrTTDFr6Oj9BNHW",
+                "definition": "A Parenting Plan is a legal document that outlines the arrangements and responsibilities of parents or guardians regarding the care and upbringing of their child or children. It typically includes details about custody, visitation schedules, decision-making authority, and other matters related to the child's welfare. These plans are often established during divorce or separation proceedings or as part of co-parenting agreements.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Parenting Plan",
+                    "iri_hash": "RBtI1NMNyrTTDFr6Oj9BNHW"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 8,
+        "item_text": "Support Obligations",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Obligation",
+                "iri": "https://folio.openlegalstandard.org/RDtFkLR3v97fran5zQ3ugao",
+                "iri_hash": "RDtFkLR3v97fran5zQ3ugao",
+                "definition": "An obligation is a legal or moral duty that requires a certain course of action or behavior, often enforceable by law or ethical principles.",
+                "synonyms": [
+                  "Duty",
+                  "Legal Obligation",
+                  "Responsibility"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Deontic Specification",
+                    "iri_hash": "RClhbl4E1TJp9LygIXewIhn"
+                  },
+                  {
+                    "label": "Obligation",
+                    "iri_hash": "RDtFkLR3v97fran5zQ3ugao"
+                  }
+                ],
+                "score": 75.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 9,
+        "item_text": "Child Support",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Child",
+                "iri": "https://folio.openlegalstandard.org/RQCqQcWqriNQ2XBCucDmpq",
+                "iri_hash": "RQCqQcWqriNQ2XBCucDmpq",
+                "definition": "A Child is an individual who is the offspring of one or more parents, either biologically or through legal processes like adoption. In legal contexts, a child is often considered a minor and is under the guardianship of their parent(s) or legal guardian(s) until reaching the age of majority.",
+                "synonyms": [],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Entity",
+                    "iri_hash": "R7L5eLIzH0CpOUE74uJvSjL"
+                  },
+                  {
+                    "label": "Individual Person Characteristics",
+                    "iri_hash": "R7sHH7RvjZ6aZS7ZExDpYmR"
+                  },
+                  {
+                    "label": "Familial Status",
+                    "iri_hash": "RBz2aCAIZMshK7S6EKsCHmX"
+                  },
+                  {
+                    "label": "Familial Role",
+                    "iri_hash": "RC5RK4Beoxturh6V8lBfWfZ"
+                  },
+                  {
+                    "label": "Child",
+                    "iri_hash": "RQCqQcWqriNQ2XBCucDmpq"
+                  }
+                ],
+                "score": 45.0
+              }
+            ]
+          },
+          {
+            "branch": "Forums and Venues",
+            "branch_color": "#7b2d8e",
+            "candidates": [
+              {
+                "label": "Child Support Court",
+                "iri": "https://folio.openlegalstandard.org/R8v0eP8PnMAaTYALLghTkzk",
+                "iri_hash": "R8v0eP8PnMAaTYALLghTkzk",
+                "definition": "A Child Support Court is a specialized court or division within the legal system that handles cases related to child support obligations. These courts oversee matters such as the establishment, modification, enforcement, and collection of child support payments.",
+                "synonyms": [],
+                "branch": "Forums and Venues",
+                "branch_color": "#7b2d8e",
+                "hierarchy_path": [
+                  {
+                    "label": "Forums and Venues",
+                    "iri_hash": "RBjHwNNG2ASVmasLFU42otk"
+                  },
+                  {
+                    "label": "Dispute Forum",
+                    "iri_hash": "R85OMPBjCJJv2cpg2RCwYim"
+                  },
+                  {
+                    "label": "Court Forum",
+                    "iri_hash": "Rafw4pSzJ3S3d8sq6quprG"
+                  },
+                  {
+                    "label": "Court Forum Jurisdiction Types",
+                    "iri_hash": "R9sbuHkJC9aqDlHAgw58VSB"
+                  },
+                  {
+                    "label": "Child Support Court",
+                    "iri_hash": "R8v0eP8PnMAaTYALLghTkzk"
+                  }
+                ],
+                "score": 82.0
+              }
+            ]
+          },
+          {
+            "branch": "Legal Authorities",
+            "branch_color": "#8b1a1a",
+            "candidates": [
+              {
+                "label": "Child Support Guidelines",
+                "iri": "https://folio.openlegalstandard.org/RDrCSeuostMVOEldU6FRk7O",
+                "iri_hash": "RDrCSeuostMVOEldU6FRk7O",
+                "definition": "Child Support Guidelines are legal regulations or guidelines established by a government authority to determine the amount of financial support that a non-custodial parent is required to provide for their child or children. These guidelines take into account factors such as the parents' incomes, the child's needs, and the cost of living. They provide a standardized method for calculating child support payments, ensuring fairness and consistency in support orders.",
+                "synonyms": [],
+                "branch": "Legal Authorities",
+                "branch_color": "#8b1a1a",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Authorities",
+                    "iri_hash": "RC1CZydjfH8oiM4W3rCkma3"
+                  },
+                  {
+                    "label": "Regulations",
+                    "iri_hash": "RrECTdM9f5ml4sac9MFrSC"
+                  },
+                  {
+                    "label": "Child Support Guidelines",
+                    "iri_hash": "RDrCSeuostMVOEldU6FRk7O"
+                  }
+                ],
+                "score": 82.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Child Support",
+                "iri": "https://folio.openlegalstandard.org/R9JcsdtYN2CUc5CfCTULHYC",
+                "iri_hash": "R9JcsdtYN2CUc5CfCTULHYC",
+                "definition": "Child support is a legal obligation for a parent to provide financial assistance to their child, typically paid by the non-custodial parent to the custodial parent.",
+                "synonyms": [
+                  "Child Maintenance",
+                  "Kindesunterhalt",
+                  "Manutención de menores",
+                  "Pension alimentaire pour enfant",
+                  "Pensión alimenticia para menores",
+                  "Pensão alimentícia para crianças",
+                  "תמיכה ילדים",
+                  "बाल भरण",
+                  "子女赡养费",
+                  "養育費"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Elements of Claim",
+                    "iri_hash": "RDspRIwoJTlopUDjSgLRduf"
+                  },
+                  {
+                    "label": "Damages",
+                    "iri_hash": "RCCv5YLoHUOm5AlqcCBzqGf"
+                  },
+                  {
+                    "label": "Monetary Damages",
+                    "iri_hash": "RB2CEA5hNfHnNl8DMKIfK5F"
+                  },
+                  {
+                    "label": "Child Support",
+                    "iri_hash": "R9JcsdtYN2CUc5CfCTULHYC"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Child Support Claim",
+                "iri": "https://folio.openlegalstandard.org/RBOwCCBkhg24geD2foAgBOB",
+                "iri_hash": "RBOwCCBkhg24geD2foAgBOB",
+                "definition": "A Child Support Claim is a legal action taken by a parent to seek financial support from the other parent for the upbringing and care of their child, which falls under the broader category of Custody and Visitation Claims.",
+                "synonyms": [
+                  "Child Maintenance Claim",
+                  "Demande de pension alimentaire pour enfant",
+                  "Reclamación de Manutención Infantil",
+                  "Reclamo de Pensión Alimenticia",
+                  "Reivindicação de pensão alimentícia para crianças",
+                  "Unterhaltsanspruch für Kinder",
+                  "תביעת תמיכה בילדים",
+                  "बाल भरण दावा",
+                  "子供扶養請求",
+                  "子女抚养费申请"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Custody and Visitation Claims",
+                    "iri_hash": "R1XGKMfgmQGI3yTSEndqMN"
+                  },
+                  {
+                    "label": "Child Support Claim",
+                    "iri_hash": "RBOwCCBkhg24geD2foAgBOB"
+                  }
+                ],
+                "score": 84.0
+              },
+              {
+                "label": "Temporary Child Support",
+                "iri": "https://folio.openlegalstandard.org/R9tUNXTrXPQ4lRHNJjAo2Cm",
+                "iri_hash": "R9tUNXTrXPQ4lRHNJjAo2Cm",
+                "definition": "Temporary Child Support refers to the financial assistance provided by one parent to the other during the pendency of a matrimonial emergency application, for the purpose of supporting their child/children.",
+                "synonyms": [
+                  "Manutención temporal de hijos",
+                  "Pension alimentaire temporaire pour enfant",
+                  "Pensão alimentícia temporária para crianças",
+                  "Temporary Child Support",
+                  "Vorläufiger Kindesunterhalt",
+                  "תמיכה זמנית בילדים",
+                  "अस्थायी बाल भरण-पोषण",
+                  "一時的な子供の養育費",
+                  "临时儿童赡养费"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Civil Remedies / Relief Sought",
+                    "iri_hash": "RDbz1PVc6y57oOb9jAIl0eN"
+                  },
+                  {
+                    "label": "Remedies in Family Law",
+                    "iri_hash": "RBOczjtsHXQh2ojzTubbrxI"
+                  },
+                  {
+                    "label": "Matrimonial Emergency Applications",
+                    "iri_hash": "RCQJU54O6qCvotCfmDwYZwj"
+                  },
+                  {
+                    "label": "Temporary Child Support",
+                    "iri_hash": "R9tUNXTrXPQ4lRHNJjAo2Cm"
+                  }
+                ],
+                "score": 83.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 6
+      },
+      {
+        "item_index": 10,
+        "item_text": "Spousal Support",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Spousal Support",
+                "iri": "https://folio.openlegalstandard.org/RDeWjTZogrlt1XvduSP1R8s",
+                "iri_hash": "RDeWjTZogrlt1XvduSP1R8s",
+                "definition": "Spousal support refers to the financial assistance provided by one spouse to the other after separation or divorce, typically to maintain the standard of living established during the marriage.",
+                "synonyms": [
+                  "Ehegattenunterhalt",
+                  "Manutención conyugal",
+                  "Pension alimentaire pour conjoint",
+                  "Pensión alimenticia para el cónyuge",
+                  "Pensão alimentícia para cônjuge",
+                  "Spousal Maintenance",
+                  "תמיכה בניידות בני זוג",
+                  "पति या पत्नी का सहारा",
+                  "配偶扶養費",
+                  "配偶赡养费"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Elements of Claim",
+                    "iri_hash": "RDspRIwoJTlopUDjSgLRduf"
+                  },
+                  {
+                    "label": "Damages",
+                    "iri_hash": "RCCv5YLoHUOm5AlqcCBzqGf"
+                  },
+                  {
+                    "label": "Monetary Damages",
+                    "iri_hash": "RB2CEA5hNfHnNl8DMKIfK5F"
+                  },
+                  {
+                    "label": "Spousal Support",
+                    "iri_hash": "RDeWjTZogrlt1XvduSP1R8s"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Spousal Support Claim",
+                "iri": "https://folio.openlegalstandard.org/RcjE7ZFthlfdvlhZ5GCJyj",
+                "iri_hash": "RcjE7ZFthlfdvlhZ5GCJyj",
+                "definition": "A Spousal Support Claim is a legal request made by one spouse to receive financial assistance from the other spouse following a divorce or separation. This claim is typically based on factors such as income disparity, the length of the marriage, and each spouse's financial needs and contributions during the marriage. Spousal support, also known as alimony, is designed to provide financial support to the lower-earning spouse to help them maintain their standard of living or become financially independent.",
+                "synonyms": [],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Divorce Claims",
+                    "iri_hash": "R7widavYhXmyfw9WvR9ahBs"
+                  },
+                  {
+                    "label": "Spousal Support Claim",
+                    "iri_hash": "RcjE7ZFthlfdvlhZ5GCJyj"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 11,
+        "item_text": "Child Support Enforcement Claim",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Child",
+                "iri": "https://folio.openlegalstandard.org/RQCqQcWqriNQ2XBCucDmpq",
+                "iri_hash": "RQCqQcWqriNQ2XBCucDmpq",
+                "definition": "A Child is an individual who is the offspring of one or more parents, either biologically or through legal processes like adoption. In legal contexts, a child is often considered a minor and is under the guardianship of their parent(s) or legal guardian(s) until reaching the age of majority.",
+                "synonyms": [],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Entity",
+                    "iri_hash": "R7L5eLIzH0CpOUE74uJvSjL"
+                  },
+                  {
+                    "label": "Individual Person Characteristics",
+                    "iri_hash": "R7sHH7RvjZ6aZS7ZExDpYmR"
+                  },
+                  {
+                    "label": "Familial Status",
+                    "iri_hash": "RBz2aCAIZMshK7S6EKsCHmX"
+                  },
+                  {
+                    "label": "Familial Role",
+                    "iri_hash": "RC5RK4Beoxturh6V8lBfWfZ"
+                  },
+                  {
+                    "label": "Child",
+                    "iri_hash": "RQCqQcWqriNQ2XBCucDmpq"
+                  }
+                ],
+                "score": 42.0
+              },
+              {
+                "label": "Parent",
+                "iri": "https://folio.openlegalstandard.org/R9EOkKjFMzLEwh7coNAwXjX",
+                "iri_hash": "R9EOkKjFMzLEwh7coNAwXjX",
+                "definition": "A mother or father of a child. Lanier v. Traub, 934 F.2d 287 (11th Cir. 1991)",
+                "synonyms": [
+                  "Elternteil",
+                  "Padre/Madre",
+                  "Pai",
+                  "Parent",
+                  "הורה",
+                  "माता-पिता",
+                  "父母",
+                  "親"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Entity",
+                    "iri_hash": "R7L5eLIzH0CpOUE74uJvSjL"
+                  },
+                  {
+                    "label": "Individual Person Characteristics",
+                    "iri_hash": "R7sHH7RvjZ6aZS7ZExDpYmR"
+                  },
+                  {
+                    "label": "Familial Status",
+                    "iri_hash": "RBz2aCAIZMshK7S6EKsCHmX"
+                  },
+                  {
+                    "label": "Familial Role",
+                    "iri_hash": "RC5RK4Beoxturh6V8lBfWfZ"
+                  },
+                  {
+                    "label": "Parent",
+                    "iri_hash": "R9EOkKjFMzLEwh7coNAwXjX"
+                  }
+                ],
+                "score": 38.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Child Support Enforcement Claim",
+                "iri": "https://folio.openlegalstandard.org/R7TDmkWo6F51IzefrMIgKY9",
+                "iri_hash": "R7TDmkWo6F51IzefrMIgKY9",
+                "definition": "A Child Support Enforcement Claim is a legal action taken by a party to enforce a child support claim against a non-paying parent.",
+                "synonyms": [
+                  "Anspruch auf Durchsetzung von Kindesunterhalt",
+                  "Child Support Enforcement Claim",
+                  "Reclamación de cumplimiento de manutención infantil",
+                  "Reclamo de cumplimiento de manutención infantil",
+                  "Reivindicação de execução de pensão alimentícia para crianças",
+                  "Réclamation de recouvrement de pension alimentaire pour enfants",
+                  "תביעה לאכיפת תמיכה בילדים",
+                  "बाल रक्षा प्रवर्तन दावा",
+                  "儿童支持执行索赔",
+                  "児童扶養手当の強制執行請求"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Custody and Visitation Claims",
+                    "iri_hash": "R1XGKMfgmQGI3yTSEndqMN"
+                  },
+                  {
+                    "label": "Child Support Claim",
+                    "iri_hash": "RBOwCCBkhg24geD2foAgBOB"
+                  },
+                  {
+                    "label": "Child Support Enforcement Claim",
+                    "iri_hash": "R7TDmkWo6F51IzefrMIgKY9"
+                  }
+                ],
+                "score": 99.0
+              },
+              {
+                "label": "Child Support",
+                "iri": "https://folio.openlegalstandard.org/R9JcsdtYN2CUc5CfCTULHYC",
+                "iri_hash": "R9JcsdtYN2CUc5CfCTULHYC",
+                "definition": "Child support is a legal obligation for a parent to provide financial assistance to their child, typically paid by the non-custodial parent to the custodial parent.",
+                "synonyms": [
+                  "Child Maintenance",
+                  "Kindesunterhalt",
+                  "Manutención de menores",
+                  "Pension alimentaire pour enfant",
+                  "Pensión alimenticia para menores",
+                  "Pensão alimentícia para crianças",
+                  "תמיכה ילדים",
+                  "बाल भरण",
+                  "子女赡养费",
+                  "養育費"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Elements of Claim",
+                    "iri_hash": "RDspRIwoJTlopUDjSgLRduf"
+                  },
+                  {
+                    "label": "Damages",
+                    "iri_hash": "RCCv5YLoHUOm5AlqcCBzqGf"
+                  },
+                  {
+                    "label": "Monetary Damages",
+                    "iri_hash": "RB2CEA5hNfHnNl8DMKIfK5F"
+                  },
+                  {
+                    "label": "Child Support",
+                    "iri_hash": "R9JcsdtYN2CUc5CfCTULHYC"
+                  }
+                ],
+                "score": 78.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
+      },
+      {
+        "item_index": 12,
+        "item_text": "Protective Orders",
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Protective Order",
+                "iri": "https://folio.openlegalstandard.org/R7053oNO7Kct0Nr8SexmzuU",
+                "iri_hash": "R7053oNO7Kct0Nr8SexmzuU",
+                "definition": "A Protective Order is a legal order issued by a court to protect a person or entity from harm or harassment by another party.",
+                "synonyms": [
+                  "Ordem de Proteção",
+                  "Orden de protección",
+                  "Ordonnance de protection",
+                  "Protective Order",
+                  "Schutzanordnung",
+                  "צו הגנה",
+                  "संरक्षण आदेश",
+                  "保护令",
+                  "保護命令"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Litigation Document",
+                    "iri_hash": "Rjco9ohucVSJ0XxprM5Opb"
+                  },
+                  {
+                    "label": "Trial Court Practice Documents",
+                    "iri_hash": "R7zvYKadqTXgMZV8ghLsloR"
+                  },
+                  {
+                    "label": "Trial Court Created Documents",
+                    "iri_hash": "RDBXUrFP9mCZLCxzqy8nbEX"
+                  },
+                  {
+                    "label": "Order",
+                    "iri_hash": "RDmsvdtBrrw46UnCDJ0LKrJ"
+                  },
+                  {
+                    "label": "Protective Order",
+                    "iri_hash": "R7053oNO7Kct0Nr8SexmzuU"
+                  }
+                ],
+                "score": 95.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 13,
+        "item_text": "Restraining Order",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Temporary Restraining Order",
+                "iri": "https://folio.openlegalstandard.org/R7ASJC76FQwJNtH4rbUqULk",
+                "iri_hash": "R7ASJC76FQwJNtH4rbUqULk",
+                "definition": "A Temporary Restraining Order (TRO) is a provisional legal remedy that prohibits a party from taking certain actions until a court can make a final decision on the matter.",
+                "synonyms": [
+                  "Einstweilige Verfügung",
+                  "Interim injunction",
+                  "Ordem de Restrição Temporária",
+                  "Orden de protección temporal",
+                  "Orden de restricción temporal",
+                  "Ordonnance de protection temporaire",
+                  "TRO",
+                  "צו הגבלה זמני",
+                  "अस्थायी रोकथाम आदेश",
+                  "一時的差止命令",
+                  "临时限制令"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Injunction",
+                    "iri_hash": "R9rhwkH0GU868poYsoFKzVb"
+                  },
+                  {
+                    "label": "Temporary Restraining Order",
+                    "iri_hash": "R7ASJC76FQwJNtH4rbUqULk"
+                  }
+                ],
+                "score": 82.0
+              },
+              {
+                "label": "Violation of a Restraining Order",
+                "iri": "https://folio.openlegalstandard.org/R9YJidoNtjYJ9ullx9SRy6k",
+                "iri_hash": "R9YJidoNtjYJ9ullx9SRy6k",
+                "definition": "The violation of a restraining order refers to the act of disregarding a court order that prohibits contact with a particular person or entering a specific area, which can result in criminal charges for harassment or misdemeanor offenses.",
+                "synonyms": [
+                  "Breach of a Restraining Order",
+                  "Quebrantamiento de una Orden de Alejamiento",
+                  "Verstoß gegen eine einstweilige Verfügung",
+                  "Violación de una Orden de Restricción",
+                  "Violation d'une ordonnance de restriction",
+                  "Violação de uma ordem de restrição",
+                  "הפרת צו הגבלה",
+                  "पाबंदी आदेश का उल्लंघन",
+                  "接見禁止令違反",
+                  "违反限制令"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Crimes Against People",
+                    "iri_hash": "R7MbuFEaL6NyU9tM2AXk7lk"
+                  },
+                  {
+                    "label": "Criminal Harassment",
+                    "iri_hash": "R9KcDahapJG8vbCxXh6JDwm"
+                  },
+                  {
+                    "label": "Violation of a Restraining Order",
+                    "iri_hash": "R9YJidoNtjYJ9ullx9SRy6k"
+                  }
+                ],
+                "score": 45.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 14,
+        "item_text": "Criminal Harassment",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Criminal Harassment",
+                "iri": "https://folio.openlegalstandard.org/R9KcDahapJG8vbCxXh6JDwm",
+                "iri_hash": "R9KcDahapJG8vbCxXh6JDwm",
+                "definition": "Criminal Harassment is a type of crime against individuals that involves intentionally and persistently causing fear, alarm, or distress to another person through various forms of behavior, such as stalking, cyberbullying, or making terroristic threats.",
+                "synonyms": [
+                  "Acoso penal",
+                  "Assédio criminal",
+                  "Criminal Harassment",
+                  "Harcèlement criminel",
+                  "Strafverfolgung bei Belästigung",
+                  "הטרדה פלילית",
+                  "आपराधिक उत्पीड़न",
+                  "刑事ハラスメント",
+                  "刑事骚扰"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Criminal Claims",
+                    "iri_hash": "R7u1GstOpfAmZ3mI7yFcbgU"
+                  },
+                  {
+                    "label": "Crimes Against People",
+                    "iri_hash": "R7MbuFEaL6NyU9tM2AXk7lk"
+                  },
+                  {
+                    "label": "Criminal Harassment",
+                    "iri_hash": "R9KcDahapJG8vbCxXh6JDwm"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 15,
+        "item_text": "Adoption & Guardianship",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Guardian",
+                "iri": "https://folio.openlegalstandard.org/RC3NPYKmo5ax7ksZ92FZWhl",
+                "iri_hash": "RC3NPYKmo5ax7ksZ92FZWhl",
+                "definition": "A person appointed to assume control of and responsibility for the care of the beneficiary, the management of his or her estate, or both. 20 CFR 725.506",
+                "synonyms": [
+                  "Guardian",
+                  "Guardián",
+                  "Wächter",
+                  "gardien",
+                  "guardião",
+                  "הגורדיאן",
+                  "गार्डियन",
+                  "ガーディアン",
+                  "守护者"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Entity",
+                    "iri_hash": "R7L5eLIzH0CpOUE74uJvSjL"
+                  },
+                  {
+                    "label": "Individual Person Characteristics",
+                    "iri_hash": "R7sHH7RvjZ6aZS7ZExDpYmR"
+                  },
+                  {
+                    "label": "Familial Status",
+                    "iri_hash": "RBz2aCAIZMshK7S6EKsCHmX"
+                  },
+                  {
+                    "label": "Familial Role",
+                    "iri_hash": "RC5RK4Beoxturh6V8lBfWfZ"
+                  },
+                  {
+                    "label": "Guardian",
+                    "iri_hash": "RC3NPYKmo5ax7ksZ92FZWhl"
+                  }
+                ],
+                "score": 72.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Guardianship",
+                "iri": "https://folio.openlegalstandard.org/RCVn9Ew2WyR8O4O5WGDlLKO",
+                "iri_hash": "RCVn9Ew2WyR8O4O5WGDlLKO",
+                "definition": "The legal concept of Guardianship refers to the legal authority granted to a person to make decisions on behalf of another individual who is unable to make decisions for themselves due to mental or physical incapacity, with specific application to family law and matrimonial claims.",
+                "synonyms": [
+                  "Curatela",
+                  "Guardianship",
+                  "Tutela",
+                  "Tutelle",
+                  "Vormundschaft",
+                  "אפוטרופוס",
+                  "प्रतिनिधित्व",
+                  "後見制度",
+                  "监护"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Guardianship",
+                    "iri_hash": "RCVn9Ew2WyR8O4O5WGDlLKO"
+                  }
+                ],
+                "score": 92.0
+              },
+              {
+                "label": "Adoption",
+                "iri": "https://folio.openlegalstandard.org/RCw8IC5TbjkV1rxNruwttNL",
+                "iri_hash": "RCw8IC5TbjkV1rxNruwttNL",
+                "definition": "The legal process by which a person or couple becomes the legal parent(s) of a child who is not biologically their own, often involving termination of the biological parents' rights and responsibilities.",
+                "synonyms": [
+                  "Adopción",
+                  "Adoption",
+                  "Adoção",
+                  "אימוץ",
+                  "दत्तक",
+                  "领养",
+                  "養子縁組"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Child Dependency Permanency",
+                    "iri_hash": "R9gqzNBOvSSiVGWHH7ZIXzM"
+                  },
+                  {
+                    "label": "Adoption",
+                    "iri_hash": "RCw8IC5TbjkV1rxNruwttNL"
+                  }
+                ],
+                "score": 92.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
+      },
+      {
+        "item_index": 16,
+        "item_text": "Adoption",
+        "branch_groups": [
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Adoption",
+                "iri": "https://folio.openlegalstandard.org/RCw8IC5TbjkV1rxNruwttNL",
+                "iri_hash": "RCw8IC5TbjkV1rxNruwttNL",
+                "definition": "The legal process by which a person or couple becomes the legal parent(s) of a child who is not biologically their own, often involving termination of the biological parents' rights and responsibilities.",
+                "synonyms": [
+                  "Adopción",
+                  "Adoption",
+                  "Adoção",
+                  "אימוץ",
+                  "दत्तक",
+                  "领养",
+                  "養子縁組"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Remedies, Relief, and Penalties",
+                    "iri_hash": "RsJ6DupkWKlUlCHH0Ycxvp"
+                  },
+                  {
+                    "label": "Child Dependency Permanency",
+                    "iri_hash": "R9gqzNBOvSSiVGWHH7ZIXzM"
+                  },
+                  {
+                    "label": "Adoption",
+                    "iri_hash": "RCw8IC5TbjkV1rxNruwttNL"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      },
+      {
+        "item_index": 17,
+        "item_text": "Guardianship",
+        "branch_groups": [
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Guardian",
+                "iri": "https://folio.openlegalstandard.org/RC3NPYKmo5ax7ksZ92FZWhl",
+                "iri_hash": "RC3NPYKmo5ax7ksZ92FZWhl",
+                "definition": "A person appointed to assume control of and responsibility for the care of the beneficiary, the management of his or her estate, or both. 20 CFR 725.506",
+                "synonyms": [
+                  "Guardian",
+                  "Guardián",
+                  "Wächter",
+                  "gardien",
+                  "guardião",
+                  "הגורדיאן",
+                  "गार्डियन",
+                  "ガーディアン",
+                  "守护者"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Legal Entity",
+                    "iri_hash": "R7L5eLIzH0CpOUE74uJvSjL"
+                  },
+                  {
+                    "label": "Individual Person Characteristics",
+                    "iri_hash": "R7sHH7RvjZ6aZS7ZExDpYmR"
+                  },
+                  {
+                    "label": "Familial Status",
+                    "iri_hash": "RBz2aCAIZMshK7S6EKsCHmX"
+                  },
+                  {
+                    "label": "Familial Role",
+                    "iri_hash": "RC5RK4Beoxturh6V8lBfWfZ"
+                  },
+                  {
+                    "label": "Guardian",
+                    "iri_hash": "RC3NPYKmo5ax7ksZ92FZWhl"
+                  }
+                ],
+                "score": 88.0
+              }
+            ]
+          },
+          {
+            "branch": "Objectives",
+            "branch_color": "#b03020",
+            "candidates": [
+              {
+                "label": "Guardianship",
+                "iri": "https://folio.openlegalstandard.org/RCVn9Ew2WyR8O4O5WGDlLKO",
+                "iri_hash": "RCVn9Ew2WyR8O4O5WGDlLKO",
+                "definition": "The legal concept of Guardianship refers to the legal authority granted to a person to make decisions on behalf of another individual who is unable to make decisions for themselves due to mental or physical incapacity, with specific application to family law and matrimonial claims.",
+                "synonyms": [
+                  "Curatela",
+                  "Guardianship",
+                  "Tutela",
+                  "Tutelle",
+                  "Vormundschaft",
+                  "אפוטרופוס",
+                  "प्रतिनिधित्व",
+                  "後見制度",
+                  "监护"
+                ],
+                "branch": "Objectives",
+                "branch_color": "#b03020",
+                "hierarchy_path": [
+                  {
+                    "label": "Objectives",
+                    "iri_hash": "RlNFgB3TQfMzV26V4V7u4E"
+                  },
+                  {
+                    "label": "Litigation Objectives",
+                    "iri_hash": "RBDhSx7fl9qS0ezDVJuZHX4"
+                  },
+                  {
+                    "label": "Litigation Claims",
+                    "iri_hash": "R9q7GJc1zsYT0P4Xdp6l9Oz"
+                  },
+                  {
+                    "label": "Civil Claims",
+                    "iri_hash": "R8jYAnNATrfoBxAtIKpf72X"
+                  },
+                  {
+                    "label": "Family Law and Matrimonial Claims",
+                    "iri_hash": "RCUXzL8Z4Ddh2CK6TBhofjU"
+                  },
+                  {
+                    "label": "Guardianship",
+                    "iri_hash": "RCVn9Ew2WyR8O4O5WGDlLKO"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
+      },
+      {
+        "item_index": 18,
+        "item_text": "Adoption, Surrogacy, and Paternity Law",
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Adoption, Surrogacy, and Paternity Law",
+                "iri": "https://folio.openlegalstandard.org/RjZYQdnDbpjxRszPUNrCK7",
+                "iri_hash": "RjZYQdnDbpjxRszPUNrCK7",
+                "definition": "Laws relating to adoption, surrogacy and paternity.",
+                "synonyms": [
+                  "Adoption, Surrogacy and Paternity",
+                  "Adoption, Surrogacy, and Paternity Law",
+                  "Adoptions-, Leihmutterschafts- und Vaterschaftsrecht",
+                  "Droit de l'adoption, de la gestation pour autrui et de la paternité",
+                  "Lei de adoção, barriga de aluguel e paternidade",
+                  "Ley de Adopción, Gestación Subrogada y Paternidad",
+                  "חוקי אימוץ, הורות מחליפה ואבותות",
+                  "गोद लेना, सरोगेसी और पितृत्व कानून",
+                  "收养、代孕和父权法律",
+                  "養子縁組、代理出産、父権法",
+                  "ADOP"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Personal and Family Law",
+                    "iri_hash": "RBFgL4Dth9VONjmIdH0bEOs"
+                  },
+                  {
+                    "label": "Adoption, Surrogacy, and Paternity Law",
+                    "iri_hash": "RjZYQdnDbpjxRszPUNrCK7"
+                  }
+                ],
+                "score": 99.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 1
+      }
+    ],
+    "total_items": 19,
+    "branches_available": [
+      {
+        "name": "Actor / Player",
+        "color": "#1e6fa0",
+        "concept_count": 563
+      },
+      {
+        "name": "Area of Law",
+        "color": "#1a5276",
+        "concept_count": 174
+      },
+      {
+        "name": "Asset Type",
+        "color": "#6b5600",
+        "concept_count": 345
+      },
+      {
+        "name": "Communication Modality",
+        "color": "#7b4d93",
+        "concept_count": 11
+      },
+      {
+        "name": "Currency",
+        "color": "#7a5a00",
+        "concept_count": 178
+      },
+      {
+        "name": "Data Format",
+        "color": "#4a5568",
+        "concept_count": 17
+      },
+      {
+        "name": "Document / Artifact",
+        "color": "#9c4a10",
+        "concept_count": 2796
+      },
+      {
+        "name": "Engagement Attributes",
+        "color": "#10613a",
+        "concept_count": 343
+      },
+      {
+        "name": "Event",
+        "color": "#b91c1c",
+        "concept_count": 403
+      },
+      {
+        "name": "FOLIO Type",
+        "color": "#6b5c00",
+        "concept_count": 3
+      },
+      {
+        "name": "Forums and Venues",
+        "color": "#7b2d8e",
+        "concept_count": 2180
+      },
+      {
+        "name": "Governmental Body",
+        "color": "#1a6091",
+        "concept_count": 1585
+      },
+      {
+        "name": "Industry and Market",
+        "color": "#065550",
+        "concept_count": 2137
+      },
+      {
+        "name": "Language",
+        "color": "#7a3b10",
+        "concept_count": 489
+      },
+      {
+        "name": "Legal Authorities",
+        "color": "#8b1a1a",
+        "concept_count": 82
+      },
+      {
+        "name": "Legal Entity",
+        "color": "#085e40",
+        "concept_count": 517
+      },
+      {
+        "name": "Location",
+        "color": "#105560",
+        "concept_count": 3782
+      },
+      {
+        "name": "Matter Narrative",
+        "color": "#6d3580",
+        "concept_count": 13
+      },
+      {
+        "name": "Matter Narrative Format",
+        "color": "#1a6894",
+        "concept_count": 2
+      },
+      {
+        "name": "Objectives",
+        "color": "#b03020",
+        "concept_count": 5411
+      },
+      {
+        "name": "Service",
+        "color": "#065e4e",
+        "concept_count": 434
+      },
+      {
+        "name": "Status",
+        "color": "#864a08",
+        "concept_count": 23
+      },
+      {
+        "name": "System Identifiers",
+        "color": "#3d4d5a",
+        "concept_count": 13
+      }
+    ]
+  },
+  "pipeline_metadata": [
+    {
+      "item_index": 0,
+      "item_text": "Family Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Family Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Family Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 1,
+      "item_text": "Divorce & Separation",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Divorce & Separation",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Divorce & Separation"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 1,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 2,
+      "item_text": "Contested Divorce",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Contested Divorce",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Contested Divorce"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 3,
+      "item_text": "Legal Separation",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Legal Separation",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Legal Separation"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 4,
+      "item_text": "Uncontested Divorce",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Uncontested Divorce",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Uncontested Divorce"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 5,
+      "item_text": "Child Custody",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Child Custody",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Child Custody"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 1,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 6,
+      "item_text": "Custody Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Custody Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Custody Law"
+      },
+      "stage1_candidate_count": 0,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 0,
+      "stage3_judged_count": 0,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 7,
+      "item_text": "Parenting Plan",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Parenting Plan",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Parenting Plan"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 8,
+      "item_text": "Support Obligations",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Support Obligations",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Support Obligations"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 9,
+      "item_text": "Child Support",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Child Support",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Child Support"
+      },
+      "stage1_candidate_count": 6,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 6,
+      "stage3_judged_count": 6,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 10,
+      "item_text": "Spousal Support",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Spousal Support",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Spousal Support"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 11,
+      "item_text": "Child Support Enforcement Claim",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Child Support Enforcement Claim",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Child Support Enforcement Claim"
+      },
+      "stage1_candidate_count": 6,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 6,
+      "stage3_judged_count": 4,
+      "stage3_boosted": 0,
+      "stage3_penalized": 3,
+      "stage3_rejected": 2
+    },
+    {
+      "item_index": 12,
+      "item_text": "Protective Orders",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Protective Orders",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Protective Orders"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 13,
+      "item_text": "Restraining Order",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Restraining Order",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Restraining Order"
+      },
+      "stage1_candidate_count": 2,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 2,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 14,
+      "item_text": "Criminal Harassment",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Criminal Harassment",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Criminal Harassment"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 15,
+      "item_text": "Adoption & Guardianship",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Adoption & Guardianship",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Adoption & Guardianship"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 3,
+      "stage3_boosted": 1,
+      "stage3_penalized": 1,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 16,
+      "item_text": "Adoption",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Adoption",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Adoption"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    },
+    {
+      "item_index": 17,
+      "item_text": "Guardianship",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Guardianship",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Guardianship"
+      },
+      "stage1_candidate_count": 3,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 3,
+      "stage3_judged_count": 2,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 1
+    },
+    {
+      "item_index": 18,
+      "item_text": "Adoption, Surrogacy, and Paternity Law",
+      "prescan": {
+        "segments": [
+          {
+            "text": "Adoption, Surrogacy, and Paternity Law",
+            "branches": [],
+            "reasoning": "prescan disabled",
+            "synonyms": []
+          }
+        ],
+        "raw_text": "Adoption, Surrogacy, and Paternity Law"
+      },
+      "stage1_candidate_count": 1,
+      "stage1b_expanded_count": 0,
+      "stage1b_branches_expanded": [],
+      "stage2_candidate_count": 1,
+      "stage3_judged_count": 1,
+      "stage3_boosted": 0,
+      "stage3_penalized": 0,
+      "stage3_rejected": 0
+    }
+  ],
+  "selections": {
+    "0": [],
+    "1": [
+      "RDhTbfA9WACnFGtRuw8v57e"
+    ],
+    "2": [
+      "RU1dvjPyTUgMePOcj2YloO"
+    ],
+    "3": [
+      "RBvfJW4HbL3Y7Guu9ENS7w2"
+    ],
+    "4": [
+      "RDYKcS4RxtGZzDW14I2wkuX"
+    ],
+    "5": [
+      "RZm4akQHkbU4y4YWTSSjrO"
+    ],
+    "6": [],
+    "7": [
+      "RBtI1NMNyrTTDFr6Oj9BNHW"
+    ],
+    "8": [],
+    "9": [
+      "R9JcsdtYN2CUc5CfCTULHYC"
+    ],
+    "10": [
+      "RDeWjTZogrlt1XvduSP1R8s"
+    ],
+    "11": [
+      "R7TDmkWo6F51IzefrMIgKY9"
+    ],
+    "12": [
+      "R7053oNO7Kct0Nr8SexmzuU"
+    ],
+    "13": [],
+    "14": [
+      "R9KcDahapJG8vbCxXh6JDwm"
+    ],
+    "15": [
+      "RCVn9Ew2WyR8O4O5WGDlLKO"
+    ],
+    "16": [
+      "RCw8IC5TbjkV1rxNruwttNL"
+    ],
+    "17": [
+      "RCVn9Ew2WyR8O4O5WGDlLKO"
+    ],
+    "18": [
+      "RjZYQdnDbpjxRszPUNrCK7"
+    ]
+  },
+  "node_statuses": {
+    "0": "unmapped",
+    "1": "completed",
+    "2": "completed",
+    "3": "completed",
+    "4": "completed",
+    "5": "completed",
+    "6": "unmapped",
+    "7": "completed",
+    "8": "unmapped",
+    "9": "completed",
+    "10": "completed",
+    "11": "completed",
+    "12": "completed",
+    "13": "unmapped",
+    "14": "completed",
+    "15": "completed",
+    "16": "completed",
+    "17": "completed",
+    "18": "completed"
+  },
+  "notes": {},
+  "screen": "mapping",
+  "branch_states": {},
+  "input_branch_states": {},
+  "branch_sort_mode": "default",
+  "custom_branch_order": [],
+  "status_filter": "all",
+  "suggestion_queue": [],
+  "review_queue": [],
+  "pipeline_version": "0.10.0+01f7ecb",
+  "folio_version": "0.2.0"
+}
