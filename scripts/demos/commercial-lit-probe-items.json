@@ -1,0 +1,40 @@
+{
+  "practice_area": "commercial-lit",
+  "source": "packages/core/src/exemplar/data.ts (id: commercial-lit)",
+  "items": [
+    "Complex Commercial Litigation",
+    "Contract Disputes",
+    "Breach of Contract",
+    "Tortious Interference Claims",
+    "Antitrust",
+    "Antitrust and Competition Law",
+    "Antitrust - Bid-Rigging Claims",
+    "Securities Litigation",
+    "Securities Fraud",
+    "Insider Trading",
+    "Consumer & Trade",
+    "Consumer Protection Law",
+    "Unfair Competition",
+    "Dispute Resolution",
+    "Arbitration Practice",
+    "Mediation Practice"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}

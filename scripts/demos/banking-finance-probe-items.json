@@ -1,0 +1,40 @@
+{
+  "practice_area": "banking-finance",
+  "source": "packages/core/src/exemplar/data.ts (id: banking-finance)",
+  "items": [
+    "Banking & Finance Law",
+    "Commercial Lending",
+    "Commercial Finance Law",
+    "Asset-Based Lending Practice",
+    "Securities & Capital Markets",
+    "Broker-Dealer Law",
+    "Derivatives and Futures Law",
+    "Investment Funds",
+    "Investment Companies Law",
+    "Private Equity, Hedge Funds and Venture Capital Law",
+    "Structured Finance",
+    "Structured Finance Law",
+    "Collateralized Loan Obligation",
+    "Compliance & Enforcement",
+    "Bank Secrecy and Anti-Money Laundering Law",
+    "Cryptocurrency Law"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}

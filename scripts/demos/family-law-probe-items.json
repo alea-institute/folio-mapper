@@ -1,0 +1,40 @@
+{
+  "practice_area": "family-law",
+  "source": "packages/core/src/exemplar/data.ts (id: family-law)",
+  "items": [
+    "Family Law",
+    "Divorce & Separation",
+    "Contested Divorce",
+    "Legal Separation",
+    "Child Custody",
+    "Custody Law",
+    "Parenting Plan",
+    "Support Obligations",
+    "Child Support",
+    "Spousal Support",
+    "Protective Orders",
+    "Restraining Order",
+    "Criminal Harassment",
+    "Adoption & Guardianship",
+    "Adoption",
+    "Guardianship"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}

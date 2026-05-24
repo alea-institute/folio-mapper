@@ -1,0 +1,40 @@
+{
+  "practice_area": "real-estate",
+  "source": "packages/core/src/exemplar/data.ts (id: real-estate)",
+  "items": [
+    "Real Property Law",
+    "Property Transactions",
+    "Property Rights and Transactions Law",
+    "Clearing Title",
+    "Landlord-Tenant",
+    "Landlord Tenant Law",
+    "Lease Agreements",
+    "Zoning & Land Use",
+    "Land Use and Zoning Law",
+    "Zoning Variance",
+    "Construction",
+    "Construction and Development Law",
+    "Building Code Violations",
+    "Foreclosure & Liens",
+    "Mortgage Foreclosure",
+    "Eminent Domain Law"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}
