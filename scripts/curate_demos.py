@@ -48,9 +48,9 @@ PROVIDER_ENV_VARS = {
 }
 
 DEFAULT_MODELS = {
-    "anthropic": "claude-3-5-sonnet-latest",
-    "openai": "gpt-4o",
-    "google": "gemini-1.5-pro-latest",
+    "anthropic": "claude-sonnet-4-6",
+    "openai": "gpt-5.5",
+    "google": "gemini-3.5-flash",
 }
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent

@@ -43,9 +43,9 @@ DEFAULT_BASE_URLS: dict[LLMProviderType, str] = {
 
 # Default model per provider (used when none selected)
 DEFAULT_MODELS: dict[LLMProviderType, str] = {
-    LLMProviderType.OPENAI: "gpt-5.2",
+    LLMProviderType.OPENAI: "gpt-5.5",
     LLMProviderType.ANTHROPIC: "claude-sonnet-4-6",
-    LLMProviderType.GOOGLE: "gemini-2.5-flash",
+    LLMProviderType.GOOGLE: "gemini-3.5-flash",
     LLMProviderType.MISTRAL: "mistral-large-latest",
     LLMProviderType.COHERE: "command-a-03-2025",
     LLMProviderType.META_LLAMA: "llama-4-scout",
@@ -54,7 +54,7 @@ DEFAULT_MODELS: dict[LLMProviderType, str] = {
     LLMProviderType.CUSTOM: "",
     LLMProviderType.GROQ: "llama-3.3-70b-versatile",
     LLMProviderType.XAI: "grok-4-0709",
-    LLMProviderType.GITHUB_MODELS: "openai/gpt-5.2",
+    LLMProviderType.GITHUB_MODELS: "openai/gpt-5.5",
     LLMProviderType.LLAMAFILE: "",
 }
 
@@ -121,12 +121,15 @@ KNOWN_MODELS: dict[LLMProviderType, list["ModelInfo"]] = {
         ModelInfo(id="gpt-5", name="GPT-5", context_window=1047576),
         ModelInfo(id="gpt-5.2", name="GPT-5.2", context_window=1047576),
         ModelInfo(id="gpt-5.2-pro", name="GPT-5.2 Pro", context_window=1047576),
+        ModelInfo(id="gpt-5.5", name="GPT-5.5", context_window=1047576),
+        ModelInfo(id="gpt-5.5-pro", name="GPT-5.5 Pro", context_window=1047576),
     ],
     LLMProviderType.ANTHROPIC: [
         ModelInfo(id="claude-haiku-4-5-20251001", name="Claude Haiku 4.5", context_window=200000),
         ModelInfo(id="claude-sonnet-4-5-20250929", name="Claude Sonnet 4.5", context_window=200000),
         ModelInfo(id="claude-sonnet-4-6", name="Claude Sonnet 4.6", context_window=200000),
         ModelInfo(id="claude-opus-4-6", name="Claude Opus 4.6", context_window=200000),
+        ModelInfo(id="claude-opus-4-7", name="Claude Opus 4.7", context_window=200000),
     ],
     LLMProviderType.GOOGLE: [
         ModelInfo(id="gemini-2.5-flash-lite", name="Gemini 2.5 Flash-Lite", context_window=1048576),
@@ -135,6 +138,8 @@ KNOWN_MODELS: dict[LLMProviderType, list["ModelInfo"]] = {
         ModelInfo(id="gemini-3-flash-preview", name="Gemini 3 Flash Preview", context_window=200000),
         ModelInfo(id="gemini-3-pro-preview", name="Gemini 3 Pro Preview", context_window=1048576),
         ModelInfo(id="gemini-3.1-pro-preview", name="Gemini 3.1 Pro Preview", context_window=1048576),
+        ModelInfo(id="gemini-3.1-flash-lite", name="Gemini 3.1 Flash-Lite", context_window=1048576),
+        ModelInfo(id="gemini-3.5-flash", name="Gemini 3.5 Flash", context_window=1048576),
     ],
     LLMProviderType.MISTRAL: [
         ModelInfo(id="mistral-small-latest", name="Mistral Small", context_window=128000),
