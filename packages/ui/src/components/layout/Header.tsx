@@ -21,7 +21,10 @@ interface HeaderProps {
 export function Header({ onOpenSettings, onSaveSession, onNewTab, onOpenSessionPicker, onRestart, onOpenExport, onOpenFolioModal, llmStatus, llmProviderLabel, embeddingStatus, embeddingDetail, folioUpdateStatus, folioUpdateDetail }: HeaderProps) {
   return (
     <header className="flex items-center justify-between border-b border-gray-200 bg-white px-6 py-4">
-      <h1 className="text-xl font-semibold text-gray-900">FOLIO Mapper</h1>
+      <h1 className="text-xl font-semibold">
+        <span className="text-gray-900">FOLIO</span>{' '}
+        <span className="text-blue-600">Mapper</span>
+      </h1>
       <div className="flex items-center gap-1">
         {onRestart && (
           <button
