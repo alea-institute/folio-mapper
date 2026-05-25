@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="FOLIO Mapper">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="24" fill="url(#bg)"/>
+  <!-- Mapping fan-out: one source concept resolving to its FOLIO children -->
+  <g stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.8">
+    <line x1="50" y1="33" x2="27" y2="70"/>
+    <line x1="50" y1="33" x2="50" y2="70"/>
+    <line x1="50" y1="33" x2="73" y2="70"/>
+  </g>
+  <circle cx="50" cy="32" r="12" fill="#ffffff"/>
+  <circle cx="27" cy="71" r="9" fill="#ffffff"/>
+  <circle cx="50" cy="71" r="9" fill="#ffffff"/>
+  <circle cx="73" cy="71" r="9" fill="#ffffff"/>
+</svg>
