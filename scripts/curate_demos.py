@@ -212,6 +212,7 @@ def _build_session_file(
     model: str | None,
     threshold: float,
     accept_threshold: float | None = None,
+    multi_select_threshold: float | None = None,
 ) -> dict[str, Any]:
     """Construct a SessionFile-shaped dict + snapshot fields.
 
@@ -229,19 +230,36 @@ def _build_session_file(
     # (many candidates) can pair with a high --accept-threshold (partial-completion
     # visible mix, D-03). Falls back to --threshold when not specified.
     accept_floor = accept_threshold if accept_threshold is not None else threshold
+    # When set, a completed item maps 1:MANY — the top candidate of EVERY branch
+    # whose top candidate clears this floor is selected (FOLIO mapping is rarely
+    # 1:1). When None, fall back to single-top-candidate selection.
+    multi_floor = multi_select_threshold
     # MappingResponse has items[].branch_groups[].candidates[]; the "top" candidate is
     # the highest-scoring across all branch groups for that item.
     selections: dict[int, list[str]] = {}
     node_statuses: dict[int, str] = {}
     for idx, item_result in enumerate(item_results):
-        all_candidates = [
-            c
-            for bg in (item_result.get("branch_groups") or [])
-            for c in (bg.get("candidates") or [])
-        ]
-        all_candidates.sort(key=lambda c: c.get("score", 0), reverse=True)
-        if all_candidates and all_candidates[0].get("score", 0) >= accept_floor * 100:
-            selections[idx] = [all_candidates[0]["iri_hash"]]
+        branch_groups = item_result.get("branch_groups") or []
+        all_candidates = sorted(
+            (c for bg in branch_groups for c in (bg.get("candidates") or [])),
+            key=lambda c: c.get("score", 0),
+            reverse=True,
+        )
+        global_top = all_candidates[0].get("score", 0) if all_candidates else 0
+        if global_top >= accept_floor * 100:
+            if multi_floor is not None:
+                sel = []
+                for bg in branch_groups:
+                    cands = sorted(
+                        (bg.get("candidates") or []),
+                        key=lambda c: c.get("score", 0),
+                        reverse=True,
+                    )
+                    if cands and cands[0].get("score", 0) >= multi_floor * 100:
+                        sel.append(cands[0]["iri_hash"])
+                selections[idx] = sel or [all_candidates[0]["iri_hash"]]
+            else:
+                selections[idx] = [all_candidates[0]["iri_hash"]]
             node_statuses[idx] = "completed"
         else:
             selections[idx] = []
@@ -367,6 +385,17 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
             "Defaults to --threshold for backward compatibility."
         ),
     )
+    p.add_argument(
+        "--multi-select-threshold",
+        type=float,
+        default=None,
+        help=(
+            "Enable 1:MANY mappings: for each completed item, auto-select the top "
+            "candidate of EVERY branch whose top candidate scores >= this * 100 "
+            "(e.g. 0.6). FOLIO mapping is rarely 1:1. When omitted, only the single "
+            "global-top candidate per item is selected."
+        ),
+    )
     p.add_argument("--max-per-branch", type=int, default=10, help="Max candidates per FOLIO branch")
     p.add_argument(
         "--output-dir",
@@ -470,6 +499,7 @@ def main(argv: list[str]) -> int:
         model=None if args.no_llm else model_label,
         threshold=args.threshold,
         accept_threshold=args.accept_threshold,
+        multi_select_threshold=args.multi_select_threshold,
     )
 
     # Write pretty-printed JSON (no partial writes)
