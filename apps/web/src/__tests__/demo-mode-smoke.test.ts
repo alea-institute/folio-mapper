@@ -16,9 +16,10 @@ import { useMappingStore } from '../store/mapping-store';
  *       -> loadSessionFromObject   // hydrates the stores + sets the screen
  *
  * For every registered area it asserts: the lazy loader resolves a valid
- * anthropic-curated payload, the session hydrates to the mapping screen with a
- * visible auto-accept/pending mix, and zero live pipeline/LLM/parse calls fire
- * during the load. This exercises the manifest wiring for all 10 slugs at once.
+ * full-pipeline-curated payload (google/gemini-3-flash-preview), the session
+ * hydrates to the mapping screen with a visible auto-accept/pending mix, and
+ * zero live pipeline/LLM/parse calls fire during the load. This exercises the
+ * manifest wiring for all 10 slugs at once.
  */
 
 const SLUGS = [
@@ -63,8 +64,10 @@ describe('demo mode end-to-end load (all registered areas)', () => {
       const payload = (await getDemoPayload(slug)) as Record<string, unknown> | null;
       expect(payload, `getDemoPayload("${slug}") should resolve`).not.toBeNull();
       const p = payload as Record<string, unknown>;
-      expect(p.provider).toBe('anthropic');
-      expect(p.model).toBe('claude-3-5-sonnet-latest');
+      // Demos are curated through the full pipeline with Gemini (high recall);
+      // see scripts/curate_demos.py --provider google.
+      expect(p.provider).toBe('google');
+      expect(p.model).toBe('gemini-3-flash-preview');
       expect(p.version).toBe('1.3');
 
       // 2. Load it the way App does — hydrates the stores + sets the screen.

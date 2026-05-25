@@ -24,11 +24,18 @@ A demo payload is a snapshot of a full FOLIO Mapper session — input text, pars
 pnpm dev:api
 
 # Terminal B
-export ANTHROPIC_API_KEY=sk-ant-...        # or OPENAI_API_KEY / GOOGLE_API_KEY
+export GOOGLE_API_KEY=...                   # or ANTHROPIC_API_KEY / OPENAI_API_KEY
 backend/.venv/bin/python scripts/curate_demos.py \
   --area personal-injury \
-  --provider anthropic
+  --provider google \
+  --threshold 0.3 \                         # low → HIGH recall (many candidates/item)
+  --accept-threshold 0.9                    # high → only confident items auto-accept (D-03 visible mix)
 # → writes apps/web/src/exemplar/demos/personal-injury.demo.json
+
+# --threshold and --accept-threshold are decoupled: keep --threshold low for
+# recall, --accept-threshold high (~0.9) so each demo lands at 0 < completed <
+# total (a mix of auto-accepted + pending-review items). Omitting
+# --accept-threshold falls back to --threshold (the old all-accepted behavior).
 
 # Sanity-check the output
 jq '.version, .total_nodes, .pipeline_version, .folio_version' \

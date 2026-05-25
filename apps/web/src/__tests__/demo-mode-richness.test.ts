@@ -19,10 +19,10 @@ import demoImmigration from '../exemplar/demos/immigration.demo.json';
  *
  * Table is parametrized — per-area plans add one import + one row each.
  *
- * NOTE on Personal Injury: the SHIPPED PI demo was curated at threshold 0.30
- * and has completed === total_nodes === 19 (all-accepted). It fails D-03 until
- * re-curated with --provider anthropic --threshold 0.85 in Plan 03. The entry
- * is marked as todo and will join the active table after re-curation.
+ * The mix is achieved by decoupling recall from auto-accept: demos are curated
+ * through the full pipeline at a LOW recall threshold (many candidates per item)
+ * but a HIGH accept floor (curate_demos.py --accept-threshold 0.9), so only
+ * high-confidence items are pre-accepted and the rest stay pending.
  */
 
 // Type narrowing helper — demo JSONs have total_nodes and completed at top level:

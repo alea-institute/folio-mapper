@@ -211,6 +211,7 @@ def _build_session_file(
     provider: str | None,
     model: str | None,
     threshold: float,
+    accept_threshold: float | None = None,
 ) -> dict[str, Any]:
     """Construct a SessionFile-shaped dict + snapshot fields.
 
@@ -223,7 +224,11 @@ def _build_session_file(
     pipeline_metadata = pipeline_response.get("pipeline_metadata")
     item_results = mapping.get("items", [])
 
-    # Auto-accept the top-scored candidate per item iff score ≥ threshold * 100.
+    # Auto-accept the top-scored candidate per item iff score ≥ accept floor * 100.
+    # The accept floor is decoupled from the recall threshold so a low --threshold
+    # (many candidates) can pair with a high --accept-threshold (partial-completion
+    # visible mix, D-03). Falls back to --threshold when not specified.
+    accept_floor = accept_threshold if accept_threshold is not None else threshold
     # MappingResponse has items[].branch_groups[].candidates[]; the "top" candidate is
     # the highest-scoring across all branch groups for that item.
     selections: dict[int, list[str]] = {}
@@ -235,7 +240,7 @@ def _build_session_file(
             for c in (bg.get("candidates") or [])
         ]
         all_candidates.sort(key=lambda c: c.get("score", 0), reverse=True)
-        if all_candidates and all_candidates[0].get("score", 0) >= threshold * 100:
+        if all_candidates and all_candidates[0].get("score", 0) >= accept_floor * 100:
             selections[idx] = [all_candidates[0]["iri_hash"]]
             node_statuses[idx] = "completed"
         else:
@@ -349,7 +354,19 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
         ),
     )
     p.add_argument("--backend", default="http://127.0.0.1:58000", help="Backend base URL")
-    p.add_argument("--threshold", type=float, default=0.3, help="Pipeline score threshold (0-1)")
+    p.add_argument("--threshold", type=float, default=0.3, help="Pipeline candidate-recall threshold (0-1); lower = more candidates")
+    p.add_argument(
+        "--accept-threshold",
+        type=float,
+        default=None,
+        help=(
+            "Auto-accept floor (0-1) for the visible-mix: an item is marked "
+            "completed only if its top candidate scores >= this * 100. Decoupled "
+            "from --threshold so demos can pair HIGH recall (low --threshold) with "
+            "a partial-completion mix (high --accept-threshold, e.g. 0.9). "
+            "Defaults to --threshold for backward compatibility."
+        ),
+    )
     p.add_argument("--max-per-branch", type=int, default=10, help="Max candidates per FOLIO branch")
     p.add_argument(
         "--output-dir",
@@ -452,6 +469,7 @@ def main(argv: list[str]) -> int:
         provider=None if args.no_llm else args.provider,
         model=None if args.no_llm else model_label,
         threshold=args.threshold,
+        accept_threshold=args.accept_threshold,
     )
 
     # Write pretty-printed JSON (no partial writes)
