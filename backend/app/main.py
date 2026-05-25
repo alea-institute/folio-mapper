@@ -96,13 +96,29 @@ async def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
-# Desktop mode: serve built web app as static files (SPA fallback to index.html)
+# Serve built web app as static files (SPA fallback to index.html). Used by the
+# desktop build and the Railway/server deploys (gated on FOLIO_MAPPER_WEB_DIR).
 web_dir = os.environ.get("FOLIO_MAPPER_WEB_DIR")
 if web_dir and os.path.isdir(web_dir):
+    from starlette.responses import Response
     from starlette.staticfiles import StaticFiles
     from starlette.types import Receive, Scope, Send
 
     class SPAStaticFiles(StaticFiles):
+        async def get_response(self, path: str, scope: Scope) -> Response:
+            response = await super().get_response(path, scope)
+            # Vite emits content-hashed filenames under /assets/, so those are
+            # safe to cache forever. Everything else — above all index.html, the
+            # SPA entrypoint — MUST always revalidate, or browsers heuristically
+            # cache the old index.html (Starlette sets no Cache-Control) and keep
+            # loading a stale JS bundle after a deploy. The etag makes the
+            # revalidation a cheap 304.
+            if "/assets/" in f"/{path}":
+                response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
+            else:
+                response.headers["Cache-Control"] = "no-cache"
+            return response
+
         async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
             try:
                 await super().__call__(scope, receive, send)
