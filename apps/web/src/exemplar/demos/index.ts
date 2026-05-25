@@ -1,6 +1,5 @@
-// Static ES-module imports of curated demo payloads. Tree-shakable; no network.
-// Per Phase 2 CONTEXT decision: in-app static imports under apps/web/src/exemplar/demos/.
-import personalInjuryDemo from './personal-injury.demo.json';
+// Curated demo payloads live as JSON under apps/web/src/exemplar/demos/ and are
+// loaded entirely client-side (no network). See getDemoPayload below.
 
 /**
  * A curated demo session payload. Conforms to SessionFile (see
@@ -17,46 +16,36 @@ export interface DemoPayload {
   [key: string]: unknown;
 }
 
-// New areas: lazy-loaded on demand (Vite splits each into its own chunk).
-// Each entry will be resolved when the corresponding {slug}.demo.json file
-// is committed. Until then, getDemoPayload catches the ModuleNotFoundError and
-// returns null — falling through to lean mode.
+// Other areas are lazy-loaded on demand. `import.meta.glob` makes Vite
+// statically discover every {slug}.demo.json at build time and emit ONE lazy
+// chunk per file — and, critically, resolve correctly in the production build
+// as well as the dev server.
 //
-// Implementation note: import() uses a template literal rather than a static
-// string so that Vite's vite:import-analysis plugin cannot statically resolve
-// the module paths before the JSON files are committed. Vite treats template-
-// literal dynamic imports as truly runtime-dynamic and does not attempt to
-// validate that the files exist at transform time. Each slug's import() will
-// split into its own lazy chunk once the corresponding JSON is committed.
-const _mkLoader =
-  (slug: string): (() => Promise<{ default: DemoPayload }>) =>
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore — template-literal import; path is valid once JSON is committed
-  () => import(/* @vite-ignore */ `./${slug}.demo.json`);
+// This replaces a previous `import(/* @vite-ignore */ \`./${slug}.demo.json\`)`
+// approach. That worked in `vite dev` (files served straight from source) but
+// silently failed in `vite build`: @vite-ignore told Vite not to bundle the
+// JSON, so at runtime the relative import 404'd against the hashed asset dir,
+// getDemoPayload caught the error and returned null, and the UI fell through to
+// the LIVE lean pipeline. Glob imports are emitted as real chunks, so prod
+// resolves them. (See https://vite.dev/guide/features.html#glob-import.)
+const DEMO_MODULES = import.meta.glob('./*.demo.json') as Record<
+  string,
+  () => Promise<{ default: DemoPayload }>
+>;
 
-const LAZY_LOADERS: Record<string, () => Promise<{ default: DemoPayload }>> = {
-  'solo-criminal':    _mkLoader('solo-criminal'),
-  'family-law':       _mkLoader('family-law'),
-  'employment-labor': _mkLoader('employment-labor'),
-  'corporate-ma':     _mkLoader('corporate-ma'),
-  'ip-tech':          _mkLoader('ip-tech'),
-  'commercial-lit':   _mkLoader('commercial-lit'),
-  'real-estate':      _mkLoader('real-estate'),
-  'banking-finance':  _mkLoader('banking-finance'),
-  'immigration':      _mkLoader('immigration'),
-};
+const LAZY_LOADERS: Record<string, () => Promise<{ default: DemoPayload }>> = {};
+for (const [path, loader] of Object.entries(DEMO_MODULES)) {
+  // './banking-finance.demo.json' -> 'banking-finance'
+  const slug = path.slice('./'.length, -'.demo.json'.length);
+  LAZY_LOADERS[slug] = loader;
+}
 
 // In-memory cache to avoid re-fetching within a session:
 const _demoCache: Record<string, DemoPayload> = {};
 
-export const DEMO_PAYLOADS: Record<string, DemoPayload> = {
-  'personal-injury': personalInjuryDemo as DemoPayload,
-};
-
-// getDemoPayload becomes async — callers that were already in async functions
-// only need `await` added. App.tsx line 554 is the only call site.
+// getDemoPayload is async — App.tsx#handleExemplarSelect (the only call site)
+// awaits it. Every area resolves through the same glob-backed lazy loader.
 export async function getDemoPayload(slug: string): Promise<DemoPayload | null> {
-  if (DEMO_PAYLOADS[slug]) return DEMO_PAYLOADS[slug];
   if (_demoCache[slug]) return _demoCache[slug];
   const loader = LAZY_LOADERS[slug];
   if (!loader) return null;
@@ -65,8 +54,8 @@ export async function getDemoPayload(slug: string): Promise<DemoPayload | null> 
     _demoCache[slug] = mod.default;
     return _demoCache[slug];
   } catch {
-    // JSON file not yet committed (per-area plans add them in Plans 02–10).
-    // Gracefully return null so the caller falls through to lean mode.
+    // Defensive: a missing/corrupt payload returns null so the caller falls
+    // through to lean mode rather than throwing.
     return null;
   }
 }
