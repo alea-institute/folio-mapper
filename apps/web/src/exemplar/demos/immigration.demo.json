@@ -292,16 +292,16 @@
                 "iri_hash": "RVYBDQv9HD2DkAuvbf5Cha",
                 "definition": "National statutes, and regulations governing immigration into and deportation from a country including issues of naturalization and citizenship.",
                 "synonyms": [
-                  "Derecho de Inmigración",
-                  "Direito de Imigração",
+                  "Derecho de Inmigraci\u00f3n",
+                  "Direito de Imigra\u00e7\u00e3o",
                   "Droit de l'immigration",
                   "Einwanderungsrecht",
                   "Immigration Law",
-                  "Ley de Inmigración",
-                  "חוק הגירה",
-                  "आप्रवासन कानून",
-                  "入国管理法",
-                  "移民法",
+                  "Ley de Inmigraci\u00f3n",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05d2\u05d9\u05e8\u05d4",
+                  "\u0906\u092a\u094d\u0930\u0935\u093e\u0938\u0928 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5165\u56fd\u7ba1\u7406\u6cd5",
+                  "\u79fb\u6c11\u6cd5",
                   "IMMF"
                 ],
                 "branch": "Area of Law",
@@ -448,7 +448,7 @@
                 "label": "O-2 Visa",
                 "iri": "https://folio.openlegalstandard.org/R8sE5cUzstzT3PI03RKL3Dc",
                 "iri_hash": "R8sE5cUzstzT3PI03RKL3Dc",
-                "definition": "An O-2 visa is issued to individuals who provide essential support services to O-1 visa holders, allowing them to enter the U.S. to assist in the performance of the O-1 visa holder’s work. This visa category includes personnel whose skills are integral to the successful performance of the O-1 visa holder.",
+                "definition": "An O-2 visa is issued to individuals who provide essential support services to O-1 visa holders, allowing them to enter the U.S. to assist in the performance of the O-1 visa holder\u2019s work. This visa category includes personnel whose skills are integral to the successful performance of the O-1 visa holder.",
                 "synonyms": [],
                 "branch": "Document / Artifact",
                 "branch_color": "#9c4a10",
@@ -574,10 +574,10 @@
                   "Employer",
                   "Employeur",
                   "Empregador",
-                  "מעסיק",
-                  "नियोक्ता",
-                  "雇主",
-                  "雇用者",
+                  "\u05de\u05e2\u05e1\u05d9\u05e7",
+                  "\u0928\u093f\u092f\u094b\u0915\u094d\u0924\u093e",
+                  "\u96c7\u4e3b",
+                  "\u96c7\u7528\u8005",
                   "EMPR"
                 ],
                 "branch": "Actor / Player",
@@ -614,12 +614,12 @@
                   "Droit de l'immigration professionnelle",
                   "Employment Immigration",
                   "Employment Immigration Law",
-                  "Lei de Imigração de Emprego",
-                  "Ley de Inmigración Laboral",
-                  "חוק הגירה למטרות עסקיות",
-                  "रोजगार इम्मिग्रेशन कानून",
-                  "就业移民法",
-                  "雇用移民法",
+                  "Lei de Imigra\u00e7\u00e3o de Emprego",
+                  "Ley de Inmigraci\u00f3n Laboral",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05d2\u05d9\u05e8\u05d4 \u05dc\u05de\u05d8\u05e8\u05d5\u05ea \u05e2\u05e1\u05e7\u05d9\u05d5\u05ea",
+                  "\u0930\u094b\u091c\u0917\u093e\u0930 \u0907\u092e\u094d\u092e\u093f\u0917\u094d\u0930\u0947\u0936\u0928 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5c31\u4e1a\u79fb\u6c11\u6cd5",
+                  "\u96c7\u7528\u79fb\u6c11\u6cd5",
                   "IMME"
                 ],
                 "branch": "Area of Law",
@@ -646,16 +646,16 @@
                 "iri_hash": "RVYBDQv9HD2DkAuvbf5Cha",
                 "definition": "National statutes, and regulations governing immigration into and deportation from a country including issues of naturalization and citizenship.",
                 "synonyms": [
-                  "Derecho de Inmigración",
-                  "Direito de Imigração",
+                  "Derecho de Inmigraci\u00f3n",
+                  "Direito de Imigra\u00e7\u00e3o",
                   "Droit de l'immigration",
                   "Einwanderungsrecht",
                   "Immigration Law",
-                  "Ley de Inmigración",
-                  "חוק הגירה",
-                  "आप्रवासन कानून",
-                  "入国管理法",
-                  "移民法",
+                  "Ley de Inmigraci\u00f3n",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05d2\u05d9\u05e8\u05d4",
+                  "\u0906\u092a\u094d\u0930\u0935\u093e\u0938\u0928 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5165\u56fd\u7ba1\u7406\u6cd5",
+                  "\u79fb\u6c11\u6cd5",
                   "IMMF"
                 ],
                 "branch": "Area of Law",
@@ -742,14 +742,14 @@
                 "definition": "The forced removal of a person from a country by the government as a consequence of violating immigration laws or committing a crime.",
                 "synonyms": [
                   "Abschiebung",
-                  "Deportación",
+                  "Deportaci\u00f3n",
                   "Deportation",
-                  "Deportação",
-                  "Déportation",
-                  "גירושין",
-                  "निर्वासन",
-                  "強制送還",
-                  "驱逐"
+                  "Deporta\u00e7\u00e3o",
+                  "D\u00e9portation",
+                  "\u05d2\u05d9\u05e8\u05d5\u05e9\u05d9\u05df",
+                  "\u0928\u093f\u0930\u094d\u0935\u093e\u0938\u0928",
+                  "\u5f37\u5236\u9001\u9084",
+                  "\u9a71\u9010"
                 ],
                 "branch": "Event",
                 "branch_color": "#b91c1c",
@@ -1278,8 +1278,238 @@
       {
         "item_index": 9,
         "item_text": "Removal Defense",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Immigration Removal Proceeding",
+                "iri": "https://folio.openlegalstandard.org/RBZgWmGzcTraSAkw6fM50Tl",
+                "iri_hash": "RBZgWmGzcTraSAkw6fM50Tl",
+                "definition": "Immigration Removal Proceeding is a legal process in which an individual is brought before an immigration court to determine their eligibility to remain in a country. If found to be in violation of immigration laws, the individual may be ordered to leave the country, commonly known as deportation.",
+                "synonyms": [],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Event",
+                    "iri_hash": "R73hoH1RXYjBTYiGfolpsAF"
+                  },
+                  {
+                    "label": "Regulatory Events",
+                    "iri_hash": "RCvV18Mbbb9FYFXbHt1inuL"
+                  },
+                  {
+                    "label": "Immigration Events",
+                    "iri_hash": "RBEXxc9B6kR2p0BMwGjhWGW"
+                  },
+                  {
+                    "label": "Immigration Removal Proceeding",
+                    "iri_hash": "RBZgWmGzcTraSAkw6fM50Tl"
+                  }
+                ],
+                "score": 46.1
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Motion to Remove",
+                "iri": "https://folio.openlegalstandard.org/RCBMT6pUoBV2EeF5IdOGfX",
+                "iri_hash": "RCBMT6pUoBV2EeF5IdOGfX",
+                "definition": "A Motion to Remove is a legal request made by a defendant in a civil case to transfer the case from state court to federal court.",
+                "synonyms": [
+                  "Antrag auf Entfernung",
+                  "Moci\u00f3n de Remoci\u00f3n",
+                  "Motion de suppression",
+                  "Motion to Remove",
+                  "Pedido de remo\u00e7\u00e3o",
+                  "\u05d4\u05e6\u05e2\u05ea \u05d4\u05e1\u05e8\u05d4",
+                  "\u0939\u091f\u093e\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u091a\u0932\u093e\u0928",
+                  "\u524a\u9664\u52d5\u8b70",
+                  "\u64a4\u9500\u52a8\u8bae"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Litigation Document",
+                    "iri_hash": "Rjco9ohucVSJ0XxprM5Opb"
+                  },
+                  {
+                    "label": "Motions",
+                    "iri_hash": "R79jXpStbWPIClnqZrLu4yP"
+                  },
+                  {
+                    "label": "Motions in Trial Courts",
+                    "iri_hash": "R8zwKGkogGKIKWSVWb1ItRL"
+                  },
+                  {
+                    "label": "Motions Responding to Complaint",
+                    "iri_hash": "RC339aKhjRAuw4JtEQUn5xw"
+                  },
+                  {
+                    "label": "Motion to Remove",
+                    "iri_hash": "RCBMT6pUoBV2EeF5IdOGfX"
+                  }
+                ],
+                "score": 47.8
+              },
+              {
+                "label": "Motion to Stay Removal",
+                "iri": "https://folio.openlegalstandard.org/RyYdOW1LC5osZQkcbS9hgj",
+                "iri_hash": "RyYdOW1LC5osZQkcbS9hgj",
+                "definition": "A Motion to Stay Removal is a legal request made to temporarily halt the deportation or removal of an individual from a country.",
+                "synonyms": [
+                  "Antrag auf Aussetzung der Abschiebung",
+                  "Moci\u00f3n de Suspensi\u00f3n de la Deportaci\u00f3n",
+                  "Moci\u00f3n de Suspensi\u00f3n de la Remoci\u00f3n",
+                  "Motion de suspension de l'expulsion",
+                  "Motion to Stay Removal",
+                  "Pedido de suspens\u00e3o da remo\u00e7\u00e3o",
+                  "\u05ea\u05e0\u05d5\u05e2\u05d4 \u05dc\u05e2\u05e6\u05d9\u05e8\u05ea \u05d4\u05d2\u05d9\u05e8\u05d5\u05e9",
+                  "\u0939\u091f\u093e\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0930\u0941\u0915\u0928\u0947 \u0915\u0940 \u092e\u094b\u0936\u0928",
+                  "\u5f37\u5236\u9000\u53bb\u306e\u505c\u6b62\u306b\u95a2\u3059\u308b\u8acb\u9858",
+                  "\u6682\u7f13\u9a71\u9010\u52a8\u8bae"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Litigation Document",
+                    "iri_hash": "Rjco9ohucVSJ0XxprM5Opb"
+                  },
+                  {
+                    "label": "Motions",
+                    "iri_hash": "R79jXpStbWPIClnqZrLu4yP"
+                  },
+                  {
+                    "label": "Motions in Trial Courts",
+                    "iri_hash": "R8zwKGkogGKIKWSVWb1ItRL"
+                  },
+                  {
+                    "label": "Motion to Stay",
+                    "iri_hash": "R97AwrgOVeVoGqv7cOOXDGS"
+                  },
+                  {
+                    "label": "Motion to Stay Removal",
+                    "iri_hash": "RyYdOW1LC5osZQkcbS9hgj"
+                  }
+                ],
+                "score": 43.8
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Public Defender",
+                "iri": "https://folio.openlegalstandard.org/Rslx2R4OEGw6tfdMiFvU7K",
+                "iri_hash": "Rslx2R4OEGw6tfdMiFvU7K",
+                "definition": "A public defender is a lawyer appointed by the court to represent individuals who cannot afford to hire their own legal counsel.",
+                "synonyms": [
+                  "Defensor p\u00fablico",
+                  "D\u00e9fenseur public",
+                  "Public Defender",
+                  "\u00d6ffentlicher Verteidiger",
+                  "\u05d4\u05d2\u05e0\u05d4 \u05e6\u05d9\u05d1\u05d5\u05e8\u05d9\u05ea",
+                  "\u0938\u093e\u0930\u094d\u0935\u091c\u0928\u093f\u0915 \u0930\u0915\u094d\u0937\u0915",
+                  "\u516c\u5171\u8fa9\u62a4\u4eba",
+                  "\u516c\u8a2d\u5f01\u8b77\u58eb"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Legal Services Provider",
+                    "iri_hash": "R9x6yqzHQfo3MF4rxIcPupm"
+                  },
+                  {
+                    "label": "Legal Services Provider - Person",
+                    "iri_hash": "R7tKtki2tvT0I1cpSLJSWRF"
+                  },
+                  {
+                    "label": "Lawyer",
+                    "iri_hash": "RcTA2iQmrtqOnX3WrjJIp8"
+                  },
+                  {
+                    "label": "Public Defender",
+                    "iri_hash": "Rslx2R4OEGw6tfdMiFvU7K"
+                  }
+                ],
+                "score": 35.5
+              },
+              {
+                "label": "Defendant",
+                "iri": "https://folio.openlegalstandard.org/RijIqw1HEfQF4ctjWUlgnq",
+                "iri_hash": "RijIqw1HEfQF4ctjWUlgnq",
+                "definition": "A defendant or respondent is a person or group against whom a criminal or civil action is brought. Actions include dispute matters (litigation, arbitration or mediation) or bankruptcy matters.",
+                "synonyms": [
+                  "Beklagter",
+                  "Defendant",
+                  "Defense",
+                  "Demandado",
+                  "D\u00e9fendeur",
+                  "Respondent",
+                  "R\u00e9u",
+                  "\u05e0\u05d0\u05e9\u05dd",
+                  "\u092a\u094d\u0930\u0924\u093f\u0935\u093e\u0926\u0940",
+                  "\u88ab\u544a",
+                  "\u88ab\u544a\u4eba",
+                  "DEFT"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Litigant",
+                    "iri_hash": "RCFgxBbypUKKsDDOJ1iOk36"
+                  },
+                  {
+                    "label": "Defendant",
+                    "iri_hash": "RijIqw1HEfQF4ctjWUlgnq"
+                  }
+                ],
+                "score": 43.3
+              }
+            ]
+          }
+        ],
+        "total_candidates": 5
       },
       {
         "item_index": 10,
@@ -1296,14 +1526,14 @@
                 "definition": "The forced removal of a person from a country by the government as a consequence of violating immigration laws or committing a crime.",
                 "synonyms": [
                   "Abschiebung",
-                  "Deportación",
+                  "Deportaci\u00f3n",
                   "Deportation",
-                  "Deportação",
-                  "Déportation",
-                  "גירושין",
-                  "निर्वासन",
-                  "強制送還",
-                  "驱逐"
+                  "Deporta\u00e7\u00e3o",
+                  "D\u00e9portation",
+                  "\u05d2\u05d9\u05e8\u05d5\u05e9\u05d9\u05df",
+                  "\u0928\u093f\u0930\u094d\u0935\u093e\u0938\u0928",
+                  "\u5f37\u5236\u9001\u9084",
+                  "\u9a71\u9010"
                 ],
                 "branch": "Event",
                 "branch_color": "#b91c1c",
@@ -1403,10 +1633,10 @@
                   "Estatus",
                   "Status",
                   "Statut",
-                  "סטטוס",
-                  "स्थिति",
-                  "ステータス",
-                  "状态"
+                  "\u05e1\u05d8\u05d8\u05d5\u05e1",
+                  "\u0938\u094d\u0925\u093f\u0924\u093f",
+                  "\u30b9\u30c6\u30fc\u30bf\u30b9",
+                  "\u72b6\u6001"
                 ],
                 "branch": "Status",
                 "branch_color": "#864a08",
@@ -1438,13 +1668,13 @@
                 "definition": "In the context of litigation, an Application refers to a formal request or motion submitted to a court or judicial body, seeking a specific order, relief, or direction as part of legal proceedings. This procedural instrument is fundamental in advocating for a party's interests, setting the stage for judicial review and decision-making.",
                 "synonyms": [
                   "Anwendung",
-                  "Aplicación",
+                  "Aplicaci\u00f3n",
                   "Aplicativo",
                   "Application",
-                  "יישום",
-                  "एप्लिकेशन",
-                  "アプリケーション",
-                  "应用程序"
+                  "\u05d9\u05d9\u05e9\u05d5\u05dd",
+                  "\u090f\u092a\u094d\u0932\u093f\u0915\u0947\u0936\u0928",
+                  "\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3",
+                  "\u5e94\u7528\u7a0b\u5e8f"
                 ],
                 "branch": "Document / Artifact",
                 "branch_color": "#9c4a10",
@@ -1485,14 +1715,14 @@
                 "definition": "The Naturalization Application is a legal claim related to immigration that seeks to obtain citizenship for a non-citizen by fulfilling the requirements set forth by the government.",
                 "synonyms": [
                   "Demande de naturalisation",
-                  "Einbürgerungsantrag",
+                  "Einb\u00fcrgerungsantrag",
                   "Naturalisation Application",
-                  "Pedido de naturalização",
-                  "Solicitud de Naturalización",
-                  "בקשת אזרחות",
-                  "प्राकृतिकरण आवेदन",
-                  "帰化申請",
-                  "归化申请"
+                  "Pedido de naturaliza\u00e7\u00e3o",
+                  "Solicitud de Naturalizaci\u00f3n",
+                  "\u05d1\u05e7\u05e9\u05ea \u05d0\u05d6\u05e8\u05d7\u05d5\u05ea",
+                  "\u092a\u094d\u0930\u093e\u0915\u0943\u0924\u093f\u0915\u0930\u0923 \u0906\u0935\u0947\u0926\u0928",
+                  "\u5e30\u5316\u7533\u8acb",
+                  "\u5f52\u5316\u7533\u8bf7"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",

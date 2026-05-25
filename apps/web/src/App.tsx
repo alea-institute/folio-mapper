@@ -41,6 +41,7 @@ import {
   detectStalePreset,
 } from './exemplar/demos';
 import { loadSessionFromObject } from './hooks/useSession';
+import { resolveLlmConfig } from './lib/llm-config';
 import { tabIdentity } from './store/tab-identity';
 import { readRegistry, deleteFromRegistry, renameSession } from './store/session-registry';
 import type { SessionRecord } from './store/session-registry';
@@ -93,6 +94,8 @@ export function App() {
   const llmState = useLLMStore();
   const exemplarMode = useDemoStore((s) => s.exemplarMode);
   const toggleExemplarMode = useDemoStore((s) => s.toggleExemplarMode);
+  const isDemoSession = useDemoStore((s) => s.isDemoSession);
+  const setIsDemoSession = useDemoStore((s) => s.setIsDemoSession);
   const stalePresetWarning = useDemoStore((s) => s.stalePresetWarning);
   const setStalePresetWarning = useDemoStore((s) => s.setStalePresetWarning);
   const dismissStalePresetWarning = useDemoStore((s) => s.dismissStalePresetWarning);
@@ -472,17 +475,8 @@ export function App() {
       fallbackInFlight.current.add(`${currentItemIndex}:${b}`);
     }
 
-    // Build LLM config if available
-    const activeConfig = llmState.configs[llmState.activeProvider];
-    const llmConfig =
-      activeConfig?.connectionStatus === 'valid'
-        ? {
-            provider: llmState.activeProvider,
-            api_key: activeConfig.apiKey || null,
-            base_url: activeConfig.baseUrl || null,
-            model: activeConfig.model || null,
-          }
-        : null;
+    // Build LLM config if available (null in demo sessions → no token cost)
+    const llmConfig = resolveLlmConfig(llmState.activeProvider, llmState.configs, isDemoSession);
 
     loadMandatoryFallback(
       currentItemIndex,
@@ -502,6 +496,7 @@ export function App() {
     screen,
     llmState.activeProvider,
     llmState.configs,
+    isDemoSession,
     loadMandatoryFallback,
   ]);
 
@@ -517,6 +512,8 @@ export function App() {
   const [isPipelineRun, setIsPipelineRun] = useState(false);
 
   const handleTextSubmit = async () => {
+    // User-supplied text is real work → clear any demo session, allow the LLM.
+    setIsDemoSession(false);
     setLoading(true);
     try {
       const result = await parseText(textInput);
@@ -529,6 +526,8 @@ export function App() {
   const handleGenerateSynthetic = async (count: number) => {
     const cfg = llmState.configs[llmState.activeProvider];
     if (cfg?.connectionStatus !== 'valid') return;
+    // Synthetic generation is real work → clear any demo session.
+    setIsDemoSession(false);
     setSyntheticError(null);
     setIsGeneratingSynthetic(true);
     try {
@@ -567,6 +566,9 @@ export function App() {
               runtimeFolioVersion: runtimeFolio,
             });
             setStalePresetWarning(warning);
+            // Mark the displayed session as a demo so all downstream LLM calls
+            // (mandatory fallback, search, pipeline) are suppressed — zero cost.
+            setIsDemoSession(true);
             return;
           }
         } finally {
@@ -576,6 +578,8 @@ export function App() {
       // No bundled payload for this slug → fall through to lean behavior.
     }
 
+    // Real (lean) exemplar parse → genuine work, allow the LLM.
+    setIsDemoSession(false);
     setLoadingExemplarId(id);
     setLoading(true);
     setTextInput(exemplar.text);
@@ -605,15 +609,8 @@ export function App() {
       .map(([name]) => name);
 
     // Build LLM config if active provider has a valid connection
-    const activeConfig = llmState.configs[llmState.activeProvider];
-    const llmConfig = activeConfig?.connectionStatus === 'valid'
-      ? {
-          provider: llmState.activeProvider,
-          api_key: activeConfig.apiKey || null,
-          base_url: activeConfig.baseUrl || null,
-          model: activeConfig.model || null,
-        }
-      : null;
+    // (null in demo sessions → regular symbolic search, no token cost)
+    const llmConfig = resolveLlmConfig(llmState.activeProvider, llmState.configs, isDemoSession);
 
     if (llmConfig) {
       // Full pipeline path (Stage 1.5 now always expands mandatory branches)
@@ -652,16 +649,8 @@ export function App() {
   const handleSearch = async (query: string) => {
     setIsSearching(true);
     try {
-      const activeConfig = llmState.configs[llmState.activeProvider];
-      const llmConfig =
-        activeConfig?.connectionStatus === 'valid'
-          ? {
-              provider: llmState.activeProvider,
-              api_key: activeConfig.apiKey || null,
-              base_url: activeConfig.baseUrl || null,
-              model: activeConfig.model || null,
-            }
-          : null;
+      // null in demo sessions → free symbolic search, no token cost
+      const llmConfig = resolveLlmConfig(llmState.activeProvider, llmState.configs, isDemoSession);
       await searchCandidates(query, mappingState.currentItemIndex, llmConfig);
     } finally {
       setIsSearching(false);
@@ -672,6 +661,8 @@ export function App() {
   const handleSessionFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+      // A user-loaded session is real work, not a demo → allow the LLM.
+      setIsDemoSession(false);
       session.handleLoadSessionFile(file);
     }
     // Reset input so re-selecting same file triggers change
@@ -715,6 +706,7 @@ export function App() {
             mappingState.resetMapping();
             resetInput();
             setIsPipelineRun(false);
+            setIsDemoSession(false);
           }}
           onSaveSession={session.downloadSession}
           onOpenExport={() => exportState.setShowExportModal(true)}
@@ -946,6 +938,7 @@ export function App() {
                   mappingState.resetMapping();
                   resetInput();
                   setIsPipelineRun(false);
+                  setIsDemoSession(false);
                 }}
                 className="mt-4 rounded bg-gray-200 px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-300"
               >

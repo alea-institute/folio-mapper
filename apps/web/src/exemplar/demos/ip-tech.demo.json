@@ -308,14 +308,14 @@
                 "synonyms": [
                   "Derecho de Propiedad Intelectual",
                   "Direito de Propriedade Intelectual",
-                  "Droit de la propriété intellectuelle",
+                  "Droit de la propri\u00e9t\u00e9 intellectuelle",
                   "Geistiges Eigentumsrecht",
                   "Intellectual Property Law",
                   "Ley de Propiedad Intelectual",
-                  "חוק קניין רוחני",
-                  "बौद्धिक संपदा कानून",
-                  "知的財産法",
-                  "知识产权法",
+                  "\u05d7\u05d5\u05e7 \u05e7\u05e0\u05d9\u05d9\u05df \u05e8\u05d5\u05d7\u05e0\u05d9",
+                  "\u092c\u094c\u0926\u094d\u0927\u093f\u0915 \u0938\u0902\u092a\u0926\u093e \u0915\u093e\u0928\u0942\u0928",
+                  "\u77e5\u7684\u8ca1\u7523\u6cd5",
+                  "\u77e5\u8bc6\u4ea7\u6743\u6cd5",
                   "INTP"
                 ],
                 "branch": "Area of Law",
@@ -344,16 +344,16 @@
                 "iri_hash": "RBUBqjNCYBI4CtLUcdAVYwy",
                 "definition": "Intellectual property is a broad categorical description for the set of intangibles owned and legally protected by a company from outside use or implementation without consent. Intellectual property can consist of patents, trade secrets, copyrights, franchises, and trademarks or simply ideas.",
                 "synonyms": [
-                  "Actifs de propriété intellectuelle",
+                  "Actifs de propri\u00e9t\u00e9 intellectuelle",
                   "Activos de Propiedad Intelectual",
                   "Ativos de propriedade intelectual",
                   "Geistiges Eigentum",
                   "Intellectual Property",
                   "Intellectual Property Assets",
-                  "נכסי קניין רוחניים",
-                  "बौद्धिक संपदा संपत्तियाँ",
-                  "知的財産資産",
-                  "知识产权资产",
+                  "\u05e0\u05db\u05e1\u05d9 \u05e7\u05e0\u05d9\u05d9\u05df \u05e8\u05d5\u05d7\u05e0\u05d9\u05d9\u05dd",
+                  "\u092c\u094c\u0926\u094d\u0927\u093f\u0915 \u0938\u0902\u092a\u0926\u093e \u0938\u0902\u092a\u0924\u094d\u0924\u093f\u092f\u093e\u0901",
+                  "\u77e5\u7684\u8ca1\u7523\u8cc7\u7523",
+                  "\u77e5\u8bc6\u4ea7\u6743\u8d44\u4ea7",
                   "INTPTA"
                 ],
                 "branch": "Asset Type",
@@ -386,15 +386,15 @@
                 "iri_hash": "RC0D5sYWEbeH4f6F0f70uMz",
                 "definition": "An Intellectual Property Agreement is a legal contract between parties that outlines the ownership and use of intangible assets, such as patents, trademarks, and copyrights.",
                 "synonyms": [
-                  "Accord de propriété intellectuelle",
+                  "Accord de propri\u00e9t\u00e9 intellectuelle",
                   "Acordo de propriedade intelectual",
                   "Acuerdo de Propiedad Intelectual",
                   "Intellectual Property Agreement",
-                  "Vereinbarung über geistiges Eigentum",
-                  "הסכם קניין רוחני",
-                  "बौद्धिक संपदा समझौता",
-                  "知的財産契約",
-                  "知识产权协议"
+                  "Vereinbarung \u00fcber geistiges Eigentum",
+                  "\u05d4\u05e1\u05db\u05dd \u05e7\u05e0\u05d9\u05d9\u05df \u05e8\u05d5\u05d7\u05e0\u05d9",
+                  "\u092c\u094c\u0926\u094d\u0927\u093f\u0915 \u0938\u0902\u092a\u0926\u093e \u0938\u092e\u091d\u094c\u0924\u093e",
+                  "\u77e5\u7684\u8ca1\u7523\u5951\u7d04",
+                  "\u77e5\u8bc6\u4ea7\u6743\u534f\u8bae"
                 ],
                 "branch": "Document / Artifact",
                 "branch_color": "#9c4a10",
@@ -499,15 +499,15 @@
                 "iri_hash": "RJL4HDUmZp1VEEZ7lCwSSF",
                 "definition": "Intellectual Property Claims refer to legal actions taken by a party to protect their exclusive rights to intangible assets such as patents, trademarks, copyrights, and trade secrets.",
                 "synonyms": [
-                  "Ansprüche des geistigen Eigentums",
+                  "Anspr\u00fcche des geistigen Eigentums",
                   "Intellectual Property Claims",
                   "Reclamaciones de Propiedad Intelectual",
-                  "Reivindicações de propriedade intelectual",
-                  "Revendications de propriété intellectuelle",
-                  "תביעות בקניין רוחני",
-                  "बौद्धिक संपदा दावे",
-                  "知的財産権主張",
-                  "知识产权声明"
+                  "Reivindica\u00e7\u00f5es de propriedade intelectual",
+                  "Revendications de propri\u00e9t\u00e9 intellectuelle",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05d1\u05e7\u05e0\u05d9\u05d9\u05df \u05e8\u05d5\u05d7\u05e0\u05d9",
+                  "\u092c\u094c\u0926\u094d\u0927\u093f\u0915 \u0938\u0902\u092a\u0926\u093e \u0926\u093e\u0935\u0947",
+                  "\u77e5\u7684\u8ca1\u7523\u6a29\u4e3b\u5f35",
+                  "\u77e5\u8bc6\u4ea7\u6743\u58f0\u660e"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -579,8 +579,176 @@
       {
         "item_index": 1,
         "item_text": "Patent Practice",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Patent Law",
+                "iri": "https://folio.openlegalstandard.org/R2e3mdhrPrjPbiYOMYQU0g",
+                "iri_hash": "R2e3mdhrPrjPbiYOMYQU0g",
+                "definition": "Law is designed to encourage inventors to disclose their new technology to the world by offering the incentive of a limited-time monopoly on the technology.",
+                "synonyms": [
+                  "Derecho de Patentes",
+                  "Droit des brevets",
+                  "Lei de Patentes",
+                  "Ley de Patentes",
+                  "Patent Law",
+                  "Patentrecht",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05e4\u05d8\u05e0\u05d8\u05d9\u05dd",
+                  "\u05d7\u05d5\u05e7 \u05e4\u05d8\u05e0\u05d8\u05d9\u05dd",
+                  "\u092a\u0947\u091f\u0947\u0902\u091f \u0915\u093e\u0928\u0942\u0928",
+                  "\u4e13\u5229\u6cd5",
+                  "\u7279\u8a31\u6cd5",
+                  "PATE"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Intellectual Property Law",
+                    "iri_hash": "RDdMucRftztKt4Ag7WzUxX"
+                  },
+                  {
+                    "label": "Patent Law",
+                    "iri_hash": "R2e3mdhrPrjPbiYOMYQU0g"
+                  }
+                ],
+                "score": 44.0
+              }
+            ]
+          },
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Patent Assets",
+                "iri": "https://folio.openlegalstandard.org/R8W98AqFMMolqQMvARHGyoP",
+                "iri_hash": "R8W98AqFMMolqQMvARHGyoP",
+                "definition": "Patent Assets are a type of Intellectual Property Asset that includes Design Patent Assets, Utility Patent Assets, and Plant Patent Assets.",
+                "synonyms": [
+                  "Actifs de brevet",
+                  "Activos de patentes",
+                  "Ativos de patente",
+                  "Patent Assets",
+                  "Patentverm\u00f6gen",
+                  "\u05e0\u05db\u05e1\u05d9 \u05e4\u05d8\u05e0\u05d8",
+                  "\u092a\u0947\u091f\u0947\u0902\u091f \u0938\u0902\u092a\u0924\u094d\u0924\u093f",
+                  "\u4e13\u5229\u8d44\u4ea7",
+                  "\u7279\u8a31\u8cc7\u7523"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Intangible Assets",
+                    "iri_hash": "RCYl3LbuEyYdPvG9kHxRa3a"
+                  },
+                  {
+                    "label": "Intellectual Property Assets",
+                    "iri_hash": "RBUBqjNCYBI4CtLUcdAVYwy"
+                  },
+                  {
+                    "label": "Patent Assets",
+                    "iri_hash": "R8W98AqFMMolqQMvARHGyoP"
+                  }
+                ],
+                "score": 47.3
+              },
+              {
+                "label": "Design Patent Assets",
+                "iri": "https://folio.openlegalstandard.org/R71wwGv5pZX0ktWPZhPueJ3",
+                "iri_hash": "R71wwGv5pZX0ktWPZhPueJ3",
+                "definition": "Design Patent Assets are a type of patent asset that protect the ornamental design of a functional item, giving the owner exclusive rights to prevent others from making, using, or selling the design.",
+                "synonyms": [
+                  "Actifs de brevet de conception",
+                  "Activos de patentes de dise\u00f1o",
+                  "Ativos de patente de design",
+                  "Design Patent Assets",
+                  "Designpatentverm\u00f6gen",
+                  "\u05e0\u05db\u05e1\u05d9 \u05e4\u05d8\u05e0\u05d8 \u05e2\u05d9\u05e6\u05d5\u05d1",
+                  "\u0921\u093f\u091c\u093e\u0907\u0928 \u092a\u0947\u091f\u0947\u0902\u091f \u0938\u0902\u092a\u0924\u094d\u0924\u093f",
+                  "\u30c7\u30b6\u30a4\u30f3\u7279\u8a31\u8cc7\u7523",
+                  "\u8bbe\u8ba1\u4e13\u5229\u8d44\u4ea7"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Intangible Assets",
+                    "iri_hash": "RCYl3LbuEyYdPvG9kHxRa3a"
+                  },
+                  {
+                    "label": "Intellectual Property Assets",
+                    "iri_hash": "RBUBqjNCYBI4CtLUcdAVYwy"
+                  },
+                  {
+                    "label": "Patent Assets",
+                    "iri_hash": "R8W98AqFMMolqQMvARHGyoP"
+                  },
+                  {
+                    "label": "Design Patent Assets",
+                    "iri_hash": "R71wwGv5pZX0ktWPZhPueJ3"
+                  }
+                ],
+                "score": 44.1
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Patent Registration Document",
+                "iri": "https://folio.openlegalstandard.org/RE87FC04LhlDc7FmnhrM5g",
+                "iri_hash": "RE87FC04LhlDc7FmnhrM5g",
+                "definition": "A Patent Registration Document is the official record issued by a patent office, such as the United States Patent and Trademark Office (USPTO), confirming the grant of a patent to an inventor for a specific invention. The document outlines the scope of protection afforded by the patent, including claims, drawings, and specifications, and serves as legal evidence of the inventor's exclusive rights to the invention for a set period.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Intellectual Property Regulatory Documents",
+                    "iri_hash": "R7KdQLWwrvkyzohDgf48st7"
+                  },
+                  {
+                    "label": "Patent Registration Document",
+                    "iri_hash": "RE87FC04LhlDc7FmnhrM5g"
+                  }
+                ],
+                "score": 44.6
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
       },
       {
         "item_index": 2,
@@ -602,11 +770,11 @@
                   "Ley de Patentes",
                   "Patent Law",
                   "Patentrecht",
-                  "חוק הפטנטים",
-                  "חוק פטנטים",
-                  "पेटेंट कानून",
-                  "专利法",
-                  "特許法",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05e4\u05d8\u05e0\u05d8\u05d9\u05dd",
+                  "\u05d7\u05d5\u05e7 \u05e4\u05d8\u05e0\u05d8\u05d9\u05dd",
+                  "\u092a\u0947\u091f\u0947\u0902\u091f \u0915\u093e\u0928\u0942\u0928",
+                  "\u4e13\u5229\u6cd5",
+                  "\u7279\u8a31\u6cd5",
                   "PATE"
                 ],
                 "branch": "Area of Law",
@@ -646,15 +814,15 @@
                 "iri_hash": "R9G5Ptc8g9T3Ag0GDVQOwae",
                 "definition": "The unauthorized use, manufacture, sale, or importation of a patented invention or process, which is protected by law and owned by someone else.",
                 "synonyms": [
-                  "Contrefaçon de brevet",
-                  "Infracción de patente",
+                  "Contrefa\u00e7on de brevet",
+                  "Infracci\u00f3n de patente",
                   "Patent Infringement",
                   "Patentverletzung",
-                  "Violação de patente",
-                  "הפרת פטנט",
-                  "पेटेंट उल्लंघन",
-                  "专利侵权",
-                  "特許侵害"
+                  "Viola\u00e7\u00e3o de patente",
+                  "\u05d4\u05e4\u05e8\u05ea \u05e4\u05d8\u05e0\u05d8",
+                  "\u092a\u0947\u091f\u0947\u0902\u091f \u0909\u0932\u094d\u0932\u0902\u0918\u0928",
+                  "\u4e13\u5229\u4fb5\u6743",
+                  "\u7279\u8a31\u4fb5\u5bb3"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -692,15 +860,15 @@
                 "iri_hash": "RCWPazSKtsKeiuSKjKMhuXw",
                 "definition": "Contributory Patent Infringement refers to the act of knowingly aiding, abetting, inducing, or encouraging another party to infringe on a patent, with the knowledge that the actions being encouraged constitute patent infringement.",
                 "synonyms": [
-                  "Contrefaçon de brevet contributive",
+                  "Contrefa\u00e7on de brevet contributive",
                   "Contributory Patent Infringement",
-                  "Infracción de patente contributiva",
+                  "Infracci\u00f3n de patente contributiva",
                   "Mitwirkende Patentverletzung",
-                  "Violação contributiva de patente",
-                  "הפרת פטנט תורמת",
-                  "योगदानकारी पेटेंट उल्लंघन",
-                  "共同侵害",
-                  "间接侵权"
+                  "Viola\u00e7\u00e3o contributiva de patente",
+                  "\u05d4\u05e4\u05e8\u05ea \u05e4\u05d8\u05e0\u05d8 \u05ea\u05d5\u05e8\u05de\u05ea",
+                  "\u092f\u094b\u0917\u0926\u093e\u0928\u0915\u093e\u0930\u0940 \u092a\u0947\u091f\u0947\u0902\u091f \u0909\u0932\u094d\u0932\u0902\u0918\u0928",
+                  "\u5171\u540c\u4fb5\u5bb3",
+                  "\u95f4\u63a5\u4fb5\u6743"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -755,15 +923,15 @@
                 "iri_hash": "RBT0WyT3K42Y3D2IU7mBEq6",
                 "definition": "The unauthorized making, using, selling, or importing of a patented invention by a party without the permission of the patent owner.",
                 "synonyms": [
-                  "Contrefaçon de brevet directe",
+                  "Contrefa\u00e7on de brevet directe",
                   "Direct Patent Infringement",
                   "Direkte Patentverletzung",
-                  "Infracción directa de patente",
-                  "Violação direta de patente",
-                  "הפרת פטנט ישירה",
-                  "प्रत्यक्ष पेटेंट उल्लंघन",
-                  "直接侵犯专利",
-                  "直接特許侵害"
+                  "Infracci\u00f3n directa de patente",
+                  "Viola\u00e7\u00e3o direta de patente",
+                  "\u05d4\u05e4\u05e8\u05ea \u05e4\u05d8\u05e0\u05d8 \u05d9\u05e9\u05d9\u05e8\u05d4",
+                  "\u092a\u094d\u0930\u0924\u094d\u092f\u0915\u094d\u0937 \u092a\u0947\u091f\u0947\u0902\u091f \u0909\u0932\u094d\u0932\u0902\u0918\u0928",
+                  "\u76f4\u63a5\u4fb5\u72af\u4e13\u5229",
+                  "\u76f4\u63a5\u7279\u8a31\u4fb5\u5bb3"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -805,15 +973,15 @@
                 "iri_hash": "R9G5Ptc8g9T3Ag0GDVQOwae",
                 "definition": "The unauthorized use, manufacture, sale, or importation of a patented invention or process, which is protected by law and owned by someone else.",
                 "synonyms": [
-                  "Contrefaçon de brevet",
-                  "Infracción de patente",
+                  "Contrefa\u00e7on de brevet",
+                  "Infracci\u00f3n de patente",
                   "Patent Infringement",
                   "Patentverletzung",
-                  "Violação de patente",
-                  "הפרת פטנט",
-                  "पेटेंट उल्लंघन",
-                  "专利侵权",
-                  "特許侵害"
+                  "Viola\u00e7\u00e3o de patente",
+                  "\u05d4\u05e4\u05e8\u05ea \u05e4\u05d8\u05e0\u05d8",
+                  "\u092a\u0947\u091f\u0947\u0902\u091f \u0909\u0932\u094d\u0932\u0902\u0918\u0928",
+                  "\u4e13\u5229\u4fb5\u6743",
+                  "\u7279\u8a31\u4fb5\u5bb3"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -853,8 +1021,132 @@
       {
         "item_index": 5,
         "item_text": "Trademark Practice",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Trademark and Trade Dress Law",
+                "iri": "https://folio.openlegalstandard.org/R8phitqyUIXJ4ZdLaJjabna",
+                "iri_hash": "R8phitqyUIXJ4ZdLaJjabna",
+                "definition": "Law protecting a business' commercial identity or brand by or product design discouraging other businesses from adopting a name, logo or design that is \"confusingly similar\" to an existing trademark or design.",
+                "synonyms": [
+                  "Direito de Marcas e Designa\u00e7\u00f5es Comerciais",
+                  "Droit des marques et des habillages commerciaux",
+                  "Ley de Marcas y Dise\u00f1o Comercial",
+                  "Marken- und Geschmacksmusterrecht",
+                  "Trademark and Trade Dress Law",
+                  "\u05d7\u05d5\u05e7 \u05e1\u05d9\u05de\u05e0\u05d9 \u05de\u05e1\u05d7\u05e8 \u05d5\u05e2\u05d9\u05e6\u05d5\u05d1 \u05de\u05e1\u05d7\u05e8\u05d9",
+                  "\u091f\u094d\u0930\u0947\u0921\u092e\u093e\u0930\u094d\u0915 \u0914\u0930 \u091f\u094d\u0930\u0947\u0921 \u0921\u094d\u0930\u0947\u0938 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5546\u6807\u548c\u5916\u89c2\u8bbe\u8ba1\u6cd5",
+                  "\u5546\u6a19\u53ca\u3073\u5916\u89b3\u6a29\u6cd5",
+                  "TMRK"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Intellectual Property Law",
+                    "iri_hash": "RDdMucRftztKt4Ag7WzUxX"
+                  },
+                  {
+                    "label": "Trademark and Trade Dress Law",
+                    "iri_hash": "R8phitqyUIXJ4ZdLaJjabna"
+                  }
+                ],
+                "score": 44.9
+              }
+            ]
+          },
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Trademark Assets",
+                "iri": "https://folio.openlegalstandard.org/RBaL7gtiLlgraIRVwa44vg2",
+                "iri_hash": "RBaL7gtiLlgraIRVwa44vg2",
+                "definition": "Trademark Assets are a type of Intellectual Property Assets that refer to any distinctive sign, symbol, or expression used to identify and distinguish the goods or services of one party from those of others.",
+                "synonyms": [
+                  "Actifs de marque",
+                  "Activos de marca",
+                  "Ativos de marca",
+                  "Markenverm\u00f6genswerte",
+                  "Trademark Assets",
+                  "\u05e0\u05db\u05e1\u05d9 \u05de\u05d5\u05ea\u05d2",
+                  "\u091f\u094d\u0930\u0947\u0921\u092e\u093e\u0930\u094d\u0915 \u0938\u0902\u092a\u0924\u094d\u0924\u093f",
+                  "\u5546\u6807\u8d44\u4ea7",
+                  "\u5546\u6a19\u8cc7\u7523"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Intangible Assets",
+                    "iri_hash": "RCYl3LbuEyYdPvG9kHxRa3a"
+                  },
+                  {
+                    "label": "Intellectual Property Assets",
+                    "iri_hash": "RBUBqjNCYBI4CtLUcdAVYwy"
+                  },
+                  {
+                    "label": "Trademark Assets",
+                    "iri_hash": "RBaL7gtiLlgraIRVwa44vg2"
+                  }
+                ],
+                "score": 47.3
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Trademark Registration Document",
+                "iri": "https://folio.openlegalstandard.org/RCcOuaZSzwQXj0T0WXy9uCr",
+                "iri_hash": "RCcOuaZSzwQXj0T0WXy9uCr",
+                "definition": "A Trademark Registration Document is the official certificate issued by a governmental authority, such as the United States Patent and Trademark Office (USPTO), confirming the registration of a specific trademark. The document delineates the scope of protection, including the classes of goods or services for which the trademark is registered, and serves as prima facie evidence of the owner's exclusive right to use the trademark in commerce",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Intellectual Property Regulatory Documents",
+                    "iri_hash": "R7KdQLWwrvkyzohDgf48st7"
+                  },
+                  {
+                    "label": "Trademark Registration Document",
+                    "iri_hash": "RCcOuaZSzwQXj0T0WXy9uCr"
+                  }
+                ],
+                "score": 44.6
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
       },
       {
         "item_index": 6,
@@ -870,15 +1162,15 @@
                 "iri_hash": "R8phitqyUIXJ4ZdLaJjabna",
                 "definition": "Law protecting a business' commercial identity or brand by or product design discouraging other businesses from adopting a name, logo or design that is \"confusingly similar\" to an existing trademark or design.",
                 "synonyms": [
-                  "Direito de Marcas e Designações Comerciais",
+                  "Direito de Marcas e Designa\u00e7\u00f5es Comerciais",
                   "Droit des marques et des habillages commerciaux",
-                  "Ley de Marcas y Diseño Comercial",
+                  "Ley de Marcas y Dise\u00f1o Comercial",
                   "Marken- und Geschmacksmusterrecht",
                   "Trademark and Trade Dress Law",
-                  "חוק סימני מסחר ועיצוב מסחרי",
-                  "ट्रेडमार्क और ट्रेड ड्रेस कानून",
-                  "商标和外观设计法",
-                  "商標及び外観権法",
+                  "\u05d7\u05d5\u05e7 \u05e1\u05d9\u05de\u05e0\u05d9 \u05de\u05e1\u05d7\u05e8 \u05d5\u05e2\u05d9\u05e6\u05d5\u05d1 \u05de\u05e1\u05d7\u05e8\u05d9",
+                  "\u091f\u094d\u0930\u0947\u0921\u092e\u093e\u0930\u094d\u0915 \u0914\u0930 \u091f\u094d\u0930\u0947\u0921 \u0921\u094d\u0930\u0947\u0938 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5546\u6807\u548c\u5916\u89c2\u8bbe\u8ba1\u6cd5",
+                  "\u5546\u6a19\u53ca\u3073\u5916\u89b3\u6a29\u6cd5",
                   "TMRK"
                 ],
                 "branch": "Area of Law",
@@ -911,15 +1203,15 @@
                 "iri_hash": "R8ld5fuznk2KgKLafAENQsH",
                 "definition": "The concept of Trade Dress Dilution refers to a legal claim that protects the distinctiveness and uniqueness of a company's product or service design from being weakened or diluted by similar designs used by competitors, which may cause confusion among consumers.",
                 "synonyms": [
-                  "Dilución de la imagen comercial",
-                  "Diluição da imagem de marca",
+                  "Diluci\u00f3n de la imagen comercial",
+                  "Dilui\u00e7\u00e3o da imagem de marca",
                   "Dilution de l'image de marque",
                   "Trade Dress Dilution",
-                  "Verwässerung des Markenimages",
-                  "דילול תפאורה מסחרית",
-                  "ट्रेड ड्रेस दिलूशन",
-                  "トレードドレスの希釈",
-                  "商业外观淡化"
+                  "Verw\u00e4sserung des Markenimages",
+                  "\u05d3\u05d9\u05dc\u05d5\u05dc \u05ea\u05e4\u05d0\u05d5\u05e8\u05d4 \u05de\u05e1\u05d7\u05e8\u05d9\u05ea",
+                  "\u091f\u094d\u0930\u0947\u0921 \u0921\u094d\u0930\u0947\u0938 \u0926\u093f\u0932\u0942\u0936\u0928",
+                  "\u30c8\u30ec\u30fc\u30c9\u30c9\u30ec\u30b9\u306e\u5e0c\u91c8",
+                  "\u5546\u4e1a\u5916\u89c2\u6de1\u5316"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -970,18 +1262,18 @@
                 "iri_hash": "RBQCFqSF0Q0sCqCcEwv2pgz",
                 "definition": "The unauthorized use of a trademark or service mark, including the trafficking of counterfeit marks, which violates the rights of the owner and may result in legal action under unfair competition or intellectual property claims.",
                 "synonyms": [
-                  "Contrefaçon de marque",
-                  "Infracción de marca",
-                  "Infracción de marca registrada",
+                  "Contrefa\u00e7on de marque",
+                  "Infracci\u00f3n de marca",
+                  "Infracci\u00f3n de marca registrada",
                   "Markenverletzung",
                   "Service Mark Infringement",
                   "Trademark Infringement",
                   "Trafficking Counterfeit Trade or Service Marks",
-                  "Violação de marca registrada",
-                  "הפרת סימן מסחר",
-                  "ट्रेडमार्क उल्लंघन",
-                  "商标侵权",
-                  "商標侵害"
+                  "Viola\u00e7\u00e3o de marca registrada",
+                  "\u05d4\u05e4\u05e8\u05ea \u05e1\u05d9\u05de\u05df \u05de\u05e1\u05d7\u05e8",
+                  "\u091f\u094d\u0930\u0947\u0921\u092e\u093e\u0930\u094d\u0915 \u0909\u0932\u094d\u0932\u0902\u0918\u0928",
+                  "\u5546\u6807\u4fb5\u6743",
+                  "\u5546\u6a19\u4fb5\u5bb3"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1033,14 +1325,14 @@
                 "definition": "Law relating to trade secrets.",
                 "synonyms": [
                   "Droit des secrets commerciaux",
-                  "Geschäftsgeheimnisrecht",
+                  "Gesch\u00e4ftsgeheimnisrecht",
                   "Lei de segredos comerciais",
                   "Ley de Secretos Comerciales",
                   "Trade Secret Law",
-                  "חוק סודות מסחריים",
-                  "व्यापार रहस्य विधि",
-                  "商业秘密法",
-                  "営業秘密法",
+                  "\u05d7\u05d5\u05e7 \u05e1\u05d5\u05d3\u05d5\u05ea \u05de\u05e1\u05d7\u05e8\u05d9\u05d9\u05dd",
+                  "\u0935\u094d\u092f\u093e\u092a\u093e\u0930 \u0930\u0939\u0938\u094d\u092f \u0935\u093f\u0927\u093f",
+                  "\u5546\u4e1a\u79d8\u5bc6\u6cd5",
+                  "\u55b6\u696d\u79d8\u5bc6\u6cd5",
                   "TSCR"
                 ],
                 "branch": "Area of Law",
@@ -1081,14 +1373,14 @@
                 "definition": "Law relating to trade secrets.",
                 "synonyms": [
                   "Droit des secrets commerciaux",
-                  "Geschäftsgeheimnisrecht",
+                  "Gesch\u00e4ftsgeheimnisrecht",
                   "Lei de segredos comerciais",
                   "Ley de Secretos Comerciales",
                   "Trade Secret Law",
-                  "חוק סודות מסחריים",
-                  "व्यापार रहस्य विधि",
-                  "商业秘密法",
-                  "営業秘密法",
+                  "\u05d7\u05d5\u05e7 \u05e1\u05d5\u05d3\u05d5\u05ea \u05de\u05e1\u05d7\u05e8\u05d9\u05d9\u05dd",
+                  "\u0935\u094d\u092f\u093e\u092a\u093e\u0930 \u0930\u0939\u0938\u094d\u092f \u0935\u093f\u0927\u093f",
+                  "\u5546\u4e1a\u79d8\u5bc6\u6cd5",
+                  "\u55b6\u696d\u79d8\u5bc6\u6cd5",
                   "TSCR"
                 ],
                 "branch": "Area of Law",
@@ -1128,12 +1420,12 @@
                 "iri_hash": "R8AskLnQPiMPqirI390zrab",
                 "definition": "The wrongful disclosure or use of a trade secret, which is a type of intellectual property, in violation of unfair competition or intellectual property laws.",
                 "synonyms": [
-                  "Apropiación indebida de secretos comerciales",
+                  "Apropiaci\u00f3n indebida de secretos comerciales",
                   "Trade Secret Disclosed or Used Wrongfully",
                   "Trade Secret Infringement",
                   "Trade Secret Misappropriation",
-                  "גניבת סודות מסחריים",
-                  "व्यापार रहस्य अपवाद"
+                  "\u05d2\u05e0\u05d9\u05d1\u05ea \u05e1\u05d5\u05d3\u05d5\u05ea \u05de\u05e1\u05d7\u05e8\u05d9\u05d9\u05dd",
+                  "\u0935\u094d\u092f\u093e\u092a\u093e\u0930 \u0930\u0939\u0938\u094d\u092f \u0905\u092a\u0935\u093e\u0926"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1173,8 +1465,133 @@
       {
         "item_index": 11,
         "item_text": "Copyright Practice",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Copyright Law",
+                "iri": "https://folio.openlegalstandard.org/RCtZI50lx0N3BZKzUVkIDIR",
+                "iri_hash": "RCtZI50lx0N3BZKzUVkIDIR",
+                "definition": "Laws intended to encourage the creation of art and culture by rewarding authors and artists with a set of exclusive rights.",
+                "synonyms": [
+                  "Copyright Law",
+                  "Droit d'auteur",
+                  "Lei de Direitos Autorais",
+                  "Ley de Derechos de Autor",
+                  "Urheberrecht",
+                  "\u05d7\u05d5\u05e7 \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05d9\u05d5\u05e6\u05e8\u05d9\u05dd",
+                  "\u0915\u0949\u092a\u0940\u0930\u093e\u0907\u091f \u0915\u093e\u0928\u0942\u0928",
+                  "\u7248\u6743\u6cd5",
+                  "\u8457\u4f5c\u6a29\u6cd5",
+                  "COPY"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Intellectual Property Law",
+                    "iri_hash": "RDdMucRftztKt4Ag7WzUxX"
+                  },
+                  {
+                    "label": "Copyright Law",
+                    "iri_hash": "RCtZI50lx0N3BZKzUVkIDIR"
+                  }
+                ],
+                "score": 44.0
+              }
+            ]
+          },
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Copyright Assets",
+                "iri": "https://folio.openlegalstandard.org/RVaHiNBU68DENmeHicnzro",
+                "iri_hash": "RVaHiNBU68DENmeHicnzro",
+                "definition": "Copyright assets are a type of intellectual property asset that refers to the exclusive legal right to use and distribute original works of authorship, such as books, music, and software.",
+                "synonyms": [
+                  "Actifs de propri\u00e9t\u00e9 intellectuelle",
+                  "Activos de derechos de autor",
+                  "Activos de propiedad intelectual",
+                  "Ativos de direitos autorais",
+                  "Copyright Assets",
+                  "Urheberrechtsverm\u00f6gen",
+                  "\u05e0\u05db\u05e1\u05d9 \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05d9\u05d5\u05e6\u05e8\u05d9\u05dd",
+                  "\u0915\u0949\u092a\u0940\u0930\u093e\u0907\u091f \u0938\u0902\u092a\u0924\u094d\u0924\u093f",
+                  "\u7248\u6743\u8d44\u4ea7",
+                  "\u8457\u4f5c\u6a29\u8cc7\u7523"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Intangible Assets",
+                    "iri_hash": "RCYl3LbuEyYdPvG9kHxRa3a"
+                  },
+                  {
+                    "label": "Intellectual Property Assets",
+                    "iri_hash": "RBUBqjNCYBI4CtLUcdAVYwy"
+                  },
+                  {
+                    "label": "Copyright Assets",
+                    "iri_hash": "RVaHiNBU68DENmeHicnzro"
+                  }
+                ],
+                "score": 47.3
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Copyright Registration Document",
+                "iri": "https://folio.openlegalstandard.org/Rz9N1etzkn69qEZxXM9u8y",
+                "iri_hash": "Rz9N1etzkn69qEZxXM9u8y",
+                "definition": "A Copyright Registration Document is the official certificate issued by a copyright office, such as the U.S. Copyright Office, confirming the registration of a specific work. The document serves as public record of the copyright claim and provides prima facie evidence of copyright ownership, facilitating the enforcement of rights in legal disputes.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Intellectual Property Regulatory Documents",
+                    "iri_hash": "R7KdQLWwrvkyzohDgf48st7"
+                  },
+                  {
+                    "label": "Copyright Registration Document",
+                    "iri_hash": "Rz9N1etzkn69qEZxXM9u8y"
+                  }
+                ],
+                "score": 44.6
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
       },
       {
         "item_index": 12,
@@ -1195,10 +1612,10 @@
                   "Lei de Direitos Autorais",
                   "Ley de Derechos de Autor",
                   "Urheberrecht",
-                  "חוק זכויות יוצרים",
-                  "कॉपीराइट कानून",
-                  "版权法",
-                  "著作権法",
+                  "\u05d7\u05d5\u05e7 \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05d9\u05d5\u05e6\u05e8\u05d9\u05dd",
+                  "\u0915\u0949\u092a\u0940\u0930\u093e\u0907\u091f \u0915\u093e\u0928\u0942\u0928",
+                  "\u7248\u6743\u6cd5",
+                  "\u8457\u4f5c\u6a29\u6cd5",
                   "COPY"
                 ],
                 "branch": "Area of Law",
@@ -1271,14 +1688,14 @@
                 "definition": "The unauthorized use or reproduction of a copyrighted work, without the permission of the owner, which may include copying, distributing, displaying, or performing the work.",
                 "synonyms": [
                   "Copyright Infringement",
-                  "Infracción de derechos de autor",
+                  "Infracci\u00f3n de derechos de autor",
                   "Urheberrechtsverletzung",
                   "Violation de droit d'auteur",
-                  "Violação de direitos autorais",
-                  "הפרת זכויות יוצרים",
-                  "कॉपीराइट उल्लंघन",
-                  "侵犯版权",
-                  "著作権侵害"
+                  "Viola\u00e7\u00e3o de direitos autorais",
+                  "\u05d4\u05e4\u05e8\u05ea \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05d9\u05d5\u05e6\u05e8\u05d9\u05dd",
+                  "\u0915\u0949\u092a\u0940\u0930\u093e\u0907\u091f \u0909\u0932\u094d\u0932\u0902\u0918\u0928",
+                  "\u4fb5\u72af\u7248\u6743",
+                  "\u8457\u4f5c\u6a29\u4fb5\u5bb3"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1316,15 +1733,15 @@
                 "iri_hash": "Rlt4ugwZ3FbR9vKd73y0Wx",
                 "definition": "Vicarious Copyright Infringement refers to a situation where a person is held liable for copyright infringement committed by another person, even if they did not directly commit the infringement themselves.",
                 "synonyms": [
-                  "Contrefaçon de droit d'auteur vicariante",
-                  "Infracción de derechos de autor vicaria",
+                  "Contrefa\u00e7on de droit d'auteur vicariante",
+                  "Infracci\u00f3n de derechos de autor vicaria",
                   "Stellvertretende Urheberrechtsverletzung",
                   "Vicarious Copyright Infringement",
-                  "Violação de direitos autorais vicária",
-                  "הפרת זכויות יוצרים חלופית",
-                  "उपस्थित कॉपीराइट उल्लंघन",
-                  "代理著作権侵害",
-                  "替代侵权"
+                  "Viola\u00e7\u00e3o de direitos autorais vic\u00e1ria",
+                  "\u05d4\u05e4\u05e8\u05ea \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05d9\u05d5\u05e6\u05e8\u05d9\u05dd \u05d7\u05dc\u05d5\u05e4\u05d9\u05ea",
+                  "\u0909\u092a\u0938\u094d\u0925\u093f\u0924 \u0915\u0949\u092a\u0940\u0930\u093e\u0907\u091f \u0909\u0932\u094d\u0932\u0902\u0918\u0928",
+                  "\u4ee3\u7406\u8457\u4f5c\u6a29\u4fb5\u5bb3",
+                  "\u66ff\u4ee3\u4fb5\u6743"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1366,15 +1783,15 @@
                 "iri_hash": "R952ghaje9ugDR4ZiuhF75a",
                 "definition": "Contributory Copyright Infringement is a legal concept that holds a party liable for knowingly facilitating or encouraging another party's infringement of a copyright owner's exclusive rights.",
                 "synonyms": [
-                  "Contrefaçon de droit d'auteur contributive",
+                  "Contrefa\u00e7on de droit d'auteur contributive",
                   "Contributory Copyright Infringement",
-                  "Infracción de derechos de autor por contribución",
+                  "Infracci\u00f3n de derechos de autor por contribuci\u00f3n",
                   "Mitwirkende Urheberrechtsverletzung",
-                  "Violação contributiva de direitos autorais",
-                  "הפרת זכויות יוצרים על-ידי תרומה",
-                  "योगदानकारी कॉपीराइट उल्लंघन",
-                  "共同侵权",
-                  "共同著作権侵害"
+                  "Viola\u00e7\u00e3o contributiva de direitos autorais",
+                  "\u05d4\u05e4\u05e8\u05ea \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05d9\u05d5\u05e6\u05e8\u05d9\u05dd \u05e2\u05dc-\u05d9\u05d3\u05d9 \u05ea\u05e8\u05d5\u05de\u05d4",
+                  "\u092f\u094b\u0917\u0926\u093e\u0928\u0915\u093e\u0930\u0940 \u0915\u0949\u092a\u0940\u0930\u093e\u0907\u091f \u0909\u0932\u094d\u0932\u0902\u0918\u0928",
+                  "\u5171\u540c\u4fb5\u6743",
+                  "\u5171\u540c\u8457\u4f5c\u6a29\u4fb5\u5bb3"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1429,15 +1846,15 @@
                 "iri_hash": "Rlt4ugwZ3FbR9vKd73y0Wx",
                 "definition": "Vicarious Copyright Infringement refers to a situation where a person is held liable for copyright infringement committed by another person, even if they did not directly commit the infringement themselves.",
                 "synonyms": [
-                  "Contrefaçon de droit d'auteur vicariante",
-                  "Infracción de derechos de autor vicaria",
+                  "Contrefa\u00e7on de droit d'auteur vicariante",
+                  "Infracci\u00f3n de derechos de autor vicaria",
                   "Stellvertretende Urheberrechtsverletzung",
                   "Vicarious Copyright Infringement",
-                  "Violação de direitos autorais vicária",
-                  "הפרת זכויות יוצרים חלופית",
-                  "उपस्थित कॉपीराइट उल्लंघन",
-                  "代理著作権侵害",
-                  "替代侵权"
+                  "Viola\u00e7\u00e3o de direitos autorais vic\u00e1ria",
+                  "\u05d4\u05e4\u05e8\u05ea \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05d9\u05d5\u05e6\u05e8\u05d9\u05dd \u05d7\u05dc\u05d5\u05e4\u05d9\u05ea",
+                  "\u0909\u092a\u0938\u094d\u0925\u093f\u0924 \u0915\u0949\u092a\u0940\u0930\u093e\u0907\u091f \u0909\u0932\u094d\u0932\u0902\u0918\u0928",
+                  "\u4ee3\u7406\u8457\u4f5c\u6a29\u4fb5\u5bb3",
+                  "\u66ff\u4ee3\u4fb5\u6743"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1480,14 +1897,14 @@
                 "definition": "The unauthorized use or reproduction of a copyrighted work, without the permission of the owner, which may include copying, distributing, displaying, or performing the work.",
                 "synonyms": [
                   "Copyright Infringement",
-                  "Infracción de derechos de autor",
+                  "Infracci\u00f3n de derechos de autor",
                   "Urheberrechtsverletzung",
                   "Violation de droit d'auteur",
-                  "Violação de direitos autorais",
-                  "הפרת זכויות יוצרים",
-                  "कॉपीराइट उल्लंघन",
-                  "侵犯版权",
-                  "著作権侵害"
+                  "Viola\u00e7\u00e3o de direitos autorais",
+                  "\u05d4\u05e4\u05e8\u05ea \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05d9\u05d5\u05e6\u05e8\u05d9\u05dd",
+                  "\u0915\u0949\u092a\u0940\u0930\u093e\u0907\u091f \u0909\u0932\u094d\u0932\u0902\u0918\u0928",
+                  "\u4fb5\u72af\u7248\u6743",
+                  "\u8457\u4f5c\u6a29\u4fb5\u5bb3"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1541,11 +1958,11 @@
                   "Dienstleistung",
                   "Service",
                   "Servicio",
-                  "Serviço",
-                  "שירות",
-                  "सेवा",
-                  "サービス",
-                  "服务"
+                  "Servi\u00e7o",
+                  "\u05e9\u05d9\u05e8\u05d5\u05ea",
+                  "\u0938\u0947\u0935\u093e",
+                  "\u30b5\u30fc\u30d3\u30b9",
+                  "\u670d\u52a1"
                 ],
                 "branch": "Service",
                 "branch_color": "#065e4e",
@@ -1578,14 +1995,14 @@
                 "synonyms": [
                   "Derecho de Propiedad Intelectual",
                   "Direito de Propriedade Intelectual",
-                  "Droit de la propriété intellectuelle",
+                  "Droit de la propri\u00e9t\u00e9 intellectuelle",
                   "Geistiges Eigentumsrecht",
                   "Intellectual Property Law",
                   "Ley de Propiedad Intelectual",
-                  "חוק קניין רוחני",
-                  "बौद्धिक संपदा कानून",
-                  "知的財産法",
-                  "知识产权法",
+                  "\u05d7\u05d5\u05e7 \u05e7\u05e0\u05d9\u05d9\u05df \u05e8\u05d5\u05d7\u05e0\u05d9",
+                  "\u092c\u094c\u0926\u094d\u0927\u093f\u0915 \u0938\u0902\u092a\u0926\u093e \u0915\u093e\u0928\u0942\u0928",
+                  "\u77e5\u7684\u8ca1\u7523\u6cd5",
+                  "\u77e5\u8bc6\u4ea7\u6743\u6cd5",
                   "INTP"
                 ],
                 "branch": "Area of Law",
@@ -1614,16 +2031,16 @@
                 "iri_hash": "RBUBqjNCYBI4CtLUcdAVYwy",
                 "definition": "Intellectual property is a broad categorical description for the set of intangibles owned and legally protected by a company from outside use or implementation without consent. Intellectual property can consist of patents, trade secrets, copyrights, franchises, and trademarks or simply ideas.",
                 "synonyms": [
-                  "Actifs de propriété intellectuelle",
+                  "Actifs de propri\u00e9t\u00e9 intellectuelle",
                   "Activos de Propiedad Intelectual",
                   "Ativos de propriedade intelectual",
                   "Geistiges Eigentum",
                   "Intellectual Property",
                   "Intellectual Property Assets",
-                  "נכסי קניין רוחניים",
-                  "बौद्धिक संपदा संपत्तियाँ",
-                  "知的財産資産",
-                  "知识产权资产",
+                  "\u05e0\u05db\u05e1\u05d9 \u05e7\u05e0\u05d9\u05d9\u05df \u05e8\u05d5\u05d7\u05e0\u05d9\u05d9\u05dd",
+                  "\u092c\u094c\u0926\u094d\u0927\u093f\u0915 \u0938\u0902\u092a\u0926\u093e \u0938\u0902\u092a\u0924\u094d\u0924\u093f\u092f\u093e\u0901",
+                  "\u77e5\u7684\u8ca1\u7523\u8cc7\u7523",
+                  "\u77e5\u8bc6\u4ea7\u6743\u8d44\u4ea7",
                   "INTPTA"
                 ],
                 "branch": "Asset Type",
@@ -1679,15 +2096,15 @@
                 "iri_hash": "RC0D5sYWEbeH4f6F0f70uMz",
                 "definition": "An Intellectual Property Agreement is a legal contract between parties that outlines the ownership and use of intangible assets, such as patents, trademarks, and copyrights.",
                 "synonyms": [
-                  "Accord de propriété intellectuelle",
+                  "Accord de propri\u00e9t\u00e9 intellectuelle",
                   "Acordo de propriedade intelectual",
                   "Acuerdo de Propiedad Intelectual",
                   "Intellectual Property Agreement",
-                  "Vereinbarung über geistiges Eigentum",
-                  "הסכם קניין רוחני",
-                  "बौद्धिक संपदा समझौता",
-                  "知的財産契約",
-                  "知识产权协议"
+                  "Vereinbarung \u00fcber geistiges Eigentum",
+                  "\u05d4\u05e1\u05db\u05dd \u05e7\u05e0\u05d9\u05d9\u05df \u05e8\u05d5\u05d7\u05e0\u05d9",
+                  "\u092c\u094c\u0926\u094d\u0927\u093f\u0915 \u0938\u0902\u092a\u0926\u093e \u0938\u092e\u091d\u094c\u0924\u093e",
+                  "\u77e5\u7684\u8ca1\u7523\u5951\u7d04",
+                  "\u77e5\u8bc6\u4ea7\u6743\u534f\u8bae"
                 ],
                 "branch": "Document / Artifact",
                 "branch_color": "#9c4a10",
@@ -1794,14 +2211,14 @@
                 "synonyms": [
                   "Consideration - IP Assets",
                   "Consideration - Intellectual Property Assets",
-                  "Contraprestación - Activos de Propiedad Intelectual",
-                  "Contraprestação - Ativos de Propriedade Intelectual",
-                  "Contrepartie - Actifs de propriété intellectuelle",
+                  "Contraprestaci\u00f3n - Activos de Propiedad Intelectual",
+                  "Contrapresta\u00e7\u00e3o - Ativos de Propriedade Intelectual",
+                  "Contrepartie - Actifs de propri\u00e9t\u00e9 intellectuelle",
                   "Gegenleistung - Geistiges Eigentum",
-                  "תמורה - נכסי קניין רוחניים",
-                  "विचार - बौद्धिक संपत्ति संपत्तियों",
-                  "対価 - 知的財産資産",
-                  "考虑因素 - 知识产权资产"
+                  "\u05ea\u05de\u05d5\u05e8\u05d4 - \u05e0\u05db\u05e1\u05d9 \u05e7\u05e0\u05d9\u05d9\u05df \u05e8\u05d5\u05d7\u05e0\u05d9\u05d9\u05dd",
+                  "\u0935\u093f\u091a\u093e\u0930 - \u092c\u094c\u0926\u094d\u0927\u093f\u0915 \u0938\u0902\u092a\u0924\u094d\u0924\u093f \u0938\u0902\u092a\u0924\u094d\u0924\u093f\u092f\u094b\u0902",
+                  "\u5bfe\u4fa1 - \u77e5\u7684\u8ca1\u7523\u8cc7\u7523",
+                  "\u8003\u8651\u56e0\u7d20 - \u77e5\u8bc6\u4ea7\u6743\u8d44\u4ea7"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1835,15 +2252,15 @@
                 "iri_hash": "RJL4HDUmZp1VEEZ7lCwSSF",
                 "definition": "Intellectual Property Claims refer to legal actions taken by a party to protect their exclusive rights to intangible assets such as patents, trademarks, copyrights, and trade secrets.",
                 "synonyms": [
-                  "Ansprüche des geistigen Eigentums",
+                  "Anspr\u00fcche des geistigen Eigentums",
                   "Intellectual Property Claims",
                   "Reclamaciones de Propiedad Intelectual",
-                  "Reivindicações de propriedade intelectual",
-                  "Revendications de propriété intellectuelle",
-                  "תביעות בקניין רוחני",
-                  "बौद्धिक संपदा दावे",
-                  "知的財産権主張",
-                  "知识产权声明"
+                  "Reivindica\u00e7\u00f5es de propriedade intelectual",
+                  "Revendications de propri\u00e9t\u00e9 intellectuelle",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05d1\u05e7\u05e0\u05d9\u05d9\u05df \u05e8\u05d5\u05d7\u05e0\u05d9",
+                  "\u092c\u094c\u0926\u094d\u0927\u093f\u0915 \u0938\u0902\u092a\u0926\u093e \u0926\u093e\u0935\u0947",
+                  "\u77e5\u7684\u8ca1\u7523\u6a29\u4e3b\u5f35",
+                  "\u77e5\u8bc6\u4ea7\u6743\u58f0\u660e"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -2004,16 +2421,16 @@
                   "Transactional",
                   "Transactional Service",
                   "Pratique transactionnelle",
-                  "Práctica Transaccional",
-                  "Prática transacional",
+                  "Pr\u00e1ctica Transaccional",
+                  "Pr\u00e1tica transacional",
                   "Transaction",
                   "Transactional Practice",
                   "Transactions",
                   "Transaktionspraxis",
-                  "תרגול עסקי",
-                  "लेनदेन अभ्यास",
-                  "トランザクション実務",
-                  "交易实践",
+                  "\u05ea\u05e8\u05d2\u05d5\u05dc \u05e2\u05e1\u05e7\u05d9",
+                  "\u0932\u0947\u0928\u0926\u0947\u0928 \u0905\u092d\u094d\u092f\u093e\u0938",
+                  "\u30c8\u30e9\u30f3\u30b6\u30af\u30b7\u30e7\u30f3\u5b9f\u52d9",
+                  "\u4ea4\u6613\u5b9e\u8df5",
                   "T"
                 ],
                 "branch": "Service",
@@ -2039,11 +2456,11 @@
                   "Dienstleistung",
                   "Service",
                   "Servicio",
-                  "Serviço",
-                  "שירות",
-                  "सेवा",
-                  "サービス",
-                  "服务"
+                  "Servi\u00e7o",
+                  "\u05e9\u05d9\u05e8\u05d5\u05ea",
+                  "\u0938\u0947\u0935\u093e",
+                  "\u30b5\u30fc\u30d3\u30b9",
+                  "\u670d\u52a1"
                 ],
                 "branch": "Service",
                 "branch_color": "#065e4e",
@@ -2119,13 +2536,13 @@
                   "M&A F8 Tax Service",
                   "M&A F8 Steuerpraxis",
                   "M&A F8 Tax Practice",
-                  "M&A F8 מקצוע המיסים",
-                  "M&A F8税务实践",
-                  "M&A F8税務実務",
+                  "M&A F8 \u05de\u05e7\u05e6\u05d5\u05e2 \u05d4\u05de\u05d9\u05e1\u05d9\u05dd",
+                  "M&A F8\u7a0e\u52a1\u5b9e\u8df5",
+                  "M&A F8\u7a0e\u52d9\u5b9f\u52d9",
                   "Pratique fiscale M&A F8",
-                  "Práctica fiscal de fusiones y adquisiciones F8",
-                  "Prática fiscal M&A F8",
-                  "एम एंड ए एफ 8 टैक्स प्रैक्टिस"
+                  "Pr\u00e1ctica fiscal de fusiones y adquisiciones F8",
+                  "Pr\u00e1tica fiscal M&A F8",
+                  "\u090f\u092e \u090f\u0902\u0921 \u090f \u090f\u092b 8 \u091f\u0948\u0915\u094d\u0938 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938"
                 ],
                 "branch": "Service",
                 "branch_color": "#065e4e",
@@ -2166,15 +2583,15 @@
                   "Pre-Trial",
                   "Pretrial",
                   "Pretrial Service",
-                  "Pratique préliminaire",
+                  "Pratique pr\u00e9liminaire",
                   "Pretrial Practice",
-                  "Práctica Preprocesal",
-                  "Prática pré-processual",
+                  "Pr\u00e1ctica Preprocesal",
+                  "Pr\u00e1tica pr\u00e9-processual",
                   "Vorverfahrenspraxis",
-                  "תרגול לפני המשפט",
-                  "प्रीट्रायल अभ्यास",
-                  "事前手続き",
-                  "审前实践"
+                  "\u05ea\u05e8\u05d2\u05d5\u05dc \u05dc\u05e4\u05e0\u05d9 \u05d4\u05de\u05e9\u05e4\u05d8",
+                  "\u092a\u094d\u0930\u0940\u091f\u094d\u0930\u093e\u092f\u0932 \u0905\u092d\u094d\u092f\u093e\u0938",
+                  "\u4e8b\u524d\u624b\u7d9a\u304d",
+                  "\u5ba1\u524d\u5b9e\u8df5"
                 ],
                 "branch": "Service",
                 "branch_color": "#065e4e",

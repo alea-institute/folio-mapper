@@ -64,6 +64,29 @@ describe('detectStalePreset', () => {
     };
     expect(detectStalePreset(args)).toEqual(args);
   });
+
+  it('ignores SemVer build metadata (git-hash suffix is not staleness)', () => {
+    // Real curated payloads stamp `0.10.0+01f7ecb`; runtime is plain `0.10.0`.
+    // Per SemVer, build metadata is ignored — these are the same version.
+    expect(
+      detectStalePreset({
+        payloadPipelineVersion: '0.10.0+01f7ecb',
+        payloadFolioVersion: '0.2.0',
+        runtimePipelineVersion: '0.10.0',
+        runtimeFolioVersion: null,
+      }),
+    ).toBeNull();
+  });
+
+  it('still fires when the base version differs despite build metadata', () => {
+    const args = {
+      payloadPipelineVersion: '0.9.0+abc1234',
+      payloadFolioVersion: '0.2.0',
+      runtimePipelineVersion: '0.10.0',
+      runtimeFolioVersion: null,
+    };
+    expect(detectStalePreset(args)).toEqual(args);
+  });
 });
 
 describe('demo manifest registration', () => {

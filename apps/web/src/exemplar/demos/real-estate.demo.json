@@ -397,15 +397,15 @@
                 "definition": "Law that governs the various forms of ownership and tenancy in real property.",
                 "synonyms": [
                   "Derecho de Propiedad Inmobiliaria",
-                  "Direito de propriedade imobiliária",
+                  "Direito de propriedade imobili\u00e1ria",
                   "Droit des biens immobiliers",
                   "Property Law",
                   "Real Property Law",
                   "Sachenrecht",
-                  "חוק רכוש נדלן",
-                  "रियल प्रॉपर्टी कानून",
-                  "不动产法",
-                  "不動産法",
+                  "\u05d7\u05d5\u05e7 \u05e8\u05db\u05d5\u05e9 \u05e0\u05d3\u05dc\u05df",
+                  "\u0930\u093f\u092f\u0932 \u092a\u094d\u0930\u0949\u092a\u0930\u094d\u091f\u0940 \u0915\u093e\u0928\u0942\u0928",
+                  "\u4e0d\u52a8\u4ea7\u6cd5",
+                  "\u4e0d\u52d5\u7523\u6cd5",
                   "REAL"
                 ],
                 "branch": "Area of Law",
@@ -459,14 +459,14 @@
                 "synonyms": [
                   "Actif immobilier",
                   "Activo inmobiliario",
-                  "Ativo imobiliário",
-                  "Immobilienvermögen",
+                  "Ativo imobili\u00e1rio",
+                  "Immobilienverm\u00f6gen",
                   "Real Estate",
                   "Real Estate Asset",
-                  "נכס נדלן",
-                  "रियल एस्टेट संपत्ति",
-                  "不動産資産",
-                  "房地产资产",
+                  "\u05e0\u05db\u05e1 \u05e0\u05d3\u05dc\u05df",
+                  "\u0930\u093f\u092f\u0932 \u090f\u0938\u094d\u091f\u0947\u091f \u0938\u0902\u092a\u0924\u094d\u0924\u093f",
+                  "\u4e0d\u52d5\u7523\u8cc7\u7523",
+                  "\u623f\u5730\u4ea7\u8d44\u4ea7",
                   "REALA"
                 ],
                 "branch": "Asset Type",
@@ -499,15 +499,15 @@
                 "iri_hash": "R9OVY5GWczMSrxKsf8cfgpq",
                 "definition": "Real Estate Documents are written or recorded representations of property ownership, transfer, or use, including but not limited to deeds, mortgages, and leases.",
                 "synonyms": [
-                  "Documentos de bienes raíces",
-                  "Documentos imobiliários",
+                  "Documentos de bienes ra\u00edces",
+                  "Documentos imobili\u00e1rios",
                   "Documents immobiliers",
                   "Immobilienunterlagen",
                   "Real Estate Documents",
-                  "מסמכי נדלן",
-                  "रियल एस्टेट दस्तावेज़",
-                  "不動産書類",
-                  "房地产文件"
+                  "\u05de\u05e1\u05de\u05db\u05d9 \u05e0\u05d3\u05dc\u05df",
+                  "\u0930\u093f\u092f\u0932 \u090f\u0938\u094d\u091f\u0947\u091f \u0926\u0938\u094d\u0924\u093e\u0935\u0947\u091c\u093c",
+                  "\u4e0d\u52d5\u7523\u66f8\u985e",
+                  "\u623f\u5730\u4ea7\u6587\u4ef6"
                 ],
                 "branch": "Document / Artifact",
                 "branch_color": "#9c4a10",
@@ -659,14 +659,14 @@
                 "synonyms": [
                   "Immobilienbranche",
                   "Industria Inmobiliaria",
-                  "Industrie immobilière",
-                  "Indústria imobiliária",
+                  "Industrie immobili\u00e8re",
+                  "Ind\u00fastria imobili\u00e1ria",
                   "Real Estate",
                   "Real Estate Industry",
-                  "תעשיית נדלן",
-                  "रियल एस्टेट उद्योग",
-                  "不動産業",
-                  "房地产行业",
+                  "\u05ea\u05e2\u05e9\u05d9\u05d9\u05ea \u05e0\u05d3\u05dc\u05df",
+                  "\u0930\u093f\u092f\u0932 \u090f\u0938\u094d\u091f\u0947\u091f \u0909\u0926\u094d\u092f\u094b\u0917",
+                  "\u4e0d\u52d5\u7523\u696d",
+                  "\u623f\u5730\u4ea7\u884c\u4e1a",
                   "REAL"
                 ],
                 "branch": "Industry and Market",
@@ -700,14 +700,14 @@
                 "definition": "Real Estate Fraud: A type of fraud claim that involves deceitful or dishonest practices related to the buying, selling, or leasing of real property, which may result in property or premises liability claims.",
                 "synonyms": [
                   "Fraude Inmobiliario",
-                  "Fraude immobilière",
-                  "Fraude imobiliária",
+                  "Fraude immobili\u00e8re",
+                  "Fraude imobili\u00e1ria",
                   "Immobilienbetrug",
                   "Real Estate Fraud",
-                  "הונאת נדלן",
-                  "रियल एस्टेट धोखाधड़ी",
-                  "不動産詐欺",
-                  "房地产欺诈"
+                  "\u05d4\u05d5\u05e0\u05d0\u05ea \u05e0\u05d3\u05dc\u05df",
+                  "\u0930\u093f\u092f\u0932 \u090f\u0938\u094d\u091f\u0947\u091f \u0927\u094b\u0916\u093e\u0927\u0921\u093c\u0940",
+                  "\u4e0d\u52d5\u7523\u8a50\u6b3a",
+                  "\u623f\u5730\u4ea7\u6b3a\u8bc8"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -746,14 +746,14 @@
                 "definition": "The concept of Trespass to Real Property refers to the intentional and unauthorized entry onto someone else's land or property, causing damage or interference with the owner's right to exclusive possession.",
                 "synonyms": [
                   "Hausfriedensbruch",
-                  "Intrusión en bienes inmuebles",
-                  "Invasão de propriedade",
+                  "Intrusi\u00f3n en bienes inmuebles",
+                  "Invas\u00e3o de propriedade",
                   "Trespass to Real Property",
                   "Trouble de voisinage",
-                  "הפרת קניין ריאלי",
-                  "वास्तविक संपत्ति के लिए अतिचार",
-                  "不動産侵入",
-                  "侵占不动产"
+                  "\u05d4\u05e4\u05e8\u05ea \u05e7\u05e0\u05d9\u05d9\u05df \u05e8\u05d9\u05d0\u05dc\u05d9",
+                  "\u0935\u093e\u0938\u094d\u0924\u0935\u093f\u0915 \u0938\u0902\u092a\u0924\u094d\u0924\u093f \u0915\u0947 \u0932\u093f\u090f \u0905\u0924\u093f\u091a\u093e\u0930",
+                  "\u4e0d\u52d5\u7523\u4fb5\u5165",
+                  "\u4fb5\u5360\u4e0d\u52a8\u4ea7"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -798,12 +798,12 @@
                   "Allanamiento de morada",
                   "Criminal Trespass",
                   "Criminal Trespass of Real Property",
-                  "Invasão criminal",
+                  "Invas\u00e3o criminal",
                   "Straftrespass",
                   "Trespass criminel",
-                  "פשיעת חדירה",
-                  "अपराधी अतिक्रमण",
-                  "刑事侵入"
+                  "\u05e4\u05e9\u05d9\u05e2\u05ea \u05d7\u05d3\u05d9\u05e8\u05d4",
+                  "\u0905\u092a\u0930\u093e\u0927\u0940 \u0905\u0924\u093f\u0915\u094d\u0930\u092e\u0923",
+                  "\u5211\u4e8b\u4fb5\u5165"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -949,15 +949,15 @@
                   "M&A F6 Real Property",
                   "M&A F6 Real Property Service",
                   "M&A F6 Immobilienpraxis",
-                  "M&A F6 Pratique immobilière",
-                  "M&A F6 Prática de Propriedade Imobiliária",
+                  "M&A F6 Pratique immobili\u00e8re",
+                  "M&A F6 Pr\u00e1tica de Propriedade Imobili\u00e1ria",
                   "M&A F6 Real Property Practice",
-                  "M&A F6 פרקטיקת נכסי נדלן אמיתיים",
-                  "M&A F6 不動産実務",
-                  "M&A F6 房地产实践",
-                  "Práctica de propiedad inmobiliaria real M&A F6",
-                  "Práctica inmobiliaria de propiedad real M&A F6",
-                  "एम एंड ए एफ 6 रीयल प्रॉपर्टी प्रैक्टिस का एम एंड ए"
+                  "M&A F6 \u05e4\u05e8\u05e7\u05d8\u05d9\u05e7\u05ea \u05e0\u05db\u05e1\u05d9 \u05e0\u05d3\u05dc\u05df \u05d0\u05de\u05d9\u05ea\u05d9\u05d9\u05dd",
+                  "M&A F6 \u4e0d\u52d5\u7523\u5b9f\u52d9",
+                  "M&A F6 \u623f\u5730\u4ea7\u5b9e\u8df5",
+                  "Pr\u00e1ctica de propiedad inmobiliaria real M&A F6",
+                  "Pr\u00e1ctica inmobiliaria de propiedad real M&A F6",
+                  "\u090f\u092e \u090f\u0902\u0921 \u090f \u090f\u092b 6 \u0930\u0940\u092f\u0932 \u092a\u094d\u0930\u0949\u092a\u0930\u094d\u091f\u0940 \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938 \u0915\u093e \u090f\u092e \u090f\u0902\u0921 \u090f"
                 ],
                 "branch": "Service",
                 "branch_color": "#065e4e",
@@ -1078,15 +1078,15 @@
                 "definition": "Law relating to the acquisition and transfer of real property.",
                 "synonyms": [
                   "Derecho de Propiedad y Ley de Transacciones",
-                  "Direito de Propriedade e Lei de Transações",
-                  "Droit des droits de propriété et des transactions",
+                  "Direito de Propriedade e Lei de Transa\u00e7\u00f5es",
+                  "Droit des droits de propri\u00e9t\u00e9 et des transactions",
                   "Eigentumsrechte und Transaktionsrecht",
                   "Property Rights and Transactions",
                   "Property Rights and Transactions Law",
-                  "זכויות בעלות וחוקי עסקאות",
-                  "संपत्ति अधिकार और लेन-देन कानून",
-                  "財産権と取引法",
-                  "财产权和交易法",
+                  "\u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05d1\u05e2\u05dc\u05d5\u05ea \u05d5\u05d7\u05d5\u05e7\u05d9 \u05e2\u05e1\u05e7\u05d0\u05d5\u05ea",
+                  "\u0938\u0902\u092a\u0924\u094d\u0924\u093f \u0905\u0927\u093f\u0915\u093e\u0930 \u0914\u0930 \u0932\u0947\u0928-\u0926\u0947\u0928 \u0915\u093e\u0928\u0942\u0928",
+                  "\u8ca1\u7523\u6a29\u3068\u53d6\u5f15\u6cd5",
+                  "\u8d22\u4ea7\u6743\u548c\u4ea4\u6613\u6cd5",
                   "PTRN"
                 ],
                 "branch": "Area of Law",
@@ -1268,10 +1268,10 @@
                   "Locataire",
                   "Mieter",
                   "Tenant",
-                  "שוכר",
-                  "किरायेदार",
-                  "テナント",
-                  "租户"
+                  "\u05e9\u05d5\u05db\u05e8",
+                  "\u0915\u093f\u0930\u093e\u092f\u0947\u0926\u093e\u0930",
+                  "\u30c6\u30ca\u30f3\u30c8",
+                  "\u79df\u6237"
                 ],
                 "branch": "Actor / Player",
                 "branch_color": "#1e6fa0",
@@ -1300,13 +1300,13 @@
                   "Arrendador",
                   "Landlord",
                   "Propietario",
-                  "Propriétaire",
+                  "Propri\u00e9taire",
                   "Senhorio",
                   "Vermieter",
-                  "משכיר",
-                  "मकान मालिक",
-                  "大家",
-                  "房东"
+                  "\u05de\u05e9\u05db\u05d9\u05e8",
+                  "\u092e\u0915\u093e\u0928 \u092e\u093e\u0932\u093f\u0915",
+                  "\u5927\u5bb6",
+                  "\u623f\u4e1c"
                 ],
                 "branch": "Actor / Player",
                 "branch_color": "#1e6fa0",
@@ -1338,15 +1338,15 @@
                 "iri_hash": "RBjYepK2dGo0eMf20eWQmI3",
                 "definition": "Law that details the rights and duties of landlords and tenants",
                 "synonyms": [
-                  "Direito do locador e do locatário",
+                  "Direito do locador e do locat\u00e1rio",
                   "Droit des baux",
                   "Landlord Tenant Law",
                   "Ley de Arrendamiento",
                   "Mietrecht",
-                  "חוק שכירות בעלים",
-                  "लैंडलॉर्ड टेनेंट कानून",
-                  "家主・借主法",
-                  "房东租户法",
+                  "\u05d7\u05d5\u05e7 \u05e9\u05db\u05d9\u05e8\u05d5\u05ea \u05d1\u05e2\u05dc\u05d9\u05dd",
+                  "\u0932\u0948\u0902\u0921\u0932\u0949\u0930\u094d\u0921 \u091f\u0947\u0928\u0947\u0902\u091f \u0915\u093e\u0928\u0942\u0928",
+                  "\u5bb6\u4e3b\u30fb\u501f\u4e3b\u6cd5",
+                  "\u623f\u4e1c\u79df\u6237\u6cd5",
                   "LLTN"
                 ],
                 "branch": "Area of Law",
@@ -1379,16 +1379,16 @@
                 "iri_hash": "R97svnIdQhrkKZw6i3Nn88z",
                 "definition": "Landlord-Tenant Claims refer to legal disputes between a landlord and a tenant, including issues such as failure to return a tenant's security deposit, unlawful eviction, retaliation, and failure to repair or remedy.",
                 "synonyms": [
-                  "Ansprüche von Vermieter und Mieter",
+                  "Anspr\u00fcche von Vermieter und Mieter",
                   "Landlord-Tenant Claims",
                   "Reclamaciones de arrendador- arrendatario",
                   "Reclamaciones de arrendador-inquilino",
-                  "Reivindicações de proprietário e inquilino",
-                  "Réclamations de propriétaire et locataire",
-                  "תביעות בעלי נכסים-שוכרים",
-                  "लैंडलॉर्ड-टेनेंट दावे",
-                  "家主・テナント請求",
-                  "房东-租户索赔"
+                  "Reivindica\u00e7\u00f5es de propriet\u00e1rio e inquilino",
+                  "R\u00e9clamations de propri\u00e9taire et locataire",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05d1\u05e2\u05dc\u05d9 \u05e0\u05db\u05e1\u05d9\u05dd-\u05e9\u05d5\u05db\u05e8\u05d9\u05dd",
+                  "\u0932\u0948\u0902\u0921\u0932\u0949\u0930\u094d\u0921-\u091f\u0947\u0928\u0947\u0902\u091f \u0926\u093e\u0935\u0947",
+                  "\u5bb6\u4e3b\u30fb\u30c6\u30ca\u30f3\u30c8\u8acb\u6c42",
+                  "\u623f\u4e1c-\u79df\u6237\u7d22\u8d54"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1440,10 +1440,10 @@
                   "Locataire",
                   "Mieter",
                   "Tenant",
-                  "שוכר",
-                  "किरायेदार",
-                  "テナント",
-                  "租户"
+                  "\u05e9\u05d5\u05db\u05e8",
+                  "\u0915\u093f\u0930\u093e\u092f\u0947\u0926\u093e\u0930",
+                  "\u30c6\u30ca\u30f3\u30c8",
+                  "\u79df\u6237"
                 ],
                 "branch": "Actor / Player",
                 "branch_color": "#1e6fa0",
@@ -1472,13 +1472,13 @@
                   "Arrendador",
                   "Landlord",
                   "Propietario",
-                  "Propriétaire",
+                  "Propri\u00e9taire",
                   "Senhorio",
                   "Vermieter",
-                  "משכיר",
-                  "मकान मालिक",
-                  "大家",
-                  "房东"
+                  "\u05de\u05e9\u05db\u05d9\u05e8",
+                  "\u092e\u0915\u093e\u0928 \u092e\u093e\u0932\u093f\u0915",
+                  "\u5927\u5bb6",
+                  "\u623f\u4e1c"
                 ],
                 "branch": "Actor / Player",
                 "branch_color": "#1e6fa0",
@@ -1510,15 +1510,15 @@
                 "iri_hash": "RBjYepK2dGo0eMf20eWQmI3",
                 "definition": "Law that details the rights and duties of landlords and tenants",
                 "synonyms": [
-                  "Direito do locador e do locatário",
+                  "Direito do locador e do locat\u00e1rio",
                   "Droit des baux",
                   "Landlord Tenant Law",
                   "Ley de Arrendamiento",
                   "Mietrecht",
-                  "חוק שכירות בעלים",
-                  "लैंडलॉर्ड टेनेंट कानून",
-                  "家主・借主法",
-                  "房东租户法",
+                  "\u05d7\u05d5\u05e7 \u05e9\u05db\u05d9\u05e8\u05d5\u05ea \u05d1\u05e2\u05dc\u05d9\u05dd",
+                  "\u0932\u0948\u0902\u0921\u0932\u0949\u0930\u094d\u0921 \u091f\u0947\u0928\u0947\u0902\u091f \u0915\u093e\u0928\u0942\u0928",
+                  "\u5bb6\u4e3b\u30fb\u501f\u4e3b\u6cd5",
+                  "\u623f\u4e1c\u79df\u6237\u6cd5",
                   "LLTN"
                 ],
                 "branch": "Area of Law",
@@ -1561,12 +1561,12 @@
                   "Arrendamiento",
                   "Lease",
                   "Location",
-                  "Locação",
+                  "Loca\u00e7\u00e3o",
                   "Miete",
-                  "השכרת נכס",
-                  "पट्टा",
-                  "リース",
-                  "租赁"
+                  "\u05d4\u05e9\u05db\u05e8\u05ea \u05e0\u05db\u05e1",
+                  "\u092a\u091f\u094d\u091f\u093e",
+                  "\u30ea\u30fc\u30b9",
+                  "\u79df\u8d41"
                 ],
                 "branch": "Document / Artifact",
                 "branch_color": "#9c4a10",
@@ -1641,10 +1641,10 @@
                   "Acuerdos",
                   "Agreements",
                   "Vereinbarungen",
-                  "הסכמים",
-                  "समझौते",
-                  "协议",
-                  "合意書"
+                  "\u05d4\u05e1\u05db\u05de\u05d9\u05dd",
+                  "\u0938\u092e\u091d\u094c\u0924\u0947",
+                  "\u534f\u8bae",
+                  "\u5408\u610f\u66f8"
                 ],
                 "branch": "Document / Artifact",
                 "branch_color": "#9c4a10",
@@ -1690,13 +1690,13 @@
                   "Arrendador",
                   "Landlord",
                   "Propietario",
-                  "Propriétaire",
+                  "Propri\u00e9taire",
                   "Senhorio",
                   "Vermieter",
-                  "משכיר",
-                  "मकान मालिक",
-                  "大家",
-                  "房东"
+                  "\u05de\u05e9\u05db\u05d9\u05e8",
+                  "\u092e\u0915\u093e\u0928 \u092e\u093e\u0932\u093f\u0915",
+                  "\u5927\u5bb6",
+                  "\u623f\u4e1c"
                 ],
                 "branch": "Actor / Player",
                 "branch_color": "#1e6fa0",
@@ -1728,16 +1728,16 @@
                 "iri_hash": "R97svnIdQhrkKZw6i3Nn88z",
                 "definition": "Landlord-Tenant Claims refer to legal disputes between a landlord and a tenant, including issues such as failure to return a tenant's security deposit, unlawful eviction, retaliation, and failure to repair or remedy.",
                 "synonyms": [
-                  "Ansprüche von Vermieter und Mieter",
+                  "Anspr\u00fcche von Vermieter und Mieter",
                   "Landlord-Tenant Claims",
                   "Reclamaciones de arrendador- arrendatario",
                   "Reclamaciones de arrendador-inquilino",
-                  "Reivindicações de proprietário e inquilino",
-                  "Réclamations de propriétaire et locataire",
-                  "תביעות בעלי נכסים-שוכרים",
-                  "लैंडलॉर्ड-टेनेंट दावे",
-                  "家主・テナント請求",
-                  "房东-租户索赔"
+                  "Reivindica\u00e7\u00f5es de propriet\u00e1rio e inquilino",
+                  "R\u00e9clamations de propri\u00e9taire et locataire",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05d1\u05e2\u05dc\u05d9 \u05e0\u05db\u05e1\u05d9\u05dd-\u05e9\u05d5\u05db\u05e8\u05d9\u05dd",
+                  "\u0932\u0948\u0902\u0921\u0932\u0949\u0930\u094d\u0921-\u091f\u0947\u0928\u0947\u0902\u091f \u0926\u093e\u0935\u0947",
+                  "\u5bb6\u4e3b\u30fb\u30c6\u30ca\u30f3\u30c8\u8acb\u6c42",
+                  "\u623f\u4e1c-\u79df\u6237\u7d22\u8d54"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1785,14 +1785,14 @@
                 "definition": "Law regulating the subdivision, use, and restriction of land.",
                 "synonyms": [
                   "Baugesetzgebung und Zonenrecht",
-                  "Derecho de uso del suelo y zonificación",
+                  "Derecho de uso del suelo y zonificaci\u00f3n",
                   "Droit de l'utilisation des terres et de la zonification",
                   "Land Use and Zoning Law",
                   "Lei de Uso do Solo e Zoneamento",
-                  "חוקי שימוש ותכנון קרקעות",
-                  "भूमि उपयोग और जोनिंग कानून",
-                  "土地利用和分区法",
-                  "用途地域法",
+                  "\u05d7\u05d5\u05e7\u05d9 \u05e9\u05d9\u05de\u05d5\u05e9 \u05d5\u05ea\u05db\u05e0\u05d5\u05df \u05e7\u05e8\u05e7\u05e2\u05d5\u05ea",
+                  "\u092d\u0942\u092e\u093f \u0909\u092a\u092f\u094b\u0917 \u0914\u0930 \u091c\u094b\u0928\u093f\u0902\u0917 \u0915\u093e\u0928\u0942\u0928",
+                  "\u571f\u5730\u5229\u7528\u548c\u5206\u533a\u6cd5",
+                  "\u7528\u9014\u5730\u57df\u6cd5",
                   "LUZN"
                 ],
                 "branch": "Area of Law",
@@ -1833,14 +1833,14 @@
                 "definition": "Law regulating the subdivision, use, and restriction of land.",
                 "synonyms": [
                   "Baugesetzgebung und Zonenrecht",
-                  "Derecho de uso del suelo y zonificación",
+                  "Derecho de uso del suelo y zonificaci\u00f3n",
                   "Droit de l'utilisation des terres et de la zonification",
                   "Land Use and Zoning Law",
                   "Lei de Uso do Solo e Zoneamento",
-                  "חוקי שימוש ותכנון קרקעות",
-                  "भूमि उपयोग और जोनिंग कानून",
-                  "土地利用和分区法",
-                  "用途地域法",
+                  "\u05d7\u05d5\u05e7\u05d9 \u05e9\u05d9\u05de\u05d5\u05e9 \u05d5\u05ea\u05db\u05e0\u05d5\u05df \u05e7\u05e8\u05e7\u05e2\u05d5\u05ea",
+                  "\u092d\u0942\u092e\u093f \u0909\u092a\u092f\u094b\u0917 \u0914\u0930 \u091c\u094b\u0928\u093f\u0902\u0917 \u0915\u093e\u0928\u0942\u0928",
+                  "\u571f\u5730\u5229\u7528\u548c\u5206\u533a\u6cd5",
+                  "\u7528\u9014\u5730\u57df\u6cd5",
                   "LUZN"
                 ],
                 "branch": "Area of Law",
@@ -1869,14 +1869,275 @@
       {
         "item_index": 10,
         "item_text": "Zoning Variance",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Land Use and Zoning Law",
+                "iri": "https://folio.openlegalstandard.org/RCZeXWp0noZxJw19K1AU2bA",
+                "iri_hash": "RCZeXWp0noZxJw19K1AU2bA",
+                "definition": "Law regulating the subdivision, use, and restriction of land.",
+                "synonyms": [
+                  "Baugesetzgebung und Zonenrecht",
+                  "Derecho de uso del suelo y zonificaci\u00f3n",
+                  "Droit de l'utilisation des terres et de la zonification",
+                  "Land Use and Zoning Law",
+                  "Lei de Uso do Solo e Zoneamento",
+                  "\u05d7\u05d5\u05e7\u05d9 \u05e9\u05d9\u05de\u05d5\u05e9 \u05d5\u05ea\u05db\u05e0\u05d5\u05df \u05e7\u05e8\u05e7\u05e2\u05d5\u05ea",
+                  "\u092d\u0942\u092e\u093f \u0909\u092a\u092f\u094b\u0917 \u0914\u0930 \u091c\u094b\u0928\u093f\u0902\u0917 \u0915\u093e\u0928\u0942\u0928",
+                  "\u571f\u5730\u5229\u7528\u548c\u5206\u533a\u6cd5",
+                  "\u7528\u9014\u5730\u57df\u6cd5",
+                  "LUZN"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Real Property Law",
+                    "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7"
+                  },
+                  {
+                    "label": "Land Use and Zoning Law",
+                    "iri_hash": "RCZeXWp0noZxJw19K1AU2bA"
+                  }
+                ],
+                "score": 46.1
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Conditional Use Permit",
+                "iri": "https://folio.openlegalstandard.org/RBg52ungMRV8jc4xdnfTp5W",
+                "iri_hash": "RBg52ungMRV8jc4xdnfTp5W",
+                "definition": "A Conditional Use Permit is a type of land use authorization that allows a property owner to engage in activities not typically permitted within a specific zoning classification, subject to meeting predetermined conditions. This permit is granted by a local governing body after a review process, often involving public hearings and assessments.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Licenses and Permits",
+                    "iri_hash": "RCKrakJNv6b1oTTMhd4c5DU"
+                  },
+                  {
+                    "label": "Conditional Use Permit",
+                    "iri_hash": "RBg52ungMRV8jc4xdnfTp5W"
+                  }
+                ],
+                "score": 39.9
+              },
+              {
+                "label": "Construction Permit",
+                "iri": "https://folio.openlegalstandard.org/R9ZPSld6KdJHYlJhwc8rzJi",
+                "iri_hash": "R9ZPSld6KdJHYlJhwc8rzJi",
+                "definition": "A Construction Permit is an official authorization issued by a governmental body that allows the holder to commence construction, modification, or demolition of a building or structure. It ensures that the proposed work complies with local building codes, zoning laws, and safety regulations.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Licenses and Permits",
+                    "iri_hash": "RCKrakJNv6b1oTTMhd4c5DU"
+                  },
+                  {
+                    "label": "Construction Permit",
+                    "iri_hash": "R9ZPSld6KdJHYlJhwc8rzJi"
+                  }
+                ],
+                "score": 41.9
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Real Estate Developer",
+                "iri": "https://folio.openlegalstandard.org/R9M22nIQgd72E0PSrkHmrxX",
+                "iri_hash": "R9M22nIQgd72E0PSrkHmrxX",
+                "definition": "A Real Estate Developer is a professional or company that acquires land, finances real estate deals, builds or renovates properties, and arranges for their sale or lease. This role involves various stages of development, including market research, site selection, obtaining permits, and managing construction projects.",
+                "synonyms": [
+                  "Real Estate Entrepreneur"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Real Estate Developer",
+                    "iri_hash": "R9M22nIQgd72E0PSrkHmrxX"
+                  }
+                ],
+                "score": 33.6
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
       },
       {
         "item_index": 11,
         "item_text": "Construction",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Construction and Development Law",
+                "iri": "https://folio.openlegalstandard.org/R7o4TiXsYQ6vV6MrJMTfnS7",
+                "iri_hash": "R7o4TiXsYQ6vV6MrJMTfnS7",
+                "definition": "Law dealing with matters relating to building construction, engineering, and related fields.",
+                "synonyms": [
+                  "Bau- und Entwicklungsrecht",
+                  "Construction and Development",
+                  "Construction and Development Law",
+                  "Derecho de la Construcci\u00f3n y Desarrollo",
+                  "Direito da Constru\u00e7\u00e3o e Desenvolvimento",
+                  "Droit de la construction et de l'am\u00e9nagement",
+                  "\u05d7\u05d5\u05e7\u05d9 \u05d1\u05e0\u05d9\u05d9\u05d4 \u05d5\u05e4\u05d9\u05ea\u05d5\u05d7",
+                  "\u0928\u093f\u0930\u094d\u092e\u093e\u0923 \u0914\u0930 \u0935\u093f\u0915\u093e\u0938 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5efa\u8a2d\u30fb\u958b\u767a\u6cd5",
+                  "\u5efa\u8bbe\u548c\u53d1\u5c55\u6cd5\u5f8b",
+                  "CONS"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Real Property Law",
+                    "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7"
+                  },
+                  {
+                    "label": "Construction and Development Law",
+                    "iri_hash": "R7o4TiXsYQ6vV6MrJMTfnS7"
+                  }
+                ],
+                "score": 79.4
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Construction Permit",
+                "iri": "https://folio.openlegalstandard.org/R9ZPSld6KdJHYlJhwc8rzJi",
+                "iri_hash": "R9ZPSld6KdJHYlJhwc8rzJi",
+                "definition": "A Construction Permit is an official authorization issued by a governmental body that allows the holder to commence construction, modification, or demolition of a building or structure. It ensures that the proposed work complies with local building codes, zoning laws, and safety regulations.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Licenses and Permits",
+                    "iri_hash": "RCKrakJNv6b1oTTMhd4c5DU"
+                  },
+                  {
+                    "label": "Construction Permit",
+                    "iri_hash": "R9ZPSld6KdJHYlJhwc8rzJi"
+                  }
+                ],
+                "score": 79.4
+              },
+              {
+                "label": "Construction Agreement",
+                "iri": "https://folio.openlegalstandard.org/R7qqXAsOKmXlJIwCwonnZeI",
+                "iri_hash": "R7qqXAsOKmXlJIwCwonnZeI",
+                "definition": null,
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Service Agreement",
+                    "iri_hash": "RZ2ygZBRYA0HT25x0f50Du"
+                  },
+                  {
+                    "label": "Construction Agreement",
+                    "iri_hash": "R7qqXAsOKmXlJIwCwonnZeI"
+                  }
+                ],
+                "score": 73.6
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
       },
       {
         "item_index": 12,
@@ -1895,13 +2156,13 @@
                   "Bau- und Entwicklungsrecht",
                   "Construction and Development",
                   "Construction and Development Law",
-                  "Derecho de la Construcción y Desarrollo",
-                  "Direito da Construção e Desenvolvimento",
-                  "Droit de la construction et de l'aménagement",
-                  "חוקי בנייה ופיתוח",
-                  "निर्माण और विकास कानून",
-                  "建設・開発法",
-                  "建设和发展法律",
+                  "Derecho de la Construcci\u00f3n y Desarrollo",
+                  "Direito da Constru\u00e7\u00e3o e Desenvolvimento",
+                  "Droit de la construction et de l'am\u00e9nagement",
+                  "\u05d7\u05d5\u05e7\u05d9 \u05d1\u05e0\u05d9\u05d9\u05d4 \u05d5\u05e4\u05d9\u05ea\u05d5\u05d7",
+                  "\u0928\u093f\u0930\u094d\u092e\u093e\u0923 \u0914\u0930 \u0935\u093f\u0915\u093e\u0938 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5efa\u8a2d\u30fb\u958b\u767a\u6cd5",
+                  "\u5efa\u8bbe\u548c\u53d1\u5c55\u6cd5\u5f8b",
                   "CONS"
                 ],
                 "branch": "Area of Law",
@@ -1978,15 +2239,15 @@
                 "iri_hash": "R7XEUVrFS72CU6LCzw9e8em",
                 "definition": "A construction defect claim is a legal action brought against a party for damages resulting from faulty construction work.",
                 "synonyms": [
-                  "Baumängelansprüche",
+                  "Baum\u00e4ngelanspr\u00fcche",
                   "Construction Defect Claims",
-                  "Reclamaciones por defectos de construcción",
-                  "Reclamações por defeitos de construção",
-                  "Réclamations pour vices de construction",
-                  "תביעות פגמי בנייה",
-                  "निर्माण दोष दावे",
-                  "建筑缺陷索赔",
-                  "建築物の欠陥に関するクレーム"
+                  "Reclamaciones por defectos de construcci\u00f3n",
+                  "Reclama\u00e7\u00f5es por defeitos de constru\u00e7\u00e3o",
+                  "R\u00e9clamations pour vices de construction",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05e4\u05d2\u05de\u05d9 \u05d1\u05e0\u05d9\u05d9\u05d4",
+                  "\u0928\u093f\u0930\u094d\u092e\u093e\u0923 \u0926\u094b\u0937 \u0926\u093e\u0935\u0947",
+                  "\u5efa\u7b51\u7f3a\u9677\u7d22\u8d54",
+                  "\u5efa\u7bc9\u7269\u306e\u6b20\u9665\u306b\u95a2\u3059\u308b\u30af\u30ec\u30fc\u30e0"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -2077,10 +2338,10 @@
                   "Lien",
                   "Penhor",
                   "Pfandrecht",
-                  "זכות מעצר",
-                  "लियन",
-                  "抵当権",
-                  "留置权"
+                  "\u05d6\u05db\u05d5\u05ea \u05de\u05e2\u05e6\u05e8",
+                  "\u0932\u093f\u092f\u0928",
+                  "\u62b5\u5f53\u6a29",
+                  "\u7559\u7f6e\u6743"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -2132,14 +2393,14 @@
                 "definition": "A transaction whereby property is lent or given to another on condition of return or, where the loan is of money, repayment. In a loan of money, the money lent becomes the property of the borrower during the period of the loan against an undertaking to return a sum of an equivalent amount either on demand or on a specified date or in accordance with an agreed schedule of repayments.",
                 "synonyms": [
                   "Darlehen",
-                  "Empréstimo",
+                  "Empr\u00e9stimo",
                   "Loan",
-                  "Préstamo",
-                  "Prêt",
-                  "הלוואה",
-                  "ऋण",
-                  "ローン",
-                  "贷款"
+                  "Pr\u00e9stamo",
+                  "Pr\u00eat",
+                  "\u05d4\u05dc\u05d5\u05d5\u05d0\u05d4",
+                  "\u090b\u0923",
+                  "\u30ed\u30fc\u30f3",
+                  "\u8d37\u6b3e"
                 ],
                 "branch": "Document / Artifact",
                 "branch_color": "#9c4a10",
@@ -2183,15 +2444,15 @@
                 "iri_hash": "R7gzXxHYGOLSEudb6n1QFWm",
                 "definition": "The concept of Mortgage Foreclosure refers to the legal process by which a lender takes possession of a property when the borrower fails to make mortgage payments, and sells it to recover the outstanding debt.",
                 "synonyms": [
-                  "Ejecución Hipotecaria",
-                  "Execução hipotecária",
+                  "Ejecuci\u00f3n Hipotecaria",
+                  "Execu\u00e7\u00e3o hipotec\u00e1ria",
                   "Hypotheken Zwangsvollstreckung",
                   "Mortgage Repossession",
-                  "Saisie immobilière",
-                  "מימוש משכנתא",
-                  "ऋण अधिकार जब्ती",
-                  "抵当フォアクロージャー",
-                  "抵押清偿"
+                  "Saisie immobili\u00e8re",
+                  "\u05de\u05d9\u05de\u05d5\u05e9 \u05de\u05e9\u05db\u05e0\u05ea\u05d0",
+                  "\u090b\u0923 \u0905\u0927\u093f\u0915\u093e\u0930 \u091c\u092c\u094d\u0924\u0940",
+                  "\u62b5\u5f53\u30d5\u30a9\u30a2\u30af\u30ed\u30fc\u30b8\u30e3\u30fc",
+                  "\u62b5\u62bc\u6e05\u507f"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -2318,12 +2579,12 @@
                 "iri_hash": "R995bX2KYLkMP0nefaBtEnq",
                 "definition": "Law regulating the taking of private land for public use.",
                 "synonyms": [
-                  " eminent domain 法",
+                  " eminent domain \u6cd5",
                   "Compulsory Purchase Law",
                   "Droit d'expropriation",
                   "Enteignungsrecht",
                   "Expropriation",
-                  "Lei de Desapropriação",
+                  "Lei de Desapropria\u00e7\u00e3o",
                   "EMDN"
                 ],
                 "branch": "Area of Law",
@@ -2357,18 +2618,18 @@
                 "definition": "The concept of Eminent Domain (Taking) refers to the power of the government to take private property for public use, with just compensation to the owner, as authorized by the Constitution.",
                 "synonyms": [
                   "Compulsory Purchase",
-                  "Desapropriação",
-                  "Domaine éminent",
+                  "Desapropria\u00e7\u00e3o",
+                  "Domaine \u00e9minent",
                   "Dominio eminente",
                   "Enteignung",
                   "Fifth Amendment Takings Claim",
                   "Taking",
                   "Takings Claim",
                   "Unlawful Taking",
-                  "רשות חקלאית",
-                  "प्रतिष्ठित डोमेन",
-                  "公有化",
-                  "征用"
+                  "\u05e8\u05e9\u05d5\u05ea \u05d7\u05e7\u05dc\u05d0\u05d9\u05ea",
+                  "\u092a\u094d\u0930\u0924\u093f\u0937\u094d\u0920\u093f\u0924 \u0921\u094b\u092e\u0947\u0928",
+                  "\u516c\u6709\u5316",
+                  "\u5f81\u7528"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -2467,15 +2728,15 @@
                 "iri_hash": "R7gzXxHYGOLSEudb6n1QFWm",
                 "definition": "The concept of Mortgage Foreclosure refers to the legal process by which a lender takes possession of a property when the borrower fails to make mortgage payments, and sells it to recover the outstanding debt.",
                 "synonyms": [
-                  "Ejecución Hipotecaria",
-                  "Execução hipotecária",
+                  "Ejecuci\u00f3n Hipotecaria",
+                  "Execu\u00e7\u00e3o hipotec\u00e1ria",
                   "Hypotheken Zwangsvollstreckung",
                   "Mortgage Repossession",
-                  "Saisie immobilière",
-                  "מימוש משכנתא",
-                  "ऋण अधिकार जब्ती",
-                  "抵当フォアクロージャー",
-                  "抵押清偿"
+                  "Saisie immobili\u00e8re",
+                  "\u05de\u05d9\u05de\u05d5\u05e9 \u05de\u05e9\u05db\u05e0\u05ea\u05d0",
+                  "\u090b\u0923 \u0905\u0927\u093f\u0915\u093e\u0930 \u091c\u092c\u094d\u0924\u0940",
+                  "\u62b5\u5f53\u30d5\u30a9\u30a2\u30af\u30ed\u30fc\u30b8\u30e3\u30fc",
+                  "\u62b5\u62bc\u6e05\u507f"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",

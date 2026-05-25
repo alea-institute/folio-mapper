@@ -103,10 +103,23 @@ export interface VersionVector {
 }
 
 /**
+ * Strip SemVer build metadata (everything from the first `+`) before comparing.
+ * Per the SemVer spec, build metadata MUST be ignored when determining version
+ * precedence — `0.10.0+01f7ecb` and `0.10.0` are the same version. The curation
+ * script stamps a git hash as build metadata, while the runtime version is the
+ * plain `x.y.z` from package.json, so a raw string compare always (wrongly)
+ * reports demos as stale.
+ */
+function normalizeVersion(v: string): string {
+  return v.split('+')[0];
+}
+
+/**
  * Pure version-drift detector. Returns the input vector unchanged when any
  * comparable pair of versions disagrees, or null when nothing is comparable
  * or everything matches. Inputs that are null on either side are treated as
- * "cannot determine" — we never fire the banner on missing data.
+ * "cannot determine" — we never fire the banner on missing data. Build metadata
+ * is ignored, so a git-hash suffix alone never trips the banner.
  */
 export function detectStalePreset(args: VersionVector): VersionVector | null {
   const {
@@ -118,11 +131,11 @@ export function detectStalePreset(args: VersionVector): VersionVector | null {
   const pipelineStale =
     payloadPipelineVersion !== null &&
     runtimePipelineVersion !== null &&
-    payloadPipelineVersion !== runtimePipelineVersion;
+    normalizeVersion(payloadPipelineVersion) !== normalizeVersion(runtimePipelineVersion);
   const folioStale =
     payloadFolioVersion !== null &&
     runtimeFolioVersion !== null &&
-    payloadFolioVersion !== runtimeFolioVersion;
+    normalizeVersion(payloadFolioVersion) !== normalizeVersion(runtimeFolioVersion);
   return pipelineStale || folioStale ? args : null;
 }
 

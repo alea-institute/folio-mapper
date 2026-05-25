@@ -294,14 +294,424 @@
       {
         "item_index": 0,
         "item_text": "Criminal Defense",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Criminal Law",
+                "iri": "https://folio.openlegalstandard.org/RMZ6lNihK8TG4Flhco1yTy",
+                "iri_hash": "RMZ6lNihK8TG4Flhco1yTy",
+                "definition": "Law concerned with the punishment of individuals who commit crimes.",
+                "synonyms": [
+                  "Criminal Law",
+                  "Derecho penal",
+                  "Direito penal",
+                  "Droit p\u00e9nal",
+                  "Strafrecht",
+                  "\u05d4\u05de\u05e9\u05e4\u05d8 \u05d4\u05e4\u05dc\u05d9\u05dc\u05d9",
+                  "\u0906\u092a\u0930\u093e\u0927\u093f\u0915 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5211\u6cd5",
+                  "CRIM"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Criminal Law",
+                    "iri_hash": "RMZ6lNihK8TG4Flhco1yTy"
+                  }
+                ],
+                "score": 64.9
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Defendant",
+                "iri": "https://folio.openlegalstandard.org/RijIqw1HEfQF4ctjWUlgnq",
+                "iri_hash": "RijIqw1HEfQF4ctjWUlgnq",
+                "definition": "A defendant or respondent is a person or group against whom a criminal or civil action is brought. Actions include dispute matters (litigation, arbitration or mediation) or bankruptcy matters.",
+                "synonyms": [
+                  "Beklagter",
+                  "Defendant",
+                  "Defense",
+                  "Demandado",
+                  "D\u00e9fendeur",
+                  "Respondent",
+                  "R\u00e9u",
+                  "\u05e0\u05d0\u05e9\u05dd",
+                  "\u092a\u094d\u0930\u0924\u093f\u0935\u093e\u0926\u0940",
+                  "\u88ab\u544a",
+                  "\u88ab\u544a\u4eba",
+                  "DEFT"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Litigant",
+                    "iri_hash": "RCFgxBbypUKKsDDOJ1iOk36"
+                  },
+                  {
+                    "label": "Defendant",
+                    "iri_hash": "RijIqw1HEfQF4ctjWUlgnq"
+                  }
+                ],
+                "score": 66.1
+              },
+              {
+                "label": "Public Defender",
+                "iri": "https://folio.openlegalstandard.org/Rslx2R4OEGw6tfdMiFvU7K",
+                "iri_hash": "Rslx2R4OEGw6tfdMiFvU7K",
+                "definition": "A public defender is a lawyer appointed by the court to represent individuals who cannot afford to hire their own legal counsel.",
+                "synonyms": [
+                  "Defensor p\u00fablico",
+                  "D\u00e9fenseur public",
+                  "Public Defender",
+                  "\u00d6ffentlicher Verteidiger",
+                  "\u05d4\u05d2\u05e0\u05d4 \u05e6\u05d9\u05d1\u05d5\u05e8\u05d9\u05ea",
+                  "\u0938\u093e\u0930\u094d\u0935\u091c\u0928\u093f\u0915 \u0930\u0915\u094d\u0937\u0915",
+                  "\u516c\u5171\u8fa9\u62a4\u4eba",
+                  "\u516c\u8a2d\u5f01\u8b77\u58eb"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Legal Services Provider",
+                    "iri_hash": "R9x6yqzHQfo3MF4rxIcPupm"
+                  },
+                  {
+                    "label": "Legal Services Provider - Person",
+                    "iri_hash": "R7tKtki2tvT0I1cpSLJSWRF"
+                  },
+                  {
+                    "label": "Lawyer",
+                    "iri_hash": "RcTA2iQmrtqOnX3WrjJIp8"
+                  },
+                  {
+                    "label": "Public Defender",
+                    "iri_hash": "Rslx2R4OEGw6tfdMiFvU7K"
+                  }
+                ],
+                "score": 53.2
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Criminal Record",
+                "iri": "https://folio.openlegalstandard.org/RCZhBho8n6Cv5L6QTuUDg8H",
+                "iri_hash": "RCZhBho8n6Cv5L6QTuUDg8H",
+                "definition": "A criminal record is an official compilation of an individual's past arrests, charges, convictions, and other interactions with the criminal justice system. This record can have implications for employment, housing, and other opportunities, as many entities conduct background checks. In some jurisdictions, certain convictions can be expunged or sealed, removing them from public view.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Litigation Document",
+                    "iri_hash": "Rjco9ohucVSJ0XxprM5Opb"
+                  },
+                  {
+                    "label": "Trial Court Practice Documents",
+                    "iri_hash": "R7zvYKadqTXgMZV8ghLsloR"
+                  },
+                  {
+                    "label": "Evidence",
+                    "iri_hash": "R9HuNkpWm24qMFuntuug6RB"
+                  },
+                  {
+                    "label": "Discovery Documents",
+                    "iri_hash": "RtrxZGwgTL594abOAwpDkz"
+                  },
+                  {
+                    "label": "Criminal Record",
+                    "iri_hash": "RCZhBho8n6Cv5L6QTuUDg8H"
+                  }
+                ],
+                "score": 68.2
+              },
+              {
+                "label": "Criminal Citation",
+                "iri": "https://folio.openlegalstandard.org/RqMjkNJ0fgxLg2NEgI3BrJ",
+                "iri_hash": "RqMjkNJ0fgxLg2NEgI3BrJ",
+                "definition": "In the context of criminal law, a citation is a formal notice or document issued by law enforcement officers to an individual, alleging a minor violation or offense, such as a traffic infraction. Rather than arresting the individual, the citation instructs them to appear in court on a specified date to address the violation, or in some cases, to pay a fine or take corrective action. Failure to comply with the terms of a citation can lead to additional penalties or warrants for arrest.",
+                "synonyms": [
+                  "Cita",
+                  "Citation",
+                  "Cita\u00e7\u00e3o",
+                  "Ticket",
+                  "Zitierung",
+                  "\u05e6\u05d9\u05d8\u05d5\u05d8",
+                  "\u0909\u0926\u094d\u0927\u0930\u0923",
+                  "\u5f15\u7528"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Litigation Document",
+                    "iri_hash": "Rjco9ohucVSJ0XxprM5Opb"
+                  },
+                  {
+                    "label": "Trial Court Practice Documents",
+                    "iri_hash": "R7zvYKadqTXgMZV8ghLsloR"
+                  },
+                  {
+                    "label": "Criminal Citation",
+                    "iri_hash": "RqMjkNJ0fgxLg2NEgI3BrJ"
+                  }
+                ],
+                "score": 68.2
+              }
+            ]
+          },
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Criminal Proceedings",
+                "iri": "https://folio.openlegalstandard.org/RBV3MQlbGLIUVo5fSiBZ2V4",
+                "iri_hash": "RBV3MQlbGLIUVo5fSiBZ2V4",
+                "definition": "Criminal Proceedings refer to the legal process of prosecuting and punishing individuals who have been accused of committing a crime, including all related proceedings such as indictment, grand jury, sentencing, and parole.",
+                "synonyms": [
+                  "Criminal Proceedings",
+                  "Procedimiento Penal",
+                  "Processo criminal",
+                  "Proc\u00e9dure p\u00e9nale",
+                  "Strafverfahren",
+                  "\u05d4\u05dc\u05d9\u05da \u05e4\u05dc\u05d9\u05dc\u05d9",
+                  "\u0906\u092a\u0930\u093e\u0927\u093f\u0915 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e",
+                  "\u5211\u4e8b\u8a34\u8a1f",
+                  "\u5211\u4e8b\u8bc9\u8bbc"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Event",
+                    "iri_hash": "R73hoH1RXYjBTYiGfolpsAF"
+                  },
+                  {
+                    "label": "Dispute Events",
+                    "iri_hash": "RDFhtJuTWcY7UZGV9F5yOoA"
+                  },
+                  {
+                    "label": "Litigation Events",
+                    "iri_hash": "R73Uo5x4VyfiOXt6i4R256t"
+                  },
+                  {
+                    "label": "Criminal Proceedings",
+                    "iri_hash": "RBV3MQlbGLIUVo5fSiBZ2V4"
+                  }
+                ],
+                "score": 68.2
+              }
+            ]
+          }
+        ],
+        "total_candidates": 6
       },
       {
         "item_index": 1,
         "item_text": "DUI & Impaired Driving",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Motor Vehicle Law",
+                "iri": "https://folio.openlegalstandard.org/RBd6mCquEANjUvn59AqC7Sj",
+                "iri_hash": "RBd6mCquEANjUvn59AqC7Sj",
+                "definition": "Law covering all the aspects of registering and titling motor vehicles, and licensing drivers.",
+                "synonyms": [
+                  "Automobile Law",
+                  "Automotive Law",
+                  "Direito de tr\u00e2nsito",
+                  "Droit des v\u00e9hicules \u00e0 moteur",
+                  "Ley de Veh\u00edculos de Motor",
+                  "Motor Vehicle Law",
+                  "Verkehrsrecht",
+                  "\u05d7\u05d5\u05e7 \u05e8\u05db\u05d1 \u05d3\u05d5-\u05d2\u05dc\u05d2\u05dc\u05d9",
+                  "\u092e\u094b\u091f\u0930 \u0935\u093e\u0939\u0928 \u0915\u093e\u0928\u0942\u0928",
+                  "\u673a\u52a8\u8f66\u6cd5",
+                  "\u81ea\u52d5\u8eca\u6cd5",
+                  "MOTV"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Transportation Law",
+                    "iri_hash": "R9qjABGONgw3rbekxhtcxZh"
+                  },
+                  {
+                    "label": "Motor Vehicle Law",
+                    "iri_hash": "RBd6mCquEANjUvn59AqC7Sj"
+                  }
+                ],
+                "score": 33.0
+              },
+              {
+                "label": "Criminal Law",
+                "iri": "https://folio.openlegalstandard.org/RMZ6lNihK8TG4Flhco1yTy",
+                "iri_hash": "RMZ6lNihK8TG4Flhco1yTy",
+                "definition": "Law concerned with the punishment of individuals who commit crimes.",
+                "synonyms": [
+                  "Criminal Law",
+                  "Derecho penal",
+                  "Direito penal",
+                  "Droit p\u00e9nal",
+                  "Strafrecht",
+                  "\u05d4\u05de\u05e9\u05e4\u05d8 \u05d4\u05e4\u05dc\u05d9\u05dc\u05d9",
+                  "\u0906\u092a\u0930\u093e\u0927\u093f\u0915 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5211\u6cd5",
+                  "CRIM"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Criminal Law",
+                    "iri_hash": "RMZ6lNihK8TG4Flhco1yTy"
+                  }
+                ],
+                "score": 40.6
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Driver",
+                "iri": "https://folio.openlegalstandard.org/R8bNzp6lTyATfctRVnXr5rl",
+                "iri_hash": "R8bNzp6lTyATfctRVnXr5rl",
+                "definition": "A driver is an individual who operates a motor vehicle, controlling its direction and speed on public or private roads. This role requires adherence to traffic laws and regulations to ensure safety and order on thoroughfares.",
+                "synonyms": [
+                  "Automobile Driver",
+                  "Operator",
+                  "Vehicle Operator"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Driver",
+                    "iri_hash": "R8bNzp6lTyATfctRVnXr5rl"
+                  }
+                ],
+                "score": 35.3
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Speeding Ticket",
+                "iri": "https://folio.openlegalstandard.org/RCyUnV82gU1j6b08TVeC22p",
+                "iri_hash": "RCyUnV82gU1j6b08TVeC22p",
+                "definition": "A speeding ticket is a written notice issued by a law enforcement officer to a driver who is alleged to have exceeded the posted speed limit. The ticket serves as a formal accusation of the speeding violation and typically includes information about the offense, the fine amount, and the steps the driver must take to resolve the matter.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Litigation Document",
+                    "iri_hash": "Rjco9ohucVSJ0XxprM5Opb"
+                  },
+                  {
+                    "label": "Trial Court Practice Documents",
+                    "iri_hash": "R7zvYKadqTXgMZV8ghLsloR"
+                  },
+                  {
+                    "label": "Ticket",
+                    "iri_hash": "RBzKD0m4cOqOWbAWi9P2rtA"
+                  },
+                  {
+                    "label": "Traffic Ticket",
+                    "iri_hash": "RkoLkee3wjmDwsHW0ENyrT"
+                  },
+                  {
+                    "label": "Speeding Ticket",
+                    "iri_hash": "RCyUnV82gU1j6b08TVeC22p"
+                  }
+                ],
+                "score": 38.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
       },
       {
         "item_index": 2,
@@ -318,7 +728,7 @@
                 "definition": "Driving or operating a motor vehicle or common carrier while mentally or physically impaired as the result of consuming an alcoholic beverage or using a drug or narcotic.",
                 "synonyms": [
                   "Conducir bajo los efectos del alcohol",
-                  "Conduite en état d'ivresse",
+                  "Conduite en \u00e9tat d'ivresse",
                   "DUI",
                   "DUII",
                   "DWAI",
@@ -332,17 +742,17 @@
                   "OWI",
                   "Operating Under the Influence",
                   "Operating While Intoxicated",
-                  "Dirigir sob influência de álcool ou drogas",
+                  "Dirigir sob influ\u00eancia de \u00e1lcool ou drogas",
                   "Driving While Intoxicated",
                   "Fahren unter Alkohol- oder Drogeneinfluss",
-                  "נהיגה תחת השפעת סמים או אלכוהול",
-                  "मादक पदार्थों के अधीन गाड़ी चलाना",
-                  "القيادة تحت تأثير الكحول",
+                  "\u05e0\u05d4\u05d9\u05d2\u05d4 \u05ea\u05d7\u05ea \u05d4\u05e9\u05e4\u05e2\u05ea \u05e1\u05de\u05d9\u05dd \u05d0\u05d5 \u05d0\u05dc\u05db\u05d5\u05d4\u05d5\u05dc",
+                  "\u092e\u093e\u0926\u0915 \u092a\u0926\u093e\u0930\u094d\u0925\u094b\u0902 \u0915\u0947 \u0905\u0927\u0940\u0928 \u0917\u093e\u0921\u093c\u0940 \u091a\u0932\u093e\u0928\u093e",
+                  "\u0627\u0644\u0642\u064a\u0627\u062f\u0629 \u062a\u062d\u062a \u062a\u0623\u062b\u064a\u0631 \u0627\u0644\u0643\u062d\u0648\u0644",
                   "Guida in stato di ebbrezza",
-                  "음주운전",
-                  "Вождение в нетрезвом состоянии",
-                  "酒后驾车",
-                  "飲酒運転"
+                  "\uc74c\uc8fc\uc6b4\uc804",
+                  "\u0412\u043e\u0436\u0434\u0435\u043d\u0438\u0435 \u0432 \u043d\u0435\u0442\u0440\u0435\u0437\u0432\u043e\u043c \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0438",
+                  "\u9152\u540e\u9a7e\u8f66",
+                  "\u98f2\u9152\u904b\u8ee2"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -395,13 +805,13 @@
                 "synonyms": [
                   "Boating DUI/BUI",
                   "Bootfahren unter Alkoholeinfluss/Bootfahren unter Drogeneinfluss",
-                  "Conduite en état d'ivresse/drogue en bateau",
+                  "Conduite en \u00e9tat d'ivresse/drogue en bateau",
                   "DUI/BUI en barco",
-                  "DUI/BUI בסירה",
-                  "Dirigir embarcação sob efeito de álcool/drogas",
-                  "नावगेत पीएनडी/बीयूआई",
-                  "ボートでの飲酒運転/薬物運転",
-                  "酒后驾船/醉船"
+                  "DUI/BUI \u05d1\u05e1\u05d9\u05e8\u05d4",
+                  "Dirigir embarca\u00e7\u00e3o sob efeito de \u00e1lcool/drogas",
+                  "\u0928\u093e\u0935\u0917\u0947\u0924 \u092a\u0940\u090f\u0928\u0921\u0940/\u092c\u0940\u092f\u0942\u0906\u0908",
+                  "\u30dc\u30fc\u30c8\u3067\u306e\u98f2\u9152\u904b\u8ee2/\u85ac\u7269\u904b\u8ee2",
+                  "\u9152\u540e\u9a7e\u8239/\u9189\u8239"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -441,8 +851,159 @@
       {
         "item_index": 4,
         "item_text": "Drug Offenses",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Substance Abuse and Drug Testing Law",
+                "iri": "https://folio.openlegalstandard.org/R7K5c8d5SpTPn51L6OyMKyS",
+                "iri_hash": "R7K5c8d5SpTPn51L6OyMKyS",
+                "definition": "Drug Testing & Substance Abuse Law refers to the legal framework governing the testing of individuals for the presence of drugs and the regulation of substance abuse. It includes policies, procedures, and regulations related to the detection, prevention, and treatment of drug use and addiction.",
+                "synonyms": [
+                  "Substance Abuse Law"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Substance Abuse and Drug Testing Law",
+                    "iri_hash": "R7K5c8d5SpTPn51L6OyMKyS"
+                  }
+                ],
+                "score": 47.7
+              },
+              {
+                "label": "Criminal Law",
+                "iri": "https://folio.openlegalstandard.org/RMZ6lNihK8TG4Flhco1yTy",
+                "iri_hash": "RMZ6lNihK8TG4Flhco1yTy",
+                "definition": "Law concerned with the punishment of individuals who commit crimes.",
+                "synonyms": [
+                  "Criminal Law",
+                  "Derecho penal",
+                  "Direito penal",
+                  "Droit p\u00e9nal",
+                  "Strafrecht",
+                  "\u05d4\u05de\u05e9\u05e4\u05d8 \u05d4\u05e4\u05dc\u05d9\u05dc\u05d9",
+                  "\u0906\u092a\u0930\u093e\u0927\u093f\u0915 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5211\u6cd5",
+                  "CRIM"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Criminal Law",
+                    "iri_hash": "RMZ6lNihK8TG4Flhco1yTy"
+                  }
+                ],
+                "score": 41.2
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Drug Test",
+                "iri": "https://folio.openlegalstandard.org/R8xSzwRnuQy4kqrATCJ6awq",
+                "iri_hash": "R8xSzwRnuQy4kqrATCJ6awq",
+                "definition": "A drug test is a technical analysis of a biological specimen, such as urine, hair, blood, breath, sweat, or oral fluid/saliva, to determine the presence or absence of specified drugs or their metabolites. These tests are often used by employers, sports organizations, legal and law enforcement agencies, and in healthcare settings.",
+                "synonyms": [
+                  "Toxicology Test"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Medical Record",
+                    "iri_hash": "RBOz1UXsX4cnOePooNnJ6Xc"
+                  },
+                  {
+                    "label": "Medical Test",
+                    "iri_hash": "R7qicnAOVCTYIaiJHt9KmIy"
+                  },
+                  {
+                    "label": "Drug Test",
+                    "iri_hash": "R8xSzwRnuQy4kqrATCJ6awq"
+                  }
+                ],
+                "score": 64.4
+              }
+            ]
+          },
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Criminal Proceedings",
+                "iri": "https://folio.openlegalstandard.org/RBV3MQlbGLIUVo5fSiBZ2V4",
+                "iri_hash": "RBV3MQlbGLIUVo5fSiBZ2V4",
+                "definition": "Criminal Proceedings refer to the legal process of prosecuting and punishing individuals who have been accused of committing a crime, including all related proceedings such as indictment, grand jury, sentencing, and parole.",
+                "synonyms": [
+                  "Criminal Proceedings",
+                  "Procedimiento Penal",
+                  "Processo criminal",
+                  "Proc\u00e9dure p\u00e9nale",
+                  "Strafverfahren",
+                  "\u05d4\u05dc\u05d9\u05da \u05e4\u05dc\u05d9\u05dc\u05d9",
+                  "\u0906\u092a\u0930\u093e\u0927\u093f\u0915 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e",
+                  "\u5211\u4e8b\u8a34\u8a1f",
+                  "\u5211\u4e8b\u8bc9\u8bbc"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Event",
+                    "iri_hash": "R73hoH1RXYjBTYiGfolpsAF"
+                  },
+                  {
+                    "label": "Dispute Events",
+                    "iri_hash": "RDFhtJuTWcY7UZGV9F5yOoA"
+                  },
+                  {
+                    "label": "Litigation Events",
+                    "iri_hash": "R73Uo5x4VyfiOXt6i4R256t"
+                  },
+                  {
+                    "label": "Criminal Proceedings",
+                    "iri_hash": "RBV3MQlbGLIUVo5fSiBZ2V4"
+                  }
+                ],
+                "score": 41.2
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
       },
       {
         "item_index": 5,
@@ -468,10 +1029,10 @@
                   "Marijuana Law",
                   "Pot Law",
                   "Weed Law",
-                  "חוק הקנאביס",
-                  "कैनाबिस कानून",
-                  "大麻法",
-                  "大麻法律"
+                  "\u05d7\u05d5\u05e7 \u05d4\u05e7\u05e0\u05d0\u05d1\u05d9\u05e1",
+                  "\u0915\u0948\u0928\u093e\u092c\u093f\u0938 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5927\u9ebb\u6cd5",
+                  "\u5927\u9ebb\u6cd5\u5f8b"
                 ],
                 "branch": "Area of Law",
                 "branch_color": "#1a5276",
@@ -495,8 +1056,191 @@
       {
         "item_index": 6,
         "item_text": "Controlled Substance Charges",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Criminal Law",
+                "iri": "https://folio.openlegalstandard.org/RMZ6lNihK8TG4Flhco1yTy",
+                "iri_hash": "RMZ6lNihK8TG4Flhco1yTy",
+                "definition": "Law concerned with the punishment of individuals who commit crimes.",
+                "synonyms": [
+                  "Criminal Law",
+                  "Derecho penal",
+                  "Direito penal",
+                  "Droit p\u00e9nal",
+                  "Strafrecht",
+                  "\u05d4\u05de\u05e9\u05e4\u05d8 \u05d4\u05e4\u05dc\u05d9\u05dc\u05d9",
+                  "\u0906\u092a\u0930\u093e\u0927\u093f\u0915 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5211\u6cd5",
+                  "CRIM"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Criminal Law",
+                    "iri_hash": "RMZ6lNihK8TG4Flhco1yTy"
+                  }
+                ],
+                "score": 45.7
+              },
+              {
+                "label": "Substance Abuse and Drug Testing Law",
+                "iri": "https://folio.openlegalstandard.org/R7K5c8d5SpTPn51L6OyMKyS",
+                "iri_hash": "R7K5c8d5SpTPn51L6OyMKyS",
+                "definition": "Drug Testing & Substance Abuse Law refers to the legal framework governing the testing of individuals for the presence of drugs and the regulation of substance abuse. It includes policies, procedures, and regulations related to the detection, prevention, and treatment of drug use and addiction.",
+                "synonyms": [
+                  "Substance Abuse Law"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Substance Abuse and Drug Testing Law",
+                    "iri_hash": "R7K5c8d5SpTPn51L6OyMKyS"
+                  }
+                ],
+                "score": 39.9
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Substance Abuse Policy",
+                "iri": "https://folio.openlegalstandard.org/R9Tyn1myNHR9ZL14Xk8j972",
+                "iri_hash": "R9Tyn1myNHR9ZL14Xk8j972",
+                "definition": "A substance abuse policy is a formal document established by an organization to outline its stance on the use, possession, and distribution of drugs and alcohol in the workplace. It aims to ensure a safe and productive work environment by defining prohibited behaviors, setting forth procedures for testing and handling violations, and providing resources for prevention and treatment.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Advisory Document",
+                    "iri_hash": "R99VQVUo93kYqqhla6ZUJTC"
+                  },
+                  {
+                    "label": "Policy Document",
+                    "iri_hash": "RCZyrH2dIAtpDh2AzPTekph"
+                  },
+                  {
+                    "label": "Substance Abuse Policy",
+                    "iri_hash": "R9Tyn1myNHR9ZL14Xk8j972"
+                  }
+                ],
+                "score": 54.6
+              },
+              {
+                "label": "Drug Test",
+                "iri": "https://folio.openlegalstandard.org/R8xSzwRnuQy4kqrATCJ6awq",
+                "iri_hash": "R8xSzwRnuQy4kqrATCJ6awq",
+                "definition": "A drug test is a technical analysis of a biological specimen, such as urine, hair, blood, breath, sweat, or oral fluid/saliva, to determine the presence or absence of specified drugs or their metabolites. These tests are often used by employers, sports organizations, legal and law enforcement agencies, and in healthcare settings.",
+                "synonyms": [
+                  "Toxicology Test"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Medical Record",
+                    "iri_hash": "RBOz1UXsX4cnOePooNnJ6Xc"
+                  },
+                  {
+                    "label": "Medical Test",
+                    "iri_hash": "R7qicnAOVCTYIaiJHt9KmIy"
+                  },
+                  {
+                    "label": "Drug Test",
+                    "iri_hash": "R8xSzwRnuQy4kqrATCJ6awq"
+                  }
+                ],
+                "score": 47.2
+              }
+            ]
+          },
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Criminal Proceedings",
+                "iri": "https://folio.openlegalstandard.org/RBV3MQlbGLIUVo5fSiBZ2V4",
+                "iri_hash": "RBV3MQlbGLIUVo5fSiBZ2V4",
+                "definition": "Criminal Proceedings refer to the legal process of prosecuting and punishing individuals who have been accused of committing a crime, including all related proceedings such as indictment, grand jury, sentencing, and parole.",
+                "synonyms": [
+                  "Criminal Proceedings",
+                  "Procedimiento Penal",
+                  "Processo criminal",
+                  "Proc\u00e9dure p\u00e9nale",
+                  "Strafverfahren",
+                  "\u05d4\u05dc\u05d9\u05da \u05e4\u05dc\u05d9\u05dc\u05d9",
+                  "\u0906\u092a\u0930\u093e\u0927\u093f\u0915 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e",
+                  "\u5211\u4e8b\u8a34\u8a1f",
+                  "\u5211\u4e8b\u8bc9\u8bbc"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Event",
+                    "iri_hash": "R73hoH1RXYjBTYiGfolpsAF"
+                  },
+                  {
+                    "label": "Dispute Events",
+                    "iri_hash": "RDFhtJuTWcY7UZGV9F5yOoA"
+                  },
+                  {
+                    "label": "Litigation Events",
+                    "iri_hash": "R73Uo5x4VyfiOXt6i4R256t"
+                  },
+                  {
+                    "label": "Criminal Proceedings",
+                    "iri_hash": "RBV3MQlbGLIUVo5fSiBZ2V4"
+                  }
+                ],
+                "score": 45.7
+              }
+            ]
+          }
+        ],
+        "total_candidates": 5
       },
       {
         "item_index": 7,
@@ -513,16 +1257,16 @@
                 "definition": "The violation of laws prohibiting the production, distribution, and/or use of certain controlled substances and the equipment or devices utilized in their preparation and/or use.",
                 "synonyms": [
                   "Crimes de drogas",
-                  "Crimes liés aux drogues",
+                  "Crimes li\u00e9s aux drogues",
                   "Delitos de Drogas",
-                  "Delitos de Narcóticos",
+                  "Delitos de Narc\u00f3ticos",
                   "Drogenverbrechen",
                   "Drug Offences",
                   "Narcotic Crimes",
-                  "פשעי סמים",
-                  "ड्रग अपराध",
-                  "毒品犯罪",
-                  "麻薬犯罪"
+                  "\u05e4\u05e9\u05e2\u05d9 \u05e1\u05de\u05d9\u05dd",
+                  "\u0921\u094d\u0930\u0917 \u0905\u092a\u0930\u093e\u0927",
+                  "\u6bd2\u54c1\u72af\u7f6a",
+                  "\u9ebb\u85ac\u72af\u7f6a"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -558,8 +1302,137 @@
       {
         "item_index": 8,
         "item_text": "Violent Crimes",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Criminal Record",
+                "iri": "https://folio.openlegalstandard.org/RCZhBho8n6Cv5L6QTuUDg8H",
+                "iri_hash": "RCZhBho8n6Cv5L6QTuUDg8H",
+                "definition": "A criminal record is an official compilation of an individual's past arrests, charges, convictions, and other interactions with the criminal justice system. This record can have implications for employment, housing, and other opportunities, as many entities conduct background checks. In some jurisdictions, certain convictions can be expunged or sealed, removing them from public view.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Litigation Document",
+                    "iri_hash": "Rjco9ohucVSJ0XxprM5Opb"
+                  },
+                  {
+                    "label": "Trial Court Practice Documents",
+                    "iri_hash": "R7zvYKadqTXgMZV8ghLsloR"
+                  },
+                  {
+                    "label": "Evidence",
+                    "iri_hash": "R9HuNkpWm24qMFuntuug6RB"
+                  },
+                  {
+                    "label": "Discovery Documents",
+                    "iri_hash": "RtrxZGwgTL594abOAwpDkz"
+                  },
+                  {
+                    "label": "Criminal Record",
+                    "iri_hash": "RCZhBho8n6Cv5L6QTuUDg8H"
+                  }
+                ],
+                "score": 44.0
+              }
+            ]
+          },
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Criminal Proceedings",
+                "iri": "https://folio.openlegalstandard.org/RBV3MQlbGLIUVo5fSiBZ2V4",
+                "iri_hash": "RBV3MQlbGLIUVo5fSiBZ2V4",
+                "definition": "Criminal Proceedings refer to the legal process of prosecuting and punishing individuals who have been accused of committing a crime, including all related proceedings such as indictment, grand jury, sentencing, and parole.",
+                "synonyms": [
+                  "Criminal Proceedings",
+                  "Procedimiento Penal",
+                  "Processo criminal",
+                  "Proc\u00e9dure p\u00e9nale",
+                  "Strafverfahren",
+                  "\u05d4\u05dc\u05d9\u05da \u05e4\u05dc\u05d9\u05dc\u05d9",
+                  "\u0906\u092a\u0930\u093e\u0927\u093f\u0915 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e",
+                  "\u5211\u4e8b\u8a34\u8a1f",
+                  "\u5211\u4e8b\u8bc9\u8bbc"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Event",
+                    "iri_hash": "R73hoH1RXYjBTYiGfolpsAF"
+                  },
+                  {
+                    "label": "Dispute Events",
+                    "iri_hash": "RDFhtJuTWcY7UZGV9F5yOoA"
+                  },
+                  {
+                    "label": "Litigation Events",
+                    "iri_hash": "R73Uo5x4VyfiOXt6i4R256t"
+                  },
+                  {
+                    "label": "Criminal Proceedings",
+                    "iri_hash": "RBV3MQlbGLIUVo5fSiBZ2V4"
+                  }
+                ],
+                "score": 46.6
+              }
+            ]
+          },
+          {
+            "branch": "Forums and Venues",
+            "branch_color": "#7b2d8e",
+            "candidates": [
+              {
+                "label": "Criminal Court",
+                "iri": "https://folio.openlegalstandard.org/RihNVfYYtmWzQWciwxquKe",
+                "iri_hash": "RihNVfYYtmWzQWciwxquKe",
+                "definition": "A Criminal Court is a specific type of court that has jurisdiction over criminal cases and is responsible for administering proceedings related to criminal law violations.",
+                "synonyms": [],
+                "branch": "Forums and Venues",
+                "branch_color": "#7b2d8e",
+                "hierarchy_path": [
+                  {
+                    "label": "Forums and Venues",
+                    "iri_hash": "RBjHwNNG2ASVmasLFU42otk"
+                  },
+                  {
+                    "label": "Dispute Forum",
+                    "iri_hash": "R85OMPBjCJJv2cpg2RCwYim"
+                  },
+                  {
+                    "label": "Court Forum",
+                    "iri_hash": "Rafw4pSzJ3S3d8sq6quprG"
+                  },
+                  {
+                    "label": "Court Forum Jurisdiction Types",
+                    "iri_hash": "R9sbuHkJC9aqDlHAgw58VSB"
+                  },
+                  {
+                    "label": "Criminal Court",
+                    "iri_hash": "RihNVfYYtmWzQWciwxquKe"
+                  }
+                ],
+                "score": 44.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
       },
       {
         "item_index": 9,
@@ -578,13 +1451,13 @@
                   "Assault",
                   "Assault Law",
                   "Droit d'agression",
-                  "Lei de agressão",
+                  "Lei de agress\u00e3o",
                   "Ley de Asalto",
-                  "Strafrechtliche Körperverletzung",
-                  "חוק התקיפה",
-                  "हमला कानून",
-                  "攻击法",
-                  "暴行法",
+                  "Strafrechtliche K\u00f6rperverletzung",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05ea\u05e7\u05d9\u05e4\u05d4",
+                  "\u0939\u092e\u0932\u093e \u0915\u093e\u0928\u0942\u0928",
+                  "\u653b\u51fb\u6cd5",
+                  "\u66b4\u884c\u6cd5",
                   "ASLT"
                 ],
                 "branch": "Area of Law",
@@ -615,17 +1488,17 @@
                 "label": "Rape",
                 "iri": "https://folio.openlegalstandard.org/R8fcGNgScyMlOAFxW5Omw5Y",
                 "iri_hash": "R8fcGNgScyMlOAFxW5Omw5Y",
-                "definition": "The carnal knowledge of a person, forcibly and/or against that person’s will or not forcibly or against the person’s will in instances where the victim is incapable of giving consent because of his/her temporary or permanent mental or physical incapacity.",
+                "definition": "The carnal knowledge of a person, forcibly and/or against that person\u2019s will or not forcibly or against the person\u2019s will in instances where the victim is incapable of giving consent because of his/her temporary or permanent mental or physical incapacity.",
                 "synonyms": [
                   "Estupro",
                   "Rape",
                   "Vergewaltigung",
                   "Viol",
-                  "Violación",
-                  "אונס",
-                  "बलात्कार",
-                  "レイプ",
-                  "强奸"
+                  "Violaci\u00f3n",
+                  "\u05d0\u05d5\u05e0\u05e1",
+                  "\u092c\u0932\u093e\u0924\u094d\u0915\u093e\u0930",
+                  "\u30ec\u30a4\u30d7",
+                  "\u5f3a\u5978"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -681,14 +1554,14 @@
                 "definition": "Domestic Violence refers to physical, emotional, or sexual abuse that occurs within a domestic relationship, such as between spouses or partners, and is considered a form of criminal assault.",
                 "synonyms": [
                   "Domestic Violence",
-                  "Häusliche Gewalt",
+                  "H\u00e4usliche Gewalt",
                   "Violence domestique",
-                  "Violencia Doméstica",
-                  "Violência doméstica",
-                  "אלימות במשפחה",
-                  "घरेलू हिंसा",
-                  "ドメスティックバイオレンス",
-                  "家庭暴力"
+                  "Violencia Dom\u00e9stica",
+                  "Viol\u00eancia dom\u00e9stica",
+                  "\u05d0\u05dc\u05d9\u05de\u05d5\u05ea \u05d1\u05de\u05e9\u05e4\u05d7\u05d4",
+                  "\u0918\u0930\u0947\u0932\u0942 \u0939\u093f\u0902\u0938\u093e",
+                  "\u30c9\u30e1\u30b9\u30c6\u30a3\u30c3\u30af\u30d0\u30a4\u30aa\u30ec\u30f3\u30b9",
+                  "\u5bb6\u5ead\u66b4\u529b"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -746,18 +1619,18 @@
                   "Civil Protection Claim",
                   "Civil Protection Claim / Domestic Restraining Order",
                   "Civil Protection Order Claim",
-                  "Demanda de protección civil / Orden de restricción doméstica",
+                  "Demanda de protecci\u00f3n civil / Orden de restricci\u00f3n dom\u00e9stica",
                   "Domestic Restraining Order Claim",
                   "Domestic Violence Restraining Order",
-                  "Orden de protección civil / Orden de alejamiento doméstico",
-                  "Reivindicação de proteção civil / Ordem de restrição doméstica",
+                  "Orden de protecci\u00f3n civil / Orden de alejamiento dom\u00e9stico",
+                  "Reivindica\u00e7\u00e3o de prote\u00e7\u00e3o civil / Ordem de restri\u00e7\u00e3o dom\u00e9stica",
                   "Restraining Order Claim",
-                  "Réclamation de protection civile / Ordonnance de restriction domestique",
-                  "Zivilschutzanspruch / Inlandsverfügung",
-                  "תביעת הגנת אזרחים / צו הגבלת מגורים במקום",
-                  "सिविल संरक्षा दावा / घरेलू रोकथाम आदेश",
-                  "市民防護請求 / 家庭内制限命令",
-                  "民事保护索赔 / 国内限制令"
+                  "R\u00e9clamation de protection civile / Ordonnance de restriction domestique",
+                  "Zivilschutzanspruch / Inlandsverf\u00fcgung",
+                  "\u05ea\u05d1\u05d9\u05e2\u05ea \u05d4\u05d2\u05e0\u05ea \u05d0\u05d6\u05e8\u05d7\u05d9\u05dd / \u05e6\u05d5 \u05d4\u05d2\u05d1\u05dc\u05ea \u05de\u05d2\u05d5\u05e8\u05d9\u05dd \u05d1\u05de\u05e7\u05d5\u05dd",
+                  "\u0938\u093f\u0935\u093f\u0932 \u0938\u0902\u0930\u0915\u094d\u0937\u093e \u0926\u093e\u0935\u093e / \u0918\u0930\u0947\u0932\u0942 \u0930\u094b\u0915\u0925\u093e\u092e \u0906\u0926\u0947\u0936",
+                  "\u5e02\u6c11\u9632\u8b77\u8acb\u6c42 / \u5bb6\u5ead\u5185\u5236\u9650\u547d\u4ee4",
+                  "\u6c11\u4e8b\u4fdd\u62a4\u7d22\u8d54 / \u56fd\u5185\u9650\u5236\u4ee4"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -797,8 +1670,98 @@
       {
         "item_index": 12,
         "item_text": "Property Crimes",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Personal Property Law",
+                "iri": "https://folio.openlegalstandard.org/R8lqqKPmifNK2vDWzRQGbVw",
+                "iri_hash": "R8lqqKPmifNK2vDWzRQGbVw",
+                "definition": "Matters relating to personal property \u2014 not real property \u2014 such as damage to vehicles, ownership of valuables (e.g., jewelry), trespass to chattels, etc.",
+                "synonyms": [
+                  "Derecho de Propiedad Personal",
+                  "Direito de propriedade pessoal",
+                  "Droit des biens personnels",
+                  "Personal Property Law",
+                  "Sachenrecht",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05e7\u05e0\u05d9\u05d9\u05df \u05d4\u05d0\u05d9\u05e9\u05d9",
+                  "\u0935\u094d\u092f\u0915\u094d\u0924\u093f\u0917\u0924 \u0938\u0902\u092a\u0924\u094d\u0924\u093f \u0915\u093e\u0928\u0942\u0928",
+                  "\u4e2a\u4eba\u8d22\u4ea7\u6cd5",
+                  "\u500b\u4eba\u8ca1\u7523\u6cd5"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Personal Injury and Tort Law",
+                    "iri_hash": "R7MK1XmyjtYxZKg8Iw4ZN4K"
+                  },
+                  {
+                    "label": "Personal Property Law",
+                    "iri_hash": "R8lqqKPmifNK2vDWzRQGbVw"
+                  }
+                ],
+                "score": 60.6
+              }
+            ]
+          },
+          {
+            "branch": "Engagement Attributes",
+            "branch_color": "#10613a",
+            "candidates": [
+              {
+                "label": "Criminal Matter Identifiers",
+                "iri": "https://folio.openlegalstandard.org/R8wisznMX44NzobECeWwY9G",
+                "iri_hash": "R8wisznMX44NzobECeWwY9G",
+                "definition": "Criminal Matter Identifiers are unique codes or numbers used to track and identify criminal cases, including information such as law enforcement arrest tracking numbers, fatality indicators, commercial motor vehicle indicators, law enforcement incident tracking numbers, and traffic accident indicators.",
+                "synonyms": [
+                  "Criminal Matter Identifiers",
+                  "Identificadores de Asuntos Criminales",
+                  "Identificadores de Asuntos Penales",
+                  "Identificadores de assuntos criminais",
+                  "Identificateurs d'affaires criminelles",
+                  "Strafrechtliche Sachverhaltsidentifikatoren",
+                  "\u05d6\u05d9\u05d4\u05d5\u05d9 \u05e2\u05e0\u05d9\u05d9\u05e0\u05d9 \u05e4\u05dc\u05d9\u05dc\u05d9\u05dd",
+                  "\u0905\u092a\u0930\u093e\u0927\u093f\u0915 \u092e\u093e\u092e\u0932\u0947 \u0915\u0940 \u092a\u0939\u091a\u093e\u0928\u0915\u0930\u094d\u0924\u093e",
+                  "\u5211\u4e8b\u4e8b\u4ef6\u8b58\u5225\u5b50",
+                  "\u5211\u4e8b\u6848\u4ef6\u6807\u8bc6\u7b26"
+                ],
+                "branch": "Engagement Attributes",
+                "branch_color": "#10613a",
+                "hierarchy_path": [
+                  {
+                    "label": "Engagement Attributes",
+                    "iri_hash": "R9kmGZf5FSmFdouXWQ1Nndm"
+                  },
+                  {
+                    "label": "Engagement Identification",
+                    "iri_hash": "R9CZTlyeU1hg4NPl7hcDKI2"
+                  },
+                  {
+                    "label": "Engagement Names",
+                    "iri_hash": "R74PEDCu9aothhQ4GcsR6LZ"
+                  },
+                  {
+                    "label": "Litigation Identifiers",
+                    "iri_hash": "RDwU1R53c1yOciDqUV1gV13"
+                  },
+                  {
+                    "label": "Criminal Matter Identifiers",
+                    "iri_hash": "R8wisznMX44NzobECeWwY9G"
+                  }
+                ],
+                "score": 47.5
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
       },
       {
         "item_index": 13,
@@ -821,10 +1784,10 @@
                   "Robo con fuerza en las cosas",
                   "Robo con violencia",
                   "Roubo qualificado",
-                  "פריצה",
-                  "चोरी",
-                  "住居侵入盗",
-                  "入室盗窃"
+                  "\u05e4\u05e8\u05d9\u05e6\u05d4",
+                  "\u091a\u094b\u0930\u0940",
+                  "\u4f4f\u5c45\u4fb5\u5165\u76d7",
+                  "\u5165\u5ba4\u76d7\u7a83"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -884,11 +1847,11 @@
                   "Ladendiebstahl",
                   "Robo en tiendas",
                   "Shoplifting",
-                  "Vol à l'étalage",
-                  "גניבת חנויות",
-                  "दुकान चोरी",
-                  "万引き",
-                  "商店行窃"
+                  "Vol \u00e0 l'\u00e9talage",
+                  "\u05d2\u05e0\u05d9\u05d1\u05ea \u05d7\u05e0\u05d5\u05d9\u05d5\u05ea",
+                  "\u0926\u0941\u0915\u093e\u0928 \u091a\u094b\u0930\u0940",
+                  "\u4e07\u5f15\u304d",
+                  "\u5546\u5e97\u884c\u7a83"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -928,8 +1891,143 @@
       {
         "item_index": 15,
         "item_text": "Juvenile & Financial Crimes",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Business and Financial Crimes Law",
+                "iri": "https://folio.openlegalstandard.org/RBqapTLjJVo7v5Usf0ePpnJ",
+                "iri_hash": "RBqapTLjJVo7v5Usf0ePpnJ",
+                "definition": "Fraud, embezzlement, ponzi, etc. False Claims Act.",
+                "synonyms": [
+                  "Business and Financial Crimes",
+                  "Business and Financial Crimes Law",
+                  "Gesetz \u00fcber Wirtschafts- und Finanzverbrechen",
+                  "Lei de Crimes Empresariais e Financeiros",
+                  "Ley de Delitos Empresariales y Financieros",
+                  "Loi sur les crimes \u00e9conomiques et financiers",
+                  "White Collar",
+                  "\u05d7\u05d5\u05e7 \u05e4\u05e9\u05e2\u05d9 \u05e2\u05e1\u05e7\u05d9\u05dd \u05d5\u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd",
+                  "\u0935\u094d\u092f\u093e\u092a\u093e\u0930 \u0914\u0930 \u0935\u093f\u0924\u094d\u0924\u0940\u092f \u0905\u092a\u0930\u093e\u0927 \u0935\u093f\u0927\u093f",
+                  "\u4f01\u696d\u30fb\u91d1\u878d\u72af\u7f6a\u6cd5",
+                  "\u5546\u4e1a\u548c\u91d1\u878d\u72af\u7f6a\u6cd5",
+                  "BIZF"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Criminal Law",
+                    "iri_hash": "RMZ6lNihK8TG4Flhco1yTy"
+                  },
+                  {
+                    "label": "Business and Financial Crimes Law",
+                    "iri_hash": "RBqapTLjJVo7v5Usf0ePpnJ"
+                  }
+                ],
+                "score": 70.4
+              }
+            ]
+          },
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Juvenile Detention Center",
+                "iri": "https://folio.openlegalstandard.org/RBzSkPHO0UuQ0ceZyBCWnLL",
+                "iri_hash": "RBzSkPHO0UuQ0ceZyBCWnLL",
+                "definition": "A Juvenile Detention Center is a secure facility designed to detain minors who are awaiting court hearings or have been adjudicated for juvenile offenses. These centers focus on rehabilitation and education, providing programs tailored to the developmental needs of young offenders.",
+                "synonyms": [
+                  "Adolescent Detention Facility",
+                  "Young Offender Facility",
+                  "Youth Correctional Facility",
+                  "Youth Detention Facility",
+                  "Youth Offender Institution"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Tangible Assets",
+                    "iri_hash": "RbvEeHm8jkxY6SgfxEoC0i"
+                  },
+                  {
+                    "label": "Real Estate Asset",
+                    "iri_hash": "RUhSbbDJZa8Crs3tIWcIfV"
+                  },
+                  {
+                    "label": "Correctional Facility - Real Estate Asset",
+                    "iri_hash": "R8ibMTtrBCWGIGOeFjTLtL0"
+                  },
+                  {
+                    "label": "Jail",
+                    "iri_hash": "R7wjSxFeGSnGHBA4sop8v3G"
+                  },
+                  {
+                    "label": "Juvenile Detention Center",
+                    "iri_hash": "RBzSkPHO0UuQ0ceZyBCWnLL"
+                  }
+                ],
+                "score": 55.0
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Financial Statement",
+                "iri": "https://folio.openlegalstandard.org/RDOWSerdWZR3POAsYxgxlDw",
+                "iri_hash": "RDOWSerdWZR3POAsYxgxlDw",
+                "definition": "A Financial Statement is a formal record of the financial activities and position of a business, organization, or individual, typically presented in structured manner for a specific time period. Common types of financial statements include income statements, balance sheets, and cash flow statements.",
+                "synonyms": [
+                  "Accounting Statement",
+                  "Financial Disclosure Document",
+                  "Financial Record",
+                  "Financial Report"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Entity Disclosure Document",
+                    "iri_hash": "RmCERXtzdqIJcW9mdbk0Bb"
+                  },
+                  {
+                    "label": "Financial Statement",
+                    "iri_hash": "RDOWSerdWZR3POAsYxgxlDw"
+                  }
+                ],
+                "score": 48.3
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
       },
       {
         "item_index": 16,
@@ -945,11 +2043,11 @@
                 "iri_hash": "RCySmY2p2KUDkrD6zQlVygb",
                 "definition": "Juvenile law and child protective proceedings.",
                 "synonyms": [
-                  "Direito da Infância e da Juventude",
+                  "Direito da Inf\u00e2ncia e da Juventude",
                   "Droit des mineurs",
                   "Jugendstrafrecht",
                   "Juvenile Law",
-                  "少年法",
+                  "\u5c11\u5e74\u6cd5",
                   "JUVL"
                 ],
                 "branch": "Area of Law",
@@ -990,14 +2088,14 @@
                 "definition": "The use of an electric or electronic communications facility to intentionally transmit a false and/or deceptive message in furtherance of a fraudulent activity.",
                 "synonyms": [
                   "Betrug per Draht",
-                  "Fraude eletrônica",
+                  "Fraude eletr\u00f4nica",
                   "Fraude par fil",
-                  "Fraude por transferencia electrónica",
+                  "Fraude por transferencia electr\u00f3nica",
                   "Wire Fraud",
-                  "הונאת חוטים",
-                  "वायर धोखाधड़ी",
-                  "电信诈骗",
-                  "電線詐欺"
+                  "\u05d4\u05d5\u05e0\u05d0\u05ea \u05d7\u05d5\u05d8\u05d9\u05dd",
+                  "\u0935\u093e\u092f\u0930 \u0927\u094b\u0916\u093e\u0927\u0921\u093c\u0940",
+                  "\u7535\u4fe1\u8bc8\u9a97",
+                  "\u96fb\u7dda\u8a50\u6b3a"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1047,10 +2145,10 @@
                   "Fraud",
                   "Fraude",
                   "Intentional Deceit",
-                  "הונאה",
-                  "धोखाधड़ी",
-                  "欺诈",
-                  "詐欺"
+                  "\u05d4\u05d5\u05e0\u05d0\u05d4",
+                  "\u0927\u094b\u0916\u093e\u0927\u0921\u093c\u0940",
+                  "\u6b3a\u8bc8",
+                  "\u8a50\u6b3a"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1102,16 +2200,16 @@
                 "definition": "The wrong done by another person or business that occurs in, or affects, commerce.",
                 "synonyms": [
                   "Betrug und Wirtschaftsdelikte",
-                  "Droit de la fraude et des délits économiques",
+                  "Droit de la fraude et des d\u00e9lits \u00e9conomiques",
                   "Fraud and Economic Torts",
                   "Fraud and Economic Torts Law",
-                  "Lei de Fraude e Delitos Econômicos",
-                  "Ley de Fraude y Agravios Económicos",
-                  "Ley de Fraude y Delitos Económicos",
-                  "חוק המטעמים והטורטים הכלכליים",
-                  "धोखाधड़ी और आर्थिक अपराधों कानून",
-                  "欺诈和经济侵权法",
-                  "詐欺および経済侵害法",
+                  "Lei de Fraude e Delitos Econ\u00f4micos",
+                  "Ley de Fraude y Agravios Econ\u00f3micos",
+                  "Ley de Fraude y Delitos Econ\u00f3micos",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05de\u05d8\u05e2\u05de\u05d9\u05dd \u05d5\u05d4\u05d8\u05d5\u05e8\u05d8\u05d9\u05dd \u05d4\u05db\u05dc\u05db\u05dc\u05d9\u05d9\u05dd",
+                  "\u0927\u094b\u0916\u093e\u0927\u0921\u093c\u0940 \u0914\u0930 \u0906\u0930\u094d\u0925\u093f\u0915 \u0905\u092a\u0930\u093e\u0927\u094b\u0902 \u0915\u093e\u0928\u0942\u0928",
+                  "\u6b3a\u8bc8\u548c\u7ecf\u6d4e\u4fb5\u6743\u6cd5",
+                  "\u8a50\u6b3a\u304a\u3088\u3073\u7d4c\u6e08\u4fb5\u5bb3\u6cd5",
                   "FRAU"
                 ],
                 "branch": "Area of Law",

@@ -311,13 +311,13 @@
                   "Bankruptcy",
                   "Fee and Employment Practice",
                   "Frais et pratique de l'emploi",
-                  "Gebühren und Beschäftigungspraxis",
-                  "Honorarios y Práctica Laboral",
-                  "Taxa e prática de emprego",
-                  "תשלום ומעשה עסקי בתחום העסקים",
-                  "शुल्क और रोजगार अभ्यास",
-                  "手数料と雇用慣行",
-                  "费用和就业实践"
+                  "Geb\u00fchren und Besch\u00e4ftigungspraxis",
+                  "Honorarios y Pr\u00e1ctica Laboral",
+                  "Taxa e pr\u00e1tica de emprego",
+                  "\u05ea\u05e9\u05dc\u05d5\u05dd \u05d5\u05de\u05e2\u05e9\u05d4 \u05e2\u05e1\u05e7\u05d9 \u05d1\u05ea\u05d7\u05d5\u05dd \u05d4\u05e2\u05e1\u05e7\u05d9\u05dd",
+                  "\u0936\u0941\u0932\u094d\u0915 \u0914\u0930 \u0930\u094b\u091c\u0917\u093e\u0930 \u0905\u092d\u094d\u092f\u093e\u0938",
+                  "\u624b\u6570\u6599\u3068\u96c7\u7528\u6163\u884c",
+                  "\u8d39\u7528\u548c\u5c31\u4e1a\u5b9e\u8df5"
                 ],
                 "branch": "Service",
                 "branch_color": "#065e4e",
@@ -346,11 +346,11 @@
                   "Dienstleistung",
                   "Service",
                   "Servicio",
-                  "Serviço",
-                  "שירות",
-                  "सेवा",
-                  "サービス",
-                  "服务"
+                  "Servi\u00e7o",
+                  "\u05e9\u05d9\u05e8\u05d5\u05ea",
+                  "\u0938\u0947\u0935\u093e",
+                  "\u30b5\u30fc\u30d3\u30b9",
+                  "\u670d\u52a1"
                 ],
                 "branch": "Service",
                 "branch_color": "#065e4e",
@@ -384,9 +384,9 @@
                   "Discrimination",
                   "Diskriminierungsrecht",
                   "Droit de la discrimination",
-                  "Lei de Discriminação",
-                  "差別禁止法",
-                  "歧视法",
+                  "Lei de Discrimina\u00e7\u00e3o",
+                  "\u5dee\u5225\u7981\u6b62\u6cd5",
+                  "\u6b67\u89c6\u6cd5",
                   "DISC"
                 ],
                 "branch": "Area of Law",
@@ -430,13 +430,13 @@
                   "Employment Discrimination",
                   "Employment Discrimination Law",
                   "Human Rights Law",
-                  "Lei de Discriminação no Emprego",
-                  "Ley de Discriminación Laboral",
-                  "Loi sur la discrimination en matière d'emploi",
-                  "חוק הפלילה בתחום העסקים",
-                  "रोजगार भेदभाव कानून",
-                  "就业歧视法",
-                  "雇用差別禁止法",
+                  "Lei de Discrimina\u00e7\u00e3o no Emprego",
+                  "Ley de Discriminaci\u00f3n Laboral",
+                  "Loi sur la discrimination en mati\u00e8re d'emploi",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05e4\u05dc\u05d9\u05dc\u05d4 \u05d1\u05ea\u05d7\u05d5\u05dd \u05d4\u05e2\u05e1\u05e7\u05d9\u05dd",
+                  "\u0930\u094b\u091c\u0917\u093e\u0930 \u092d\u0947\u0926\u092d\u093e\u0935 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5c31\u4e1a\u6b67\u89c6\u6cd5",
+                  "\u96c7\u7528\u5dee\u5225\u7981\u6b62\u6cd5",
                   "DSCE"
                 ],
                 "branch": "Area of Law",
@@ -466,9 +466,9 @@
                   "Discrimination",
                   "Diskriminierungsrecht",
                   "Droit de la discrimination",
-                  "Lei de Discriminação",
-                  "差別禁止法",
-                  "歧视法",
+                  "Lei de Discrimina\u00e7\u00e3o",
+                  "\u5dee\u5225\u7981\u6b62\u6cd5",
+                  "\u6b67\u89c6\u6cd5",
                   "DISC"
                 ],
                 "branch": "Area of Law",
@@ -510,13 +510,13 @@
                 "synonyms": [
                   "Age Discrimination",
                   "Altersdiskriminierung",
-                  "Discriminación por edad",
-                  "Discrimination liée à l'âge",
-                  "Discriminação por idade",
-                  "הפליה עקב גיל",
-                  "आयु भेदभाव",
-                  "年齢差別",
-                  "年龄歧视"
+                  "Discriminaci\u00f3n por edad",
+                  "Discrimination li\u00e9e \u00e0 l'\u00e2ge",
+                  "Discrimina\u00e7\u00e3o por idade",
+                  "\u05d4\u05e4\u05dc\u05d9\u05d4 \u05e2\u05e7\u05d1 \u05d2\u05d9\u05dc",
+                  "\u0906\u092f\u0941 \u092d\u0947\u0926\u092d\u093e\u0935",
+                  "\u5e74\u9f62\u5dee\u5225",
+                  "\u5e74\u9f84\u6b67\u89c6"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -567,15 +567,15 @@
                 "iri_hash": "RDQKIyqoXbr8tQZdgClywRf",
                 "definition": "A claim made by an employee alleging unfair treatment or disparate impact based on a protected characteristic such as race, gender, age, or disability in the workplace.",
                 "synonyms": [
-                  "Actions en discrimination en matière d'emploi",
+                  "Actions en discrimination en mati\u00e8re d'emploi",
                   "Diskriminierungsklagen im Arbeitsrecht",
                   "Employment Discrimination Claims",
-                  "Reclamaciones por discriminación laboral",
-                  "Reivindicações de discriminação no emprego",
-                  "תביעות על הפרת זכויות עובדים",
-                  "रोजगार भेदभाव दावे",
-                  "就业歧视索赔",
-                  "雇用差別主張"
+                  "Reclamaciones por discriminaci\u00f3n laboral",
+                  "Reivindica\u00e7\u00f5es de discrimina\u00e7\u00e3o no emprego",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05e2\u05dc \u05d4\u05e4\u05e8\u05ea \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05e2\u05d5\u05d1\u05d3\u05d9\u05dd",
+                  "\u0930\u094b\u091c\u0917\u093e\u0930 \u092d\u0947\u0926\u092d\u093e\u0935 \u0926\u093e\u0935\u0947",
+                  "\u5c31\u4e1a\u6b67\u89c6\u7d22\u8d54",
+                  "\u96c7\u7528\u5dee\u5225\u4e3b\u5f35"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -613,16 +613,16 @@
                 "iri_hash": "R8UnJ8s91KxQbW7GpGgIhsP",
                 "definition": "Discrimination Claims refer to legal actions taken by individuals who have been subjected to unfair treatment based on their protected characteristics, such as race, gender, religion, disability, or age, in various contexts such as employment, housing, or public accommodations.",
                 "synonyms": [
-                  "Demandas por discriminación",
+                  "Demandas por discriminaci\u00f3n",
                   "Discrimination Claims",
                   "Diskriminierungsklagen",
-                  "Reclamaciones por discriminación",
-                  "Reivindicações de discriminação",
-                  "Réclamations pour discrimination",
-                  "תביעות רסיסה",
-                  "भेदभाव दावे",
-                  "差別待遇申立",
-                  "歧视索赔"
+                  "Reclamaciones por discriminaci\u00f3n",
+                  "Reivindica\u00e7\u00f5es de discrimina\u00e7\u00e3o",
+                  "R\u00e9clamations pour discrimination",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05e8\u05e1\u05d9\u05e1\u05d4",
+                  "\u092d\u0947\u0926\u092d\u093e\u0935 \u0926\u093e\u0935\u0947",
+                  "\u5dee\u5225\u5f85\u9047\u7533\u7acb",
+                  "\u6b67\u89c6\u7d22\u8d54"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -672,13 +672,13 @@
                   "Arbeitszeit- und Lohnrecht",
                   "Droit du travail et des salaires",
                   "Employment Standards",
-                  "Lei de Salário e Hora",
+                  "Lei de Sal\u00e1rio e Hora",
                   "Ley de Salarios y Horas",
                   "Wage and Hour Law",
-                  "חוק שכר ושעות",
-                  "वेतन और घंटे कानून",
-                  "工资和工时法",
-                  "賃金および労働時間法",
+                  "\u05d7\u05d5\u05e7 \u05e9\u05db\u05e8 \u05d5\u05e9\u05e2\u05d5\u05ea",
+                  "\u0935\u0947\u0924\u0928 \u0914\u0930 \u0918\u0902\u091f\u0947 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5de5\u8d44\u548c\u5de5\u65f6\u6cd5",
+                  "\u8cc3\u91d1\u304a\u3088\u3073\u52b4\u50cd\u6642\u9593\u6cd5",
                   "WGHR"
                 ],
                 "branch": "Area of Law",
@@ -755,13 +755,13 @@
                   "Arbeitszeit- und Lohnrecht",
                   "Droit du travail et des salaires",
                   "Employment Standards",
-                  "Lei de Salário e Hora",
+                  "Lei de Sal\u00e1rio e Hora",
                   "Ley de Salarios y Horas",
                   "Wage and Hour Law",
-                  "חוק שכר ושעות",
-                  "वेतन और घंटे कानून",
-                  "工资和工时法",
-                  "賃金および労働時間法",
+                  "\u05d7\u05d5\u05e7 \u05e9\u05db\u05e8 \u05d5\u05e9\u05e2\u05d5\u05ea",
+                  "\u0935\u0947\u0924\u0928 \u0914\u0930 \u0918\u0902\u091f\u0947 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5de5\u8d44\u548c\u5de5\u65f6\u6cd5",
+                  "\u8cc3\u91d1\u304a\u3088\u3073\u52b4\u50cd\u6642\u9593\u6cd5",
                   "WGHR"
                 ],
                 "branch": "Area of Law",
@@ -790,8 +790,176 @@
       {
         "item_index": 7,
         "item_text": "Pay Equity Law",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Motion to Pay",
+                "iri": "https://folio.openlegalstandard.org/R70jaPzUNW5ioGZKb0kEzXz",
+                "iri_hash": "R70jaPzUNW5ioGZKb0kEzXz",
+                "definition": "A Motion to Pay is a request made in a bankruptcy case for the court to authorize payment of a specific debt or obligation.",
+                "synonyms": [
+                  "Moci\u00f3n de Pago",
+                  "Motion to Pay",
+                  "Peti\u00e7\u00e3o de Pagamento",
+                  "Requ\u00eate de paiement",
+                  "Zahlungsantrag",
+                  "\u05d4\u05e6\u05e2\u05ea \u05ea\u05e9\u05dc\u05d5\u05dd",
+                  "\u092d\u0941\u0917\u0924\u093e\u0928 \u0915\u0947 \u0932\u093f\u090f \u092f\u093e\u091a\u093f\u0915\u093e",
+                  "\u652f\u4ed8\u52a8\u8bae",
+                  "\u652f\u6255\u3044\u306e\u7533\u7acb\u3066"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Bankruptcy and Restructuring Document",
+                    "iri_hash": "R8zijLH2GH0SxOhIdzeDOs3"
+                  },
+                  {
+                    "label": "Bankruptcy Motions",
+                    "iri_hash": "R9Ii4OzSADsjS0VegX12oQJ"
+                  },
+                  {
+                    "label": "Motion to Pay",
+                    "iri_hash": "R70jaPzUNW5ioGZKb0kEzXz"
+                  }
+                ],
+                "score": 67.7
+              },
+              {
+                "label": "Payment Advices",
+                "iri": "https://folio.openlegalstandard.org/RszUiYFgocCPkuHr4IzSzr",
+                "iri_hash": "RszUiYFgocCPkuHr4IzSzr",
+                "definition": "Payment Advices (Employment Pay Stubs) are written or electronic documents provided by an employer to an employee that show the details of their pay, including deductions and taxes.",
+                "synonyms": [
+                  "Avis de paiement",
+                  "Avisos de Pagamento",
+                  "Avisos de pago",
+                  "Employment Pay Stubs",
+                  "Payment Advices",
+                  "Zahlungsanweisungen",
+                  "\u05e2\u05e6\u05d5\u05ea \u05dc\u05ea\u05e9\u05dc\u05d5\u05dd",
+                  "\u092d\u0941\u0917\u0924\u093e\u0928 \u0938\u0932\u093e\u0939",
+                  "\u4ed8\u6b3e\u901a\u77e5",
+                  "\u652f\u6255\u901a\u77e5"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Bankruptcy and Restructuring Document",
+                    "iri_hash": "R8zijLH2GH0SxOhIdzeDOs3"
+                  },
+                  {
+                    "label": "Payment Advices",
+                    "iri_hash": "RszUiYFgocCPkuHr4IzSzr"
+                  }
+                ],
+                "score": 63.4
+              }
+            ]
+          },
+          {
+            "branch": "Engagement Attributes",
+            "branch_color": "#10613a",
+            "candidates": [
+              {
+                "label": "Fee Paid",
+                "iri": "https://folio.openlegalstandard.org/RCS1yzwO4cMRBOUzP7pwgFs",
+                "iri_hash": "RCS1yzwO4cMRBOUzP7pwgFs",
+                "definition": "Fee Paid refers to the specific amount of money that has been paid by the client to the lawyer or law firm for the legal services provided, and is a subcategory of Engagement Fee Detail.",
+                "synonyms": [
+                  "Cuota pagada",
+                  "Fee Paid",
+                  "Frais pay\u00e9s",
+                  "Geb\u00fchr bezahlt",
+                  "Tasa pagada",
+                  "Taxa paga",
+                  "\u05d3\u05de\u05d9 \u05ea\u05e9\u05dc\u05d5\u05dd \u05e9\u05d5\u05dc\u05de\u05d5",
+                  "\u092b\u0940\u0938 \u092d\u0941\u0917\u0924\u093e\u0928",
+                  "\u5df2\u652f\u4ed8\u8d39\u7528",
+                  "\u624b\u6570\u6599\u652f\u6255\u6e08\u307f"
+                ],
+                "branch": "Engagement Attributes",
+                "branch_color": "#10613a",
+                "hierarchy_path": [
+                  {
+                    "label": "Engagement Attributes",
+                    "iri_hash": "R9kmGZf5FSmFdouXWQ1Nndm"
+                  },
+                  {
+                    "label": "Engagement Fee Detail",
+                    "iri_hash": "RMDZKh0zTn6FdXzpYpbsle"
+                  },
+                  {
+                    "label": "Fee Paid",
+                    "iri_hash": "RCS1yzwO4cMRBOUzP7pwgFs"
+                  }
+                ],
+                "score": 60.0
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Payor",
+                "iri": "https://folio.openlegalstandard.org/R8XYr38AveQ9CS79lnOA1H2",
+                "iri_hash": "R8XYr38AveQ9CS79lnOA1H2",
+                "definition": "A person legally obligated to pay.",
+                "synonyms": [
+                  "Pagador",
+                  "Payer",
+                  "Payeur",
+                  "Zahler",
+                  "\u05de\u05e9\u05dc\u05dd",
+                  "\u092d\u0941\u0917\u0924\u093e\u0928\u0915\u0930\u094d\u0924\u093e",
+                  "\u4ed8\u6b3e\u4eba",
+                  "\u652f\u6255\u4eba"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Payor",
+                    "iri_hash": "R8XYr38AveQ9CS79lnOA1H2"
+                  }
+                ],
+                "score": 47.5
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
       },
       {
         "item_index": 8,
@@ -808,15 +976,15 @@
                 "definition": "A workplace safety claim is a legal action initiated by an employee against their employer for not providing a safe working environment. The claim typically arises when an employer does not comply with applicable safety regulations, which can result in dangerous or hazardous working conditions for employees. Workplace safety claims can involve issues such as inadequate safety equipment, lack of proper training, or unsafe working conditions. Employees may bring workplace safety claims for injuries or illnesses suffered as a result of their employer's failure to provide a safe working environment.",
                 "synonyms": [
                   "Arbeitssicherheitsanspruch",
-                  "Reclamación de seguridad en el lugar de trabajo",
+                  "Reclamaci\u00f3n de seguridad en el lugar de trabajo",
                   "Reclamo de seguridad en el lugar de trabajo",
-                  "Reivindicação de segurança no local de trabalho",
-                  "Réclamation de sécurité sur le lieu de travail",
+                  "Reivindica\u00e7\u00e3o de seguran\u00e7a no local de trabalho",
+                  "R\u00e9clamation de s\u00e9curit\u00e9 sur le lieu de travail",
                   "Workplace Safety Claim",
-                  "תביעת בטיחות במקום העבודה",
-                  "कार्यस्थल सुरक्षा दावा",
-                  "工作场所安全索赔",
-                  "職場安全請求"
+                  "\u05ea\u05d1\u05d9\u05e2\u05ea \u05d1\u05d8\u05d9\u05d7\u05d5\u05ea \u05d1\u05de\u05e7\u05d5\u05dd \u05d4\u05e2\u05d1\u05d5\u05d3\u05d4",
+                  "\u0915\u093e\u0930\u094d\u092f\u0938\u094d\u0925\u0932 \u0938\u0941\u0930\u0915\u094d\u0937\u093e \u0926\u093e\u0935\u093e",
+                  "\u5de5\u4f5c\u573a\u6240\u5b89\u5168\u7d22\u8d54",
+                  "\u8077\u5834\u5b89\u5168\u8acb\u6c42"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -868,16 +1036,16 @@
                 "definition": "Law governing the health and safety of employees.",
                 "synonyms": [
                   "Arbeits- und Gesundheitsschutzrecht",
-                  "Droit de la santé et de la sécurité au travail",
+                  "Droit de la sant\u00e9 et de la s\u00e9curit\u00e9 au travail",
                   "Employment Health and Safety",
                   "Employment Health and Safety Law",
-                  "Lei de Saúde e Segurança no Trabalho",
+                  "Lei de Sa\u00fade e Seguran\u00e7a no Trabalho",
                   "Ley de Salud y Seguridad en el Empleo",
                   "Occupational Health and Safety",
-                  "חוק בריאות ובטיחות בעבודה",
-                  "रोजगार स्वास्थ्य और सुरक्षा कानून",
-                  "労働安全衛生法",
-                  "就业健康与安全法",
+                  "\u05d7\u05d5\u05e7 \u05d1\u05e8\u05d9\u05d0\u05d5\u05ea \u05d5\u05d1\u05d8\u05d9\u05d7\u05d5\u05ea \u05d1\u05e2\u05d1\u05d5\u05d3\u05d4",
+                  "\u0930\u094b\u091c\u0917\u093e\u0930 \u0938\u094d\u0935\u093e\u0938\u094d\u0925\u094d\u092f \u0914\u0930 \u0938\u0941\u0930\u0915\u094d\u0937\u093e \u0915\u093e\u0928\u0942\u0928",
+                  "\u52b4\u50cd\u5b89\u5168\u885b\u751f\u6cd5",
+                  "\u5c31\u4e1a\u5065\u5eb7\u4e0e\u5b89\u5168\u6cd5",
                   "HLTE"
                 ],
                 "branch": "Area of Law",
@@ -957,15 +1125,15 @@
                 "definition": "A workplace safety claim is a legal action initiated by an employee against their employer for not providing a safe working environment. The claim typically arises when an employer does not comply with applicable safety regulations, which can result in dangerous or hazardous working conditions for employees. Workplace safety claims can involve issues such as inadequate safety equipment, lack of proper training, or unsafe working conditions. Employees may bring workplace safety claims for injuries or illnesses suffered as a result of their employer's failure to provide a safe working environment.",
                 "synonyms": [
                   "Arbeitssicherheitsanspruch",
-                  "Reclamación de seguridad en el lugar de trabajo",
+                  "Reclamaci\u00f3n de seguridad en el lugar de trabajo",
                   "Reclamo de seguridad en el lugar de trabajo",
-                  "Reivindicação de segurança no local de trabalho",
-                  "Réclamation de sécurité sur le lieu de travail",
+                  "Reivindica\u00e7\u00e3o de seguran\u00e7a no local de trabalho",
+                  "R\u00e9clamation de s\u00e9curit\u00e9 sur le lieu de travail",
                   "Workplace Safety Claim",
-                  "תביעת בטיחות במקום העבודה",
-                  "कार्यस्थल सुरक्षा दावा",
-                  "工作场所安全索赔",
-                  "職場安全請求"
+                  "\u05ea\u05d1\u05d9\u05e2\u05ea \u05d1\u05d8\u05d9\u05d7\u05d5\u05ea \u05d1\u05de\u05e7\u05d5\u05dd \u05d4\u05e2\u05d1\u05d5\u05d3\u05d4",
+                  "\u0915\u093e\u0930\u094d\u092f\u0938\u094d\u0925\u0932 \u0938\u0941\u0930\u0915\u094d\u0937\u093e \u0926\u093e\u0935\u093e",
+                  "\u5de5\u4f5c\u573a\u6240\u5b89\u5168\u7d22\u8d54",
+                  "\u8077\u5834\u5b89\u5168\u8acb\u6c42"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1005,8 +1173,166 @@
       {
         "item_index": 12,
         "item_text": "Wrongful Termination",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Termination Law",
+                "iri": "https://folio.openlegalstandard.org/RCcidDCaGrSequSQ0hnokdb",
+                "iri_hash": "RCcidDCaGrSequSQ0hnokdb",
+                "definition": "Law encompassing rules by which an employer may terminate an employee.",
+                "synonyms": [
+                  "Droit de r\u00e9siliation",
+                  "K\u00fcndigungsrecht",
+                  "Lei de rescis\u00e3o",
+                  "Ley de Terminaci\u00f3n",
+                  "Termination",
+                  "Termination Law",
+                  "\u05d7\u05d5\u05e7 \u05e1\u05d9\u05d5\u05dd",
+                  "\u0938\u092e\u093e\u092a\u094d\u0924\u093f \u0915\u093e\u0928\u0942\u0928",
+                  "\u7ec8\u6b62\u6cd5",
+                  "\u89e3\u96c7\u6cd5",
+                  "WTRM"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Termination Law",
+                    "iri_hash": "RCcidDCaGrSequSQ0hnokdb"
+                  }
+                ],
+                "score": 68.3
+              },
+              {
+                "label": "Employment Discrimination Law",
+                "iri": "https://folio.openlegalstandard.org/R8f088bmlfkWDbXdJj9nQD9",
+                "iri_hash": "R8f088bmlfkWDbXdJj9nQD9",
+                "definition": "Law relating to protected class employment discrimination including retaliation and harassment",
+                "synonyms": [
+                  "Arbeitsdiskriminierungsgesetz",
+                  "Employment Discrimination",
+                  "Employment Discrimination Law",
+                  "Human Rights Law",
+                  "Lei de Discrimina\u00e7\u00e3o no Emprego",
+                  "Ley de Discriminaci\u00f3n Laboral",
+                  "Loi sur la discrimination en mati\u00e8re d'emploi",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05e4\u05dc\u05d9\u05dc\u05d4 \u05d1\u05ea\u05d7\u05d5\u05dd \u05d4\u05e2\u05e1\u05e7\u05d9\u05dd",
+                  "\u0930\u094b\u091c\u0917\u093e\u0930 \u092d\u0947\u0926\u092d\u093e\u0935 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5c31\u4e1a\u6b67\u89c6\u6cd5",
+                  "\u96c7\u7528\u5dee\u5225\u7981\u6b62\u6cd5",
+                  "DSCE"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Employment Discrimination Law",
+                    "iri_hash": "R8f088bmlfkWDbXdJj9nQD9"
+                  }
+                ],
+                "score": 50.2
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Termination Agreement",
+                "iri": "https://folio.openlegalstandard.org/RxJhP6upqvHlawarYyeVQi",
+                "iri_hash": "RxJhP6upqvHlawarYyeVQi",
+                "definition": "A Termination Agreement is a legal document that formally concludes a previously established contract before the original terms of the contract are fulfilled. It outlines the conditions, responsibilities, and any obligations or entitlements of the parties involved in ending the agreement.",
+                "synonyms": [
+                  "Cancellation Agreement"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Amendment Agreement",
+                    "iri_hash": "R9UXMB7LO35e1n0zwV2MVmh"
+                  },
+                  {
+                    "label": "Termination Agreement",
+                    "iri_hash": "RxJhP6upqvHlawarYyeVQi"
+                  }
+                ],
+                "score": 69.3
+              }
+            ]
+          },
+          {
+            "branch": "Event",
+            "branch_color": "#b91c1c",
+            "candidates": [
+              {
+                "label": "Contract Termination",
+                "iri": "https://folio.openlegalstandard.org/RB3TXlxV89oDiy7HtSN9cF0",
+                "iri_hash": "RB3TXlxV89oDiy7HtSN9cF0",
+                "definition": "Contract Termination is an event that occurs when a contract is ended, either at or before its natural expiration date. Termination can be mutual, by breach, or by operation of law.",
+                "synonyms": [
+                  "Contract Cancellation",
+                  "Contract Dissolution",
+                  "Termination Of Contract"
+                ],
+                "branch": "Event",
+                "branch_color": "#b91c1c",
+                "hierarchy_path": [
+                  {
+                    "label": "Event",
+                    "iri_hash": "R73hoH1RXYjBTYiGfolpsAF"
+                  },
+                  {
+                    "label": "Transaction Events",
+                    "iri_hash": "RdfKnWpXsG2eBmnS3oJNTF"
+                  },
+                  {
+                    "label": "Contract Termination",
+                    "iri_hash": "RB3TXlxV89oDiy7HtSN9cF0"
+                  }
+                ],
+                "score": 69.3
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
       },
       {
         "item_index": 13,
@@ -1022,18 +1348,18 @@
                 "iri_hash": "RDJYLQ3woaBs6FkT7wMbB4U",
                 "definition": "The concept of Wrongful Discharge or Termination refers to the illegal firing or dismissal of an employee by an employer, in violation of the law or employment contract.",
                 "synonyms": [
-                  "Demissão ou rescisão injusta",
+                  "Demiss\u00e3o ou rescis\u00e3o injusta",
                   "Despido Improcedente",
-                  "Licenciement ou résiliation abusive",
-                  "Terminación Injusta",
-                  "Unrechtmäßige Kündigung oder Entlassung",
+                  "Licenciement ou r\u00e9siliation abusive",
+                  "Terminaci\u00f3n Injusta",
+                  "Unrechtm\u00e4\u00dfige K\u00fcndigung oder Entlassung",
                   "Wrongful Discharge",
                   "Wrongful Dismissal or Termination",
                   "Wrongful Termination",
-                  "פיטורים בלתי חוקיים או סיום חוקי",
-                  "गलत निकास या अंतिम करना",
-                  "不当解雇または終了",
-                  "非法解雇或终止"
+                  "\u05e4\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd \u05d1\u05dc\u05ea\u05d9 \u05d7\u05d5\u05e7\u05d9\u05d9\u05dd \u05d0\u05d5 \u05e1\u05d9\u05d5\u05dd \u05d7\u05d5\u05e7\u05d9",
+                  "\u0917\u0932\u0924 \u0928\u093f\u0915\u093e\u0938 \u092f\u093e \u0905\u0902\u0924\u093f\u092e \u0915\u0930\u0928\u093e",
+                  "\u4e0d\u5f53\u89e3\u96c7\u307e\u305f\u306f\u7d42\u4e86",
+                  "\u975e\u6cd5\u89e3\u96c7\u6216\u7ec8\u6b62"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1110,8 +1436,165 @@
       {
         "item_index": 15,
         "item_text": "Benefits & Compensation",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Unemployment Benefits Law",
+                "iri": "https://folio.openlegalstandard.org/RDIgqpnkyBP3BzrGZfwlXDc",
+                "iri_hash": "RDIgqpnkyBP3BzrGZfwlXDc",
+                "definition": "Unemployment benefits refer to those benefits given by the government to unemployed persons.",
+                "synonyms": [
+                  "Arbeitslosengeldgesetz",
+                  "Lei de Benef\u00edcios de Desemprego",
+                  "Ley de Prestaciones por Desempleo",
+                  "Loi sur les allocations de ch\u00f4mage",
+                  "Unemployment Benefits",
+                  "Unemployment Benefits Law",
+                  "Unemployment Compensation",
+                  "Unemployment Insurance",
+                  "\u05d7\u05d5\u05e7 \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05dc\u05de\u05e2\u05df \u05e2\u05d6\u05e8\u05d4 \u05d1\u05d1\u05d9\u05d8\u05d5\u05d7 \u05d0\u05d1\u05d8\u05dc\u05d4",
+                  "\u092c\u0947\u0930\u094b\u091c\u0917\u093e\u0930\u0940 \u0932\u093e\u092d \u0915\u093e\u0928\u0942\u0928",
+                  "\u5931\u4e1a\u6551\u6d4e\u6cd5",
+                  "\u5931\u696d\u4fdd\u967a\u6cd5",
+                  "UNBE"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Unemployment Benefits Law",
+                    "iri_hash": "RDIgqpnkyBP3BzrGZfwlXDc"
+                  }
+                ],
+                "score": 69.3
+              },
+              {
+                "label": "Employee Pension and Benefits Law",
+                "iri": "https://folio.openlegalstandard.org/RDR762ETZykxzu0RfYBxNu9",
+                "iri_hash": "RDR762ETZykxzu0RfYBxNu9",
+                "definition": "Law relating to retirement and welfare benefit plans, with particular emphasis on benefits arrangements.",
+                "synonyms": [
+                  "Derecho de Pensiones y Beneficios",
+                  "Direito de pens\u00f5es e benef\u00edcios",
+                  "Droit des pensions et des avantages sociaux",
+                  "Ley de Pensiones y Beneficios",
+                  "Pension and Benefits Law",
+                  "Renten- und Sozialleistungsrecht",
+                  "\u05d7\u05d5\u05e7 \u05e4\u05e0\u05e1\u05d9\u05d4 \u05d5\u05d8\u05d1\u05e2\u05d5\u05e0\u05d5\u05ea",
+                  "\u092a\u0947\u0902\u0936\u0928 \u0914\u0930 \u0932\u093e\u092d \u0915\u093e\u0928\u0942\u0928",
+                  "\u517b\u8001\u91d1\u548c\u798f\u5229\u6cd5",
+                  "\u5e74\u91d1\u30fb\u798f\u5229\u539a\u751f\u6cd5",
+                  "PENB"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Labor and Employment Law",
+                    "iri_hash": "RCzvtNXIrDJF8xkmOoc6JKH"
+                  },
+                  {
+                    "label": "Employee Pension and Benefits Law",
+                    "iri_hash": "RDR762ETZykxzu0RfYBxNu9"
+                  }
+                ],
+                "score": 50.8
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Compensation Agreement",
+                "iri": "https://folio.openlegalstandard.org/RCP7l2FfOtj2kWIy3WBWif5",
+                "iri_hash": "RCP7l2FfOtj2kWIy3WBWif5",
+                "definition": "A Compensation Related Agreement is a legally binding contract that specifically focuses on the structure and details of an employee's compensation, including elements like base salary, bonuses, stock options, and other financial incentives. These agreements serve to outline how an employee's pay is determined, disbursed, and adjusted over time, ensuring clarity and fairness in compensation arrangements.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Employment and Labor Agreements",
+                    "iri_hash": "Rhpdjd9p358e9Rkel80dvQ"
+                  },
+                  {
+                    "label": "Compensation Agreement",
+                    "iri_hash": "RCP7l2FfOtj2kWIy3WBWif5"
+                  }
+                ],
+                "score": 69.3
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Beneficiary",
+                "iri": "https://folio.openlegalstandard.org/Rt7TTPXJ7WX1Jrjufs0Mdr",
+                "iri_hash": "Rt7TTPXJ7WX1Jrjufs0Mdr",
+                "definition": "A beneficiary is an individual or entity designated to receive benefits, assets, or proceeds from a legal matter, including those of an estate, trust, insurance policy, or other financial or legal instruments. The term is commonly used in legal and financial contexts to specify who will benefit from a particular financial arrangement or legal structure.",
+                "synonyms": [],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Obligee",
+                    "iri_hash": "R8VN5tK4TtD0GqDw2NCbaLr"
+                  },
+                  {
+                    "label": "Beneficiary",
+                    "iri_hash": "Rt7TTPXJ7WX1Jrjufs0Mdr"
+                  }
+                ],
+                "score": 54.3
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
       },
       {
         "item_index": 16,
@@ -1129,14 +1612,14 @@
                 "synonyms": [
                   "Arbeitsunfallgesetz",
                   "Droit de la compensation des travailleurs",
-                  "Lei de compensação dos trabalhadores",
-                  "Ley de Compensación de Trabajadores",
+                  "Lei de compensa\u00e7\u00e3o dos trabalhadores",
+                  "Ley de Compensaci\u00f3n de Trabajadores",
                   "Workers' Compensation Law",
                   "Workplace Safety and Insurance Law",
-                  "חוק פיצויי עובדים",
-                  "कर्मचारी रक्षा कानून",
-                  "労働者補償法",
-                  "工人赔偿法",
+                  "\u05d7\u05d5\u05e7 \u05e4\u05d9\u05e6\u05d5\u05d9\u05d9 \u05e2\u05d5\u05d1\u05d3\u05d9\u05dd",
+                  "\u0915\u0930\u094d\u092e\u091a\u093e\u0930\u0940 \u0930\u0915\u094d\u0937\u093e \u0915\u093e\u0928\u0942\u0928",
+                  "\u52b4\u50cd\u8005\u88dc\u511f\u6cd5",
+                  "\u5de5\u4eba\u8d54\u507f\u6cd5",
                   "WORK"
                 ],
                 "branch": "Area of Law",
@@ -1177,17 +1660,17 @@
                 "definition": "Unemployment benefits refer to those benefits given by the government to unemployed persons.",
                 "synonyms": [
                   "Arbeitslosengeldgesetz",
-                  "Lei de Benefícios de Desemprego",
+                  "Lei de Benef\u00edcios de Desemprego",
                   "Ley de Prestaciones por Desempleo",
-                  "Loi sur les allocations de chômage",
+                  "Loi sur les allocations de ch\u00f4mage",
                   "Unemployment Benefits",
                   "Unemployment Benefits Law",
                   "Unemployment Compensation",
                   "Unemployment Insurance",
-                  "חוק זכויות למען עזרה בביטוח אבטלה",
-                  "बेरोजगारी लाभ कानून",
-                  "失业救济法",
-                  "失業保険法",
+                  "\u05d7\u05d5\u05e7 \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05dc\u05de\u05e2\u05df \u05e2\u05d6\u05e8\u05d4 \u05d1\u05d1\u05d9\u05d8\u05d5\u05d7 \u05d0\u05d1\u05d8\u05dc\u05d4",
+                  "\u092c\u0947\u0930\u094b\u091c\u0917\u093e\u0930\u0940 \u0932\u093e\u092d \u0915\u093e\u0928\u0942\u0928",
+                  "\u5931\u4e1a\u6551\u6d4e\u6cd5",
+                  "\u5931\u696d\u4fdd\u967a\u6cd5",
                   "UNBE"
                 ],
                 "branch": "Area of Law",
@@ -1296,16 +1779,16 @@
                 "iri_hash": "RD22PX6hiObnrRSM3c6bXdR",
                 "definition": "A Workers' Compensation Claim is a legal claim made by an employee seeking benefits for injuries or illnesses that occurred in the course of their employment.",
                 "synonyms": [
-                  "Arbeitsunfallentschädigungsanspruch",
-                  "Reclamación de compensación de trabajadores",
-                  "Reclamação de compensação de trabalhadores",
-                  "Reclamo de compensación de trabajadores",
-                  "Réclamation d'indemnisation des travailleurs",
+                  "Arbeitsunfallentsch\u00e4digungsanspruch",
+                  "Reclamaci\u00f3n de compensaci\u00f3n de trabajadores",
+                  "Reclama\u00e7\u00e3o de compensa\u00e7\u00e3o de trabalhadores",
+                  "Reclamo de compensaci\u00f3n de trabajadores",
+                  "R\u00e9clamation d'indemnisation des travailleurs",
                   "Workers' Compensation Claim",
-                  "תביעת פיצויי עובדים",
-                  "कर्मचारी रक्षाभार दावा",
-                  "労働者補償請求",
-                  "工人赔偿申请"
+                  "\u05ea\u05d1\u05d9\u05e2\u05ea \u05e4\u05d9\u05e6\u05d5\u05d9\u05d9 \u05e2\u05d5\u05d1\u05d3\u05d9\u05dd",
+                  "\u0915\u0930\u094d\u092e\u091a\u093e\u0930\u0940 \u0930\u0915\u094d\u0937\u093e\u092d\u093e\u0930 \u0926\u093e\u0935\u093e",
+                  "\u52b4\u50cd\u8005\u88dc\u511f\u8acb\u6c42",
+                  "\u5de5\u4eba\u8d54\u507f\u7533\u8bf7"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1343,16 +1826,16 @@
                 "iri_hash": "RBKT7TSvBSVEvxJuaKhCz8P",
                 "definition": "A workers' compensation discrimination claim is a legal action brought by an employee who alleges that they have been subjected to unfair treatment, retaliation, or adverse actions by their employer due to filing a workers' compensation claim or exercising their rights under workers' compensation laws. Workers' compensation is a system designed to provide medical benefits and wage replacement for employees who suffer work-related injuries or illnesses. Employers are generally prohibited from discriminating or retaliating against employees who seek workers' compensation benefits.",
                 "synonyms": [
-                  "Diskriminierungsklage wegen Arbeitsunfallentschädigung",
-                  "Reclamação de discriminação de compensação de trabalhadores",
-                  "Reclamo por discriminación de compensación de trabajadores",
-                  "Reclamo por discriminación en compensación de trabajadores",
-                  "Réclamation pour discrimination en matière de compensation des travailleurs",
+                  "Diskriminierungsklage wegen Arbeitsunfallentsch\u00e4digung",
+                  "Reclama\u00e7\u00e3o de discrimina\u00e7\u00e3o de compensa\u00e7\u00e3o de trabalhadores",
+                  "Reclamo por discriminaci\u00f3n de compensaci\u00f3n de trabajadores",
+                  "Reclamo por discriminaci\u00f3n en compensaci\u00f3n de trabajadores",
+                  "R\u00e9clamation pour discrimination en mati\u00e8re de compensation des travailleurs",
                   "Workers' Compensation Discrimination Claim",
-                  "תביעה על הפרת זכויות עובדים בקבלת פיצויים",
-                  "वर्कर्स कंपेंसेशन भेदभाव दावा",
-                  "労働者補償差別請求",
-                  "工人赔偿歧视索赔"
+                  "\u05ea\u05d1\u05d9\u05e2\u05d4 \u05e2\u05dc \u05d4\u05e4\u05e8\u05ea \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05e2\u05d5\u05d1\u05d3\u05d9\u05dd \u05d1\u05e7\u05d1\u05dc\u05ea \u05e4\u05d9\u05e6\u05d5\u05d9\u05d9\u05dd",
+                  "\u0935\u0930\u094d\u0915\u0930\u094d\u0938 \u0915\u0902\u092a\u0947\u0902\u0938\u0947\u0936\u0928 \u092d\u0947\u0926\u092d\u093e\u0935 \u0926\u093e\u0935\u093e",
+                  "\u52b4\u50cd\u8005\u88dc\u511f\u5dee\u5225\u8acb\u6c42",
+                  "\u5de5\u4eba\u8d54\u507f\u6b67\u89c6\u7d22\u8d54"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",

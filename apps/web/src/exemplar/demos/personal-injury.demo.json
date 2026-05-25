@@ -336,11 +336,11 @@
                 "iri_hash": "R9xOJtxvjFzaouQnUgcnSYu",
                 "definition": "A Personal Injury Ruleset is a set of legal rules and guidelines that specifically pertain to cases involving physical or emotional harm caused by another party's negligence or intentional actions.",
                 "synonyms": [
-                  "Conjunto de regras de lesões pessoais",
-                  "Ensemble de règles sur les dommages corporels",
-                  "Regelwerk für Personenschäden",
-                  "人身伤害规则集",
-                  "人身傷害ルールセット"
+                  "Conjunto de regras de les\u00f5es pessoais",
+                  "Ensemble de r\u00e8gles sur les dommages corporels",
+                  "Regelwerk f\u00fcr Personensch\u00e4den",
+                  "\u4eba\u8eab\u4f24\u5bb3\u89c4\u5219\u96c6",
+                  "\u4eba\u8eab\u50b7\u5bb3\u30eb\u30fc\u30eb\u30bb\u30c3\u30c8"
                 ],
                 "branch": "Legal Authorities",
                 "branch_color": "#8b1a1a",
@@ -382,14 +382,14 @@
                 "synonyms": [
                   "Demandas por Lesiones Personales",
                   "Personal Injury Claims",
-                  "Personenschadensansprüche",
+                  "Personenschadensanspr\u00fcche",
                   "Reclamaciones por Lesiones Personales",
-                  "Reivindicações de Lesões Pessoais",
-                  "Réclamations pour préjudice corporel",
-                  "תביעות פיצויים על נזקי אישיים",
-                  "व्यक्तिगत चोट दावे",
-                  "人身伤害索赔",
-                  "人身傷害請求"
+                  "Reivindica\u00e7\u00f5es de Les\u00f5es Pessoais",
+                  "R\u00e9clamations pour pr\u00e9judice corporel",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05e4\u05d9\u05e6\u05d5\u05d9\u05d9\u05dd \u05e2\u05dc \u05e0\u05d6\u05e7\u05d9 \u05d0\u05d9\u05e9\u05d9\u05d9\u05dd",
+                  "\u0935\u094d\u092f\u0915\u094d\u0924\u093f\u0917\u0924 \u091a\u094b\u091f \u0926\u093e\u0935\u0947",
+                  "\u4eba\u8eab\u4f24\u5bb3\u7d22\u8d54",
+                  "\u4eba\u8eab\u50b7\u5bb3\u8acb\u6c42"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -425,8 +425,218 @@
       {
         "item_index": 1,
         "item_text": "Motor Vehicle Accidents",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Motor Vehicle Law",
+                "iri": "https://folio.openlegalstandard.org/RBd6mCquEANjUvn59AqC7Sj",
+                "iri_hash": "RBd6mCquEANjUvn59AqC7Sj",
+                "definition": "Law covering all the aspects of registering and titling motor vehicles, and licensing drivers.",
+                "synonyms": [
+                  "Automobile Law",
+                  "Automotive Law",
+                  "Direito de tr\u00e2nsito",
+                  "Droit des v\u00e9hicules \u00e0 moteur",
+                  "Ley de Veh\u00edculos de Motor",
+                  "Motor Vehicle Law",
+                  "Verkehrsrecht",
+                  "\u05d7\u05d5\u05e7 \u05e8\u05db\u05d1 \u05d3\u05d5-\u05d2\u05dc\u05d2\u05dc\u05d9",
+                  "\u092e\u094b\u091f\u0930 \u0935\u093e\u0939\u0928 \u0915\u093e\u0928\u0942\u0928",
+                  "\u673a\u52a8\u8f66\u6cd5",
+                  "\u81ea\u52d5\u8eca\u6cd5",
+                  "MOTV"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Transportation Law",
+                    "iri_hash": "R9qjABGONgw3rbekxhtcxZh"
+                  },
+                  {
+                    "label": "Motor Vehicle Law",
+                    "iri_hash": "RBd6mCquEANjUvn59AqC7Sj"
+                  }
+                ],
+                "score": 77.0
+              }
+            ]
+          },
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Motor Vehicle Asset",
+                "iri": "https://folio.openlegalstandard.org/R1okJKMvv4mMHv7m4TzwBe",
+                "iri_hash": "R1okJKMvv4mMHv7m4TzwBe",
+                "definition": "A Motor Vehicle is a self-propelled vehicle that runs on the surface and not on rails, primarily used for the transportation of people or goods. Types include cars, trucks, motorcycles, and buses, and they are usually powered by internal combustion engines or electric motors. This item is relevant to several areas of law (e.g., Bankruptcy).",
+                "synonyms": [],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Tangible Assets",
+                    "iri_hash": "RbvEeHm8jkxY6SgfxEoC0i"
+                  },
+                  {
+                    "label": "Goods",
+                    "iri_hash": "RDS8DPtuFReTFfJ5nGCczD5"
+                  },
+                  {
+                    "label": "Motor Vehicle Asset",
+                    "iri_hash": "R1okJKMvv4mMHv7m4TzwBe"
+                  }
+                ],
+                "score": 77.4
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Driver",
+                "iri": "https://folio.openlegalstandard.org/R8bNzp6lTyATfctRVnXr5rl",
+                "iri_hash": "R8bNzp6lTyATfctRVnXr5rl",
+                "definition": "A driver is an individual who operates a motor vehicle, controlling its direction and speed on public or private roads. This role requires adherence to traffic laws and regulations to ensure safety and order on thoroughfares.",
+                "synonyms": [
+                  "Automobile Driver",
+                  "Operator",
+                  "Vehicle Operator"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Driver",
+                    "iri_hash": "R8bNzp6lTyATfctRVnXr5rl"
+                  }
+                ],
+                "score": 58.8
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Automobile Insurance Policy",
+                "iri": "https://folio.openlegalstandard.org/RCx52UAWgVQUnCDTQXlxMgU",
+                "iri_hash": "RCx52UAWgVQUnCDTQXlxMgU",
+                "definition": "An automobile insurance policy is a contract between a policyholder and an insurance company that provides financial protection against losses arising from accidents, theft, or other events affecting a motor vehicle. The policy specifies the types of coverage included, such as liability, collision, and comprehensive, and requires the payment of premiums to maintain this coverage.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Insurance Agreements",
+                    "iri_hash": "RxmjoCAyfDHKhwXHlwikL"
+                  },
+                  {
+                    "label": "Insurance Policy",
+                    "iri_hash": "R9uTFHGFCMBjtYw5MOmpotJ"
+                  },
+                  {
+                    "label": "Automobile Insurance Policy",
+                    "iri_hash": "RCx52UAWgVQUnCDTQXlxMgU"
+                  }
+                ],
+                "score": 50.6
+              }
+            ]
+          },
+          {
+            "branch": "Engagement Attributes",
+            "branch_color": "#10613a",
+            "candidates": [
+              {
+                "label": "Traffic Accident Indicator",
+                "iri": "https://folio.openlegalstandard.org/RPSB7FRYHJJgR9AtveAeUi",
+                "iri_hash": "RPSB7FRYHJJgR9AtveAeUi",
+                "definition": "Y/N - True if an incident involved a traffic accident; false otherwise.",
+                "synonyms": [
+                  "Indicador de Accidente de Tr\u00e1fico",
+                  "Indicador de acidente de tr\u00e2nsito",
+                  "Indicateur d'accident de la circulation",
+                  "Traffic Accident Indicator",
+                  "Verkehrsunfallindikator",
+                  "\u05de\u05d7\u05d5\u05d5\u05df \u05ea\u05d0\u05d5\u05e0\u05ea \u05d3\u05e8\u05db\u05d9\u05dd",
+                  "\u091f\u094d\u0930\u0948\u092b\u093f\u0915 \u0926\u0941\u0930\u094d\u0918\u091f\u0928\u093e \u0938\u0902\u0915\u0947\u0924\u0915",
+                  "\u4ea4\u901a\u4e8b\u6545\u6307\u6807",
+                  "\u4ea4\u901a\u4e8b\u6545\u6307\u6a19"
+                ],
+                "branch": "Engagement Attributes",
+                "branch_color": "#10613a",
+                "hierarchy_path": [
+                  {
+                    "label": "Engagement Attributes",
+                    "iri_hash": "R9kmGZf5FSmFdouXWQ1Nndm"
+                  },
+                  {
+                    "label": "Engagement Identification",
+                    "iri_hash": "R9CZTlyeU1hg4NPl7hcDKI2"
+                  },
+                  {
+                    "label": "Engagement Names",
+                    "iri_hash": "R74PEDCu9aothhQ4GcsR6LZ"
+                  },
+                  {
+                    "label": "Litigation Identifiers",
+                    "iri_hash": "RDwU1R53c1yOciDqUV1gV13"
+                  },
+                  {
+                    "label": "Criminal Matter Identifiers",
+                    "iri_hash": "R8wisznMX44NzobECeWwY9G"
+                  },
+                  {
+                    "label": "Traffic Accident Indicator",
+                    "iri_hash": "RPSB7FRYHJJgR9AtveAeUi"
+                  }
+                ],
+                "score": 51.4
+              }
+            ]
+          }
+        ],
+        "total_candidates": 5
       },
       {
         "item_index": 2,
@@ -444,15 +654,15 @@
                 "synonyms": [
                   "Automobile Law",
                   "Automotive Law",
-                  "Direito de trânsito",
-                  "Droit des véhicules à moteur",
-                  "Ley de Vehículos de Motor",
+                  "Direito de tr\u00e2nsito",
+                  "Droit des v\u00e9hicules \u00e0 moteur",
+                  "Ley de Veh\u00edculos de Motor",
                   "Motor Vehicle Law",
                   "Verkehrsrecht",
-                  "חוק רכב דו-גלגלי",
-                  "मोटर वाहन कानून",
-                  "机动车法",
-                  "自動車法",
+                  "\u05d7\u05d5\u05e7 \u05e8\u05db\u05d1 \u05d3\u05d5-\u05d2\u05dc\u05d2\u05dc\u05d9",
+                  "\u092e\u094b\u091f\u0930 \u0935\u093e\u0939\u0928 \u0915\u093e\u0928\u0942\u0928",
+                  "\u673a\u52a8\u8f66\u6cd5",
+                  "\u81ea\u52d5\u8eca\u6cd5",
                   "MOTV"
                 ],
                 "branch": "Area of Law",
@@ -521,8 +731,132 @@
       {
         "item_index": 3,
         "item_text": "Accident Benefits Law",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Financial Concepts and Metrics",
+            "branch_color": "#6e4b00",
+            "candidates": [
+              {
+                "label": "Healthcare Benefits",
+                "iri": "https://folio.openlegalstandard.org/R95guixnTkbGJG76O2QxnVx",
+                "iri_hash": "R95guixnTkbGJG76O2QxnVx",
+                "definition": null,
+                "synonyms": [],
+                "branch": "Financial Concepts and Metrics",
+                "branch_color": "#6e4b00",
+                "hierarchy_path": [
+                  {
+                    "label": "Financial Concepts and Metrics",
+                    "iri_hash": "RhBgnef56iLBXYfPqWQE41"
+                  },
+                  {
+                    "label": "Cost Metrics",
+                    "iri_hash": "RTHm2BxeaziDbm5655G1ki"
+                  },
+                  {
+                    "label": "Compensation Metrics",
+                    "iri_hash": "R8aNhIN6jIIVcj5Cbh8Bduw"
+                  },
+                  {
+                    "label": "Employment Benefits",
+                    "iri_hash": "RC24OimNdswbhSF7tIQRmqR"
+                  },
+                  {
+                    "label": "Healthcare Benefits",
+                    "iri_hash": "R95guixnTkbGJG76O2QxnVx"
+                  }
+                ],
+                "score": 55.1
+              }
+            ]
+          },
+          {
+            "branch": "Engagement Attributes",
+            "branch_color": "#10613a",
+            "candidates": [
+              {
+                "label": "Traffic Accident Indicator",
+                "iri": "https://folio.openlegalstandard.org/RPSB7FRYHJJgR9AtveAeUi",
+                "iri_hash": "RPSB7FRYHJJgR9AtveAeUi",
+                "definition": "Y/N - True if an incident involved a traffic accident; false otherwise.",
+                "synonyms": [
+                  "Indicador de Accidente de Tr\u00e1fico",
+                  "Indicador de acidente de tr\u00e2nsito",
+                  "Indicateur d'accident de la circulation",
+                  "Traffic Accident Indicator",
+                  "Verkehrsunfallindikator",
+                  "\u05de\u05d7\u05d5\u05d5\u05df \u05ea\u05d0\u05d5\u05e0\u05ea \u05d3\u05e8\u05db\u05d9\u05dd",
+                  "\u091f\u094d\u0930\u0948\u092b\u093f\u0915 \u0926\u0941\u0930\u094d\u0918\u091f\u0928\u093e \u0938\u0902\u0915\u0947\u0924\u0915",
+                  "\u4ea4\u901a\u4e8b\u6545\u6307\u6807",
+                  "\u4ea4\u901a\u4e8b\u6545\u6307\u6a19"
+                ],
+                "branch": "Engagement Attributes",
+                "branch_color": "#10613a",
+                "hierarchy_path": [
+                  {
+                    "label": "Engagement Attributes",
+                    "iri_hash": "R9kmGZf5FSmFdouXWQ1Nndm"
+                  },
+                  {
+                    "label": "Engagement Identification",
+                    "iri_hash": "R9CZTlyeU1hg4NPl7hcDKI2"
+                  },
+                  {
+                    "label": "Engagement Names",
+                    "iri_hash": "R74PEDCu9aothhQ4GcsR6LZ"
+                  },
+                  {
+                    "label": "Litigation Identifiers",
+                    "iri_hash": "RDwU1R53c1yOciDqUV1gV13"
+                  },
+                  {
+                    "label": "Criminal Matter Identifiers",
+                    "iri_hash": "R8wisznMX44NzobECeWwY9G"
+                  },
+                  {
+                    "label": "Traffic Accident Indicator",
+                    "iri_hash": "RPSB7FRYHJJgR9AtveAeUi"
+                  }
+                ],
+                "score": 42.9
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Patient",
+                "iri": "https://folio.openlegalstandard.org/R9auCu5af3YRnpebdBnsVkv",
+                "iri_hash": "R9auCu5af3YRnpebdBnsVkv",
+                "definition": "A Patient is an individual who receives medical care, treatment, or other health services from a healthcare provider or institution. This person is under professional care due to illness, injury, or for preventive health measures, and is the recipient of medical attention, diagnosis, and therapeutic interventions.",
+                "synonyms": [
+                  "Healthcare Recipient",
+                  "Medical Care Receiver"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Patient",
+                    "iri_hash": "R9auCu5af3YRnpebdBnsVkv"
+                  }
+                ],
+                "score": 38.0
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
       },
       {
         "item_index": 4,
@@ -541,12 +875,12 @@
                   "Insurance Carrier Bad Faith",
                   "Mala fe de la aseguradora",
                   "Mauvaise foi de l'assureur",
-                  "Má-fé da seguradora",
-                  "Versicherungsträger schlechter Glaube",
-                  "רשלנות מבטח לביטול ביטוח",
-                  "बीमा वाहक बुरी नीति",
-                  "保险公司恶意",
-                  "保険会社の悪意"
+                  "M\u00e1-f\u00e9 da seguradora",
+                  "Versicherungstr\u00e4ger schlechter Glaube",
+                  "\u05e8\u05e9\u05dc\u05e0\u05d5\u05ea \u05de\u05d1\u05d8\u05d7 \u05dc\u05d1\u05d9\u05d8\u05d5\u05dc \u05d1\u05d9\u05d8\u05d5\u05d7",
+                  "\u092c\u0940\u092e\u093e \u0935\u093e\u0939\u0915 \u092c\u0941\u0930\u0940 \u0928\u0940\u0924\u093f",
+                  "\u4fdd\u9669\u516c\u53f8\u6076\u610f",
+                  "\u4fdd\u967a\u4f1a\u793e\u306e\u60aa\u610f"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -586,8 +920,140 @@
       {
         "item_index": 5,
         "item_text": "Premises Liability",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Landlord Tenant Law",
+                "iri": "https://folio.openlegalstandard.org/RBjYepK2dGo0eMf20eWQmI3",
+                "iri_hash": "RBjYepK2dGo0eMf20eWQmI3",
+                "definition": "Law that details the rights and duties of landlords and tenants",
+                "synonyms": [
+                  "Direito do locador e do locat\u00e1rio",
+                  "Droit des baux",
+                  "Landlord Tenant Law",
+                  "Ley de Arrendamiento",
+                  "Mietrecht",
+                  "\u05d7\u05d5\u05e7 \u05e9\u05db\u05d9\u05e8\u05d5\u05ea \u05d1\u05e2\u05dc\u05d9\u05dd",
+                  "\u0932\u0948\u0902\u0921\u0932\u0949\u0930\u094d\u0921 \u091f\u0947\u0928\u0947\u0902\u091f \u0915\u093e\u0928\u0942\u0928",
+                  "\u5bb6\u4e3b\u30fb\u501f\u4e3b\u6cd5",
+                  "\u623f\u4e1c\u79df\u6237\u6cd5",
+                  "LLTN"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Real Property Law",
+                    "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7"
+                  },
+                  {
+                    "label": "Landlord Tenant Law",
+                    "iri_hash": "RBjYepK2dGo0eMf20eWQmI3"
+                  }
+                ],
+                "score": 43.3
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "General Business Liability Insurance Policy",
+                "iri": "https://folio.openlegalstandard.org/R8yqgRJJWVfguHkhzdawPlF",
+                "iri_hash": "R8yqgRJJWVfguHkhzdawPlF",
+                "definition": "General Business Liability Insurance, also known simply as general liability insurance, provides coverage for common business risks, including bodily injury and property damage that occur at the business premises or as a result of business operations. It also often covers legal costs related to these risks. This type of insurance is foundational for most businesses.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Agreements",
+                    "iri_hash": "R88D8i8AcSTUig2X3yPbFHg"
+                  },
+                  {
+                    "label": "Insurance Agreements",
+                    "iri_hash": "RxmjoCAyfDHKhwXHlwikL"
+                  },
+                  {
+                    "label": "Insurance Policy",
+                    "iri_hash": "R9uTFHGFCMBjtYw5MOmpotJ"
+                  },
+                  {
+                    "label": "Business Insurance Policy",
+                    "iri_hash": "Rq6neiK9deZLSfSa41jylg"
+                  },
+                  {
+                    "label": "General Business Liability Insurance Policy",
+                    "iri_hash": "R8yqgRJJWVfguHkhzdawPlF"
+                  }
+                ],
+                "score": 50.2
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Tenant",
+                "iri": "https://folio.openlegalstandard.org/RBpYE6Y5CAH0m6srdnClfZz",
+                "iri_hash": "RBpYE6Y5CAH0m6srdnClfZz",
+                "definition": "A person or entity who leases, rents, or occupies property (from a landlord).",
+                "synonyms": [
+                  "Arrendatario",
+                  "Inquilino",
+                  "Locataire",
+                  "Mieter",
+                  "Tenant",
+                  "\u05e9\u05d5\u05db\u05e8",
+                  "\u0915\u093f\u0930\u093e\u092f\u0947\u0926\u093e\u0930",
+                  "\u30c6\u30ca\u30f3\u30c8",
+                  "\u79df\u6237"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Tenant",
+                    "iri_hash": "RBpYE6Y5CAH0m6srdnClfZz"
+                  }
+                ],
+                "score": 43.3
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
       },
       {
         "item_index": 6,
@@ -603,15 +1069,15 @@
                 "iri_hash": "R6BgoOCiXfPfFeBgDhUcP3",
                 "definition": "Slip-and-Fall Negligence refers to a legal claim made by an individual who has suffered a personal injury due to the negligence of a property owner or occupier in maintaining safe conditions on their premises, specifically related to slipping or falling.",
                 "synonyms": [
-                  "Haftung bei Stolper- und Sturzunfällen",
-                  "Negligencia por Resbalón y Caída",
-                  "Negligência em casos de escorregão e queda",
-                  "Négligence en cas de glissade et de chute",
+                  "Haftung bei Stolper- und Sturzunf\u00e4llen",
+                  "Negligencia por Resbal\u00f3n y Ca\u00edda",
+                  "Neglig\u00eancia em casos de escorreg\u00e3o e queda",
+                  "N\u00e9gligence en cas de glissade et de chute",
                   "Slip-and-Fall Negligence",
-                  "הפרת אחריות על נפילת החלקים",
-                  "स्लिप-एंड-फॉल लापरवाही",
-                  "すべり落ちることと転倒の過失",
-                  "滑倒和摔倒过失"
+                  "\u05d4\u05e4\u05e8\u05ea \u05d0\u05d7\u05e8\u05d9\u05d5\u05ea \u05e2\u05dc \u05e0\u05e4\u05d9\u05dc\u05ea \u05d4\u05d7\u05dc\u05e7\u05d9\u05dd",
+                  "\u0938\u094d\u0932\u093f\u092a-\u090f\u0902\u0921-\u092b\u0949\u0932 \u0932\u093e\u092a\u0930\u0935\u093e\u0939\u0940",
+                  "\u3059\u3079\u308a\u843d\u3061\u308b\u3053\u3068\u3068\u8ee2\u5012\u306e\u904e\u5931",
+                  "\u6ed1\u5012\u548c\u6454\u5012\u8fc7\u5931"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -649,11 +1115,11 @@
                 "iri_hash": "R7nqxxlAfhYqqSA2UQ5UxpX",
                 "definition": "Negligence is a legal concept that refers to the failure to exercise reasonable care, resulting in harm or injury to another person or property.",
                 "synonyms": [
-                  "Fahrlässigkeit",
-                  "Negligência",
-                  "Négligence",
-                  "疏忽",
-                  "過失"
+                  "Fahrl\u00e4ssigkeit",
+                  "Neglig\u00eancia",
+                  "N\u00e9gligence",
+                  "\u758f\u5ffd",
+                  "\u904e\u5931"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -692,15 +1158,15 @@
                 "definition": "Negligence Claims refer to civil claims arising from a failure to exercise reasonable care, resulting in harm or injury to another person or property.",
                 "synonyms": [
                   "Demandas por negligencia",
-                  "Forderungen wegen Fahrlässigkeit",
+                  "Forderungen wegen Fahrl\u00e4ssigkeit",
                   "Negligence Claims",
                   "Reclamaciones por negligencia",
-                  "Reivindicações por negligência",
-                  "Réclamations pour négligence",
-                  "תביעות של אי זהירות",
-                  "लापरवाही के दावे",
-                  "疏忽索赔",
-                  "過失請求"
+                  "Reivindica\u00e7\u00f5es por neglig\u00eancia",
+                  "R\u00e9clamations pour n\u00e9gligence",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05e9\u05dc \u05d0\u05d9 \u05d6\u05d4\u05d9\u05e8\u05d5\u05ea",
+                  "\u0932\u093e\u092a\u0930\u0935\u093e\u0939\u0940 \u0915\u0947 \u0926\u093e\u0935\u0947",
+                  "\u758f\u5ffd\u7d22\u8d54",
+                  "\u904e\u5931\u8acb\u6c42"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -736,8 +1202,109 @@
       {
         "item_index": 7,
         "item_text": "Dog Bite",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Dogs",
+                "iri": "https://folio.openlegalstandard.org/RCuLCDo6EMKAYab9NxbUhjn",
+                "iri_hash": "RCuLCDo6EMKAYab9NxbUhjn",
+                "definition": "Dogs are domesticated mammals belonging to the species Canis lupus familiaris, known for their loyalty, intelligence, and diverse roles in human society. They serve as companions, working animals, and service animals, and come in a wide variety of breeds with specific traits and purposes.",
+                "synonyms": [],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Tangible Assets",
+                    "iri_hash": "RbvEeHm8jkxY6SgfxEoC0i"
+                  },
+                  {
+                    "label": "Goods",
+                    "iri_hash": "RDS8DPtuFReTFfJ5nGCczD5"
+                  },
+                  {
+                    "label": "Animals",
+                    "iri_hash": "R9ax95LqcYtqPK458D1g7aP"
+                  },
+                  {
+                    "label": "Animal Domestication Type",
+                    "iri_hash": "RBbKQavNM8iQqNfPu2byT6X"
+                  },
+                  {
+                    "label": "Domesticated Animal",
+                    "iri_hash": "R8i9ifFKGOUWKWVHDXvxgR1"
+                  },
+                  {
+                    "label": "Pets",
+                    "iri_hash": "RDfwCFFw23Fb7WhqmrYLBqS"
+                  },
+                  {
+                    "label": "Dogs",
+                    "iri_hash": "RCuLCDo6EMKAYab9NxbUhjn"
+                  }
+                ],
+                "score": 58.4
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Bite Mark Evidence",
+                "iri": "https://folio.openlegalstandard.org/R9w62eM16EjSgGYLj5TB4L",
+                "iri_hash": "R9w62eM16EjSgGYLj5TB4L",
+                "definition": "Bite mark evidence involves the study of patterns left by teeth on various materials, often skin. Forensic odontologists analyze these marks to identify unique dental characteristics, potentially linking a suspect to an injury or crime scene.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Litigation Document",
+                    "iri_hash": "Rjco9ohucVSJ0XxprM5Opb"
+                  },
+                  {
+                    "label": "Trial Court Practice Documents",
+                    "iri_hash": "R7zvYKadqTXgMZV8ghLsloR"
+                  },
+                  {
+                    "label": "Evidence",
+                    "iri_hash": "R9HuNkpWm24qMFuntuug6RB"
+                  },
+                  {
+                    "label": "Forensic Evidence",
+                    "iri_hash": "R4kWkG9m4DarQ45A7wBpJQ"
+                  },
+                  {
+                    "label": "Impression Evidence",
+                    "iri_hash": "RDJxZ2vqqnde5q8ti6PKfnF"
+                  },
+                  {
+                    "label": "Bite Mark Evidence",
+                    "iri_hash": "R9w62eM16EjSgGYLj5TB4L"
+                  }
+                ],
+                "score": 50.1
+              }
+            ]
+          }
+        ],
+        "total_candidates": 2
       },
       {
         "item_index": 8,
@@ -754,13 +1321,13 @@
                 "definition": "A physician or doctor is a person who is licensed to practice medicine and provide medical treatment to patients.",
                 "synonyms": [
                   "Arzt / Doktor",
-                  "Médecin",
-                  "Médico",
+                  "M\u00e9decin",
+                  "M\u00e9dico",
                   "Physician / Doctor",
-                  "רופא / דוקטור",
-                  "चिकित्सक / डॉक्टर",
-                  "医師 / ドクター",
-                  "医生"
+                  "\u05e8\u05d5\u05e4\u05d0 / \u05d3\u05d5\u05e7\u05d8\u05d5\u05e8",
+                  "\u091a\u093f\u0915\u093f\u0924\u094d\u0938\u0915 / \u0921\u0949\u0915\u094d\u091f\u0930",
+                  "\u533b\u5e2b / \u30c9\u30af\u30bf\u30fc",
+                  "\u533b\u751f"
                 ],
                 "branch": "Actor / Player",
                 "branch_color": "#1e6fa0",
@@ -796,15 +1363,15 @@
                 "iri_hash": "R7athlXhsUuRtg7LvK0uUaF",
                 "definition": "Medical Malpractice: Negligence or breach of duty by a healthcare professional that results in harm or injury to a patient.",
                 "synonyms": [
-                  "Faute professionnelle médicale",
+                  "Faute professionnelle m\u00e9dicale",
                   "Medical Negligence",
-                  "Negligencia Médica",
-                  "Negligência médica",
-                  "Ärztliche Kunstfehler",
-                  "שגיאה רפואית",
-                  "चिकित्सा लापरवाही",
-                  "医疗事故责任",
-                  "医療過誤"
+                  "Negligencia M\u00e9dica",
+                  "Neglig\u00eancia m\u00e9dica",
+                  "\u00c4rztliche Kunstfehler",
+                  "\u05e9\u05d2\u05d9\u05d0\u05d4 \u05e8\u05e4\u05d5\u05d0\u05d9\u05ea",
+                  "\u091a\u093f\u0915\u093f\u0924\u094d\u0938\u093e \u0932\u093e\u092a\u0930\u0935\u093e\u0939\u0940",
+                  "\u533b\u7597\u4e8b\u6545\u8d23\u4efb",
+                  "\u533b\u7642\u904e\u8aa4"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -846,16 +1413,16 @@
                 "iri_hash": "R8nVhrBlasGIc7jxw1D0vbm",
                 "definition": "Medical Malpractice Claims refer to legal claims made against medical professionals or institutions for negligence or failure to provide adequate care resulting in harm or injury to a patient.",
                 "synonyms": [
-                  "Arzthaftungsansprüche",
-                  "Demandas por Negligencia Médica",
+                  "Arzthaftungsanspr\u00fcche",
+                  "Demandas por Negligencia M\u00e9dica",
                   "Medical Negligence Claims",
-                  "Reclamaciones por Mala Praxis Médica",
-                  "Reivindicações por negligência médica",
-                  "Réclamations pour faute médicale",
-                  "תביעות רשלנות רפואית",
-                  "मेडिकल नीग्लिजेंस क्लेम",
-                  "医疗事故索赔",
-                  "医療過誤請求"
+                  "Reclamaciones por Mala Praxis M\u00e9dica",
+                  "Reivindica\u00e7\u00f5es por neglig\u00eancia m\u00e9dica",
+                  "R\u00e9clamations pour faute m\u00e9dicale",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05e8\u05e9\u05dc\u05e0\u05d5\u05ea \u05e8\u05e4\u05d5\u05d0\u05d9\u05ea",
+                  "\u092e\u0947\u0921\u093f\u0915\u0932 \u0928\u0940\u0917\u094d\u0932\u093f\u091c\u0947\u0902\u0938 \u0915\u094d\u0932\u0947\u092e",
+                  "\u533b\u7597\u4e8b\u6545\u7d22\u8d54",
+                  "\u533b\u7642\u904e\u8aa4\u8acb\u6c42"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -893,15 +1460,15 @@
                 "iri_hash": "RCuus493FlHkCuRCdg8eDmC",
                 "definition": "Medical Malpractice Defenses are legal arguments or strategies used by defendants in a medical malpractice case to defend against the plaintiff's claims of negligence or wrongdoing.",
                 "synonyms": [
-                  "Defensas de Mala Praxis Médica",
-                  "Defesas em casos de negligência médica",
-                  "Défenses en cas de faute médicale",
+                  "Defensas de Mala Praxis M\u00e9dica",
+                  "Defesas em casos de neglig\u00eancia m\u00e9dica",
+                  "D\u00e9fenses en cas de faute m\u00e9dicale",
                   "Medical Negligence Defences",
-                  "Verteidigungen bei ärztlichen Kunstfehlern",
-                  "הגנות על שגיאה רפואית",
-                  "मेडिकल नीग्लिजेंस रक्षाओं",
-                  "医疗事故辩护",
-                  "医療過誤の弁護"
+                  "Verteidigungen bei \u00e4rztlichen Kunstfehlern",
+                  "\u05d4\u05d2\u05e0\u05d5\u05ea \u05e2\u05dc \u05e9\u05d2\u05d9\u05d0\u05d4 \u05e8\u05e4\u05d5\u05d0\u05d9\u05ea",
+                  "\u092e\u0947\u0921\u093f\u0915\u0932 \u0928\u0940\u0917\u094d\u0932\u093f\u091c\u0947\u0902\u0938 \u0930\u0915\u094d\u0937\u093e\u0913\u0902",
+                  "\u533b\u7597\u4e8b\u6545\u8fa9\u62a4",
+                  "\u533b\u7642\u904e\u8aa4\u306e\u5f01\u8b77"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -940,13 +1507,13 @@
                   "Malpractice Claims",
                   "Professional Malpractice",
                   "Reclamaciones por mala praxis",
-                  "Reclamações por negligência médica",
-                  "Réclamations pour faute professionnelle",
+                  "Reclama\u00e7\u00f5es por neglig\u00eancia m\u00e9dica",
+                  "R\u00e9clamations pour faute professionnelle",
                   "Tradesperson Malpractice",
-                  "תביעות רשלנות רפואית",
-                  "दोषदायी दावे",
-                  "医疗事故索赔",
-                  "医療過誤請求"
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05e8\u05e9\u05dc\u05e0\u05d5\u05ea \u05e8\u05e4\u05d5\u05d0\u05d9\u05ea",
+                  "\u0926\u094b\u0937\u0926\u093e\u092f\u0940 \u0926\u093e\u0935\u0947",
+                  "\u533b\u7597\u4e8b\u6545\u7d22\u8d54",
+                  "\u533b\u7642\u904e\u8aa4\u8acb\u6c42"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -985,11 +1552,11 @@
                   "Legal Malpractice",
                   "Mala Praxis Legal",
                   "Negligencia Profesional Legal",
-                  "Negligência jurídica",
-                  "שגיאה מקצועית במשפט",
-                  "कानूनी लापरवाही",
-                  "弁護士の過失",
-                  "律师过失"
+                  "Neglig\u00eancia jur\u00eddica",
+                  "\u05e9\u05d2\u05d9\u05d0\u05d4 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05ea \u05d1\u05de\u05e9\u05e4\u05d8",
+                  "\u0915\u093e\u0928\u0942\u0928\u0940 \u0932\u093e\u092a\u0930\u0935\u093e\u0939\u0940",
+                  "\u5f01\u8b77\u58eb\u306e\u904e\u5931",
+                  "\u5f8b\u5e08\u8fc7\u5931"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1041,13 +1608,13 @@
                 "definition": "A physician or doctor is a person who is licensed to practice medicine and provide medical treatment to patients.",
                 "synonyms": [
                   "Arzt / Doktor",
-                  "Médecin",
-                  "Médico",
+                  "M\u00e9decin",
+                  "M\u00e9dico",
                   "Physician / Doctor",
-                  "רופא / דוקטור",
-                  "चिकित्सक / डॉक्टर",
-                  "医師 / ドクター",
-                  "医生"
+                  "\u05e8\u05d5\u05e4\u05d0 / \u05d3\u05d5\u05e7\u05d8\u05d5\u05e8",
+                  "\u091a\u093f\u0915\u093f\u0924\u094d\u0938\u0915 / \u0921\u0949\u0915\u094d\u091f\u0930",
+                  "\u533b\u5e2b / \u30c9\u30af\u30bf\u30fc",
+                  "\u533b\u751f"
                 ],
                 "branch": "Actor / Player",
                 "branch_color": "#1e6fa0",
@@ -1083,15 +1650,15 @@
                 "iri_hash": "R7athlXhsUuRtg7LvK0uUaF",
                 "definition": "Medical Malpractice: Negligence or breach of duty by a healthcare professional that results in harm or injury to a patient.",
                 "synonyms": [
-                  "Faute professionnelle médicale",
+                  "Faute professionnelle m\u00e9dicale",
                   "Medical Negligence",
-                  "Negligencia Médica",
-                  "Negligência médica",
-                  "Ärztliche Kunstfehler",
-                  "שגיאה רפואית",
-                  "चिकित्सा लापरवाही",
-                  "医疗事故责任",
-                  "医療過誤"
+                  "Negligencia M\u00e9dica",
+                  "Neglig\u00eancia m\u00e9dica",
+                  "\u00c4rztliche Kunstfehler",
+                  "\u05e9\u05d2\u05d9\u05d0\u05d4 \u05e8\u05e4\u05d5\u05d0\u05d9\u05ea",
+                  "\u091a\u093f\u0915\u093f\u0924\u094d\u0938\u093e \u0932\u093e\u092a\u0930\u0935\u093e\u0939\u0940",
+                  "\u533b\u7597\u4e8b\u6545\u8d23\u4efb",
+                  "\u533b\u7642\u904e\u8aa4"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1133,16 +1700,16 @@
                 "iri_hash": "R8nVhrBlasGIc7jxw1D0vbm",
                 "definition": "Medical Malpractice Claims refer to legal claims made against medical professionals or institutions for negligence or failure to provide adequate care resulting in harm or injury to a patient.",
                 "synonyms": [
-                  "Arzthaftungsansprüche",
-                  "Demandas por Negligencia Médica",
+                  "Arzthaftungsanspr\u00fcche",
+                  "Demandas por Negligencia M\u00e9dica",
                   "Medical Negligence Claims",
-                  "Reclamaciones por Mala Praxis Médica",
-                  "Reivindicações por negligência médica",
-                  "Réclamations pour faute médicale",
-                  "תביעות רשלנות רפואית",
-                  "मेडिकल नीग्लिजेंस क्लेम",
-                  "医疗事故索赔",
-                  "医療過誤請求"
+                  "Reclamaciones por Mala Praxis M\u00e9dica",
+                  "Reivindica\u00e7\u00f5es por neglig\u00eancia m\u00e9dica",
+                  "R\u00e9clamations pour faute m\u00e9dicale",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05e8\u05e9\u05dc\u05e0\u05d5\u05ea \u05e8\u05e4\u05d5\u05d0\u05d9\u05ea",
+                  "\u092e\u0947\u0921\u093f\u0915\u0932 \u0928\u0940\u0917\u094d\u0932\u093f\u091c\u0947\u0902\u0938 \u0915\u094d\u0932\u0947\u092e",
+                  "\u533b\u7597\u4e8b\u6545\u7d22\u8d54",
+                  "\u533b\u7642\u904e\u8aa4\u8acb\u6c42"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1180,15 +1747,15 @@
                 "iri_hash": "RCuus493FlHkCuRCdg8eDmC",
                 "definition": "Medical Malpractice Defenses are legal arguments or strategies used by defendants in a medical malpractice case to defend against the plaintiff's claims of negligence or wrongdoing.",
                 "synonyms": [
-                  "Defensas de Mala Praxis Médica",
-                  "Defesas em casos de negligência médica",
-                  "Défenses en cas de faute médicale",
+                  "Defensas de Mala Praxis M\u00e9dica",
+                  "Defesas em casos de neglig\u00eancia m\u00e9dica",
+                  "D\u00e9fenses en cas de faute m\u00e9dicale",
                   "Medical Negligence Defences",
-                  "Verteidigungen bei ärztlichen Kunstfehlern",
-                  "הגנות על שגיאה רפואית",
-                  "मेडिकल नीग्लिजेंस रक्षाओं",
-                  "医疗事故辩护",
-                  "医療過誤の弁護"
+                  "Verteidigungen bei \u00e4rztlichen Kunstfehlern",
+                  "\u05d4\u05d2\u05e0\u05d5\u05ea \u05e2\u05dc \u05e9\u05d2\u05d9\u05d0\u05d4 \u05e8\u05e4\u05d5\u05d0\u05d9\u05ea",
+                  "\u092e\u0947\u0921\u093f\u0915\u0932 \u0928\u0940\u0917\u094d\u0932\u093f\u091c\u0947\u0902\u0938 \u0930\u0915\u094d\u0937\u093e\u0913\u0902",
+                  "\u533b\u7597\u4e8b\u6545\u8fa9\u62a4",
+                  "\u533b\u7642\u904e\u8aa4\u306e\u5f01\u8b77"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1227,13 +1794,13 @@
                   "Malpractice Claims",
                   "Professional Malpractice",
                   "Reclamaciones por mala praxis",
-                  "Reclamações por negligência médica",
-                  "Réclamations pour faute professionnelle",
+                  "Reclama\u00e7\u00f5es por neglig\u00eancia m\u00e9dica",
+                  "R\u00e9clamations pour faute professionnelle",
                   "Tradesperson Malpractice",
-                  "תביעות רשלנות רפואית",
-                  "दोषदायी दावे",
-                  "医疗事故索赔",
-                  "医療過誤請求"
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05e8\u05e9\u05dc\u05e0\u05d5\u05ea \u05e8\u05e4\u05d5\u05d0\u05d9\u05ea",
+                  "\u0926\u094b\u0937\u0926\u093e\u092f\u0940 \u0926\u093e\u0935\u0947",
+                  "\u533b\u7597\u4e8b\u6545\u7d22\u8d54",
+                  "\u533b\u7642\u904e\u8aa4\u8acb\u6c42"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1272,11 +1839,11 @@
                   "Legal Malpractice",
                   "Mala Praxis Legal",
                   "Negligencia Profesional Legal",
-                  "Negligência jurídica",
-                  "שגיאה מקצועית במשפט",
-                  "कानूनी लापरवाही",
-                  "弁護士の過失",
-                  "律师过失"
+                  "Neglig\u00eancia jur\u00eddica",
+                  "\u05e9\u05d2\u05d9\u05d0\u05d4 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05ea \u05d1\u05de\u05e9\u05e4\u05d8",
+                  "\u0915\u093e\u0928\u0942\u0928\u0940 \u0932\u093e\u092a\u0930\u0935\u093e\u0939\u0940",
+                  "\u5f01\u8b77\u58eb\u306e\u904e\u5931",
+                  "\u5f8b\u5e08\u8fc7\u5931"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1327,16 +1894,16 @@
                 "iri_hash": "R3wLqupQlOkBDRXPF6bOYr",
                 "definition": "A wrongful death claim is a legal action brought by the survivors of a deceased person against the party responsible for the death, seeking compensation for damages resulting from the loss of the individual's life.",
                 "synonyms": [
-                  "Anspruch auf Schadensersatz bei Todesfällen",
-                  "Reclamación por muerte injusta",
+                  "Anspruch auf Schadensersatz bei Todesf\u00e4llen",
+                  "Reclamaci\u00f3n por muerte injusta",
                   "Reclamo por muerte injusta",
-                  "Reivindicação de morte injusta",
-                  "Réclamation pour décès injuste",
+                  "Reivindica\u00e7\u00e3o de morte injusta",
+                  "R\u00e9clamation pour d\u00e9c\u00e8s injuste",
                   "Wrongful Death Claim",
-                  "תביעה על מוות לא חוקי",
-                  "गलत मौत दावा",
-                  "不当死亡請求",
-                  "非正当死亡索赔"
+                  "\u05ea\u05d1\u05d9\u05e2\u05d4 \u05e2\u05dc \u05de\u05d5\u05d5\u05ea \u05dc\u05d0 \u05d7\u05d5\u05e7\u05d9",
+                  "\u0917\u0932\u0924 \u092e\u094c\u0924 \u0926\u093e\u0935\u093e",
+                  "\u4e0d\u5f53\u6b7b\u4ea1\u8acb\u6c42",
+                  "\u975e\u6b63\u5f53\u6b7b\u4ea1\u7d22\u8d54"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1392,14 +1959,14 @@
                 "definition": "The concept of Loss of Consortium refers to the damages suffered by a spouse or parent due to the injury or death of their loved one, which includes the loss of companionship, affection, and support.",
                 "synonyms": [
                   "Loss of Consortium",
-                  "Perda de consórcio",
+                  "Perda de cons\u00f3rcio",
                   "Perte de consortium",
-                  "Pérdida de consorcio",
+                  "P\u00e9rdida de consorcio",
                   "Verlust des Konsortiums",
-                  "אובדן שותפות",
-                  "संयुक्ति का नुकसान",
-                  "夫妻感情损失赔偿",
-                  "連帯損害賠償請求"
+                  "\u05d0\u05d5\u05d1\u05d3\u05df \u05e9\u05d5\u05ea\u05e4\u05d5\u05ea",
+                  "\u0938\u0902\u092f\u0941\u0915\u094d\u0924\u093f \u0915\u093e \u0928\u0941\u0915\u0938\u093e\u0928",
+                  "\u592b\u59bb\u611f\u60c5\u635f\u5931\u8d54\u507f",
+                  "\u9023\u5e2f\u640d\u5bb3\u8ce0\u511f\u8acb\u6c42"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1450,16 +2017,16 @@
                 "iri_hash": "RBId9f3jW4zEqooPvShqi6Q",
                 "definition": "Law relating to liability for injuries caused by defective or unsafe products.",
                 "synonyms": [
-                  "Droit de la responsabilité du produit",
+                  "Droit de la responsabilit\u00e9 du produit",
                   "Lei de Responsabilidade do Produto",
                   "Ley de Responsabilidad del Producto",
                   "Product Liability",
                   "Product Liability Law",
                   "Produkthaftungsrecht",
-                  "חוק אחריות מוצר",
-                  "उत्पाद दायित्व कानून",
-                  "产品责任法",
-                  "製品責任法",
+                  "\u05d7\u05d5\u05e7 \u05d0\u05d7\u05e8\u05d9\u05d5\u05ea \u05de\u05d5\u05e6\u05e8",
+                  "\u0909\u0924\u094d\u092a\u093e\u0926 \u0926\u093e\u092f\u093f\u0924\u094d\u0935 \u0915\u093e\u0928\u0942\u0928",
+                  "\u4ea7\u54c1\u8d23\u4efb\u6cd5",
+                  "\u88fd\u54c1\u8cac\u4efb\u6cd5",
                   "PRDL"
                 ],
                 "branch": "Area of Law",
@@ -1494,14 +2061,14 @@
                 "synonyms": [
                   "Demandas por responsabilidad del producto",
                   "Product Liability Claims",
-                  "Produkthaftungsansprüche",
+                  "Produkthaftungsanspr\u00fcche",
                   "Reclamaciones por responsabilidad del producto",
-                  "Reclamações de responsabilidade do produto",
-                  "Réclamations en responsabilité de produit",
-                  "תביעות אחריות מוצר",
-                  "उत्पाद दायित्व दावे",
-                  "产品责任索赔",
-                  "製品責任請求"
+                  "Reclama\u00e7\u00f5es de responsabilidade do produto",
+                  "R\u00e9clamations en responsabilit\u00e9 de produit",
+                  "\u05ea\u05d1\u05d9\u05e2\u05d5\u05ea \u05d0\u05d7\u05e8\u05d9\u05d5\u05ea \u05de\u05d5\u05e6\u05e8",
+                  "\u0909\u0924\u094d\u092a\u093e\u0926 \u0926\u093e\u092f\u093f\u0924\u094d\u0935 \u0926\u093e\u0935\u0947",
+                  "\u4ea7\u54c1\u8d23\u4efb\u7d22\u8d54",
+                  "\u88fd\u54c1\u8cac\u4efb\u8acb\u6c42"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1537,13 +2104,13 @@
                 "synonyms": [
                   "Responsabilidad objetiva del producto",
                   "Responsabilidade objetiva do fabricante",
-                  "Responsabilité stricte du fabricant",
+                  "Responsabilit\u00e9 stricte du fabricant",
                   "Strenge Produkthaftung",
                   "Strict Product Liability",
-                  "אחריות מוצר קפדנית",
-                  "सख्त उत्पाद दायित्व",
-                  "严格产品责任",
-                  "厳格な製品責任"
+                  "\u05d0\u05d7\u05e8\u05d9\u05d5\u05ea \u05de\u05d5\u05e6\u05e8 \u05e7\u05e4\u05d3\u05e0\u05d9\u05ea",
+                  "\u0938\u0916\u094d\u0924 \u0909\u0924\u094d\u092a\u093e\u0926 \u0926\u093e\u092f\u093f\u0924\u094d\u0935",
+                  "\u4e25\u683c\u4ea7\u54c1\u8d23\u4efb",
+                  "\u53b3\u683c\u306a\u88fd\u54c1\u8cac\u4efb"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1583,13 +2150,13 @@
                 "synonyms": [
                   "Defensas de Responsabilidad del Producto",
                   "Defesas de responsabilidade do produto",
-                  "Défenses en matière de responsabilité du produit",
+                  "D\u00e9fenses en mati\u00e8re de responsabilit\u00e9 du produit",
                   "Product Liability Defences",
                   "Produkthaftungsverteidigungen",
-                  "הגנות בפשיטת רגל בגין אחריות מוצר",
-                  "उत्पाद दायित्व रक्षाबंधन",
-                  "产品责任抗辩",
-                  "製品責任の防御"
+                  "\u05d4\u05d2\u05e0\u05d5\u05ea \u05d1\u05e4\u05e9\u05d9\u05d8\u05ea \u05e8\u05d2\u05dc \u05d1\u05d2\u05d9\u05df \u05d0\u05d7\u05e8\u05d9\u05d5\u05ea \u05de\u05d5\u05e6\u05e8",
+                  "\u0909\u0924\u094d\u092a\u093e\u0926 \u0926\u093e\u092f\u093f\u0924\u094d\u0935 \u0930\u0915\u094d\u0937\u093e\u092c\u0902\u0927\u0928",
+                  "\u4ea7\u54c1\u8d23\u4efb\u6297\u8fa9",
+                  "\u88fd\u54c1\u8cac\u4efb\u306e\u9632\u5fa1"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1672,16 +2239,16 @@
                 "iri_hash": "RBId9f3jW4zEqooPvShqi6Q",
                 "definition": "Law relating to liability for injuries caused by defective or unsafe products.",
                 "synonyms": [
-                  "Droit de la responsabilité du produit",
+                  "Droit de la responsabilit\u00e9 du produit",
                   "Lei de Responsabilidade do Produto",
                   "Ley de Responsabilidad del Producto",
                   "Product Liability",
                   "Product Liability Law",
                   "Produkthaftungsrecht",
-                  "חוק אחריות מוצר",
-                  "उत्पाद दायित्व कानून",
-                  "产品责任法",
-                  "製品責任法",
+                  "\u05d7\u05d5\u05e7 \u05d0\u05d7\u05e8\u05d9\u05d5\u05ea \u05de\u05d5\u05e6\u05e8",
+                  "\u0909\u0924\u094d\u092a\u093e\u0926 \u0926\u093e\u092f\u093f\u0924\u094d\u0935 \u0915\u093e\u0928\u0942\u0928",
+                  "\u4ea7\u54c1\u8d23\u4efb\u6cd5",
+                  "\u88fd\u54c1\u8cac\u4efb\u6cd5",
                   "PRDL"
                 ],
                 "branch": "Area of Law",
@@ -1710,8 +2277,140 @@
       {
         "item_index": 14,
         "item_text": "Defective Product Claims",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Product Liability Law",
+                "iri": "https://folio.openlegalstandard.org/RBId9f3jW4zEqooPvShqi6Q",
+                "iri_hash": "RBId9f3jW4zEqooPvShqi6Q",
+                "definition": "Law relating to liability for injuries caused by defective or unsafe products.",
+                "synonyms": [
+                  "Droit de la responsabilit\u00e9 du produit",
+                  "Lei de Responsabilidade do Produto",
+                  "Ley de Responsabilidad del Producto",
+                  "Product Liability",
+                  "Product Liability Law",
+                  "Produkthaftungsrecht",
+                  "\u05d7\u05d5\u05e7 \u05d0\u05d7\u05e8\u05d9\u05d5\u05ea \u05de\u05d5\u05e6\u05e8",
+                  "\u0909\u0924\u094d\u092a\u093e\u0926 \u0926\u093e\u092f\u093f\u0924\u094d\u0935 \u0915\u093e\u0928\u0942\u0928",
+                  "\u4ea7\u54c1\u8d23\u4efb\u6cd5",
+                  "\u88fd\u54c1\u8cac\u4efb\u6cd5",
+                  "PRDL"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Personal Injury and Tort Law",
+                    "iri_hash": "R7MK1XmyjtYxZKg8Iw4ZN4K"
+                  },
+                  {
+                    "label": "Product Liability Law",
+                    "iri_hash": "RBId9f3jW4zEqooPvShqi6Q"
+                  }
+                ],
+                "score": 60.8
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Insurance Claims Form",
+                "iri": "https://folio.openlegalstandard.org/RB7UhfQgwrELTTc9t1VuBzZ",
+                "iri_hash": "RB7UhfQgwrELTTc9t1VuBzZ",
+                "definition": "An Insurance Claims Form is a standardized document used by a policyholder to request reimbursement or coverage for a loss or event that is insured under their policy. The form usually includes fields for providing details about the claim such as the incident, damages, and other relevant documentation.",
+                "synonyms": [
+                  "Loss Report Form"
+                ],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Regulatory Document",
+                    "iri_hash": "RBCzyIAi2Hjl80hfQr8wAMR"
+                  },
+                  {
+                    "label": "Insurance Document",
+                    "iri_hash": "RCtVq1uma9QpsVZHKZuLBkJ"
+                  },
+                  {
+                    "label": "Insurance Form",
+                    "iri_hash": "RB4wzors3lwuJhitD5uuVLS"
+                  },
+                  {
+                    "label": "Insurance Claims Form",
+                    "iri_hash": "RB7UhfQgwrELTTc9t1VuBzZ"
+                  }
+                ],
+                "score": 52.0
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Claims Agent",
+                "iri": "https://folio.openlegalstandard.org/R8Kso78437jpOj9Mkuf4huK",
+                "iri_hash": "R8Kso78437jpOj9Mkuf4huK",
+                "definition": "A claims agent is a person who acts on behalf of an individual or organization to manage and process insurance claims.",
+                "synonyms": [
+                  "Agent d'indemnisation",
+                  "Agente de Sinistros",
+                  "Agente de reclamaciones",
+                  "Agente de reclamos",
+                  "Claims Agent",
+                  "Schadensregulierer",
+                  "\u05e1\u05d5\u05db\u05df \u05ea\u05d1\u05d9\u05e2\u05d5\u05ea",
+                  "\u0926\u093e\u0935\u0947 \u090f\u091c\u0947\u0902\u091f",
+                  "\u30af\u30ec\u30fc\u30e0\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8",
+                  "\u7406\u8d54\u4ee3\u7406\u4eba"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Agent",
+                    "iri_hash": "RBDvvMcl4VbqDv1BGaZqaSL"
+                  },
+                  {
+                    "label": "Claims Agent",
+                    "iri_hash": "R8Kso78437jpOj9Mkuf4huK"
+                  }
+                ],
+                "score": 50.6
+              }
+            ]
+          }
+        ],
+        "total_candidates": 3
       },
       {
         "item_index": 15,
@@ -1728,15 +2427,15 @@
                 "definition": "Defamation is a civil claim and tort claim that involves the communication of a false statement that harms the reputation of an individual or entity.",
                 "synonyms": [
                   "Defamation",
-                  "Difamación",
-                  "Difamação",
+                  "Difamaci\u00f3n",
+                  "Difama\u00e7\u00e3o",
                   "Diffamation",
                   "Malfeasance",
                   "Verleumdung",
-                  "פגיעה במוניטין",
-                  "अपमान",
-                  "名誉毀損",
-                  "诽谤"
+                  "\u05e4\u05d2\u05d9\u05e2\u05d4 \u05d1\u05de\u05d5\u05e0\u05d9\u05d8\u05d9\u05df",
+                  "\u0905\u092a\u092e\u093e\u0928",
+                  "\u540d\u8a89\u6bc0\u640d",
+                  "\u8bfd\u8c24"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1827,13 +2526,13 @@
                   "Defamation",
                   "Defamation Law",
                   "Droit de diffamation",
-                  "Lei de difamação",
-                  "Ley de difamación",
+                  "Lei de difama\u00e7\u00e3o",
+                  "Ley de difamaci\u00f3n",
                   "Verleumdungsrecht",
-                  "חוק השמצה",
-                  "अपमान कानून",
-                  "名誉毀損法",
-                  "诽谤法",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05e9\u05de\u05e6\u05d4",
+                  "\u0905\u092a\u092e\u093e\u0928 \u0915\u093e\u0928\u0942\u0928",
+                  "\u540d\u8a89\u6bc0\u640d\u6cd5",
+                  "\u8bfd\u8c24\u6cd5",
                   "DEFA"
                 ],
                 "branch": "Area of Law",
@@ -1867,15 +2566,15 @@
                 "definition": "Defamation is a civil claim and tort claim that involves the communication of a false statement that harms the reputation of an individual or entity.",
                 "synonyms": [
                   "Defamation",
-                  "Difamación",
-                  "Difamação",
+                  "Difamaci\u00f3n",
+                  "Difama\u00e7\u00e3o",
                   "Diffamation",
                   "Malfeasance",
                   "Verleumdung",
-                  "פגיעה במוניטין",
-                  "अपमान",
-                  "名誉毀損",
-                  "诽谤"
+                  "\u05e4\u05d2\u05d9\u05e2\u05d4 \u05d1\u05de\u05d5\u05e0\u05d9\u05d8\u05d9\u05df",
+                  "\u0905\u092a\u092e\u093e\u0928",
+                  "\u540d\u8a89\u6bc0\u640d",
+                  "\u8bfd\u8c24"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -1923,15 +2622,15 @@
                 "definition": "A Class Action Notice is a formal written communication that informs a group of people that they are part of a legal action and provides them with information about their rights and options in the case.",
                 "synonyms": [
                   "Avis de recours collectif",
-                  "Aviso de Acción Colectiva",
-                  "Aviso de ação coletiva",
+                  "Aviso de Acci\u00f3n Colectiva",
+                  "Aviso de a\u00e7\u00e3o coletiva",
                   "Class Action Notice",
                   "Group Litigation Notice",
                   "Klagebekanntmachung",
-                  "הודעת פעולת קבוצה",
-                  "क्लास एक्शन नोटिस",
-                  "集体诉讼通知",
-                  "集団訴訟通知"
+                  "\u05d4\u05d5\u05d3\u05e2\u05ea \u05e4\u05e2\u05d5\u05dc\u05ea \u05e7\u05d1\u05d5\u05e6\u05d4",
+                  "\u0915\u094d\u0932\u093e\u0938 \u090f\u0915\u094d\u0936\u0928 \u0928\u094b\u091f\u093f\u0938",
+                  "\u96c6\u4f53\u8bc9\u8bbc\u901a\u77e5",
+                  "\u96c6\u56e3\u8a34\u8a1f\u901a\u77e5"
                 ],
                 "branch": "Document / Artifact",
                 "branch_color": "#9c4a10",
@@ -2009,8 +2708,8 @@
                   "Class",
                   "Classe",
                   "Klasse",
-                  "クラス",
-                  "类",
+                  "\u30af\u30e9\u30b9",
+                  "\u7c7b",
                   "CLASS"
                 ],
                 "branch": "Legal Entity",
@@ -2043,17 +2742,17 @@
                 "iri_hash": "RCg7sZurj0WriXwfKokeRyD",
                 "definition": "A Class Action is certified class consisting of a group of people who have suffered similar harm or injury, where the claims are too numerous or impractical to be brought individually.",
                 "synonyms": [
-                  "Acción Colectiva",
-                  "Acción de Clase",
+                  "Acci\u00f3n Colectiva",
+                  "Acci\u00f3n de Clase",
                   "Action collective",
-                  "Ação coletiva",
+                  "A\u00e7\u00e3o coletiva",
                   "Class Action",
                   "Group Litigation",
                   "Sammelklage",
-                  "תביעה מחוץ לכינוי",
-                  "क्लास एक्शन",
-                  "集体诉讼",
-                  "集団訴訟"
+                  "\u05ea\u05d1\u05d9\u05e2\u05d4 \u05de\u05d7\u05d5\u05e5 \u05dc\u05db\u05d9\u05e0\u05d5\u05d9",
+                  "\u0915\u094d\u0932\u093e\u0938 \u090f\u0915\u094d\u0936\u0928",
+                  "\u96c6\u4f53\u8bc9\u8bbc",
+                  "\u96c6\u56e3\u8a34\u8a1f"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",
@@ -2086,12 +2785,12 @@
                   "Action collective en justice",
                   "Demanda Colectiva",
                   "Group Litigation Claim",
-                  "Reivindicação de ação coletiva",
+                  "Reivindica\u00e7\u00e3o de a\u00e7\u00e3o coletiva",
                   "Sammelklageanspruch",
-                  "תביעה קבוצתית",
-                  "क्लास एक्शन दावा",
-                  "集体诉讼索赔",
-                  "集団訴訟請求"
+                  "\u05ea\u05d1\u05d9\u05e2\u05d4 \u05e7\u05d1\u05d5\u05e6\u05ea\u05d9\u05ea",
+                  "\u0915\u094d\u0932\u093e\u0938 \u090f\u0915\u094d\u0936\u0928 \u0926\u093e\u0935\u093e",
+                  "\u96c6\u4f53\u8bc9\u8bbc\u7d22\u8d54",
+                  "\u96c6\u56e3\u8a34\u8a1f\u8acb\u6c42"
                 ],
                 "branch": "Objectives",
                 "branch_color": "#b03020",

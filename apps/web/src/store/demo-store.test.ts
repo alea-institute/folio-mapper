@@ -3,7 +3,8 @@ import { useDemoStore } from './demo-store';
 
 describe('demo-store', () => {
   beforeEach(() => {
-    useDemoStore.setState({ exemplarMode: 'lean', stalePresetWarning: null });
+    localStorage.clear();
+    useDemoStore.setState({ exemplarMode: 'lean', stalePresetWarning: null, isDemoSession: false });
   });
 
   it('defaults to lean', () => {
@@ -85,19 +86,26 @@ describe('demo-store', () => {
     expect(useDemoStore.getState().stalePresetWarning).toBeNull();
   });
 
-  it('does NOT write to localStorage when toggled', () => {
-    const before = new Set(Object.keys(localStorage));
+  it('persists exemplarMode to localStorage so demo mode survives refresh', () => {
+    useDemoStore.getState().setExemplarMode('demo');
 
-    useDemoStore.getState().toggleExemplarMode();
-    useDemoStore.getState().setExemplarMode('lean');
-    useDemoStore.getState().toggleExemplarMode();
+    const raw = localStorage.getItem('folio-mapper-demo');
+    expect(raw).not.toBeNull();
+    const persisted = JSON.parse(raw as string);
+    expect(persisted.state.exemplarMode).toBe('demo');
+  });
 
-    const after = Object.keys(localStorage);
+  it('does NOT persist isDemoSession or stalePresetWarning (session-scoped)', () => {
+    useDemoStore.getState().setExemplarMode('demo');
+    useDemoStore.getState().setIsDemoSession(true);
+    useDemoStore.getState().setStalePresetWarning({
+      payloadPipelineVersion: '0.9.0',
+      payloadFolioVersion: null,
+      runtimePipelineVersion: '0.9.2',
+      runtimeFolioVersion: null,
+    });
 
-    // No new key matching /demo/i should have appeared after toggling.
-    const newDemoKeys = after.filter(
-      (key) => !before.has(key) && /demo/i.test(key),
-    );
-    expect(newDemoKeys).toEqual([]);
+    const persisted = JSON.parse(localStorage.getItem('folio-mapper-demo') as string);
+    expect(persisted.state).toEqual({ exemplarMode: 'demo' });
   });
 });

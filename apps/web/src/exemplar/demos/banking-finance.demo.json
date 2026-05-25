@@ -282,14 +282,360 @@
       {
         "item_index": 0,
         "item_text": "Banking & Finance Law",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Banking Law",
+                "iri": "https://folio.openlegalstandard.org/R7meQhKYGkcA57UZ7v4JOdA",
+                "iri_hash": "R7meQhKYGkcA57UZ7v4JOdA",
+                "definition": "Law that governs how banks and other financial institutions conduct business.",
+                "synonyms": [
+                  "Banking Law",
+                  "Bankrecht",
+                  "Derecho Bancario",
+                  "Direito banc\u00e1rio",
+                  "Droit bancaire",
+                  "Ley Bancaria",
+                  "\u05d7\u05d5\u05e7 \u05d1\u05e0\u05e7\u05d0\u05d5\u05ea",
+                  "\u092c\u0948\u0902\u0915\u093f\u0902\u0917 \u0915\u093e\u0928\u0942\u0928",
+                  "\u9280\u884c\u6cd5",
+                  "\u94f6\u884c\u6cd5",
+                  "BANK"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Banking Law",
+                    "iri_hash": "R7meQhKYGkcA57UZ7v4JOdA"
+                  }
+                ],
+                "score": 70.6
+              },
+              {
+                "label": "Banking Operations Law",
+                "iri": "https://folio.openlegalstandard.org/RDP3UlWGG5zbvqPSkhhcZw9",
+                "iri_hash": "RDP3UlWGG5zbvqPSkhhcZw9",
+                "definition": "Law governing routine banking operations including bank capital requirements, risk management, etc.",
+                "synonyms": [
+                  "Bankbetriebsrecht",
+                  "Banking Operations",
+                  "Banking Operations Law",
+                  "Direito das opera\u00e7\u00f5es banc\u00e1rias",
+                  "Droit des op\u00e9rations bancaires",
+                  "Ley de Operaciones Bancarias",
+                  "\u05d7\u05d5\u05e7 \u05e4\u05e2\u05d5\u05dc\u05d5\u05ea \u05d1\u05e0\u05e7\u05d0\u05d9\u05d5\u05ea",
+                  "\u092c\u0948\u0902\u0915\u093f\u0902\u0917 \u0911\u092a\u0930\u0947\u0936\u0928 \u0915\u093e\u0928\u0942\u0928",
+                  "\u9280\u884c\u696d\u52d9\u6cd5",
+                  "\u94f6\u884c\u4e1a\u52a1\u6cd5",
+                  "BOPS"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Banking Law",
+                    "iri_hash": "R7meQhKYGkcA57UZ7v4JOdA"
+                  },
+                  {
+                    "label": "Banking Operations Law",
+                    "iri_hash": "RDP3UlWGG5zbvqPSkhhcZw9"
+                  }
+                ],
+                "score": 69.3
+              },
+              {
+                "label": "Public Finance Law",
+                "iri": "https://folio.openlegalstandard.org/RBpGMXHNWL0gPXARVPLTN2A",
+                "iri_hash": "RBpGMXHNWL0gPXARVPLTN2A",
+                "definition": "Law including legislation and regulations relating to the financial activities of government or public sector organizations.",
+                "synonyms": [
+                  "Derecho de Finanzas P\u00fablicas",
+                  "Direito financeiro p\u00fablico",
+                  "Droit des finances publiques",
+                  "Public Finance",
+                  "Public Finance Law",
+                  "\u00d6ffentliches Finanzrecht",
+                  "\u05d7\u05d5\u05e7\u05d9 \u05db\u05e1\u05e4\u05d9 \u05e6\u05d9\u05d1\u05d5\u05e8",
+                  "\u0938\u093e\u0930\u094d\u0935\u091c\u0928\u093f\u0915 \u0935\u093f\u0924\u094d\u0924 \u0935\u093f\u0927\u093f",
+                  "\u516c\u5171\u8ca1\u653f\u6cd5",
+                  "\u516c\u5171\u8d22\u653f\u6cd5",
+                  "PFIN"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Public and Administrative Law",
+                    "iri_hash": "R8YijwyycPV6XzUJaud9SB1"
+                  },
+                  {
+                    "label": "Public Finance Law",
+                    "iri_hash": "RBpGMXHNWL0gPXARVPLTN2A"
+                  }
+                ],
+                "score": 68.3
+              }
+            ]
+          },
+          {
+            "branch": "Document / Artifact",
+            "branch_color": "#9c4a10",
+            "candidates": [
+              {
+                "label": "Banking Law Documents",
+                "iri": "https://folio.openlegalstandard.org/RusVTgN5XKjS4qJaIYIlH0",
+                "iri_hash": "RusVTgN5XKjS4qJaIYIlH0",
+                "definition": "\"Banking Law Documents\" refer to the collection of legal texts, forms, contracts, and regulatory materials that govern the operations, transactions, and compliance of financial institutions. These documents encompass a wide range of topics, including but not limited to, customer interactions, financial transactions, regulatory compliance, and risk management.",
+                "synonyms": [],
+                "branch": "Document / Artifact",
+                "branch_color": "#9c4a10",
+                "hierarchy_path": [
+                  {
+                    "label": "Document / Artifact",
+                    "iri_hash": "RDt4vQCYDfY0R9fZ5FNnTbj"
+                  },
+                  {
+                    "label": "Document Types",
+                    "iri_hash": "RBkL8I5saFF7mqpLTI7GxSh"
+                  },
+                  {
+                    "label": "Transactional Document",
+                    "iri_hash": "RBJ4HPUl2DrL4G30lmoFKJN"
+                  },
+                  {
+                    "label": "Document Collections by Areas of Law",
+                    "iri_hash": "RQR64SI6XmYz5JlNaDUOZN"
+                  },
+                  {
+                    "label": "Banking Law Documents",
+                    "iri_hash": "RusVTgN5XKjS4qJaIYIlH0"
+                  }
+                ],
+                "score": 71.6
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Bank",
+                "iri": "https://folio.openlegalstandard.org/R9TyJ8yqLicto5rFa8puek4",
+                "iri_hash": "R9TyJ8yqLicto5rFa8puek4",
+                "definition": "A bank is a financial institution licensed to receive deposits, make loans, and provide various financial services such as wealth management, currency exchange, and safe deposit boxes. Banks play a crucial role in the economy by facilitating financial transactions, providing credit, and offering investment products.",
+                "synonyms": [
+                  "Depository Institution"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Bank",
+                    "iri_hash": "R9TyJ8yqLicto5rFa8puek4"
+                  }
+                ],
+                "score": 62.2
+              }
+            ]
+          }
+        ],
+        "total_candidates": 5
       },
       {
         "item_index": 1,
         "item_text": "Commercial Lending",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Commercial Finance Law",
+                "iri": "https://folio.openlegalstandard.org/R8Zhd0So57YTwCncrDosIpy",
+                "iri_hash": "R8Zhd0So57YTwCncrDosIpy",
+                "definition": "Law supporting the function of providing loans or other financing to businesses.",
+                "synonyms": [
+                  "Commercial Finance",
+                  "Commercial Finance Law",
+                  "Derecho de Finanzas Comerciales",
+                  "Direito de Finan\u00e7as Comerciais",
+                  "Droit de la finance commerciale",
+                  "Handelsfinanzrecht",
+                  "Ley de Finanzas Comerciales",
+                  "\u05d7\u05d5\u05e7\u05d9 \u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd \u05de\u05e1\u05d7\u05e8\u05d9\u05d9\u05dd",
+                  "\u0935\u093e\u0923\u093f\u091c\u094d\u092f\u093f\u0915 \u0935\u093f\u0924\u094d\u0924 \u0935\u093f\u0927\u093f",
+                  "\u5546\u4e1a\u91d1\u878d\u6cd5",
+                  "\u5546\u696d\u91d1\u878d\u6cd5",
+                  "COMF"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Finance and Lending Law",
+                    "iri_hash": "RDhhApr0eDVle3F076WAVct"
+                  },
+                  {
+                    "label": "Commercial Finance Law",
+                    "iri_hash": "R8Zhd0So57YTwCncrDosIpy"
+                  }
+                ],
+                "score": 66.0
+              },
+              {
+                "label": "Commercial Transactions Law",
+                "iri": "https://folio.openlegalstandard.org/RCPtRu7JjCg1Do3DUtQofho",
+                "iri_hash": "RCPtRu7JjCg1Do3DUtQofho",
+                "definition": "Law related to business contracts and agreements.",
+                "synonyms": [
+                  "Commercial Transactions",
+                  "Commercial Transactions Law",
+                  "Derecho de Transacciones Comerciales",
+                  "Direito de transa\u00e7\u00f5es comerciais",
+                  "Droit des transactions commerciales",
+                  "Handelsrecht",
+                  "Ley de Transacciones Comerciales",
+                  "\u05d7\u05d5\u05e7 \u05de\u05e1\u05d7\u05e8 \u05d5\u05e2\u05e1\u05e7\u05d9\u05dd",
+                  "\u0935\u093e\u0923\u093f\u091c\u094d\u092f\u093f\u0915 \u0932\u0947\u0928-\u0926\u0947\u0928 \u0915\u093e\u0928\u0942\u0928",
+                  "\u5546\u4e1a\u4ea4\u6613\u6cd5",
+                  "\u5546\u53d6\u5f15\u6cd5",
+                  "TRNS"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Contract Law",
+                    "iri_hash": "RCIPwpgRpMs1eVz4vPid0pV"
+                  },
+                  {
+                    "label": "Commercial Transactions Law",
+                    "iri_hash": "RCPtRu7JjCg1Do3DUtQofho"
+                  }
+                ],
+                "score": 66.0
+              }
+            ]
+          },
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Commercial Paper",
+                "iri": "https://folio.openlegalstandard.org/R9pssJwbQ89wfcLFqq9DWIw",
+                "iri_hash": "R9pssJwbQ89wfcLFqq9DWIw",
+                "definition": "Commercial paper is an unsecured, short-term debt instrument issued by a corporation, typically for the financing of accounts payable and inventories and meeting short-term liabilities.",
+                "synonyms": [
+                  "Commercial Paper",
+                  "Handelspapier",
+                  "Papel comercial",
+                  "Papier commercial",
+                  "\u05e0\u05d9\u05d9\u05e8 \u05de\u05e1\u05d7\u05e8\u05d9",
+                  "\u0935\u093e\u0923\u093f\u091c\u094d\u092f\u093f\u0915 \u0915\u093e\u0917\u091c",
+                  "\u5546\u4e1a\u7968\u636e",
+                  "\u5546\u696d\u624b\u5f62",
+                  "COMPPR"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Tangible Assets",
+                    "iri_hash": "RbvEeHm8jkxY6SgfxEoC0i"
+                  },
+                  {
+                    "label": "Cash and Cash Equivalents",
+                    "iri_hash": "R8Ahr1iRMkczkHNvcrZ3KOG"
+                  },
+                  {
+                    "label": "Commercial Paper",
+                    "iri_hash": "R9pssJwbQ89wfcLFqq9DWIw"
+                  }
+                ],
+                "score": 65.7
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Lender",
+                "iri": "https://folio.openlegalstandard.org/R9OzLGaxH8FUa0QvIz14ZLA",
+                "iri_hash": "R9OzLGaxH8FUa0QvIz14ZLA",
+                "definition": "A person or institution who lends money.",
+                "synonyms": [
+                  "Credor",
+                  "Kreditgeber",
+                  "Lender",
+                  "Prestamista",
+                  "Pr\u00eateur",
+                  "\u05d4\u05dc\u05d5\u05d4\u05df",
+                  "\u090b\u0923\u0926\u093e\u0924\u093e",
+                  "\u653e\u6b3e\u4eba",
+                  "\u8cb8\u3057\u624b"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Lender",
+                    "iri_hash": "R9OzLGaxH8FUa0QvIz14ZLA"
+                  }
+                ],
+                "score": 39.8
+              }
+            ]
+          }
+        ],
+        "total_candidates": 4
       },
       {
         "item_index": 2,
@@ -308,14 +654,14 @@
                   "Commercial Finance",
                   "Commercial Finance Law",
                   "Derecho de Finanzas Comerciales",
-                  "Direito de Finanças Comerciais",
+                  "Direito de Finan\u00e7as Comerciais",
                   "Droit de la finance commerciale",
                   "Handelsfinanzrecht",
                   "Ley de Finanzas Comerciales",
-                  "חוקי פיננסים מסחריים",
-                  "वाणिज्यिक वित्त विधि",
-                  "商业金融法",
-                  "商業金融法",
+                  "\u05d7\u05d5\u05e7\u05d9 \u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd \u05de\u05e1\u05d7\u05e8\u05d9\u05d9\u05dd",
+                  "\u0935\u093e\u0923\u093f\u091c\u094d\u092f\u093f\u0915 \u0935\u093f\u0924\u094d\u0924 \u0935\u093f\u0927\u093f",
+                  "\u5546\u4e1a\u91d1\u878d\u6cd5",
+                  "\u5546\u696d\u91d1\u878d\u6cd5",
                   "COMF"
                 ],
                 "branch": "Area of Law",
@@ -399,13 +745,13 @@
                   "Kreditvergabepraxis",
                   "Lending Practice",
                   "Loan",
-                  "Pratique de prêt",
-                  "Práctica de préstamo",
-                  "Prática de empréstimo",
-                  "מעשה הלוואה",
-                  "उधार देने की अभ्यास",
-                  "借贷实践",
-                  "貸出実践",
+                  "Pratique de pr\u00eat",
+                  "Pr\u00e1ctica de pr\u00e9stamo",
+                  "Pr\u00e1tica de empr\u00e9stimo",
+                  "\u05de\u05e2\u05e9\u05d4 \u05d4\u05dc\u05d5\u05d5\u05d0\u05d4",
+                  "\u0909\u0927\u093e\u0930 \u0926\u0947\u0928\u0947 \u0915\u0940 \u0905\u092d\u094d\u092f\u093e\u0938",
+                  "\u501f\u8d37\u5b9e\u8df5",
+                  "\u8cb8\u51fa\u5b9f\u8df5",
                   "LOA"
                 ],
                 "branch": "Service",
@@ -455,13 +801,13 @@
                   "Financing Practice",
                   "Finanzierungspraxis",
                   "Pratique de financement",
-                  "Práctica de financiación",
-                  "Práctica de financiamiento",
-                  "Prática de financiamento",
-                  "מעשה מימון",
-                  "वित्त प्रथा",
-                  "融资实践",
-                  "資金調達の実践",
+                  "Pr\u00e1ctica de financiaci\u00f3n",
+                  "Pr\u00e1ctica de financiamiento",
+                  "Pr\u00e1tica de financiamento",
+                  "\u05de\u05e2\u05e9\u05d4 \u05de\u05d9\u05de\u05d5\u05df",
+                  "\u0935\u093f\u0924\u094d\u0924 \u092a\u094d\u0930\u0925\u093e",
+                  "\u878d\u8d44\u5b9e\u8df5",
+                  "\u8cc7\u91d1\u8abf\u9054\u306e\u5b9f\u8df5",
                   "FIN"
                 ],
                 "branch": "Service",
@@ -491,10 +837,10 @@
                   "M&A E Financing",
                   "M&A E Financing Service",
                   "M&A E Finanzierungspraxis",
-                  "M&A Eファイナンス実践",
-                  "M&A E融资实践",
+                  "M&A E\u30d5\u30a1\u30a4\u30ca\u30f3\u30b9\u5b9f\u8df5",
+                  "M&A E\u878d\u8d44\u5b9e\u8df5",
                   "Pratique de financement M&A E",
-                  "Prática de Financiamento M&A E"
+                  "Pr\u00e1tica de Financiamento M&A E"
                 ],
                 "branch": "Service",
                 "branch_color": "#065e4e",
@@ -530,8 +876,245 @@
       {
         "item_index": 5,
         "item_text": "Securities & Capital Markets",
-        "branch_groups": [],
-        "total_candidates": 0
+        "branch_groups": [
+          {
+            "branch": "Area of Law",
+            "branch_color": "#1a5276",
+            "candidates": [
+              {
+                "label": "Securities and Financial Instruments Law",
+                "iri": "https://folio.openlegalstandard.org/RCF0BMeSwppddfM6cp6AUBK",
+                "iri_hash": "RCF0BMeSwppddfM6cp6AUBK",
+                "definition": "Law covering transactions and other dealings with securities including both federal- and state-level regulation by purely governmental regulatory agencies, listing requirements of exchanges, and rules of self-regulatory organizations.",
+                "synonyms": [
+                  "Lei de Valores Mobili\u00e1rios e Instrumentos Financeiros",
+                  "Ley de Valores e Instrumentos Financieros",
+                  "Loi sur les valeurs mobili\u00e8res et les instruments financiers",
+                  "Securities and Financial Instruments Law",
+                  "Wertpapier- und Finanzinstrumentengesetz",
+                  "\u05d7\u05d5\u05e7 \u05e0\u05d9\u05d9\u05e8\u05d5\u05ea \u05e2\u05e8\u05da \u05d5\u05db\u05dc\u05d9 \u05e2\u05d6\u05e8 \u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05d9\u05dd",
+                  "\u0936\u0947\u092f\u0930 \u0914\u0930 \u0935\u093f\u0924\u094d\u0924\u0940\u092f \u0909\u092a\u0915\u0930\u0923 \u0915\u093e\u0928\u0942\u0928",
+                  "\u8a3c\u5238\u30fb\u91d1\u878d\u5546\u54c1\u6cd5",
+                  "\u8bc1\u5238\u548c\u91d1\u878d\u5de5\u5177\u6cd5",
+                  "SECU"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Securities and Financial Instruments Law",
+                    "iri_hash": "RCF0BMeSwppddfM6cp6AUBK"
+                  }
+                ],
+                "score": 73.9
+              },
+              {
+                "label": "Security Offerings and Capital Markets Law",
+                "iri": "https://folio.openlegalstandard.org/RIx4wseXHDgt3SLWCIjNhd",
+                "iri_hash": "RIx4wseXHDgt3SLWCIjNhd",
+                "definition": "Corporate debt and equity issuance (public and private) and markets.",
+                "synonyms": [
+                  "Ofertas de seguran\u00e7a e direito do mercado de capitais",
+                  "Ofertas de seguridad y derecho de los mercados de capitales",
+                  "Ofertas de valores y derecho de los mercados de capitales",
+                  "Offres de titres et droit des march\u00e9s de capitaux",
+                  "Security Offerings and Capital Markets",
+                  "Security Offerings and Capital Markets Law",
+                  "Wertpapieremissionen und Kapitalmarktrecht",
+                  "\u05de\u05e6\u05d9\u05e2\u05d9 \u05d0\u05d1\u05d8\u05d7\u05d4 \u05d5\u05d7\u05d5\u05e7\u05d9 \u05e9\u05d5\u05d5\u05e7\u05d9 \u05d4\u05d4\u05d5\u05df",
+                  "\u0938\u0941\u0930\u0915\u094d\u0937\u093e \u0911\u092b\u093c\u0930\u093f\u0902\u0917 \u0914\u0930 \u092a\u0942\u0902\u091c\u0940 \u092c\u093e\u091c\u093e\u0930 \u0915\u093e\u0928\u0942\u0928",
+                  "\u8a3c\u5238\u767a\u884c\u3068\u8cc7\u672c\u5e02\u5834\u6cd5",
+                  "\u8bc1\u5238\u53d1\u884c\u548c\u8d44\u672c\u5e02\u573a\u6cd5\u5f8b",
+                  "OFFR"
+                ],
+                "branch": "Area of Law",
+                "branch_color": "#1a5276",
+                "hierarchy_path": [
+                  {
+                    "label": "Area of Law",
+                    "iri_hash": "RSYBzf149Mi5KE0YtmpUmr"
+                  },
+                  {
+                    "label": "Securities and Financial Instruments Law",
+                    "iri_hash": "RCF0BMeSwppddfM6cp6AUBK"
+                  },
+                  {
+                    "label": "Security Offerings and Capital Markets Law",
+                    "iri_hash": "RIx4wseXHDgt3SLWCIjNhd"
+                  }
+                ],
+                "score": 65.1
+              }
+            ]
+          },
+          {
+            "branch": "Asset Type",
+            "branch_color": "#6b5600",
+            "candidates": [
+              {
+                "label": "Asset-Backed Securities",
+                "iri": "https://folio.openlegalstandard.org/RBGd796pNg5ltGWhkyk2ifm",
+                "iri_hash": "RBGd796pNg5ltGWhkyk2ifm",
+                "definition": "Asset-Backed Securities (ABS) are financial instruments backed by a pool of assets, typically loans or receivables, that generate cash flows to pay interest and principal to investors. ABS allow lenders to transfer the risk of the underlying assets to investors and are commonly used to improve liquidity and raise capital.",
+                "synonyms": [
+                  "ABS",
+                  "Asset-Backed Bonds",
+                  "Securitized Assets"
+                ],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Financial Assets",
+                    "iri_hash": "RxkTKgYqWS0WBHnJgrn27Y"
+                  },
+                  {
+                    "label": "Investment Assets",
+                    "iri_hash": "RBVQj7fYsBw67yNXs4WI6RX"
+                  },
+                  {
+                    "label": "Debt Investment Assets",
+                    "iri_hash": "RBTvzt8uobb19tFbNSYQkFA"
+                  },
+                  {
+                    "label": "Asset-Backed Securities",
+                    "iri_hash": "RBGd796pNg5ltGWhkyk2ifm"
+                  }
+                ],
+                "score": 63.1
+              },
+              {
+                "label": "Treasury Securities",
+                "iri": "https://folio.openlegalstandard.org/R8p7frlaEiBn80hSUgWsU1V",
+                "iri_hash": "R8p7frlaEiBn80hSUgWsU1V",
+                "definition": "Treasury securities are debt instruments issued by a government to raise funds and are backed by the full faith and credit of that government. They come in various forms, including Treasury bills, notes, and bonds, each with different maturity lengths and yield characteristics, and are considered among the safest investments due to their low default risk",
+                "synonyms": [],
+                "branch": "Asset Type",
+                "branch_color": "#6b5600",
+                "hierarchy_path": [
+                  {
+                    "label": "Asset Type",
+                    "iri_hash": "RCIwc6WJi6IT7xePURxsi4T"
+                  },
+                  {
+                    "label": "Financial Assets",
+                    "iri_hash": "RxkTKgYqWS0WBHnJgrn27Y"
+                  },
+                  {
+                    "label": "Investment Assets",
+                    "iri_hash": "RBVQj7fYsBw67yNXs4WI6RX"
+                  },
+                  {
+                    "label": "Debt Investment Assets",
+                    "iri_hash": "RBTvzt8uobb19tFbNSYQkFA"
+                  },
+                  {
+                    "label": "Treasury Securities",
+                    "iri_hash": "R8p7frlaEiBn80hSUgWsU1V"
+                  }
+                ],
+                "score": 60.8
+              }
+            ]
+          },
+          {
+            "branch": "Actor / Player",
+            "branch_color": "#1e6fa0",
+            "candidates": [
+              {
+                "label": "Securities Expert",
+                "iri": "https://folio.openlegalstandard.org/R8aWBvN5eYI0a5ejQqSHvar",
+                "iri_hash": "R8aWBvN5eYI0a5ejQqSHvar",
+                "definition": "An expert in the area of securities, including stocks and investments.",
+                "synonyms": [
+                  "Especialista em t\u00edtulos",
+                  "Expert en valeurs mobili\u00e8res",
+                  "Experto en Valores",
+                  "Securities Expert",
+                  "Wertpapierexperte",
+                  "\u05de\u05d5\u05de\u05d7\u05d4 \u05d1\u05e0\u05d9\u05d9\u05e8\u05d5\u05ea \u05e2\u05e8\u05da",
+                  "\u0936\u0947\u092f\u0930 \u090f\u0915\u094d\u0938\u092a\u0930\u094d\u091f",
+                  "\u8a3c\u5238\u5c02\u9580\u5bb6",
+                  "\u8bc1\u5238\u4e13\u5bb6"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Nonparty",
+                    "iri_hash": "RC5L1UD7ZnNEZtL0JB8WEyb"
+                  },
+                  {
+                    "label": "Expert",
+                    "iri_hash": "RgT3hiPFNllfpt00aHX6u7"
+                  },
+                  {
+                    "label": "Expert Fields",
+                    "iri_hash": "R8t7u58Bmu2hmFFto8S64nx"
+                  },
+                  {
+                    "label": "Economic Experts",
+                    "iri_hash": "RuKmOKRLQQDzqibBjh1OVm"
+                  },
+                  {
+                    "label": "Securities Expert",
+                    "iri_hash": "R8aWBvN5eYI0a5ejQqSHvar"
+                  }
+                ],
+                "score": 60.5
+              },
+              {
+                "label": "Broker-Dealer",
+                "iri": "https://folio.openlegalstandard.org/RDbDt5n4osubVafgim4zlMK",
+                "iri_hash": "RDbDt5n4osubVafgim4zlMK",
+                "definition": "A Broker-Dealer is a financial firm or individual that buys and sells securities on behalf of clients (acting as a broker) or for its own account (acting as a dealer). Broker-dealers are essential in facilitating securities transactions, providing market liquidity, and offering investment advice and services to individual and institutional investors.",
+                "synonyms": [
+                  "Securities Broker",
+                  "Securities Firm",
+                  "Trading Firm"
+                ],
+                "branch": "Actor / Player",
+                "branch_color": "#1e6fa0",
+                "hierarchy_path": [
+                  {
+                    "label": "Actor / Player",
+                    "iri_hash": "R8CdMpOM0RmyrgCCvbpiLS0"
+                  },
+                  {
+                    "label": "Role in Matter",
+                    "iri_hash": "RCEDL3kMYgjFUEOhOyGp3IE"
+                  },
+                  {
+                    "label": "Broker",
+                    "iri_hash": "R9Q9CszYRTjTgwQ8JRqVZ0x"
+                  },
+                  {
+                    "label": "Broker-Dealer",
+                    "iri_hash": "RDbDt5n4osubVafgim4zlMK"
+                  }
+                ],
+                "score": 58.3
+              }
+            ]
+          }
+        ],
+        "total_candidates": 6
       },
       {
         "item_index": 6,
@@ -583,8 +1166,8 @@
                   "Corretor",
                   "Courtier",
                   "Makler",
-                  "ブローカー",
-                  "经纪人",
+                  "\u30d6\u30ed\u30fc\u30ab\u30fc",
+                  "\u7ecf\u7eaa\u4eba",
                   "BROK"
                 ],
                 "branch": "Actor / Player",
@@ -614,12 +1197,12 @@
                   "Concessionnaire",
                   "Dealer",
                   "Distribuidor",
-                  "Händler",
+                  "H\u00e4ndler",
                   "Revendedor",
-                  "סוחר",
-                  "डीलर",
-                  "ディーラー",
-                  "经销商",
+                  "\u05e1\u05d5\u05d7\u05e8",
+                  "\u0921\u0940\u0932\u0930",
+                  "\u30c7\u30a3\u30fc\u30e9\u30fc",
+                  "\u7ecf\u9500\u5546",
                   "DLER"
                 ],
                 "branch": "Actor / Player",
@@ -656,12 +1239,12 @@
                   "Broker-Dealer Law",
                   "Broker-Dealer-Recht",
                   "Droit des courtiers et des concessionnaires",
-                  "Lei de Corretagem e Distribuição",
+                  "Lei de Corretagem e Distribui\u00e7\u00e3o",
                   "Ley de corredores y distribuidores",
-                  "חוק סוכני חברות ומסחר",
-                  "ब्रोकर-डीलर कानून",
-                  "ブローカー・ディーラー法",
-                  "经纪商法律",
+                  "\u05d7\u05d5\u05e7 \u05e1\u05d5\u05db\u05e0\u05d9 \u05d7\u05d1\u05e8\u05d5\u05ea \u05d5\u05de\u05e1\u05d7\u05e8",
+                  "\u092c\u094d\u0930\u094b\u0915\u0930-\u0921\u0940\u0932\u0930 \u0915\u093e\u0928\u0942\u0928",
+                  "\u30d6\u30ed\u30fc\u30ab\u30fc\u30fb\u30c7\u30a3\u30fc\u30e9\u30fc\u6cd5",
+                  "\u7ecf\u7eaa\u5546\u6cd5\u5f8b",
                   "BROK"
                 ],
                 "branch": "Area of Law",
@@ -704,13 +1287,13 @@
                   "Derivatives and Futures",
                   "Derivatives and Futures Law",
                   "Direito de Derivativos e Futuros",
-                  "Droit des dérivés et des contrats à terme",
+                  "Droit des d\u00e9riv\u00e9s et des contrats \u00e0 terme",
                   "Ley de Derivados y Futuros",
                   "Recht der Derivate und Futures",
-                  "חוק נגזרים ועתידות",
-                  "निवास और भविष्य कानून",
-                  "デリバティブおよび先物取引法",
-                  "衍生品和期货法",
+                  "\u05d7\u05d5\u05e7 \u05e0\u05d2\u05d6\u05e8\u05d9\u05dd \u05d5\u05e2\u05ea\u05d9\u05d3\u05d5\u05ea",
+                  "\u0928\u093f\u0935\u093e\u0938 \u0914\u0930 \u092d\u0935\u093f\u0937\u094d\u092f \u0915\u093e\u0928\u0942\u0928",
+                  "\u30c7\u30ea\u30d0\u30c6\u30a3\u30d6\u304a\u3088\u3073\u5148\u7269\u53d6\u5f15\u6cd5",
+                  "\u884d\u751f\u54c1\u548c\u671f\u8d27\u6cd5",
                   "DERV"
                 ],
                 "branch": "Area of Law",
@@ -799,12 +1382,12 @@
                   "Investment Companies Law",
                   "Investmentgesetz",
                   "Lei das Companhias de Investimento",
-                  "Ley de Sociedades de Inversión",
-                  "Loi sur les sociétés d'investissement",
-                  "חוק חברות השקעות",
-                  "निवेश कंपनियों कानून",
-                  "投資信託法",
-                  "投资公司法",
+                  "Ley de Sociedades de Inversi\u00f3n",
+                  "Loi sur les soci\u00e9t\u00e9s d'investissement",
+                  "\u05d7\u05d5\u05e7 \u05d7\u05d1\u05e8\u05d5\u05ea \u05d4\u05e9\u05e7\u05e2\u05d5\u05ea",
+                  "\u0928\u093f\u0935\u0947\u0936 \u0915\u0902\u092a\u0928\u093f\u092f\u094b\u0902 \u0915\u093e\u0928\u0942\u0928",
+                  "\u6295\u8cc7\u4fe1\u8a17\u6cd5",
+                  "\u6295\u8d44\u516c\u53f8\u6cd5",
                   "INVC"
                 ],
                 "branch": "Area of Law",
@@ -844,15 +1427,15 @@
                 "iri_hash": "RxPxADB12qeAIDAFEgWRsz",
                 "definition": "Private Equity, Hedge Funds, and Venture Capital Law encompasses the legal frameworks governing private equity investments, hedge funds, and venture capital financing. It involves regulations related to fund formation, management, investment, compliance, investor rights, and financial transactions within these sectors.",
                 "synonyms": [
-                  "Droit des fonds d'investissement, des fonds spéculatifs et du capital-risque",
-                  "Gesetzgebung für Private Equity, Hedgefonds und Risikokapital",
+                  "Droit des fonds d'investissement, des fonds sp\u00e9culatifs et du capital-risque",
+                  "Gesetzgebung f\u00fcr Private Equity, Hedgefonds und Risikokapital",
                   "Lei de Private Equity, Hedge Funds e Venture Capital",
                   "Ley de Capital Privado, Fondos de Cobertura y Capital de Riesgo",
                   "Private Equity, Hedge Funds and Venture Capital Law",
-                  "חוק הון פרטי, קרנות השתלמות והון סיכון",
-                  "प्राइवेट इक्विटी, हेज फंड और वेंचर कैपिटल कानून",
-                  "プライベートエクイティ、ヘッジファンド、ベンチャーキャピタル法",
-                  "私募股权、对冲基金和风险投资法律"
+                  "\u05d7\u05d5\u05e7 \u05d4\u05d5\u05df \u05e4\u05e8\u05d8\u05d9, \u05e7\u05e8\u05e0\u05d5\u05ea \u05d4\u05e9\u05ea\u05dc\u05de\u05d5\u05ea \u05d5\u05d4\u05d5\u05df \u05e1\u05d9\u05db\u05d5\u05df",
+                  "\u092a\u094d\u0930\u093e\u0907\u0935\u0947\u091f \u0907\u0915\u094d\u0935\u093f\u091f\u0940, \u0939\u0947\u091c \u092b\u0902\u0921 \u0914\u0930 \u0935\u0947\u0902\u091a\u0930 \u0915\u0948\u092a\u093f\u091f\u0932 \u0915\u093e\u0928\u0942\u0928",
+                  "\u30d7\u30e9\u30a4\u30d9\u30fc\u30c8\u30a8\u30af\u30a4\u30c6\u30a3\u3001\u30d8\u30c3\u30b8\u30d5\u30a1\u30f3\u30c9\u3001\u30d9\u30f3\u30c1\u30e3\u30fc\u30ad\u30e3\u30d4\u30bf\u30eb\u6cd5",
+                  "\u79c1\u52df\u80a1\u6743\u3001\u5bf9\u51b2\u57fa\u91d1\u548c\u98ce\u9669\u6295\u8d44\u6cd5\u5f8b"
                 ],
                 "branch": "Area of Law",
                 "branch_color": "#1a5276",
@@ -892,16 +1475,16 @@
                 "definition": "Law surrounding securitization and asset-backed securities.",
                 "synonyms": [
                   "Derecho de Finanzas Estructuradas",
-                  "Direito de Finanças Estruturadas",
-                  "Droit de la finance structurée",
+                  "Direito de Finan\u00e7as Estruturadas",
+                  "Droit de la finance structur\u00e9e",
                   "Ley de Finanzas Estructuradas",
                   "Structured Finance",
                   "Structured Finance Law",
                   "Strukturiertes Finanzrecht",
-                  "חוקי פיננסים מבוססי מבנה",
-                  "संरचित वित्त विधि",
-                  "ストラクチャードファイナンス法",
-                  "结构化金融法",
+                  "\u05d7\u05d5\u05e7\u05d9 \u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd \u05de\u05d1\u05d5\u05e1\u05e1\u05d9 \u05de\u05d1\u05e0\u05d4",
+                  "\u0938\u0902\u0930\u091a\u093f\u0924 \u0935\u093f\u0924\u094d\u0924 \u0935\u093f\u0927\u093f",
+                  "\u30b9\u30c8\u30e9\u30af\u30c1\u30e3\u30fc\u30c9\u30d5\u30a1\u30a4\u30ca\u30f3\u30b9\u6cd5",
+                  "\u7ed3\u6784\u5316\u91d1\u878d\u6cd5",
                   "STRF"
                 ],
                 "branch": "Area of Law",
@@ -988,16 +1571,16 @@
                 "definition": "Law surrounding securitization and asset-backed securities.",
                 "synonyms": [
                   "Derecho de Finanzas Estructuradas",
-                  "Direito de Finanças Estruturadas",
-                  "Droit de la finance structurée",
+                  "Direito de Finan\u00e7as Estruturadas",
+                  "Droit de la finance structur\u00e9e",
                   "Ley de Finanzas Estructuradas",
                   "Structured Finance",
                   "Structured Finance Law",
                   "Strukturiertes Finanzrecht",
-                  "חוקי פיננסים מבוססי מבנה",
-                  "संरचित वित्त विधि",
-                  "ストラクチャードファイナンス法",
-                  "结构化金融法",
+                  "\u05d7\u05d5\u05e7\u05d9 \u05e4\u05d9\u05e0\u05e0\u05e1\u05d9\u05dd \u05de\u05d1\u05d5\u05e1\u05e1\u05d9 \u05de\u05d1\u05e0\u05d4",
+                  "\u0938\u0902\u0930\u091a\u093f\u0924 \u0935\u093f\u0924\u094d\u0924 \u0935\u093f\u0927\u093f",
+                  "\u30b9\u30c8\u30e9\u30af\u30c1\u30e3\u30fc\u30c9\u30d5\u30a1\u30a4\u30ca\u30f3\u30b9\u6cd5",
+                  "\u7ed3\u6784\u5316\u91d1\u878d\u6cd5",
                   "STRF"
                 ],
                 "branch": "Area of Law",
@@ -1170,10 +1753,10 @@
                 "definition": "Rules or orders issued by a governmental regulatory agency and having the force of law.",
                 "synonyms": [
                   "Regulamentos",
-                  "Réglementations",
+                  "R\u00e9glementations",
                   "Vorschriften",
-                  "法规",
-                  "規制"
+                  "\u6cd5\u89c4",
+                  "\u898f\u5236"
                 ],
                 "branch": "Legal Authorities",
                 "branch_color": "#8b1a1a",
@@ -1245,14 +1828,14 @@
                   "Bank Secrecy Law",
                   "Bank Secrecy and Anti-Money Laundering",
                   "Bank Secrecy and Anti-Money Laundering Law",
-                  "Bankgeheimnis- und Anti-Geldwäsche-Gesetz",
-                  "Lei de Sigilo Bancário e de Combate à Lavagem de Dinheiro",
+                  "Bankgeheimnis- und Anti-Geldw\u00e4sche-Gesetz",
+                  "Lei de Sigilo Banc\u00e1rio e de Combate \u00e0 Lavagem de Dinheiro",
                   "Ley de Secreto Bancario y Anti-Lavado de Dinero",
                   "Loi sur le secret bancaire et la lutte contre le blanchiment d'argent",
-                  "חוק הסוד הבנקאי ומניעת כביסת כספים",
-                  "बैंक गोपनीयता और धन प्रवर्तन रोकथाम कानून",
-                  "銀行秘密保持およびマネーロンダリング防止法",
-                  "银行保密和反洗钱法",
+                  "\u05d7\u05d5\u05e7 \u05d4\u05e1\u05d5\u05d3 \u05d4\u05d1\u05e0\u05e7\u05d0\u05d9 \u05d5\u05de\u05e0\u05d9\u05e2\u05ea \u05db\u05d1\u05d9\u05e1\u05ea \u05db\u05e1\u05e4\u05d9\u05dd",
+                  "\u092c\u0948\u0902\u0915 \u0917\u094b\u092a\u0928\u0940\u092f\u0924\u093e \u0914\u0930 \u0927\u0928 \u092a\u094d\u0930\u0935\u0930\u094d\u0924\u0928 \u0930\u094b\u0915\u0925\u093e\u092e \u0915\u093e\u0928\u0942\u0928",
+                  "\u9280\u884c\u79d8\u5bc6\u4fdd\u6301\u304a\u3088\u3073\u30de\u30cd\u30fc\u30ed\u30f3\u30c0\u30ea\u30f3\u30b0\u9632\u6b62\u6cd5",
+                  "\u94f6\u884c\u4fdd\u5bc6\u548c\u53cd\u6d17\u94b1\u6cd5",
                   "SAML"
                 ],
                 "branch": "Area of Law",
@@ -1328,11 +1911,11 @@
                   "Criptomoneda",
                   "Cryptocurrency",
                   "Cryptomonnaie",
-                  "Kryptowährung",
-                  "מטבע קריפטוגרפי",
-                  "क्रिप्टोकरेंसी",
-                  "加密货币",
-                  "暗号通貨",
+                  "Kryptow\u00e4hrung",
+                  "\u05de\u05d8\u05d1\u05e2 \u05e7\u05e8\u05d9\u05e4\u05d8\u05d5\u05d2\u05e8\u05e4\u05d9",
+                  "\u0915\u094d\u0930\u093f\u092a\u094d\u091f\u094b\u0915\u0930\u0947\u0902\u0938\u0940",
+                  "\u52a0\u5bc6\u8d27\u5e01",
+                  "\u6697\u53f7\u901a\u8ca8",
                   "CRYPCU"
                 ],
                 "branch": "Asset Type",
@@ -1373,11 +1956,11 @@
                   "Devise",
                   "Moeda",
                   "Moneda",
-                  "Währung",
-                  "מטבע",
-                  "मुद्रा",
-                  "货币",
-                  "通貨"
+                  "W\u00e4hrung",
+                  "\u05de\u05d8\u05d1\u05e2",
+                  "\u092e\u0941\u0926\u094d\u0930\u093e",
+                  "\u8d27\u5e01",
+                  "\u901a\u8ca8"
                 ],
                 "branch": "Currency",
                 "branch_color": "#7a5a00",
@@ -1437,10 +2020,10 @@
                 "definition": "Rules or orders issued by a governmental regulatory agency and having the force of law.",
                 "synonyms": [
                   "Regulamentos",
-                  "Réglementations",
+                  "R\u00e9glementations",
                   "Vorschriften",
-                  "法规",
-                  "規制"
+                  "\u6cd5\u89c4",
+                  "\u898f\u5236"
                 ],
                 "branch": "Legal Authorities",
                 "branch_color": "#8b1a1a",
@@ -1500,16 +2083,16 @@
                 "iri_hash": "R323NrrdMAKWvV45HB4CII",
                 "definition": "The process of enforcement by a regulatory agency through an administrative procedure outside of any court system.",
                 "synonyms": [
-                  "Application de la réglementation",
+                  "Application de la r\u00e9glementation",
                   "Cumplimiento Regulatorio",
                   "Enforcement",
-                  "Execução regulatória",
+                  "Execu\u00e7\u00e3o regulat\u00f3ria",
                   "Regulatorische Durchsetzung",
                   "Regulatory Enforcement",
-                  "אכיפת תקנות",
-                  "नियामक प्रवर्तन",
-                  "监管执行",
-                  "規制執行",
+                  "\u05d0\u05db\u05d9\u05e4\u05ea \u05ea\u05e7\u05e0\u05d5\u05ea",
+                  "\u0928\u093f\u092f\u093e\u092e\u0915 \u092a\u094d\u0930\u0935\u0930\u094d\u0924\u0928",
+                  "\u76d1\u7ba1\u6267\u884c",
+                  "\u898f\u5236\u57f7\u884c",
                   "ENF"
                 ],
                 "branch": "Service",
@@ -1537,16 +2120,16 @@
                 "definition": "The process by which an entity (i.e., organization or person) ensures that it observes and complies with the external statutory laws and regulations.",
                 "synonyms": [
                   "Compliance",
-                  "Conformidade regulatória",
-                  "Conformité réglementaire",
+                  "Conformidade regulat\u00f3ria",
+                  "Conformit\u00e9 r\u00e9glementaire",
                   "Cumplimiento normativo",
                   "Cumplimiento regulatorio",
                   "Regulatorische Compliance",
                   "Regulatory Compliance",
-                  "עמיתת רגולציה",
-                  "नियामक अनुपालन",
-                  "监管合规",
-                  "規制コンプライアンス",
+                  "\u05e2\u05de\u05d9\u05ea\u05ea \u05e8\u05d2\u05d5\u05dc\u05e6\u05d9\u05d4",
+                  "\u0928\u093f\u092f\u093e\u092e\u0915 \u0905\u0928\u0941\u092a\u093e\u0932\u0928",
+                  "\u76d1\u7ba1\u5408\u89c4",
+                  "\u898f\u5236\u30b3\u30f3\u30d7\u30e9\u30a4\u30a2\u30f3\u30b9",
                   "COM"
                 ],
                 "branch": "Service",
