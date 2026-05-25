@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-05-24)
 Phase: 04 — COMPLETE
 Plan: 1 of 5
 Status: Phase 04 complete
-Last activity: 2026-05-24 -- Phase 04 marked complete
+Last activity: 2026-05-25 -- Completed quick task 260525-bz7: update most-recent LLM models
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -71,6 +71,7 @@ None at roadmap stage. Phase 5 has a known density risk: regulatory FOLIO branch
 |---|-------------|------|--------|-----------|
 | 260522-q0p | Add a "Rename" button to the session picker | 2026-05-22 | cdce07c | ./quick/260522-q0p-... |
 | 260524-fmm | Fix computeScoreCutoff global-threshold bug | 2026-05-24 | b16a4f8 | ./quick/260524-fmm-... |
+| 260525-bz7 | Update most-recent LLM models (Anthropic/OpenAI/Google) | 2026-05-25 | 482ee8e | ./quick/260525-bz7-update-most-recent-llm-models-from-provi/ |
 
 ## Session Continuity
 
