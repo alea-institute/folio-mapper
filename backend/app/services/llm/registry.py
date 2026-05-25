@@ -45,7 +45,7 @@ DEFAULT_BASE_URLS: dict[LLMProviderType, str] = {
 DEFAULT_MODELS: dict[LLMProviderType, str] = {
     LLMProviderType.OPENAI: "gpt-5.5",
     LLMProviderType.ANTHROPIC: "claude-sonnet-4-6",
-    LLMProviderType.GOOGLE: "gemini-3.5-flash",
+    LLMProviderType.GOOGLE: "gemini-3-flash-preview",
     LLMProviderType.MISTRAL: "mistral-large-latest",
     LLMProviderType.COHERE: "command-a-03-2025",
     LLMProviderType.META_LLAMA: "llama-4-scout",

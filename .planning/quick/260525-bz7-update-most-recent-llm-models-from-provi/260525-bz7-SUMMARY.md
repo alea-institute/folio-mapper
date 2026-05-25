@@ -16,7 +16,7 @@ filled the specific gaps and refreshed the stale curation defaults.
 **Verified current model IDs (web-checked 2026-05-25, not from training data):**
 - **Anthropic** → added `claude-opus-4-7` (latest GA, step-change over 4.6). Sonnet 4.6 / Haiku 4.5 already present.
 - **OpenAI** → added `gpt-5.5` + `gpt-5.5-pro` (released 2026-04-24); default `gpt-5.2` → `gpt-5.5`.
-- **Google** → added `gemini-3.5-flash` (GA flagship) + `gemini-3.1-flash-lite`; default `gemini-2.5-flash` → `gemini-3.5-flash`.
+- **Google** → added `gemini-3.5-flash` (GA flagship) + `gemini-3.1-flash-lite`. Default set to `gemini-3-flash-preview` (Gemini 3 Flash) per operator follow-up. Note: Gemini 3 Flash is still Pre-GA/preview (per Google docs 2026-05-22); the GA flash tier is `gemini-3.5-flash` if a stable default is later preferred.
 
 ## Files modified (4 sync points)
 - `backend/app/services/llm/registry.py` — KNOWN_MODELS (OpenAI/Anthropic/Google appends) + DEFAULT_MODELS (OpenAI, Google, GitHub Models)

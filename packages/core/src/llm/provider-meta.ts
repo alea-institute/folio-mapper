@@ -21,7 +21,7 @@ export const PROVIDER_META: Record<LLMProviderType, ProviderMeta> = {
     type: 'google',
     displayName: 'Google Gemini',
     defaultBaseUrl: 'https://generativelanguage.googleapis.com/v1beta',
-    defaultModel: 'gemini-3.5-flash',
+    defaultModel: 'gemini-3-flash-preview',
     requiresApiKey: true,
     isLocal: false,
   },
