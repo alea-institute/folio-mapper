@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import {
   parseText, testConnection, fetchModels, fetchKnownModels, fetchSyntheticData,
-  BRANCH_COLORS, PROVIDER_META, setLocalToken, EXEMPLARS,
+  BRANCH_COLORS, EXCLUDED_BRANCHES, PROVIDER_META, setLocalToken, EXEMPLARS,
   encryptKey, storeEncryptedKey, removeEncryptedKey, clearVault,
   storeCanary, hasCanary, getVaultMeta,
   triggerOWLUpdateCheck, forceOWLUpdate,
@@ -442,11 +442,15 @@ export function App() {
     mappingState.goToItem(itemIndex);
   }, [mappingState]);
 
-  // Full FOLIO branch list for input-page Branch Options panel
-  const allFolioBranches = Object.values(BRANCH_COLORS).map((b) => ({
-    name: b.name,
-    color: b.color,
-  }));
+  // Full FOLIO branch list for input-page Branch Options panel.
+  // Excluded branches (sandbox / standards-compatibility) are hidden here, matching
+  // the backend get_all_branches() filter used by the mapping-screen branch list.
+  const allFolioBranches = Object.values(BRANCH_COLORS)
+    .filter((b) => !EXCLUDED_BRANCHES.has(b.name))
+    .map((b) => ({
+      name: b.name,
+      color: b.color,
+    }));
 
   // Warmup FOLIO when on confirmation screen
   useFolioWarmup();

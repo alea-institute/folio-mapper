@@ -31,6 +31,18 @@ export const BRANCH_COLORS: Record<string, { name: string; color: string }> = {
   SYSTEM_IDENTIFIERS: { name: 'System Identifiers', color: '#3d4d5a' },
 };
 
+/**
+ * Branch display names to hide from user-facing branch pickers / listings.
+ * Mirrors EXCLUDED_BRANCHES in backend/app/services/branch_config.py (the
+ * source of truth). The color map above intentionally keeps every branch so
+ * any stray concept still resolves a color — exclusion is applied at the
+ * presentation layer, not by dropping entries here.
+ */
+export const EXCLUDED_BRANCHES: ReadonlySet<string> = new Set([
+  'Standards Compatibility',
+  'ZZZ - SANDBOX: UNDER CONSTRUCTION',
+]);
+
 /** Confidence score color thresholds from PRD */
 export function getConfidenceColor(score: number): string {
   if (score >= 90) return '#15803d'; // green-700 - excellent
