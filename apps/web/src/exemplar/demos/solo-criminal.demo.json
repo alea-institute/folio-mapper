@@ -7531,43 +7531,9 @@
                 "score": 36.0
               }
             ]
-          },
-          {
-            "branch": "Standards Compatibility",
-            "branch_color": "#4a5a6a",
-            "candidates": [
-              {
-                "label": "320 Assault, Libel & Slander (PACER NoS)",
-                "iri": "https://folio.openlegalstandard.org/RkqaIyEUGg1YWyeLIwkylI",
-                "iri_hash": "RkqaIyEUGg1YWyeLIwkylI",
-                "definition": "Action alleging intentional acts of assault, libel, trade libel or slander by a private party. (Excludes a government employee)",
-                "synonyms": [],
-                "branch": "Standards Compatibility",
-                "branch_color": "#4a5a6a",
-                "hierarchy_path": [
-                  {
-                    "label": "Standards Compatibility",
-                    "iri_hash": "RB4cFSLB4xvycDlKv73dOg6"
-                  },
-                  {
-                    "label": "PACER Nature of Suit Codes",
-                    "iri_hash": "RCSGywkPBv7f2ACrfTSiirV"
-                  },
-                  {
-                    "label": "03_1 Torts / Personal Injury (PACER NoS)",
-                    "iri_hash": "R723CZDeI1c9CzFdyGi58Xd"
-                  },
-                  {
-                    "label": "320 Assault, Libel & Slander (PACER NoS)",
-                    "iri_hash": "RkqaIyEUGg1YWyeLIwkylI"
-                  }
-                ],
-                "score": 41.0
-              }
-            ]
           }
         ],
-        "total_candidates": 19
+        "total_candidates": 18
       },
       {
         "item_index": 10,
@@ -14186,43 +14152,9 @@
                 "score": 20.0
               }
             ]
-          },
-          {
-            "branch": "Standards Compatibility",
-            "branch_color": "#4a5a6a",
-            "candidates": [
-              {
-                "label": "370 Other Fraud (PACER NoS)",
-                "iri": "https://folio.openlegalstandard.org/RDh5klPaM0KQn7Ll4pP5AuM",
-                "iri_hash": "RDh5klPaM0KQn7Ll4pP5AuM",
-                "definition": "Action primarily based on fraud relating to personal property that cannot be classified under any other nature of suit. (Excludes any property that is not real property)",
-                "synonyms": [],
-                "branch": "Standards Compatibility",
-                "branch_color": "#4a5a6a",
-                "hierarchy_path": [
-                  {
-                    "label": "Standards Compatibility",
-                    "iri_hash": "RB4cFSLB4xvycDlKv73dOg6"
-                  },
-                  {
-                    "label": "PACER Nature of Suit Codes",
-                    "iri_hash": "RCSGywkPBv7f2ACrfTSiirV"
-                  },
-                  {
-                    "label": "03_2 Personal Property (PACER NoS)",
-                    "iri_hash": "RDuTiVtAQgLYmWDV8uln60A"
-                  },
-                  {
-                    "label": "370 Other Fraud (PACER NoS)",
-                    "iri_hash": "RDh5klPaM0KQn7Ll4pP5AuM"
-                  }
-                ],
-                "score": 41.1
-              }
-            ]
           }
         ],
-        "total_candidates": 20
+        "total_candidates": 19
       },
       {
         "item_index": 18,

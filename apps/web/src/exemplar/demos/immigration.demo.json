@@ -8051,43 +8051,9 @@
                 "score": 31.3
               }
             ]
-          },
-          {
-            "branch": "Standards Compatibility",
-            "branch_color": "#4a5a6a",
-            "candidates": [
-              {
-                "label": "460 Deportation (PACER NoS)",
-                "iri": "https://folio.openlegalstandard.org/R8jluc4kG2N47Mx52veAVjk",
-                "iri_hash": "R8jluc4kG2N47Mx52veAVjk",
-                "definition": "Action filed under the Immigration Acts (Habeas Corpus & Review) 8:1101/18:1546",
-                "synonyms": [],
-                "branch": "Standards Compatibility",
-                "branch_color": "#4a5a6a",
-                "hierarchy_path": [
-                  {
-                    "label": "Standards Compatibility",
-                    "iri_hash": "RB4cFSLB4xvycDlKv73dOg6"
-                  },
-                  {
-                    "label": "PACER Nature of Suit Codes",
-                    "iri_hash": "RCSGywkPBv7f2ACrfTSiirV"
-                  },
-                  {
-                    "label": "09 Other Statutes (PACER NoS)",
-                    "iri_hash": "RCLxFZZvTWZmKpUYJa6UMmO"
-                  },
-                  {
-                    "label": "460 Deportation (PACER NoS)",
-                    "iri_hash": "R8jluc4kG2N47Mx52veAVjk"
-                  }
-                ],
-                "score": 66.8
-              }
-            ]
           }
         ],
-        "total_candidates": 19
+        "total_candidates": 18
       },
       {
         "item_index": 11,
@@ -13374,8 +13340,7 @@
     "10": [
       "RVYBDQv9HD2DkAuvbf5Cha",
       "R9jjm7twT3DCFuOof0sGYWF",
-      "R7aFBns3Z2d9MuNI5sDEGxF",
-      "R8jluc4kG2N47Mx52veAVjk"
+      "R7aFBns3Z2d9MuNI5sDEGxF"
     ],
     "11": [
       "RDoc5fkIs4N79QVKf9t11jt"

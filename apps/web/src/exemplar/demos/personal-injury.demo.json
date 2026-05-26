@@ -3004,49 +3004,9 @@
                 "score": 37.6
               }
             ]
-          },
-          {
-            "branch": "ZZZ - SANDBOX: UNDER CONSTRUCTION",
-            "branch_color": "#4a5568",
-            "candidates": [
-              {
-                "label": "Accident Benefits Law",
-                "iri": "https://folio.openlegalstandard.org/RBga8WBazn3ZXEar68Kttaj",
-                "iri_hash": "RBga8WBazn3ZXEar68Kttaj",
-                "definition": "Accident Benefits Law refers to the legal area of study and practice that deals with the compensation and benefits provided to individuals who have been injured in an accident, typically related to automobile insurance.",
-                "synonyms": [
-                  "Accident Benefits Law",
-                  "Direito de benef\u00edcios por acidentes",
-                  "Droit des avantages en cas d'accident",
-                  "Ley de Beneficios por Accidentes",
-                  "Unfallversicherungsrecht",
-                  "\u05d7\u05d5\u05e7 \u05d9\u05ea\u05e8\u05d5\u05ea \u05ea\u05d0\u05d5\u05e0\u05d5\u05ea",
-                  "\u0926\u0941\u0930\u094d\u0918\u091f\u0928\u093e \u0932\u093e\u092d \u0915\u093e\u0928\u0942\u0928",
-                  "\u4e8b\u6545\u798f\u5229\u6cd5",
-                  "\u4e8b\u6545\u88dc\u511f\u6cd5"
-                ],
-                "branch": "ZZZ - SANDBOX: UNDER CONSTRUCTION",
-                "branch_color": "#4a5568",
-                "hierarchy_path": [
-                  {
-                    "label": "ZZZ - SANDBOX: UNDER CONSTRUCTION",
-                    "iri_hash": "R8zL0uhEOQuxBZcdYyS8ORn"
-                  },
-                  {
-                    "label": "Canada Variants",
-                    "iri_hash": "R78xJfSMpJ2ZUUUlYdzfUvC"
-                  },
-                  {
-                    "label": "Accident Benefits Law",
-                    "iri_hash": "RBga8WBazn3ZXEar68Kttaj"
-                  }
-                ],
-                "score": 88.9
-              }
-            ]
           }
         ],
-        "total_candidates": 16
+        "total_candidates": 15
       },
       {
         "item_index": 4,
@@ -13563,43 +13523,9 @@
                 "score": 32.7
               }
             ]
-          },
-          {
-            "branch": "Standards Compatibility",
-            "branch_color": "#4a5a6a",
-            "candidates": [
-              {
-                "label": "320 Assault, Libel & Slander (PACER NoS)",
-                "iri": "https://folio.openlegalstandard.org/RkqaIyEUGg1YWyeLIwkylI",
-                "iri_hash": "RkqaIyEUGg1YWyeLIwkylI",
-                "definition": "Action alleging intentional acts of assault, libel, trade libel or slander by a private party. (Excludes a government employee)",
-                "synonyms": [],
-                "branch": "Standards Compatibility",
-                "branch_color": "#4a5a6a",
-                "hierarchy_path": [
-                  {
-                    "label": "Standards Compatibility",
-                    "iri_hash": "RB4cFSLB4xvycDlKv73dOg6"
-                  },
-                  {
-                    "label": "PACER Nature of Suit Codes",
-                    "iri_hash": "RCSGywkPBv7f2ACrfTSiirV"
-                  },
-                  {
-                    "label": "03_1 Torts / Personal Injury (PACER NoS)",
-                    "iri_hash": "R723CZDeI1c9CzFdyGi58Xd"
-                  },
-                  {
-                    "label": "320 Assault, Libel & Slander (PACER NoS)",
-                    "iri_hash": "RkqaIyEUGg1YWyeLIwkylI"
-                  }
-                ],
-                "score": 44.0
-              }
-            ]
           }
         ],
-        "total_candidates": 20
+        "total_candidates": 19
       },
       {
         "item_index": 18,

@@ -5972,49 +5972,9 @@
                 "score": 34.0
               }
             ]
-          },
-          {
-            "branch": "ZZZ - SANDBOX: UNDER CONSTRUCTION",
-            "branch_color": "#4a5568",
-            "candidates": [
-              {
-                "label": "Custody Law",
-                "iri": "https://folio.openlegalstandard.org/R9v922zEDjLTzShv6ZTmRGm",
-                "iri_hash": "R9v922zEDjLTzShv6ZTmRGm",
-                "definition": "Custody Law refers to the legal rules and regulations that govern the care, control, and maintenance of children in cases of separation or divorce.",
-                "synonyms": [
-                  "Custody Law",
-                  "Droit de garde",
-                  "Lei de cust\u00f3dia",
-                  "Ley de Custodia",
-                  "Sorgerecht",
-                  "\u05d7\u05d5\u05e7 \u05d4\u05d0\u05e4\u05d5\u05d8\u05e8\u05d5\u05e4\u05d5\u05e1",
-                  "\u0915\u0938\u094d\u091f\u0921\u0940 \u0915\u093e\u0928\u0942\u0928",
-                  "\u76d1\u62a4\u6cd5",
-                  "\u76e3\u8b77\u6cd5"
-                ],
-                "branch": "ZZZ - SANDBOX: UNDER CONSTRUCTION",
-                "branch_color": "#4a5568",
-                "hierarchy_path": [
-                  {
-                    "label": "ZZZ - SANDBOX: UNDER CONSTRUCTION",
-                    "iri_hash": "R8zL0uhEOQuxBZcdYyS8ORn"
-                  },
-                  {
-                    "label": "Canada Variants",
-                    "iri_hash": "R78xJfSMpJ2ZUUUlYdzfUvC"
-                  },
-                  {
-                    "label": "Custody Law",
-                    "iri_hash": "R9v922zEDjLTzShv6ZTmRGm"
-                  }
-                ],
-                "score": 88.8
-              }
-            ]
           }
         ],
-        "total_candidates": 17
+        "total_candidates": 16
       },
       {
         "item_index": 7,

@@ -958,3 +958,61 @@ def _make_owl(iri_hash: str, label: str, definition: str, alt_labels: list[str],
     mock.sub_class_of = []
     mock.preferred_label = preferred_label
     return mock
+
+
+def test_run_stage1_drops_excluded_branches():
+    """Stage 1 must not surface candidates from EXCLUDED_BRANCHES.
+
+    The regular-search path (folio_service.search_candidates) already filters
+    excluded branches, but stage 1 pulls candidates from several paths
+    (keyword, see_also, embedding, structural) that do not. A leaked
+    excluded-branch candidate is simulated here via the unscoped fallback;
+    run_stage1's final filter must drop it while keeping clean candidates.
+    """
+    from app.services.pipeline.stage1_filter import run_stage1
+
+    # One segment with no branches -> triggers the unscoped fallback path.
+    prescan = PreScanResult(
+        segments=[PreScanSegment(text="Deportation", branches=[], reasoning="")],
+        raw_text="Deportation",
+    )
+
+    mock_owl_classes = {
+        "Revent": _make_owl("Revent", "Deportation", "A deportation event", []),
+        "Rsandbox": _make_owl("Rsandbox", "460 Deportation (PACER NoS)", "Predecessor code", []),
+    }
+    mock_folio = MagicMock()
+    mock_folio.__getitem__ = lambda self, key: mock_owl_classes.get(key)
+
+    # Fallback search returns one clean candidate and one excluded-branch candidate.
+    fallback = [
+        FolioCandidate(
+            label="Deportation", iri="https://folio.openlegalstandard.org/Revent",
+            iri_hash="Revent", definition="A deportation event", synonyms=[],
+            branch="Event", branch_color="#b91c1c", hierarchy_path=[], score=98.0,
+        ),
+        FolioCandidate(
+            label="460 Deportation (PACER NoS)", iri="https://folio.openlegalstandard.org/Rsandbox",
+            iri_hash="Rsandbox", definition="Predecessor code", synonyms=[],
+            branch="Standards Compatibility", branch_color="#4a5a6a", hierarchy_path=[], score=66.8,
+        ),
+    ]
+
+    branch_by_hash = {"Revent": "Event", "Rsandbox": "Standards Compatibility"}
+
+    with (
+        patch("app.services.pipeline.stage1_filter.get_folio", return_value=mock_folio),
+        patch("app.services.pipeline.stage1_filter.search_candidates", return_value=fallback),
+        patch(
+            "app.services.pipeline.stage1_filter.get_branch_for_class",
+            side_effect=lambda folio, h: branch_by_hash[h],
+        ),
+        patch("app.services.embedding.service.get_embedding_index", return_value=None),
+    ):
+        candidates = run_stage1(mock_folio, prescan)
+
+    branches = {c.branch for c in candidates}
+    hashes = {c.iri_hash for c in candidates}
+    assert "Standards Compatibility" not in branches
+    assert "Rsandbox" not in hashes
+    assert "Revent" in hashes  # clean candidate survives

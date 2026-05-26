@@ -12,6 +12,7 @@ import logging
 from folio import FOLIO
 
 from app.models.pipeline_models import PreScanResult, ScopedCandidate
+from app.services.branch_config import EXCLUDED_BRANCHES
 from app.services.folio_service import (
     LEGAL_TERM_EXPANSIONS,
     _compute_relevance_score,
@@ -348,6 +349,14 @@ def run_stage1(
 
     # Embedding-based candidate discovery: find semantic matches that keyword search missed
     embedding_added = _add_embedding_candidates(folio, prescan.raw_text, best, prescan)
+
+    # Drop excluded branches (e.g. sandbox / standards-compatibility). These can
+    # leak in via keyword, see_also, embedding, or structural search above — none
+    # of those paths filter on branch. The regular-search path applies the same
+    # EXCLUDED_BRANCHES guard (folio_service.py); this keeps the pipeline path in sync
+    # so curated demos stay clean.
+    for iri_hash in [h for h, c in best.items() if c.branch in EXCLUDED_BRANCHES]:
+        del best[iri_hash]
 
     # Sort by score descending and cap at max
     candidates = sorted(best.values(), key=lambda c: c.score, reverse=True)
