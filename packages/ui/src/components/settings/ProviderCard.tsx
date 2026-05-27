@@ -9,6 +9,7 @@ interface ProviderCardProps {
   isLoadingModels: boolean;
   isTesting: boolean;
   isDesktop?: boolean;
+  testMessage?: string;
   onSelect: (provider: LLMProviderType) => void;
   onUpdateConfig: (provider: LLMProviderType, updates: Partial<LLMProviderConfig>) => void;
   onTest: (provider: LLMProviderType) => void;
@@ -48,6 +49,7 @@ export function ProviderCard({
   isLoadingModels,
   isTesting,
   isDesktop,
+  testMessage,
   onSelect,
   onUpdateConfig,
   onTest,
@@ -105,6 +107,11 @@ export function ProviderCard({
             </button>
             {statusIndicator(config.connectionStatus)}
           </div>
+
+          {/* Reason for a failed test — categorized, safe message from the backend */}
+          {config.connectionStatus === 'invalid' && testMessage && (
+            <p className="mt-1 text-xs text-red-600">{testMessage}</p>
+          )}
 
           {/* API key input */}
           {showKeyInput && (

@@ -60,6 +60,7 @@ export function LLMSettings({
   fetchModels,
 }: LLMSettingsProps) {
   const [testingProvider, setTestingProvider] = useState<LLMProviderType | null>(null);
+  const [testMessages, setTestMessages] = useState<Partial<Record<LLMProviderType, string>>>({});
   const [loadingModelsFor, setLoadingModelsFor] = useState<Set<LLMProviderType>>(new Set());
   const [prices, setPrices] = useState<Record<string, number>>({});
   const [saveError, setSaveError] = useState<string | null>(null);
@@ -115,8 +116,10 @@ export function LLMSettings({
           config.model || undefined,
         );
         onSetConnectionStatus(provider, result.success ? 'valid' : 'invalid');
+        setTestMessages((prev) => ({ ...prev, [provider]: result.success ? undefined : result.message }));
       } catch {
         onSetConnectionStatus(provider, 'invalid');
+        setTestMessages((prev) => ({ ...prev, [provider]: 'Connection test failed. Please try again.' }));
       } finally {
         setTestingProvider(null);
       }
@@ -217,6 +220,7 @@ export function LLMSettings({
               isLoadingModels={loadingModelsFor.has(type)}
               isTesting={testingProvider === type}
               isDesktop={isDesktop}
+              testMessage={testMessages[type]}
               onSelect={onSetActiveProvider}
               onUpdateConfig={onUpdateConfig}
               onTest={handleTest}
