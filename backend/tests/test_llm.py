@@ -213,6 +213,67 @@ async def test_test_connection_categorized_messages(
     assert "sk-test" not in data["message"]
 
 
+class _QuotaError(Exception):
+    """Mimics OpenAI's 429 insufficient_quota error."""
+
+    def __init__(self):
+        super().__init__("quota")
+        self.status_code = 429
+        self.code = "insufficient_quota"
+        self.type = "insufficient_quota"
+
+
+class _RateLimitWithRetryAfter(Exception):
+    """Mimics a transient 429 carrying a Retry-After header."""
+
+    def __init__(self, seconds: str):
+        super().__init__("rate limit")
+        self.status_code = 429
+        self.code = "rate_limit_exceeded"
+
+        class _Resp:
+            headers = {"retry-after": seconds}
+
+        self.response = _Resp()
+
+
+@pytest.mark.anyio
+@patch("app.routers.llm.get_provider")
+async def test_test_connection_quota_vs_rate_limit(mock_get_provider, client: AsyncClient):
+    """A 429 from out-of-quota must not tell the user to 'wait and retry'."""
+    mock_provider = AsyncMock()
+    mock_provider.test_connection.side_effect = _QuotaError()
+    mock_get_provider.return_value = mock_provider
+
+    resp = await client.post(
+        "/api/llm/test-connection",
+        json={"provider": "openai", "model": "gpt-4o"},
+        headers={"Authorization": "Bearer sk-test"},
+    )
+    data = resp.json()
+    assert data["success"] is False
+    assert "Out of quota" in data["message"]
+    assert "Waiting won't help" in data["message"]
+
+
+@pytest.mark.anyio
+@patch("app.routers.llm.get_provider")
+async def test_test_connection_rate_limit_surfaces_retry_after(mock_get_provider, client: AsyncClient):
+    mock_provider = AsyncMock()
+    mock_provider.test_connection.side_effect = _RateLimitWithRetryAfter("12")
+    mock_get_provider.return_value = mock_provider
+
+    resp = await client.post(
+        "/api/llm/test-connection",
+        json={"provider": "openai", "model": "gpt-4o"},
+        headers={"Authorization": "Bearer sk-test"},
+    )
+    data = resp.json()
+    assert data["success"] is False
+    assert "Rate limited" in data["message"]
+    assert "12 seconds" in data["message"]
+
+
 @pytest.mark.anyio
 @patch("app.routers.llm.get_provider")
 async def test_test_connection_network_error_message(mock_get_provider, client: AsyncClient):

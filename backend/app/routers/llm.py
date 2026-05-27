@@ -37,6 +37,29 @@ _CONNECTION_ERROR_NAMES = {
 }
 
 
+def _retry_after_seconds(exc: Exception) -> str | None:
+    """Pull the Retry-After header off a provider error, if present."""
+    response = getattr(exc, "response", None)
+    headers = getattr(response, "headers", None)
+    if headers is None:
+        return None
+    try:
+        value = headers.get("retry-after")
+    except Exception:
+        return None
+    return str(value) if value else None
+
+
+def _is_quota_error(exc: Exception) -> bool:
+    """A 429 can mean rate-limited (transient) or out-of-quota (billing).
+
+    Distinguish via the provider's structured error code/type — not the raw
+    message — so we don't leak details.
+    """
+    blob = f"{getattr(exc, 'code', '') or ''} {getattr(exc, 'type', '') or ''}".lower()
+    return "quota" in blob or "insufficient" in blob or "billing" in blob
+
+
 def _categorize_connection_error(exc: Exception) -> str:
     """Map a provider exception to a safe, user-facing reason.
 
@@ -62,7 +85,14 @@ def _categorize_connection_error(exc: Exception) -> str:
         case 408:
             return "The provider timed out. Try again in a moment."
         case 429:
-            return "Rate limited — too many requests. Wait a moment and try again."
+            if _is_quota_error(exc):
+                return (
+                    "Out of quota — this key's account has no remaining credits. "
+                    "Waiting won't help; check your plan & billing with the provider."
+                )
+            retry = _retry_after_seconds(exc)
+            wait = f"about {retry} seconds" if retry else "30–60 seconds"
+            return f"Rate limited — too many requests. Wait {wait} and try again."
         case 400 | 422:
             return "Request rejected — the selected model may not support these settings."
         case s if isinstance(s, int) and 500 <= s < 600:
