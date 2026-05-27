@@ -1,9 +1,40 @@
 """OpenAI-compatible provider. Covers OpenAI, Mistral, Meta Llama, Ollama, LM Studio, Custom."""
 
+import re
+
 import openai
 
 from app.models.llm_models import ModelInfo
 from app.services.llm.base import BaseLLMProvider
+
+# OpenAI reasoning models (o-series and the gpt-5 family) reject the `max_tokens`
+# parameter — they require `max_completion_tokens` — and only accept the default
+# temperature (1). Detect them by id so we can translate params before sending.
+_REASONING_MODEL_RE = re.compile(r"^(o\d|gpt-?5)", re.IGNORECASE)
+
+
+def _is_reasoning_model(model: str | None) -> bool:
+    if not model:
+        return False
+    # Strip any provider prefix (e.g. "openai/gpt-5.5" -> "gpt-5.5").
+    name = model.split("/")[-1].strip()
+    return bool(_REASONING_MODEL_RE.match(name))
+
+
+def _normalize_kwargs(model: str | None, kwargs: dict) -> dict:
+    """Translate chat-completion kwargs for OpenAI reasoning models.
+
+    - rename `max_tokens` -> `max_completion_tokens`
+    - drop non-default `temperature` (reasoning models only allow the default of 1)
+    """
+    if not _is_reasoning_model(model):
+        return kwargs
+    out = dict(kwargs)
+    if "max_tokens" in out:
+        out.setdefault("max_completion_tokens", out.pop("max_tokens"))
+    if out.get("temperature") not in (None, 1):
+        out.pop("temperature", None)
+    return out
 
 
 class OpenAICompatProvider(BaseLLMProvider):
@@ -15,11 +46,11 @@ class OpenAICompatProvider(BaseLLMProvider):
             resp = await client.chat.completions.create(
                 model=self.model,
                 messages=[{"role": "user", "content": "Hi"}],
-                max_tokens=1,
+                **_normalize_kwargs(self.model, {"max_tokens": 1}),
             )
             return bool(resp.choices)
         else:
-            models = await client.models.list()
+            await client.models.list()
             return True
 
     async def list_models(self) -> list[ModelInfo]:
@@ -37,6 +68,6 @@ class OpenAICompatProvider(BaseLLMProvider):
         resp = await client.chat.completions.create(
             model=self.model,
             messages=messages,
-            **kwargs,
+            **_normalize_kwargs(self.model, kwargs),
         )
         return resp.choices[0].message.content or ""
