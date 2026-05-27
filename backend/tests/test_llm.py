@@ -170,6 +170,68 @@ async def test_test_connection_failure(mock_get_provider, client: AsyncClient):
     assert data["message"] == "Connection test failed"
 
 
+class _StatusError(Exception):
+    """Mimics provider SDK errors that carry an HTTP status code."""
+
+    def __init__(self, status_code: int):
+        super().__init__(f"HTTP {status_code}")
+        self.status_code = status_code
+
+
+@pytest.mark.anyio
+@pytest.mark.parametrize(
+    "status_code,expected_fragment",
+    [
+        (401, "Authentication failed"),
+        (403, "Access denied"),
+        (404, "Model not found"),
+        (429, "Rate limited"),
+        (400, "model may not support"),
+        (500, "server error"),
+    ],
+)
+@patch("app.routers.llm.get_provider")
+async def test_test_connection_categorized_messages(
+    mock_get_provider, client: AsyncClient, status_code, expected_fragment
+):
+    """Failed tests return a safe, categorized reason — not a generic message."""
+    mock_provider = AsyncMock()
+    mock_provider.test_connection.side_effect = _StatusError(status_code)
+    mock_get_provider.return_value = mock_provider
+
+    resp = await client.post(
+        "/api/llm/test-connection",
+        json={"provider": "openai", "model": "gpt-4o"},
+        headers={"Authorization": "Bearer sk-test"},
+    )
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["success"] is False
+    assert expected_fragment in data["message"]
+    # Must never leak the raw exception text or the key
+    assert "HTTP" not in data["message"]
+    assert "sk-test" not in data["message"]
+
+
+@pytest.mark.anyio
+@patch("app.routers.llm.get_provider")
+async def test_test_connection_network_error_message(mock_get_provider, client: AsyncClient):
+    """Connection-level failures map to a network message."""
+    err = type("APIConnectionError", (Exception,), {})("boom")
+    mock_provider = AsyncMock()
+    mock_provider.test_connection.side_effect = err
+    mock_get_provider.return_value = mock_provider
+
+    resp = await client.post(
+        "/api/llm/test-connection",
+        json={"provider": "openai"},
+        headers={"Authorization": "Bearer sk-test"},
+    )
+    data = resp.json()
+    assert data["success"] is False
+    assert "Couldn't reach the provider" in data["message"]
+
+
 @pytest.mark.anyio
 @patch("app.routers.llm.get_provider")
 async def test_list_models(mock_get_provider, client: AsyncClient):
