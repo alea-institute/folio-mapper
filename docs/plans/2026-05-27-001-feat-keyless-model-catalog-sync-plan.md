@@ -1,7 +1,7 @@
 ---
 title: Auto-update model catalog from keyless aggregators
 type: feat
-status: active
+status: completed
 date: 2026-05-27
 origin: docs/brainstorms/2026-05-27-keyless-model-catalog-brainstorm.md
 ---
