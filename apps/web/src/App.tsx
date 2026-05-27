@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import {
-  parseText, testConnection, fetchModels, fetchKnownModels, fetchSyntheticData,
+  parseText, testConnection, fetchModels, probeModels, fetchKnownModels, fetchSyntheticData,
   BRANCH_COLORS, EXCLUDED_BRANCHES, PROVIDER_META, setLocalToken, EXEMPLARS,
   encryptKey, storeEncryptedKey, removeEncryptedKey, clearVault,
   storeCanary, hasCanary, getVaultMeta,
@@ -695,6 +695,7 @@ export function App() {
       onClose={() => setShowSettings(false)}
       testConnection={testConnection}
       fetchModels={fetchModels}
+      probeModels={probeModels}
     />
   );
 

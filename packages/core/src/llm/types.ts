@@ -36,7 +36,18 @@ export interface ConnectionTestResponse {
   success: boolean;
   message: string;
   model: string | null;
+  /** Machine-readable failure category (e.g. 'auth', 'model_unavailable', 'quota'). */
+  reason?: string | null;
 }
+
+export interface ModelProbeResult {
+  model: string;
+  available: boolean;
+  reason?: string | null;
+}
+
+/** Failure categories specific to the chosen model — other models may still work. */
+export const MODEL_SPECIFIC_REASONS = ['model_unavailable', 'access', 'bad_request'];
 
 export interface ProviderMeta {
   type: LLMProviderType;

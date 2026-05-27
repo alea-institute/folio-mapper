@@ -1,5 +1,6 @@
 """LLM provider API endpoints."""
 
+import asyncio
 import logging
 import os
 
@@ -10,6 +11,9 @@ from app.models.llm_models import (
     ConnectionTestResponse,
     ModelInfo,
     ModelListRequest,
+    ModelProbeRequest,
+    ModelProbeResponse,
+    ModelProbeResult,
 )
 from app.rate_limit import limiter
 from app.services.auth import extract_api_key
@@ -60,15 +64,21 @@ def _is_quota_error(exc: Exception) -> bool:
     return "quota" in blob or "insufficient" in blob or "billing" in blob
 
 
-def _categorize_connection_error(exc: Exception) -> str:
-    """Map a provider exception to a safe, user-facing reason.
+# Failure categories that are specific to the chosen model (other models with the
+# same key may still work) — the client uses these to decide whether to probe.
+MODEL_SPECIFIC_REASONS = {"model_unavailable", "access", "bad_request"}
 
-    Returns a static message only — never the raw exception text or the key —
-    so we stay informative without leaking sensitive details (see security
-    hardening). The full exception is still logged server-side.
+
+def _categorize_connection_error(exc: Exception) -> tuple[str, str]:
+    """Map a provider exception to a safe (message, reason) pair.
+
+    The message is a static string only — never the raw exception text or the
+    key — so we stay informative without leaking sensitive details (see security
+    hardening). `reason` is a machine-readable category. The full exception is
+    still logged server-side.
     """
     if type(exc).__name__ in _CONNECTION_ERROR_NAMES:
-        return "Couldn't reach the provider — check your network connection or the base URL."
+        return ("Couldn't reach the provider — check your network connection or the base URL.", "network")
 
     status = getattr(exc, "status_code", None)
     if status is None:
@@ -77,28 +87,29 @@ def _categorize_connection_error(exc: Exception) -> str:
 
     match status:
         case 401:
-            return "Authentication failed — the API key was rejected. Double-check the key."
+            return ("Authentication failed — the API key was rejected. Double-check the key.", "auth")
         case 403:
-            return "Access denied — this key isn't permitted to use this model or endpoint."
+            return ("Access denied — this key isn't permitted to use this model or endpoint.", "access")
         case 404:
-            return "Model not found — it may not exist or isn't available to your account."
+            return ("Model not found — it may not exist or isn't available to your account.", "model_unavailable")
         case 408:
-            return "The provider timed out. Try again in a moment."
+            return ("The provider timed out. Try again in a moment.", "timeout")
         case 429:
             if _is_quota_error(exc):
                 return (
                     "Out of quota — this key's account has no remaining credits. "
-                    "Waiting won't help; check your plan & billing with the provider."
+                    "Waiting won't help; check your plan & billing with the provider.",
+                    "quota",
                 )
             retry = _retry_after_seconds(exc)
             wait = f"about {retry} seconds" if retry else "30–60 seconds"
-            return f"Rate limited — too many requests. Wait {wait} and try again."
+            return (f"Rate limited — too many requests. Wait {wait} and try again.", "rate_limit")
         case 400 | 422:
-            return "Request rejected — the selected model may not support these settings."
+            return ("Request rejected — the selected model may not support these settings.", "bad_request")
         case s if isinstance(s, int) and 500 <= s < 600:
-            return "The provider reported a server error. Try again shortly."
+            return ("The provider reported a server error. Try again shortly.", "server")
 
-    return "Connection test failed"
+    return ("Connection test failed", "unknown")
 
 
 @router.post("/test-connection", response_model=ConnectionTestResponse)
@@ -124,10 +135,47 @@ async def test_connection(
         )
     except Exception as exc:
         logger.exception("Connection test failed for provider %s", req.provider)
+        message, reason = _categorize_connection_error(exc)
         return ConnectionTestResponse(
             success=False,
-            message=_categorize_connection_error(exc),
+            message=message,
+            reason=reason,
         )
+
+
+async def _probe_model(
+    provider, api_key: str | None, base_url: str | None, model: str, sem: asyncio.Semaphore
+) -> ModelProbeResult:
+    """Test a single model with the given key. Failures are categorized, not raised."""
+    async with sem:
+        try:
+            client = get_provider(provider_type=provider, api_key=api_key, base_url=base_url, model=model)
+            ok = await asyncio.wait_for(client.test_connection(), timeout=20)
+            return ModelProbeResult(model=model, available=bool(ok))
+        except Exception as exc:
+            _, reason = _categorize_connection_error(exc)
+            return ModelProbeResult(model=model, available=False, reason=reason)
+
+
+@router.post("/probe-models", response_model=ModelProbeResponse)
+@limiter.limit("6/minute")
+async def probe_models(
+    req: ModelProbeRequest,
+    request: Request,
+    api_key: str | None = Depends(extract_api_key),
+) -> ModelProbeResponse:
+    """Probe a set of models with the given key, reporting which are usable.
+
+    Triggered by the client after a model-specific connection failure so the
+    user can see which other models their key actually works with. Concurrency
+    is bounded to avoid tripping the provider's rate limit.
+    """
+    models = req.models[:40]  # safety cap
+    sem = asyncio.Semaphore(4)
+    results = await asyncio.gather(
+        *(_probe_model(req.provider, api_key, req.base_url, m, sem) for m in models)
+    )
+    return ModelProbeResponse(results=list(results))
 
 
 @router.get("/key-status")

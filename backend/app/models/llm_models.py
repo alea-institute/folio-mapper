@@ -31,11 +31,30 @@ class ConnectionTestResponse(BaseModel):
     success: bool
     message: str
     model: str | None = None
+    # Machine-readable failure category so the client can react (e.g. probe other
+    # models on a model-specific failure). None on success.
+    reason: str | None = None
 
 
 class ModelListRequest(BaseModel):
     provider: LLMProviderType
     base_url: str | None = None
+
+
+class ModelProbeRequest(BaseModel):
+    provider: LLMProviderType
+    base_url: str | None = None
+    models: list[str]
+
+
+class ModelProbeResult(BaseModel):
+    model: str
+    available: bool
+    reason: str | None = None
+
+
+class ModelProbeResponse(BaseModel):
+    results: list[ModelProbeResult]
 
 
 class ModelInfo(BaseModel):

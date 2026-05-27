@@ -295,6 +295,52 @@ async def test_test_connection_network_error_message(mock_get_provider, client: 
 
 @pytest.mark.anyio
 @patch("app.routers.llm.get_provider")
+async def test_test_connection_failure_includes_reason(mock_get_provider, client: AsyncClient):
+    """Failure responses carry a machine-readable reason category."""
+    mock_provider = AsyncMock()
+    mock_provider.test_connection.side_effect = _StatusError(404)
+    mock_get_provider.return_value = mock_provider
+
+    resp = await client.post(
+        "/api/llm/test-connection",
+        json={"provider": "openai", "model": "gpt-5.5"},
+        headers={"Authorization": "Bearer sk-test"},
+    )
+    data = resp.json()
+    assert data["success"] is False
+    assert data["reason"] == "model_unavailable"
+
+
+@pytest.mark.anyio
+@patch("app.routers.llm.get_provider")
+async def test_probe_models_reports_per_model_availability(mock_get_provider, client: AsyncClient):
+    """probe-models returns availability per model using the supplied key."""
+
+    def provider_factory(*, provider_type, api_key, base_url, model):
+        p = AsyncMock()
+        if model == "gpt-4o-mini":
+            p.test_connection.return_value = True
+        else:
+            p.test_connection.side_effect = _StatusError(404)
+        return p
+
+    mock_get_provider.side_effect = provider_factory
+
+    resp = await client.post(
+        "/api/llm/probe-models",
+        json={"provider": "openai", "models": ["gpt-4o-mini", "gpt-5.5", "o4-mini"]},
+        headers={"Authorization": "Bearer sk-test"},
+    )
+    assert resp.status_code == 200
+    results = {r["model"]: r for r in resp.json()["results"]}
+    assert results["gpt-4o-mini"]["available"] is True
+    assert results["gpt-5.5"]["available"] is False
+    assert results["gpt-5.5"]["reason"] == "model_unavailable"
+    assert results["o4-mini"]["available"] is False
+
+
+@pytest.mark.anyio
+@patch("app.routers.llm.get_provider")
 async def test_list_models(mock_get_provider, client: AsyncClient):
     mock_provider = AsyncMock()
     mock_provider.list_models.return_value = MOCK_MODELS

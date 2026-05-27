@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
-import type { ConnectionStatus, LLMProviderConfig, LLMProviderType, LlamafileStatus as LlamafileStatusType, ModelInfo, ModelStatus } from '@folio-mapper/core';
-import { CLOUD_PROVIDERS, LOCAL_PROVIDERS, PROVIDER_META } from '@folio-mapper/core';
+import type { ConnectionStatus, LLMProviderConfig, LLMProviderType, LlamafileStatus as LlamafileStatusType, ModelInfo, ModelProbeResult, ModelStatus } from '@folio-mapper/core';
+import { CLOUD_PROVIDERS, LOCAL_PROVIDERS, MODEL_SPECIFIC_REASONS, PROVIDER_META } from '@folio-mapper/core';
 import { ProviderCard } from './ProviderCard';
 import { LlamafileStatus } from './LlamafileStatus';
 import { LlamafileModelPicker } from './LlamafileModelPicker';
@@ -35,6 +35,12 @@ interface LLMSettingsProps {
     apiKey?: string,
     baseUrl?: string,
   ) => Promise<ModelInfo[]>;
+  probeModels: (
+    provider: LLMProviderType,
+    models: string[],
+    apiKey?: string,
+    baseUrl?: string,
+  ) => Promise<ModelProbeResult[]>;
 }
 
 export function LLMSettings({
@@ -58,9 +64,14 @@ export function LLMSettings({
   onClose,
   testConnection,
   fetchModels,
+  probeModels,
 }: LLMSettingsProps) {
   const [testingProvider, setTestingProvider] = useState<LLMProviderType | null>(null);
   const [testMessages, setTestMessages] = useState<Partial<Record<LLMProviderType, string>>>({});
+  const [probeResults, setProbeResults] = useState<
+    Partial<Record<LLMProviderType, Record<string, { available: boolean; reason?: string | null }>>>
+  >({});
+  const [probingProvider, setProbingProvider] = useState<LLMProviderType | null>(null);
   const [loadingModelsFor, setLoadingModelsFor] = useState<Set<LLMProviderType>>(new Set());
   const [prices, setPrices] = useState<Record<string, number>>({});
   const [saveError, setSaveError] = useState<string | null>(null);
@@ -108,6 +119,8 @@ export function LLMSettings({
     async (provider: LLMProviderType) => {
       const config = configs[provider];
       setTestingProvider(provider);
+      // Clear any prior probe results for a fresh test.
+      setProbeResults((prev) => ({ ...prev, [provider]: undefined }));
       try {
         const result = await testConnection(
           provider,
@@ -117,6 +130,28 @@ export function LLMSettings({
         );
         onSetConnectionStatus(provider, result.success ? 'valid' : 'invalid');
         setTestMessages((prev) => ({ ...prev, [provider]: result.success ? undefined : result.message }));
+
+        // On a model-specific failure, probe the other models so the user can
+        // see which ones their key actually works with.
+        const models = (modelsByProvider[provider] || []).map((m) => m.id);
+        if (!result.success && result.reason && MODEL_SPECIFIC_REASONS.includes(result.reason) && models.length > 1) {
+          setProbingProvider(provider);
+          try {
+            const probed = await probeModels(
+              provider,
+              models,
+              config.apiKey || undefined,
+              config.baseUrl || undefined,
+            );
+            const map: Record<string, { available: boolean; reason?: string | null }> = {};
+            for (const r of probed) map[r.model] = { available: r.available, reason: r.reason };
+            setProbeResults((prev) => ({ ...prev, [provider]: map }));
+          } catch {
+            // Probe is best-effort; leave the single test message in place.
+          } finally {
+            setProbingProvider(null);
+          }
+        }
       } catch {
         onSetConnectionStatus(provider, 'invalid');
         setTestMessages((prev) => ({ ...prev, [provider]: 'Connection test failed. Please try again.' }));
@@ -124,7 +159,7 @@ export function LLMSettings({
         setTestingProvider(null);
       }
     },
-    [configs, testConnection, onSetConnectionStatus],
+    [configs, modelsByProvider, testConnection, probeModels, onSetConnectionStatus],
   );
 
   const handleRefreshModels = useCallback(
@@ -221,6 +256,8 @@ export function LLMSettings({
               isTesting={testingProvider === type}
               isDesktop={isDesktop}
               testMessage={testMessages[type]}
+              probeResults={probeResults[type]}
+              isProbing={probingProvider === type}
               onSelect={onSetActiveProvider}
               onUpdateConfig={onUpdateConfig}
               onTest={handleTest}

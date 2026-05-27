@@ -10,6 +10,8 @@ interface ProviderCardProps {
   isTesting: boolean;
   isDesktop?: boolean;
   testMessage?: string;
+  probeResults?: Record<string, { available: boolean; reason?: string | null }>;
+  isProbing?: boolean;
   onSelect: (provider: LLMProviderType) => void;
   onUpdateConfig: (provider: LLMProviderType, updates: Partial<LLMProviderConfig>) => void;
   onTest: (provider: LLMProviderType) => void;
@@ -50,6 +52,8 @@ export function ProviderCard({
   isTesting,
   isDesktop,
   testMessage,
+  probeResults,
+  isProbing,
   onSelect,
   onUpdateConfig,
   onTest,
@@ -258,12 +262,17 @@ export function ProviderCard({
                 <option value={config.model}>{config.model}</option>
               )}
               {!config.model && <option value="">Select a model...</option>}
-              {models.map((m) => (
-                <option key={m.id} value={m.id}>
-                  {m.name}
-                  {m.context_window ? ` (${Math.round(m.context_window / 1000)}K)` : ''}
-                </option>
-              ))}
+              {models.map((m) => {
+                const probe = probeResults?.[m.id];
+                const mark = probe ? (probe.available ? ' ✓' : ' ✗') : '';
+                return (
+                  <option key={m.id} value={m.id}>
+                    {m.name}
+                    {m.context_window ? ` (${Math.round(m.context_window / 1000)}K)` : ''}
+                    {mark}
+                  </option>
+                );
+              })}
             </select>
             <button
               onClick={() => onRefreshModels(meta.type)}
@@ -274,6 +283,45 @@ export function ProviderCard({
               {isLoadingModels ? '...' : '↻'}
             </button>
           </div>
+
+          {/* Which models work with this key — shown after a model-specific test failure */}
+          {isProbing && (
+            <div className="mt-1 ml-12 flex items-center gap-1.5 text-xs text-gray-500">
+              <svg className="h-3 w-3 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              </svg>
+              Checking which models work with your key…
+            </div>
+          )}
+          {!isProbing && probeResults && (() => {
+            const available = models.filter((m) => probeResults[m.id]?.available);
+            const currentUnavailable =
+              !!config.model && probeResults[config.model] && !probeResults[config.model].available;
+            if (available.length === 0) {
+              return (
+                <div className="mt-1 ml-12 text-xs text-amber-600">
+                  None of the listed models worked with this key.
+                </div>
+              );
+            }
+            return (
+              <div className="mt-1 ml-12 text-xs text-green-700">
+                <span className="font-medium">&#10003; Works with your key:</span>{' '}
+                {available.map((m) => m.name).join(', ')}
+                {currentUnavailable && (
+                  <button
+                    onClick={() =>
+                      onUpdateConfig(meta.type, { model: available[0].id, connectionStatus: 'untested' })
+                    }
+                    className="ml-2 font-medium text-blue-600 hover:underline"
+                  >
+                    Use {available[0].name}
+                  </button>
+                )}
+              </div>
+            );
+          })()}
 
           {/* Per-model cost estimate */}
           {costLabel && (
