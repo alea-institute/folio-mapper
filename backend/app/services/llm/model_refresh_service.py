@@ -22,6 +22,8 @@ import threading
 from datetime import datetime, timezone
 
 from app.models.llm_models import LLMProviderType, ModelInfo
+from app.services.llm import model_catalog_sources
+from app.services.llm.model_catalog_sources import fetch_aggregator_catalog, get_aggregator_status
 from app.services.llm.registry import (
     KNOWN_MODELS,
     PROVIDER_ENV_VAR,
@@ -37,6 +39,7 @@ logger = logging.getLogger(__name__)
 _lock = threading.Lock()
 _timer: threading.Timer | None = None
 _cache: dict[str, list[ModelInfo]] = {}
+_cache_source: dict[str, str] = {}  # provider value -> "env" | "aggregator"
 _provider_status: dict[str, str] = {}  # provider value -> "ok" | "error" | "skipped"
 _last_refresh_time: str | None = None
 _refresh_status: str = "idle"  # idle | refreshing | ok | error
@@ -67,48 +70,95 @@ def _providers_with_env_keys() -> list[LLMProviderType]:
     return [p for p, var in PROVIDER_ENV_VAR.items() if os.environ.get(var)]
 
 
-async def _refresh_provider(provider: LLMProviderType) -> None:
-    """Fetch + cache live models for a single provider. Failures are isolated."""
+def _union_with_curated(provider: LLMProviderType, aggregator_models: list[ModelInfo]) -> list[ModelInfo]:
+    """Union curated floor with new aggregator models.
+
+    Every curated model survives (curated metadata wins for known ids); only
+    aggregator models whose id isn't already curated are appended (in the
+    source's newest-first order). This guarantees the modality filter can never
+    *remove* a known-good model, only fail to add one.
+    """
+    curated = KNOWN_MODELS.get(provider, [])
+    curated_ids = {m.id for m in curated}
+    new_models = [m for m in aggregator_models if m.id not in curated_ids]
+    return list(curated) + new_models
+
+
+async def _refresh_env_provider(
+    provider: LLMProviderType, new_cache: dict[str, list[ModelInfo]], new_source: dict[str, str]
+) -> None:
+    """Fetch live models for an env-keyed provider into the new cache. Isolated."""
+    pv = provider.value
     try:
         client = get_provider(provider_type=provider, api_key=None)
         live = await client.list_models()
         if live:
-            _cache[provider.value] = sort_and_enrich_models(live, provider)
-            _provider_status[provider.value] = "ok"
-            logger.info("Model refresh: %s -> %d models", provider.value, len(live))
-        else:
-            _provider_status[provider.value] = "error"
+            new_cache[pv] = sort_and_enrich_models(live, provider)
+            new_source[pv] = "env"
+            _provider_status[pv] = "ok"
+            logger.info("Model refresh: %s -> %d models (env)", pv, len(live))
+            return
+        _provider_status[pv] = "error"
     except Exception as e:
-        # Keep any previously cached list; just record the failure.
-        _provider_status[provider.value] = "error"
-        logger.warning("Model refresh failed for %s: %s", provider.value, e)
+        _provider_status[pv] = "error"
+        logger.warning("Model refresh failed for %s: %s", pv, e)
+    # Preserve last-good env list (if any) so a transient failure doesn't regress.
+    if _cache_source.get(pv) == "env" and _cache.get(pv):
+        new_cache[pv] = _cache[pv]
+        new_source[pv] = "env"
 
 
-async def _refresh_all() -> None:
-    providers = _providers_with_env_keys()
-    if not providers:
-        logger.info("Model refresh: no providers with env-var keys; nothing to poll")
-        return
-    await asyncio.gather(*(_refresh_provider(p) for p in providers))
+async def _refresh_all() -> tuple[dict[str, list[ModelInfo]], dict[str, str]]:
+    """Build a fresh cache: env-live for env-keyed providers, aggregator for the rest.
+
+    Returns (cache, source). The two passes are disjoint per cycle (env XOR
+    aggregator), and the fresh dict is swapped in atomically by the caller — so
+    providers that switched ownership are evicted automatically.
+    """
+    new_cache: dict[str, list[ModelInfo]] = {}
+    new_source: dict[str, str] = {}
+    env_keyed = set(_providers_with_env_keys())
+
+    # 1. Env-keyed providers — real account access wins.
+    if env_keyed:
+        await asyncio.gather(*(_refresh_env_provider(p, new_cache, new_source) for p in env_keyed))
+
+    # 2. Aggregator — only for providers WITHOUT an env key (env-live always wins).
+    #    fetch_aggregator_catalog uses blocking urllib, so run it off the loop.
+    aggregator = await asyncio.to_thread(fetch_aggregator_catalog)
+    for provider, models in aggregator.items():
+        if provider in env_keyed or not models:
+            continue
+        unioned = _union_with_curated(provider, models)
+        if unioned:
+            new_cache[provider.value] = unioned
+            new_source[provider.value] = "aggregator"
+
+    return new_cache, new_source
 
 
-def _refresh_loop() -> None:
-    """Run one refresh cycle and reschedule. Runs in a timer thread."""
-    global _refresh_status, _last_refresh_time
-
-    if _disabled():
-        return
+def _do_refresh() -> None:
+    """Run one refresh cycle and atomically swap in the new cache."""
+    global _refresh_status, _last_refresh_time, _cache, _cache_source
 
     with _lock:
         _refresh_status = "refreshing"
         try:
-            asyncio.run(_refresh_all())
+            new_cache, new_source = asyncio.run(_refresh_all())
+            _cache = new_cache  # atomic reference swap — readers see old or new, never partial
+            _cache_source = new_source
             _last_refresh_time = datetime.now(timezone.utc).isoformat()
             _refresh_status = "ok"
         except Exception as e:
             _refresh_status = "error"
             logger.error("Model refresh loop error: %s", e, exc_info=True)
 
+
+def _refresh_loop() -> None:
+    """Run one refresh cycle and reschedule. Runs in a timer thread."""
+    if _disabled():
+        return
+    _do_refresh()
     _schedule_next()
 
 
@@ -161,22 +211,25 @@ def get_cached_models(provider: LLMProviderType) -> list[ModelInfo] | None:
 
 
 def merged_known_models() -> dict[str, list[ModelInfo]]:
-    """KNOWN_MODELS with live-refreshed lists layered over the static catalog."""
+    """KNOWN_MODELS with refreshed lists (env-live or aggregator) layered over it."""
     merged: dict[str, list[ModelInfo]] = {p.value: list(models) for p, models in KNOWN_MODELS.items()}
-    for provider_value, models in _cache.items():
+    cache = _cache  # bind once — the refresh swaps the reference atomically
+    for provider_value, models in cache.items():
         if models:
             merged[provider_value] = models
     return merged
 
 
 def get_refresh_status() -> dict:
-    """Return current refresh status for the API."""
+    """Return current refresh status + per-provider provenance for the API."""
     return {
         "refresh_status": _refresh_status,
         "last_refresh_time": _last_refresh_time,
         "interval_seconds": _interval(),
         "disabled": _disabled(),
         "providers": dict(_provider_status),
+        "provenance": dict(_cache_source),  # provider value -> "env" | "aggregator"
+        "aggregator": get_aggregator_status(),
     }
 
 
@@ -188,9 +241,11 @@ def trigger_model_refresh() -> dict:
 
 def reset_model_refresher() -> None:
     """Reset all state. Used in tests."""
-    global _timer, _cache, _provider_status, _last_refresh_time, _refresh_status
+    global _timer, _cache, _cache_source, _provider_status, _last_refresh_time, _refresh_status
     stop_model_refresher()
     _cache = {}
+    _cache_source = {}
     _provider_status = {}
     _last_refresh_time = None
     _refresh_status = "idle"
+    model_catalog_sources.reset()
