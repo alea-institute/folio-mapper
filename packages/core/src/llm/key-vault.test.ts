@@ -1,16 +1,17 @@
+import 'fake-indexeddb/auto';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { IDBFactory } from 'fake-indexeddb';
 import {
-  encryptKey,
-  decryptKey,
+  encryptKeyDevice,
+  decryptKeyDevice,
   storeEncryptedKey,
   loadEncryptedKey,
   removeEncryptedKey,
   clearVault,
   getVaultMeta,
-  storeCanary,
-  validateCanary,
-  hasCanary,
+  hasLegacyVault,
 } from './key-vault';
+import { hasDeviceKey, clearDeviceKey } from './device-key';
 
 // Mock localStorage
 const store: Record<string, string> = {};
@@ -21,26 +22,42 @@ beforeEach(() => {
     setItem: (key: string, value: string) => { store[key] = value; },
     removeItem: (key: string) => { delete store[key]; },
   });
+  // Fresh IndexedDB per test so the device key is regenerated
+  vi.stubGlobal('indexedDB', new IDBFactory());
 });
 
-describe('key-vault', () => {
+describe('key-vault (device key)', () => {
   it('encrypts and decrypts a key roundtrip', async () => {
-    const payload = await encryptKey('sk-test-12345', 'mypassphrase');
-    expect(payload.salt).toBeTruthy();
+    const payload = await encryptKeyDevice('sk-test-12345');
     expect(payload.iv).toBeTruthy();
     expect(payload.cipher).toBeTruthy();
+    expect(payload.salt).toBeUndefined();
 
-    const result = await decryptKey(payload, 'mypassphrase');
+    const result = await decryptKeyDevice(payload);
     expect(result).toBe('sk-test-12345');
   });
 
-  it('throws on wrong passphrase', async () => {
-    const payload = await encryptKey('sk-test-12345', 'correct-pass');
-    await expect(decryptKey(payload, 'wrong-pass')).rejects.toThrow();
+  it('generates the device key on first use and reuses it', async () => {
+    expect(await hasDeviceKey()).toBe(false);
+    await encryptKeyDevice('sk-1');
+    expect(await hasDeviceKey()).toBe(true);
+  });
+
+  it('fails to decrypt once the device key is cleared', async () => {
+    const payload = await encryptKeyDevice('sk-secret');
+    await clearDeviceKey();
+    // A fresh device key is generated and cannot decrypt the old ciphertext
+    await expect(decryptKeyDevice(payload)).rejects.toThrow();
+  });
+
+  it('fails to decrypt a tampered payload', async () => {
+    const payload = await encryptKeyDevice('sk-secret');
+    const tampered = { ...payload, cipher: payload.cipher.slice(0, -4) + 'AAAA' };
+    await expect(decryptKeyDevice(tampered)).rejects.toThrow();
   });
 
   it('stores and loads encrypted keys', async () => {
-    const payload = await encryptKey('sk-openai-key', 'pass');
+    const payload = await encryptKeyDevice('sk-openai-key');
     storeEncryptedKey('openai', payload);
 
     const loaded = loadEncryptedKey('openai');
@@ -53,10 +70,8 @@ describe('key-vault', () => {
   });
 
   it('tracks providers in vault meta', async () => {
-    const p1 = await encryptKey('key1', 'pass');
-    const p2 = await encryptKey('key2', 'pass');
-    storeEncryptedKey('openai', p1);
-    storeEncryptedKey('anthropic', p2);
+    storeEncryptedKey('openai', await encryptKeyDevice('key1'));
+    storeEncryptedKey('anthropic', await encryptKeyDevice('key2'));
 
     const meta = getVaultMeta();
     expect(meta.providers).toContain('openai');
@@ -64,42 +79,29 @@ describe('key-vault', () => {
   });
 
   it('removes a key and updates meta', async () => {
-    const payload = await encryptKey('key1', 'pass');
-    storeEncryptedKey('openai', payload);
+    storeEncryptedKey('openai', await encryptKeyDevice('key1'));
     removeEncryptedKey('openai');
 
     expect(loadEncryptedKey('openai')).toBeNull();
     expect(getVaultMeta().providers).not.toContain('openai');
   });
 
-  it('clears entire vault', async () => {
-    const p1 = await encryptKey('key1', 'pass');
-    const p2 = await encryptKey('key2', 'pass');
-    storeEncryptedKey('openai', p1);
-    storeEncryptedKey('anthropic', p2);
-    await storeCanary('pass');
+  it('clears entire vault including legacy canary', async () => {
+    storeEncryptedKey('openai', await encryptKeyDevice('key1'));
+    storeEncryptedKey('anthropic', await encryptKeyDevice('key2'));
+    localStorage.setItem('folio-mapper-vault-canary', '{}');
 
     clearVault();
 
     expect(getVaultMeta().providers).toEqual([]);
     expect(loadEncryptedKey('openai')).toBeNull();
     expect(loadEncryptedKey('anthropic')).toBeNull();
-    expect(hasCanary()).toBe(false);
+    expect(hasLegacyVault()).toBe(false);
   });
 
-  it('canary validates correct passphrase', async () => {
-    await storeCanary('mypassphrase');
-    expect(hasCanary()).toBe(true);
-    expect(await validateCanary('mypassphrase')).toBe(true);
-  });
-
-  it('canary rejects wrong passphrase', async () => {
-    await storeCanary('correct');
-    expect(await validateCanary('wrong')).toBe(false);
-  });
-
-  it('canary returns false when not set', async () => {
-    expect(hasCanary()).toBe(false);
-    expect(await validateCanary('any')).toBe(false);
+  it('detects a legacy passphrase vault via its canary', () => {
+    expect(hasLegacyVault()).toBe(false);
+    localStorage.setItem('folio-mapper-vault-canary', '{"some":"payload"}');
+    expect(hasLegacyVault()).toBe(true);
   });
 });

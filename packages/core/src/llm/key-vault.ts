@@ -1,16 +1,22 @@
 /**
- * Browser-side encrypted key vault using Web Crypto API.
- * AES-256-GCM encryption with PBKDF2-derived key from user passphrase.
+ * Browser-side encrypted key vault.
+ *
+ * API keys are encrypted with AES-256-GCM using a non-extractable device key
+ * (see ./device-key). No passphrase is involved: keys are encrypted once and
+ * silently restored every session. Ciphertext lives in localStorage; the
+ * encryption key lives only in IndexedDB.
  */
+
+import { getOrCreateDeviceKey } from './device-key';
 
 const VAULT_PREFIX = 'folio-mapper-vault-';
 const VAULT_META_KEY = 'folio-mapper-vault-meta';
+/** Legacy passphrase-vault marker — retained only so we can detect and clear it. */
 const CANARY_KEY = 'folio-mapper-vault-canary';
-const CANARY_PLAINTEXT = 'folio-mapper-vault-check';
-const PBKDF2_ITERATIONS = 100_000;
 
 export interface VaultPayload {
-  salt: string;   // base64-encoded 16-byte salt
+  /** base64-encoded 16-byte salt. Vestigial for device-key payloads (legacy passphrase vaults only). */
+  salt?: string;
   iv: string;     // base64-encoded 12-byte IV
   cipher: string; // base64-encoded ciphertext
 }
@@ -26,45 +32,23 @@ function fromBase64(b64: string): Uint8Array {
   return bytes;
 }
 
-async function deriveKey(passphrase: string, salt: Uint8Array): Promise<CryptoKey> {
-  const enc = new TextEncoder();
-  const keyMaterial = await crypto.subtle.importKey(
-    'raw',
-    enc.encode(passphrase),
-    'PBKDF2',
-    false,
-    ['deriveKey'],
-  );
-  return crypto.subtle.deriveKey(
-    { name: 'PBKDF2', salt, iterations: PBKDF2_ITERATIONS, hash: 'SHA-256' },
-    keyMaterial,
-    { name: 'AES-GCM', length: 256 },
-    false,
-    ['encrypt', 'decrypt'],
-  );
-}
-
-export async function encryptKey(plaintext: string, passphrase: string): Promise<VaultPayload> {
-  const salt = crypto.getRandomValues(new Uint8Array(16));
+/** Encrypt a plaintext API key with the browser's device key. */
+export async function encryptKeyDevice(plaintext: string): Promise<VaultPayload> {
+  const key = await getOrCreateDeviceKey();
   const iv = crypto.getRandomValues(new Uint8Array(12));
-  const key = await deriveKey(passphrase, salt);
   const cipher = await crypto.subtle.encrypt(
     { name: 'AES-GCM', iv },
     key,
     new TextEncoder().encode(plaintext),
   );
-  return {
-    salt: toBase64(salt),
-    iv: toBase64(iv),
-    cipher: toBase64(cipher),
-  };
+  return { iv: toBase64(iv), cipher: toBase64(cipher) };
 }
 
-export async function decryptKey(payload: VaultPayload, passphrase: string): Promise<string> {
-  const salt = fromBase64(payload.salt);
+/** Decrypt a payload with the browser's device key. Rejects if the key is missing or the payload is tampered. */
+export async function decryptKeyDevice(payload: VaultPayload): Promise<string> {
+  const key = await getOrCreateDeviceKey();
   const iv = fromBase64(payload.iv);
   const cipher = fromBase64(payload.cipher);
-  const key = await deriveKey(passphrase, salt);
   const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, cipher);
   return new TextDecoder().decode(plain);
 }
@@ -116,26 +100,11 @@ function updateMeta(provider: string, action: 'add' | 'remove'): void {
   localStorage.setItem(VAULT_META_KEY, JSON.stringify({ providers: [...set] }));
 }
 
-/** Store a canary value encrypted with the passphrase for quick validation. */
-export async function storeCanary(passphrase: string): Promise<void> {
-  const payload = await encryptKey(CANARY_PLAINTEXT, passphrase);
-  localStorage.setItem(CANARY_KEY, JSON.stringify(payload));
-}
-
-/** Validate passphrase by decrypting the stored canary. Returns true if correct. */
-export async function validateCanary(passphrase: string): Promise<boolean> {
-  const raw = localStorage.getItem(CANARY_KEY);
-  if (!raw) return false;
-  try {
-    const payload = JSON.parse(raw) as VaultPayload;
-    const result = await decryptKey(payload, passphrase);
-    return result === CANARY_PLAINTEXT;
-  } catch {
-    return false;
-  }
-}
-
-/** Returns true if a canary exists (vault has been initialized). */
-export function hasCanary(): boolean {
+/**
+ * Returns true if a legacy passphrase vault exists (it has a canary).
+ * Such vaults are undecryptable without the removed passphrase, so callers
+ * clear them once and prompt for re-entry.
+ */
+export function hasLegacyVault(): boolean {
   return localStorage.getItem(CANARY_KEY) !== null;
 }
