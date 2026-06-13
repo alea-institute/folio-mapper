@@ -40,7 +40,6 @@ export { SubmissionModal } from './components/mapping/SubmissionModal';
 export { LLMSettings } from './components/settings/LLMSettings';
 export { ProviderCard } from './components/settings/ProviderCard';
 export { KeySourceBadge } from './components/settings/KeySourceBadge';
-export { PassphraseModal } from './components/settings/PassphraseModal';
 export { LlamafileStatus } from './components/settings/LlamafileStatus';
 export { LlamafileModelPicker } from './components/settings/LlamafileModelPicker';
 

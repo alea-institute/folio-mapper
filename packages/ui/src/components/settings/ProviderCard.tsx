@@ -183,28 +183,15 @@ export function ProviderCard({
                           ) : null}
                         </div>
                       )}
-                      {/* Quiet save options — shown when key exists but hasn't been tested yet */}
-                      {!hasSavedKey && config.connectionStatus !== 'valid' && (
+                      {/* Quiet keychain save (desktop only). Web keys auto-persist on a successful test. */}
+                      {!hasSavedKey && config.connectionStatus !== 'valid' && isDesktop && onSaveToKeychain && keySource !== 'keychain' && (
                         <div className="flex items-center gap-3">
-                          {isDesktop && onSaveToKeychain && keySource !== 'keychain' && (
-                            <button
-                              onClick={() => onSaveToKeychain(meta.type)}
-                              className="text-xs text-blue-500 hover:text-blue-700"
-                            >
-                              Save to keychain
-                            </button>
-                          )}
-                          {!isDesktop && onRememberKey && keySource !== 'saved' && (
-                            <label className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-700">
-                              <input
-                                type="checkbox"
-                                checked={config.rememberKey ?? false}
-                                onChange={(e) => onRememberKey(meta.type, e.target.checked)}
-                                className="h-3.5 w-3.5 rounded border-gray-300 text-blue-600"
-                              />
-                              Remember key (encrypted in browser)
-                            </label>
-                          )}
+                          <button
+                            onClick={() => onSaveToKeychain(meta.type)}
+                            className="text-xs text-blue-500 hover:text-blue-700"
+                          >
+                            Save to keychain
+                          </button>
                         </div>
                       )}
                       {/* Already saved — show status + forget option */}

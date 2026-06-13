@@ -21,8 +21,9 @@ export interface VaultPayload {
   cipher: string; // base64-encoded ciphertext
 }
 
-function toBase64(buf: ArrayBuffer): string {
-  return btoa(String.fromCharCode(...new Uint8Array(buf)));
+function toBase64(buf: ArrayBuffer | Uint8Array): string {
+  const bytes = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
+  return btoa(String.fromCharCode(...bytes));
 }
 
 function fromBase64(b64: string): Uint8Array {
@@ -37,7 +38,7 @@ export async function encryptKeyDevice(plaintext: string): Promise<VaultPayload>
   const key = await getOrCreateDeviceKey();
   const iv = crypto.getRandomValues(new Uint8Array(12));
   const cipher = await crypto.subtle.encrypt(
-    { name: 'AES-GCM', iv },
+    { name: 'AES-GCM', iv: iv as BufferSource },
     key,
     new TextEncoder().encode(plaintext),
   );
@@ -49,7 +50,11 @@ export async function decryptKeyDevice(payload: VaultPayload): Promise<string> {
   const key = await getOrCreateDeviceKey();
   const iv = fromBase64(payload.iv);
   const cipher = fromBase64(payload.cipher);
-  const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, cipher);
+  const plain = await crypto.subtle.decrypt(
+    { name: 'AES-GCM', iv: iv as BufferSource },
+    key,
+    cipher as BufferSource,
+  );
   return new TextDecoder().decode(plain);
 }
 

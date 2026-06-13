@@ -31,6 +31,11 @@ describe('resolveLlmConfig', () => {
     expect(resolveLlmConfig('anthropic', configs, true)).toBeNull();
   });
 
+  it('returns null in a demo session even with an auto-restored saved key', () => {
+    const configs = makeConfigs(makeConfig({ connectionStatus: 'valid', keySource: 'saved' }));
+    expect(resolveLlmConfig('anthropic', configs, true)).toBeNull();
+  });
+
   it('returns the config when not a demo and the provider is valid', () => {
     const configs = makeConfigs(makeConfig({ connectionStatus: 'valid' }));
     expect(resolveLlmConfig('anthropic', configs, false)).toEqual({

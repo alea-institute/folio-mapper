@@ -2,8 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import {
   parseText, testConnection, fetchModels, probeModels, fetchKnownModels, fetchSyntheticData,
   BRANCH_COLORS, EXCLUDED_BRANCHES, PROVIDER_META, setLocalToken, EXEMPLARS,
-  encryptKey, storeEncryptedKey, removeEncryptedKey, clearVault,
-  storeCanary, hasCanary, getVaultMeta,
+  encryptKeyDevice, storeEncryptedKey, removeEncryptedKey, clearVault, clearDeviceKey,
   triggerOWLUpdateCheck, forceOWLUpdate,
 } from '@folio-mapper/core';
 import type { SuggestionEntry, ReviewEntry, InputHierarchyNode, HierarchyNode, LLMProviderType } from '@folio-mapper/core';
@@ -26,7 +25,6 @@ import {
   SuggestionEditModal,
   SubmissionModal,
   ExemplarPanel,
-  PassphraseModal,
   FolioUpdateModal,
   StalePresetBanner,
 } from '@folio-mapper/ui';
@@ -226,10 +224,11 @@ export function App() {
   const keyResolution = useKeyResolution();
   const isDesktop = !!window.desktop?.isDesktop;
 
-  // Module-level passphrase cache for vault operations
-  const vaultPassphraseRef = useRef<string | null>(null);
-  const [showCreatePassphrase, setShowCreatePassphrase] = useState(false);
-  const pendingSaveProviderRef = useRef<LLMProviderType | null>(null);
+  // One-time notice when a legacy passphrase vault was cleared during migration.
+  const [showMigrationNotice, setShowMigrationNotice] = useState(false);
+  useEffect(() => {
+    if (keyResolution.legacyVaultCleared) setShowMigrationNotice(true);
+  }, [keyResolution.legacyVaultCleared]);
 
   const handleSaveToKeychain = useCallback(async (provider: LLMProviderType) => {
     const keychain = window.desktop?.keychain;
@@ -244,48 +243,45 @@ export function App() {
     }
   }, [llmState]);
 
+  // Persist a key to the device-key vault (web). Silent — no passphrase, encrypted at rest.
+  const persistKeyToVault = useCallback(async (provider: LLMProviderType) => {
+    const key = llmState.configs[provider].apiKey;
+    if (!key) return;
+    try {
+      const payload = await encryptKeyDevice(key);
+      storeEncryptedKey(provider, payload);
+      llmState.updateConfig(provider, { rememberKey: true });
+      llmState.setKeySource(provider, 'saved');
+    } catch (err) {
+      // IndexedDB/crypto unavailable — fall back to session-only manual entry.
+      console.error('Failed to save key to vault:', err);
+    }
+  }, [llmState]);
+
   const handleRememberKey = useCallback((provider: LLMProviderType, remember: boolean) => {
-    llmState.updateConfig(provider, { rememberKey: remember });
     if (remember) {
-      const key = llmState.configs[provider].apiKey;
-      if (!key) return;
-      if (hasCanary() && vaultPassphraseRef.current) {
-        // Already have passphrase — encrypt immediately
-        encryptKey(key, vaultPassphraseRef.current).then((payload) => {
-          storeEncryptedKey(provider, payload);
-          llmState.setKeySource(provider, 'saved');
-        });
-      } else {
-        // Need passphrase first
-        pendingSaveProviderRef.current = provider;
-        setShowCreatePassphrase(true);
-      }
+      void persistKeyToVault(provider);
     } else {
+      llmState.updateConfig(provider, { rememberKey: false });
       removeEncryptedKey(provider);
       if (llmState.configs[provider].keySource === 'saved') {
-        llmState.setKeySource(provider, 'manual');
+        llmState.setKeySource(provider, llmState.configs[provider].apiKey ? 'manual' : 'none');
       }
     }
-  }, [llmState]);
+  }, [llmState, persistKeyToVault]);
 
-  const handleCreatePassphrase = useCallback(async (passphrase: string): Promise<boolean> => {
-    vaultPassphraseRef.current = passphrase;
-    await storeCanary(passphrase);
-
-    // Encrypt the pending key
-    const provider = pendingSaveProviderRef.current;
-    if (provider) {
-      const key = llmState.configs[provider].apiKey;
-      if (key) {
-        const payload = await encryptKey(key, passphrase);
-        storeEncryptedKey(provider, payload);
-        llmState.setKeySource(provider, 'saved');
+  // Auto-persist: a validated, manually-entered key is silently saved to the
+  // device-key vault (web only; desktop uses the OS keychain explicitly).
+  // Idempotent — once keySource flips to 'saved' the guard skips it.
+  useEffect(() => {
+    if (window.desktop) return;
+    for (const p of Object.keys(llmState.configs) as LLMProviderType[]) {
+      const cfg = llmState.configs[p];
+      if (cfg.connectionStatus === 'valid' && cfg.apiKey && cfg.keySource === 'manual') {
+        void persistKeyToVault(p);
       }
-      pendingSaveProviderRef.current = null;
     }
-    setShowCreatePassphrase(false);
-    return true;
-  }, [llmState]);
+  }, [llmState.configs, persistKeyToVault]);
 
   const handleClearSavedKey = useCallback((provider: LLMProviderType) => {
     if (isDesktop) {
@@ -304,6 +300,7 @@ export function App() {
       window.desktop?.keychain?.clearAll().catch(() => {});
     } else {
       clearVault();
+      void clearDeviceKey();
     }
     // Reset all key sources and rememberKey flags
     const providers = Object.keys(llmState.configs) as LLMProviderType[];
@@ -770,28 +767,6 @@ export function App() {
             isUpdating={isFolioUpdating}
           />
         )}
-        {keyResolution.needsPassphrase && (
-          <PassphraseModal
-            mode="unlock"
-            error={keyResolution.passphraseError}
-            onSubmit={async (p) => {
-              const ok = await keyResolution.unlockVault(p);
-              if (ok) vaultPassphraseRef.current = p;
-              return ok;
-            }}
-            onCancel={keyResolution.dismissPassphrase}
-          />
-        )}
-        {showCreatePassphrase && (
-          <PassphraseModal
-            mode="create"
-            onSubmit={handleCreatePassphrase}
-            onCancel={() => {
-              setShowCreatePassphrase(false);
-              pendingSaveProviderRef.current = null;
-            }}
-          />
-        )}
         {session.showSessionPicker && (
           <SessionPickerModal
             sessions={pickerSessions}
@@ -959,6 +934,19 @@ export function App() {
   return (
     <AppShell onOpenSettings={() => setShowSettings(true)} onOpenFolioModal={() => setShowFolioModal(true)} onNewTab={session.handleNewTab} onOpenSessionPicker={session.handleOpenSessionPicker} llmStatus={llmStatus} llmProviderLabel={llmProviderLabel} embeddingStatus={embeddingStatus} embeddingDetail={embeddingDetail} folioUpdateStatus={folioUpdateStatus} folioUpdateDetail={folioUpdateDetail}>
       {settingsModal}
+      {showMigrationNotice && (
+        <div className="flex items-center justify-center gap-2 border-b border-blue-200 bg-blue-50 px-4 py-2 text-sm text-blue-800">
+          <span className="h-2 w-2 rounded-full bg-blue-500" />
+          Saved API keys are now passwordless — re-enter your key once in Settings and it&apos;ll persist automatically.
+          <button
+            onClick={() => setShowMigrationNotice(false)}
+            className="ml-2 text-blue-600 hover:text-blue-800"
+            aria-label="Dismiss"
+          >
+            ×
+          </button>
+        </div>
+      )}
       {showFolioModal && owlUpdateRaw && (
         <FolioUpdateModal
           status={owlUpdateRaw}
@@ -969,29 +957,6 @@ export function App() {
           isUpdating={isFolioUpdating}
         />
       )}
-      {keyResolution.needsPassphrase && (
-        <PassphraseModal
-          mode="unlock"
-          error={keyResolution.passphraseError}
-          onSubmit={async (p) => {
-            const ok = await keyResolution.unlockVault(p);
-            if (ok) vaultPassphraseRef.current = p;
-            return ok;
-          }}
-          onCancel={keyResolution.dismissPassphrase}
-        />
-      )}
-      {showCreatePassphrase && (
-        <PassphraseModal
-          mode="create"
-          onSubmit={handleCreatePassphrase}
-          onCancel={() => {
-            setShowCreatePassphrase(false);
-            pendingSaveProviderRef.current = null;
-          }}
-        />
-      )}
-
       {session.showSessionPicker && (
         <SessionPickerModal
           sessions={pickerSessions}

@@ -25,7 +25,7 @@ function makeDefaultConfigs(): Record<LLMProviderType, LLMProviderConfig> {
       model: meta.defaultModel,
       connectionStatus: 'untested',
       keySource: 'none',
-      rememberKey: false,
+      rememberKey: true,
     };
   }
   return configs;
