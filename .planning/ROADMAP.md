@@ -28,8 +28,8 @@ Milestone summary: `.planning/MILESTONES.md`.
 **Milestone Goal:** Every existing exemplar area has a demo payload; 3–4 new regulatory/compliance exemplars (probe-gated, 100% hit rate) ship with their own demo payloads. Zero runtime LLM cost preserved throughout.
 
 - [x] **Phase 4: Demo Payloads for Existing Exemplar Areas** - Curate and register pre-cached pipeline outputs for the 9 exemplar areas that shipped without demo payloads in v1.0 (completed 2026-05-24)
-- [ ] **Phase 5: Regulatory Exemplars** - Probe FOLIO fan-out density across candidate regulatory/compliance areas, then author 3–4 lean exemplars in the winning areas at 100% hit rate
-- [ ] **Phase 6: Demo Payloads for Regulatory Exemplars** - Curate and register pre-cached pipeline outputs for each new regulatory exemplar, wiring them into the existing demo infrastructure
+- [x] **Phase 5: Regulatory Exemplars** - Probe FOLIO fan-out density across candidate regulatory/compliance areas, then author 3–4 lean exemplars in the winning areas at 100% hit rate (completed 2026-07-07: 4 exemplars — environmental-compliance, energy-utilities, securities-regulation, data-privacy; Tax & Healthcare probe-gated out)
+- [x] **Phase 6: Demo Payloads for Regulatory Exemplars** - Curate and register pre-cached pipeline outputs for each new regulatory exemplar, wiring them into the existing demo infrastructure (completed 2026-07-07: 4 Gemini-curated payloads, 14-demo set, 166/166 tests)
 
 ## Phase Details
 
@@ -60,7 +60,7 @@ Plans:
   2. 3–4 new lean exemplars are committed to `packages/core/src/exemplar/data.ts`, each covering a regulatory/compliance area that passed the probe
   3. Every leaf item in every new exemplar resolves to a precise, uniquely-labelled FOLIO concept (100% hit rate — no "best-available" or partial matches)
   4. The new regulatory exemplars appear in the "Try an Exemplar" carousel alongside the 10 existing exemplars, selectable and functional in both lean and demo modes
-**Plans**: TBD
+**Plans**: 1 plan (05-01)
 
 ### Phase 6: Demo Payloads for Regulatory Exemplars
 **Goal**: Every new regulatory exemplar has a pre-cached demo payload that loads via the existing Stage 7A path, completing demo mode coverage across the full expanded exemplar set
@@ -70,7 +70,7 @@ Plans:
   1. A demo payload file exists for each new regulatory exemplar, curated from that exemplar's lean text using the same `curate_demos.py` workflow used for existing areas
   2. Each regulatory demo payload loads correctly via the Stage 7A session-load path and its filename is registered in the demo manifest
   3. Zero LLM API calls occur at runtime when any regulatory demo is loaded
-**Plans**: TBD
+**Plans**: 1 plan (06-01)
 
 ## Progress
 
@@ -80,8 +80,8 @@ Plans:
 | 2. Demo Mode | v1.0 | 4/4 | Complete | 2026 |
 | 3. New (Fresh Session in New Tab) | v1.0 | 3/3 | Complete | 2026-05-22 |
 | 4. Demo Payloads for Existing Exemplar Areas | v1.1 | 5/5 | Complete   | 2026-05-24 |
-| 5. Regulatory Exemplars | v1.1 | 0/? | Not started | - |
-| 6. Demo Payloads for Regulatory Exemplars | v1.1 | 0/? | Not started | - |
+| 5. Regulatory Exemplars | v1.1 | 1/1 | Complete | 2026-07-07 |
+| 6. Demo Payloads for Regulatory Exemplars | v1.1 | 1/1 | Complete | 2026-07-07 |
 
 ## Quick Tasks
 

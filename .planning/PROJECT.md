@@ -22,20 +22,19 @@ A legal expert can take their own practice-area concepts and get accurate, revie
 
 ### Validated
 
-<!-- Shipped and confirmed valuable (v1.0). -->
+<!-- Shipped and confirmed valuable (v1.0 + v1.1). -->
 
-- 10 high-precision practice-area exemplars with 100% FOLIO hit rate
-- Demo mode toggle (lean ↔ pre-cached pipeline output) — Personal Injury payload shipped
+- 14 high-precision practice-area exemplars with 100% FOLIO hit rate (10 v1.0 + 4 regulatory in v1.1 Phase 5)
+- Demo mode toggle (lean ↔ pre-cached pipeline output) — all 14 areas have payloads (v1.1 Phases 4 & 6)
 - Per-tab namespaced session persistence + on-demand session picker with rename
 - 8-format export; LLM provider layer; embedding + spaCy + bridging search
+- Deterministic FOLIO density probe + anti-circularity hit-rate gate for exemplar authoring (v1.1 Phase 5)
 
 ### Active
 
-<!-- Current scope (v1.1). See REQUIREMENTS.md for REQ-IDs. -->
+<!-- Current scope. -->
 
-- [ ] Demo payloads for the 9 remaining existing exemplar areas
-- [ ] Regulatory/compliance exemplars (3–4, coverage-probe selected)
-- [ ] Demo payloads for the new regulatory exemplars
+- (v1.1 scope complete — run /gsd:complete-milestone; next milestone TBD.)
 
 ### Out of Scope
 
@@ -83,4 +82,4 @@ This document evolves at phase transitions and milestone boundaries.
 
 ---
 
-*Last updated: 2026-05-24 — Milestone v1.1 started*
+*Last updated: 2026-07-07 — v1.1 Phases 5–6 complete (4 regulatory exemplars + demos)*

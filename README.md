@@ -51,6 +51,11 @@ FOLIO Mapper combines fuzzy text matching, semantic embedding search, and an opt
 - **Per-item notes** — Add free-text notes to any item
 - **Status tracking** — Items marked as completed, pending, skipped, or needs attention with filter
 
+### Exemplars & Demo Mode
+- **14 practice-area exemplars** — pre-built taxonomies in the "Try an Exemplar" carousel, every leaf a precise FOLIO concept (100% hit rate): 10 litigation/transactional areas plus 4 regulatory/compliance areas (Environmental Compliance, Energy & Utilities, Securities Enforcement, Data Privacy & Cybersecurity)
+- **Demo mode** — one toggle flips every exemplar card to a pre-cached, LLM-judged session payload: zero runtime API calls, deterministic output, full curation UX (candidate fan-out, judge annotations, auto-accept/pending mix)
+- **Probe-gated authoring** — new exemplar areas are selected by a deterministic FOLIO density survey (`scripts/demos/regulatory_density_survey.py`) and validated by an exact-match + anti-circularity gate (`scripts/demos/validate_exemplar_hits.py`)
+
 ### LLM-Enhanced Pipeline (Optional)
 - **4-stage pipeline** — Pre-scan, branch-scoped search, embedding re-rank, judge validation
 - **9 LLM providers** — OpenAI, Anthropic, Google Gemini, Mistral, Cohere, Meta Llama, Ollama, LM Studio, Custom

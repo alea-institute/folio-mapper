@@ -1,0 +1,16 @@
+{
+  "pack_id": "MAPPER-REG",
+  "title": "folio-mapper v1.1 — Regulatory Exemplars & Demo Payloads (Phases 5–6)",
+  "rubric_version": "Phase-4 demo-quality pattern (D-01..D-04) + ROADMAP Phase 5/6 success criteria",
+  "exported_count": 0,
+  "total_findings": 11,
+  "comments": [],
+  "_schema": {
+    "comments[]": {
+      "id": "EP-<REPO>-<CAMPAIGN>-<NNN>",
+      "title": "str",
+      "status": "pass|borderline|fail|info",
+      "comment": "reviewer text"
+    }
+  }
+}

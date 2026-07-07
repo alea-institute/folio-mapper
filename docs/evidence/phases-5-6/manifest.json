@@ -1,0 +1,183 @@
+{
+  "pack_id": "MAPPER-REG",
+  "title": "folio-mapper v1.1 — Regulatory Exemplars & Demo Payloads (Phases 5–6)",
+  "repo": "MAPPER",
+  "campaign": "REG",
+  "rubric_version": "Phase-4 demo-quality pattern (D-01..D-04) + ROADMAP Phase 5/6 success criteria",
+  "spend": "≈$0.50 metered — final Gemini 3 Flash curation of 4 demos (≈72 judged items, matching the existing 10-demo standard); iteration passes ran free on the Claude Max proxy; FOLIO probes are deterministic folio-python (near-zero cost).",
+  "environment": "Local: backend 58001 + embedding index (MiniLM, 18,324 concepts); LLM judge via Gemini (final) / Claude Max proxy (iteration)",
+  "generated_at": "2026-07-07",
+  "counts": {
+    "pass": 6,
+    "borderline": 2,
+    "info": 3
+  },
+  "total_findings": 11,
+  "sections": [
+    {
+      "id": "EP-MAPPER-REG-001",
+      "anchor": "ep-mapper-reg-001-deterministic-density-survey-area-selection",
+      "title": "Deterministic density survey & area selection",
+      "status": "pass",
+      "context": "FOLIO's Area-of-Law tree has 174 direct children. A deterministic folio-python survey (scripts/demos/regulatory_density_survey.py) ranked candidate regulatory areas by three signals: branch density (recursive descendants), definition coverage, and a 10-leaf exact-hit feasibility check. The exact-hit count is the hard gate — an area that cannot field 10 precise, unique FOLIO leaf labels is DROPPED rather than forced to 'best-available' matches. SELECTED (all 10/10 exact leaves, 100% definition coverage): Environmental Compliance (branch density 12 — FOLIO's densest regulatory branch), Securiti…",
+      "output_sample": "environmental-compliance [SELECT] density=12 def%=100 exact_leaves=10/10\nenergy-utilities         [SELECT] density=7  def%=100 exact_leaves=10/10\nsecurities-regulation    [SELECT] density=10 def%=100 exact_leaves=10/10\ndata-privacy             [SELECT] density=3  def%=100 exact_leaves=10/10\ntax-compliance           [DROP]   density=5  def%=100 exact_leaves=5/10\nhealthcare-regulatory    [DROP]   density=0  def%=0   exact_leaves=3/10",
+      "rubric_scores": [
+        {
+          "id": "RUB-REG-01",
+          "criterion": "Probe report ranks areas + records exclusions (SC-1)",
+          "score": "PASS",
+          "note": "regulatory-density-report.json, 4 SELECT / 2 DROP"
+        }
+      ]
+    },
+    {
+      "id": "EP-MAPPER-REG-002",
+      "anchor": "ep-mapper-reg-002-documented-exclusions-the-probe-gate-working",
+      "title": "Documented exclusions — the probe gate working",
+      "status": "info",
+      "context": "Two plausible candidates were probed and DROPPED for thin FOLIO leaf coverage — evidence the gate is real, not decorative: Tax & Revenue — 5/10 exact leaves. FOLIO's tax branch is leaf-thin: only Tax Law, Tax Credits Law, Estates/Gifts/Trusts, Non-Profit/Tax-Exempt, and ESOP resolve precisely. Income/Property/Sales/International/Corporate Tax have no precise FOLIO node (they fuzzy-match to broad parents). Healthcare / health-privacy — 3/10 exact leaves, branch density 0. Health Law, Food and Drug Law, and Public Health & Welfare Law are leaf-terminal; Medicare/Medicaid/Pharmaceutical/Mental-H…",
+      "output_sample": "Tax miss examples: Income Tax Law -> Tax Law(90); Property Tax Law -> Real Property Law(95)\nHealthcare miss examples: Medicare Law -> Car(90); Pharmaceutical Law -> Ica(90)"
+    },
+    {
+      "id": "EP-MAPPER-REG-003",
+      "anchor": "ep-mapper-reg-003-exemplar-environmental-compliance-strong",
+      "title": "Exemplar — Environmental Compliance (STRONG)",
+      "status": "pass",
+      "context": "Persona: environmental / EHS / natural-resources counsel and ESG leads. Ten leaves span air & water quality, contamination & cleanup, chemicals & resources, water & wildlife, and ESG/impact review — tracking how an environmental lawyer actually carves the domain (Clean Air/Water Act, CERCLA/RCRA, TSCA, wetlands/minerals, ESG). Densest, cleanest all-Area-of-Law taxonomy in the batch; zero overlap with existing cards. Critique fix applied: Chemical Safety Law was moved out of a mis-named 'Corporate Sustainability' branch (it is a toxics/contamination area, not governance); ESG is now paired wit…",
+      "output_sample": "Air Quality Law · Water Quality Law · Contaminant Cleanup Law · Waste Management Law · Chemical Safety Law · Mineral Resources Law · Water Resources and Wetlands Law · Wildlife and Plants Law · ESG Law · Impact Assessment Law",
+      "rubric_scores": [
+        {
+          "id": "RUB-REG-02",
+          "criterion": "10 leaves, precise & coherent",
+          "score": "PASS",
+          "note": "10/10 exact, all Area-of-Law"
+        }
+      ]
+    },
+    {
+      "id": "EP-MAPPER-REG-004",
+      "anchor": "ep-mapper-reg-004-exemplar-energy-utilities-revised-weak-adequate",
+      "title": "Exemplar — Energy & Utilities (revised WEAK→ADEQUATE)",
+      "status": "borderline",
+      "context": "Persona: energy regulatory / utilities / project-development counsel (FERC, renewables, nuclear). Real and new to the portfolio. FOLIO's pure Energy-Law branch is thin (6 non-circular AoL leaves), so the exemplar supplements with energy-SPECIFIC FOLIO concepts from adjacent branches. Critique fixes applied: (1) removed the circular leaf 'Renewable Energy Law' — it is the FOLIO PARENT of Solar/Wind/Hydro, which are themselves leaves; listing a parent beside its own children is a taxonomy error the hardened gate now blocks. (2) Dropped the engineering-jargon 'Baseload Power' branch and regroupe…",
+      "output_sample": "Solar Energy Law · Wind Power Law · Hydroelectric Energy Law · Nuclear Law · Oil and Gas Law · Oil and Gas Extraction Industry · Nuclear Electric Power Generation · Fossil Fuel Electric Power Generation · Energy Sales and Transmission Law · Project Finance Law",
+      "rubric_scores": [
+        {
+          "id": "RUB-REG-02",
+          "criterion": "10 leaves, precise & coherent",
+          "score": "PASS-with-note",
+          "note": "10/10 exact, no circularity; 3 Industry concepts disclosed"
+        }
+      ]
+    },
+    {
+      "id": "EP-MAPPER-REG-005",
+      "anchor": "ep-mapper-reg-005-exemplar-securities-enforcement-revised-for-distinctiveness",
+      "title": "Exemplar — Securities Enforcement (revised for distinctiveness)",
+      "status": "borderline",
+      "context": "Persona: SEC/FINRA regulatory & enforcement counsel; adviser/broker-dealer compliance. FOLIO concentrates securities concepts inside the branch that Banking & Finance and Corporate M&A already draw from, so the first draft overlapped those cards on 7 of 10 leaves (4 with banking-finance) — reading as a near-duplicate on the carousel. Critique fix applied: reframed from deal-work to enforcement/regulation and retitled the card 'Securities Enforcement'. Leaf overlap with banking-finance cut from 4 to 0; the card now leads with Investment Advisor Law, Exchanges Law, Commodities Law, Regulatory E…",
+      "output_sample": "Investment Advisor Law · Exchanges Law · Commodities Law · Insider Trading · Securities Fraud · Regulatory Enforcement · Financial Reporting Law · Security Offerings and Capital Markets Law · Business and Financial Crimes Law · Anti-Corruption Law",
+      "rubric_scores": [
+        {
+          "id": "RUB-REG-02",
+          "criterion": "10 leaves, precise & coherent",
+          "score": "PASS",
+          "note": "10/10 exact; overlap w/ banking-finance reduced 4->0"
+        },
+        {
+          "id": "RUB-REG-05",
+          "criterion": "Distinct carousel value",
+          "score": "BORDERLINE",
+          "note": "PM question queued"
+        }
+      ]
+    },
+    {
+      "id": "EP-MAPPER-REG-006",
+      "anchor": "ep-mapper-reg-006-exemplar-data-privacy-cybersecurity-revised-weak-strong",
+      "title": "Exemplar — Data Privacy & Cybersecurity (revised WEAK→STRONG)",
+      "status": "pass",
+      "context": "Persona: privacy & cybersecurity counsel / CPO / DPO (GDPR/CCPA compliance, breach response, surveillance/government access). Fastest-growing, highest-demand area in the batch; zero overlap with any v1.0 card — the clearest audience expansion. Critique fixes applied: dropped three defective leaves — Information Security Law (was BOTH the declared root branch AND a leaf: circular + near-duplicate of Cybersecurity Law), Right to Privacy (a Civil Right, cross-taxonomy and duplicative of Privacy Law), and Records Management (a Business-of-Law operations concept). Replaced with Consumer Protection…",
+      "output_sample": "Cybersecurity Law · Cybercrime Law · Data Breach · Impersonation / Identity Theft · Privacy Law · Data Protection Regulation · Consumer Protection Law · Telecommunications Law · Government Access and Disclosure Law · Freedom of Information Act Claim",
+      "rubric_scores": [
+        {
+          "id": "RUB-REG-02",
+          "criterion": "10 leaves, precise & coherent",
+          "score": "PASS",
+          "note": "10/10 exact, no dup/circularity"
+        }
+      ]
+    },
+    {
+      "id": "EP-MAPPER-REG-007",
+      "anchor": "ep-mapper-reg-007-subagent-critique-ontology-precision-folio-mcp",
+      "title": "Subagent critique — ontology precision (FOLIO MCP)",
+      "status": "info",
+      "context": "Ontology-precision critique of the 4 regulatory exemplars, verified via FOLIO MCP."
+    },
+    {
+      "id": "EP-MAPPER-REG-008",
+      "anchor": "ep-mapper-reg-008-subagent-critique-product-persona",
+      "title": "Subagent critique — product / persona",
+      "status": "info",
+      "context": "Product/persona critique of the 4 regulatory exemplars."
+    },
+    {
+      "id": "EP-MAPPER-REG-009",
+      "anchor": "ep-mapper-reg-009-demo-payloads-curation-results",
+      "title": "Demo payloads — curation results",
+      "status": "pass",
+      "context": "Each exemplar was curated into a cached demo payload via curate_demos.py driving the full live pipeline (embedding index + spaCy + keyword + Stage-3 LLM judge), threshold 0.3 / accept-threshold 0.9. Provider decision: after Phase 4, all 10 existing demos were re-curated via Gemini (commit 5f64e41) and the smoke test pins provider=google / model=gemini-3-flash-preview — the 4 new demos follow the same standard so the 14-demo set stays consistent. Iteration passes ran free through the Claude Max proxy; the final pass used the metered Gemini key (cheapest tier). Unlike Phase 4's thin litigation …",
+      "output_sample": "environmental-compliance  v1.3 google/gemini-3-flash-preview mix=13/18 maxcand=20 items>=4: 18/18 judge(boost/pen/rej)=33/33/23\nenergy-utilities          v1.3 google/gemini-3-flash-preview mix=15/18 maxcand=20 items>=4: 18/18 judge=43/43/8\nsecurities-regulation     v1.3 google/gemini-3-flash-preview mix=13/18 maxcand=20 items>=4: 18/18 judge=30/62/27\ndata-privacy              v1.3 google/gemini-3-flash-preview mix=13/18 maxcand=20 items>=4: 18/18 judge=24/63/30\nAll 18 nodes judged in every payload; every item at 1:4+ fan-out (no D-02 override needed).",
+      "rubric_scores": [
+        {
+          "id": "RUB-REGDEMO-01",
+          "criterion": "Payload per exemplar, visible mix (SC-1)",
+          "score": "PASS"
+        },
+        {
+          "id": "RUB-REGDEMO-03",
+          "criterion": "Zero runtime LLM calls (SC-3)",
+          "score": "PASS",
+          "note": "demo-mode-no-network test, 14 slugs"
+        }
+      ]
+    },
+    {
+      "id": "EP-MAPPER-REG-010",
+      "anchor": "ep-mapper-reg-010-quality-gates-100-hit-rate-anti-circularity-zero-cost-demos",
+      "title": "Quality gates — 100% hit rate + anti-circularity + zero-cost demos",
+      "status": "pass",
+      "context": "All 40 leaves pass scripts/demos/validate_exemplar_hits.py: exact unique get_by_label, top search_by_label at score 100, and no leaf is an ancestor of a co-leaf. The full web test suite covers all 14 demo areas across 6 harnesses (roundtrip, no-network, richness, excluded-branches, smoke, manifest). Demo mode makes zero runtime network calls (deterministic cached payloads).",
+      "output_sample": "Checked 40 leaves across 4 exemplars.\nPASS: every leaf resolves to a precise, unique FOLIO concept (100% hit rate).",
+      "rubric_scores": [
+        {
+          "id": "RUB-REG-03",
+          "criterion": "100% leaf hit rate (SC-3)",
+          "score": "PASS",
+          "note": "40/40, exact+unique+score100+acyclic"
+        }
+      ]
+    },
+    {
+      "id": "EP-MAPPER-REG-011",
+      "anchor": "ep-mapper-reg-011-in-app-browser-verification-isolated-context",
+      "title": "In-app browser verification (isolated context)",
+      "status": "pass",
+      "context": "Each of the 4 regulatory demos was loaded in the real app (Vite dev @58173) via the Demo toggle in an isolated browser context. All 4 cards render in the carousel with the DEMO badge; clicking each loads the full mapping screen from the cached payload (item 1 of 18, 72–83% progress, scored multi-branch candidates, suggestion/review queues). Network panel confirms zero /api/pipeline or LLM calls — the first load even rendered fully while the backend was OFFLINE (all /api status polls returned 500), the strongest possible proof of the zero-cost cached path. Round-trip/no-network/richness/exclud…",
+      "rubric_scores": [
+        {
+          "id": "RUB-REGDEMO-02",
+          "criterion": "Loads via Stage-7A, registered in manifest (SC-2)",
+          "score": "PASS",
+          "note": "browser-verified ×4"
+        },
+        {
+          "id": "RUB-REG-04",
+          "criterion": "Cards appear in carousel, lean+demo modes (SC-4)",
+          "score": "PASS"
+        }
+      ]
+    }
+  ]
+}
