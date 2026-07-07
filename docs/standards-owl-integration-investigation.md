@@ -6,6 +6,40 @@
 
 ---
 
+## ⚠️ CRITICAL CORRECTION (2026-07-07, verified against live FOLIO via folio-python)
+
+**The original investigation below interpreted "standards-compatibility branch" as a
+GIT branch and concluded none exists. That interpretation was wrong.** The plan meant
+a **taxonomy branch** (a subtree of concepts), and it DOES exist — verified directly:
+
+- `folio-python`'s `FOLIO().get_standards_compatibilities()` returns **868 concepts**
+  under a top-level FOLIO branch **"Standards Compatibility"**
+  (IRI `https://folio.openlegalstandard.org/RB4cFSLB4xvycDlKv73dOg6`).
+- External standards are modeled as a **node-per-external-concept subtree**, NOT as
+  annotation properties. Example hierarchy (real, from live data):
+  `Standards Compatibility` → `LegalXML OASIS SCHEMA` (per-standard grouping node) →
+  `OASISThing` → `oasis:Right`, `oasis:Obligation`, `oasis:Prohibition`,
+  `oasis:Permission`, `oasis:DeonticSpecification`, … — each a real `owl:Class` with
+  its own opaque R-IRI, an `oasis:`-prefixed label, and a definition.
+- So the **established pattern to follow** for the SSSOM→OWL converter is:
+  mint each external-standard concept as an `owl:Class` under a per-standard grouping
+  node under the `Standards Compatibility` branch (following the LegalXML OASIS
+  precedent), and carry the SSSOM subject↔object mapping to the corresponding FOLIO
+  legal concept via a mapping predicate (`skos:exactMatch`/`closeMatch`) + SSSOM
+  provenance annotations. (In the current data these standards nodes are sparsely
+  linked back to their FOLIO targets — the mapping edges are exactly what folio-mapper
+  would ADD, which is why this is purely additive and low-risk.)
+
+**What in the original findings still holds:** the annotation-property observations
+(UTBMS codes via custom `utbmsma:*` annotation properties, `dc:source`, `dc:identifier`)
+are real and describe a SEPARATE, finer-grained mechanism for attaching individual
+external codes onto existing FOLIO concepts — useful as a secondary pattern, but the
+`Standards Compatibility` node-per-concept branch is the primary one the plan referenced.
+The sibling-tooling notes (folio-python uses lxml; folio-enrich has an rdflib Turtle
+serializer) also still hold. Read the sections below through this correction.
+
+---
+
 ## Findings
 
 ### 1. There is NO `standards-compatibility` branch (or any standards/mapping/SSSOM branch)
