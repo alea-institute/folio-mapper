@@ -1,0 +1,11 @@
+{
+  "slug": "environmental-compliance",
+  "label": "Environmental Compliance",
+  "text": "Environmental Compliance\n\tAir & Water Quality\n\t\tAir Quality Law\n\t\tWater Quality Law\n\tContamination & Cleanup\n\t\tContaminant Cleanup Law\n\t\tWaste Management Law\n\t\tForest Resources Law\n\tChemicals & Resources\n\t\tChemical Safety Law\n\t\tMineral Resources Law\n\tWater & Wildlife\n\t\tWater Resources and Wetlands Law\n\t\tWildlife and Plants Law\n\t\tFish and Game Law\n\tSustainability & Review\n\t\tEnvironmental, Social, and Governance Law\n\t\tImpact Assessment Law",
+  "enrichments": [
+    "Forest Resources Law",
+    "Fish and Game Law"
+  ],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#environmental-compliance",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

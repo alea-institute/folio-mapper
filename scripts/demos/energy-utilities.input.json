@@ -1,0 +1,11 @@
+{
+  "slug": "energy-utilities",
+  "label": "Energy & Utilities",
+  "text": "Energy & Utilities\n\tRenewable Energy\n\t\tSolar Energy Law\n\t\tWind Power Law\n\tHydropower & Nuclear\n\t\tHydroelectric Energy Law\n\t\tNuclear Law\n\tOil & Gas\n\t\tOil and Gas Law\n\t\tOil and Gas Extraction Industry\n\tPower Generation\n\t\tNuclear Electric Power Generation\n\t\tFossil Fuel Electric Power Generation\n\t\tHydroelectric Power Generation\n\tTransmission & Finance\n\t\tEnergy Sales and Transmission Law\n\t\tProject Finance Law\n\t\tUtilities Industry",
+  "enrichments": [
+    "Hydroelectric Power Generation",
+    "Utilities Industry"
+  ],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#energy-utilities",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

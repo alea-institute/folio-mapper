@@ -1,0 +1,11 @@
+{
+  "slug": "data-privacy",
+  "label": "Data Privacy & Cybersecurity",
+  "text": "Data Privacy & Cybersecurity\n\tCybersecurity\n\t\tCybersecurity Law\n\t\tCybercrime Law\n\t\tInformation Security Law\n\tData Breach & Identity\n\t\tData Breach\n\t\tImpersonation / Identity Theft\n\tPrivacy & Data Protection\n\t\tPrivacy Law\n\t\tData Protection Regulation\n\tConsumer & Communications\n\t\tConsumer Protection Law\n\t\tTelecommunications Law\n\t\tAdvertising Law\n\tGovernment Access\n\t\tGovernment Access and Disclosure Law\n\t\tFreedom of Information Act Claim",
+  "enrichments": [
+    "Information Security Law",
+    "Advertising Law"
+  ],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#data-privacy",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

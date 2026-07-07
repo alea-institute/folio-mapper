@@ -1,0 +1,40 @@
+{
+  "practice_area": "securities-regulation",
+  "source": "packages/core/src/exemplar/data.ts (id: securities-regulation)",
+  "items": [
+    "Securities Regulation & Enforcement",
+    "Market Participants",
+    "Investment Advisor Law",
+    "Exchanges Law",
+    "Trading & Markets",
+    "Commodities Law",
+    "Insider Trading",
+    "Enforcement",
+    "Securities Fraud",
+    "Regulatory Enforcement",
+    "Disclosure & Reporting",
+    "Financial Reporting Law",
+    "Security Offerings and Capital Markets Law",
+    "Financial Crime",
+    "Business and Financial Crimes Law",
+    "Anti-Corruption Law"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}

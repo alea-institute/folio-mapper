@@ -1,0 +1,40 @@
+{
+  "practice_area": "data-privacy",
+  "source": "packages/core/src/exemplar/data.ts (id: data-privacy)",
+  "items": [
+    "Data Privacy & Cybersecurity",
+    "Cybersecurity",
+    "Cybersecurity Law",
+    "Cybercrime Law",
+    "Data Breach & Identity",
+    "Data Breach",
+    "Impersonation / Identity Theft",
+    "Privacy & Data Protection",
+    "Privacy Law",
+    "Data Protection Regulation",
+    "Consumer & Communications",
+    "Consumer Protection Law",
+    "Telecommunications Law",
+    "Government Access",
+    "Government Access and Disclosure Law",
+    "Freedom of Information Act Claim"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}

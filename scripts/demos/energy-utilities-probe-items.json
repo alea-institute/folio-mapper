@@ -1,0 +1,40 @@
+{
+  "practice_area": "energy-utilities",
+  "source": "packages/core/src/exemplar/data.ts (id: energy-utilities)",
+  "items": [
+    "Energy & Utilities",
+    "Renewable Energy",
+    "Solar Energy Law",
+    "Wind Power Law",
+    "Hydropower & Nuclear",
+    "Hydroelectric Energy Law",
+    "Nuclear Law",
+    "Oil & Gas",
+    "Oil and Gas Law",
+    "Oil and Gas Extraction Industry",
+    "Power Generation",
+    "Nuclear Electric Power Generation",
+    "Fossil Fuel Electric Power Generation",
+    "Transmission & Finance",
+    "Energy Sales and Transmission Law",
+    "Project Finance Law"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}

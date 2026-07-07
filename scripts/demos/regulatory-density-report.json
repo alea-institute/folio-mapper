@@ -1,0 +1,118 @@
+{
+  "candidates": {
+    "environmental-compliance": {
+      "root_branch": "Environmental and Natural Resource Law",
+      "decision": "SELECT",
+      "branch_density_descendants": 12,
+      "definition_coverage_pct": 100.0,
+      "exact_leaf_hits": "10/10",
+      "leaf_status": {
+        "Air Quality Law": "exact",
+        "Water Quality Law": "exact",
+        "Contaminant Cleanup Law": "exact",
+        "Waste Management Law": "exact",
+        "Chemical Safety Law": "exact",
+        "Mineral Resources Law": "exact",
+        "Water Resources and Wetlands Law": "exact",
+        "Wildlife and Plants Law": "exact",
+        "Environmental, Social, and Governance Law": "exact",
+        "Impact Assessment Law": "exact"
+      }
+    },
+    "energy-utilities": {
+      "root_branch": "Energy Law",
+      "decision": "SELECT",
+      "branch_density_descendants": 7,
+      "definition_coverage_pct": 100.0,
+      "exact_leaf_hits": "10/10",
+      "leaf_status": {
+        "Solar Energy Law": "exact",
+        "Wind Power Law": "exact",
+        "Hydroelectric Energy Law": "exact",
+        "Nuclear Law": "exact",
+        "Oil and Gas Law": "exact",
+        "Oil and Gas Extraction Industry": "exact",
+        "Nuclear Electric Power Generation": "exact",
+        "Fossil Fuel Electric Power Generation": "exact",
+        "Energy Sales and Transmission Law": "exact",
+        "Project Finance Law": "exact"
+      }
+    },
+    "securities-regulation": {
+      "root_branch": "Securities and Financial Instruments Law",
+      "decision": "SELECT",
+      "branch_density_descendants": 10,
+      "definition_coverage_pct": 100.0,
+      "exact_leaf_hits": "10/10",
+      "leaf_status": {
+        "Investment Advisor Law": "exact",
+        "Exchanges Law": "exact",
+        "Commodities Law": "exact",
+        "Insider Trading": "exact",
+        "Securities Fraud": "exact",
+        "Regulatory Enforcement": "exact",
+        "Financial Reporting Law": "exact",
+        "Security Offerings and Capital Markets Law": "exact",
+        "Business and Financial Crimes Law": "exact",
+        "Anti-Corruption Law": "exact"
+      }
+    },
+    "data-privacy": {
+      "root_branch": "Information Security Law",
+      "decision": "SELECT",
+      "branch_density_descendants": 3,
+      "definition_coverage_pct": 100.0,
+      "exact_leaf_hits": "10/10",
+      "leaf_status": {
+        "Cybersecurity Law": "exact",
+        "Cybercrime Law": "exact",
+        "Data Breach": "exact",
+        "Impersonation / Identity Theft": "exact",
+        "Privacy Law": "exact",
+        "Data Protection Regulation": "exact",
+        "Consumer Protection Law": "exact",
+        "Telecommunications Law": "exact",
+        "Government Access and Disclosure Law": "exact",
+        "Freedom of Information Act Claim": "exact"
+      }
+    },
+    "tax-compliance": {
+      "root_branch": "Tax and Revenue Law",
+      "decision": "DROP",
+      "branch_density_descendants": 5,
+      "definition_coverage_pct": 100.0,
+      "exact_leaf_hits": "5/10",
+      "leaf_status": {
+        "Tax Law": "exact",
+        "Tax Credits Law": "exact",
+        "Estates, Gifts, and Trusts Law": "exact",
+        "Non-Profit and Tax-Exempt Organizations Law": "exact",
+        "Employee Stock Ownership Plans Law": "exact",
+        "Income Tax Law": "miss",
+        "Property Tax Law": "miss",
+        "Sales Tax Law": "miss",
+        "International Tax Law": "miss",
+        "Corporate Tax Law": "miss"
+      }
+    },
+    "healthcare-regulatory": {
+      "root_branch": "Health Law",
+      "decision": "DROP",
+      "branch_density_descendants": 0,
+      "definition_coverage_pct": 0.0,
+      "exact_leaf_hits": "3/10",
+      "leaf_status": {
+        "Health Law": "exact",
+        "Food and Drug Law": "exact",
+        "Public Health and Welfare Law": "exact",
+        "Pharmaceutical Law": "miss",
+        "Medicare Law": "miss",
+        "Medicaid Law": "miss",
+        "Health Insurance Law": "miss",
+        "Mental Health Law": "miss",
+        "Elder Law": "miss",
+        "Nursing Home Law": "miss"
+      }
+    }
+  }
+}

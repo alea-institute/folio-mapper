@@ -1,0 +1,11 @@
+{
+  "slug": "securities-regulation",
+  "label": "Securities Enforcement",
+  "text": "Securities Regulation & Enforcement\n\tMarket Participants\n\t\tInvestment Advisor Law\n\t\tExchanges Law\n\tTrading & Markets\n\t\tCommodities Law\n\t\tInsider Trading\n\tEnforcement\n\t\tSecurities Fraud\n\t\tRegulatory Enforcement\n\t\tRegulatory Compliance\n\tDisclosure & Reporting\n\t\tFinancial Reporting Law\n\t\tSecurity Offerings and Capital Markets Law\n\tFinancial Crime\n\t\tBusiness and Financial Crimes Law\n\t\tAnti-Corruption Law\n\t\tBank Secrecy and Anti-Money Laundering Law",
+  "enrichments": [
+    "Regulatory Compliance",
+    "Bank Secrecy and Anti-Money Laundering Law"
+  ],
+  "source_lean_exemplar": "packages/core/src/exemplar/data.ts#securities-regulation",
+  "spike_reference": ".planning/spikes/001-demo-pi-curation/README.md"
+}

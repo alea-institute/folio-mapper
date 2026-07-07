@@ -1,0 +1,40 @@
+{
+  "practice_area": "environmental-compliance",
+  "source": "packages/core/src/exemplar/data.ts (id: environmental-compliance)",
+  "items": [
+    "Environmental Compliance",
+    "Air & Water Quality",
+    "Air Quality Law",
+    "Water Quality Law",
+    "Contamination & Cleanup",
+    "Contaminant Cleanup Law",
+    "Waste Management Law",
+    "Chemicals & Resources",
+    "Chemical Safety Law",
+    "Mineral Resources Law",
+    "Water & Wildlife",
+    "Water Resources and Wetlands Law",
+    "Wildlife and Plants Law",
+    "Sustainability & Review",
+    "Environmental, Social, and Governance Law",
+    "Impact Assessment Law"
+  ],
+  "item_level": [
+    "root",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf",
+    "branch",
+    "leaf",
+    "leaf"
+  ]
+}
