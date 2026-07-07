@@ -33,6 +33,10 @@ const SLUGS = [
   'real-estate',
   'banking-finance',
   'immigration',
+  'environmental-compliance',
+  'energy-utilities',
+  'securities-regulation',
+  'data-privacy',
 ] as const;
 
 describe('demo mode end-to-end load (all registered areas)', () => {

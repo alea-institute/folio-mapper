@@ -9,6 +9,10 @@ import demoCommercialLit from '../exemplar/demos/commercial-lit.demo.json';
 import demoRealEstate from '../exemplar/demos/real-estate.demo.json';
 import demoBankingFinance from '../exemplar/demos/banking-finance.demo.json';
 import demoImmigration from '../exemplar/demos/immigration.demo.json';
+import demoEnvironmentalCompliance from '../exemplar/demos/environmental-compliance.demo.json';
+import demoEnergyUtilities from '../exemplar/demos/energy-utilities.demo.json';
+import demoSecuritiesRegulation from '../exemplar/demos/securities-regulation.demo.json';
+import demoDataPrivacy from '../exemplar/demos/data-privacy.demo.json';
 import { loadSessionFromObject } from '../hooks/useSession';
 import { useInputStore } from '../store/input-store';
 import { useMappingStore } from '../store/mapping-store';
@@ -56,6 +60,10 @@ describe('demo mode network invariant', () => {
     ['real-estate',      demoRealEstate],
     ['banking-finance',  demoBankingFinance],
     ['immigration',      demoImmigration],
+    ['environmental-compliance', demoEnvironmentalCompliance],
+    ['energy-utilities',         demoEnergyUtilities],
+    ['securities-regulation',    demoSecuritiesRegulation],
+    ['data-privacy',             demoDataPrivacy],
   ] as [string, Record<string, unknown>][])(
     '%s loadSessionFromObject performs zero LLM/pipeline/parse network calls',
     (_slug, payload) => {

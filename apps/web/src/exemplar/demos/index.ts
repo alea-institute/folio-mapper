@@ -72,6 +72,11 @@ export const DEMO_AVAILABLE_SLUGS: ReadonlySet<string> = new Set([
   'real-estate',
   'banking-finance',
   'immigration',
+  // v1.1 Phase 6 — regulatory / compliance exemplars
+  'environmental-compliance',
+  'energy-utilities',
+  'securities-regulation',
+  'data-privacy',
 ]);
 
 /**

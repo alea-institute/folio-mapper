@@ -101,10 +101,14 @@ describe('demo manifest registration', () => {
     'real-estate',
     'banking-finance',
     'immigration',
+    'environmental-compliance',
+    'energy-utilities',
+    'securities-regulation',
+    'data-privacy',
   ];
 
-  it('DEMO_AVAILABLE_SLUGS contains all 10 canonical slugs', () => {
-    expect(DEMO_AVAILABLE_SLUGS.size).toBe(10);
+  it('DEMO_AVAILABLE_SLUGS contains all 14 canonical slugs', () => {
+    expect(DEMO_AVAILABLE_SLUGS.size).toBe(14);
     for (const slug of CANONICAL_SLUGS) {
       expect(DEMO_AVAILABLE_SLUGS.has(slug)).toBe(true);
     }
