@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "description": "Golden-baseline corpus for the folio-mapper -> folio-resolve migration (SCHEDULE.md row 3). Synthetic only: NO customer taxonomies. Exercises every deterministic seam the migration retires — the word-order-invariant scorer, the stopword set, the legal-term expansions, the branch-signal words, and the search-term generator. Categories: exact, word_order, expansion, specificity, subphrase, stopword_only, place, homonym, compound, abbreviation, nonsense.",
+  "terms": [
+    {"id": "t-exact-arbitration", "text": "Arbitration", "category": "exact", "note": "exact label -> 99.0 short-circuit"},
+    {"id": "t-exact-mediation", "text": "Mediation", "category": "exact", "note": "exact label"},
+    {"id": "t-exact-bankruptcy-law", "text": "Bankruptcy Law", "category": "exact", "note": "exact multi-word label + 'law' is a stopword"},
+    {"id": "t-fuzzy-arbrules", "text": "arbitration rules", "category": "word_order", "note": "word-order-invariant pair A"},
+    {"id": "t-wordorder-arbrules", "text": "rules of arbitration", "category": "word_order", "note": "word-order-invariant pair B — same content words as pair A"},
+    {"id": "t-expansion-commercial-lit", "text": "Commercial Litigation", "category": "expansion", "note": "LEGAL_TERM_EXPANSIONS: litigation -> practice/service; expansion re-scoring"},
+    {"id": "t-expansion-surgical-error", "text": "Surgical Error", "category": "expansion", "note": "error -> malpractice/negligence; spaCy cross-expansion path (inert without a model)"},
+    {"id": "t-expansion-med-mal", "text": "Medical Malpractice", "category": "expansion", "note": "malpractice -> claim/liability; BRANCH_SIGNAL_WORDS Phase-1b additive search"},
+    {"id": "t-expansion-real-estate", "text": "Real Estate Closing", "category": "expansion", "note": "real -> estate/property, estate -> planning/practice/law"},
+    {"id": "t-specificity-antitrust", "text": "Antitrust", "category": "specificity", "note": "specificity penalty: Antitrust Claims should outrank Antitrust - Bundled Pricing Claims"},
+    {"id": "t-subphrase-smallbiz", "text": "Small Business Formation (LLC / Corp)", "category": "subphrase", "note": "sub-phrase windows + reverse word overlap + short-token abbreviations"},
+    {"id": "t-subphrase-dui", "text": "DUI/DWI Defense", "category": "subphrase", "note": "abbreviations + defense -> Objectives branch signal + cross-branch bridging"},
+    {"id": "t-stopword-only", "text": "The Law", "category": "stopword_only", "note": "every token is a stopword -> exercises the _tokenize() fallback path"},
+    {"id": "t-stopword-general", "text": "General Legal Types", "category": "stopword_only", "note": "all content words are stopwords (general/legal/types)"},
+    {"id": "t-place-slovenia", "text": "Slovenia", "category": "place", "note": "PARITY CANARY: folio-mapper is a taxonomy mapper — places are legitimate targets and MUST keep resolving (no PlaceNameGate here, unlike folio-enrich)"},
+    {"id": "t-place-minnesota", "text": "Minnesota", "category": "place", "note": "PARITY CANARY: jurisdiction rows are ordinary mapper input"},
+    {"id": "t-homonym-action", "text": "Action", "category": "homonym", "note": "short-label homonym (Action != Auction); mapper shows the ranked set and lets the human pick"},
+    {"id": "t-homonym-charge", "text": "Charge", "category": "homonym", "note": "short-label homonym"},
+    {"id": "t-compound-fofcol", "text": "Proposed Findings of Fact and Conclusions of Law", "category": "compound", "note": "conjoined heading — mapper surfaces both siblings in the candidate list"},
+    {"id": "t-compound-arbmed", "text": "Arbitration and Mediation", "category": "compound", "note": "conjoined heading, two heads"},
+    {"id": "t-abbrev-llc", "text": "LLC", "category": "abbreviation", "note": "3-char token (search-term generator keeps >=3 chars)"},
+    {"id": "t-nonsense", "text": "Zorbleflorp Compliance Directive", "category": "nonsense", "note": "nonsense head + a real expansion key (compliance)"}
+  ],
+  "score_pairs": [
+    {"id": "s-exact", "query": "Arbitration Rules", "label": "Arbitration Rules", "definition": "Rules governing arbitration.", "synonyms": [], "preferred_label": null, "note": "exact -> 99.0 short-circuit"},
+    {"id": "s-word-order", "query": "rules of arbitration", "label": "Arbitration Rules", "definition": "Rules governing arbitration.", "synonyms": [], "preferred_label": null, "note": "word-order invariance"},
+    {"id": "s-query-in-label", "query": "Dog Bite", "label": "Dog Bite Strict Liability", "definition": null, "synonyms": [], "preferred_label": null, "note": "full query contained in label -> 92 floor, then specificity penalty"},
+    {"id": "s-label-in-query", "query": "Commercial Litigation Practice Group", "label": "Litigation Practice", "definition": null, "synonyms": [], "preferred_label": null, "note": "label contained in query -> 88 floor (ratio > 0.3)"},
+    {"id": "s-abbrev-not-substring", "query": "Limited Liability Company Formation", "label": "LLC", "definition": null, "synonyms": [], "preferred_label": null, "note": "short label must NOT get the containment floor"},
+    {"id": "s-prefix-credit", "query": "arbitrate", "label": "Arbitration", "definition": null, "synonyms": [], "preferred_label": null, "note": "common-stem prefix credit (0.7 band)"},
+    {"id": "s-prefix-startswith", "query": "defense", "label": "Defenses", "definition": null, "synonyms": [], "preferred_label": null, "note": "startswith credit (0.8 band)"},
+    {"id": "s-reverse-overlap", "query": "Small Business Formation (LLC / Corp)", "label": "Business Organizations Law", "definition": null, "synonyms": [], "preferred_label": null, "note": "reverse overlap * 0.75 for multi-word targets"},
+    {"id": "s-preferred-label", "query": "Alternative Dispute Resolution", "label": "ADR", "definition": null, "synonyms": [], "preferred_label": "Alternative Dispute Resolution", "note": "preferred-label exact -> 90.0"},
+    {"id": "s-synonym", "query": "attorney malpractice", "label": "Legal Malpractice", "definition": null, "synonyms": ["attorney malpractice", "lawyer negligence"], "preferred_label": null, "note": "synonym overlap * 82"},
+    {"id": "s-definition-only", "query": "escheat", "label": "Unclaimed Property", "definition": "Property that escheats to the state when unclaimed.", "synonyms": [], "preferred_label": null, "note": "definition-only match -> 60.0 containment"},
+    {"id": "s-definition-boost", "query": "arbitration", "label": "Arbitration Practice", "definition": "The practice of arbitration before a neutral.", "synonyms": [], "preferred_label": null, "note": "primary + capped definition boost (<=8)"},
+    {"id": "s-specificity-1-extra", "query": "Antitrust", "label": "Antitrust Claims", "definition": "Claims about antitrust", "synonyms": [], "preferred_label": null, "note": "1 extra content word -> mild penalty"},
+    {"id": "s-specificity-3-extra", "query": "Antitrust", "label": "Antitrust - Bundled Pricing Claims", "definition": "Bundled pricing antitrust claims", "synonyms": [], "preferred_label": null, "note": "3 extra content words -> significant penalty"},
+    {"id": "s-empty-label", "query": "anything", "label": "", "definition": "x", "synonyms": [], "preferred_label": null, "note": "empty label -> 0.0"},
+    {"id": "s-no-overlap", "query": "Zorbleflorp", "label": "Arbitration", "definition": null, "synonyms": [], "preferred_label": null, "note": "no overlap -> 0.0"}
+  ],
+  "branch_scoped": [
+    {"id": "b-litigation-service", "text": "Commercial Litigation", "branch": "Service", "note": "stage1_filter._search_within_branch — LLM-pipeline scoped search"},
+    {"id": "b-dui-objectives", "text": "DUI/DWI Defense", "branch": "Objectives", "note": "branch-scoped recall for an abbreviation-heavy term"},
+    {"id": "b-medmal-areaoflaw", "text": "Medical Malpractice", "branch": "Area of Law", "note": "branch-scoped with an expansion key"}
+  ],
+  "mandatory": [
+    {"id": "m-dui-objectives", "text": "DUI/DWI Defense", "branches": ["Objectives"], "note": "Phase 2.7 mandatory-branch expansion (permissive >=10 threshold, see_also, title-case prefix)"},
+    {"id": "m-medmal-areaoflaw", "text": "Medical Malpractice", "branches": ["Area of Law"], "note": "Phase 2.7 mandatory-branch expansion"}
+  ],
+  "tokenization": [
+    "Proposed Findings of Fact and Conclusions of Law",
+    "Small Business Formation (LLC / Corp)",
+    "The Law",
+    "DUI/DWI Defense",
+    "e-Discovery & Data Privacy"
+  ]
+}
