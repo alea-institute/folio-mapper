@@ -59,6 +59,34 @@ taken from different corpora.
 3. **STOPWORD-FALLBACK** — all-stopword inputs (`"The Law"`) must keep hitting the
    `_tokenize()` fallback rather than collapsing to zero candidates.
 
+## Result (2026-07-24)
+
+**Empty delta, all three canaries green** — see the generated `DELTA-REPORT.md`. What moved:
+
+| Retired from folio-mapper | Now imported from `folio-resolve` |
+|---|---|
+| `_tokenize`, `_content_words`, `_word_overlap` (deleted) | `scoring.tokenize` / `content_words` / `word_overlap` |
+| `_compute_relevance_score` body (~95 lines) | `scoring.compute_relevance_score` (bound to mapper's spaCy seam) |
+| `SEARCH_STOPWORDS`, `BRANCH_SIGNAL_WORDS`, `LEGAL_TERM_EXPANSIONS` tables (~95 lines) | `scoring.*` (re-exported for existing importers) |
+| the deterministic half of `_generate_search_terms` | `scoring.generate_search_terms` (mapper keeps only its spaCy layer) |
+| the judge's verdict-consistency clamps + verdict vocabulary | `judge.enforce_verdict`, `judge.VALID_VERDICTS` |
+| the 90+/70-89/50-69 calibration block, duplicated in two prompts | `judge.SCORE_CALIBRATION` |
+
+## Finding: pre-existing term-order nondeterminism
+
+Two runs of the *unmodified* pre-swap code produce different captures (6 rows). Cause:
+`_generate_search_terms` iterates a `set` of content words when emitting the
+`LEGAL_TERM_EXPANSIONS` compounds and when length-sorting content words, so term ORDER varies
+between processes under PEP 456 hash randomization. Term order feeds candidate insertion order,
+which breaks ties among equally scored candidates, which the per-branch caps then truncate — so
+a handful of borderline candidates can differ run to run.
+
+This is **donated behavior**, identical before and after the swap (`folio_resolve.scoring`
+inherited the same `set` iteration), so it does not affect parity. The harness pins
+`PYTHONHASHSEED=0` so the real delta is not drowned in that noise. Making the term order
+deterministic is a genuine improvement, but it belongs upstream in `folio-resolve` (it would
+shift tie-breaks for every consumer at once) — logged as a follow-up rather than forked here.
+
 ## Environment notes
 
 - `nlp_available: false` in the captures — spaCy is installed in the backend venv but no

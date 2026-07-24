@@ -176,7 +176,7 @@ folio-mapper/
     │   ├── routers/             # 9 API routers
     │   ├── middleware/          # Local auth middleware
     │   └── services/
-    │       ├── folio_service.py       # FOLIO singleton, search, hierarchy (~1050 lines)
+    │       ├── folio_service.py       # FOLIO singleton, search, hierarchy (scorer = folio-resolve)
     │       ├── file_parser.py         # Excel/CSV/TSV/TXT/Markdown parsing
     │       ├── export_service.py      # 8 export format generators
     │       ├── hierarchy_detector.py  # Indentation-based hierarchy detection
@@ -201,8 +201,38 @@ folio-mapper/
     │           ├── local_provider.py  # sentence-transformers
     │           ├── ollama_provider.py
     │           └── openai_provider.py
-    └── tests/                   # 380+ pytest test cases across 23 files
+    ├── migration/               # folio-resolve swap: golden baseline + delta comparator
+    └── tests/                   # 500+ pytest test cases across 24 files
 ```
+
+### Shared matching library (`folio-resolve`)
+
+The deterministic matching core is consumed from the pinned
+**[`folio-resolve`](https://github.com/damienriehl/folio-resolve)** library (MIT) rather than
+owned in this repo. folio-mapper is that library's **donor**: its word-order-invariant scorer,
+`SEARCH_STOPWORDS`, `LEGAL_TERM_EXPANSIONS`, `BRANCH_SIGNAL_WORDS`, search-term generator and
+judge verdict-consistency rules were all lifted from `folio_service.py` and
+`pipeline/stage3_judge.py`. Consuming them back closes the copy-paste divergence at its source
+(folio-enrich had literally forked this scorer) — see `folio-resolve/docs/migration/SCHEDULE.md`
+row 3.
+
+| Now imported from `folio-resolve` | Still owned here |
+|---|---|
+| `compute_relevance_score`, `word_overlap`, `tokenize`, `content_words` | folio-python multi-strategy candidate gathering (label / prefix / stem / definition search) |
+| `SEARCH_STOPWORDS`, `LEGAL_TERM_EXPANSIONS`, `BRANCH_SIGNAL_WORDS` | branch resolution, ancestor surfacing, cross-branch bridging, mandatory-branch expansion |
+| `generate_search_terms` (deterministic layer) | the optional spaCy layer: vector-similarity seam + similar-word cross-expansion |
+| `judge.SCORE_CALIBRATION`, `judge.VALID_VERDICTS`, `judge.enforce_verdict` | judge transport: markdown-fence stripping, type guards, 0-100 clamp, fallback judging |
+| — | the FAISS embedding index and every LLM provider integration |
+
+The swap is guarded by a committed golden-baseline harness and classified-delta comparator in
+`backend/migration/` (six deterministic seams, three canaries). The recorded delta is **empty** —
+byte-for-byte behavior parity — and `tests/test_folio_resolve_pin.py` re-asserts the golden
+scores plus the anti-refork identity checks on every test run.
+
+> Deliberately **not** adopted: the library's `PlaceNameGate`. It is correct for folio-enrich's
+> prose tagging (where "Slovenia → 99" is a false positive), but folio-mapper maps arbitrary
+> taxonomies in which jurisdictions and places are legitimate targets, and the human picks from
+> the ranked list. The `PLACES-PRESERVED` canary fails the migration if that gate ever leaks in.
 
 ### Tech Stack
 
@@ -210,7 +240,7 @@ folio-mapper/
 |-------|-------------|
 | **Frontend** | React 19, Zustand 5, Tailwind CSS 3, Vite 6, TypeScript 5.7 |
 | **Backend** | FastAPI, Python 3.11+, uvicorn, Pydantic v2 |
-| **Search** | [folio-python](https://github.com/alea-institute/folio-python), rapidfuzz, marisa-trie |
+| **Search** | [folio-resolve](https://github.com/damienriehl/folio-resolve) (shared scorer), [folio-python](https://github.com/alea-institute/folio-python), rapidfuzz, marisa-trie |
 | **Embeddings** | sentence-transformers, FAISS, numpy |
 | **LLM SDKs** | OpenAI SDK, Anthropic SDK, httpx |
 | **Desktop** | Electron 33, electron-builder, PyInstaller |
@@ -469,7 +499,7 @@ FOLIO Mapper implements defense-in-depth security:
 
 ### Backend (pytest)
 
-380+ test cases across 23 test files covering:
+500+ test cases across 24 test files covering:
 
 - FOLIO service (search, hierarchy, branches)
 - File parsing (Excel, CSV, TSV, TXT)
@@ -479,6 +509,7 @@ FOLIO Mapper implements defense-in-depth security:
 - Export (all 8 formats)
 - Security (auth, rate limiting, SSRF)
 - API routers (all endpoints)
+- `folio-resolve` pin (anti-refork identity checks + golden migration scores)
 
 ```bash
 cd backend
@@ -486,6 +517,14 @@ source .venv/bin/activate
 pytest                              # All tests
 pytest tests/test_folio_service.py  # Specific file
 pytest -x                           # Stop on first failure
+```
+
+Re-verifying the `folio-resolve` migration parity (needs a cached FOLIO ontology, ~30s, $0 LLM):
+
+```bash
+cd backend
+.venv/bin/python migration/harness.py --out candidate
+.venv/bin/python migration/compare.py --baseline baseline --candidate candidate
 ```
 
 ### Frontend (vitest)

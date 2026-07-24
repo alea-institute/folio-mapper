@@ -21,6 +21,7 @@ FOLIO (Federated Open Legal Information Ontology) is maintained by the **ALEA In
 | fastapi | MIT | API framework |
 | uvicorn | BSD-3-Clause | ASGI server |
 | folio-python | MIT | FOLIO ontology client (redistributes FOLIO CC-BY data — see above) |
+| **folio-resolve** | MIT | Shared FOLIO source-text→concept matching engine (word-order-invariant scorer, stopwords, legal-term expansions, search-term generation, judge verdict rules). Damien's own library, resolved from PyPI (`folio-resolve>=0.1.0` in `backend/pyproject.toml`). folio-mapper **donated** this code and now consumes it back instead of owning the fork — migration `SCHEDULE.md` row 3; see `backend/migration/`. |
 | alea-llm-client | MIT | Client-agnostic LLM integration |
 | openai | Apache-2.0 | OpenAI API client |
 | anthropic | MIT | Anthropic (Claude) API client |
