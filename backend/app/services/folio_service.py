@@ -1,14 +1,38 @@
-"""Core FOLIO integration: singleton loader, candidate search, branch detection."""
+"""Core FOLIO integration: singleton loader, candidate search, branch detection.
+
+The deterministic matching core — the word-order-invariant scorer, the stopword set, the
+legal-term expansions, the branch-signal words and the search-term generator — is consumed
+from the pinned `folio-resolve <https://github.com/damienriehl/folio-resolve>`_ library rather
+than owned here. folio-mapper *donated* that code to the library (see the module docstrings in
+``folio_resolve.scoring``); this module now re-exports the library's single source of truth and
+supplies the two mapper-specific seams the library deliberately leaves to consumers:
+
+* the spaCy word-vector similarity callable (``_spacy_word_similarity``), and
+* the spaCy similar-word query expansion appended in :func:`_generate_search_terms`.
+
+Everything ontology-shaped (folio-python multi-strategy gathering, branch resolution, ancestor
+surfacing, cross-branch bridging, mandatory-branch expansion, the FAISS embedding paths) stays
+here — the library is intentionally ontology-client-agnostic. See ``backend/migration/`` for the
+golden-baseline harness that guards the swap.
+"""
 
 from __future__ import annotations
 
 import asyncio
 import logging
-import re
 import threading
 from functools import lru_cache
 
 from folio import FOLIO, FOLIO_TYPE_IRIS, FOLIOTypes
+from folio_resolve.scoring import (
+    BRANCH_SIGNAL_WORDS,
+    LEGAL_TERM_EXPANSIONS,
+    SEARCH_STOPWORDS,
+)
+from folio_resolve.scoring import compute_relevance_score as _lib_compute_relevance_score
+from folio_resolve.scoring import content_words as _content_words
+from folio_resolve.scoring import generate_search_terms as _lib_generate_search_terms
+from folio_resolve.scoring import tokenize as _tokenize
 
 from app.models.graph_models import EntityGraphResponse, GraphEdge, GraphNode
 from app.models.mapping_models import (
@@ -25,101 +49,11 @@ from app.services.branch_config import BRANCH_CONFIG, EXCLUDED_BRANCHES, get_bra
 
 logger = logging.getLogger(__name__)
 
-# Words too common to be useful for individual search or scoring
-SEARCH_STOPWORDS = frozenset({
-    "a", "an", "the", "of", "and", "or", "in", "for", "to", "with", "by", "on", "at",
-    "is", "are", "was", "were", "be", "been", "being",
-    "not", "no", "has", "have", "had", "do", "does", "did",
-    "this", "that", "it", "its", "their", "other", "such", "than",
-    "your", "yours", "own", "my", "mine", "our", "ours",
-    "her", "hers", "him", "his", "whom", "whose", "self",
-    "law", "legal", "type", "types", "general",
-})
-
-# Map expansion suffixes to their dominant FOLIO branch (verified via data).
-# Used in Phase 1b to scope standalone suffix searches to the most relevant branch.
-BRANCH_SIGNAL_WORDS: dict[str, str] = {
-    "claim": "Objectives",
-    "claims": "Objectives",
-    "liability": "Objectives",
-    "negligence": "Objectives",
-    "malpractice": "Objectives",
-    "defense": "Objectives",
-    "defenses": "Objectives",
-    "practice": "Service",
-    "law": "Area of Law",
-}
-
-# Domain-aware expansions: common legal content words → FOLIO label suffixes.
-# When a content word matches a key, we also search compound phrases like
-# "litigation practice" and re-score candidates against those expansions.
-LEGAL_TERM_EXPANSIONS: dict[str, list[str]] = {
-    # Core practice types
-    "litigation": ["practice", "service"],
-    "transactional": ["practice", "service"],
-    "transaction": ["practice", "service"],
-    "transactions": ["practice", "service"],
-    "regulatory": ["practice", "compliance"],
-    "compliance": ["practice", "service"],
-    "advisory": ["practice", "service"],
-    # Dispute resolution
-    "dispute": ["service", "resolution"],
-    "disputes": ["service", "resolution"],
-    "mediation": ["service"],
-    "arbitration": ["service"],
-    "negotiation": ["service"],
-    "settlement": ["service", "practice"],
-    "appellate": ["practice", "service"],
-    "trial": ["practice", "service"],
-    "appeals": ["practice", "service"],
-    # Enforcement & prosecution
-    "prosecution": ["service"],
-    "enforcement": ["service", "action"],
-    "investigation": ["service"],
-    # Error/fault/harm
-    "error": ["malpractice", "negligence"],
-    "fault": ["negligence", "liability"],
-    "harm": ["liability", "injury"],
-    "injury": ["liability", "claim"],
-    "negligence": ["claim", "liability"],
-    "malpractice": ["claim", "liability"],
-    # Contract & breach
-    "contract": ["law", "claim", "claims"],
-    "breach": ["claim", "claims"],
-    # Practice areas
-    "corporate": ["practice", "service", "law"],
-    "employment": ["practice", "service", "law"],
-    "intellectual": ["property", "practice"],
-    "bankruptcy": ["practice", "service", "law"],
-    "family": ["practice", "law"],
-    "immigration": ["practice", "service", "law"],
-    "environmental": ["practice", "law", "compliance"],
-    "antitrust": ["practice", "law", "compliance"],
-    "tax": ["practice", "service", "law"],
-    "real": ["estate", "property"],
-    "estate": ["planning", "practice", "law"],
-    # Advisory & counseling
-    "counsel": ["service", "practice"],
-    "counseling": ["service", "practice"],
-    "consulting": ["service", "practice"],
-    # Recovery & collections
-    "collection": ["service", "practice"],
-    "recovery": ["service", "practice"],
-    "foreclosure": ["service", "practice"],
-    # Investigation & due diligence
-    "discovery": ["service", "practice"],
-    "diligence": ["service", "practice"],
-    "audit": ["service", "practice"],
-    # Documentation & filing
-    "drafting": ["service", "practice"],
-    "documentation": ["service", "practice"],
-    "filing": ["service", "practice"],
-    # Strategy & planning
-    "strategy": ["service", "practice"],
-    "planning": ["service", "practice"],
-    "risk": ["service", "management"],
-    "structuring": ["service", "practice"],
-}
+# The scorer's vocabulary — SEARCH_STOPWORDS, BRANCH_SIGNAL_WORDS and LEGAL_TERM_EXPANSIONS —
+# is imported from folio_resolve.scoring above and re-exported here so existing importers
+# (app.services.pipeline.*, tests) keep working against a single source of truth. folio-mapper
+# authored these tables; the library now owns them.
+__all_scoring_reexports__ = ("SEARCH_STOPWORDS", "BRANCH_SIGNAL_WORDS", "LEGAL_TERM_EXPANSIONS")
 
 # Module-level singleton
 _folio_instance: FOLIO | None = None
@@ -546,75 +480,17 @@ def _see_also_within_branch(
     return results
 
 
-def _tokenize(text: str) -> list[str]:
-    """Split text into lowercase alphabetic tokens (2+ chars)."""
-    return [w.lower() for w in re.findall(r"[a-zA-Z]+", text) if len(w) >= 2]
+def _spacy_word_similarity(word_a: str, word_b: str) -> float:
+    """Vector-similarity seam handed to the library scorer.
 
-
-def _content_words(text: str) -> set[str]:
-    """Extract meaningful (non-stopword) words from text."""
-    return {w for w in _tokenize(text) if w not in SEARCH_STOPWORDS}
-
-
-def _word_overlap(query_words: set[str], target_words: set[str], use_vectors: bool = False) -> float:
-    """Bidirectional word overlap with prefix-match credit.
-
-    Computes both forward (query→target) and reverse (target→query) overlap.
-    Reverse overlap helps multi-concept queries (e.g. "Small Business Formation
-    (LLC / Corp)") match narrower targets (e.g. "Business Organizations Law")
-    where only a fraction of query words match but a large fraction of the
-    target's words are covered.
-
-    When use_vectors=True and spaCy is available, words with 0.0 character-based
-    match get a vector cosine fallback (capped at 0.5).
+    folio_resolve.scoring is dependency-free by design: it takes word similarity as a callable
+    so the core never imports spaCy. folio-mapper fills the seam with its lazy-loaded spaCy
+    helper, which returns 0.0 when spaCy (or its vector model) is unavailable — so the vector
+    fallback degrades to the pure character-based path exactly as before.
     """
-    if not query_words or not target_words:
-        return 0.0
+    from app.services.nlp import word_similarity
 
-    def _directional_overlap(source: set[str], dest: set[str]) -> float:
-        matched = 0.0
-        for sw in source:
-            best = 0.0
-            for dw in dest:
-                if sw == dw:
-                    best = 1.0
-                    break
-                elif len(sw) >= 3 and len(dw) >= 3:
-                    if sw.startswith(dw) or dw.startswith(sw):
-                        best = max(best, 0.8)
-                    elif len(sw) >= 5 and len(dw) >= 5:
-                        # Common-stem credit for morphological variants
-                        # e.g., "defense"/"defendant" share prefix "defen"
-                        pfx = 0
-                        for c1, c2 in zip(sw, dw):
-                            if c1 == c2:
-                                pfx += 1
-                            else:
-                                break
-                        if pfx >= 4 and pfx / min(len(sw), len(dw)) >= 0.7:
-                            best = max(best, 0.7)
-            # Vector fallback: when char-based gives 0.0, use spaCy cosine
-            if best == 0.0 and use_vectors and len(sw) >= 3:
-                from app.services.nlp import word_similarity
-
-                for dw in dest:
-                    if len(dw) >= 3:
-                        vec_sim = word_similarity(sw, dw)
-                        if vec_sim > 0.25:
-                            best = max(best, min(vec_sim, 0.5))
-            matched += best
-        return matched / len(source)
-
-    forward = _directional_overlap(query_words, target_words)
-
-    # Reverse overlap: what fraction of the target's words appear in the query.
-    # Only applied when the target has 2+ content words to avoid inflating
-    # single-word labels. Discounted by 0.75 since reverse is a weaker signal.
-    reverse = 0.0
-    if len(target_words) >= 2:
-        reverse = _directional_overlap(target_words, query_words) * 0.75
-
-    return max(forward, reverse)
+    return word_similarity(word_a, word_b)
 
 
 def _compute_relevance_score(
@@ -625,125 +501,41 @@ def _compute_relevance_score(
     synonyms: list[str],
     preferred_label: str | None = None,
 ) -> float:
-    """Score 0-100 based on word overlap between query and candidate."""
-    if not label:
-        return 0.0
+    """Score 0-100 based on word overlap between query and candidate.
 
-    query_lower = query_full.lower().strip()
-    label_lower = label.lower()
-
-    # Exact match
-    if query_lower == label_lower:
-        return 99.0
-
-    label_content = _content_words(label)
-
-    # --- Label scoring ---
-    label_score = 0.0
-    # Full query contained in label (e.g. "Dog Bite" in "Dog Bite Strict Liability")
-    if len(query_lower) >= 4 and query_lower in label_lower:
-        label_score = 92.0
-    # Label contained in query, but only for substantial labels (not abbreviations)
-    elif (
-        len(label_lower) >= 4
-        and label_lower in query_lower
-        and len(label_lower) / len(query_lower) > 0.3
-    ):
-        label_score = 88.0
-    overlap = _word_overlap(query_content, label_content, use_vectors=True)
-    if overlap > 0:
-        label_score = max(label_score, overlap * 88)
-
-    # --- Preferred label scoring ---
-    pref_score = 0.0
-    if preferred_label:
-        pref_lower = preferred_label.lower()
-        if query_lower == pref_lower:
-            pref_score = 90.0
-        elif len(query_lower) >= 4 and query_lower in pref_lower:
-            pref_score = 84.0
-        else:
-            pref_content = _content_words(preferred_label)
-            p_overlap = _word_overlap(query_content, pref_content, use_vectors=True)
-            if p_overlap > 0:
-                pref_score = p_overlap * 86
-
-    # --- Synonym scoring (word overlap only, no raw substring matching) ---
-    syn_score = 0.0
-    for syn in synonyms:
-        syn_content = _content_words(syn)
-        s_overlap = _word_overlap(query_content, syn_content, use_vectors=True)
-        if s_overlap > 0:
-            syn_score = max(syn_score, s_overlap * 82)
-
-    # --- Definition scoring ---
-    def_score = 0.0
-    if definition:
-        def_lower = definition.lower()
-        if query_lower in def_lower:
-            def_score = 60.0
-        def_content = _content_words(definition)
-        d_overlap = _word_overlap(query_content, def_content)
-        if d_overlap > 0:
-            def_score = max(def_score, d_overlap * 55)
-
-    # Combine: best of label/preferred/synonym, with small definition boost
-    primary = max(label_score, pref_score, syn_score)
-    if primary > 0:
-        final = primary + min(def_score * 0.12, 8)
-    else:
-        final = def_score
-
-    # Specificity penalty: penalize candidates that are more specific than the query.
-    # When a candidate label introduces many content words not present in the query,
-    # it's "too specific" for the input.
-    # e.g., input "Antitrust" → "Antitrust Claims" is fine (1 extra word),
-    #        but "Antitrust - Bundled Pricing Claims" is too specific (3 extra words).
-    # Note: actual exact matches (query == label) return 99.0 early above,
-    # so this only runs for non-exact matches that happen to score high.
-    if label_content and query_content and final > 0:
-        extra_words = label_content - query_content
-        if extra_words and len(label_content) > len(query_content):
-            specificity_ratio = len(extra_words) / len(label_content)
-            # Penalty scales from 0% (no extra words) to 40% (all words are extra).
-            # Mild at 1 extra word, significant at 3+.
-            penalty = specificity_ratio * 0.4
-            final = final * (1.0 - penalty)
-
-    return round(min(final, 99.0), 1)
+    Thin binding of ``folio_resolve.scoring.compute_relevance_score`` (which folio-mapper
+    donated) to this repo's spaCy vector seam. The scoring policy itself — exact-match
+    short-circuit, containment floors, preferred-label/synonym/definition bands and the
+    specificity penalty — now lives in the library.
+    """
+    return _lib_compute_relevance_score(
+        query_content,
+        query_full,
+        label,
+        definition,
+        synonyms,
+        preferred_label=preferred_label,
+        use_vectors=True,
+        word_similarity=_spacy_word_similarity,
+    )
 
 
 def _generate_search_terms(term: str) -> list[str]:
-    """Generate search terms: full phrase, sub-phrases, individual content words."""
-    words = _tokenize(term)
-    content = _content_words(term)
+    """Generate search terms: full phrase, sub-phrases, content words, expansions.
 
-    terms = [term]  # Always search full phrase
+    The deterministic part (phrase + sub-phrase windows + content words +
+    ``LEGAL_TERM_EXPANSIONS`` compounds) comes from
+    ``folio_resolve.scoring.generate_search_terms``. folio-mapper then appends its optional
+    spaCy layer — similar-word expansion plus the cross-combination of those similar words with
+    another content word's expansion suffixes ("surgery malpractice") — which the library
+    deliberately leaves to consumers so its core stays spaCy-free.
+    """
+    terms = _lib_generate_search_terms(term)
 
-    # Sub-phrases (windows of 2..n-1 consecutive words)
-    if len(words) >= 3:
-        for n in range(len(words) - 1, 1, -1):
-            for i in range(len(words) - n + 1):
-                sub = " ".join(words[i : i + n])
-                if _content_words(sub):  # Has at least one content word
-                    terms.append(sub)
-
-    # Individual content words (3+ chars to catch abbreviations like LLC, LLP, LTD)
-    for w in sorted(content, key=len, reverse=True):
-        if len(w) >= 3:
-            terms.append(w)
-
-    # Domain-aware expansions: "litigation" → "litigation practice", "litigation service"
-    for w in content:
-        suffixes = LEGAL_TERM_EXPANSIONS.get(w)
-        if suffixes:
-            for suffix in suffixes:
-                terms.append(f"{w} {suffix}")  # compound: "error malpractice"
-
-    # spaCy similar-word expansion + cross-combination with LEGAL_TERM_EXPANSIONS
     from app.services.nlp import is_available as nlp_available, similar_words
 
     if nlp_available():
+        content = _content_words(term)
         similar_map: dict[str, list[str]] = {}
         for w in content:
             sims = similar_words(w, top_n=3, threshold=0.5)
@@ -764,16 +556,17 @@ def _generate_search_terms(term: str) -> list[str]:
                         for suffix in suffixes:
                             terms.append(f"{sw} {suffix}")  # "surgery malpractice"
 
-    # Deduplicate preserving order
-    seen: set[str] = set()
-    result: list[str] = []
-    for t in terms:
-        tl = t.lower()
-        if tl not in seen:
-            seen.add(tl)
-            result.append(t)
+        # Deduplicate preserving order (the library already deduped its own terms)
+        seen: set[str] = set()
+        deduped: list[str] = []
+        for t in terms:
+            tl = t.lower()
+            if tl not in seen:
+                seen.add(tl)
+                deduped.append(t)
+        terms = deduped
 
-    return result
+    return terms
 
 
 def lookup_concept(iri_hash: str) -> FolioCandidate | None:

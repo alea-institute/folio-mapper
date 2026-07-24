@@ -100,7 +100,7 @@
   "env": {
     "embedding_index_active": false,
     "folio_python_version": "0.2.0",
-    "folio_resolve_consumed": false,
+    "folio_resolve_consumed": true,
     "folio_resolve_present": true,
     "folio_resolve_version": "0.2.0",
     "max_per_branch": 8,

@@ -2,6 +2,13 @@
 
 A separate LLM call reviews each ranked candidate from Stage 2 and either
 confirms, boosts, penalizes, or rejects it.
+
+The verdict vocabulary and the verdict-consistency clamps (rejected → 0, confirmed within ±5,
+boost capped at +25) are imported from ``folio_resolve.judge`` — the pinned library lifted them
+from this very module, so folio-mapper now consumes its own donated policy instead of keeping a
+second copy. What stays here is transport: markdown-fence stripping, type guards on
+LLM-supplied fields, the 0-100 clamp and the fallback/logging behavior the library's
+``parse_judge_json`` does not (yet) cover.
 """
 
 from __future__ import annotations
@@ -9,6 +16,9 @@ from __future__ import annotations
 import json
 import logging
 import re
+
+from folio_resolve.judge import VALID_VERDICTS as _VALID_VERDICTS
+from folio_resolve.judge import enforce_verdict
 
 from app.models.llm_models import LLMConfig
 from app.models.pipeline_models import (
@@ -21,8 +31,6 @@ from app.services.llm.registry import get_provider
 from app.services.pipeline.prompts import build_judge_prompt
 
 logger = logging.getLogger(__name__)
-
-_VALID_VERDICTS = {"confirmed", "boosted", "penalized", "rejected"}
 
 
 def _strip_markdown_fences(text: str) -> str:
@@ -76,18 +84,9 @@ def _parse_judge_json(
 
         original_score = ranked_lookup[iri_hash].score
 
-        # Enforce verdict consistency
-        if verdict == "rejected":
-            adjusted_score = 0.0
-        elif verdict == "confirmed":
-            # Confirmed should stay within 5 points
-            adjusted_score = max(
-                original_score - 5,
-                min(original_score + 5, adjusted_score),
-            )
-        elif verdict == "boosted":
-            # Cap boost to max +25 points from original
-            adjusted_score = min(adjusted_score, original_score + 25)
+        # Verdict consistency (rejected -> 0, confirmed within +/-5, boost capped at +25) is
+        # the pinned library's policy — folio-mapper donated these exact rules.
+        adjusted_score = enforce_verdict(original_score, adjusted_score, verdict)
 
         results.append(JudgedCandidate(
             iri_hash=iri_hash,

@@ -16,6 +16,11 @@ dependencies = [
     "anthropic>=0.18.0,<1.0.0",
     "httpx>=0.27.0,<1.0.0",
     "slowapi>=0.1.9,<1.0.0",
+    # Shared FOLIO source-text->concept matching engine (folio-resolve migration SCHEDULE.md
+    # row 3). folio-mapper is the DONOR of this library's scorer/expansions/judge rules; it now
+    # consumes them back instead of owning the fork. Resolved from PyPI (MIT, Damien's own).
+    # For local library dev: uv pip install -e ../../folio-resolve
+    "folio-resolve>=0.1.0",
 ]
 
 [project.optional-dependencies]

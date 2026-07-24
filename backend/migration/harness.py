@@ -28,9 +28,19 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Any
+
+# folio-mapper's search-term generation iterates a `set` of content words, so term ORDER (and
+# therefore the tie-break order of equally scored candidates, which the per-branch caps then
+# truncate) varies between processes under PEP 456 hash randomization. That nondeterminism is
+# pre-existing and identical before and after the swap — but it would otherwise drown the real
+# delta in noise, so captures are always taken with a pinned hash seed.
+if os.environ.get("PYTHONHASHSEED") != "0":
+    os.environ["PYTHONHASHSEED"] = "0"
+    os.execv(sys.executable, [sys.executable, *sys.argv])
 
 # Run from anywhere: make `app` importable.
 BACKEND = Path(__file__).resolve().parent.parent

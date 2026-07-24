@@ -436,6 +436,7 @@ dependencies = [
     { name = "anthropic" },
     { name = "fastapi" },
     { name = "folio-python" },
+    { name = "folio-resolve" },
     { name = "httpx" },
     { name = "marisa-trie" },
     { name = "openai" },
@@ -468,6 +469,7 @@ requires-dist = [
     { name = "faiss-cpu", marker = "extra == 'embedding'", specifier = ">=1.8,<2.0" },
     { name = "fastapi", specifier = ">=0.115.0,<1.0.0" },
     { name = "folio-python", specifier = ">=0.2.0,<1.0.0" },
+    { name = "folio-resolve", specifier = ">=0.1.0" },
     { name = "httpx", specifier = ">=0.27.0,<1.0.0" },
     { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.27.0,<1.0.0" },
     { name = "marisa-trie", specifier = ">=1.0.0,<2.0.0" },
@@ -497,6 +499,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/b7/f5/df40415506edd79bd09676dc1dd9f30e4d55403b1f02b7ba4cdb6c5baeb6/folio_python-0.2.0.tar.gz", hash = "sha256:d7e7adf9462288c020a7e005824c632571fa2914dbdc40bdd85f10061d080a43", size = 24118, upload-time = "2025-04-17T13:11:24.629Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/24/44/49899ccd441564b382275ffd57fc024c22d9edecd1ce4c4143765103ccc7/folio_python-0.2.0-py3-none-any.whl", hash = "sha256:9b1c135cb72e10a55d07c2f2b09facc3fe8e6d4aaee4c930f2b227d8daff5dec", size = 24365, upload-time = "2025-04-17T13:11:22.828Z" },
+]
+
+[[package]]
+name = "folio-resolve"
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5b/1b/9a02a419c9a2f6c3ee397a6ea2635fdd143e61a46665faaeeeb01c1bda53/folio_resolve-0.2.0.tar.gz", hash = "sha256:a4b995a33642a105c24bf481913137c9e08b90bab4a7edd974955580f24ea74e", size = 80198, upload-time = "2026-07-17T05:18:30.097Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e0/89/b9c4e009a3dd5ae094482a44109e6e56bff6c7964f9e0f4d0635f89801da/folio_resolve-0.2.0-py3-none-any.whl", hash = "sha256:ef41ffbec3203f7f110e7421b2907b2fbfcd237139dc4458952e6929461141b9", size = 55894, upload-time = "2026-07-17T05:18:28.855Z" },
 ]
 
 [[package]]

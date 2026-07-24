@@ -74,6 +74,10 @@ a = Analysis(
         "marisa_trie",
         # FOLIO library
         "folio",
+        # Shared FOLIO source-text->concept matching engine (pinned folio-resolve)
+        "folio_resolve",
+        "folio_resolve.scoring",
+        "folio_resolve.judge",
         "alea_llm_client",
         # HTTP clients
         "httpx",
