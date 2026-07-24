@@ -1,0 +1,2037 @@
+{
+  "branch_scoped": [
+    {
+      "branch": "Service",
+      "id": "b-litigation-service",
+      "text": "Commercial Litigation",
+      "top": [
+        {
+          "iri_hash": "R79LjWBKHCdmQKEW6zPY8Co",
+          "label": "Litigation Practice",
+          "score": 99.0
+        },
+        {
+          "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+          "label": "Service",
+          "score": 90.6
+        },
+        {
+          "iri_hash": "RDd4jyF4IYVDSohWIK7cGjH",
+          "label": "Non-Litigation Recovery Practice",
+          "score": 75.7
+        },
+        {
+          "iri_hash": "RBnuIEAfenTTxlF3AFiSNtc",
+          "label": "Tax Dispute Practice",
+          "score": 65.0
+        },
+        {
+          "iri_hash": "R9tA1NC7tjVzG64HW0PLaRb",
+          "label": "Immigration Service",
+          "score": 47.3
+        },
+        {
+          "iri_hash": "R527Rr0DAZ1Lu9VPx6QRbj",
+          "label": "Tax Practice",
+          "score": 47.3
+        },
+        {
+          "iri_hash": "R7epmKzXnQGUjQ78UEKxoTG",
+          "label": "Investigation Practice",
+          "score": 44.0
+        },
+        {
+          "iri_hash": "R7fC10ZFXJvunQwCvOvdAw",
+          "label": "Identification of Documents Practice",
+          "score": 34.7
+        },
+        {
+          "iri_hash": "R7TMX2dw9IzNIC3bpUZEFRP",
+          "label": "Legislative Drafting Practice",
+          "score": 34.7
+        },
+        {
+          "iri_hash": "R51kUcgy4gLpOrZZK30WsG",
+          "label": "Legislative Monitoring Practice",
+          "score": 34.7
+        }
+      ],
+      "total": 18
+    },
+    {
+      "branch": "Objectives",
+      "id": "b-dui-objectives",
+      "text": "DUI/DWI Defense",
+      "top": [
+        {
+          "iri_hash": "R7jZ9gR94cUatcWLbdMPP8d",
+          "label": "Payment Defense",
+          "score": 35.2
+        },
+        {
+          "iri_hash": "R9tKWPMbwXgslScjTY9e9nF",
+          "label": "Economic Interest Defense",
+          "score": 31.5
+        },
+        {
+          "iri_hash": "R7fHUYhKSjo03fDLGyxUS9a",
+          "label": "First Amendment Defense",
+          "score": 31.5
+        }
+      ],
+      "total": 3
+    },
+    {
+      "branch": "Area of Law",
+      "id": "b-medmal-areaoflaw",
+      "text": "Medical Malpractice",
+      "top": [
+        {
+          "iri_hash": "RR7oJoEqb12ZxVMvTIb7I0",
+          "label": "Negligence and Malpractice Law",
+          "score": 82.0
+        }
+      ],
+      "total": 1
+    }
+  ],
+  "corpus_hash": "acb19030ec8fae29ecc99e1a2eaf744b90b4175d6444a0cb51cc1f5ac317e151",
+  "corpus_version": 1,
+  "env": {
+    "embedding_index_active": false,
+    "folio_python_version": "0.2.0",
+    "folio_resolve_consumed": false,
+    "folio_resolve_present": true,
+    "folio_resolve_version": "0.2.0",
+    "max_per_branch": 8,
+    "nlp_available": false,
+    "threshold": 0.3,
+    "top_n": 10
+  },
+  "mandatory": [
+    {
+      "branches": [
+        "Objectives"
+      ],
+      "id": "m-dui-objectives",
+      "in_branch_total": 8,
+      "text": "DUI/DWI Defense",
+      "top": [
+        {
+          "branch": "Objectives",
+          "iri_hash": "R7jZ9gR94cUatcWLbdMPP8d",
+          "label": "Payment Defense",
+          "score": 35.2
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R9tKWPMbwXgslScjTY9e9nF",
+          "label": "Economic Interest Defense",
+          "score": 31.5
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R7fHUYhKSjo03fDLGyxUS9a",
+          "label": "First Amendment Defense",
+          "score": 31.5
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RBAoFbSK8WP6xJyVrgQd5PZ",
+          "label": "Affirmative Defenses",
+          "score": 28.2
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R7vJPxcT40MjEfNZkBK1tKH",
+          "label": "Litigation Defenses",
+          "score": 26.4
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R8mREFTbCVNHGAdqneLSd0d",
+          "label": "Litigation Criminal Defenses",
+          "score": 25.7
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R9m8Wz6rX8oJIJfhFFncV5x",
+          "label": "Discovery and Evidentiary Defenses",
+          "score": 25.2
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R72LAGrFnljQjLgui3xiNkR",
+          "label": "Unclean Hands",
+          "score": 18.3
+        }
+      ],
+      "total": 17
+    },
+    {
+      "branches": [
+        "Area of Law"
+      ],
+      "id": "m-medmal-areaoflaw",
+      "in_branch_total": 5,
+      "text": "Medical Malpractice",
+      "top": [
+        {
+          "branch": "Area of Law",
+          "iri_hash": "RR7oJoEqb12ZxVMvTIb7I0",
+          "label": "Negligence and Malpractice Law",
+          "score": 82.0
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "Rd6ivGOMbi4Slsu4ynPmMX",
+          "label": "Health Law",
+          "score": 60.2
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "R7MK1XmyjtYxZKg8Iw4ZN4K",
+          "label": "Personal Injury and Tort Law",
+          "score": 49.2
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "RzQmY3E958fA9POPoG03of",
+          "label": "Fraud and Economic Torts Law",
+          "score": 43.5
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "R8YijwyycPV6XzUJaud9SB1",
+          "label": "Public and Administrative Law",
+          "score": 43.5
+        }
+      ],
+      "total": 32
+    }
+  ],
+  "score_pairs": [
+    {
+      "id": "s-exact",
+      "label": "Arbitration Rules",
+      "query": "Arbitration Rules",
+      "score": 99.0
+    },
+    {
+      "id": "s-word-order",
+      "label": "Arbitration Rules",
+      "query": "rules of arbitration",
+      "score": 94.6
+    },
+    {
+      "id": "s-query-in-label",
+      "label": "Dog Bite Strict Liability",
+      "query": "Dog Bite",
+      "score": 73.6
+    },
+    {
+      "id": "s-label-in-query",
+      "label": "Litigation Practice",
+      "query": "Commercial Litigation Practice Group",
+      "score": 88.0
+    },
+    {
+      "id": "s-abbrev-not-substring",
+      "label": "LLC",
+      "query": "Limited Liability Company Formation",
+      "score": 0.0
+    },
+    {
+      "id": "s-prefix-credit",
+      "label": "Arbitration",
+      "query": "arbitrate",
+      "score": 61.6
+    },
+    {
+      "id": "s-prefix-startswith",
+      "label": "Defenses",
+      "query": "defense",
+      "score": 92.0
+    },
+    {
+      "id": "s-reverse-overlap",
+      "label": "Business Organizations Law",
+      "query": "Small Business Formation (LLC / Corp)",
+      "score": 33.0
+    },
+    {
+      "id": "s-preferred-label",
+      "label": "ADR",
+      "query": "Alternative Dispute Resolution",
+      "score": 90.0
+    },
+    {
+      "id": "s-synonym",
+      "label": "Legal Malpractice",
+      "query": "attorney malpractice",
+      "score": 82.0
+    },
+    {
+      "id": "s-definition-only",
+      "label": "Unclaimed Property",
+      "query": "escheat",
+      "score": 36.0
+    },
+    {
+      "id": "s-definition-boost",
+      "label": "Arbitration Practice",
+      "query": "arbitration",
+      "score": 79.4
+    },
+    {
+      "id": "s-specificity-1-extra",
+      "label": "Antitrust Claims",
+      "query": "Antitrust",
+      "score": 79.4
+    },
+    {
+      "id": "s-specificity-3-extra",
+      "label": "Antitrust - Bundled Pricing Claims",
+      "query": "Antitrust",
+      "score": 69.4
+    },
+    {
+      "id": "s-empty-label",
+      "label": "",
+      "query": "anything",
+      "score": 0.0
+    },
+    {
+      "id": "s-no-overlap",
+      "label": "Arbitration",
+      "query": "Zorbleflorp",
+      "score": 0.0
+    }
+  ],
+  "search": [
+    {
+      "category": "exact",
+      "id": "t-exact-arbitration",
+      "text": "Arbitration",
+      "top": [
+        {
+          "branch": "Service",
+          "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+          "label": "Service",
+          "score": 90.6
+        },
+        {
+          "branch": "Location",
+          "iri_hash": "RCDD4a25B5ecf1579f296612",
+          "label": "Trat",
+          "score": 88.0
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RXO2u2WBkUUcEG1jczLIcA",
+          "label": "Arbitration Practice",
+          "score": 85.3
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R81opfsWnlEQvW2jFPWFOxo",
+          "label": "Judgment of Arbitration",
+          "score": 79.4
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RDukTetrGS7uJf9YlpclDXz",
+          "label": "Motion for Arbitration",
+          "score": 79.4
+        },
+        {
+          "branch": "Event",
+          "iri_hash": "RC2LcVXjOZOiT3wqNc2SU5n",
+          "label": "Arbitration Event",
+          "score": 79.4
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R8LtU1k4pyiSD639zaq4vrM",
+          "label": "Arbitration Forum",
+          "score": 79.4
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R8xVj14htMg08Ph5XqOUdbf",
+          "label": "Rules of Arbitration",
+          "score": 79.4
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RBey1qPhJGDlP3xszUL2JDF",
+          "label": "Arbitration Award",
+          "score": 79.4
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RWQW185M6gqosVVQA1GE0A",
+          "label": "Arbitration Clause",
+          "score": 79.4
+        }
+      ],
+      "total": 82
+    },
+    {
+      "category": "exact",
+      "id": "t-exact-mediation",
+      "text": "Mediation",
+      "top": [
+        {
+          "branch": "Industry and Market",
+          "iri_hash": "moVspfnYTVKSKtPLW1DMvQ",
+          "label": "Remediation Services",
+          "score": 92.0
+        },
+        {
+          "branch": "Industry and Market",
+          "iri_hash": "vp7kR0nBQcW_5ylXi5_4TQ",
+          "label": "Remediation Services",
+          "score": 92.0
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+          "label": "Service",
+          "score": 90.6
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "R9zgcjBBIdWMnwIR8nqsoS8",
+          "label": "Mediation Practice",
+          "score": 85.3
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R8QAy2M9XDOWZjh3ISKfwLP",
+          "label": "Mediation Agreement",
+          "score": 79.4
+        },
+        {
+          "branch": "Event",
+          "iri_hash": "RXEKEEEApoXTYB4DbjUJui",
+          "label": "Mediation Event",
+          "score": 79.4
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "RIBFgpbQ38dlD4wCMRI9qP",
+          "label": "Mediation Forum",
+          "score": 79.4
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RgsvxYKhqRKNkjPVgxJIKt",
+          "label": "Mediation Clause",
+          "score": 79.4
+        },
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "RE06c691EE24d1E4863BF83d",
+          "label": "Federal Mediation and Conciliation Service",
+          "score": 76.2
+        },
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "RBD4ffd0891f727E0169B6b1",
+          "label": "National Mediation Board",
+          "score": 72.7
+        }
+      ],
+      "total": 90
+    },
+    {
+      "category": "exact",
+      "id": "t-exact-bankruptcy-law",
+      "text": "Bankruptcy Law",
+      "top": [
+        {
+          "branch": "Service",
+          "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+          "label": "Service",
+          "score": 90.6
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RBLVY0zljWHvn7aUS7BnomS",
+          "label": "Setoff",
+          "score": 88.6
+        },
+        {
+          "branch": "Actor / Player",
+          "iri_hash": "R9P6haogRyeNPepJFEkrFFR",
+          "label": "Insider",
+          "score": 82.0
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "R0AuW63fjdVitHseE1v4yx",
+          "label": "Bankruptcy Claims Practice",
+          "score": 82.0
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RDEH31m87KVjv66MO5hBvje",
+          "label": "Bankruptcy Motion Practice",
+          "score": 82.0
+        },
+        {
+          "branch": "Actor / Player",
+          "iri_hash": "R9TyJ8yqLicto5rFa8puek4",
+          "label": "Bank",
+          "score": 75.7
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RD3TwEtezlhaJxwaSHCibko",
+          "label": "Bankruptcy Plans",
+          "score": 75.7
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "R7LI3BONqNkXbKHKa0t3jyI",
+          "label": "Bankruptcy and Financial Restructuring Practice",
+          "score": 70.4
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "R7meQhKYGkcA57UZ7v4JOdA",
+          "label": "Banking Law",
+          "score": 70.2
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R72B5FSkEwdUEzfUkcBpMua",
+          "label": "Bankruptcy Schedule - Property",
+          "score": 69.4
+        }
+      ],
+      "total": 98
+    },
+    {
+      "category": "word_order",
+      "id": "t-fuzzy-arbrules",
+      "text": "arbitration rules",
+      "top": [
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R8xVj14htMg08Ph5XqOUdbf",
+          "label": "Rules of Arbitration",
+          "score": 93.9
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+          "label": "Service",
+          "score": 90.6
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RXO2u2WBkUUcEG1jczLIcA",
+          "label": "Arbitration Practice",
+          "score": 85.3
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "RDRZ05RUD0ScNOff4djBSTw",
+          "label": "AAA Consumer Arbitration Rules",
+          "score": 79.4
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "RIrsxdvut2uYOncb3fCTwd",
+          "label": "AAA Labor Arbitration Rules",
+          "score": 79.4
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "RBC0hzYykzvVIU4lgwzWUxn",
+          "label": "JAMS International Arbitration Rules",
+          "score": 78.9
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "RYRLJZvUVuu8jTwpLnyyEU",
+          "label": "AAA Optional Appellate Arbitration Rules",
+          "score": 75.4
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R7ltqLFbA95B5Hwmwgf8WgF",
+          "label": "AAA Commercial Arbitration Rules and Mediation Procedures",
+          "score": 72.7
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R56Ur1GMPPcmHKGn3BVaK3",
+          "label": "AAA Employment Arbitration Rules and Mediation Procedures",
+          "score": 72.7
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R7uzfpLbCGc2taU7nsJBuor",
+          "label": "ALL American Arbitration Association Rules",
+          "score": 71.9
+        }
+      ],
+      "total": 88
+    },
+    {
+      "category": "word_order",
+      "id": "t-wordorder-arbrules",
+      "text": "rules of arbitration",
+      "top": [
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R8xVj14htMg08Ph5XqOUdbf",
+          "label": "Rules of Arbitration",
+          "score": 99.0
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+          "label": "Service",
+          "score": 90.6
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RXO2u2WBkUUcEG1jczLIcA",
+          "label": "Arbitration Practice",
+          "score": 85.3
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "RDRZ05RUD0ScNOff4djBSTw",
+          "label": "AAA Consumer Arbitration Rules",
+          "score": 75.7
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "RIrsxdvut2uYOncb3fCTwd",
+          "label": "AAA Labor Arbitration Rules",
+          "score": 75.7
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "RBC0hzYykzvVIU4lgwzWUxn",
+          "label": "JAMS International Arbitration Rules",
+          "score": 75.7
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R7uzfpLbCGc2taU7nsJBuor",
+          "label": "ALL American Arbitration Association Rules",
+          "score": 71.9
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R7ltqLFbA95B5Hwmwgf8WgF",
+          "label": "AAA Commercial Arbitration Rules and Mediation Procedures",
+          "score": 69.4
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R56Ur1GMPPcmHKGn3BVaK3",
+          "label": "AAA Employment Arbitration Rules and Mediation Procedures",
+          "score": 69.4
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "RDtgiank9cPXBJiBHgaT4AT",
+          "label": "Judicial Arbitration and Mediation Services",
+          "score": 59.6
+        }
+      ],
+      "total": 88
+    },
+    {
+      "category": "expansion",
+      "id": "t-expansion-commercial-lit",
+      "text": "Commercial Litigation",
+      "top": [
+        {
+          "branch": "Service",
+          "iri_hash": "R79LjWBKHCdmQKEW6zPY8Co",
+          "label": "Litigation Practice",
+          "score": 99.0
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+          "label": "Service",
+          "score": 90.6
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RDd4jyF4IYVDSohWIK7cGjH",
+          "label": "Non-Litigation Recovery Practice",
+          "score": 75.7
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RBnuIEAfenTTxlF3AFiSNtc",
+          "label": "Tax Dispute Practice",
+          "score": 65.0
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R9T8CETHIJcVNOajcK2MBRV",
+          "label": "Order on Alternative Dispute Resolution",
+          "score": 59.4
+        },
+        {
+          "branch": "Event",
+          "iri_hash": "RDHfJHB6de2XR6ZEX7AkW2M",
+          "label": "Alternative Dispute Resolution Events",
+          "score": 59.4
+        },
+        {
+          "branch": "Event",
+          "iri_hash": "RDFhtJuTWcY7UZGV9F5yOoA",
+          "label": "Dispute Events",
+          "score": 59.4
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "RC8gGTL4dazXLDWuElLZLjI",
+          "label": "Alternative Dispute Resolution Forum",
+          "score": 59.4
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R79PjJAgjkeMLhYBvJMiHNo",
+          "label": "Alternative Dispute Resolution Venues",
+          "score": 59.4
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R85OMPBjCJJv2cpg2RCwYim",
+          "label": "Dispute Forum",
+          "score": 59.4
+        }
+      ],
+      "total": 93
+    },
+    {
+      "category": "expansion",
+      "id": "t-expansion-surgical-error",
+      "text": "Surgical Error",
+      "top": [
+        {
+          "branch": "Objectives",
+          "iri_hash": "R7nqxxlAfhYqqSA2UQ5UxpX",
+          "label": "Negligence",
+          "score": 91.3
+        },
+        {
+          "branch": "Actor / Player",
+          "iri_hash": "R8Kso78437jpOj9Mkuf4huK",
+          "label": "Claims Agent",
+          "score": 54.8
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "RR7oJoEqb12ZxVMvTIb7I0",
+          "label": "Negligence and Malpractice Law",
+          "score": 54.8
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R74rhDxFTlzqgIXIf9vGDB1",
+          "label": "Answer with Cross-Claims",
+          "score": 54.8
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R8UIjth9wl7dCPrwFhDPjVR",
+          "label": "Motion to Limit Claims",
+          "score": 54.8
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R8bO6mdNR2zdPiPHqYDbdfU",
+          "label": "Omnibus Claims Objections",
+          "score": 54.8
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R8IHCUGtcWInB1dyEFPgffm",
+          "label": "Copyright Claims Board",
+          "score": 54.8
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R8F71a9147217D0B47a4B609",
+          "label": "U.S. Court of Claims",
+          "score": 54.8
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R092b1dC6A4f71717d987ab8",
+          "label": "U.S. Court of Federal Claims",
+          "score": 54.8
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R8XMs89zuZc9chn6WQ9Fgbm",
+          "label": "Animal Claims",
+          "score": 54.8
+        }
+      ],
+      "total": 49
+    },
+    {
+      "category": "expansion",
+      "id": "t-expansion-med-mal",
+      "text": "Medical Malpractice",
+      "top": [
+        {
+          "branch": "Objectives",
+          "iri_hash": "RGm7jrTspmRi606c5XWZ1z",
+          "label": "Malpractice Claims",
+          "score": 99.0
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R7athlXhsUuRtg7LvK0uUaF",
+          "label": "Medical Malpractice",
+          "score": 99.0
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R8nVhrBlasGIc7jxw1D0vbm",
+          "label": "Medical Malpractice Claims",
+          "score": 86.0
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RCuus493FlHkCuRCdg8eDmC",
+          "label": "Medical Malpractice Defenses",
+          "score": 86.0
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RDwX4hjSSjdLB4a9gnVAukp",
+          "label": "Medical Device Malpractice",
+          "score": 82.5
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "RR7oJoEqb12ZxVMvTIb7I0",
+          "label": "Negligence and Malpractice Law",
+          "score": 82.0
+        },
+        {
+          "branch": "Actor / Player",
+          "iri_hash": "R8Kso78437jpOj9Mkuf4huK",
+          "label": "Claims Agent",
+          "score": 59.4
+        },
+        {
+          "branch": "Actor / Player",
+          "iri_hash": "RDvVBJAIjWJ6V7k3Hor0WSN",
+          "label": "Governmental Civil Law Division",
+          "score": 59.4
+        },
+        {
+          "branch": "Actor / Player",
+          "iri_hash": "RWfagTf41k5BuDMRrHd87x",
+          "label": "Medical Expert",
+          "score": 59.4
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "RBrUb9V2u6f7iVR1RBNsyB1",
+          "label": "Civil Contract Law",
+          "score": 59.4
+        }
+      ],
+      "total": 84
+    },
+    {
+      "category": "expansion",
+      "id": "t-expansion-real-estate",
+      "text": "Real Estate Closing",
+      "top": [
+        {
+          "branch": "Area of Law",
+          "iri_hash": "RDb8aZxNJsmCvQGbfiFyfI7",
+          "label": "Real Property Law",
+          "score": 99.0
+        },
+        {
+          "branch": "Asset Type",
+          "iri_hash": "RCBP9N5ER7Y6inNQdjggrKt",
+          "label": "Estate",
+          "score": 94.6
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RBc8llmdnVBvfzkSbQxpOLJ",
+          "label": "Criminal Trespass",
+          "score": 89.2
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R3OI7nrib1LEPtUfn5G5CH",
+          "label": "Bequest",
+          "score": 88.6
+        },
+        {
+          "branch": "Actor / Player",
+          "iri_hash": "R9M22nIQgd72E0PSrkHmrxX",
+          "label": "Real Estate Developer",
+          "score": 86.0
+        },
+        {
+          "branch": "Actor / Player",
+          "iri_hash": "R7OtUosForl1Zon7KU3gQQR",
+          "label": "Real Estate Operator",
+          "score": 86.0
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "R8rmINPJcI5dRjZrlQZA8v6",
+          "label": "Trusts and Estate Planning Law",
+          "score": 86.0
+        },
+        {
+          "branch": "Asset Type",
+          "iri_hash": "RUhSbbDJZa8Crs3tIWcIfV",
+          "label": "Real Estate Asset",
+          "score": 86.0
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R9OVY5GWczMSrxKsf8cfgpq",
+          "label": "Real Estate Documents",
+          "score": 86.0
+        },
+        {
+          "branch": "Industry and Market",
+          "iri_hash": "RDzGV0uU52QEYp4H0g4bOBP",
+          "label": "Real Estate Industry",
+          "score": 86.0
+        }
+      ],
+      "total": 126
+    },
+    {
+      "category": "specificity",
+      "id": "t-specificity-antitrust",
+      "text": "Antitrust",
+      "top": [
+        {
+          "branch": "Objectives",
+          "iri_hash": "RCZwssbqfmu0Lds0LPDV34F",
+          "label": "Compliance",
+          "score": 91.3
+        },
+        {
+          "branch": "Legal Entity",
+          "iri_hash": "R9KvzcwdZ3asqh9BPZRGWR7",
+          "label": "Trust",
+          "score": 88.0
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RCoa9g6Iu30ihV7OX1DAQTU",
+          "label": "M&A F1 Antitrust / Competition Practice",
+          "score": 82.0
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RCFPWMbdFLbplboOqvI77Jh",
+          "label": "Antitrust Claims",
+          "score": 79.4
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "RDFwOzDi3E8DQ0OxTKb6UEJ",
+          "label": "Antitrust and Competition Law",
+          "score": 73.6
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R8oBTLovip7JQGJ9AeOmmCD",
+          "label": "Antitrust - Horizontal Claims",
+          "score": 72.7
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R9aw3d42PAXE6t5QYbR7Vru",
+          "label": "Antitrust - Pricing Claims",
+          "score": 72.7
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RKnJD7hIKD8zdjyLv9uIKZ",
+          "label": "Antitrust - Tying Claims",
+          "score": 72.7
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R8jiyejSsdOkKDAWQ9ZPcjj",
+          "label": "Antitrust - Vertical Claims",
+          "score": 72.7
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RwjUss6QZVzUsfsKBJ0kHX",
+          "label": "Antitrust Efforts Provisions",
+          "score": 72.7
+        }
+      ],
+      "total": 97
+    },
+    {
+      "category": "subphrase",
+      "id": "t-subphrase-smallbiz",
+      "text": "Small Business Formation (LLC / Corp)",
+      "top": [
+        {
+          "branch": "Service",
+          "iri_hash": "RvpVqC4Gt7SDHOy4JCOKCy",
+          "label": "Business Formation Practice",
+          "score": 64.1
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RCbyTWtFSAZ87yEK8J1VaD",
+          "label": "Entity Formation Practice",
+          "score": 56.7
+        },
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "RD34a04CAEcddBDE956309da",
+          "label": "U.S. Small Business Administration",
+          "score": 46.6
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "RBGaYz0rr5Dh0Sjxu0Z6DHx",
+          "label": "Corporate Insolvency Law",
+          "score": 42.1
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RmCERXtzdqIJcW9mdbk0Bb",
+          "label": "Entity Disclosure Document",
+          "score": 38.5
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R9VkHQ2TY9sCeZb1IcmHDLc",
+          "label": "Entity Formation Document",
+          "score": 38.5
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R8wOITiPftK5xTRvzn957oX",
+          "label": "Entity Registration Document",
+          "score": 38.5
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R7zvYKadqTXgMZV8ghLsloR",
+          "label": "Trial Court Practice Documents",
+          "score": 38.5
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R8TEDsQW7oF8wnUVzGO0eyP",
+          "label": "Trust Formation Document",
+          "score": 38.5
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R7Y2YIqmaVxoK50QYYZVoDS",
+          "label": "U.S. Tax Court Rules of Practice and Procedure",
+          "score": 38.5
+        }
+      ],
+      "total": 45
+    },
+    {
+      "category": "subphrase",
+      "id": "t-subphrase-dui",
+      "text": "DUI/DWI Defense",
+      "top": [
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "RF52f1c417a596A01b36Bcf0",
+          "label": "U.S. Dept. of Defense",
+          "score": 35.2
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R7jZ9gR94cUatcWLbdMPP8d",
+          "label": "Payment Defense",
+          "score": 35.2
+        },
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "R715905FB20383F5a4463759",
+          "label": "Defense Commissary Agency",
+          "score": 31.5
+        },
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "R816c8d99171524Bb232B6a4",
+          "label": "Defense Health Agency",
+          "score": 31.5
+        },
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "R6FD881101d0b892e94A78ca",
+          "label": "Defense Intelligence Agency",
+          "score": 31.5
+        },
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "RCFAb0a4C9c3a032b46ECe73",
+          "label": "Defense Logistics Agency",
+          "score": 31.5
+        },
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "R2C49f7BAFea7A84318988ce",
+          "label": "Defense Security Service",
+          "score": 31.5
+        },
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "R10D54f456f11FD09708C0b3",
+          "label": "Missile Defense Agency",
+          "score": 31.5
+        },
+        {
+          "branch": "Legal Entity",
+          "iri_hash": "R8voMwZ00WaA8Z9QZbJBQnS",
+          "label": "Joint Defense Group",
+          "score": 31.5
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R9tKWPMbwXgslScjTY9e9nF",
+          "label": "Economic Interest Defense",
+          "score": 31.5
+        }
+      ],
+      "total": 11
+    },
+    {
+      "category": "stopword_only",
+      "id": "t-stopword-only",
+      "text": "The Law",
+      "top": [
+        {
+          "branch": "Industry and Market",
+          "iri_hash": "BrFDML66T4WGldUPS88j8w",
+          "label": "General Rental Centers",
+          "score": 44.0
+        }
+      ],
+      "total": 1
+    },
+    {
+      "category": "stopword_only",
+      "id": "t-stopword-general",
+      "text": "General Legal Types",
+      "top": [],
+      "total": 0
+    },
+    {
+      "category": "place",
+      "id": "t-place-slovenia",
+      "text": "Slovenia",
+      "top": [
+        {
+          "branch": "Language",
+          "iri_hash": "R8mVQPOiTPBSdYKLHfBN7wA",
+          "label": "Slovenian",
+          "score": 99.0
+        },
+        {
+          "branch": "Location",
+          "iri_hash": "R1049bd2008d246E22c5746c",
+          "label": "Slovenia",
+          "score": 99.0
+        },
+        {
+          "branch": "Location",
+          "iri_hash": "R42E88cED9f51F4A4580880b",
+          "label": "Slovenia",
+          "score": 99.0
+        },
+        {
+          "branch": "Location",
+          "iri_hash": "R079061235377B724c7A95a6",
+          "label": "Brezovica",
+          "score": 60.0
+        },
+        {
+          "branch": "Location",
+          "iri_hash": "R00284714B4ce0F21c4815d7",
+          "label": "Horjul",
+          "score": 60.0
+        },
+        {
+          "branch": "Location",
+          "iri_hash": "R2334ab80F98142Fc623877d",
+          "label": "Idrija",
+          "score": 60.0
+        },
+        {
+          "branch": "Location",
+          "iri_hash": "R1D0b7eE2A563DA29ed1Fb7e",
+          "label": "Izola",
+          "score": 60.0
+        },
+        {
+          "branch": "Location",
+          "iri_hash": "R23B17aC9Cf8e19Af5570f8e",
+          "label": "Radece",
+          "score": 60.0
+        },
+        {
+          "branch": "Location",
+          "iri_hash": "R1D6382ABD589584d3b649eb",
+          "label": "Vipava",
+          "score": 60.0
+        }
+      ],
+      "total": 9
+    },
+    {
+      "category": "place",
+      "id": "t-place-minnesota",
+      "text": "Minnesota",
+      "top": [
+        {
+          "branch": "Location",
+          "iri_hash": "RDB9ffc13Cb117D7caa05f07",
+          "label": "Minnesota",
+          "score": 99.0
+        },
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "RD2bJuJMLx4h3cUgtPsAG49",
+          "label": "Minnesota Chippewa",
+          "score": 73.6
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "RxLV9XEaDWbDIA8N1fl2fM",
+          "label": "Minnesota District Court",
+          "score": 72.7
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "RD686c783A09b6C4c794564b",
+          "label": "Minnesota State Courts",
+          "score": 72.7
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R7AF244BB5ca360Edf65Ce97",
+          "label": "U.S. District Court - D. Minnesota",
+          "score": 72.7
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R9A5273C075ffE5A23319a55",
+          "label": "Minnesota Attorney General Reports",
+          "score": 71.3
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R669a68AFB36a5C4c412A82a",
+          "label": "Minnesota Court of Appeals",
+          "score": 71.3
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R467298D2E63dF577565919e",
+          "label": "Minnesota Supreme Court",
+          "score": 71.3
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R6536df534a36C2027746e99",
+          "label": "U.S. Bankruptcy Court - D. Minnesota",
+          "score": 71.3
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "RDlDfo4nHT5jjHxPDTJK14x",
+          "label": "Minnesota District Court - Court of App.",
+          "score": 69.4
+        }
+      ],
+      "total": 64
+    },
+    {
+      "category": "homonym",
+      "id": "t-homonym-action",
+      "text": "Action",
+      "top": [
+        {
+          "branch": "Objectives",
+          "iri_hash": "R9m7fEEboCdA3CLA3ndg65V",
+          "label": "Action to Quiet Title",
+          "score": 72.7
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R7zqQn3T6kJzQIHOII6r3Oc",
+          "label": "Affirmative Action Claim",
+          "score": 72.7
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R8iqvgE2NjybgksTeqsGhr3",
+          "label": "Concert of Action Crimes",
+          "score": 72.7
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R7oWyxtB6MtD5SutNOJyn6b",
+          "label": "Private Right of Action",
+          "score": 72.7
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RDkwKnlvFjjIktxrGokIDMx",
+          "label": "Action Prohibited/Omission Required by the Agreement Language",
+          "score": 66.1
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "Rjz4HvoZWoSg64Ud8SSoyY",
+          "label": "Action for Commission on Exclusive Agency Listing",
+          "score": 62.6
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RIcJiPyMr0udTEI4FQc1bB",
+          "label": "Action for Commission on Exclusive Right to Sell Listing",
+          "score": 61.3
+        },
+        {
+          "branch": "Asset Type",
+          "iri_hash": "R9FMAbfEYARhk9Z0a5Fvij1",
+          "label": "Fractional Ownership Assets",
+          "score": 59.5
+        },
+        {
+          "branch": "Industry and Market",
+          "iri_hash": "IxKcc-6-TFiev8ISawWkHw",
+          "label": "Crude Petroleum Extraction",
+          "score": 59.5
+        },
+        {
+          "branch": "Industry and Market",
+          "iri_hash": "L8obp7ggQYiujie0LjDJPA",
+          "label": "Natural Gas Extraction",
+          "score": 59.5
+        }
+      ],
+      "total": 112
+    },
+    {
+      "category": "homonym",
+      "id": "t-homonym-charge",
+      "text": "Charge",
+      "top": [
+        {
+          "branch": "Engagement Attributes",
+          "iri_hash": "R9mmoUsDKGTyjfuOcuvUlSM",
+          "label": "Billable",
+          "score": 72.8
+        },
+        {
+          "branch": "Engagement Attributes",
+          "iri_hash": "R8qRNxxw553cG2hpeC6FJ3s",
+          "label": "Fee Charge Date",
+          "score": 72.7
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RDLrr0QnPzgK38sYlXgG5Eu",
+          "label": "Debtor's Certification in Support of Discharge",
+          "score": 59.5
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RBaCjVfhep5KcxCv61vXkVx",
+          "label": "Motion Objecting to Discharge",
+          "score": 59.5
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R7JVzHB6Maj6HKG0jTxCtii",
+          "label": "Motion for Hardship Discharge",
+          "score": 59.5
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R8TnlHhJZFBUIKhe4p44cRe",
+          "label": "Motion to Vacate Discharge",
+          "score": 59.5
+        },
+        {
+          "branch": "Event",
+          "iri_hash": "RBCYQSZES6uZA6zpCaUX3aD",
+          "label": "Dishonorable Discharge",
+          "score": 59.5
+        },
+        {
+          "branch": "Event",
+          "iri_hash": "R9ipFN3Gn38ZzYsDrEMptrr",
+          "label": "Hardship Discharge",
+          "score": 59.5
+        },
+        {
+          "branch": "Event",
+          "iri_hash": "RCMtd7NXSOUfxTSBrLY5TCP",
+          "label": "Honorable Discharge",
+          "score": 59.5
+        },
+        {
+          "branch": "Event",
+          "iri_hash": "RC4jLLT1sSpE6T4Uz5927XY",
+          "label": "Medical Discharge",
+          "score": 59.5
+        }
+      ],
+      "total": 100
+    },
+    {
+      "category": "compound",
+      "id": "t-compound-fofcol",
+      "text": "Proposed Findings of Fact and Conclusions of Law",
+      "top": [
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RNVlq2ReYjeb3r8UkUYvso",
+          "label": "Proposed Findings of Fact",
+          "score": 93.0
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R9G2HzzbJMx6tThsp2m6kjM",
+          "label": "Proposed Conclusions of Law",
+          "score": 70.6
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RDYMGpETSAwljfSaCqHKTND",
+          "label": "Appellate Filings",
+          "score": 55.8
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RBFH5v175MuTKvLEcBLRkJ4",
+          "label": "Appellate Filings - Nonparty Filing",
+          "score": 55.8
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R9dEPeCdgUgD0yqW0xOgLa5",
+          "label": "Appellate Filings - Stipulations",
+          "score": 55.8
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R7VHEoDUFVEwkyvRY96BMGR",
+          "label": "Bankruptcy - Initial Case Filings",
+          "score": 55.8
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RzhJrcuWPt2Cw7ZBOeic7E",
+          "label": "Bankruptcy Procedural Filings",
+          "score": 55.8
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RiuB3WjtPaioVphDpqLzVK",
+          "label": "Proposed Court Filings",
+          "score": 55.8
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R0755570D7e3c82C888CC519",
+          "label": "Arizona Supreme Court",
+          "score": 55.8
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "R13289f21062cBA1b6c99e60",
+          "label": "Arizona Tax Court",
+          "score": 55.8
+        }
+      ],
+      "total": 40
+    },
+    {
+      "category": "compound",
+      "id": "t-compound-arbmed",
+      "text": "Arbitration and Mediation",
+      "top": [
+        {
+          "branch": "Industry and Market",
+          "iri_hash": "moVspfnYTVKSKtPLW1DMvQ",
+          "label": "Remediation Services",
+          "score": 92.0
+        },
+        {
+          "branch": "Industry and Market",
+          "iri_hash": "vp7kR0nBQcW_5ylXi5_4TQ",
+          "label": "Remediation Services",
+          "score": 92.0
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+          "label": "Service",
+          "score": 90.6
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RXO2u2WBkUUcEG1jczLIcA",
+          "label": "Arbitration Practice",
+          "score": 85.3
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "R9zgcjBBIdWMnwIR8nqsoS8",
+          "label": "Mediation Practice",
+          "score": 85.3
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "RDtgiank9cPXBJiBHgaT4AT",
+          "label": "Judicial Arbitration and Mediation Services",
+          "score": 79.4
+        },
+        {
+          "branch": "Governmental Body",
+          "iri_hash": "RE06c691EE24d1E4863BF83d",
+          "label": "Federal Mediation and Conciliation Service",
+          "score": 76.2
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R7ltqLFbA95B5Hwmwgf8WgF",
+          "label": "AAA Commercial Arbitration Rules and Mediation Procedures",
+          "score": 69.8
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "R56Ur1GMPPcmHKGn3BVaK3",
+          "label": "AAA Employment Arbitration Rules and Mediation Procedures",
+          "score": 69.8
+        },
+        {
+          "branch": "Legal Authorities",
+          "iri_hash": "Rvh4toXuvsKHyb8iiH8ueK",
+          "label": "AAA Construction Industry Arbitration Rules and Mediation Procedures",
+          "score": 68.0
+        }
+      ],
+      "total": 112
+    },
+    {
+      "category": "abbreviation",
+      "id": "t-abbrev-llc",
+      "text": "LLC",
+      "top": [
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RBsqRUFBCnbsERzdeQtc8rZ",
+          "label": "LLC Operating Agreement",
+          "score": 69.8
+        },
+        {
+          "branch": "Actor / Player",
+          "iri_hash": "RCmRk3EfXQDL2eFl0x659PQ",
+          "label": "Member",
+          "score": 60.0
+        },
+        {
+          "branch": "Legal Entity",
+          "iri_hash": "R98E2kVwPFwTnP6oxYUt9HR",
+          "label": "Limited Liability Company",
+          "score": 58.3
+        },
+        {
+          "branch": "Legal Entity",
+          "iri_hash": "RB1qVwz6Yr4OzJf2q5RlsPE",
+          "label": "Benefit Limited Liability Company",
+          "score": 53.5
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "RB7pLfw7zqXtd20kKg7EcOA",
+          "label": "Corporate Governance Law",
+          "score": 41.9
+        },
+        {
+          "branch": "Area of Law",
+          "iri_hash": "RCC1A9DDkkbfArlvYUYSSG1",
+          "label": "Environmental, Social, and Governance Law",
+          "score": 41.9
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RCVPsOqzFXJYDU8JqShBzUN",
+          "label": "Business Process Outsourcing Agreement",
+          "score": 41.9
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RCNdhIWpodXkmuDPUE0YLKX",
+          "label": "Governance Agreement",
+          "score": 41.9
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "RL3gReDyHSimEbolEXXKg1",
+          "label": "Information Technology Outsourcing Agreement",
+          "score": 41.9
+        },
+        {
+          "branch": "Document / Artifact",
+          "iri_hash": "R7wrI57WaogjWdkpozaYZyV",
+          "label": "Oral Agreement",
+          "score": 41.9
+        }
+      ],
+      "total": 59
+    },
+    {
+      "category": "nonsense",
+      "id": "t-nonsense",
+      "text": "Zorbleflorp Compliance Directive",
+      "top": [
+        {
+          "branch": "Objectives",
+          "iri_hash": "RCZwssbqfmu0Lds0LPDV34F",
+          "label": "Compliance",
+          "score": 91.3
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "RDK1QEdQg1T8B5HQqMK2pZN",
+          "label": "Service",
+          "score": 90.6
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "R9IoAlyOWrsbtjuz7qo2cd7",
+          "label": "Export Controls Practice",
+          "score": 65.0
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RClhbl4E1TJp9LygIXewIhn",
+          "label": "Deontic Specification",
+          "score": 54.8
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "RDkeXkYjY816eSnxFpPcvvm",
+          "label": "Purpose Specification Principle",
+          "score": 54.8
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "R7K2qUhID6JtseZQoE6bEEf",
+          "label": "Funds Practice",
+          "score": 50.6
+        },
+        {
+          "branch": "Service",
+          "iri_hash": "R527Rr0DAZ1Lu9VPx6QRbj",
+          "label": "Tax Practice",
+          "score": 50.6
+        },
+        {
+          "branch": "Forums and Venues",
+          "iri_hash": "Rt5FGmbxxPsHHTTCAtFklX",
+          "label": "Office of Compliance",
+          "score": 47.3
+        },
+        {
+          "branch": "Legal Use Cases",
+          "iri_hash": "R9RgfP9So7I6U6ug0d6MSHA",
+          "label": "Compliance Management",
+          "score": 47.3
+        },
+        {
+          "branch": "Objectives",
+          "iri_hash": "R8r3hX4cDNhyDTmzgm9BOfo",
+          "label": "Compliance with Law Clause",
+          "score": 47.3
+        }
+      ],
+      "total": 61
+    }
+  ],
+  "search_terms": [
+    {
+      "category": "exact",
+      "id": "t-exact-arbitration",
+      "terms": [
+        "Arbitration",
+        "arbitration service"
+      ],
+      "text": "Arbitration"
+    },
+    {
+      "category": "exact",
+      "id": "t-exact-mediation",
+      "terms": [
+        "Mediation",
+        "mediation service"
+      ],
+      "text": "Mediation"
+    },
+    {
+      "category": "exact",
+      "id": "t-exact-bankruptcy-law",
+      "terms": [
+        "Bankruptcy Law",
+        "bankruptcy",
+        "bankruptcy practice",
+        "bankruptcy service"
+      ],
+      "text": "Bankruptcy Law"
+    },
+    {
+      "category": "word_order",
+      "id": "t-fuzzy-arbrules",
+      "terms": [
+        "arbitration rules",
+        "arbitration",
+        "rules",
+        "arbitration service"
+      ],
+      "text": "arbitration rules"
+    },
+    {
+      "category": "word_order",
+      "id": "t-wordorder-arbrules",
+      "terms": [
+        "rules of arbitration",
+        "rules of",
+        "of arbitration",
+        "arbitration",
+        "rules",
+        "arbitration service"
+      ],
+      "text": "rules of arbitration"
+    },
+    {
+      "category": "expansion",
+      "id": "t-expansion-commercial-lit",
+      "terms": [
+        "Commercial Litigation",
+        "litigation",
+        "commercial",
+        "litigation practice",
+        "litigation service"
+      ],
+      "text": "Commercial Litigation"
+    },
+    {
+      "category": "expansion",
+      "id": "t-expansion-surgical-error",
+      "terms": [
+        "Surgical Error",
+        "surgical",
+        "error",
+        "error malpractice",
+        "error negligence"
+      ],
+      "text": "Surgical Error"
+    },
+    {
+      "category": "expansion",
+      "id": "t-expansion-med-mal",
+      "terms": [
+        "Medical Malpractice",
+        "malpractice",
+        "medical",
+        "malpractice claim",
+        "malpractice liability"
+      ],
+      "text": "Medical Malpractice"
+    },
+    {
+      "category": "expansion",
+      "id": "t-expansion-real-estate",
+      "terms": [
+        "Real Estate Closing",
+        "real estate",
+        "estate closing",
+        "closing",
+        "estate",
+        "real",
+        "real property",
+        "estate planning",
+        "estate practice",
+        "estate law"
+      ],
+      "text": "Real Estate Closing"
+    },
+    {
+      "category": "specificity",
+      "id": "t-specificity-antitrust",
+      "terms": [
+        "Antitrust",
+        "antitrust practice",
+        "antitrust law",
+        "antitrust compliance"
+      ],
+      "text": "Antitrust"
+    },
+    {
+      "category": "subphrase",
+      "id": "t-subphrase-smallbiz",
+      "terms": [
+        "Small Business Formation (LLC / Corp)",
+        "small business formation llc",
+        "business formation llc corp",
+        "small business formation",
+        "business formation llc",
+        "formation llc corp",
+        "small business",
+        "business formation",
+        "formation llc",
+        "llc corp",
+        "formation",
+        "business",
+        "small",
+        "corp",
+        "llc"
+      ],
+      "text": "Small Business Formation (LLC / Corp)"
+    },
+    {
+      "category": "subphrase",
+      "id": "t-subphrase-dui",
+      "terms": [
+        "DUI/DWI Defense",
+        "dui dwi",
+        "dwi defense",
+        "defense",
+        "dui",
+        "dwi"
+      ],
+      "text": "DUI/DWI Defense"
+    },
+    {
+      "category": "stopword_only",
+      "id": "t-stopword-only",
+      "terms": [
+        "The Law"
+      ],
+      "text": "The Law"
+    },
+    {
+      "category": "stopword_only",
+      "id": "t-stopword-general",
+      "terms": [
+        "General Legal Types"
+      ],
+      "text": "General Legal Types"
+    },
+    {
+      "category": "place",
+      "id": "t-place-slovenia",
+      "terms": [
+        "Slovenia"
+      ],
+      "text": "Slovenia"
+    },
+    {
+      "category": "place",
+      "id": "t-place-minnesota",
+      "terms": [
+        "Minnesota"
+      ],
+      "text": "Minnesota"
+    },
+    {
+      "category": "homonym",
+      "id": "t-homonym-action",
+      "terms": [
+        "Action"
+      ],
+      "text": "Action"
+    },
+    {
+      "category": "homonym",
+      "id": "t-homonym-charge",
+      "terms": [
+        "Charge"
+      ],
+      "text": "Charge"
+    },
+    {
+      "category": "compound",
+      "id": "t-compound-fofcol",
+      "terms": [
+        "Proposed Findings of Fact and Conclusions of Law",
+        "proposed findings of fact and conclusions of",
+        "findings of fact and conclusions of law",
+        "proposed findings of fact and conclusions",
+        "findings of fact and conclusions of",
+        "of fact and conclusions of law",
+        "proposed findings of fact and",
+        "findings of fact and conclusions",
+        "of fact and conclusions of",
+        "fact and conclusions of law",
+        "proposed findings of fact",
+        "findings of fact and",
+        "of fact and conclusions",
+        "fact and conclusions of",
+        "and conclusions of law",
+        "proposed findings of",
+        "findings of fact",
+        "of fact and",
+        "fact and conclusions",
+        "and conclusions of",
+        "conclusions of law",
+        "proposed findings",
+        "findings of",
+        "of fact",
+        "fact and",
+        "and conclusions",
+        "conclusions of",
+        "conclusions",
+        "findings",
+        "proposed",
+        "fact"
+      ],
+      "text": "Proposed Findings of Fact and Conclusions of Law"
+    },
+    {
+      "category": "compound",
+      "id": "t-compound-arbmed",
+      "terms": [
+        "Arbitration and Mediation",
+        "arbitration and",
+        "and mediation",
+        "arbitration",
+        "mediation",
+        "mediation service",
+        "arbitration service"
+      ],
+      "text": "Arbitration and Mediation"
+    },
+    {
+      "category": "abbreviation",
+      "id": "t-abbrev-llc",
+      "terms": [
+        "LLC"
+      ],
+      "text": "LLC"
+    },
+    {
+      "category": "nonsense",
+      "id": "t-nonsense",
+      "terms": [
+        "Zorbleflorp Compliance Directive",
+        "zorbleflorp compliance",
+        "compliance directive",
+        "zorbleflorp",
+        "compliance",
+        "directive",
+        "compliance practice",
+        "compliance service"
+      ],
+      "text": "Zorbleflorp Compliance Directive"
+    }
+  ],
+  "tokenization": [
+    {
+      "content_words": [
+        "conclusions",
+        "fact",
+        "findings",
+        "proposed"
+      ],
+      "text": "Proposed Findings of Fact and Conclusions of Law",
+      "tokens": [
+        "proposed",
+        "findings",
+        "of",
+        "fact",
+        "and",
+        "conclusions",
+        "of",
+        "law"
+      ]
+    },
+    {
+      "content_words": [
+        "business",
+        "corp",
+        "formation",
+        "llc",
+        "small"
+      ],
+      "text": "Small Business Formation (LLC / Corp)",
+      "tokens": [
+        "small",
+        "business",
+        "formation",
+        "llc",
+        "corp"
+      ]
+    },
+    {
+      "content_words": [],
+      "text": "The Law",
+      "tokens": [
+        "the",
+        "law"
+      ]
+    },
+    {
+      "content_words": [
+        "defense",
+        "dui",
+        "dwi"
+      ],
+      "text": "DUI/DWI Defense",
+      "tokens": [
+        "dui",
+        "dwi",
+        "defense"
+      ]
+    },
+    {
+      "content_words": [
+        "data",
+        "discovery",
+        "privacy"
+      ],
+      "text": "e-Discovery & Data Privacy",
+      "tokens": [
+        "discovery",
+        "data",
+        "privacy"
+      ]
+    }
+  ]
+}
