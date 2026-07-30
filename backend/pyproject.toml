@@ -20,7 +20,7 @@ dependencies = [
     # row 3). folio-mapper is the DONOR of this library's scorer/expansions/judge rules; it now
     # consumes them back instead of owning the fork. Resolved from PyPI (MIT, Damien's own).
     # For local library dev: uv pip install -e ../../folio-resolve
-    "folio-resolve>=0.1.0",
+    "folio-resolve>=0.3.0",
 ]
 
 [project.optional-dependencies]

@@ -3,7 +3,7 @@
 folio-mapper *donated* the deterministic matching core to that library (see
 ``folio-resolve/docs/migration/SCHEDULE.md`` row 3): the word-order-invariant scorer,
 ``SEARCH_STOPWORDS``, ``LEGAL_TERM_EXPANSIONS``, ``BRANCH_SIGNAL_WORDS``, the search-term
-generator and the judge's verdict-consistency clamps. These tests are the anti-refork guard:
+generator, judge parser and verdict-consistency clamps. These tests are the anti-refork guard:
 
 * identity assertions — the module-level tables ARE the library's objects, not copies;
 * seam assertions — the two mapper-specific extensions (spaCy vector similarity, spaCy
@@ -25,6 +25,7 @@ from folio_resolve import scoring as folio_resolve_scoring
 
 from app.services import folio_service
 from app.services.pipeline import prompts as pipeline_prompts
+from app.services.pipeline import stage3_judge
 
 MIGRATION = Path(__file__).resolve().parent.parent / "migration"
 
@@ -125,6 +126,43 @@ def test_spacy_expansion_layer_is_appended_on_top_of_the_library_terms():
 # --- The judge consumes its own donated policy --------------------------------------------
 
 
+def test_local_judge_parser_fork_is_gone():
+    """The adapter must retain no local transport parser or fence stripper."""
+    assert not hasattr(stage3_judge, "_strip_markdown_fences"), (
+        "local _strip_markdown_fences fork is back"
+    )
+    assert stage3_judge._lib_parse_judge_json is folio_resolve_judge.parse_judge_json
+
+
+def test_judge_parser_delegates_and_maps_mapper_fields():
+    from folio_resolve.judge import JudgedCandidate as LibraryJudgedCandidate
+
+    from app.models.pipeline_models import RankedCandidate
+
+    ranked_lookup = {"R1": RankedCandidate(iri_hash="R1", score=60.0, reasoning="ranked")}
+    library_rows = [
+        LibraryJudgedCandidate(
+            iri="R1",
+            adjusted_score=65.0,
+            verdict="boosted",
+            reasoning="library result",
+        )
+    ]
+
+    with patch.object(stage3_judge, "_lib_parse_judge_json", return_value=library_rows) as parse:
+        judged = stage3_judge._parse_judge_json("raw response", ranked_lookup)
+
+    parse.assert_called_once_with("raw response", {"R1": 60.0})
+    assert judged is not None
+    assert judged[0].model_dump() == {
+        "iri_hash": "R1",
+        "original_score": 60.0,
+        "adjusted_score": 65.0,
+        "verdict": "boosted",
+        "reasoning": "library result",
+    }
+
+
 def test_score_calibration_block_is_the_pinned_one():
     assert pipeline_prompts.SCORE_CALIBRATION is folio_resolve_judge.SCORE_CALIBRATION
 
@@ -181,8 +219,8 @@ def test_judge_verdict_clamps_are_the_pinned_policy(verdict: str, raw_score: flo
     )
 
 
-def test_judge_still_guards_the_transport_layer():
-    """Behavior the library's parse_judge_json does not cover stays in stage3_judge."""
+def test_judge_library_parser_guards_the_transport_layer():
+    """The adapter preserves mapper fallback while the library owns transport validation."""
     from app.models.pipeline_models import RankedCandidate
     from app.services.pipeline.stage3_judge import _parse_judge_json
 

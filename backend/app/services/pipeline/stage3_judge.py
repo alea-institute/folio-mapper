@@ -3,22 +3,16 @@
 A separate LLM call reviews each ranked candidate from Stage 2 and either
 confirms, boosts, penalizes, or rejects it.
 
-The verdict vocabulary and the verdict-consistency clamps (rejected → 0, confirmed within ±5,
-boost capped at +25) are imported from ``folio_resolve.judge`` — the pinned library lifted them
-from this very module, so folio-mapper now consumes its own donated policy instead of keeping a
-second copy. What stays here is transport: markdown-fence stripping, type guards on
-LLM-supplied fields, the 0-100 clamp and the fallback/logging behavior the library's
-``parse_judge_json`` does not (yet) cover.
+Judge JSON parsing, defensive validation, score clamping, and verdict-consistency policy are
+provided by ``folio_resolve.judge``. This module keeps only the mapper-specific adapter from the
+library's judged rows to pipeline models, including fallback and diagnostic logging.
 """
 
 from __future__ import annotations
 
-import json
 import logging
-import re
 
-from folio_resolve.judge import VALID_VERDICTS as _VALID_VERDICTS
-from folio_resolve.judge import enforce_verdict
+from folio_resolve.judge import parse_judge_json as _lib_parse_judge_json
 
 from app.models.llm_models import LLMConfig
 from app.models.pipeline_models import (
@@ -33,70 +27,29 @@ from app.services.pipeline.prompts import build_judge_prompt
 logger = logging.getLogger(__name__)
 
 
-def _strip_markdown_fences(text: str) -> str:
-    """Remove markdown code fences from LLM output."""
-    text = text.strip()
-    text = re.sub(r"^`{3,}\s*(?:json)?\s*\n?", "", text)
-    text = re.sub(r"\n?`{3,}\s*$", "", text)
-    return text.strip()
-
-
 def _parse_judge_json(
     raw: str,
     ranked_lookup: dict[str, RankedCandidate],
 ) -> list[JudgedCandidate] | None:
-    """Parse LLM judge JSON output.
-
-    Validates iri_hash against known candidates and enforces verdict rules.
-    Returns None on parse failure.
-    """
-    cleaned = _strip_markdown_fences(raw)
-
-    try:
-        data = json.loads(cleaned)
-    except json.JSONDecodeError:
-        logger.warning("Stage 3: Failed to parse JSON. Raw: %s", raw[:200])
+    """Adapt the library's judged rows to mapper models; return None to trigger fallback."""
+    library_rows = _lib_parse_judge_json(
+        raw,
+        {iri_hash: candidate.score for iri_hash, candidate in ranked_lookup.items()},
+    )
+    if not library_rows:
+        logger.warning("Stage 3: Judge response produced no valid rows. Raw: %s", raw[:200])
         return None
 
-    judged_data = data.get("judged", [])
-    if not isinstance(judged_data, list):
-        logger.warning("Stage 3: 'judged' is not a list.")
-        return None
-
-    results = []
-    for entry in judged_data:
-        if not isinstance(entry, dict):
-            continue
-
-        iri_hash = entry.get("iri_hash", "")
-        if iri_hash not in ranked_lookup:
-            logger.debug("Stage 3: Dropping unknown iri_hash: %s", iri_hash)
-            continue
-
-        adjusted_score = entry.get("adjusted_score", 0)
-        if not isinstance(adjusted_score, (int, float)):
-            continue
-        adjusted_score = max(0.0, min(100.0, float(adjusted_score)))
-
-        verdict = entry.get("verdict", "confirmed")
-        if verdict not in _VALID_VERDICTS:
-            verdict = "confirmed"
-
-        original_score = ranked_lookup[iri_hash].score
-
-        # Verdict consistency (rejected -> 0, confirmed within +/-5, boost capped at +25) is
-        # the pinned library's policy — folio-mapper donated these exact rules.
-        adjusted_score = enforce_verdict(original_score, adjusted_score, verdict)
-
-        results.append(JudgedCandidate(
-            iri_hash=iri_hash,
-            original_score=original_score,
-            adjusted_score=adjusted_score,
-            verdict=verdict,
-            reasoning=entry.get("reasoning", ""),
-        ))
-
-    return results if results else None
+    return [
+        JudgedCandidate(
+            iri_hash=row.iri,
+            original_score=ranked_lookup[row.iri].score,
+            adjusted_score=row.adjusted_score,
+            verdict=row.verdict,
+            reasoning=row.reasoning,
+        )
+        for row in library_rows
+    ]
 
 
 def _fallback_judging(ranked: list[RankedCandidate]) -> list[JudgedCandidate]:
