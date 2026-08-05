@@ -469,7 +469,7 @@ requires-dist = [
     { name = "faiss-cpu", marker = "extra == 'embedding'", specifier = ">=1.8,<2.0" },
     { name = "fastapi", specifier = ">=0.115.0,<1.0.0" },
     { name = "folio-python", specifier = ">=0.2.0,<1.0.0" },
-    { name = "folio-resolve", specifier = ">=0.1.0" },
+    { name = "folio-resolve", specifier = "==0.3.1" },
     { name = "httpx", specifier = ">=0.27.0,<1.0.0" },
     { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.27.0,<1.0.0" },
     { name = "marisa-trie", specifier = ">=1.0.0,<2.0.0" },
@@ -503,14 +503,14 @@ wheels = [
 
 [[package]]
 name = "folio-resolve"
-version = "0.2.0"
+version = "0.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/5b/1b/9a02a419c9a2f6c3ee397a6ea2635fdd143e61a46665faaeeeb01c1bda53/folio_resolve-0.2.0.tar.gz", hash = "sha256:a4b995a33642a105c24bf481913137c9e08b90bab4a7edd974955580f24ea74e", size = 80198, upload-time = "2026-07-17T05:18:30.097Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f1/70/c4b3805db487399374bb52be331f3ef190928e3842900fe15eda53bd88a1/folio_resolve-0.3.1.tar.gz", hash = "sha256:3872d21ca36af1f087a645072e369643bb488f9518438fb32bb3228e4dcba36c", size = 199088, upload-time = "2026-08-05T17:39:01.403Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e0/89/b9c4e009a3dd5ae094482a44109e6e56bff6c7964f9e0f4d0635f89801da/folio_resolve-0.2.0-py3-none-any.whl", hash = "sha256:ef41ffbec3203f7f110e7421b2907b2fbfcd237139dc4458952e6929461141b9", size = 55894, upload-time = "2026-07-17T05:18:28.855Z" },
+    { url = "https://files.pythonhosted.org/packages/83/83/9ceddf6d26dcfd690f72a0ebcfbb0dc5fbf05214357ee8a19a276ecd69db/folio_resolve-0.3.1-py3-none-any.whl", hash = "sha256:02535f2e6f17db954efb9358a5872a9c72e1069c3984510933f3db1498e38675", size = 63961, upload-time = "2026-08-05T17:38:59.899Z" },
 ]
 
 [[package]]
