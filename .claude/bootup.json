@@ -1,0 +1,16 @@
+{
+  "servers": [
+    {
+      "name": "Backend (FastAPI)",
+      "cwd": ".",
+      "command": "pnpm dev:api",
+      "url": "http://localhost:58000"
+    },
+    {
+      "name": "Frontend (Vite + React)",
+      "cwd": ".",
+      "command": "pnpm dev:web",
+      "url": "http://localhost:58173"
+    }
+  ]
+}

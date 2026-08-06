@@ -1,0 +1,812 @@
+[
+  {
+    "id": "solo-criminal",
+    "label": "Solo Criminal Defense",
+    "total": 10,
+    "good": 10,
+    "marginal": 0,
+    "miss": 0,
+    "hit_rate": 100.0,
+    "results": [
+      {
+        "term": "Driving Under the Influence",
+        "match_type": "exact",
+        "best_label": "Driving Under the Influence",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Boating DUI/BUI",
+        "match_type": "exact",
+        "best_label": "Boating DUI/BUI",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Cannabis Law",
+        "match_type": "exact",
+        "best_label": "Cannabis Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Controlled Substance Charges",
+        "match_type": "fuzzy_overlap",
+        "best_label": "In-Vitro Diagnostic Substance Manufacturing",
+        "score": 85.5,
+        "status": "good"
+      },
+      {
+        "term": "Assault Law",
+        "match_type": "exact",
+        "best_label": "Assault Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Domestic Violence",
+        "match_type": "exact",
+        "best_label": "Domestic Violence",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Burglary",
+        "match_type": "exact",
+        "best_label": "Burglary",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Shoplifting",
+        "match_type": "exact",
+        "best_label": "Shoplifting",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Juvenile Law",
+        "match_type": "exact",
+        "best_label": "Juvenile Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Wire Fraud",
+        "match_type": "exact",
+        "best_label": "Wire Fraud",
+        "score": 100,
+        "status": "good"
+      }
+    ]
+  },
+  {
+    "id": "family-law",
+    "label": "Family Law Firm",
+    "total": 10,
+    "good": 10,
+    "marginal": 0,
+    "miss": 0,
+    "hit_rate": 100.0,
+    "results": [
+      {
+        "term": "Contested Divorce",
+        "match_type": "exact",
+        "best_label": "Contested Divorce",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Legal Separation",
+        "match_type": "exact",
+        "best_label": "Legal Separation",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Custody Law",
+        "match_type": "exact",
+        "best_label": "Custody Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Parenting Plan",
+        "match_type": "exact",
+        "best_label": "Parenting Plan",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Child Support",
+        "match_type": "exact",
+        "best_label": "Child Support",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Spousal Support",
+        "match_type": "exact",
+        "best_label": "Spousal Support",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Restraining Order",
+        "match_type": "fuzzy",
+        "best_label": "Civil Protection Claim / Domestic Restraining Order",
+        "score": 95.0,
+        "status": "good"
+      },
+      {
+        "term": "Criminal Harassment",
+        "match_type": "exact",
+        "best_label": "Criminal Harassment",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Adoption",
+        "match_type": "exact",
+        "best_label": "Adoption",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Guardianship",
+        "match_type": "exact",
+        "best_label": "Guardianship",
+        "score": 100,
+        "status": "good"
+      }
+    ]
+  },
+  {
+    "id": "personal-injury",
+    "label": "Personal Injury Plaintiff",
+    "total": 10,
+    "good": 10,
+    "marginal": 0,
+    "miss": 0,
+    "hit_rate": 100.0,
+    "results": [
+      {
+        "term": "Motor Vehicle Law",
+        "match_type": "exact",
+        "best_label": "Motor Vehicle Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Accident Benefits Law",
+        "match_type": "exact",
+        "best_label": "Accident Benefits Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Slip-and-Fall Negligence",
+        "match_type": "exact",
+        "best_label": "Slip-and-Fall Negligence",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Dog Bite",
+        "match_type": "fuzzy_overlap",
+        "best_label": "Dog Bite Strict Liability",
+        "score": 90.0,
+        "status": "good"
+      },
+      {
+        "term": "Medical Malpractice",
+        "match_type": "exact",
+        "best_label": "Medical Malpractice",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Wrongful Death Claim",
+        "match_type": "exact",
+        "best_label": "Wrongful Death Claim",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Product Liability Law",
+        "match_type": "exact",
+        "best_label": "Product Liability Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Defective Product Claims",
+        "match_type": "fuzzy_overlap",
+        "best_label": "Other Converted Paper Product Manufacturing",
+        "score": 85.5,
+        "status": "good"
+      },
+      {
+        "term": "Mass Torts Law",
+        "match_type": "exact",
+        "best_label": "Mass Torts Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Defamation Law",
+        "match_type": "exact",
+        "best_label": "Defamation Law",
+        "score": 100,
+        "status": "good"
+      }
+    ]
+  },
+  {
+    "id": "employment-labor",
+    "label": "Employment & Labor",
+    "total": 10,
+    "good": 10,
+    "marginal": 0,
+    "miss": 0,
+    "hit_rate": 100.0,
+    "results": [
+      {
+        "term": "Employment Discrimination Law",
+        "match_type": "exact",
+        "best_label": "Employment Discrimination Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Age Discrimination",
+        "match_type": "exact",
+        "best_label": "Age Discrimination",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Wage and Hour Law",
+        "match_type": "exact",
+        "best_label": "Wage and Hour Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Pay Equity Law",
+        "match_type": "exact",
+        "best_label": "Pay Equity Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Employment Health and Safety Law",
+        "match_type": "exact",
+        "best_label": "Employment Health and Safety Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Substance Abuse and Drug Testing Law",
+        "match_type": "exact",
+        "best_label": "Substance Abuse and Drug Testing Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Wrongful Discharge or Termination",
+        "match_type": "exact",
+        "best_label": "Wrongful Discharge or Termination",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Reduction in Force Law",
+        "match_type": "exact",
+        "best_label": "Reduction in Force Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Workers Compensation Law",
+        "match_type": "exact",
+        "best_label": "Workers Compensation Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Unemployment Benefits Law",
+        "match_type": "exact",
+        "best_label": "Unemployment Benefits Law",
+        "score": 100,
+        "status": "good"
+      }
+    ]
+  },
+  {
+    "id": "corporate-ma",
+    "label": "Corporate M&A",
+    "total": 10,
+    "good": 10,
+    "marginal": 0,
+    "miss": 0,
+    "hit_rate": 100.0,
+    "results": [
+      {
+        "term": "Corporate Governance Law",
+        "match_type": "exact",
+        "best_label": "Corporate Governance Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Breach of Fiduciary Duty",
+        "match_type": "exact",
+        "best_label": "Breach of Fiduciary Duty",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Security Offerings and Capital Markets Law",
+        "match_type": "exact",
+        "best_label": "Security Offerings and Capital Markets Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Securities Fraud",
+        "match_type": "exact",
+        "best_label": "Securities Fraud",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Asset Due Diligence Practice",
+        "match_type": "exact",
+        "best_label": "Asset Due Diligence Practice",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Regulatory Compliance",
+        "match_type": "exact",
+        "best_label": "Regulatory Compliance",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Stock Purchase Agreement",
+        "match_type": "exact",
+        "best_label": "Stock Purchase Agreement",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Asset Purchase Agreement",
+        "match_type": "exact",
+        "best_label": "Asset Purchase Agreement",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Antitrust and Competition Law",
+        "match_type": "exact",
+        "best_label": "Antitrust and Competition Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Hostile Takeover",
+        "match_type": "exact",
+        "best_label": "Hostile Takeover",
+        "score": 100,
+        "status": "good"
+      }
+    ]
+  },
+  {
+    "id": "ip-tech",
+    "label": "IP & Technology",
+    "total": 10,
+    "good": 10,
+    "marginal": 0,
+    "miss": 0,
+    "hit_rate": 100.0,
+    "results": [
+      {
+        "term": "Patent Law",
+        "match_type": "exact",
+        "best_label": "Patent Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Patent Infringement",
+        "match_type": "exact",
+        "best_label": "Patent Infringement",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Trademark and Trade Dress Law",
+        "match_type": "exact",
+        "best_label": "Trademark and Trade Dress Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Trademark Infringement",
+        "match_type": "exact",
+        "best_label": "Trademark Infringement",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Trade Secret Law",
+        "match_type": "exact",
+        "best_label": "Trade Secret Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Trade Secret Misappropriation",
+        "match_type": "exact",
+        "best_label": "Trade Secret Misappropriation",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Copyright Law",
+        "match_type": "exact",
+        "best_label": "Copyright Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Copyright Infringement",
+        "match_type": "exact",
+        "best_label": "Copyright Infringement",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Intellectual Property Assets",
+        "match_type": "exact",
+        "best_label": "Intellectual Property Assets",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Software Patent",
+        "match_type": "exact",
+        "best_label": "Software Patent",
+        "score": 100,
+        "status": "good"
+      }
+    ]
+  },
+  {
+    "id": "commercial-lit",
+    "label": "Commercial Litigation",
+    "total": 10,
+    "good": 10,
+    "marginal": 0,
+    "miss": 0,
+    "hit_rate": 100.0,
+    "results": [
+      {
+        "term": "Breach of Contract",
+        "match_type": "exact",
+        "best_label": "Breach of Contract",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Tortious Interference Claims",
+        "match_type": "exact",
+        "best_label": "Tortious Interference Claims",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Antitrust and Competition Law",
+        "match_type": "exact",
+        "best_label": "Antitrust and Competition Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Antitrust - Bid-Rigging Claims",
+        "match_type": "exact",
+        "best_label": "Antitrust - Bid-Rigging Claims",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Securities Fraud",
+        "match_type": "exact",
+        "best_label": "Securities Fraud",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Insider Trading",
+        "match_type": "exact",
+        "best_label": "Insider Trading",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Consumer Protection Law",
+        "match_type": "exact",
+        "best_label": "Consumer Protection Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Unfair Competition",
+        "match_type": "fuzzy",
+        "best_label": "Unfair Competition Claims",
+        "score": 95.0,
+        "status": "good"
+      },
+      {
+        "term": "Arbitration Practice",
+        "match_type": "exact",
+        "best_label": "Arbitration Practice",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Mediation Practice",
+        "match_type": "exact",
+        "best_label": "Mediation Practice",
+        "score": 100,
+        "status": "good"
+      }
+    ]
+  },
+  {
+    "id": "real-estate",
+    "label": "Real Estate",
+    "total": 10,
+    "good": 10,
+    "marginal": 0,
+    "miss": 0,
+    "hit_rate": 100.0,
+    "results": [
+      {
+        "term": "Property Rights and Transactions Law",
+        "match_type": "exact",
+        "best_label": "Property Rights and Transactions Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Clearing Title",
+        "match_type": "exact",
+        "best_label": "Clearing Title",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Landlord Tenant Law",
+        "match_type": "exact",
+        "best_label": "Landlord Tenant Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Lease Agreements",
+        "match_type": "exact",
+        "best_label": "Lease Agreements",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Land Use and Zoning Law",
+        "match_type": "exact",
+        "best_label": "Land Use and Zoning Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Zoning Variance",
+        "match_type": "alt_label",
+        "best_label": "Real Estate Special Exception",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Construction and Development Law",
+        "match_type": "exact",
+        "best_label": "Construction and Development Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Building Code Violations",
+        "match_type": "fuzzy_overlap",
+        "best_label": "Building Material and Supplies Dealers",
+        "score": 85.5,
+        "status": "good"
+      },
+      {
+        "term": "Mortgage Foreclosure",
+        "match_type": "exact",
+        "best_label": "Mortgage Foreclosure",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Eminent Domain Law",
+        "match_type": "exact",
+        "best_label": "Eminent Domain Law",
+        "score": 100,
+        "status": "good"
+      }
+    ]
+  },
+  {
+    "id": "banking-finance",
+    "label": "Banking & Finance",
+    "total": 10,
+    "good": 10,
+    "marginal": 0,
+    "miss": 0,
+    "hit_rate": 100.0,
+    "results": [
+      {
+        "term": "Commercial Finance Law",
+        "match_type": "exact",
+        "best_label": "Commercial Finance Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Asset-Based Lending Practice",
+        "match_type": "exact",
+        "best_label": "Asset-Based Lending Practice",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Broker-Dealer Law",
+        "match_type": "exact",
+        "best_label": "Broker-Dealer Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Derivatives and Futures Law",
+        "match_type": "exact",
+        "best_label": "Derivatives and Futures Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Investment Companies Law",
+        "match_type": "exact",
+        "best_label": "Investment Companies Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Private Equity, Hedge Funds and Venture Capital Law",
+        "match_type": "exact",
+        "best_label": "Private Equity, Hedge Funds and Venture Capital Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Structured Finance Law",
+        "match_type": "exact",
+        "best_label": "Structured Finance Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Collateralized Loan Obligation",
+        "match_type": "exact",
+        "best_label": "Collateralized Loan Obligation",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Bank Secrecy and Anti-Money Laundering Law",
+        "match_type": "exact",
+        "best_label": "Bank Secrecy and Anti-Money Laundering Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Cryptocurrency Law",
+        "match_type": "exact",
+        "best_label": "Cryptocurrency Law",
+        "score": 100,
+        "status": "good"
+      }
+    ]
+  },
+  {
+    "id": "immigration",
+    "label": "Immigration",
+    "total": 10,
+    "good": 10,
+    "marginal": 0,
+    "miss": 0,
+    "hit_rate": 100.0,
+    "results": [
+      {
+        "term": "Employment Immigration Law",
+        "match_type": "exact",
+        "best_label": "Employment Immigration Law",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "H-1B Visa",
+        "match_type": "alt_label",
+        "best_label": "Visa for Skilled Workers and Specialty Occupations",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Affirmative Asylum",
+        "match_type": "exact",
+        "best_label": "Affirmative Asylum",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Refugee",
+        "match_type": "exact",
+        "best_label": "Refugee",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Deportation",
+        "match_type": "exact",
+        "best_label": "Deportation",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Defensive Asylum",
+        "match_type": "exact",
+        "best_label": "Defensive Asylum",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Naturalization Application",
+        "match_type": "exact",
+        "best_label": "Naturalization Application",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Green Card",
+        "match_type": "alt_label",
+        "best_label": "Permanent Resident Card",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Student Visa",
+        "match_type": "exact",
+        "best_label": "Student Visa",
+        "score": 100,
+        "status": "good"
+      },
+      {
+        "term": "Entertainment Visa",
+        "match_type": "exact",
+        "best_label": "Entertainment Visa",
+        "score": 100,
+        "status": "good"
+      }
+    ]
+  }
+]
