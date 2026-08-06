@@ -37,3 +37,10 @@ release/
 
 # Demo curation intermediate probe output (reproducible via scripts/demos/run_probe.py)
 scripts/demos/*-probe-candidates.json
+
+# Reproducible validation output (regenerate via scripts/output/scrub_excluded_branches.py)
+scripts/output/validation_report.json
+
+# Claude Code: local permission cache + auto-regenerated resume state (machine-local)
+.claude/settings.local.json
+.claude/RESUME.md
