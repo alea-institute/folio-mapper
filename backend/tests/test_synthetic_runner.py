@@ -2,7 +2,8 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from unittest.mock import Mock, patch
+from types import SimpleNamespace
+from unittest.mock import AsyncMock, Mock, patch
 
 import pytest
 
@@ -96,7 +97,9 @@ def test_missing_segments_returns_nonzero_without_writing_output(tmp_path: Path,
     assert "segments" in capsys.readouterr().err
 
 
-def test_llm_on_requires_provider_environment(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
+def test_llm_on_requires_provider_environment(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str],
+):
     source = tmp_path / "items.jsonl"
     output = tmp_path / "out.jsonl"
     source.write_text('{"item_id":"i","text":"x","segments":["x"]}\n')
@@ -105,3 +108,69 @@ def test_llm_on_requires_provider_environment(tmp_path: Path, monkeypatch: pytes
 
     assert synthetic_runner.main(["--items", str(source), "--out", str(output), "--llm-on"]) != 0
     assert not output.exists()
+    assert "--llm-on requires a provider API key" in capsys.readouterr().err
+
+
+def test_llm_on_runs_full_pipeline_and_emits_llm_stages(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+):
+    source = tmp_path / "items.jsonl"
+    output = tmp_path / "out.jsonl"
+    source.write_text('{"item_id":"i","text":"whole text","segments":["precomputed"]}\n')
+    for name in synthetic_runner.LLM_PROVIDER_ENV_VARS:
+        monkeypatch.delenv(name, raising=False)
+    monkeypatch.setenv("OPENAI_API_KEY", "secret-not-for-output")
+
+    response = SimpleNamespace(
+        mapping=SimpleNamespace(items=[SimpleNamespace(branch_groups=[
+            SimpleNamespace(candidates=[SimpleNamespace(iri_hash="service-iri")]),
+        ])]),
+        pipeline_metadata=[SimpleNamespace(
+            prescan=SimpleNamespace(segments=[SimpleNamespace(text="whole text")]),
+            stage1_candidate_count=4,
+            stage1b_expanded_count=2,
+            stage2_candidate_count=3,
+            stage3_judged_count=1,
+            stage3_boosted=1,
+            stage3_penalized=0,
+            stage3_rejected=2,
+        )],
+    )
+
+    with patch.object(
+        synthetic_runner, "run_pipeline", new_callable=AsyncMock, return_value=response,
+    ) as pipeline:
+        assert synthetic_runner.main([
+            "--items", str(source), "--out", str(output), "--llm-on",
+        ]) == 0
+
+    item = pipeline.call_args.args[0][0]
+    config = pipeline.call_args.args[1]
+    assert item.text == "whole text"
+    assert config.provider.value == "openai"
+    assert config.model == "gpt-5.5"
+    assert pipeline.call_args.kwargs == {}
+
+    lines = [json.loads(line) for line in output.read_text().splitlines()]
+    assert lines[0]["lane"] == "llm-on"
+    assert lines[0]["config"]["llm_provider"] == "openai"
+    assert lines[0]["config"]["llm_model"] == "gpt-5.5"
+    assert lines[0]["config"]["segmentation"] == "pipeline"
+    assert "secret-not-for-output" not in output.read_text()
+    assert lines[1] == {
+        "item_id": "i",
+        "iris": ["service-iri"],
+        "stages": {
+            "stage0_prescan": ["whole text"],
+            "stage1_filter": 4,
+            "stage1b_expand": 2,
+            "embedding_rerank": 3,
+            "stage3_judge": {
+                "judged": 1,
+                "boosted": 1,
+                "penalized": 0,
+                "rejected": 2,
+            },
+            "committed": ["service-iri"],
+        },
+    }

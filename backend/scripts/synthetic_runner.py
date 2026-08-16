@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import asyncio
 import json
 import os
 import sys
@@ -17,21 +18,20 @@ BACKEND = Path(__file__).resolve().parent.parent
 if str(BACKEND) not in sys.path:
     sys.path.insert(0, str(BACKEND))
 
+from app.models.llm_models import LLMConfig
+from app.models.parse_models import ParseItem
 from app.models.pipeline_models import PreScanResult, PreScanSegment, RankedCandidate, ScopedCandidate
 from app.services.embedding.service import get_embedding_index
 from app.services.folio_service import get_folio
-from app.services.pipeline.orchestrator import _embedding_rerank
+from app.services.llm.registry import DEFAULT_MODELS, PROVIDER_ENV_VAR
+from app.services.pipeline.orchestrator import _embedding_rerank, run_pipeline
 from app.services.pipeline.stage1_filter import run_stage1
 
 THRESHOLD = 0.3
 MAX_PER_BRANCH = 10
 RERANK_TOP_K = 20
 COMMIT_TOP_N = 10
-LLM_PROVIDER_ENV_VARS = (
-    "OPENAI_API_KEY", "ANTHROPIC_API_KEY", "GOOGLE_API_KEY", "MISTRAL_API_KEY",
-    "COHERE_API_KEY", "META_LLAMA_API_KEY", "GROQ_API_KEY", "XAI_API_KEY",
-    "GITHUB_MODELS_API_KEY",
-)
+LLM_PROVIDER_ENV_VARS = tuple(PROVIDER_ENV_VAR.values())
 
 
 def _package_version(distribution: str, module_name: str) -> str:
@@ -117,6 +117,46 @@ def _run_item(
     }, rerank_failed
 
 
+def _llm_config_from_environment() -> LLMConfig:
+    """Resolve the first env-keyed provider using the server's registry defaults."""
+    for provider, env_var in PROVIDER_ENV_VAR.items():
+        if os.environ.get(env_var):
+            return LLMConfig(provider=provider, model=DEFAULT_MODELS[provider])
+    expected = ", ".join(PROVIDER_ENV_VAR.values())
+    raise ValueError(f"--llm-on requires a provider API key in one of: {expected}")
+
+
+def _run_llm_item(item: dict[str, Any], llm_config: LLMConfig) -> dict[str, Any]:
+    """Run one source item through the complete orchestrated mapper pipeline."""
+    response = asyncio.run(run_pipeline([
+        ParseItem(text=item["text"], index=0),
+    ], llm_config))
+    mapped = response.mapping.items[0]
+    metadata = response.pipeline_metadata[0]
+    committed = [
+        candidate.iri_hash
+        for group in mapped.branch_groups
+        for candidate in group.candidates
+    ]
+    return {
+        "item_id": item["item_id"],
+        "iris": sorted(set(committed)),
+        "stages": {
+            "stage0_prescan": [segment.text for segment in metadata.prescan.segments],
+            "stage1_filter": metadata.stage1_candidate_count,
+            "stage1b_expand": metadata.stage1b_expanded_count,
+            "embedding_rerank": metadata.stage2_candidate_count,
+            "stage3_judge": {
+                "judged": metadata.stage3_judged_count,
+                "boosted": metadata.stage3_boosted,
+                "penalized": metadata.stage3_penalized,
+                "rejected": metadata.stage3_rejected,
+            },
+            "committed": committed,
+        },
+    }
+
+
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--items", type=Path, required=True)
@@ -129,22 +169,25 @@ def _parser() -> argparse.ArgumentParser:
 def main(argv: Sequence[str] | None = None) -> int:
     args = _parser().parse_args(argv)
     try:
-        if args.llm_on and not any(os.environ.get(name) for name in LLM_PROVIDER_ENV_VARS):
-            raise ValueError("--llm-on requires a configured provider environment variable")
         items = _read_items(args.items)
-        folio = get_folio()
-        try:
-            embedding_available = get_embedding_index() is not None
-        except Exception:
-            embedding_available = False
-        item_results = [_run_item(item, folio, embedding_available) for item in items]
-        if any(failed for _, failed in item_results):
-            embedding_available = False
-            item_results = [_run_item(item, folio, False) for item in items]
+        llm_config = _llm_config_from_environment() if args.llm_on else None
+        if llm_config is not None:
+            embedding_available = None
+            item_results = [(_run_llm_item(item, llm_config), False) for item in items]
+        else:
+            folio = get_folio()
+            try:
+                embedding_available = get_embedding_index() is not None
+            except Exception:
+                embedding_available = False
+            item_results = [_run_item(item, folio, embedding_available) for item in items]
+            if any(failed for _, failed in item_results):
+                embedding_available = False
+                item_results = [_run_item(item, folio, False) for item in items]
         records = [{
             "kind": "synthetic-stack-run",
             "stack": "folio-mapper",
-            "lane": args.lane,
+            "lane": "llm-on" if llm_config is not None else args.lane,
             "folio_resolve_version": _package_version("folio-resolve", "folio_resolve"),
             "folio_python_version": _package_version("folio-python", "folio"),
             "config": {
@@ -154,8 +197,16 @@ def main(argv: Sequence[str] | None = None) -> int:
                 "commit_top_n": COMMIT_TOP_N,
                 "keyword_weight": 0.6,
                 "embedding_weight": 0.4,
-                "embedding_rerank": "available" if embedding_available else "unavailable",
+                "embedding_rerank": (
+                    "pipeline" if embedding_available is None
+                    else "available" if embedding_available else "unavailable"
+                ),
                 "llm_on": args.llm_on,
+                **({
+                    "llm_provider": llm_config.provider.value,
+                    "llm_model": llm_config.model,
+                    "segmentation": "pipeline",
+                } if llm_config is not None else {}),
             },
         }]
         records.extend(record for record, _ in item_results)
