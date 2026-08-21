@@ -8,7 +8,9 @@ dependencies = [
     "uvicorn[standard]>=0.30.0,<1.0.0",
     "openpyxl>=3.1.0,<4.0.0",
     "python-multipart>=0.0.12,<1.0.0",
-    "folio-python>=0.2.0,<1.0.0",
+    # U10's cross-stack gate fails closed on folio-python version skew. Match the released
+    # folio-enrich incumbent so both deterministic lanes use the same ontology implementation.
+    "folio-python==0.3.6",
     "alea-llm-client>=0.2.0,<1.0.0",
     "rapidfuzz>=3.0.0,<4.0.0",
     "marisa-trie>=1.0.0,<2.0.0",
