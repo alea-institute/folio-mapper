@@ -468,7 +468,7 @@ requires-dist = [
     { name = "anthropic", specifier = ">=0.18.0,<1.0.0" },
     { name = "faiss-cpu", marker = "extra == 'embedding'", specifier = ">=1.8,<2.0" },
     { name = "fastapi", specifier = ">=0.115.0,<1.0.0" },
-    { name = "folio-python", specifier = ">=0.2.0,<1.0.0" },
+    { name = "folio-python", specifier = "==0.3.6" },
     { name = "folio-resolve", specifier = "==0.4.0" },
     { name = "httpx", specifier = ">=0.27.0,<1.0.0" },
     { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.27.0,<1.0.0" },
@@ -489,16 +489,16 @@ provides-extras = ["embedding", "nlp", "dev"]
 
 [[package]]
 name = "folio-python"
-version = "0.2.0"
+version = "0.3.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
     { name = "lxml" },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b7/f5/df40415506edd79bd09676dc1dd9f30e4d55403b1f02b7ba4cdb6c5baeb6/folio_python-0.2.0.tar.gz", hash = "sha256:d7e7adf9462288c020a7e005824c632571fa2914dbdc40bdd85f10061d080a43", size = 24118, upload-time = "2025-04-17T13:11:24.629Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/08/f1/7f79d6efdb50cc668478a17535354782ec302c91795f4ce6c202a0c656d3/folio_python-0.3.6.tar.gz", hash = "sha256:fd3e7fceb3ceed7311d48d98d0cfab4653b5b247d56f02cb075d3b17f99b0feb", size = 28050, upload-time = "2026-04-08T17:00:53.325Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/24/44/49899ccd441564b382275ffd57fc024c22d9edecd1ce4c4143765103ccc7/folio_python-0.2.0-py3-none-any.whl", hash = "sha256:9b1c135cb72e10a55d07c2f2b09facc3fe8e6d4aaee4c930f2b227d8daff5dec", size = 24365, upload-time = "2025-04-17T13:11:22.828Z" },
+    { url = "https://files.pythonhosted.org/packages/fb/28/20426152e7ade0cc19e30e5c1be141703e7fa974e0ba393c27bfc1cb36ae/folio_python-0.3.6-py3-none-any.whl", hash = "sha256:9a92a1e2d70c6f1998b05002592c34ada0fbaf2531d1d286fdc9d42480ead80a", size = 28323, upload-time = "2026-04-08T17:00:52.088Z" },
 ]
 
 [[package]]
