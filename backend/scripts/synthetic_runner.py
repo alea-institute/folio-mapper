@@ -21,7 +21,7 @@ if str(BACKEND) not in sys.path:
 from app.models.llm_models import LLMConfig
 from app.models.parse_models import ParseItem
 from app.models.pipeline_models import PreScanResult, PreScanSegment, RankedCandidate, ScopedCandidate
-from app.services.embedding.service import get_embedding_index
+from app.services.embedding.service import build_embedding_index, get_embedding_index
 from app.services.folio_service import get_folio
 from app.services.llm.registry import DEFAULT_MODELS, PROVIDER_ENV_VAR
 from app.services.pipeline.orchestrator import _embedding_rerank, run_pipeline
@@ -70,12 +70,9 @@ def _read_items(path: Path) -> list[dict[str, Any]]:
     return items
 
 
-def _run_item(
-    item: dict[str, Any], folio: object, embedding_available: bool,
-) -> tuple[dict[str, Any], bool]:
+def _run_item(item: dict[str, Any], folio: object) -> dict[str, Any]:
     stage1_best: dict[str, ScopedCandidate] = {}
     reranked_best: dict[str, RankedCandidate] = {}
-    rerank_failed = False
     for segment_text in item["segments"]:
         prescan = PreScanResult(
             segments=[PreScanSegment(text=segment_text, branches=[], reasoning="precomputed")],
@@ -89,23 +86,21 @@ def _run_item(
             previous = stage1_best.get(candidate.iri_hash)
             if previous is None or candidate.score > previous.score:
                 stage1_best[candidate.iri_hash] = candidate
-        if embedding_available:
-            segment_ranked = _embedding_rerank(segment_text, candidates, top_k=RERANK_TOP_K)
-            if candidates and all(row.reasoning == "local score" for row in segment_ranked):
-                rerank_failed = True
-            for ranked in segment_ranked:
-                previous_ranked = reranked_best.get(ranked.iri_hash)
-                if previous_ranked is None or ranked.score > previous_ranked.score:
-                    reranked_best[ranked.iri_hash] = ranked
+        segment_ranked = _embedding_rerank(segment_text, candidates, top_k=RERANK_TOP_K)
+        if candidates and all(row.reasoning == "local score" for row in segment_ranked):
+            raise RuntimeError(
+                "semantic embedding rerank fell back to local scores "
+                f"for item {item['item_id']!r}"
+            )
+        for ranked in segment_ranked:
+            previous_ranked = reranked_best.get(ranked.iri_hash)
+            if previous_ranked is None or ranked.score > previous_ranked.score:
+                reranked_best[ranked.iri_hash] = ranked
 
     stage1 = sorted(stage1_best.values(), key=lambda row: (-row.score, row.iri_hash))
-    if embedding_available:
-        reranked = sorted(reranked_best.values(), key=lambda row: (-row.score, row.iri_hash))
-        embedding_snapshot = [row.iri_hash for row in reranked]
-        committed = embedding_snapshot[:COMMIT_TOP_N]
-    else:
-        embedding_snapshot = []
-        committed = [row.iri_hash for row in stage1[:COMMIT_TOP_N]]
+    reranked = sorted(reranked_best.values(), key=lambda row: (-row.score, row.iri_hash))
+    embedding_snapshot = [row.iri_hash for row in reranked]
+    committed = embedding_snapshot[:COMMIT_TOP_N]
     return {
         "item_id": item["item_id"],
         "iris": sorted(set(committed)),
@@ -114,7 +109,7 @@ def _run_item(
             "embedding_rerank": embedding_snapshot,
             "committed": committed,
         },
-    }, rerank_failed
+    }
 
 
 def _llm_config_from_environment() -> LLMConfig:
@@ -172,18 +167,13 @@ def main(argv: Sequence[str] | None = None) -> int:
         items = _read_items(args.items)
         llm_config = _llm_config_from_environment() if args.llm_on else None
         if llm_config is not None:
-            embedding_available = None
-            item_results = [(_run_llm_item(item, llm_config), False) for item in items]
+            item_results = [_run_llm_item(item, llm_config) for item in items]
         else:
+            build_embedding_index()
+            if get_embedding_index() is None:
+                raise RuntimeError("embedding index unavailable after synchronous initialization")
             folio = get_folio()
-            try:
-                embedding_available = get_embedding_index() is not None
-            except Exception:
-                embedding_available = False
-            item_results = [_run_item(item, folio, embedding_available) for item in items]
-            if any(failed for _, failed in item_results):
-                embedding_available = False
-                item_results = [_run_item(item, folio, False) for item in items]
+            item_results = [_run_item(item, folio) for item in items]
         records = [{
             "kind": "synthetic-stack-run",
             "stack": "folio-mapper",
@@ -197,10 +187,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 "commit_top_n": COMMIT_TOP_N,
                 "keyword_weight": 0.6,
                 "embedding_weight": 0.4,
-                "embedding_rerank": (
-                    "pipeline" if embedding_available is None
-                    else "available" if embedding_available else "unavailable"
-                ),
+                "embedding_rerank": "pipeline" if llm_config is not None else "available",
                 "llm_on": args.llm_on,
                 **({
                     "llm_provider": llm_config.provider.value,
@@ -209,7 +196,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 } if llm_config is not None else {}),
             },
         }]
-        records.extend(record for record, _ in item_results)
+        records.extend(item_results)
         args.out.parent.mkdir(parents=True, exist_ok=True)
         with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=args.out.parent, delete=False) as temp:
             temp_path = Path(temp.name)

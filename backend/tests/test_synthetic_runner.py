@@ -32,6 +32,7 @@ def test_contract_uses_precomputed_segments_and_real_stage_seams(tmp_path: Path)
 
     with (
         patch.object(synthetic_runner, "get_folio", return_value=folio),
+        patch.object(synthetic_runner, "build_embedding_index") as build_index,
         patch.object(synthetic_runner, "get_embedding_index", return_value=index),
         patch.object(synthetic_runner, "run_stage1", side_effect=stage1_rows) as stage1,
         patch.object(
@@ -46,6 +47,7 @@ def test_contract_uses_precomputed_segments_and_real_stage_seams(tmp_path: Path)
     ):
         assert synthetic_runner.main(["--items", str(source), "--out", str(output)]) == 0
 
+    build_index.assert_called_once_with()
     assert [call.args[1].segments[0].text for call in stage1.call_args_list] == ["alpha", "beta"]
     assert [call.args[0] for call in rerank.call_args_list] == ["alpha", "beta"]
     llm_registry.assert_not_called()
@@ -66,7 +68,7 @@ def test_contract_uses_precomputed_segments_and_real_stage_seams(tmp_path: Path)
     }
 
 
-def test_output_is_byte_deterministic_and_embedding_unavailability_is_explicit(tmp_path: Path):
+def test_output_is_byte_deterministic_with_embedding_rerank(tmp_path: Path):
     source = tmp_path / "items.jsonl"
     first = tmp_path / "first.jsonl"
     second = tmp_path / "second.jsonl"
@@ -74,17 +76,81 @@ def test_output_is_byte_deterministic_and_embedding_unavailability_is_explicit(t
 
     with (
         patch.object(synthetic_runner, "get_folio", return_value=Mock()),
-        patch.object(synthetic_runner, "get_embedding_index", return_value=None),
-        patch.object(synthetic_runner, "run_stage1", return_value=[_candidate("b", 50), _candidate("a", 50)]),
+        patch.object(synthetic_runner, "build_embedding_index"),
+        patch.object(synthetic_runner, "get_embedding_index", return_value=Mock()),
+        patch.object(
+            synthetic_runner,
+            "run_stage1",
+            return_value=[_candidate("b", 50), _candidate("a", 50)],
+        ),
+        patch.object(
+            synthetic_runner,
+            "_embedding_rerank",
+            return_value=[
+                RankedCandidate(iri_hash="a", score=60, reasoning="keyword=50 emb=75"),
+                RankedCandidate(iri_hash="b", score=50, reasoning="keyword=50 emb=50"),
+            ],
+        ),
     ):
         assert synthetic_runner.main(["--items", str(source), "--out", str(first)]) == 0
         assert synthetic_runner.main(["--items", str(source), "--out", str(second)]) == 0
 
     assert first.read_bytes() == second.read_bytes()
-    lines = [json.loads(line) for line in first.read_text().splitlines()]
-    assert lines[0]["config"]["embedding_rerank"] == "unavailable"
-    assert lines[1]["stages"]["embedding_rerank"] == []
-    assert lines[1]["stages"]["committed"] == ["a", "b"]
+    header = json.loads(first.read_text().splitlines()[0])
+    assert header["config"]["embedding_rerank"] == "available"
+
+
+def test_embedding_unavailable_after_build_fails_closed_without_output(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str],
+):
+    source = tmp_path / "items.jsonl"
+    output = tmp_path / "out.jsonl"
+    source.write_text('{"item_id":"i","text":"x","segments":["x"]}\n')
+
+    with (
+        patch.object(synthetic_runner, "get_folio", return_value=Mock()) as get_folio,
+        patch.object(synthetic_runner, "build_embedding_index") as build_index,
+        patch.object(synthetic_runner, "get_embedding_index", return_value=None),
+        patch.object(synthetic_runner, "run_stage1") as stage1,
+    ):
+        assert synthetic_runner.main(["--items", str(source), "--out", str(output)]) != 0
+
+    build_index.assert_called_once_with()
+    get_folio.assert_not_called()
+    stage1.assert_not_called()
+    assert not output.exists()
+    assert "embedding index unavailable after synchronous initialization" in capsys.readouterr().err
+
+
+def test_local_score_rerank_fallback_fails_closed_without_output(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str],
+):
+    source = tmp_path / "items.jsonl"
+    output = tmp_path / "out.jsonl"
+    source.write_text('{"item_id":"i","text":"x","segments":["x"]}\n')
+
+    with (
+        patch.object(synthetic_runner, "get_folio", return_value=Mock()),
+        patch.object(synthetic_runner, "build_embedding_index"),
+        patch.object(synthetic_runner, "get_embedding_index", return_value=Mock()),
+        patch.object(
+            synthetic_runner,
+            "run_stage1",
+            return_value=[_candidate("b", 50), _candidate("a", 40)],
+        ),
+        patch.object(
+            synthetic_runner,
+            "_embedding_rerank",
+            return_value=[
+                RankedCandidate(iri_hash="b", score=50, reasoning="local score"),
+                RankedCandidate(iri_hash="a", score=40, reasoning="local score"),
+            ],
+        ),
+    ):
+        assert synthetic_runner.main(["--items", str(source), "--out", str(output)]) != 0
+
+    assert not output.exists()
+    assert "semantic embedding rerank fell back to local scores" in capsys.readouterr().err
 
 
 def test_missing_segments_returns_nonzero_without_writing_output(tmp_path: Path, capsys):
