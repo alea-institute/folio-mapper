@@ -32,6 +32,16 @@ MAX_PER_BRANCH = 10
 RERANK_TOP_K = 20
 COMMIT_TOP_N = 10
 LLM_PROVIDER_ENV_VARS = tuple(PROVIDER_ENV_VAR.values())
+FOLIO_IRI_ROOT = "https://folio.openlegalstandard.org/"
+
+
+def _canonical_iri(value: str) -> str:
+    """Return the full FOLIO IRI required by the shared comparison contract."""
+    if value.startswith(FOLIO_IRI_ROOT):
+        return value
+    if value.startswith(("http://", "https://")):
+        raise ValueError(f"comparison candidate is outside the FOLIO namespace: {value}")
+    return f"{FOLIO_IRI_ROOT}{value}"
 
 
 def _package_version(distribution: str, module_name: str) -> str:
@@ -99,13 +109,14 @@ def _run_item(item: dict[str, Any], folio: object) -> dict[str, Any]:
 
     stage1 = sorted(stage1_best.values(), key=lambda row: (-row.score, row.iri_hash))
     reranked = sorted(reranked_best.values(), key=lambda row: (-row.score, row.iri_hash))
-    embedding_snapshot = [row.iri_hash for row in reranked]
+    stage1_snapshot = [_canonical_iri(row.iri_hash) for row in stage1]
+    embedding_snapshot = [_canonical_iri(row.iri_hash) for row in reranked]
     committed = embedding_snapshot[:COMMIT_TOP_N]
     return {
         "item_id": item["item_id"],
         "iris": sorted(set(committed)),
         "stages": {
-            "stage1_filter": [row.iri_hash for row in stage1],
+            "stage1_filter": stage1_snapshot,
             "embedding_rerank": embedding_snapshot,
             "committed": committed,
         },
@@ -129,7 +140,7 @@ def _run_llm_item(item: dict[str, Any], llm_config: LLMConfig) -> dict[str, Any]
     mapped = response.mapping.items[0]
     metadata = response.pipeline_metadata[0]
     committed = [
-        candidate.iri_hash
+        _canonical_iri(candidate.iri_hash)
         for group in mapped.branch_groups
         for candidate in group.candidates
     ]
