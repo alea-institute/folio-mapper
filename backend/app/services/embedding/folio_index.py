@@ -75,7 +75,15 @@ class FOLIOEmbeddingIndex:
         """Cache path: ~/.folio/cache/embeddings/{model}_{owl_hash}.pkl"""
         model_slug = self._provider.model_name.replace("/", "_").replace("\\", "_")
         device = getattr(self._provider, "device", None)
-        device_slug = f"_{str(device).replace(':', '_')}" if device else ""
+        device_slug = (
+            "_"
+            + str(device)
+            .replace("/", "_")
+            .replace("\\", "_")
+            .replace(":", "_")
+            if device
+            else ""
+        )
         return _CACHE_DIR / f"{model_slug}{device_slug}_{owl_hash}.pkl"
 
     def build(self, owl_hash: str | None = None) -> None:

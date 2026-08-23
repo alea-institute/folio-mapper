@@ -354,6 +354,24 @@ class TestFOLIOEmbeddingIndex:
 class TestEmbeddingCache:
     """Test disk caching of embedding index."""
 
+    def test_cache_path_isolated_and_sanitized_by_device(self, sample_concepts):
+        pytest.importorskip("faiss")
+        from app.services.embedding.folio_index import FOLIOEmbeddingIndex
+
+        provider = MockEmbeddingProvider(dim=32)
+        provider.device = "../cpu:0"
+        index = FOLIOEmbeddingIndex(
+            provider=provider,
+            iri_hashes=sample_concepts["iri_hashes"],
+            labels=sample_concepts["labels"],
+            definitions=sample_concepts["definitions"],
+            branches=sample_concepts["branches"],
+        )
+
+        path = index._cache_path("ontology")
+        assert path.parent.name == "embeddings"
+        assert path.name == "mock-embed-v1_.._cpu_0_ontology.pkl"
+
     def test_cache_round_trip(self, sample_concepts):
         faiss = pytest.importorskip("faiss")
         from app.services.embedding.folio_index import FOLIOEmbeddingIndex, _CACHE_DIR
