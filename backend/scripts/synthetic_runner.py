@@ -19,6 +19,7 @@ if str(BACKEND) not in sys.path:
     sys.path.insert(0, str(BACKEND))
 
 from app.models.llm_models import LLMConfig
+from app.models.embedding_models import EmbeddingConfig
 from app.models.parse_models import ParseItem
 from app.models.pipeline_models import PreScanResult, PreScanSegment, RankedCandidate, ScopedCandidate
 from app.services.embedding.service import build_embedding_index, get_embedding_index
@@ -33,6 +34,7 @@ RERANK_TOP_K = 20
 COMMIT_TOP_N = 10
 LLM_PROVIDER_ENV_VARS = tuple(PROVIDER_ENV_VAR.values())
 FOLIO_IRI_ROOT = "https://folio.openlegalstandard.org/"
+DETERMINISTIC_EMBEDDING_DEVICE = "cpu"
 
 
 def _canonical_iri(value: str) -> str:
@@ -180,7 +182,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         if llm_config is not None:
             item_results = [_run_llm_item(item, llm_config) for item in items]
         else:
-            build_embedding_index()
+            build_embedding_index(
+                EmbeddingConfig(device=DETERMINISTIC_EMBEDDING_DEVICE)
+            )
             if get_embedding_index() is None:
                 raise RuntimeError("embedding index unavailable after synchronous initialization")
             folio = get_folio()
@@ -199,6 +203,9 @@ def main(argv: Sequence[str] | None = None) -> int:
                 "keyword_weight": 0.6,
                 "embedding_weight": 0.4,
                 "embedding_rerank": "pipeline" if llm_config is not None else "available",
+                "embedding_device": (
+                    None if llm_config is not None else DETERMINISTIC_EMBEDDING_DEVICE
+                ),
                 "llm_on": args.llm_on,
                 **({
                     "llm_provider": llm_config.provider.value,

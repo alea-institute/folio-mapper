@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import os
 import pickle
+import sys
 import tempfile
 from pathlib import Path
 from unittest.mock import MagicMock, patch
@@ -353,6 +354,24 @@ class TestFOLIOEmbeddingIndex:
 class TestEmbeddingCache:
     """Test disk caching of embedding index."""
 
+    def test_cache_path_isolated_and_sanitized_by_device(self, sample_concepts):
+        pytest.importorskip("faiss")
+        from app.services.embedding.folio_index import FOLIOEmbeddingIndex
+
+        provider = MockEmbeddingProvider(dim=32)
+        provider.device = "../cpu:0"
+        index = FOLIOEmbeddingIndex(
+            provider=provider,
+            iri_hashes=sample_concepts["iri_hashes"],
+            labels=sample_concepts["labels"],
+            definitions=sample_concepts["definitions"],
+            branches=sample_concepts["branches"],
+        )
+
+        path = index._cache_path("ontology")
+        assert path.parent.name == "embeddings"
+        assert path.name == "mock-embed-v1_.._cpu_0_ontology.pkl"
+
     def test_cache_round_trip(self, sample_concepts):
         faiss = pytest.importorskip("faiss")
         from app.services.embedding.folio_index import FOLIOEmbeddingIndex, _CACHE_DIR
@@ -469,15 +488,18 @@ class TestEmbeddingStatus:
         config = EmbeddingConfig(
             provider=EmbeddingProviderType.LOCAL,
             model="all-MiniLM-L6-v2",
+            device="cpu",
         )
         assert config.provider == EmbeddingProviderType.LOCAL
         assert config.model == "all-MiniLM-L6-v2"
+        assert config.device == "cpu"
         assert config.disabled is False
 
     def test_config_defaults(self):
         config = EmbeddingConfig()
         assert config.provider == EmbeddingProviderType.LOCAL
         assert config.model is None
+        assert config.device is None
         assert config.disabled is False
 
 
@@ -520,12 +542,14 @@ class TestEmbeddingService:
         with patch.dict(os.environ, {
             "EMBEDDING_PROVIDER": "openai",
             "EMBEDDING_MODEL": "text-embedding-3-large",
+            "EMBEDDING_DEVICE": "cpu",
             "EMBEDDING_API_KEY": "sk-test",
             "EMBEDDING_DISABLED": "false",
         }):
             config = _config_from_env()
             assert config.provider == EmbeddingProviderType.OPENAI
             assert config.model == "text-embedding-3-large"
+            assert config.device == "cpu"
             assert config.api_key == "sk-test"
             assert config.disabled is False
 
@@ -543,6 +567,24 @@ class TestEmbeddingService:
             config = _config_from_env()
             assert config.provider == EmbeddingProviderType.LOCAL
             assert config.model is None
+            assert config.device is None
+
+    def test_local_provider_forces_and_verifies_requested_device(self):
+        from app.services.embedding.local_provider import LocalEmbeddingProvider
+
+        model = MagicMock()
+        model.device = "cpu"
+        model.get_sentence_embedding_dimension.return_value = 384
+        sentence_transformers = MagicMock()
+        sentence_transformers.SentenceTransformer.return_value = model
+
+        with patch.dict(sys.modules, {"sentence_transformers": sentence_transformers}):
+            provider = LocalEmbeddingProvider("test-model", device="cpu")
+
+        sentence_transformers.SentenceTransformer.assert_called_once_with(
+            "test-model", device="cpu"
+        )
+        assert provider.device == "cpu"
 
 
 # --- Pipeline Integration Tests ---

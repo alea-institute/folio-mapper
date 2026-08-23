@@ -7,6 +7,7 @@ from unittest.mock import AsyncMock, Mock, patch
 
 import pytest
 
+from app.models.embedding_models import EmbeddingConfig
 from app.models.pipeline_models import RankedCandidate, ScopedCandidate
 from scripts import synthetic_runner
 
@@ -65,7 +66,7 @@ def test_contract_uses_precomputed_segments_and_real_stage_seams(tmp_path: Path)
     ):
         assert synthetic_runner.main(["--items", str(source), "--out", str(output)]) == 0
 
-    build_index.assert_called_once_with()
+    build_index.assert_called_once_with(EmbeddingConfig(device="cpu"))
     assert [call.args[1].segments[0].text for call in stage1.call_args_list] == ["alpha", "beta"]
     assert [call.args[0] for call in rerank.call_args_list] == ["alpha", "beta"]
     llm_registry.assert_not_called()
@@ -75,6 +76,7 @@ def test_contract_uses_precomputed_segments_and_real_stage_seams(tmp_path: Path)
     assert lines[0]["stack"] == "folio-mapper"
     assert lines[0]["lane"] == "deterministic"
     assert lines[0]["config"]["embedding_rerank"] == "available"
+    assert lines[0]["config"]["embedding_device"] == "cpu"
     assert lines[1] == {
         "item_id": "i-1",
         "iris": [_iri("a"), _iri("z")],
@@ -133,7 +135,7 @@ def test_embedding_unavailable_after_build_fails_closed_without_output(
     ):
         assert synthetic_runner.main(["--items", str(source), "--out", str(output)]) != 0
 
-    build_index.assert_called_once_with()
+    build_index.assert_called_once_with(EmbeddingConfig(device="cpu"))
     get_folio.assert_not_called()
     stage1.assert_not_called()
     assert not output.exists()

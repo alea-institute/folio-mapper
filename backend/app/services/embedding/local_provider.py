@@ -25,7 +25,7 @@ class LocalEmbeddingProvider(BaseEmbeddingProvider):
     a larger instance; do not use on the shared PROD box).
     """
 
-    def __init__(self, model: str | None = None):
+    def __init__(self, model: str | None = None, device: str | None = None):
         try:
             from sentence_transformers import SentenceTransformer
         except ImportError:
@@ -36,9 +36,20 @@ class LocalEmbeddingProvider(BaseEmbeddingProvider):
 
         self._model_name = model or _DEFAULT_MODEL
         logger.info("Loading sentence-transformers model: %s", self._model_name)
-        self._model = SentenceTransformer(self._model_name)
+        model_options = {"device": device} if device is not None else {}
+        self._model = SentenceTransformer(self._model_name, **model_options)
+        self._device = str(self._model.device)
+        if device is not None and self._device != device:
+            raise RuntimeError(
+                f"sentence-transformers loaded on {self._device!r}, expected {device!r}"
+            )
         self._dim = self._model.get_sentence_embedding_dimension()
-        logger.info("Model loaded: %s (dim=%d)", self._model_name, self._dim)
+        logger.info(
+            "Model loaded: %s (dim=%d, device=%s)",
+            self._model_name,
+            self._dim,
+            self._device,
+        )
 
     def embed(self, text: str) -> np.ndarray:
         vec = self._model.encode(text, normalize_embeddings=True)
@@ -56,3 +67,7 @@ class LocalEmbeddingProvider(BaseEmbeddingProvider):
     @property
     def model_name(self) -> str:
         return self._model_name
+
+    @property
+    def device(self) -> str:
+        return self._device

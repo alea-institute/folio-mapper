@@ -16,6 +16,7 @@ class EmbeddingProviderType(str, Enum):
 class EmbeddingConfig(BaseModel):
     provider: EmbeddingProviderType = EmbeddingProviderType.LOCAL
     model: str | None = None  # None = use provider default
+    device: str | None = None
     base_url: str | None = None
     api_key: str | None = None
     disabled: bool = False
