@@ -8,15 +8,15 @@ resolution-markers = [
 
 [[package]]
 name = "alea-llm-client"
-version = "0.2.3"
+version = "0.3.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx", extra = ["http2"] },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/00/27/17f285226d1dd68d19403e0d178d923a5e39dfc258b3c344bcc1eb44ade3/alea_llm_client-0.2.3.tar.gz", hash = "sha256:94ef8fa97c98fbe77d1d2b3a1a5aa7239d01a10a466ba72ba7a976c6f71ad7ec", size = 50342, upload-time = "2025-08-20T19:45:00.771Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/2d/79/e43775a1a3f6aba46d158aceb7989634070a6bf030febf863f942522a9ff/alea_llm_client-0.3.3.tar.gz", hash = "sha256:9da8ed66606d5b43b587fab62b58a519b50bc4e74f4ffa55a21cb467803fc0a6", size = 59222, upload-time = "2026-03-16T22:21:35.995Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c1/93/a0130c8c52054e372183ec13cc1a7fc4374dc0c45b881419828acb457215/alea_llm_client-0.2.3-py3-none-any.whl", hash = "sha256:a3d94c8002bdd9178e06f1e19e6c715761dcb178b5e7c59555d34d84b5ff4474", size = 64557, upload-time = "2025-08-20T19:44:59.654Z" },
+    { url = "https://files.pythonhosted.org/packages/c2/99/191ea17f418acdbb2ed3e20e95e727d821c72ca1d520eaea67766ed86d62/alea_llm_client-0.3.3-py3-none-any.whl", hash = "sha256:dc6b6e2c0cf7bb9dabea929492703f326e2f81b42ce67dcd7f772163b5b5e785", size = 74406, upload-time = "2026-03-16T22:21:34.896Z" },
 ]
 
 [[package]]
@@ -435,7 +435,7 @@ dependencies = [
     { name = "alea-llm-client" },
     { name = "anthropic" },
     { name = "fastapi" },
-    { name = "folio-python" },
+    { name = "folio-python", extra = ["search"] },
     { name = "folio-resolve" },
     { name = "httpx" },
     { name = "marisa-trie" },
@@ -468,7 +468,7 @@ requires-dist = [
     { name = "anthropic", specifier = ">=0.18.0,<1.0.0" },
     { name = "faiss-cpu", marker = "extra == 'embedding'", specifier = ">=1.8,<2.0" },
     { name = "fastapi", specifier = ">=0.115.0,<1.0.0" },
-    { name = "folio-python", specifier = "==0.3.6" },
+    { name = "folio-python", extras = ["search"], specifier = "==0.3.6" },
     { name = "folio-resolve", specifier = "==0.4.0" },
     { name = "httpx", specifier = ">=0.27.0,<1.0.0" },
     { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.27.0,<1.0.0" },
@@ -499,6 +499,13 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/08/f1/7f79d6efdb50cc668478a17535354782ec302c91795f4ce6c202a0c656d3/folio_python-0.3.6.tar.gz", hash = "sha256:fd3e7fceb3ceed7311d48d98d0cfab4653b5b247d56f02cb075d3b17f99b0feb", size = 28050, upload-time = "2026-04-08T17:00:53.325Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/fb/28/20426152e7ade0cc19e30e5c1be141703e7fa974e0ba393c27bfc1cb36ae/folio_python-0.3.6-py3-none-any.whl", hash = "sha256:9a92a1e2d70c6f1998b05002592c34ada0fbaf2531d1d286fdc9d42480ead80a", size = 28323, upload-time = "2026-04-08T17:00:52.088Z" },
+]
+
+[package.optional-dependencies]
+search = [
+    { name = "alea-llm-client" },
+    { name = "marisa-trie" },
+    { name = "rapidfuzz" },
 ]
 
 [[package]]

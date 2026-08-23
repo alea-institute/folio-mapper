@@ -21,6 +21,12 @@ def _candidate(iri: str, score: float) -> ScopedCandidate:
     )
 
 
+def test_folio_search_dependency_is_available_to_the_synthetic_runner():
+    from alea_llm_client import get_llm_kwargs
+
+    assert callable(get_llm_kwargs)
+
+
 def test_contract_uses_precomputed_segments_and_real_stage_seams(tmp_path: Path):
     source = tmp_path / "items.jsonl"
     output = tmp_path / "out.jsonl"
