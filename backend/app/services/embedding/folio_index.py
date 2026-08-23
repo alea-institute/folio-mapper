@@ -74,7 +74,9 @@ class FOLIOEmbeddingIndex:
     def _cache_path(self, owl_hash: str) -> Path:
         """Cache path: ~/.folio/cache/embeddings/{model}_{owl_hash}.pkl"""
         model_slug = self._provider.model_name.replace("/", "_").replace("\\", "_")
-        return _CACHE_DIR / f"{model_slug}_{owl_hash}.pkl"
+        device = getattr(self._provider, "device", None)
+        device_slug = f"_{str(device).replace(':', '_')}" if device else ""
+        return _CACHE_DIR / f"{model_slug}{device_slug}_{owl_hash}.pkl"
 
     def build(self, owl_hash: str | None = None) -> None:
         """Build the FAISS index, using disk cache if available.
@@ -125,6 +127,7 @@ class FOLIOEmbeddingIndex:
             "definitions": self._definitions,
             "branches": self._branches,
             "model": self._provider.model_name,
+            "device": getattr(self._provider, "device", None),
             "dim": self._provider.dimension(),
         }
         with open(path, "wb") as f:
@@ -139,6 +142,11 @@ class FOLIOEmbeddingIndex:
         # Validate cache matches current data
         if data["model"] != self._provider.model_name:
             raise ValueError(f"Model mismatch: cache={data['model']}, current={self._provider.model_name}")
+        if data.get("device") != getattr(self._provider, "device", None):
+            raise ValueError(
+                f"Device mismatch: cache={data.get('device')}, "
+                f"current={getattr(self._provider, 'device', None)}"
+            )
         if data["dim"] != self._provider.dimension():
             raise ValueError(f"Dimension mismatch: cache={data['dim']}, current={self._provider.dimension()}")
         if len(data["iri_hashes"]) != len(self._iri_hashes):

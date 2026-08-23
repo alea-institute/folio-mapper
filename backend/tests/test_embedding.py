@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import os
 import pickle
+import sys
 import tempfile
 from pathlib import Path
 from unittest.mock import MagicMock, patch
@@ -469,15 +470,18 @@ class TestEmbeddingStatus:
         config = EmbeddingConfig(
             provider=EmbeddingProviderType.LOCAL,
             model="all-MiniLM-L6-v2",
+            device="cpu",
         )
         assert config.provider == EmbeddingProviderType.LOCAL
         assert config.model == "all-MiniLM-L6-v2"
+        assert config.device == "cpu"
         assert config.disabled is False
 
     def test_config_defaults(self):
         config = EmbeddingConfig()
         assert config.provider == EmbeddingProviderType.LOCAL
         assert config.model is None
+        assert config.device is None
         assert config.disabled is False
 
 
@@ -520,12 +524,14 @@ class TestEmbeddingService:
         with patch.dict(os.environ, {
             "EMBEDDING_PROVIDER": "openai",
             "EMBEDDING_MODEL": "text-embedding-3-large",
+            "EMBEDDING_DEVICE": "cpu",
             "EMBEDDING_API_KEY": "sk-test",
             "EMBEDDING_DISABLED": "false",
         }):
             config = _config_from_env()
             assert config.provider == EmbeddingProviderType.OPENAI
             assert config.model == "text-embedding-3-large"
+            assert config.device == "cpu"
             assert config.api_key == "sk-test"
             assert config.disabled is False
 
@@ -543,6 +549,24 @@ class TestEmbeddingService:
             config = _config_from_env()
             assert config.provider == EmbeddingProviderType.LOCAL
             assert config.model is None
+            assert config.device is None
+
+    def test_local_provider_forces_and_verifies_requested_device(self):
+        from app.services.embedding.local_provider import LocalEmbeddingProvider
+
+        model = MagicMock()
+        model.device = "cpu"
+        model.get_sentence_embedding_dimension.return_value = 384
+        sentence_transformers = MagicMock()
+        sentence_transformers.SentenceTransformer.return_value = model
+
+        with patch.dict(sys.modules, {"sentence_transformers": sentence_transformers}):
+            provider = LocalEmbeddingProvider("test-model", device="cpu")
+
+        sentence_transformers.SentenceTransformer.assert_called_once_with(
+            "test-model", device="cpu"
+        )
+        assert provider.device == "cpu"
 
 
 # --- Pipeline Integration Tests ---

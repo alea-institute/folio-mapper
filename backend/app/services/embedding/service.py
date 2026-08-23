@@ -30,6 +30,7 @@ def _config_from_env() -> EmbeddingConfig:
     return EmbeddingConfig(
         provider=provider,
         model=os.environ.get("EMBEDDING_MODEL"),
+        device=os.environ.get("EMBEDDING_DEVICE"),
         base_url=os.environ.get("EMBEDDING_BASE_URL"),
         api_key=os.environ.get("EMBEDDING_API_KEY"),
         disabled=os.environ.get("EMBEDDING_DISABLED", "").lower() == "true",
@@ -40,7 +41,7 @@ def _create_provider(config: EmbeddingConfig):
     """Create an embedding provider based on config."""
     if config.provider == EmbeddingProviderType.LOCAL:
         from app.services.embedding.local_provider import LocalEmbeddingProvider
-        return LocalEmbeddingProvider(model=config.model)
+        return LocalEmbeddingProvider(model=config.model, device=config.device)
     elif config.provider == EmbeddingProviderType.OLLAMA:
         from app.services.embedding.ollama_provider import OllamaEmbeddingProvider
         return OllamaEmbeddingProvider(model=config.model, base_url=config.base_url)
