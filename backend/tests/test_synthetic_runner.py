@@ -11,6 +11,10 @@ from app.models.pipeline_models import RankedCandidate, ScopedCandidate
 from scripts import synthetic_runner
 
 
+def _iri(value: str) -> str:
+    return f"https://folio.openlegalstandard.org/{value}"
+
+
 def _candidate(iri: str, score: float) -> ScopedCandidate:
     return ScopedCandidate(
         iri_hash=iri,
@@ -25,6 +29,14 @@ def test_folio_search_dependency_is_available_to_the_synthetic_runner():
     from alea_llm_client import get_llm_kwargs
 
     assert callable(get_llm_kwargs)
+
+
+def test_comparison_iris_are_canonical_and_idempotent():
+    full = "https://folio.openlegalstandard.org/R123"
+    assert synthetic_runner._canonical_iri("R123") == full
+    assert synthetic_runner._canonical_iri(full) == full
+    with pytest.raises(ValueError, match="outside the FOLIO namespace"):
+        synthetic_runner._canonical_iri("https://example.com/R123")
 
 
 def test_contract_uses_precomputed_segments_and_real_stage_seams(tmp_path: Path):
@@ -65,11 +77,11 @@ def test_contract_uses_precomputed_segments_and_real_stage_seams(tmp_path: Path)
     assert lines[0]["config"]["embedding_rerank"] == "available"
     assert lines[1] == {
         "item_id": "i-1",
-        "iris": ["a", "z"],
+        "iris": [_iri("a"), _iri("z")],
         "stages": {
-            "stage1_filter": ["z", "a"],
-            "embedding_rerank": ["z", "a"],
-            "committed": ["z", "a"],
+            "stage1_filter": [_iri("z"), _iri("a")],
+            "embedding_rerank": [_iri("z"), _iri("a")],
+            "committed": [_iri("z"), _iri("a")],
         },
     }
 
@@ -231,7 +243,7 @@ def test_llm_on_runs_full_pipeline_and_emits_llm_stages(
     assert "secret-not-for-output" not in output.read_text()
     assert lines[1] == {
         "item_id": "i",
-        "iris": ["service-iri"],
+        "iris": [_iri("service-iri")],
         "stages": {
             "stage0_prescan": ["whole text"],
             "stage1_filter": 4,
@@ -243,6 +255,6 @@ def test_llm_on_runs_full_pipeline_and_emits_llm_stages(
                 "penalized": 0,
                 "rejected": 2,
             },
-            "committed": ["service-iri"],
+            "committed": [_iri("service-iri")],
         },
     }
