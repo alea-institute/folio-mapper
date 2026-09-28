@@ -126,10 +126,13 @@ def _run_item(item: dict[str, Any], folio: object) -> dict[str, Any]:
 
 
 def _llm_config_from_environment() -> LLMConfig:
-    """Resolve the first env-keyed provider using the server's registry defaults."""
+    """Resolve the first env-keyed provider with an optional runner model override."""
     for provider, env_var in PROVIDER_ENV_VAR.items():
         if os.environ.get(env_var):
-            return LLMConfig(provider=provider, model=DEFAULT_MODELS[provider])
+            return LLMConfig(
+                provider=provider,
+                model=os.environ.get("FOLIO_MAPPER_LLM_MODEL", DEFAULT_MODELS[provider]),
+            )
     expected = ", ".join(PROVIDER_ENV_VAR.values())
     raise ValueError(f"--llm-on requires a provider API key in one of: {expected}")
 
