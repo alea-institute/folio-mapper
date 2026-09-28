@@ -12,6 +12,52 @@ from app.models.pipeline_models import RankedCandidate, ScopedCandidate
 from scripts import synthetic_runner
 
 
+@pytest.fixture(autouse=True)
+def isolated_llm_environment(monkeypatch: pytest.MonkeyPatch):
+    for name in (*synthetic_runner.LLM_PROVIDER_ENV_VARS, "FOLIO_MAPPER_LLM_MODEL"):
+        monkeypatch.delenv(name, raising=False)
+
+
+@pytest.mark.parametrize("provider", synthetic_runner.PROVIDER_ENV_VAR)
+def test_llm_config_without_model_override_preserves_defaults(provider, monkeypatch):
+    monkeypatch.setenv(synthetic_runner.PROVIDER_ENV_VAR[provider], "fake-test-key")
+
+    assert synthetic_runner._llm_config_from_environment() == synthetic_runner.LLMConfig(
+        provider=provider, model=synthetic_runner.DEFAULT_MODELS[provider],
+    )
+
+
+@pytest.mark.parametrize("provider", synthetic_runner.PROVIDER_ENV_VAR)
+@pytest.mark.parametrize("model_override", ["", " \t\n"])
+def test_llm_config_blank_model_override_preserves_defaults(provider, model_override, monkeypatch):
+    monkeypatch.setenv(synthetic_runner.PROVIDER_ENV_VAR[provider], "fake-test-key")
+    monkeypatch.setenv("FOLIO_MAPPER_LLM_MODEL", model_override)
+
+    assert synthetic_runner._llm_config_from_environment() == synthetic_runner.LLMConfig(
+        provider=provider, model=synthetic_runner.DEFAULT_MODELS[provider],
+    )
+
+
+def test_llm_config_uses_model_override(monkeypatch):
+    monkeypatch.setenv("OPENAI_API_KEY", "fake-test-key")
+    monkeypatch.setenv("FOLIO_MAPPER_LLM_MODEL", "gpt-6-luna")
+
+    config = synthetic_runner._llm_config_from_environment()
+
+    assert config.provider.value == "openai"
+    assert config.model == "gpt-6-luna"
+
+
+def test_model_override_without_provider_key_preserves_error(monkeypatch):
+    monkeypatch.setenv("FOLIO_MAPPER_LLM_MODEL", "gpt-6-luna")
+
+    with pytest.raises(ValueError) as error:
+        synthetic_runner._llm_config_from_environment()
+
+    expected = ", ".join(synthetic_runner.PROVIDER_ENV_VAR.values())
+    assert str(error.value) == f"--llm-on requires a provider API key in one of: {expected}"
+
+
 def _iri(value: str) -> str:
     return f"https://folio.openlegalstandard.org/{value}"
 
@@ -197,8 +243,9 @@ def test_llm_on_requires_provider_environment(
     assert "--llm-on requires a provider API key" in capsys.readouterr().err
 
 
+@pytest.mark.parametrize("model_override", [None, "", " \t\n", "gpt-6-luna"])
 def test_llm_on_runs_full_pipeline_and_emits_llm_stages(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, model_override,
 ):
     source = tmp_path / "items.jsonl"
     output = tmp_path / "out.jsonl"
@@ -206,6 +253,9 @@ def test_llm_on_runs_full_pipeline_and_emits_llm_stages(
     for name in synthetic_runner.LLM_PROVIDER_ENV_VARS:
         monkeypatch.delenv(name, raising=False)
     monkeypatch.setenv("OPENAI_API_KEY", "secret-not-for-output")
+    if model_override is not None:
+        monkeypatch.setenv("FOLIO_MAPPER_LLM_MODEL", model_override)
+    expected_model = model_override if model_override and model_override.strip() else "gpt-5.5"
 
     response = SimpleNamespace(
         mapping=SimpleNamespace(items=[SimpleNamespace(branch_groups=[
@@ -234,13 +284,13 @@ def test_llm_on_runs_full_pipeline_and_emits_llm_stages(
     config = pipeline.call_args.args[1]
     assert item.text == "whole text"
     assert config.provider.value == "openai"
-    assert config.model == "gpt-5.5"
+    assert config.model == expected_model
     assert pipeline.call_args.kwargs == {}
 
     lines = [json.loads(line) for line in output.read_text().splitlines()]
     assert lines[0]["lane"] == "llm-on"
     assert lines[0]["config"]["llm_provider"] == "openai"
-    assert lines[0]["config"]["llm_model"] == "gpt-5.5"
+    assert lines[0]["config"]["llm_model"] == expected_model
     assert lines[0]["config"]["segmentation"] == "pipeline"
     assert "secret-not-for-output" not in output.read_text()
     assert lines[1] == {
