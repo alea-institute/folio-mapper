@@ -27,6 +27,17 @@ def test_llm_config_without_model_override_preserves_defaults(provider, monkeypa
     )
 
 
+@pytest.mark.parametrize("provider", synthetic_runner.PROVIDER_ENV_VAR)
+@pytest.mark.parametrize("model_override", ["", " \t\n"])
+def test_llm_config_blank_model_override_preserves_defaults(provider, model_override, monkeypatch):
+    monkeypatch.setenv(synthetic_runner.PROVIDER_ENV_VAR[provider], "fake-test-key")
+    monkeypatch.setenv("FOLIO_MAPPER_LLM_MODEL", model_override)
+
+    assert synthetic_runner._llm_config_from_environment() == synthetic_runner.LLMConfig(
+        provider=provider, model=synthetic_runner.DEFAULT_MODELS[provider],
+    )
+
+
 def test_llm_config_uses_model_override(monkeypatch):
     monkeypatch.setenv("OPENAI_API_KEY", "fake-test-key")
     monkeypatch.setenv("FOLIO_MAPPER_LLM_MODEL", "gpt-6-luna")
@@ -232,7 +243,7 @@ def test_llm_on_requires_provider_environment(
     assert "--llm-on requires a provider API key" in capsys.readouterr().err
 
 
-@pytest.mark.parametrize("model_override", [None, "gpt-6-luna"])
+@pytest.mark.parametrize("model_override", [None, "", " \t\n", "gpt-6-luna"])
 def test_llm_on_runs_full_pipeline_and_emits_llm_stages(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch, model_override,
 ):
@@ -244,7 +255,7 @@ def test_llm_on_runs_full_pipeline_and_emits_llm_stages(
     monkeypatch.setenv("OPENAI_API_KEY", "secret-not-for-output")
     if model_override is not None:
         monkeypatch.setenv("FOLIO_MAPPER_LLM_MODEL", model_override)
-    expected_model = model_override or "gpt-5.5"
+    expected_model = model_override if model_override and model_override.strip() else "gpt-5.5"
 
     response = SimpleNamespace(
         mapping=SimpleNamespace(items=[SimpleNamespace(branch_groups=[
