@@ -11,6 +11,7 @@
 const DB_NAME = 'folio-mapper-keyvault';
 const STORE_NAME = 'device-key';
 const KEY_ID = 'aesKey';
+let deviceKeyGeneration = 0;
 
 function openDB(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
@@ -37,11 +38,27 @@ function withStore<T>(
   return openDB().then(
     (db) =>
       new Promise<T>((resolve, reject) => {
-        const tx = db.transaction(STORE_NAME, mode);
-        const req = fn(tx.objectStore(STORE_NAME));
-        req.onsuccess = () => resolve(req.result);
-        req.onerror = () => reject(req.error);
-        tx.oncomplete = () => db.close();
+        let tx: IDBTransaction;
+        try {
+          tx = db.transaction(STORE_NAME, mode);
+        } catch (error) {
+          db.close();
+          reject(error);
+          return;
+        }
+        let result: T;
+        tx.oncomplete = () => { db.close(); resolve(result); };
+        tx.onabort = () => {
+          db.close();
+          reject(tx.error ?? new Error('Device key transaction aborted'));
+        };
+        try {
+          const req = fn(tx.objectStore(STORE_NAME));
+          req.onsuccess = () => { result = req.result; };
+        } catch (error) {
+          tx.abort();
+          reject(error);
+        }
       }),
   );
 }
@@ -52,6 +69,7 @@ function withStore<T>(
  * session-only manual entry).
  */
 export async function getOrCreateDeviceKey(): Promise<CryptoKey> {
+  const generation = deviceKeyGeneration;
   const existing = await withStore<CryptoKey | undefined>('readonly', (s) => s.get(KEY_ID));
   if (existing) return existing;
 
@@ -60,7 +78,10 @@ export async function getOrCreateDeviceKey(): Promise<CryptoKey> {
     false, // non-extractable — raw bytes never leave IndexedDB
     ['encrypt', 'decrypt'],
   );
-  await withStore('readwrite', (s) => s.put(key, KEY_ID));
+  await withStore('readwrite', (s) => {
+    if (generation !== deviceKeyGeneration) throw new Error('Device key creation was cleared');
+    return s.put(key, KEY_ID);
+  });
   return key;
 }
 
@@ -76,6 +97,7 @@ export async function hasDeviceKey(): Promise<boolean> {
 
 /** Deletes the device key, rendering any stored ciphertext permanently unreadable. */
 export async function clearDeviceKey(): Promise<void> {
+  deviceKeyGeneration++;
   try {
     await withStore('readwrite', (s) => s.delete(KEY_ID));
   } catch {
