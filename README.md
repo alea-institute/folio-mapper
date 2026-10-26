@@ -555,7 +555,7 @@ pnpm --filter @folio-mapper/ui test    # UI components only
 
 ### Passwordless key acceptance (Playwright)
 
-Use Node 20+ and pnpm 10 with the committed lockfile:
+Use Node 24 and pnpm 10 (the tested toolchains) with the committed lockfile:
 
 ```bash
 pnpm install --frozen-lockfile
