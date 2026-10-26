@@ -82,9 +82,10 @@ FOLIO Mapper combines fuzzy text matching, semantic embedding search, and an opt
 
 ### Prerequisites
 
-- **Node.js** 18+
-- **Python** 3.11+
-- **pnpm** (`npm install -g pnpm`)
+- **Node.js** 22 (CI version)
+- **Python** 3.11+ (3.12 in CI)
+- **pnpm** 10.34.9 (`npm install -g pnpm@10.34.9`)
+- **uv** 0.9.22 (CI version; [installation instructions](https://docs.astral.sh/uv/getting-started/installation/))
 
 ### Install
 
@@ -94,17 +95,15 @@ git clone https://github.com/alea-institute/folio-mapper.git
 cd folio-mapper
 
 # Install frontend dependencies
-pnpm install
+pnpm install --frozen-lockfile
 
 # Set up the Python backend
 cd backend
-python -m venv .venv
-source .venv/bin/activate      # macOS/Linux
-# .venv\Scripts\activate       # Windows
-pip install -e ".[dev]"
+uv sync --locked --extra dev --python 3.12
 
 # Optional: Enable embedding semantic search
-pip install -e ".[embedding]"
+uv sync --locked --extra dev --extra embedding
+cd ..
 ```
 
 ### Run
@@ -124,7 +123,7 @@ The frontend proxies `/api/*` requests to the backend automatically via Vite.
 
 ```bash
 pnpm test         # Frontend tests (vitest — core + UI + web)
-pnpm test:api     # Backend tests (pytest — 380+ test cases)
+pnpm test:api     # Backend tests (pytest)
 ```
 
 ---
@@ -497,6 +496,25 @@ FOLIO Mapper implements defense-in-depth security:
 
 ## Testing
 
+### Continuous integration
+
+The `Tests` workflow runs on pull requests targeting `main`, pushes to `main`, and manual dispatch. It reports independent `Vitest` and `API (pytest)` checks with a 20-minute timeout each. A failed install or test fails its job; the other job can still finish. Desktop packaging remains a separate workflow.
+
+CI uses Node 22, pnpm 10.34.9, Python 3.12, and uv 0.9.22. Both jobs install from the committed lockfiles with setup-action caching disabled. From the repository root, reproduce the checks with:
+
+```bash
+pnpm install --frozen-lockfile
+pnpm test
+
+cd backend
+uv sync --locked --extra dev --python 3.12
+.venv/bin/python -m pytest tests/ -v -ra
+```
+
+The workflow's Python setup step selects 3.12, so its sync command does not need `--python`. On Windows, use `.venv\Scripts\python.exe` in place of `.venv/bin/python`.
+
+The `dev` extra includes NumPy for test collection. FAISS and spaCy/model integration tests retain their existing conditional skips; `-ra` lists the reasons. The base suite uses mocked providers and needs no LLM credentials or running API server. Use a fresh environment for CI reproduction; editable sibling-library installs can conceal differences from the lockfile.
+
 ### Backend (pytest)
 
 500+ test cases across 24 test files covering:
@@ -513,10 +531,10 @@ FOLIO Mapper implements defense-in-depth security:
 
 ```bash
 cd backend
-source .venv/bin/activate
-pytest                              # All tests
-pytest tests/test_folio_service.py  # Specific file
-pytest -x                           # Stop on first failure
+uv sync --locked --extra dev --python 3.12
+.venv/bin/python -m pytest tests/ -v -ra           # All tests, including skip reasons
+.venv/bin/python -m pytest tests/test_folio_service.py  # Specific file
+.venv/bin/python -m pytest tests/ -x              # Stop on first failure
 ```
 
 Re-verifying the `folio-resolve` migration parity (needs a cached FOLIO ontology, ~30s, $0 LLM):
@@ -531,8 +549,8 @@ cd backend
 
 ```bash
 pnpm test                    # All frontend tests
-pnpm --filter core test      # Core package only
-pnpm --filter ui test        # UI components only
+pnpm --filter @folio-mapper/core test  # Core package only
+pnpm --filter @folio-mapper/ui test    # UI components only
 ```
 
 ### Test Environment Variables
