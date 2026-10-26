@@ -137,3 +137,19 @@ test('Clear all cancels a pending native encryption completion', async ({ sessio
   await settings(session.page);
   await expect(keyInput(session.page)).toHaveValue('');
 });
+
+test('save and Forget remain usable on a narrow viewport', async ({ session }, info) => {
+  await session.visit();
+  await settings(session.page);
+  await save(session);
+  await session.backup();
+  await session.page.setViewportSize({ width: 390, height: 844 });
+  await settings(session.page);
+  await expect(keyInput(session.page)).toHaveValue(KEYS.first);
+  await validate(session, 'first');
+  await saved(session.page);
+  await capture(session.page, info, 'passwordless-key-mobile');
+  await card(session.page).getByRole('button', { name: 'Forget', exact: true }).click();
+  await expect(card(session.page).getByText('Session only', { exact: true })).toBeVisible();
+  expect((await storage(session.page)).providers).toEqual([]);
+});

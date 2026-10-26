@@ -91,8 +91,10 @@ for (const fault of ['device database', 'vault payload'] as const) {
 test('legacy canary cleanup runs once and preserves subsequently saved device-key credentials', async ({ session }) => {
   await session.visit();
   await session.backup();
-  await session.page.evaluate(() => {
-    // Seed once, while the previous application instance is already initialized.
+  await session.page.addInitScript(() => {
+    // Seed before application startup, only on the first navigation.
+    if (localStorage.getItem('fm2-legacy-fixture-created')) return;
+    localStorage.setItem('fm2-legacy-fixture-created', 'true');
     localStorage.setItem('folio-mapper-vault-canary', 'synthetic-legacy-canary');
     localStorage.setItem('folio-mapper-vault-meta', JSON.stringify({ providers: ['anthropic'] }));
     localStorage.setItem('folio-mapper-vault-anthropic', 'synthetic-legacy-ciphertext');

@@ -553,6 +553,32 @@ pnpm --filter @folio-mapper/core test  # Core package only
 pnpm --filter @folio-mapper/ui test    # UI components only
 ```
 
+### Passwordless key acceptance (Playwright)
+
+Use Node 20+ and pnpm 10 with the committed lockfile:
+
+```bash
+pnpm install --frozen-lockfile
+pnpm exec playwright install chromium
+pnpm typecheck:browser
+pnpm test:browser
+```
+
+The browser command builds the web app and serves it at `http://127.0.0.1:58174`
+with a strict port and no existing-server reuse. No backend or provider account
+is needed: tests use synthetic keys, intercept recognized API requests, and fail
+on unexpected API or external traffic. Every case gets a new persistent Chromium
+profile; restart checks close Chromium and reopen that same profile without
+importing storage state. Desktop keychain coverage simulates the preload bridge,
+not an Electron installation.
+
+Profiles and verified backups stay in ignored `.playwright-profiles/`; they are
+never personal browser profiles and are retained rather than automatically
+deleted. Reports and attachments stay in ignored `test-results/`. To refresh the
+reviewed, masked screenshots under `docs/plans/evidence/fm-2/`, run
+`FM2_CAPTURE_EVIDENCE=1 pnpm test:browser`. See the
+[acceptance receipt](docs/plans/evidence/fm-2/acceptance.md) for results and scope.
+
 ### Test Environment Variables
 
 | Variable | Purpose |
