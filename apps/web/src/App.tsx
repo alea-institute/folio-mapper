@@ -244,24 +244,32 @@ export function App() {
   }, [llmState]);
 
   // Persist a key to the device-key vault (web). Silent — no passphrase, encrypted at rest.
+  const vaultSaveGeneration = useRef<Partial<Record<LLMProviderType, number>>>({});
   const persistKeyToVault = useCallback(async (provider: LLMProviderType) => {
-    const key = llmState.configs[provider].apiKey;
+    const key = useLLMStore.getState().configs[provider].apiKey;
+    const generation = vaultSaveGeneration.current[provider];
     if (!key) return;
     try {
       const payload = await encryptKeyDevice(key);
+      const state = useLLMStore.getState();
+      const current = state.configs[provider];
+      if (generation !== vaultSaveGeneration.current[provider] ||
+          current.apiKey !== key || !current.rememberKey || current.connectionStatus !== 'valid') return;
       storeEncryptedKey(provider, payload);
-      llmState.updateConfig(provider, { rememberKey: true });
-      llmState.setKeySource(provider, 'saved');
+      state.setKeySource(provider, 'saved');
     } catch (err) {
+      if (generation !== vaultSaveGeneration.current[provider]) return;
       // IndexedDB/crypto unavailable — fall back to session-only manual entry.
       console.error('Failed to save key to vault:', err);
     }
-  }, [llmState]);
+  }, []);
 
   const handleRememberKey = useCallback((provider: LLMProviderType, remember: boolean) => {
     if (remember) {
+      llmState.updateConfig(provider, { rememberKey: true });
       void persistKeyToVault(provider);
     } else {
+      vaultSaveGeneration.current[provider] = (vaultSaveGeneration.current[provider] ?? 0) + 1;
       llmState.updateConfig(provider, { rememberKey: false });
       removeEncryptedKey(provider);
       if (llmState.configs[provider].keySource === 'saved') {
@@ -277,13 +285,14 @@ export function App() {
     if (window.desktop) return;
     for (const p of Object.keys(llmState.configs) as LLMProviderType[]) {
       const cfg = llmState.configs[p];
-      if (cfg.connectionStatus === 'valid' && cfg.apiKey && cfg.keySource === 'manual') {
+      if (cfg.rememberKey && cfg.connectionStatus === 'valid' && cfg.apiKey && cfg.keySource === 'manual') {
         void persistKeyToVault(p);
       }
     }
   }, [llmState.configs, persistKeyToVault]);
 
   const handleClearSavedKey = useCallback((provider: LLMProviderType) => {
+    vaultSaveGeneration.current[provider] = (vaultSaveGeneration.current[provider] ?? 0) + 1;
     if (isDesktop) {
       window.desktop?.keychain?.deleteKey(provider).catch(() => {});
     } else {
@@ -305,6 +314,7 @@ export function App() {
     // Reset all key sources and rememberKey flags
     const providers = Object.keys(llmState.configs) as LLMProviderType[];
     for (const p of providers) {
+      vaultSaveGeneration.current[p] = (vaultSaveGeneration.current[p] ?? 0) + 1;
       const cfg = llmState.configs[p];
       if (cfg.keySource === 'keychain' || cfg.keySource === 'saved') {
         llmState.setKeySource(p, cfg.apiKey ? 'manual' : 'none');
