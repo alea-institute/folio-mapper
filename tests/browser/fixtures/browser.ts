@@ -35,11 +35,10 @@ export class BrowserSession {
     this.open = true;
     await this.api.install(this.context);
     await this.context.addInitScript(({ keys, desktop }) => {
-      // Observe storage writes without retaining plaintext or dumping storage.
       const original = Storage.prototype.setItem;
       Object.assign(window, { __plaintextWrite: false });
       Storage.prototype.setItem = function (name, value) {
-        if (keys.some((key) => String(value).includes(key))) Object.assign(window, { __plaintextWrite: true });
+        if (Object.values(keys).some((key) => String(value).includes(key))) Object.assign(window, { __plaintextWrite: true });
         return original.call(this, name, value);
       };
       if (desktop) Object.assign(window, { desktop: {
@@ -47,10 +46,10 @@ export class BrowserSession {
         keychain: {
           isAvailable: async () => true,
           listProviders: async () => ['anthropic'],
-          getKey: async () => keys[4],
+          getKey: async () => keys.keychain,
         },
       } });
-    }, { keys: Object.values(KEYS), desktop });
+    }, { keys: KEYS, desktop });
     this.context.on('page', (page) => this.observe(page));
     this.page = this.context.pages()[0] ?? await this.context.newPage();
     this.observe(this.page);
