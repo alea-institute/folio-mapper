@@ -253,13 +253,12 @@ export function App() {
       const payload = await encryptKeyDevice(key);
       const state = useLLMStore.getState();
       const current = state.configs[provider];
-      // Forget also cancels encryption already in flight. Read current state:
-      // the closure may predate a key edit, failed test, or persistence opt-out.
       if (generation !== vaultSaveGeneration.current[provider] ||
           current.apiKey !== key || !current.rememberKey || current.connectionStatus !== 'valid') return;
       storeEncryptedKey(provider, payload);
       state.setKeySource(provider, 'saved');
     } catch (err) {
+      if (generation !== vaultSaveGeneration.current[provider]) return;
       // IndexedDB/crypto unavailable — fall back to session-only manual entry.
       console.error('Failed to save key to vault:', err);
     }

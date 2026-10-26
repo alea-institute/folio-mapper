@@ -153,3 +153,71 @@ test('save and Forget remain usable on a narrow viewport', async ({ session }, i
   await expect(card(session.page).getByText('Session only', { exact: true })).toBeVisible();
   expect((await storage(session.page)).providers).toEqual([]);
 });
+
+test('Clear all cancels first-use device-key creation and permits a new save', async ({ session }) => {
+  await session.visit();
+  await session.backup();
+  await settings(session.page);
+  await session.page.evaluate(() => {
+    const generateKey = crypto.subtle.generateKey.bind(crypto.subtle);
+    Object.assign(window, { __generationPending: false, __generationFinished: false });
+    crypto.subtle.generateKey = (async (...args: Parameters<typeof generateKey>) => {
+      const key = await generateKey(...args);
+      (window as any).__generationPending = true;
+      await new Promise<void>((resolve) => Object.assign(window, { __releaseGeneration: resolve }));
+      crypto.subtle.generateKey = generateKey;
+      (window as any).__generationFinished = true;
+      return key;
+    }) as typeof generateKey;
+  });
+  await keyInput(session.page).fill(KEYS.first);
+  await validate(session, 'first');
+  await expect.poll(() => session.page.evaluate(() => (window as any).__generationPending)).toBe(true);
+  await session.page.getByRole('button', { name: 'Clear all saved API keys', exact: true }).click();
+  await expect.poll(async () => (await storage(session.page)).device).toBeNull();
+  await session.page.evaluate(() => (window as any).__releaseGeneration());
+  await expect.poll(() => session.page.evaluate(() => (window as any).__generationFinished)).toBe(true);
+  expect((await storage(session.page)).device).toBeNull();
+  expect((await storage(session.page)).providers).toEqual([]);
+  await expect(card(session.page).getByText('Key saved', { exact: true })).toHaveCount(0);
+  await session.restart();
+  await settings(session.page);
+  expect((await storage(session.page)).device).toBeNull();
+  await expect(keyInput(session.page)).toHaveValue('');
+  await save(session, 'replacement');
+  await session.restart();
+  await settings(session.page);
+  await expect(keyInput(session.page)).toHaveValue(KEYS.replacement);
+  await validate(session, 'replacement');
+});
+
+test('an older encryption completion cannot overwrite a validated replacement', async ({ session }) => {
+  await session.visit();
+  await session.backup();
+  await settings(session.page);
+  await session.page.evaluate(() => {
+    const encrypt = crypto.subtle.encrypt.bind(crypto.subtle);
+    let held = false;
+    Object.assign(window, { __oldEncryptionPending: false, __oldEncryptionFinished: false });
+    crypto.subtle.encrypt = async (...args) => {
+      const cipher = await encrypt(...args);
+      if (!held) {
+        held = true;
+        (window as any).__oldEncryptionPending = true;
+        await new Promise<void>((resolve) => Object.assign(window, { __releaseOldEncryption: resolve }));
+        (window as any).__oldEncryptionFinished = true;
+      }
+      return cipher;
+    };
+  });
+  await keyInput(session.page).fill(KEYS.first);
+  await validate(session, 'first');
+  await expect.poll(() => session.page.evaluate(() => (window as any).__oldEncryptionPending)).toBe(true);
+  await save(session, 'replacement');
+  await session.page.evaluate(() => (window as any).__releaseOldEncryption());
+  await expect.poll(() => session.page.evaluate(() => (window as any).__oldEncryptionFinished)).toBe(true);
+  await session.restart();
+  await settings(session.page);
+  await expect(keyInput(session.page)).toHaveValue(KEYS.replacement);
+  await validate(session, 'replacement');
+});
