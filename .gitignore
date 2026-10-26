@@ -25,6 +25,9 @@ Thumbs.db
 
 # Test
 coverage/
+.playwright-profiles/
+playwright-report/
+test-results/
 .pytest_cache/
 
 # Security
