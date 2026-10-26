@@ -67,6 +67,12 @@ Release tags were resolved through the public GitHub API, and each pinned `actio
 
 pnpm 10.34.9 and uv 0.9.22 are explicit executable pins. actionlint 1.7.12 was downloaded from its official release and matched that release's checksum.
 
+## Local review
+
+The LFG implementation stage completed U1-U3. Simplification found no substantive application code to change. Review of `6ecf5198..259f099c` completed through correctness, security, testing, and adversarial lenses with zero findings; the requirements check found all six requirements and three units met for local handoff. No review fixes were needed.
+
+The checkout disables automatic cross-model review. The local adversarial reviewer ran, but this does not replace the campaign gate's Astra/Fable reviews. Browser scope inspection found no affected routes; no browser test or screenshot was required. The setup findings and their evidence are recorded above, so no separate learning document was added.
+
 ## Controller acceptance still pending
 
 This clone has no remote; no push, PR, hosted run, merge, or deployment is claimed. The controller owns publication, first-PR and post-merge-main evidence, and the campaign merge gate. Verify both named checks attach to the intended revision. Manual dispatch normally becomes available once the workflow exists on the default branch.
