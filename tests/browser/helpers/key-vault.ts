@@ -77,8 +77,9 @@ export async function storage(page: Page) {
 
 export async function capture(page: Page, info: TestInfo, name: string) {
   const output = info.outputPath(`${name}.png`);
-  await page.screenshot({ path: output, fullPage: true,
-    mask: [page.locator('input[type="password"]').locator('..')] });
+  const keyRows = page.locator('input[type="password"]').locator('..');
+  await page.screenshot({ path: output,
+    mask: [keyRows, keyRows.locator('span')], maskColor: '#d1d5db' });
   await info.attach(name, { path: output, contentType: 'image/png' });
   if (process.env.FM2_CAPTURE_EVIDENCE === '1') {
     await mkdir('docs/plans/evidence/fm-2', { recursive: true });
