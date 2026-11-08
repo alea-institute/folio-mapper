@@ -145,7 +145,7 @@ export function ProviderCard({
                           apiKey: e.target.value,
                           connectionStatus: 'untested',
                           keySource: e.target.value ? 'manual' : 'none',
-                          rememberKey: true,
+                          ...(!isDesktop && { rememberKey: true }),
                         })
                       }
                       placeholder={`Enter ${meta.displayName} API key`}
