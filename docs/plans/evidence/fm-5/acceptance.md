@@ -80,7 +80,11 @@ the fm-2 evidence exporter.
 The independent simplification review found no issues across reuse, quality,
 efficiency, test value and comments; no changes were required. The one-line
 runtime correction, additive regression coverage and this receipt are the full
-repair scope. Local implementation review is recorded in the final build report.
+repair scope. Local `ce-code-review` completed against `3b8f6f20` with separate
+Astra correctness, testing and security reviewers. All three returned no
+findings, and the plan-completeness check found no unmet local implementation
+requirement. No review fixes or residual implementation findings remain. This
+review does not replace the controller's campaign reviews.
 
 The controller should publish this branch as the replacement that **supersedes
 PR #15**, retaining its fm-2 work and adding the desktop warning repair. This
