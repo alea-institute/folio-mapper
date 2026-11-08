@@ -2,7 +2,10 @@ import { test as base, expect, chromium, type BrowserContext, type Page } from '
 import { randomUUID, createHash } from 'node:crypto';
 import { cp, mkdir, readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { KEYS, OfflineAPI, ORIGIN } from './offline-api';
+import { KEYS, OfflineAPI, ORIGIN, type Credential } from './offline-api';
+
+type KeychainOperation = 'isAvailable' | 'listProviders' | 'getKey' | 'setKey' | 'deleteKey' | 'clearAll';
+type KeychainMutation = { operation: 'setKey' | 'deleteKey' | 'clearAll'; provider?: string; credential?: Credential };
 
 async function fingerprints(directory: string): Promise<string[]> {
   const result: string[] = [];
@@ -18,6 +21,8 @@ export class BrowserSession {
   readonly api = new OfflineAPI();
   readonly errors: string[] = [];
   readonly consoleErrors: string[] = [];
+  readonly keychainCalls: KeychainMutation[] = [];
+  private keychainKeys = new Map<string, string>([['anthropic', KEYS.keychain]]);
   expectedConsoleErrors: RegExp[] = [];
   context!: BrowserContext;
   page!: Page;
@@ -34,6 +39,27 @@ export class BrowserSession {
     });
     this.open = true;
     await this.api.install(this.context);
+    if (desktop) await this.context.exposeFunction('__syntheticKeychain', (operation: KeychainOperation, provider?: string, key?: string) => {
+      switch (operation) {
+        case 'isAvailable': return true;
+        case 'listProviders': return [...this.keychainKeys.keys()];
+        case 'getKey': return this.keychainKeys.get(provider!) ?? null;
+        case 'setKey': {
+          const credential = (Object.keys(KEYS) as Credential[]).find((id) => KEYS[id] === key);
+          if (!provider || !credential) throw new Error('Unexpected synthetic keychain write');
+          this.keychainCalls.push({ operation, provider, credential });
+          this.keychainKeys.set(provider, key!);
+          return;
+        }
+        case 'deleteKey':
+          this.keychainCalls.push({ operation, provider });
+          this.keychainKeys.delete(provider!);
+          return;
+        case 'clearAll':
+          this.keychainCalls.push({ operation });
+          this.keychainKeys.clear();
+      }
+    });
     await this.context.addInitScript(({ keys, desktop }) => {
       const original = Storage.prototype.setItem;
       Object.assign(window, { __plaintextWrite: false });
@@ -41,14 +67,22 @@ export class BrowserSession {
         if (Object.values(keys).some((key) => String(value).includes(key))) Object.assign(window, { __plaintextWrite: true });
         return original.call(this, name, value);
       };
-      if (desktop) Object.assign(window, { desktop: {
-        isDesktop: true,
-        keychain: {
-          isAvailable: async () => true,
-          listProviders: async () => ['anthropic'],
-          getKey: async () => keys.keychain,
-        },
-      } });
+      if (desktop) {
+        const invoke = (window as unknown as {
+          __syntheticKeychain: (operation: KeychainOperation, provider?: string, key?: string) => Promise<unknown>;
+        }).__syntheticKeychain;
+        Object.assign(window, { desktop: {
+          isDesktop: true,
+          keychain: {
+            isAvailable: () => invoke('isAvailable'),
+            listProviders: () => invoke('listProviders'),
+            getKey: (provider: string) => invoke('getKey', provider),
+            setKey: (provider: string, key: string) => invoke('setKey', provider, key),
+            deleteKey: (provider: string) => invoke('deleteKey', provider),
+            clearAll: () => invoke('clearAll'),
+          },
+        } });
+      }
     }, { keys: KEYS, desktop });
     this.context.on('page', (page) => this.observe(page));
     this.page = this.context.pages()[0] ?? await this.context.newPage();

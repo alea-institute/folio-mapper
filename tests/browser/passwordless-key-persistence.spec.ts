@@ -2,6 +2,35 @@ import { test, expect } from './fixtures/browser';
 import { KEYS } from './fixtures/offline-api';
 import { capture, card, keyInput, save, saved, settings, storage, validate } from './helpers/key-vault';
 
+for (const removal of ['Forget', 'Clear all'] as const) {
+  test(`browser replacement after ${removal} saves without a password and survives restart`, async ({ session }, info) => {
+    await session.visit();
+    await settings(session.page);
+    await save(session);
+    await session.backup();
+    await settings(session.page);
+    await expect(keyInput(session.page)).toHaveValue(KEYS.first);
+    if (removal === 'Forget') {
+      await card(session.page).getByRole('button', { name: 'Forget', exact: true }).click();
+    } else {
+      await session.page.getByRole('button', { name: 'Clear all saved API keys', exact: true }).click();
+      await expect.poll(async () => (await storage(session.page)).device).toBeNull();
+    }
+    await validate(session, 'first');
+    expect((await storage(session.page)).providers).toEqual([]);
+    await expect(card(session.page).getByText('Key saved', { exact: true })).toHaveCount(0);
+    await save(session, 'replacement');
+    await session.restart();
+    await settings(session.page);
+    await expect(keyInput(session.page)).toHaveValue(KEYS.replacement);
+    await saved(session.page);
+    await expect(session.page.getByText(/passphrase/i)).toHaveCount(0);
+    await validate(session, 'replacement');
+    expect((await storage(session.page)).plaintext).toBe(false);
+    if (removal === 'Forget') await capture(session.page, info, 'browser-replacement-restored');
+  });
+}
+
 for (const entry of ['Test', 'Save & Close'] as const) {
   test(`${entry} saves native ciphertext and restores across reload and browser restart`, async ({ session }, info) => {
     await session.visit();
