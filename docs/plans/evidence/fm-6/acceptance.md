@@ -57,6 +57,7 @@ leaves no key after restart; the explicit warning action saves and restores it.
 | `pnpm typecheck:browser` | Passed |
 | `pnpm test:browser` | Fresh production build; 33 passed, one worker, zero retries |
 | `pnpm test:api` | 542 passed, 31 established optional skips |
+| `pnpm exec tsc --noEmit -p packages/core/tsconfig.json` | Passed |
 | `git diff --check` | Passed |
 
 The API skips are 21 optional FAISS embedding cases and 10 optional spaCy model
@@ -92,3 +93,44 @@ storage actions. Existing tests, assertions and exemplar content are preserved.
 Coordination covers callers in one module instance. This change makes no new
 cross-tab guarantee. No schema migration, data rewrite, release, outside service,
 credential change or product decision is introduced.
+
+## Local review and delivery
+
+The simplification pass used five independent Astra reviewers. It removed three
+redundant comments; runtime behavior, safety checks and every test stayed intact.
+The focused core suite passed again after that comment-only edit.
+
+Code review run `20261111-012047-9080e751` examined the entire replacement diff
+against the assigned base, including the comment cleanup. Seven Astra lenses
+covered correctness, testing, maintainability, security, reliability, adversarial
+cases and frontend races. Verdict: **Ready to merge**, with zero introduced
+findings and zero actionable fixes. All eight requirements and four implementation
+units were assessed as met. This was static independent review; the runtime
+results above were executed by the build lane. Cross-provider review was disabled
+by checkout configuration; controller-owned Astra/Fable review remains required.
+
+The browser close-out covers the root input page, its Online chooser and Settings
+dialog at the production preview: all pass. The inherited mobile case passes;
+the offline fixture reported no unexpected application traffic, unhandled errors
+or unexpected console errors. The final review changed no runtime input, so the
+passing full-suite and screenshot evidence remains applicable.
+
+Two separate follow-up notes remain outside this item:
+
+- **Pre-existing validation race (P2):**
+  `packages/ui/src/components/input/ModelChooser.tsx:87` applies an awaited
+  connection result without checking that the tested configuration is current.
+  Editing key A to B while A's test is pending can mark B valid and save it.
+  LLMSettings has the same pattern. Review traced the behavior to `7de8efddb`,
+  before the assigned base. A separate repair should track validation generations
+  and input snapshots, discard stale results, and test deferred validation during
+  edits. It is not introduced by FM-6 and was excluded from its apply queue.
+- **Optional additional regression:** hold an already-produced old ciphertext,
+  Clear all, explicitly save the unchanged plaintext under the new key, release
+  the old ciphertext, then restart and decrypt. Existing generation guards cover
+  this path, and the required gate regressions pass; this would isolate one more
+  interleaving without changing behavior.
+
+All work is committed locally on `drawdown/fm-6`. The controller publishes the
+replacement PR, which supersedes **#17 and #15**, reconciles live main and the
+canonical campaign excerpts, and runs the campaign review/merge gate.

@@ -76,7 +76,6 @@ export async function getOrCreateDeviceKey(): Promise<CryptoKey> {
   const assertCurrent = () => {
     if (generation !== deviceKeyGeneration) throw new Error('Device key creation was cleared');
   };
-  // Share only in-flight work. A later call must read persisted state again.
   const pending = (async () => {
     await clearing;
     assertCurrent();
@@ -96,7 +95,6 @@ export async function getOrCreateDeviceKey(): Promise<CryptoKey> {
     assertCurrent();
     return key;
   })().finally(() => {
-    // An obsolete completion must not release a newer generation's flight.
     if (creation === pending) creation = null;
   });
   creation = pending;
@@ -117,7 +115,6 @@ export async function hasDeviceKey(): Promise<boolean> {
 export async function clearDeviceKey(): Promise<void> {
   deviceKeyGeneration++;
   creation = null;
-  // New requests wait for every queued deletion before reading or creating.
   clearing = clearing.then(async () => {
     await withStore('readwrite', (s) => s.delete(KEY_ID));
   }).catch(() => {
