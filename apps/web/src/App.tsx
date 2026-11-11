@@ -1035,6 +1035,7 @@ export function App() {
           error={error}
           modelChooser={
             <ModelChooser
+              isDesktop={isDesktop}
               activeProvider={llmState.activeProvider}
               configs={llmState.configs}
               modelsByProvider={llmState.modelsByProvider}
