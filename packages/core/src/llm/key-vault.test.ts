@@ -27,6 +27,17 @@ beforeEach(() => {
 });
 
 describe('key-vault (device key)', () => {
+  it('keeps concurrent provider payloads decryptable with the persisted device key', async () => {
+    const [anthropic, openai] = await Promise.all([
+      encryptKeyDevice('synthetic-anthropic'), encryptKeyDevice('synthetic-openai'),
+    ]);
+    storeEncryptedKey('anthropic', anthropic);
+    storeEncryptedKey('openai', openai);
+    expect(await decryptKeyDevice(loadEncryptedKey('anthropic')!)).toBe('synthetic-anthropic');
+    expect(await decryptKeyDevice(loadEncryptedKey('openai')!)).toBe('synthetic-openai');
+    expect(JSON.stringify(store)).not.toContain('synthetic-');
+  });
+
   it('encrypts and decrypts a key roundtrip', async () => {
     const payload = await encryptKeyDevice('sk-test-12345');
     expect(payload.iv).toBeTruthy();

@@ -2,6 +2,65 @@ import { test, expect } from './fixtures/browser';
 import { KEYS } from './fixtures/offline-api';
 import { capture, card, keyInput, save, saved, settings, storage, validate } from './helpers/key-vault';
 
+test('explicit save of an unchanged revalidated key after Clear all survives overlapping encryption and restart', async ({ session }, info) => {
+  await session.visit();
+  await settings(session.page);
+  await save(session);
+  await session.backup();
+  await settings(session.page);
+  await session.page.getByRole('button', { name: 'Clear all saved API keys', exact: true }).click();
+  await expect.poll(async () => (await storage(session.page)).device).toBeNull();
+  await expect(keyInput(session.page)).toHaveValue(KEYS.first);
+  await validate(session, 'first');
+  expect((await storage(session.page)).providers).toEqual([]);
+  await expect(card(session.page).getByText('Session only', { exact: true })).toBeVisible();
+
+  await session.page.evaluate(() => {
+    const generate = crypto.subtle.generateKey.bind(crypto.subtle);
+    const encrypt = crypto.subtle.encrypt.bind(crypto.subtle);
+    let releaseGeneration!: () => void;
+    const generationGate = new Promise<void>((resolve) => { releaseGeneration = resolve; });
+    const completions: (() => void)[] = [];
+    const schedule = {
+      generated: 0, encrypted: 0, finished: 0,
+      releaseGeneration,
+      releaseNewest: () => completions.pop()!(),
+      releaseOldest: () => completions.shift()!(),
+    };
+    Object.assign(window, { __saveSchedule: schedule });
+    crypto.subtle.generateKey = (async (...args: Parameters<typeof generate>) => {
+      const key = await generate(...args);
+      schedule.generated++;
+      await generationGate;
+      return key;
+    }) as typeof generate;
+    crypto.subtle.encrypt = async (...args) => {
+      const ciphertext = await encrypt(...args);
+      schedule.encrypted++;
+      await new Promise<void>((resolve) => completions.push(resolve));
+      schedule.finished++;
+      return ciphertext;
+    };
+  });
+  await card(session.page).getByRole('button', { name: 'Save (encrypted)', exact: true }).click();
+  // Wait for first use only: fixed code shares this generation across both App callers.
+  await expect.poll(() => session.page.evaluate(() => (window as any).__saveSchedule.generated)).toBeGreaterThan(0);
+  expect((await storage(session.page)).providers).toEqual([]);
+  await session.page.evaluate(() => (window as any).__saveSchedule.releaseGeneration());
+  await expect.poll(() => session.page.evaluate(() => (window as any).__saveSchedule.encrypted)).toBe(2);
+  await session.page.evaluate(() => (window as any).__saveSchedule.releaseNewest());
+  await saved(session.page);
+  await session.page.evaluate(() => (window as any).__saveSchedule.releaseOldest());
+  await expect.poll(() => session.page.evaluate(() => (window as any).__saveSchedule.finished)).toBe(2);
+  expect((await storage(session.page)).plaintext).toBe(false);
+  await session.restart();
+  await settings(session.page);
+  await expect(keyInput(session.page)).toHaveValue(KEYS.first);
+  await saved(session.page);
+  await validate(session, 'first');
+  await capture(session.page, info, 'browser-explicit-save-restored');
+});
+
 for (const removal of ['Forget', 'Clear all'] as const) {
   test(`browser replacement after ${removal} saves without a password and survives restart`, async ({ session }, info) => {
     await session.visit();
