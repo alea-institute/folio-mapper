@@ -11,6 +11,9 @@
 const DB_NAME = 'folio-mapper-keyvault';
 const STORE_NAME = 'device-key';
 const KEY_ID = 'aesKey';
+let deviceKeyGeneration = 0;
+let creation: Promise<CryptoKey> | null = null;
+let clearing: Promise<void> = Promise.resolve();
 
 function openDB(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
@@ -37,11 +40,27 @@ function withStore<T>(
   return openDB().then(
     (db) =>
       new Promise<T>((resolve, reject) => {
-        const tx = db.transaction(STORE_NAME, mode);
-        const req = fn(tx.objectStore(STORE_NAME));
-        req.onsuccess = () => resolve(req.result);
-        req.onerror = () => reject(req.error);
-        tx.oncomplete = () => db.close();
+        let tx: IDBTransaction;
+        try {
+          tx = db.transaction(STORE_NAME, mode);
+        } catch (error) {
+          db.close();
+          reject(error);
+          return;
+        }
+        let result: T;
+        tx.oncomplete = () => { db.close(); resolve(result); };
+        tx.onabort = () => {
+          db.close();
+          reject(tx.error ?? new Error('Device key transaction aborted'));
+        };
+        try {
+          const req = fn(tx.objectStore(STORE_NAME));
+          req.onsuccess = () => { result = req.result; };
+        } catch (error) {
+          tx.abort();
+          reject(error);
+        }
       }),
   );
 }
@@ -52,16 +71,34 @@ function withStore<T>(
  * session-only manual entry).
  */
 export async function getOrCreateDeviceKey(): Promise<CryptoKey> {
-  const existing = await withStore<CryptoKey | undefined>('readonly', (s) => s.get(KEY_ID));
-  if (existing) return existing;
+  if (creation) return creation;
+  const generation = deviceKeyGeneration;
+  const assertCurrent = () => {
+    if (generation !== deviceKeyGeneration) throw new Error('Device key creation was cleared');
+  };
+  const pending = (async () => {
+    await clearing;
+    assertCurrent();
+    const existing = await withStore<CryptoKey | undefined>('readonly', (s) => s.get(KEY_ID));
+    assertCurrent();
+    if (existing) return existing;
 
-  const key = await crypto.subtle.generateKey(
-    { name: 'AES-GCM', length: 256 },
-    false, // non-extractable — raw bytes never leave IndexedDB
-    ['encrypt', 'decrypt'],
-  );
-  await withStore('readwrite', (s) => s.put(key, KEY_ID));
-  return key;
+    const key = await crypto.subtle.generateKey(
+      { name: 'AES-GCM', length: 256 },
+      false, // non-extractable — raw bytes never leave IndexedDB
+      ['encrypt', 'decrypt'],
+    );
+    await withStore('readwrite', (s) => {
+      assertCurrent();
+      return s.put(key, KEY_ID);
+    });
+    assertCurrent();
+    return key;
+  })().finally(() => {
+    if (creation === pending) creation = null;
+  });
+  creation = pending;
+  return pending;
 }
 
 /** Returns true if a device key has already been generated. */
@@ -76,9 +113,12 @@ export async function hasDeviceKey(): Promise<boolean> {
 
 /** Deletes the device key, rendering any stored ciphertext permanently unreadable. */
 export async function clearDeviceKey(): Promise<void> {
-  try {
+  deviceKeyGeneration++;
+  creation = null;
+  clearing = clearing.then(async () => {
     await withStore('readwrite', (s) => s.delete(KEY_ID));
-  } catch {
+  }).catch(() => {
     // IndexedDB unavailable — nothing to clear
-  }
+  });
+  await clearing;
 }
