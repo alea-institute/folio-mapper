@@ -8,6 +8,7 @@ import { LlamafileModelPicker } from '../settings/LlamafileModelPicker';
 type Tab = 'local' | 'online' | 'none';
 
 interface ModelChooserProps {
+  isDesktop?: boolean;
   activeProvider: LLMProviderType;
   configs: Record<LLMProviderType, LLMProviderConfig>;
   modelsByProvider: Record<string, ModelInfo[]>;
@@ -34,6 +35,7 @@ interface ModelChooserProps {
 }
 
 export function ModelChooser({
+  isDesktop,
   activeProvider,
   configs,
   modelsByProvider,
@@ -168,6 +170,7 @@ export function ModelChooser({
                   models={modelsByProvider[type] || []}
                   isLoadingModels={loadingModelsFor.has(type)}
                   isTesting={testingProvider === type}
+                  isDesktop={isDesktop}
                   onSelect={onSetActiveProvider}
                   onUpdateConfig={onUpdateConfig}
                   onTest={handleTest}
