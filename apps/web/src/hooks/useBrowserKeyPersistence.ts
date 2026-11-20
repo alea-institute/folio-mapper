@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { encryptKeyDevice, removeEncryptedKey, storeEncryptedKey, type LLMProviderType } from '@folio-mapper/core';
+import type { KeySaveStatus } from '@folio-mapper/ui';
 import { useLLMStore } from '../store/llm-store';
 
-type SaveStatus = { pending?: boolean; error?: string };
 type SaveAttempt = {
   key: string;
   automaticStarted: boolean;
@@ -11,15 +11,19 @@ type SaveAttempt = {
   outcome?: Promise<boolean>;
   finish?: (saved: boolean) => void;
 };
-const SAVE_ERROR = "Couldn't save this key in your browser. It is available only for this session. Try Save (encrypted) again before closing.";
+const SAVE_ERROR = "Couldn't finish saving this key in your browser. It is still usable in this session. Try Save (encrypted) again before closing.";
 
 /** Owns transient save outcomes; rememberKey remains only the user's preference. */
 export function useBrowserKeyPersistence(isDesktop: boolean) {
   const configs = useLLMStore((state) => state.configs);
   const attempts = useRef<Partial<Record<LLMProviderType, SaveAttempt>>>({});
-  const [statuses, setStatuses] = useState<Partial<Record<LLMProviderType, SaveStatus>>>({});
-  const publish = useCallback((provider: LLMProviderType, status: SaveStatus) => {
-    setStatuses((current) => ({ ...current, [provider]: status }));
+  const [statuses, setStatuses] = useState<Partial<Record<LLMProviderType, KeySaveStatus>>>({});
+  const publish = useCallback((provider: LLMProviderType, status: KeySaveStatus) => {
+    setStatuses((current) => {
+      const previous = current[provider];
+      if (previous?.pending === status.pending && previous?.error === status.error) return current;
+      return { ...current, [provider]: status };
+    });
   }, []);
 
   const invalidate = useCallback((provider: LLMProviderType) => {
@@ -30,10 +34,12 @@ export function useBrowserKeyPersistence(isDesktop: boolean) {
 
   // Observe edits synchronously, including changing away and back before React renders.
   useEffect(() => useLLMStore.subscribe((state, previous) => {
+    if (state.configs === previous.configs) return;
     for (const provider of Object.keys(state.configs) as LLMProviderType[]) {
       const next = state.configs[provider];
       const prior = previous.configs[provider];
       if (next.apiKey !== prior.apiKey || (prior.rememberKey && !next.rememberKey) ||
+          (next.keySource === 'manual' && prior.connectionStatus === 'valid' && next.connectionStatus !== 'valid') ||
           (next.keySource !== prior.keySource && (next.keySource === 'manual' || next.keySource === 'none'))) {
         invalidate(provider);
       }
@@ -64,14 +70,12 @@ export function useBrowserKeyPersistence(isDesktop: boolean) {
         const payload = await encryptKeyDevice(attempt.key);
         if (!isCurrent()) return;
         const state = useLLMStore.getState();
-        // A successful peer already stored this exact key. Do not overwrite it.
         if (state.configs[provider].keySource !== 'saved') {
           storeEncryptedKey(provider, payload);
           state.setKeySource(provider, 'saved');
         }
         attempt.finish?.(true);
       } catch {
-        // Never expose key-bearing exception text. A successful peer wins.
         if (isCurrent()) attempt.failed = true;
       } finally {
         attempt.pending--;
@@ -124,7 +128,6 @@ export function useBrowserKeyPersistence(isDesktop: boolean) {
     if (!canSave(provider)) return Promise.resolve(false);
     const attempt = getAttempt(provider);
     if (attempt.pending) return attempt.outcome!;
-    // Failed automatic saves require an explicit retry; closing must not start a loop.
     if (attempt.automaticStarted) return Promise.resolve(false);
     attempt.automaticStarted = true;
     return startSave(provider, attempt);

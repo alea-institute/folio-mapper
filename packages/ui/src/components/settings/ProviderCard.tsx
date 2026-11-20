@@ -105,7 +105,7 @@ export function ProviderCard({
           {/* Provider name + badge + test button + status */}
           <div className="flex items-center gap-2">
             <span className="font-medium text-gray-900">{meta.displayName}</span>
-            <KeySourceBadge source={keySource} />
+            <KeySourceBadge source={keySource} saveUnconfirmed={!!keySaveStatus?.error} />
             <button
               onClick={() => onTest(meta.type)}
               disabled={isTesting || (meta.requiresApiKey && !config.apiKey && !isEnvKey)}
