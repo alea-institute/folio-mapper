@@ -393,7 +393,7 @@ FOLIO Mapper supports 9 LLM providers for enhanced mapping. Configure via the Se
 
 **Security**: API keys are passed via HTTP headers (not request bodies) and are never persisted on the backend.
 
-**Auto-test on save**: When you click Save & Close, the app tests the API key before closing. Invalid keys show a red error banner and keep the modal open.
+**Auto-test on save**: When you click Save & Close, the app tests the API key before closing. Invalid keys show a red error banner and keep the modal open. In the browser, Save & Close also waits for an eligible encrypted key save. If storage fails, the key stays usable for the current session, a save error appears, and the unsaved-key warning keeps Settings open. Retry with Save (encrypted); only a completed vault write shows the key as saved. Forget and Clear all keep the current key session-only until you explicitly save it or enter a replacement.
 
 ---
 
@@ -584,6 +584,14 @@ To refresh the
 reviewed, masked screenshots under `docs/plans/evidence/fm-2/`, run
 `FM2_CAPTURE_EVIDENCE=1 pnpm test:browser`. See the
 [acceptance receipt](docs/plans/evidence/fm-2/acceptance.md) for results and scope.
+
+To capture the encrypted-save failure and successful retry states under
+`docs/plans/evidence/fm-7/`, run `FM7_CAPTURE_EVIDENCE=1 pnpm test:browser` on a
+host that permits Chromium and local sockets. The tests inject payload and
+metadata write failures, check the unsaved warning, and retry the unchanged key
+before reopening the persistent profile. See the
+[fm-7 acceptance receipt](docs/plans/evidence/fm-7/acceptance.md) for current
+verification limits.
 
 ### Test Environment Variables
 
