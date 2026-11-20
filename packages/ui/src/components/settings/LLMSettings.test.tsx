@@ -98,3 +98,20 @@ it('shows the provider save failure separately from connection validity and clea
   expect(screen.queryByRole('alert')).not.toBeInTheDocument();
   expect(screen.queryByText("Your API key isn't saved")).not.toBeInTheDocument();
 });
+
+it.each(['baseUrl', 'model'] as const)('does not validate or close an edited %s with an obsolete connection result', async (field) => {
+  const p = props();
+  p.configs.anthropic.connectionStatus = 'untested';
+  const pending = deferred<{ success: boolean; message: string }>();
+  p.testConnection.mockImplementation(() => pending.promise);
+  const ensure = vi.fn().mockResolvedValue(true);
+  const view = render(<LLMSettings {...p} onEnsureKeySaved={ensure} />);
+  fireEvent.click(screen.getByRole('button', { name: 'Save & Close' }));
+  view.rerender(<LLMSettings {...p} configs={{ ...p.configs,
+    anthropic: { ...p.configs.anthropic, [field]: 'synthetic-replacement' },
+  }} onEnsureKeySaved={ensure} />);
+  await act(async () => { pending.resolve({ success: true, message: '' }); });
+  expect(p.onSetConnectionStatus).not.toHaveBeenCalled();
+  expect(ensure).not.toHaveBeenCalled();
+  expect(p.onClose).not.toHaveBeenCalled();
+});

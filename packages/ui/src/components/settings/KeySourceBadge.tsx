@@ -2,6 +2,7 @@ import type { KeySource } from '@folio-mapper/core';
 
 interface KeySourceBadgeProps {
   source: KeySource;
+  saveUnconfirmed?: boolean;
 }
 
 const BADGE_CONFIG: Record<KeySource, { label: string; className: string; tooltip: string } | null> = {
@@ -28,16 +29,17 @@ const BADGE_CONFIG: Record<KeySource, { label: string; className: string; toolti
   },
 };
 
-export function KeySourceBadge({ source }: KeySourceBadgeProps) {
+export function KeySourceBadge({ source, saveUnconfirmed }: KeySourceBadgeProps) {
   const config = BADGE_CONFIG[source];
   if (!config) return null;
+  const unconfirmed = source === 'manual' && saveUnconfirmed;
 
   return (
     <span
       className={`inline-flex items-center rounded-full border px-1.5 py-0.5 text-[10px] font-medium leading-none ${config.className}`}
-      title={config.tooltip}
+      title={unconfirmed ? 'Saving did not finish; browser storage may contain a partial save.' : config.tooltip}
     >
-      {config.label}
+      {unconfirmed ? 'Save unconfirmed' : config.label}
     </span>
   );
 }

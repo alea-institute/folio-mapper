@@ -131,3 +131,30 @@ it('keeps provider failures isolated and pending/error state out of the persiste
   expect(stored).not.toContain('error');
   expect(stored).not.toContain('pending');
 });
+
+it('saves a revalidated same-value replacement without waiting for obsolete attempts', async () => {
+  const old = deferred<VaultPayload>();
+  vi.mocked(encryptKeyDevice).mockImplementationOnce(() => old.promise).mockImplementationOnce(() => old.promise);
+  const { result } = renderHook(() => useBrowserKeyPersistence(false));
+  let request!: Promise<boolean>;
+  act(() => { request = result.current.remember('anthropic', true); });
+  update({ apiKey: 'synthetic-other', connectionStatus: 'untested' });
+  update({ apiKey: 'synthetic-first', connectionStatus: 'valid' });
+  await waitFor(() => expect(config().keySource).toBe('saved'));
+  expect(JSON.parse(localStorage.getItem('folio-mapper-vault-anthropic')!)).toEqual(payload);
+  await act(async () => { old.resolve({ iv: 'obsolete', cipher: 'obsolete' }); expect(await request).toBe(false); });
+  expect(JSON.parse(localStorage.getItem('folio-mapper-vault-anthropic')!)).toEqual(payload);
+});
+
+it('automatically saves after endpoint edits invalidate an in-flight save and the key is revalidated', async () => {
+  const old = deferred<VaultPayload>();
+  vi.mocked(encryptKeyDevice).mockImplementationOnce(() => old.promise).mockImplementationOnce(() => old.promise);
+  const { result } = renderHook(() => useBrowserKeyPersistence(false));
+  let request!: Promise<boolean>;
+  act(() => { request = result.current.remember('anthropic', true); });
+  update({ baseUrl: 'https://synthetic.example.test/v2', connectionStatus: 'untested' });
+  update({ connectionStatus: 'valid' });
+  await waitFor(() => expect(config().keySource).toBe('saved'));
+  await act(async () => { old.resolve({ iv: 'obsolete', cipher: 'obsolete' }); expect(await request).toBe(false); });
+  expect(JSON.parse(localStorage.getItem('folio-mapper-vault-anthropic')!)).toEqual(payload);
+});

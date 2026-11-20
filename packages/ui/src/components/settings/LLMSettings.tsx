@@ -85,7 +85,9 @@ export function LLMSettings({
   const latest = useRef({ activeProvider, configs, revision: 0 });
   const previous = latest.current;
   const identityChanged = previous.activeProvider !== activeProvider ||
-    previous.configs[previous.activeProvider].apiKey !== configs[activeProvider].apiKey;
+    previous.configs[previous.activeProvider].apiKey !== configs[activeProvider].apiKey ||
+    previous.configs[previous.activeProvider].baseUrl !== configs[activeProvider].baseUrl ||
+    previous.configs[previous.activeProvider].model !== configs[activeProvider].model;
   latest.current = { activeProvider, configs, revision: previous.revision + Number(identityChanged) };
 
   useEffect(() => {
@@ -222,7 +224,7 @@ export function LLMSettings({
           result = await testConnection(activeProvider, config.apiKey || undefined,
             config.baseUrl || undefined, config.model || undefined);
         } catch {
-          result = { success: false, message: 'Connection test failed. Please check your API key and try again.' };
+          result = { success: false, message: '' };
         }
         if (!isCurrent()) return;
         onSetConnectionStatus(activeProvider, result.success ? 'valid' : 'invalid');
@@ -232,8 +234,6 @@ export function LLMSettings({
           return;
         }
       }
-      // The app reads the current store and waits for a complete vault write.
-      // A preference, pending save, or rejected write cannot authorize closing.
       const saved = !isDesktop && onEnsureKeySaved
         ? await onEnsureKeySaved(activeProvider) : undefined;
       if (!isCurrent()) return;
@@ -345,7 +345,9 @@ export function LLMSettings({
                   Your API key isn&apos;t saved
                 </p>
                 <p className="mt-0.5 text-xs text-amber-600">
-                  It will be lost when you refresh or close the tab. Save it to avoid re-entering it next time.
+                  {isDesktop
+                    ? 'It will be lost when you refresh or close the tab. Save it to avoid re-entering it next time.'
+                    : 'This key may be lost when you refresh or close the tab. Save it to confirm it is available next time.'}
                 </p>
                 <div className="mt-3 flex items-center gap-2">
                   {isDesktop && onSaveToKeychain ? (
@@ -363,7 +365,6 @@ export function LLMSettings({
                       disabled={keySaveStatuses?.[activeProvider]?.pending}
                       onClick={() => {
                         onRememberKey(activeProvider, true);
-                        // Keep the warning open until persistence is confirmed.
                       }}
                       className="rounded bg-amber-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-amber-700"
                     >

@@ -38,7 +38,7 @@ export { SubmissionModal } from './components/mapping/SubmissionModal';
 
 // Settings components (Stage 3)
 export { LLMSettings } from './components/settings/LLMSettings';
-export { ProviderCard } from './components/settings/ProviderCard';
+export { ProviderCard, type KeySaveStatus } from './components/settings/ProviderCard';
 export { KeySourceBadge } from './components/settings/KeySourceBadge';
 export { LlamafileStatus } from './components/settings/LlamafileStatus';
 export { LlamafileModelPicker } from './components/settings/LlamafileModelPicker';
