@@ -75,14 +75,15 @@ export async function storage(page: Page) {
   }, Object.values(KEYS));
 }
 
-export async function capture(page: Page, info: TestInfo, name: string) {
+export async function capture(page: Page, info: TestInfo, name: string, item: 'fm-2' | 'fm-7' = 'fm-2') {
   const output = info.outputPath(`${name}.png`);
   const keyRows = page.locator('input[type="password"]').locator('..');
   await page.screenshot({ path: output,
     mask: [keyRows, keyRows.locator('span')], maskColor: '#d1d5db' });
   await info.attach(name, { path: output, contentType: 'image/png' });
-  if (process.env.FM2_CAPTURE_EVIDENCE === '1') {
-    await mkdir('docs/plans/evidence/fm-2', { recursive: true });
-    await copyFile(output, `docs/plans/evidence/fm-2/${name}.png`);
+  const captureEvidence = item === 'fm-7' ? process.env.FM7_CAPTURE_EVIDENCE : process.env.FM2_CAPTURE_EVIDENCE;
+  if (captureEvidence === '1') {
+    await mkdir(`docs/plans/evidence/${item}`, { recursive: true });
+    await copyFile(output, `docs/plans/evidence/${item}/${name}.png`);
   }
 }
