@@ -1,13 +1,14 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import type { ConnectionStatus, LLMProviderConfig, LLMProviderType, LlamafileStatus as LlamafileStatusType, ModelInfo, ModelStatus } from '@folio-mapper/core';
 import { CLOUD_PROVIDERS, LOCAL_PROVIDERS, PROVIDER_META } from '@folio-mapper/core';
-import { ProviderCard } from '../settings/ProviderCard';
+import { ProviderCard, type KeySaveStatus } from '../settings/ProviderCard';
 import { LlamafileStatus } from '../settings/LlamafileStatus';
 import { LlamafileModelPicker } from '../settings/LlamafileModelPicker';
 
 type Tab = 'local' | 'online' | 'none';
 
 interface ModelChooserProps {
+  keySaveStatuses?: Partial<Record<LLMProviderType, KeySaveStatus>>;
   isDesktop?: boolean;
   activeProvider: LLMProviderType;
   configs: Record<LLMProviderType, LLMProviderConfig>;
@@ -35,6 +36,7 @@ interface ModelChooserProps {
 }
 
 export function ModelChooser({
+  keySaveStatuses,
   isDesktop,
   activeProvider,
   configs,
@@ -171,6 +173,7 @@ export function ModelChooser({
                   isLoadingModels={loadingModelsFor.has(type)}
                   isTesting={testingProvider === type}
                   isDesktop={isDesktop}
+                  keySaveStatus={keySaveStatuses?.[type]}
                   onSelect={onSetActiveProvider}
                   onUpdateConfig={onUpdateConfig}
                   onTest={handleTest}

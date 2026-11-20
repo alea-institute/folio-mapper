@@ -18,6 +18,7 @@ function StatefulChooser({ isDesktop, rememberKey }: { isDesktop?: boolean; reme
   return (
     <>
       <ModelChooser
+        keySaveStatuses={{ anthropic: { error: "Browser save failed; retry in Settings." } }}
         {...platform}
         activeProvider="anthropic" configs={configs} modelsByProvider={{}}
         onUpdateConfig={(provider, updates) => setConfigs((current) => ({
@@ -53,4 +54,10 @@ describe('ModelChooser key edits', () => {
       else expect(screen.queryByText('Session only')).not.toBeInTheDocument();
     });
   }
+});
+
+it('displays the application-owned persistence error on the inline provider', () => {
+  render(<StatefulChooser isDesktop={false} rememberKey />);
+  expect(screen.getByRole('alert')).toHaveTextContent('Browser save failed; retry in Settings.');
+  expect(screen.getByText('✓ Valid')).toBeVisible();
 });
