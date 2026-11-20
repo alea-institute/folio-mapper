@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import {
   parseText, testConnection, fetchModels, probeModels, fetchKnownModels, fetchSyntheticData,
   BRANCH_COLORS, EXCLUDED_BRANCHES, PROVIDER_META, setLocalToken, EXEMPLARS,
-  encryptKeyDevice, storeEncryptedKey, removeEncryptedKey, clearVault, clearDeviceKey,
+  removeEncryptedKey, clearVault, clearDeviceKey,
   triggerOWLUpdateCheck, forceOWLUpdate,
 } from '@folio-mapper/core';
 import type { SuggestionEntry, ReviewEntry, InputHierarchyNode, HierarchyNode, LLMProviderType } from '@folio-mapper/core';
@@ -55,6 +55,7 @@ import { useLlamafile } from './hooks/useLlamafile';
 import { useEmbeddingStatus } from './hooks/useEmbeddingStatus';
 import { useOWLUpdateStatus } from './hooks/useOWLUpdateStatus';
 import { useKeyResolution } from './hooks/useKeyResolution';
+import { useBrowserKeyPersistence } from './hooks/useBrowserKeyPersistence';
 
 function _formatTimeAgo(isoString: string): string {
   const diff = Date.now() - new Date(isoString).getTime();
@@ -243,56 +244,11 @@ export function App() {
     }
   }, [llmState]);
 
-  // Persist a key to the device-key vault (web). Silent — no passphrase, encrypted at rest.
-  const vaultSaveGeneration = useRef<Partial<Record<LLMProviderType, number>>>({});
-  const persistKeyToVault = useCallback(async (provider: LLMProviderType) => {
-    const key = useLLMStore.getState().configs[provider].apiKey;
-    const generation = vaultSaveGeneration.current[provider];
-    if (!key) return;
-    try {
-      const payload = await encryptKeyDevice(key);
-      const state = useLLMStore.getState();
-      const current = state.configs[provider];
-      if (generation !== vaultSaveGeneration.current[provider] ||
-          current.apiKey !== key || !current.rememberKey || current.connectionStatus !== 'valid') return;
-      storeEncryptedKey(provider, payload);
-      state.setKeySource(provider, 'saved');
-    } catch (err) {
-      if (generation !== vaultSaveGeneration.current[provider]) return;
-      // IndexedDB/crypto unavailable — fall back to session-only manual entry.
-      console.error('Failed to save key to vault:', err);
-    }
-  }, []);
-
-  const handleRememberKey = useCallback((provider: LLMProviderType, remember: boolean) => {
-    if (remember) {
-      llmState.updateConfig(provider, { rememberKey: true });
-      void persistKeyToVault(provider);
-    } else {
-      vaultSaveGeneration.current[provider] = (vaultSaveGeneration.current[provider] ?? 0) + 1;
-      llmState.updateConfig(provider, { rememberKey: false });
-      removeEncryptedKey(provider);
-      if (llmState.configs[provider].keySource === 'saved') {
-        llmState.setKeySource(provider, llmState.configs[provider].apiKey ? 'manual' : 'none');
-      }
-    }
-  }, [llmState, persistKeyToVault]);
-
-  // Auto-persist: a validated, manually-entered key is silently saved to the
-  // device-key vault (web only; desktop uses the OS keychain explicitly).
-  // Idempotent — once keySource flips to 'saved' the guard skips it.
-  useEffect(() => {
-    if (window.desktop) return;
-    for (const p of Object.keys(llmState.configs) as LLMProviderType[]) {
-      const cfg = llmState.configs[p];
-      if (cfg.rememberKey && cfg.connectionStatus === 'valid' && cfg.apiKey && cfg.keySource === 'manual') {
-        void persistKeyToVault(p);
-      }
-    }
-  }, [llmState.configs, persistKeyToVault]);
+  const { statuses: keySaveStatuses, remember: handleRememberKey,
+    ensureSaved: ensureKeySaved, invalidate: invalidateKeySave } = useBrowserKeyPersistence(isDesktop);
 
   const handleClearSavedKey = useCallback((provider: LLMProviderType) => {
-    vaultSaveGeneration.current[provider] = (vaultSaveGeneration.current[provider] ?? 0) + 1;
+    invalidateKeySave(provider);
     if (isDesktop) {
       window.desktop?.keychain?.deleteKey(provider).catch(() => {});
     } else {
@@ -302,7 +258,7 @@ export function App() {
     if (llmState.configs[provider].keySource === 'keychain' || llmState.configs[provider].keySource === 'saved') {
       llmState.setKeySource(provider, llmState.configs[provider].apiKey ? 'manual' : 'none');
     }
-  }, [isDesktop, llmState]);
+  }, [isDesktop, llmState, invalidateKeySave]);
 
   const handleClearAllSavedKeys = useCallback(() => {
     if (isDesktop) {
@@ -314,7 +270,7 @@ export function App() {
     // Reset all key sources and rememberKey flags
     const providers = Object.keys(llmState.configs) as LLMProviderType[];
     for (const p of providers) {
-      vaultSaveGeneration.current[p] = (vaultSaveGeneration.current[p] ?? 0) + 1;
+      invalidateKeySave(p);
       const cfg = llmState.configs[p];
       if (cfg.keySource === 'keychain' || cfg.keySource === 'saved') {
         llmState.setKeySource(p, cfg.apiKey ? 'manual' : 'none');
@@ -323,7 +279,7 @@ export function App() {
         llmState.updateConfig(p, { rememberKey: false });
       }
     }
-  }, [isDesktop, llmState]);
+  }, [isDesktop, llmState, invalidateKeySave]);
 
   const handleFolioCheck = useCallback(async () => {
     setIsFolioChecking(true);
@@ -697,6 +653,8 @@ export function App() {
       onModelsLoaded={llmState.setModelsForProvider}
       onSaveToKeychain={isDesktop ? handleSaveToKeychain : undefined}
       onRememberKey={!isDesktop ? handleRememberKey : undefined}
+      onEnsureKeySaved={!isDesktop ? ensureKeySaved : undefined}
+      keySaveStatuses={keySaveStatuses}
       onClearSavedKey={handleClearSavedKey}
       onClearAllSavedKeys={handleClearAllSavedKeys}
       onClose={() => setShowSettings(false)}
@@ -1036,6 +994,7 @@ export function App() {
           modelChooser={
             <ModelChooser
               isDesktop={isDesktop}
+              keySaveStatuses={keySaveStatuses}
               activeProvider={llmState.activeProvider}
               configs={llmState.configs}
               modelsByProvider={llmState.modelsByProvider}

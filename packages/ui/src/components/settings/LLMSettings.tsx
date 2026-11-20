@@ -1,11 +1,13 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import type { ConnectionStatus, LLMProviderConfig, LLMProviderType, LlamafileStatus as LlamafileStatusType, ModelInfo, ModelProbeResult, ModelStatus } from '@folio-mapper/core';
 import { CLOUD_PROVIDERS, LOCAL_PROVIDERS, MODEL_SPECIFIC_REASONS, PROVIDER_META } from '@folio-mapper/core';
-import { ProviderCard } from './ProviderCard';
+import { ProviderCard, type KeySaveStatus } from './ProviderCard';
 import { LlamafileStatus } from './LlamafileStatus';
 import { LlamafileModelPicker } from './LlamafileModelPicker';
 
 interface LLMSettingsProps {
+  keySaveStatuses?: Partial<Record<LLMProviderType, KeySaveStatus>>;
+  onEnsureKeySaved?: (provider: LLMProviderType) => Promise<boolean>;
   activeProvider: LLMProviderType;
   configs: Record<LLMProviderType, LLMProviderConfig>;
   modelsByProvider: Record<string, ModelInfo[]>;
@@ -44,6 +46,8 @@ interface LLMSettingsProps {
 }
 
 export function LLMSettings({
+  keySaveStatuses,
+  onEnsureKeySaved,
   activeProvider,
   configs,
   modelsByProvider,
@@ -77,6 +81,17 @@ export function LLMSettings({
   const [saveError, setSaveError] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [showUnsavedKeyPrompt, setShowUnsavedKeyPrompt] = useState(false);
+
+  const latest = useRef({ activeProvider, configs, revision: 0 });
+  const previous = latest.current;
+  const identityChanged = previous.activeProvider !== activeProvider ||
+    previous.configs[previous.activeProvider].apiKey !== configs[activeProvider].apiKey;
+  latest.current = { activeProvider, configs, revision: previous.revision + Number(identityChanged) };
+
+  useEffect(() => {
+    const config = configs[activeProvider];
+    if (!config.apiKey || config.keySource !== 'manual') setShowUnsavedKeyPrompt(false);
+  }, [activeProvider, configs]);
 
   // Clear error when provider changes
   useEffect(() => { setSaveError(null); }, [activeProvider]);
@@ -186,12 +201,6 @@ export function LLMSettings({
     [configs, fetchModels, onModelsLoaded],
   );
 
-  const hasUnsavedKey = useCallback((provider: LLMProviderType) => {
-    const c = configs[provider];
-    const ks = c.keySource ?? 'none';
-    return c.apiKey && ks === 'manual' && !c.rememberKey && ks !== 'env' && ks !== 'keychain' && ks !== 'saved';
-  }, [configs]);
-
   const closeModal = useCallback(() => {
     setShowUnsavedKeyPrompt(false);
     setSaveError(null);
@@ -200,46 +209,49 @@ export function LLMSettings({
 
   const handleSaveAndClose = useCallback(async () => {
     const config = configs[activeProvider];
-    // If already validated, check for unsaved key before closing
-    if (config.connectionStatus === 'valid') {
-      setSaveError(null);
-      if (hasUnsavedKey(activeProvider)) {
-        setShowUnsavedKeyPrompt(true);
-        return;
-      }
-      closeModal();
-      return;
-    }
-
-    // Test the active provider's connection
+    const revision = latest.current.revision;
+    const isCurrent = () => latest.current.revision === revision;
     setSaveError(null);
+    setShowUnsavedKeyPrompt(false);
     setIsSaving(true);
-    setTestingProvider(activeProvider);
     try {
-      const result = await testConnection(
-        activeProvider,
-        config.apiKey || undefined,
-        config.baseUrl || undefined,
-        config.model || undefined,
-      );
-      onSetConnectionStatus(activeProvider, result.success ? 'valid' : 'invalid');
-      if (result.success) {
-        if (hasUnsavedKey(activeProvider)) {
-          setShowUnsavedKeyPrompt(true);
-        } else {
-          closeModal();
+      if (config.connectionStatus !== 'valid') {
+        setTestingProvider(activeProvider);
+        let result;
+        try {
+          result = await testConnection(activeProvider, config.apiKey || undefined,
+            config.baseUrl || undefined, config.model || undefined);
+        } catch {
+          result = { success: false, message: 'Connection test failed. Please check your API key and try again.' };
         }
-      } else {
-        setSaveError(result.message || 'Connection test failed. Please check your API key and try again.');
+        if (!isCurrent()) return;
+        onSetConnectionStatus(activeProvider, result.success ? 'valid' : 'invalid');
+        setTestingProvider(null);
+        if (!result.success) {
+          setSaveError(result.message || 'Connection test failed. Please check your API key and try again.');
+          return;
+        }
       }
+      // The app reads the current store and waits for a complete vault write.
+      // A preference, pending save, or rejected write cannot authorize closing.
+      const saved = !isDesktop && onEnsureKeySaved
+        ? await onEnsureKeySaved(activeProvider) : undefined;
+      if (!isCurrent()) return;
+      const current = latest.current.configs[activeProvider];
+      const unsaved = current.apiKey && current.keySource === 'manual' &&
+        (isDesktop ? !current.rememberKey : saved !== true);
+      if (unsaved || saved === false) setShowUnsavedKeyPrompt(true);
+      else closeModal();
     } catch {
-      onSetConnectionStatus(activeProvider, 'invalid');
-      setSaveError('Connection test failed. Please check your API key and try again.');
+      if (isCurrent()) {
+        setSaveError("Couldn't save this key. Try again before closing.");
+        setShowUnsavedKeyPrompt(true);
+      }
     } finally {
       setTestingProvider(null);
       setIsSaving(false);
     }
-  }, [activeProvider, configs, testConnection, onSetConnectionStatus, closeModal, hasUnsavedKey]);
+  }, [activeProvider, configs, isDesktop, onEnsureKeySaved, testConnection, onSetConnectionStatus, closeModal]);
 
   const renderProviderSection = (title: string, providers: LLMProviderType[]) => (
     <div>
@@ -255,6 +267,7 @@ export function LLMSettings({
               isLoadingModels={loadingModelsFor.has(type)}
               isTesting={testingProvider === type}
               isDesktop={isDesktop}
+              keySaveStatus={keySaveStatuses?.[type]}
               testMessage={testMessages[type]}
               probeResults={probeResults[type]}
               isProbing={probingProvider === type}
@@ -305,7 +318,7 @@ export function LLMSettings({
               disabled={isSaving}
               className="text-sm font-medium text-blue-600 hover:text-blue-700 disabled:text-blue-300"
             >
-              {isSaving ? 'Testing...' : 'Save & Close'}
+              {isSaving ? (testingProvider ? 'Testing...' : 'Saving...') : 'Save & Close'}
             </button>
           </div>
         </div>
@@ -347,9 +360,10 @@ export function LLMSettings({
                     </button>
                   ) : onRememberKey ? (
                     <button
+                      disabled={keySaveStatuses?.[activeProvider]?.pending}
                       onClick={() => {
                         onRememberKey(activeProvider, true);
-                        // Don't close — passphrase modal may appear
+                        // Keep the warning open until persistence is confirmed.
                       }}
                       className="rounded bg-amber-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-amber-700"
                     >
