@@ -73,3 +73,18 @@ The existing capture helper writes these paths when the corresponding tests run;
 Inspect masking and both rendered states, commit the images, and append revision-specific runtime results here. The fm-7 directory is the existing helper's destination; the new images must come from fm-8's integrated source. Test discovery and browser typechecking do not substitute for this gate.
 
 The controller must also compare with live target main, reconcile the chief campaign plan's Goal Capsule and the cited campaign rules (the chief repository is absent from this lane), scan the branch, publish the replacement PR, and run campaign review. The imported fm-7 receipt remains historical; this receipt supplies the fresh local evidence. No product decision, credential, spend, migration, data rewrite, package release or new external service is needed for the remaining work.
+
+## Browser acceptance (completed on the home box)
+
+Date: 2026-11-26. Source revision: `5ab85f20` (application and test tree unchanged from the tested revision above; this addendum adds only evidence).
+
+| Command | Result |
+| --- | --- |
+| `FM7_CAPTURE_EVIDENCE=1 pnpm test:browser` | Passed: 41 of 41 tests in five files, Playwright's pinned Chromium |
+
+The capture helper wrote both screenshots from fm-8's integrated source. They were inspected before commit:
+
+- `docs/plans/evidence/fm-7/browser-encrypted-save-failed.png` shows the "Your API key isn't saved" banner, the Anthropic card's "Save unconfirmed" badge, the inline save-failure message, and the "Save (encrypted)" retry prompt.
+- `docs/plans/evidence/fm-7/browser-encrypted-save-retry-restored.png` shows the restored state after an unchanged-key retry: the "Encrypted" badge, "Key saved", and no warning banner.
+
+Every key field renders masked; neither image contains key material. Settings on the app's root page is now verified in a real browser on this revision, which closes the browser gap listed under "Pending controller gates".
