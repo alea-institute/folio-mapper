@@ -593,6 +593,9 @@ before reopening the persistent profile. See the
 [fm-7 acceptance receipt](docs/plans/evidence/fm-7/acceptance.md) for current
 verification limits.
 
+For new front-end items, use `capture(page, info, name, '<item-id>')` so the merge
+gate can rerun the browser suite and collect screenshots for that item.
+
 ### Test Environment Variables
 
 | Variable | Purpose |
