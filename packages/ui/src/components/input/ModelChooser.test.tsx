@@ -4,7 +4,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { PROVIDER_META, type LLMProviderConfig, type LLMProviderType } from '@folio-mapper/core';
 import { ModelChooser } from './ModelChooser';
 
-function StatefulChooser({ isDesktop, rememberKey }: { isDesktop?: boolean; rememberKey: boolean }) {
+function StatefulChooser({ isDesktop, rememberKey, saveError }: { isDesktop?: boolean; rememberKey: boolean; saveError?: string }) {
   const [configs, setConfigs] = useState(() => Object.fromEntries(
     Object.keys(PROVIDER_META).map((provider) => [provider, {
       apiKey: provider === 'anthropic' ? 'synthetic-original' : '',
@@ -18,6 +18,7 @@ function StatefulChooser({ isDesktop, rememberKey }: { isDesktop?: boolean; reme
   return (
     <>
       <ModelChooser
+        keySaveStatuses={saveError ? { anthropic: { error: saveError } } : undefined}
         {...platform}
         activeProvider="anthropic" configs={configs} modelsByProvider={{}}
         onUpdateConfig={(provider, updates) => setConfigs((current) => ({
@@ -53,4 +54,10 @@ describe('ModelChooser key edits', () => {
       else expect(screen.queryByText('Session only')).not.toBeInTheDocument();
     });
   }
+});
+
+it('displays the application-owned persistence error on the inline provider', () => {
+  render(<StatefulChooser isDesktop={false} rememberKey saveError="Browser save failed; retry in Settings." />);
+  expect(screen.getByRole('alert')).toHaveTextContent('Browser save failed; retry in Settings.');
+  expect(screen.getByText('✓ Valid')).toBeVisible();
 });

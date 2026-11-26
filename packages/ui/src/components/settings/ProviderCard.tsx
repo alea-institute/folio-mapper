@@ -1,7 +1,10 @@
 import type { ConnectionStatus, KeySource, LLMProviderConfig, LLMProviderType, ModelInfo, ProviderMeta } from '@folio-mapper/core';
 import { KeySourceBadge } from './KeySourceBadge';
 
+export type KeySaveStatus = { pending?: boolean; error?: string };
+
 interface ProviderCardProps {
+  keySaveStatus?: KeySaveStatus;
   meta: ProviderMeta;
   config: LLMProviderConfig;
   isActive: boolean;
@@ -51,6 +54,7 @@ export function ProviderCard({
   isLoadingModels,
   isTesting,
   isDesktop,
+  keySaveStatus,
   testMessage,
   probeResults,
   isProbing,
@@ -101,7 +105,7 @@ export function ProviderCard({
           {/* Provider name + badge + test button + status */}
           <div className="flex items-center gap-2">
             <span className="font-medium text-gray-900">{meta.displayName}</span>
-            <KeySourceBadge source={keySource} />
+            <KeySourceBadge source={keySource} saveUnconfirmed={!!keySaveStatus?.error} />
             <button
               onClick={() => onTest(meta.type)}
               disabled={isTesting || (meta.requiresApiKey && !config.apiKey && !isEnvKey)}
@@ -115,6 +119,13 @@ export function ProviderCard({
           {/* Reason for a failed test — categorized, safe message from the backend */}
           {config.connectionStatus === 'invalid' && testMessage && (
             <p className="mt-1 text-xs text-red-600">{testMessage}</p>
+          )}
+
+          {keySaveStatus?.error && (
+            <p role="alert" className="mt-2 text-xs text-red-600">{keySaveStatus.error}</p>
+          )}
+          {keySaveStatus?.pending && (
+            <p role="status" className="mt-2 text-xs text-gray-500">Saving encrypted key…</p>
           )}
 
           {/* API key input */}
@@ -177,6 +188,7 @@ export function ProviderCard({
                           ) : onRememberKey ? (
                             <button
                               onClick={() => onRememberKey(meta.type, true)}
+                              disabled={keySaveStatus?.pending}
                               className="shrink-0 rounded bg-amber-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-amber-700"
                             >
                               Save (encrypted)
