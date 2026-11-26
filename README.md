@@ -498,13 +498,15 @@ FOLIO Mapper implements defense-in-depth security:
 
 ### Continuous integration
 
-The `Tests` workflow runs on pull requests targeting `main`, pushes to `main`, and manual dispatch. It reports independent `Vitest` and `API (pytest)` checks with a 20-minute timeout each. A failed install or test fails its job; the other job can still finish. Desktop packaging remains a separate workflow.
+The `Tests` workflow runs on pull requests targeting `main`, pushes to `main`, and manual dispatch. It reports independent `Vitest`, `API (pytest)`, and `Browser (Playwright)` checks with a 20-minute timeout each. A failed install, build, or test fails its job; the other jobs can still finish. Desktop packaging remains a separate workflow.
 
-CI uses Node 22, pnpm 10.34.9, Python 3.12, and uv 0.9.22. Both jobs install from the committed lockfiles with setup-action caching disabled. From the repository root, reproduce the checks with:
+CI uses Node 22, pnpm 10.34.9, Python 3.12, and uv 0.9.22. All three jobs install from the committed lockfiles with setup-action caching disabled. From the repository root, reproduce the checks with:
 
 ```bash
 pnpm install --frozen-lockfile
 pnpm test
+pnpm exec playwright install --with-deps chromium
+PLAYWRIGHT_HTML_OPEN=never pnpm test:browser --reporter=list,html
 
 cd backend
 uv sync --locked --extra dev --python 3.12
@@ -512,6 +514,8 @@ uv sync --locked --extra dev --python 3.12
 ```
 
 The workflow's Python setup step selects 3.12, so its sync command does not need `--python`. On Windows, use `.venv\Scripts\python.exe` in place of `.venv/bin/python`.
+
+The browser job installs the Chromium revision pinned by Playwright in the lockfile, then builds the web app and runs the entire acceptance suite. On failure, download the `playwright-report` artifact from the workflow run's **Artifacts** section. It contains the HTML report and available attachments and is retained for seven days. Extract it and open `index.html`, or run `pnpm exec playwright show-report <extracted-report-directory>`. Setup or build failures before report generation retain their original error and produce a missing-report warning; canceled runs may have no report. A successful artifact upload does not make a failed check pass.
 
 The `dev` extra includes NumPy for test collection. FAISS and spaCy/model integration tests retain their existing conditional skips; `-ra` lists the reasons. The base suite uses mocked providers and needs no LLM credentials or running API server. Use a fresh environment for CI reproduction; editable sibling-library installs can conceal differences from the lockfile.
 
@@ -555,11 +559,11 @@ pnpm --filter @folio-mapper/ui test    # UI components only
 
 ### Passwordless key acceptance (Playwright)
 
-Use Node 24 and pnpm 10 (the tested toolchains) with the committed lockfile:
+Use Node 22 and pnpm 10.34.9 to match CI, with the committed lockfile. Earlier local acceptance results used Node 24 and pnpm 10:
 
 ```bash
 pnpm install --frozen-lockfile
-pnpm exec playwright install chromium
+pnpm exec playwright install --with-deps chromium
 pnpm typecheck:browser
 pnpm test:browser
 ```
@@ -574,7 +578,9 @@ not an Electron installation.
 
 Profiles and verified backups stay in ignored `.playwright-profiles/`; they are
 never personal browser profiles and are retained rather than automatically
-deleted. Reports and attachments stay in ignored `test-results/`. To refresh the
+deleted. Test output and attachments stay in ignored `test-results/`; the CI
+reporter invocation above also creates an ignored `playwright-report/` directory.
+To refresh the
 reviewed, masked screenshots under `docs/plans/evidence/fm-2/`, run
 `FM2_CAPTURE_EVIDENCE=1 pnpm test:browser`. See the
 [acceptance receipt](docs/plans/evidence/fm-2/acceptance.md) for results and scope.
